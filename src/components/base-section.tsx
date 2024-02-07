@@ -4,7 +4,11 @@ export default function Section({
   children,
   ...rest
 }: PropsWithChildren<{ id: string }>) {
-  return <section id={rest.id}>{children}</section>;
+  return (
+    <section className="prose prose-neutral" id={rest.id}>
+      {children}
+    </section>
+  );
 }
 export function SectionHero({ children }: PropsWithChildren) {
   return <div className="text-gray-500">{children}</div>;

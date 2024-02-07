@@ -1,4 +1,4 @@
 import { BlockType } from "@/data/types.ts";
-export default function Content({ block }: { block: BlockType }) {
-  return <div className="prose">{block.content}</div>;
+export default function Header({ block }: { block: BlockType }) {
+  return <div className="prose text-2xl font-black">{block.content}</div>;
 }
