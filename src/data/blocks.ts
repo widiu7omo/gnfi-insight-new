@@ -1,17 +1,12 @@
-import { BlockType } from "@/data/types.ts";
-import {
-  COMPONENT_CONTENT,
-  COMPONENT_HEADER,
-  COMPONENT_HERO,
-} from "@/data/components.ts";
-import HeroImage from '@/assets/hero-section-one.png'
+import { BlockType } from './types';
+import { COMPONENT_CONTENT, COMPONENT_HEADER, COMPONENT_HERO } from './components';
 export const blocks: BlockType[] = [
   {
     order: 0,
     group: "section-1",
     contentType: "image",
     component: COMPONENT_HERO,
-    content: HeroImage,
+    content: "assets/hero-section-one.png",
   },
   {
     order: 1,
@@ -32,7 +27,7 @@ export const blocks: BlockType[] = [
     group: "section-2",
     contentType: "image",
     component: COMPONENT_HERO,
-    content: HeroImage,
+    content: "assets/hero-section-one.png",
   },
   {
     order: 4,
@@ -46,7 +41,7 @@ export const blocks: BlockType[] = [
     group: "section-2",
     contentType: "image",
     component: COMPONENT_HERO,
-    content: HeroImage,
+    content: "assets/hero-section-one.png",
   },
   {
     order: 6,
@@ -67,7 +62,7 @@ export const blocks: BlockType[] = [
     group: "section-2",
     contentType: "image",
     component: COMPONENT_HERO,
-    content: HeroImage,
+    content: "assets/hero-section-one.png",
   },
   {
     order: 9,
@@ -109,7 +104,7 @@ export const blocks: BlockType[] = [
     group: "section-4",
     contentType: "image",
     component: COMPONENT_HERO,
-    content: HeroImage,
+    content: "assets/hero-section-one.png",
   },
   {
     order: 15,
@@ -130,7 +125,7 @@ export const blocks: BlockType[] = [
     group: "section-5",
     contentType: "image",
     component: COMPONENT_HERO,
-    content: HeroImage,
+    content: "assets/hero-section-one.png",
   },
   {
     order: 18,
@@ -144,7 +139,7 @@ export const blocks: BlockType[] = [
     group: "section-5",
     contentType: "image",
     component: COMPONENT_HERO,
-    content: HeroImage,
+    content: "assets/hero-section-one.png",
   },
   {
     order: 20,
@@ -165,7 +160,7 @@ export const blocks: BlockType[] = [
     group: "section-6",
     contentType: "image",
     component: COMPONENT_HERO,
-    content: HeroImage,
+    content: "assets/hero-section-one.png",
   },
   {
     order: 23,
@@ -193,7 +188,7 @@ export const blocks: BlockType[] = [
     group: "section-7",
     contentType: "image",
     component: COMPONENT_HERO,
-    content: HeroImage,
+    content: "assets/hero-section-one.png",
   },
   {
     order: 27,

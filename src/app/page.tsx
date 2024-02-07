@@ -1,6 +1,7 @@
-import { blocks } from "@/data/blocks.ts";
-import Section from "@/components/base-section.tsx";
-import { getComponent } from "@/data/components.ts";
+import Section from "@/components/base-section";
+import { blocks } from "@/data/blocks";
+import { getComponent } from "@/data/components";
+
 const groupByToMap = <T, Q>(
   array: T[],
   predicate: (value: T, index: number, array: T[]) => Q
@@ -10,14 +11,13 @@ const groupByToMap = <T, Q>(
     map.get(key)?.push(value) ?? map.set(key, [value]);
     return map;
   }, new Map<Q, T[]>());
-function App() {
+
+export default function Home() {
   const grouped = groupByToMap(blocks, (item) => item.group);
   return (
-    <div className="min-h-dvh h-full">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
       {Object.keys(Object.fromEntries(grouped)).map((groupName) => {
-        console.log(groupName);
-        const blocks = [...(grouped.get(groupName)?.values() ?? [])];
-        console.log(blocks);
+        const blocks = Array.from(grouped.get(groupName)?.values() ?? []);
         return (
           <Section key={groupName} id={groupName}>
             <Section.Content>
@@ -29,8 +29,6 @@ function App() {
           </Section>
         );
       })}
-    </div>
+    </main>
   );
 }
-
-export default App;
