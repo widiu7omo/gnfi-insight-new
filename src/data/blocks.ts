@@ -1,5 +1,5 @@
 import { BlockType } from './types';
-import { COMPONENT_CONTENT, COMPONENT_HEADER, COMPONENT_HERO } from './components';
+import { COMPONENT_CONTENT, COMPONENT_HEADER, COMPONENT_HERO } from './component-front';
 export const blocks: BlockType[] = [
   {
     order: 0,

@@ -1,6 +1,6 @@
-import Section from "@/components/base-section";
+import Section from "@/components/dynamic/base-section";
 import { blocks } from "@/data/blocks";
-import { getComponent } from "@/data/components";
+import { getComponent } from "@/data/component-front";
 
 const groupByToMap = <T, Q>(
   array: T[],
