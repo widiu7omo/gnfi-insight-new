@@ -15,17 +15,15 @@ const groupByToMap = <T, Q>(
 export default function Home() {
   const grouped = groupByToMap(blocks, (item) => item.group);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="min-h-dvh">
       {Object.keys(Object.fromEntries(grouped)).map((groupName) => {
         const blocks = Array.from(grouped.get(groupName)?.values() ?? []);
         return (
           <Section key={groupName} id={groupName}>
-            <Section.Content>
-              {blocks.map((block) => {
-                const result = getComponent(block.component);
-                return <result.component key={Math.random()} block={block} />;
-              })}
-            </Section.Content>
+            {blocks.map((block) => {
+              const result = getComponent(block.component);
+              return <result.component key={Math.random()} block={block} />;
+            })}
           </Section>
         );
       })}

@@ -1,8 +1,8 @@
-import Content from "@/components/content.tsx";
-import Header from "@/components/header.tsx";
+import Content from "@/components/content";
+import Header from "@/components/header";
 import { ReactElement } from "react";
-import { BlockType } from "@/data/types.ts";
-import Hero from "@/components/hero.tsx";
+import { BlockType } from "@/data/types";
+import Hero from "@/components/hero";
 
 export const getComponent = (
   componentId: number,

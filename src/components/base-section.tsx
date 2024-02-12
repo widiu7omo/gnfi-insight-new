@@ -5,16 +5,8 @@ export default function Section({
   ...rest
 }: PropsWithChildren<{ id: string }>) {
   return (
-    <section className="prose prose-neutral" id={rest.id}>
+    <section id={rest.id} className="flex flex-col items-center w-full">
       {children}
     </section>
   );
 }
-export function SectionHero({ children }: PropsWithChildren) {
-  return <div className="text-gray-500">{children}</div>;
-}
-export function SectionContent({ children }: PropsWithChildren) {
-  return <div>{children}</div>;
-}
-Section.Hero = SectionHero;
-Section.Content = SectionContent;
