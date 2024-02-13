@@ -47,7 +47,7 @@ export default function BlockSortable({ sectionId }: BlockSortableType) {
           id={block.order}
           moveBlock={moveBlock}
         >
-          <ContentRenderer block={block} />
+          <ContentRenderer sectionId={sectionId} index={index} block={block} />
         </SortableWrapper>
       );
     }, []);

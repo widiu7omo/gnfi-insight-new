@@ -17,9 +17,14 @@ import {
 } from "@/data/component-front";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import ContentParagraph from "@/components/generator/content-paragraph";
-import ContentCustom from "@/components/generator/content-custom";
-import ContentHeading from "@/components/generator/content-heading";
+import { useBlocks } from "@/store/useBlocks";
+import { BlockType } from "@/data/types";
+import {
+  HeadingIcon,
+  ImageIcon,
+  LayoutTemplateIcon,
+  TextIcon,
+} from "lucide-react";
 
 export default function GeneratePage() {
   const handleOnDropSection = (item: DraggableItem) => {
@@ -27,14 +32,33 @@ export default function GeneratePage() {
       ...item,
       group: "BOXES",
     };
-    console.log("BOX", itemResult);
   };
   const handleOnDropComponent = (item: DraggableItem) => {
     const itemResult = {
       ...item,
       group: "COMPONENTS",
     };
-    console.log("COMPONENT", itemResult);
+  };
+  const [blocks, setBlocks] = useBlocks();
+  const generateBlocks = async () => {
+    //Normalize
+    let blockJoined: BlockType[] = [];
+    Object.keys(blocks).map((key: string) => {
+      blockJoined = [...blocks[key]];
+    });
+    const normalizeBlock = blockJoined.map((item, index) => {
+      item.order = index;
+      return item;
+    });
+    const result = await fetch("/api/generate-content", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(normalizeBlock),
+    });
+    console.log(await result.json());
   };
   return (
     <>
@@ -67,7 +91,10 @@ export default function GeneratePage() {
               name="heading"
               component={COMPONENT_HEADER}
             >
-              <ContentHeading preview />
+              <div className="text-neutral-500 flex items-center flex-col">
+                <HeadingIcon size={45} strokeWidth={1} />
+                <div className="text-sm">Heading Editor</div>
+              </div>
             </DraggableWrapper>
             <DraggableWrapper
               type={ItemTypes.BLOCK}
@@ -75,7 +102,10 @@ export default function GeneratePage() {
               name="paragraph"
               component={COMPONENT_CONTENT}
             >
-              <ContentParagraph preview />
+              <div className="text-neutral-500 flex items-center flex-col">
+                <TextIcon size={45} strokeWidth={1} />
+                <div className="text-sm">Paragraph Editor</div>
+              </div>
             </DraggableWrapper>
             <DraggableWrapper
               contentType={ContentType.IMAGE}
@@ -83,7 +113,10 @@ export default function GeneratePage() {
               name="hero"
               component={COMPONENT_HERO}
             >
-              <ContentImage preview />
+              <div className="text-neutral-500 flex items-center flex-col">
+                <ImageIcon size={45} strokeWidth={1} />
+                <div className="text-sm">Image Component</div>
+              </div>
             </DraggableWrapper>
             <DraggableWrapper
               contentType={ContentType.CUSTOM}
@@ -91,13 +124,23 @@ export default function GeneratePage() {
               name="animation"
               component={COMPONENT_CUSTOM}
             >
-              <ContentCustom preview />
+              <div className="text-neutral-500 flex items-center flex-col">
+                <LayoutTemplateIcon size={45} strokeWidth={1} />
+                <div className="text-sm">Custom Component</div>
+              </div>
             </DraggableWrapper>
           </div>
         </div>
         <div className="flex-1 space-y-7 p-8 min-h-screen overflow-auto">
-          <div className="text-3xl font-semibold text-neutral-900">
-            Page Content Generator
+          <div className="text-3xl font-semibold text-neutral-900 flex justify-between">
+            <span> Page Content Generator</span>
+            <button
+              onClick={generateBlocks}
+              type="button"
+              className="text-lg text-white bg-black px-4 py-2 font-semibold"
+            >
+              Generate
+            </button>
           </div>
           <ContentBin onDrop={handleOnDropSection} />
         </div>

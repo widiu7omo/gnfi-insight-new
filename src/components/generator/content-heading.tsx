@@ -1,13 +1,18 @@
+import { useBlocks } from "@/store/useBlocks";
 import Heading from "@tiptap/extension-heading";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import {
-  Heading1Icon,
-  Heading2Icon,
-  Heading3Icon,
-  HeadingIcon,
-} from "lucide-react";
-export default function ContentHeading({ preview }: { preview?: boolean }) {
+import { Heading1Icon, Heading2Icon, Heading3Icon } from "lucide-react";
+import { useEffect } from "react";
+export type ContentHeadingType = {
+  sectionId: string;
+  index: number;
+};
+export default function ContentHeading({
+  sectionId,
+  index,
+}: ContentHeadingType) {
+  const [blocks, setBlocks] = useBlocks();
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
@@ -19,16 +24,17 @@ export default function ContentHeading({ preview }: { preview?: boolean }) {
         },
       }),
     ],
-    content: "Heading Title",
+    content: blocks[sectionId][index].content ?? "Heading Title",
+    onBlur: () => {
+      setBlocks((prev) => {
+        const currentBlock = prev[sectionId][index];
+        currentBlock.content = editor?.getHTML() ?? "";
+        prev[sectionId][index] = currentBlock;
+        const currentSections = prev[sectionId];
+        return { ...prev, [sectionId]: currentSections };
+      });
+    },
   });
-  if (preview) {
-    return (
-      <div className="text-neutral-500 flex items-center flex-col">
-        <HeadingIcon size={45} strokeWidth={1} />
-        <div className="text-sm">Heading Editor</div>
-      </div>
-    );
-  }
   return (
     <div className="">
       <div className="flex flex-row-reverse space-x-2 bg-neutral-200 rounded-t-xl justify-between p-2">
@@ -73,7 +79,10 @@ export default function ContentHeading({ preview }: { preview?: boolean }) {
         </div>
       </div>
       <div className="p-4">
-        <EditorContent editor={editor} />
+        <EditorContent
+          editor={editor}
+          onChange={() => console.log(editor?.getJSON())}
+        />
       </div>
     </div>
   );

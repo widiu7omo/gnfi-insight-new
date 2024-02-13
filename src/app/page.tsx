@@ -1,6 +1,8 @@
 import Section from "@/components/dynamic/base-section";
 import { blocks } from "@/data/blocks";
+import generatedContent from "@public/generated-content.json";
 import { getComponent } from "@/data/component-front";
+import { BlockType } from "@/data/types";
 
 const groupByToMap = <T, Q>(
   array: T[],
@@ -13,7 +15,7 @@ const groupByToMap = <T, Q>(
   }, new Map<Q, T[]>());
 
 export default function Home() {
-  const grouped = groupByToMap(blocks, (item) => item.group);
+  const grouped = groupByToMap(generatedContent, (item) => item.group);
   return (
     <main className="min-h-dvh">
       {Object.keys(Object.fromEntries(grouped)).map((groupName) => {
@@ -22,7 +24,12 @@ export default function Home() {
           <Section key={groupName} id={groupName}>
             {blocks.map((block) => {
               const result = getComponent(block.component);
-              return <result.component key={Math.random()} block={block} />;
+              return (
+                <result.component
+                  key={Math.random()}
+                  block={block as BlockType}
+                />
+              );
             })}
           </Section>
         );

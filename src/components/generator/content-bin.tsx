@@ -1,21 +1,12 @@
 "use client";
 import { useDrop } from "react-dnd";
 import { DraggableItem, ItemTypes } from "./types";
-import SectionContainer from "./section-container";
 import { useSections } from "@/store/useSections";
-import { useCallback } from "react";
 type ContentBinType = {
   onDrop: (item: DraggableItem) => void;
 };
-import update from "immutability-helper";
-import CardContainer from "./card-container";
 import BlockBin from "./block-bin";
-import {
-  ArrowBigDown,
-  ArrowDownToLineIcon,
-  GroupIcon,
-  PlusIcon,
-} from "lucide-react";
+import { ArrowBigDown, GroupIcon } from "lucide-react";
 export default function ContentBin({ onDrop }: ContentBinType) {
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: ItemTypes.SECTION,

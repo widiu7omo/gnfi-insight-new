@@ -2,7 +2,6 @@
 import { useDrop } from "react-dnd";
 import { ContentType, ItemTypes } from "./types";
 import { useBlocks } from "@/store/useBlocks";
-import { COMPONENT_CONTENT } from "@/data/component-front";
 import { useSections } from "@/store/useSections";
 import { BlockType } from "@/data/types";
 import BlockSortable from "./block-sortable";

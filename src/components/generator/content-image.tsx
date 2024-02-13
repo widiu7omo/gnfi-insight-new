@@ -5,15 +5,11 @@ import { useDropzone } from "react-dropzone";
 type FileExtended = File & {
   preview: string;
 };
-export default function ContentImage({ preview }: { preview?: boolean }) {
-  if (preview) {
-    return (
-      <div className="text-neutral-500 flex items-center flex-col">
-        <ImageIcon size={45} strokeWidth={1} />
-        <div className="text-sm">Image Component</div>
-      </div>
-    );
-  }
+export type ContentImageType = {
+  sectionId: string;
+  index: number;
+};
+export default function ContentImage({ sectionId, index }: ContentImageType) {
   const [files, setFiles] = useState<FileExtended[]>([]);
   const onDrop = useCallback((acceptedFiles: File[]) => {
     // Do something with the files
