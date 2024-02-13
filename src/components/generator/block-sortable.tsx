@@ -5,6 +5,7 @@ import { CreditCardIcon } from "lucide-react";
 import { useCards } from "@/store/useCards";
 import { useBlocks } from "@/store/useBlocks";
 import { BlockType } from "@/data/types";
+import { SortableWrapper } from "./sortable-wrapper";
 
 const style = {
   width: "100%",
@@ -19,18 +20,14 @@ export interface ContainerState {
   cards: Item[];
 }
 export type BlockSortableType = {
-  preview?: boolean;
   sectionId: string;
 };
-export default function BlockSortable({
-  preview,
-  sectionId,
-}: BlockSortableType) {
+export default function BlockSortable({ sectionId }: BlockSortableType) {
   {
     const [blocks, setBlocks] = useBlocks();
     const blockComponents = blocks[sectionId] ?? [];
     // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-    const moveCard = useCallback((dragIndex: number, hoverIndex: number) => {
+    const moveBlock = useCallback((dragIndex: number, hoverIndex: number) => {
       setBlocks((prevBlocks) => {
         const block = prevBlocks[sectionId] ?? [];
         const updatedBlock = update(block, {
@@ -44,29 +41,23 @@ export default function BlockSortable({
     }, []);
 
     // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-    const renderCard = useCallback((card: BlockType, index: number) => {
+    const renderComponent = useCallback((block: BlockType, index: number) => {
+      console.log(block);
       return (
-        <Card
-          key={card.order}
+        <SortableWrapper
+          key={block.order}
           index={index}
-          id={card.order}
-          text={card.content}
-          moveCard={moveCard}
-        />
+          id={block.order}
+          moveBlock={moveBlock}
+        >
+          <div>Tesss</div>
+        </SortableWrapper>
       );
     }, []);
-    if (preview) {
-      return (
-        <div>
-          <CreditCardIcon />
-          <div>Card Test</div>
-        </div>
-      );
-    }
     return (
       <>
         <div className="" style={style}>
-          {blockComponents.map((card, i) => renderCard(card, i))}
+          {blockComponents.map((block, i) => renderComponent(block, i))}
         </div>
       </>
     );

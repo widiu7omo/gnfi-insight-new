@@ -11,28 +11,27 @@ import {
   ArrowDownToLineIcon,
   BlocksIcon,
   PenIcon,
-  PlusIcon,
   SaveIcon,
 } from "lucide-react";
 import { useState } from "react";
 export default function BlockBin({ sectionId }: { sectionId: string }) {
-  const [blocks, setBlocks] = useBlocks();
+  const [_, setBlocks] = useBlocks();
   const [sections] = useSections();
 
   const handleOnDropBlock = (item: DragItemType) => {
     if (item.itemType === ItemTypes.BLOCK) {
+      console.log(item);
       setBlocks((prev) => {
-        console.log(prev);
         const block = prev[sectionId] ?? [];
         const newValue = [
           ...block,
           {
-            index: block.length + 1,
+            index: block.length,
             content: `Content here ${block.length + 1}`,
-            component: COMPONENT_CONTENT,
-            group: "",
-            order: block.length + 1,
-            contentType: "text",
+            component: item.component,
+            group: sectionId,
+            order: block.length,
+            contentType: item.contentType,
           } as BlockType,
         ];
         return { ...prev, [sectionId]: newValue };

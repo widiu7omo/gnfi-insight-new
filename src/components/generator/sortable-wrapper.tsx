@@ -1,22 +1,38 @@
-import { DragSourceMonitor, XYCoord, useDrag, useDrop } from "react-dnd";
-import { DraggableItem, ItemTypes } from "./types";
-import { PropsWithChildren, useRef } from "react";
-import type { Identifier } from "dnd-core";
+import type { Identifier, XYCoord } from "dnd-core";
+import type { FC, PropsWithChildren } from "react";
+import { useRef } from "react";
+import { DragSourceMonitor, useDrag, useDrop } from "react-dnd";
+import { ItemTypes } from "./types";
 
-export type SortableWrapperType = {
-  id: number;
-  index: number;
-  moveBox: (dragIndex: number, hoverIndex: number) => void;
+const style = {
+  border: "1px dashed gray",
+  padding: "0.5rem 1rem",
+  marginBottom: ".5rem",
+  backgroundColor: "white",
+  cursor: "move",
 };
-export default function SortableWrapper({
+
+export interface SortableWrapperType {
+  id: unknown;
+  index: number;
+  moveBlock: (dragIndex: number, hoverIndex: number) => void;
+}
+
+interface DragItem {
+  index: number;
+  id: string;
+  type: string;
+}
+
+export const SortableWrapper: FC<PropsWithChildren<SortableWrapperType>> = ({
   id,
   index,
-  moveBox,
   children,
-}: PropsWithChildren<SortableWrapperType>) {
+  moveBlock,
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   const [{ handlerId }, drop] = useDrop<
-    DraggableItem,
+    DragItem,
     void,
     { handlerId: Identifier | null }
   >({
@@ -26,7 +42,7 @@ export default function SortableWrapper({
         handlerId: monitor.getHandlerId(),
       };
     },
-    hover(item: DraggableItem, monitor) {
+    hover(item: DragItem, monitor) {
       if (!ref.current) {
         return;
       }
@@ -66,7 +82,7 @@ export default function SortableWrapper({
       }
 
       // Time to actually perform the action
-      moveBox(dragIndex, hoverIndex);
+      moveBlock(dragIndex, hoverIndex);
 
       // Note: we're mutating the monitor item here!
       // Generally it's better to avoid mutations,
@@ -87,16 +103,10 @@ export default function SortableWrapper({
   });
 
   const opacity = isDragging ? 0 : 1;
-  console.log(isDragging);
   drag(drop(ref));
   return (
-    <div
-      ref={ref}
-      style={{ opacity }}
-      data-handler-id={handlerId}
-      className="w-full border border-neutral-300 p-2 "
-    >
+    <div ref={ref} style={{ ...style, opacity }} data-handler-id={handlerId}>
       {children}
     </div>
   );
-}
+};

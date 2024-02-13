@@ -3,6 +3,10 @@ export const ItemTypes = {
   SECTION: 'section',
   SORTABLE: 'sortable'
 };
+export const ContentType = {
+  IMAGE: 'image',
+  TEXT: 'text'
+}
 export type DraggableItem = {
   name: string;
   component: string;

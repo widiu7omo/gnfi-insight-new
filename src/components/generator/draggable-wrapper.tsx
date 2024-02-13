@@ -11,24 +11,31 @@ interface DropResult extends DraggableItem {
 }
 export type DragItemType = {
   name?: string;
-  component?: string;
+  component: number;
   itemType: string;
+  contentType: string;
 };
 
 export default function DraggableWrapper({
   name,
   component,
   children,
+  contentType,
   type,
-}: PropsWithChildren<{ name?: string; component?: number; type: string }>) {
+}: PropsWithChildren<{
+  name?: string;
+  component: number;
+  type: string;
+  contentType: string;
+}>) {
   const [_, setSections] = useSections();
-  const [cards, setCards] = useCards();
   const [{ isDragging }, drag] = useDrag(() => ({
     type,
     item: {
       name,
       component,
       itemType: type,
+      contentType,
     },
     options: { dropEffect: "copy" },
     end: (item, monitor) => {

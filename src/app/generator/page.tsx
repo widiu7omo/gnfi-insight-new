@@ -3,7 +3,11 @@ import ContentBin from "@/components/generator/content-bin";
 import { ContentSection } from "@/components/generator/content-section";
 import ContentImage from "@/components/generator/content-image";
 import DraggableWrapper from "@/components/generator/draggable-wrapper";
-import { DraggableItem, ItemTypes } from "@/components/generator/types";
+import {
+  ContentType,
+  DraggableItem,
+  ItemTypes,
+} from "@/components/generator/types";
 import {
   COMPONENT_CONTENT,
   COMPONENT_SECTION,
@@ -35,10 +39,12 @@ export default function GeneratePage() {
       <DndProvider backend={HTML5Backend}>
         <div className="w-[30%] border-r bg-neutral-100">
           <div className="w-20px space-y-2 min-h-screen p-6 ">
+            {/* SECTIONS COMPONENTS */}
             <div className="text-neutral-500 uppercase text-sm border-b border-neutral-300 pb-1">
               sections
             </div>
             <DraggableWrapper
+              contentType={ContentType.TEXT}
               type={ItemTypes.SECTION}
               name="section"
               component={COMPONENT_SECTION}
@@ -49,11 +55,13 @@ export default function GeneratePage() {
                 onDrop={handleOnDropComponent}
               />
             </DraggableWrapper>
+            {/* BLOCK COMPONENTS */}
             <div className="text-neutral-500 uppercase text-sm border-b border-neutral-300 pb-1 pt-3">
               blocks
             </div>
             <DraggableWrapper
               type={ItemTypes.BLOCK}
+              contentType={ContentType.TEXT}
               name="heading"
               component={COMPONENT_HEADER}
             >
@@ -61,12 +69,14 @@ export default function GeneratePage() {
             </DraggableWrapper>
             <DraggableWrapper
               type={ItemTypes.BLOCK}
+              contentType={ContentType.TEXT}
               name="paragraph"
               component={COMPONENT_CONTENT}
             >
               <ContentParagraph preview />
             </DraggableWrapper>
             <DraggableWrapper
+              contentType={ContentType.IMAGE}
               type={ItemTypes.BLOCK}
               name="hero"
               component={COMPONENT_HERO}
