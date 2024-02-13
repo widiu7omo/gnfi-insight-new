@@ -1,6 +1,5 @@
 import Section from "@/components/dynamic/base-section";
-import { blocks } from "@/data/blocks";
-import generatedContent from "@public/generated-content.json";
+import generateBlocks from "@public/pemilu-dan-dinamikanya-dari-masa-ke-masa/generated-blocks.json";
 import { getComponent } from "@/data/component-front";
 import { BlockType } from "@/data/types";
 
@@ -15,7 +14,7 @@ const groupByToMap = <T, Q>(
   }, new Map<Q, T[]>());
 
 export default function Home() {
-  const grouped = groupByToMap(generatedContent, (item) => item.group);
+  const grouped = groupByToMap(generateBlocks, (item) => item.group);
   return (
     <main className="min-h-dvh">
       {Object.keys(Object.fromEntries(grouped)).map((groupName) => {

@@ -1,9 +1,7 @@
 import { useBlocks } from "@/store/useBlocks";
-import Heading from "@tiptap/extension-heading";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { Heading1Icon, Heading2Icon, Heading3Icon } from "lucide-react";
-import { useEffect } from "react";
 export type ContentHeadingType = {
   sectionId: string;
   index: number;
@@ -79,10 +77,7 @@ export default function ContentHeading({
         </div>
       </div>
       <div className="p-4">
-        <EditorContent
-          editor={editor}
-          onChange={() => console.log(editor?.getJSON())}
-        />
+        <EditorContent editor={editor} />
       </div>
     </div>
   );

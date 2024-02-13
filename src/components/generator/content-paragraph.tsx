@@ -1,6 +1,6 @@
+import { useBlocks } from "@/store/useBlocks";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import { TextIcon } from "lucide-react";
 export type ContentParagraphType = {
   sectionId: string;
   index: number;
@@ -9,9 +9,19 @@ export default function ContentParagraph({
   sectionId,
   index,
 }: ContentParagraphType) {
+  const [blocks, setBlocks] = useBlocks();
   const editor = useEditor({
     extensions: [StarterKit],
-    content: "<p>Paragraph! 🌎️</p>",
+    content: blocks[sectionId][index].content ?? "<p>Paragraph! 🌎️</p>",
+    onBlur: () => {
+      setBlocks((prev) => {
+        const currentBlock = prev[sectionId][index];
+        currentBlock.content = editor?.getHTML() ?? "";
+        prev[sectionId][index] = currentBlock;
+        const currentSections = prev[sectionId];
+        return { ...prev, [sectionId]: currentSections };
+      });
+    },
   });
   return (
     <div className="">

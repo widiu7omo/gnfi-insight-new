@@ -25,8 +25,10 @@ import {
   LayoutTemplateIcon,
   TextIcon,
 } from "lucide-react";
+import { useTitle } from "@/store/useTitle";
 
 export default function GeneratePage() {
+  const [title, setTitle] = useTitle();
   const handleOnDropSection = (item: DraggableItem) => {
     const itemResult = {
       ...item,
@@ -42,10 +44,10 @@ export default function GeneratePage() {
   const [blocks, setBlocks] = useBlocks();
   const generateBlocks = async () => {
     //Normalize
-    let blockJoined: BlockType[] = [];
-    Object.keys(blocks).map((key: string) => {
-      blockJoined = [...blocks[key]];
-    });
+    const blockJoined: BlockType[] = [];
+    for (const block of Object.keys(blocks)) {
+      blockJoined.push(...blocks[block]);
+    }
     const normalizeBlock = blockJoined.map((item, index) => {
       item.order = index;
       return item;
@@ -56,7 +58,7 @@ export default function GeneratePage() {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(normalizeBlock),
+      body: JSON.stringify({ title: title, content: normalizeBlock }),
     });
     console.log(await result.json());
   };
@@ -141,6 +143,14 @@ export default function GeneratePage() {
             >
               Generate
             </button>
+          </div>
+          <div>
+            <input
+              type="text"
+              className="text-2xl font-semibold text-neutral-700 outline-none w-full"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
           </div>
           <ContentBin onDrop={handleOnDropSection} />
         </div>

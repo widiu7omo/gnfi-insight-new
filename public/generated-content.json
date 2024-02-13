@@ -1,1 +1,26 @@
-[{"index":0,"content":"<h1 class=\"heading\">Edit your content here</h1>","component":2,"group":"section-1","order":0,"contentType":"text"},{"index":1,"content":"<h2 class=\"heading\">Edit your content here</h2>","component":2,"group":"section-1","order":1,"contentType":"text"},{"index":2,"content":"<h3 class=\"heading\">Edit your content here</h3>","component":2,"group":"section-1","order":2,"contentType":"text"}]
+[
+    {
+        "index": 0,
+        "content": "<h1 class=\"heading\"><strong>Pemilu dan Dinamikanya dari Masa ke Masa</strong></h1>",
+        "component": 2,
+        "group": "section-1",
+        "order": 0,
+        "contentType": "text"
+    },
+    {
+        "index": 2,
+        "content": "https://placehold.co/600x400",
+        "component": 0,
+        "group": "section-1",
+        "order": 1,
+        "contentType": "image"
+    },
+    {
+        "index": 1,
+        "content": "<p>Sejak akhir tahun 2023 hingga memasuki awal 2024, pemilu menjadi topik yang ramai diperbincangkan di mana-mana. Di berbagai sudut kota dan desa, tampak pula warna-warni atribut kampanye. Ya, Pemilu 2024 memang sudah dekat.<br></p><p>Pemilu 2024 dijadwalkan diselenggarakan pada 14 Februari 2024. Nantinya, masyarakat Indonesia akan memilih Presiden dan Wakil Presiden, Anggota DPR, DPD, serta DPRD Provinsi dan DPRD Kabupaten/Kota.<br></p><p>Sebagaimana pemilu seperti biasanya, selalu ada berbagai dinamika yang mewarnai suasana jelang pemilu. Dari kelompok para elite yang bertarung di gelanggang, misalnya ada drama pecah kongsi antara Presiden Joko Widodo dengan Partai Demokrasi Indonesia (PDI) Perjuangan, juga pindahnya Partai Demokrat dari kubu pasangan calon presiden dan wakil presiden Anies Baswedan-Muhaimin Iskandar ke pasangan Prabowo Subianto-Gibran Rakabuming.<br></p><p>Sementara itu di kalangan masyarakat, dinamikanya tak jauh-jauh dari obrolan seputar partai politik (parpol) atau sosok yang akan mereka pilih. Tak ketinggalan, aksi saling puji dan kritik, baik itu yang disampaikan sambil berguyon maupun serius.</p><p></p><p>Setiap pemilu memang punya dinamikanya masing-masing. Sejak pertama kali diselenggarakan pada 1955, pemilu senantiasa punya seperangkat aturan yang berbeda-beda, yang mana itu pula yang membuat pemilu senantiasa dinamis dan memiliki kisah yang kemudian menjadi sejarah.</p>",
+        "component": 1,
+        "group": "section-1",
+        "order": 2,
+        "contentType": "text"
+    }
+]
