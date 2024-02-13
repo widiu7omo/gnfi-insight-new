@@ -41,10 +41,10 @@ export const ContentSection: FC<ContentSectionType> = memo(
       <div
         ref={drop}
         data-testid={sectionName}
-        className="border p-3 bg-neutral-50 w-full"
+        className="border p-3 bg-neutral-50 w-full rounded-xl"
         id={sectionName}
       >
-        <div>{sectionName}</div>
+        <div className="capitalize">{sectionName}</div>
         {JSON.stringify(lastDroppedItem)}
         {isActive
           ? "Release to drop"

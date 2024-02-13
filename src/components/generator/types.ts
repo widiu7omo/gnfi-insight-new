@@ -1,6 +1,7 @@
 export const ItemTypes = {
-  BOX: "box",
-  COMPONENT: 'component'
+  BLOCK: "block",
+  SECTION: 'section',
+  SORTABLE: 'sortable'
 };
 export type DraggableItem = {
   name: string;

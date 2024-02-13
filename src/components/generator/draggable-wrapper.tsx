@@ -1,12 +1,19 @@
 "use client";
-import { useDrag } from "react-dnd";
+import { DragSourceMonitor, useDrag } from "react-dnd";
 import { DraggableItem, ItemTypes } from "./types";
 import { PropsWithChildren } from "react";
-import { useDraggableItem } from "@/store/useDraggableItem";
+import { useSections } from "@/store/useSections";
+import { useBlocks } from "@/store/useBlocks";
+import { useCards } from "@/store/useCards";
 
 interface DropResult extends DraggableItem {
   dropEffect: string;
 }
+export type DragItemType = {
+  name?: string;
+  component?: string;
+  itemType: string;
+};
 
 export default function DraggableWrapper({
   name,
@@ -14,30 +21,41 @@ export default function DraggableWrapper({
   children,
   type,
 }: PropsWithChildren<{ name?: string; component?: number; type: string }>) {
-  const [components, setComponents] = useDraggableItem();
+  const [_, setSections] = useSections();
+  const [cards, setCards] = useCards();
   const [{ isDragging }, drag] = useDrag(() => ({
     type,
     item: {
       name,
       component,
+      itemType: type,
     },
     options: { dropEffect: "copy" },
     end: (item, monitor) => {
       const dropResult = monitor.getDropResult<DropResult>();
-      console.log(dropResult);
       if (dropResult) {
-        setComponents((prev) => {
-          console.log(prev);
-          return [
-            ...prev,
-            {
-              ...dropResult,
-              index: prev.length + 1,
-              order: prev.length + 1,
-              group: "BOXES",
-            },
-          ];
-        });
+        if (item.itemType === ItemTypes.SECTION) {
+          setSections((prev) => {
+            return [
+              ...prev,
+              {
+                ...dropResult,
+                index: prev.length + 1,
+                order: prev.length + 1,
+                group: "BOXES",
+              },
+            ];
+          });
+        }
+        // if (item.itemType === ItemTypes.BLOCK) {
+        //   setCards((prev) => [
+        //     ...prev,
+        //     {
+        //       id: prev.length + 1,
+        //       text: "Tesss tess",
+        //     },
+        //   ]);
+        // }
       }
     },
     collect: (monitor) => ({

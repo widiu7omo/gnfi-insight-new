@@ -2,15 +2,17 @@
 import { useDrop } from "react-dnd";
 import { DraggableItem, ItemTypes } from "./types";
 import SectionContainer from "./section-container";
-import { useDraggableItem } from "@/store/useDraggableItem";
+import { useSections } from "@/store/useSections";
+import { useCallback } from "react";
 type ContentBinType = {
   onDrop: (item: DraggableItem) => void;
-  components?: DraggableItem[];
 };
-
+import update from "immutability-helper";
+import CardContainer from "./card-container";
+import BlockBin from "./block-bin";
 export default function ContentBin({ onDrop }: ContentBinType) {
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
-    accept: ItemTypes.BOX,
+    accept: ItemTypes.SECTION,
     drop: onDrop,
     collect: (monitor) => ({
       isOver: monitor.isOver(),
@@ -18,8 +20,8 @@ export default function ContentBin({ onDrop }: ContentBinType) {
     }),
   }));
   const isActive = canDrop && isOver;
-  const [components] = useDraggableItem();
-  console.log(components);
+  const [components] = useSections();
+
   return (
     <div
       ref={drop}
@@ -31,17 +33,18 @@ export default function ContentBin({ onDrop }: ContentBinType) {
       }`}
     >
       <div className="text-neutral-500 font-medium">
-        {isActive ? "Release to drop" : "Drag a box here"}
+        {isActive ? "Release to drop" : "Drag a section here"}
       </div>
-      {components.map((component) => {
-        return (
-          <SectionContainer
-            index={component.index}
-            item={component}
-            key={`${component.index}-key-${Math.random()}`}
-          />
-        );
-      })}
+      <div className="space-y-4 w-full">
+        {components.map((component) => {
+          return (
+            <BlockBin
+              sectionId={`section-${component.index}`}
+              key={`${component.index}-key-${Math.random()}`}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

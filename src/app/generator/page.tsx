@@ -11,19 +11,28 @@ import {
   COMPONENT_HEADER,
   COMPONENT_HERO,
 } from "@/data/component-front";
-import { DndProvider } from "react-dnd";
+import { DndProvider, useDrag } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import ContentHeading from "@/components/generator/content-heading";
 import ContentParagraph from "@/components/generator/content-paragraph";
 import { useState } from "react";
-import { useDraggableItem } from "@/store/useDraggableItem";
+import { useSections } from "@/store/useSections";
+import CardContainer from "@/components/generator/card-container";
 
 export default function GeneratePage() {
-  const handleOnDrop = (item: DraggableItem) => {
-    return {
+  const handleOnDropSection = (item: DraggableItem) => {
+    const itemResult = {
       ...item,
       group: "BOXES",
     };
+    console.log("BOX", itemResult);
+  };
+  const handleOnDropComponent = (item: DraggableItem) => {
+    const itemResult = {
+      ...item,
+      group: "COMPONENTS",
+    };
+    console.log("COMPONENT", itemResult);
   };
   return (
     <>
@@ -31,32 +40,39 @@ export default function GeneratePage() {
         <div className="w-[30%] border-r bg-neutral-100">
           <div className="w-20px space-y-2 min-h-screen p-6 ">
             <DraggableWrapper
-              type={ItemTypes.BOX}
+              type={ItemTypes.SECTION}
               name="section"
               component={COMPONENT_SECTION}
             >
               <ContentSection
                 preview
-                accept={[ItemTypes.COMPONENT]}
-                onDrop={handleOnDrop}
+                accept={[ItemTypes.BLOCK]}
+                onDrop={handleOnDropComponent}
               />
             </DraggableWrapper>
             <DraggableWrapper
-              type={ItemTypes.COMPONENT}
+              type={ItemTypes.SECTION}
+              name="section"
+              component={COMPONENT_SECTION}
+            >
+              <CardContainer preview />
+            </DraggableWrapper>
+            <DraggableWrapper
+              type={ItemTypes.BLOCK}
               name="heading"
               component={COMPONENT_HEADER}
             >
               <ContentHeading preview />
             </DraggableWrapper>
             <DraggableWrapper
-              type={ItemTypes.COMPONENT}
+              type={ItemTypes.BLOCK}
               name="paragraph"
               component={COMPONENT_CONTENT}
             >
               <ContentParagraph preview />
             </DraggableWrapper>
             <DraggableWrapper
-              type={ItemTypes.COMPONENT}
+              type={ItemTypes.BLOCK}
               name="hero"
               component={COMPONENT_HERO}
             >
@@ -68,7 +84,7 @@ export default function GeneratePage() {
           <div className="text-3xl font-semibold text-neutral-900">
             Page Content Generator
           </div>
-          <ContentBin onDrop={handleOnDrop} />
+          <ContentBin onDrop={handleOnDropSection} />
         </div>
       </DndProvider>
     </>

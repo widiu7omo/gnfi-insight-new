@@ -1,40 +1,27 @@
 import { ReactNode, useCallback } from "react";
-import { ContentSection } from "./content-section";
 import SortableWrapper from "./sortable-wrapper";
 import { DraggableItem, ItemTypes } from "./types";
 import update from "immutability-helper";
-import { useDraggableItem } from "@/store/useDraggableItem";
+import { useSections } from "@/store/useSections";
 export default function SectionContainer({
   item,
-  index,
+  moveBox,
 }: {
   item: DraggableItem;
-  index: number;
+  moveBox: (hoverIndex: number, dropIndex: number) => void;
 }): ReactNode {
   //Section Components
   const handleOnDrop = (item: DraggableItem) => {
     console.log(item);
   };
-  const [draggableItems, setDraggableItems] = useDraggableItem();
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-  const moveBox = useCallback((dragIndex: number, hoverIndex: number) => {
-    setDraggableItems((prevItems: DraggableItem[]) => {
-      console.log(prevItems);
-      return update(prevItems, {
-        $splice: [
-          [dragIndex, 1],
-          [hoverIndex, 0, prevItems[dragIndex] as DraggableItem],
-        ],
-      });
-    });
-  }, []);
+  const [sections, setSections] = useSections();
+
+  if (!item) {
+    return <div className="">Empty</div>;
+  }
   return (
-    <SortableWrapper moveBox={moveBox} index={index} id={index}>
-      <ContentSection
-        sectionName={`section-${index}`}
-        accept={[ItemTypes.COMPONENT]}
-        onDrop={handleOnDrop}
-      />
+    <SortableWrapper moveBox={moveBox} index={item.order} id={item.order}>
+      Tess - {item.order}
     </SortableWrapper>
   );
 }
