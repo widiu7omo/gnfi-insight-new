@@ -5,7 +5,8 @@ export const ItemTypes = {
 };
 export const ContentType = {
   IMAGE: 'image',
-  TEXT: 'text'
+  TEXT: 'text',
+  CUSTOM: 'custom'
 }
 export type DraggableItem = {
   name: string;

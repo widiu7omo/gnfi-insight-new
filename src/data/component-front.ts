@@ -17,7 +17,7 @@ export const COMPONENT_CONTENT: number = 1;
 export const COMPONENT_HEADER: number = 2;
 export const COMPONENT_SECTION: number = 3;
 export const COMPONENT_IMAGE: number = 4;
-
+export const COMPONENT_CUSTOM: number = 5;
 
 export const componentList: Record<
   number,

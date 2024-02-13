@@ -1,6 +1,6 @@
 "use client";
 import { useDrop } from "react-dnd";
-import { ItemTypes } from "./types";
+import { ContentType, ItemTypes } from "./types";
 import { useBlocks } from "@/store/useBlocks";
 import { COMPONENT_CONTENT } from "@/data/component-front";
 import { useSections } from "@/store/useSections";
@@ -27,7 +27,10 @@ export default function BlockBin({ sectionId }: { sectionId: string }) {
           ...block,
           {
             index: block.length,
-            content: `Content here ${block.length + 1}`,
+            content:
+              ContentType.IMAGE === item.contentType
+                ? "https://placehold.co/600x400"
+                : "Edit your content here",
             component: item.component,
             group: sectionId,
             order: block.length,

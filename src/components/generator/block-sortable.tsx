@@ -1,11 +1,9 @@
 import update from "immutability-helper";
 import { useCallback } from "react";
-import { Card } from "./card";
-import { CreditCardIcon } from "lucide-react";
-import { useCards } from "@/store/useCards";
 import { useBlocks } from "@/store/useBlocks";
 import { BlockType } from "@/data/types";
 import { SortableWrapper } from "./sortable-wrapper";
+import ContentRenderer from "./content-renderer";
 
 const style = {
   width: "100%",
@@ -42,7 +40,6 @@ export default function BlockSortable({ sectionId }: BlockSortableType) {
 
     // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     const renderComponent = useCallback((block: BlockType, index: number) => {
-      console.log(block);
       return (
         <SortableWrapper
           key={block.order}
@@ -50,13 +47,13 @@ export default function BlockSortable({ sectionId }: BlockSortableType) {
           id={block.order}
           moveBlock={moveBlock}
         >
-          <div>Tesss</div>
+          <ContentRenderer block={block} />
         </SortableWrapper>
       );
     }, []);
     return (
       <>
-        <div className="" style={style}>
+        <div className="space-y-3" style={style}>
           {blockComponents.map((block, i) => renderComponent(block, i))}
         </div>
       </>

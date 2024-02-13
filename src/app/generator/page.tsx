@@ -13,11 +13,13 @@ import {
   COMPONENT_SECTION,
   COMPONENT_HEADER,
   COMPONENT_HERO,
+  COMPONENT_CUSTOM,
 } from "@/data/component-front";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import ContentHeading from "@/components/generator/content-heading";
 import ContentParagraph from "@/components/generator/content-paragraph";
+import ContentCustom from "@/components/generator/content-custom";
+import ContentHeading from "@/components/generator/content-heading";
 
 export default function GeneratePage() {
   const handleOnDropSection = (item: DraggableItem) => {
@@ -82,6 +84,14 @@ export default function GeneratePage() {
               component={COMPONENT_HERO}
             >
               <ContentImage preview />
+            </DraggableWrapper>
+            <DraggableWrapper
+              contentType={ContentType.CUSTOM}
+              type={ItemTypes.BLOCK}
+              name="animation"
+              component={COMPONENT_CUSTOM}
+            >
+              <ContentCustom preview />
             </DraggableWrapper>
           </div>
         </div>

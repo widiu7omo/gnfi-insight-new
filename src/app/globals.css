@@ -6,4 +6,13 @@
   .text-balance {
     text-wrap: balance;
   }
+  h1.heading {
+    @apply text-4xl font-bold;
+  }
+  h2.heading {
+    @apply text-3xl font-bold;
+  }
+  h3.heading {
+    @apply text-2xl font-medium;
+  }
 }

@@ -4,14 +4,6 @@ import { useRef } from "react";
 import { DragSourceMonitor, useDrag, useDrop } from "react-dnd";
 import { ItemTypes } from "./types";
 
-const style = {
-  border: "1px dashed gray",
-  padding: "0.5rem 1rem",
-  marginBottom: ".5rem",
-  backgroundColor: "white",
-  cursor: "move",
-};
-
 export interface SortableWrapperType {
   id: unknown;
   index: number;
@@ -105,7 +97,12 @@ export const SortableWrapper: FC<PropsWithChildren<SortableWrapperType>> = ({
   const opacity = isDragging ? 0 : 1;
   drag(drop(ref));
   return (
-    <div ref={ref} style={{ ...style, opacity }} data-handler-id={handlerId}>
+    <div
+      ref={ref}
+      style={{ opacity }}
+      className="border border-dashed bg-white border-neutral-600 rounded-xl"
+      data-handler-id={handlerId}
+    >
       {children}
     </div>
   );
