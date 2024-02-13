@@ -75,7 +75,7 @@ export default function GeneratePage() {
             </DraggableWrapper>
           </div>
         </div>
-        <div className="flex-1 space-y-7 p-8">
+        <div className="flex-1 space-y-7 p-8 min-h-screen overflow-auto">
           <div className="text-3xl font-semibold text-neutral-900">
             Page Content Generator
           </div>

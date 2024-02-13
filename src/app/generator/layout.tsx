@@ -3,5 +3,5 @@ export default function GeneratorLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className="flex">{children}</div>;
+  return <div className="flex h-screen overflow-hidden">{children}</div>;
 }

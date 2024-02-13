@@ -47,15 +47,6 @@ export default function DraggableWrapper({
             ];
           });
         }
-        // if (item.itemType === ItemTypes.BLOCK) {
-        //   setCards((prev) => [
-        //     ...prev,
-        //     {
-        //       id: prev.length + 1,
-        //       text: "Tesss tess",
-        //     },
-        //   ]);
-        // }
       }
     },
     collect: (monitor) => ({
