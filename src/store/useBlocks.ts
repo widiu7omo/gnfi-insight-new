@@ -1,5 +1,6 @@
 import { BlockType } from "@/data/types"
 import { atom, useAtom } from "jotai"
+import { atomWithStorage } from "jotai/utils";
 
-const blocks = atom<Record<string, BlockType[]>>({})
+const blocks = atomWithStorage<Record<string, BlockType[]>>('blocks', {})
 export const useBlocks = () => useAtom(blocks);
