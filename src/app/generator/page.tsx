@@ -1,5 +1,4 @@
 "use client";
-import Header from "@/components/dynamic/header";
 import ContentBin from "@/components/generator/content-bin";
 import { ContentSection } from "@/components/generator/content-section";
 import ContentImage from "@/components/generator/content-image";
@@ -11,13 +10,10 @@ import {
   COMPONENT_HEADER,
   COMPONENT_HERO,
 } from "@/data/component-front";
-import { DndProvider, useDrag } from "react-dnd";
+import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import ContentHeading from "@/components/generator/content-heading";
 import ContentParagraph from "@/components/generator/content-paragraph";
-import { useState } from "react";
-import { useSections } from "@/store/useSections";
-import CardContainer from "@/components/generator/card-container";
 
 export default function GeneratePage() {
   const handleOnDropSection = (item: DraggableItem) => {
@@ -39,6 +35,9 @@ export default function GeneratePage() {
       <DndProvider backend={HTML5Backend}>
         <div className="w-[30%] border-r bg-neutral-100">
           <div className="w-20px space-y-2 min-h-screen p-6 ">
+            <div className="text-neutral-500 uppercase text-sm border-b border-neutral-300 pb-1">
+              sections
+            </div>
             <DraggableWrapper
               type={ItemTypes.SECTION}
               name="section"
@@ -50,13 +49,9 @@ export default function GeneratePage() {
                 onDrop={handleOnDropComponent}
               />
             </DraggableWrapper>
-            <DraggableWrapper
-              type={ItemTypes.SECTION}
-              name="section"
-              component={COMPONENT_SECTION}
-            >
-              <CardContainer preview />
-            </DraggableWrapper>
+            <div className="text-neutral-500 uppercase text-sm border-b border-neutral-300 pb-1 pt-3">
+              blocks
+            </div>
             <DraggableWrapper
               type={ItemTypes.BLOCK}
               name="heading"

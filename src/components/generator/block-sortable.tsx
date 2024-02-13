@@ -65,10 +65,7 @@ export default function BlockSortable({
     }
     return (
       <>
-        <div
-          className="border border-dashed border-neutral-300 p-3 w-full"
-          style={style}
-        >
+        <div className="" style={style}>
           {blockComponents.map((card, i) => renderCard(card, i))}
         </div>
       </>

@@ -6,24 +6,21 @@ import { COMPONENT_CONTENT } from "@/data/component-front";
 import { useSections } from "@/store/useSections";
 import { BlockType } from "@/data/types";
 import BlockSortable from "./block-sortable";
-import { useState } from "react";
-import { useCards } from "@/store/useCards";
 import { DragItemType } from "./draggable-wrapper";
+import {
+  ArrowDownToLineIcon,
+  BlocksIcon,
+  PenIcon,
+  PlusIcon,
+  SaveIcon,
+} from "lucide-react";
+import { useState } from "react";
 export default function BlockBin({ sectionId }: { sectionId: string }) {
   const [blocks, setBlocks] = useBlocks();
   const [sections] = useSections();
-  const [cards, setCards] = useCards();
 
   const handleOnDropBlock = (item: DragItemType) => {
-    console.log(item);
     if (item.itemType === ItemTypes.BLOCK) {
-      setCards((prev) => [
-        ...prev,
-        {
-          id: prev.length + 1,
-          text: "Tesss tess",
-        },
-      ]);
       setBlocks((prev) => {
         console.log(prev);
         const block = prev[sectionId] ?? [];
@@ -51,21 +48,53 @@ export default function BlockBin({ sectionId }: { sectionId: string }) {
     }),
   }));
   const isActive = canDrop && isOver;
+  const [sectionName, setSectionName] = useState("Section Name");
+  const [toggleSecName, setToggleSecName] = useState(true);
   return (
     <div
       ref={drop}
       data-testid="dustbin"
-      className={`rounded-xl w-full border-2 border-dashed ${
+      className={`rounded-xl w-full border-4 border-neutral-400 mt-4 ${
         sections.length > 0 ? "p-6" : "h-[200px]"
       } flex items-center justify-center flex-col ${
-        isActive ? "bg-neutral-200" : "bg-neutral-100"
+        isActive ? "bg-neutral-300/70" : "bg-neutral-200/60"
       }`}
     >
-      <div className="text-neutral-500 font-medium">
-        {isActive ? "Release to drop" : "Drag block here"}
+      <div className="flex justify-between items-center w-full">
+        <div className="flex space-x-2 items-center justify-between">
+          <button type="button" onClick={() => setToggleSecName((val) => !val)}>
+            {toggleSecName ? <PenIcon size={16} /> : <SaveIcon size={16} />}
+          </button>
+          <input
+            type="text"
+            value={sectionName}
+            onChange={(e) => setSectionName(e.target.value)}
+            readOnly={toggleSecName}
+            className="bg-transparent outline-none text-sm text-neutral-800"
+          />
+        </div>
+        <div className="text-xs text-neutral-500">{sectionId}</div>
       </div>
-      <div className="space-y-4 w-full">
+      <div
+        className={`space-y-4 w-full ${
+          sections.length > 0 ? "p-6" : "h-[200px]"
+        }`}
+      >
         <BlockSortable sectionId={sectionId} />
+        <div className="text-neutral-500 font-medium flex items-center justify-center flex-col w-full py-3 border border-dashed border-neutral-500 rounded-xl">
+          <span>
+            {!isActive && (
+              <BlocksIcon strokeWidth={2} className="text-neutral-500" />
+            )}
+            {isActive && (
+              <ArrowDownToLineIcon
+                strokeWidth={2}
+                className="text-neutral-500"
+              />
+            )}
+          </span>
+          <span>{isActive ? "Release to drop" : "Drag block here"}</span>
+        </div>
       </div>
     </div>
   );

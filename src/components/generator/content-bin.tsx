@@ -10,6 +10,12 @@ type ContentBinType = {
 import update from "immutability-helper";
 import CardContainer from "./card-container";
 import BlockBin from "./block-bin";
+import {
+  ArrowBigDown,
+  ArrowDownToLineIcon,
+  GroupIcon,
+  PlusIcon,
+} from "lucide-react";
 export default function ContentBin({ onDrop }: ContentBinType) {
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: ItemTypes.SECTION,
@@ -26,15 +32,12 @@ export default function ContentBin({ onDrop }: ContentBinType) {
     <div
       ref={drop}
       data-testid="dustbin"
-      className={`rounded-xl border-2 border-dashed ${
+      className={`rounded-xl space-y-4 px-3 border-2 border-dashed ${
         components.length > 0 ? "p-6" : "h-[200px]"
       } flex items-center justify-center flex-col ${
         isActive ? "bg-neutral-200" : "bg-neutral-100"
       }`}
     >
-      <div className="text-neutral-500 font-medium">
-        {isActive ? "Release to drop" : "Drag a section here"}
-      </div>
       <div className="space-y-4 w-full">
         {components.map((component) => {
           return (
@@ -44,6 +47,21 @@ export default function ContentBin({ onDrop }: ContentBinType) {
             />
           );
         })}
+      </div>
+      <div className="text-neutral-500 space-y-3 font-medium flex items-center justify-center flex-col w-full py-3 border border-dashed border-neutral-500 rounded-xl">
+        <span>
+          {!isActive && (
+            <GroupIcon strokeWidth={1} className="text-neutral-500" size={50} />
+          )}
+          {isActive && (
+            <ArrowBigDown
+              strokeWidth={1}
+              className="text-neutral-500"
+              size={50}
+            />
+          )}
+        </span>
+        <span>{isActive ? "Release to drop" : "Drag new section here"}</span>
       </div>
     </div>
   );
