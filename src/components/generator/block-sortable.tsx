@@ -1,8 +1,10 @@
 import update from "immutability-helper";
-import { Dispatch, useCallback, useState } from "react";
+import { useCallback } from "react";
 import { Card } from "./card";
 import { CreditCardIcon } from "lucide-react";
-import { SetStateAction } from "jotai";
+import { useCards } from "@/store/useCards";
+import { useBlocks } from "@/store/useBlocks";
+import { BlockType } from "@/data/types";
 
 const style = {
   width: "100%",
@@ -19,43 +21,40 @@ export interface ContainerState {
 export type BlockSortableType = {
   preview?: boolean;
   sectionId: string;
-  cards: Item[];
-  setCards: Dispatch<SetStateAction<Item[]>>;
 };
 export default function BlockSortable({
   preview,
   sectionId,
-  cards,
-  setCards,
 }: BlockSortableType) {
   {
+    const [blocks, setBlocks] = useBlocks();
+    const blockComponents = blocks[sectionId] ?? [];
     // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     const moveCard = useCallback((dragIndex: number, hoverIndex: number) => {
-      setCards((prevCards: Item[]) =>
-        update(prevCards, {
+      setBlocks((prevBlocks) => {
+        const block = prevBlocks[sectionId] ?? [];
+        const updatedBlock = update(block, {
           $splice: [
             [dragIndex, 1],
-            [hoverIndex, 0, prevCards[dragIndex] as Item],
+            [hoverIndex, 0, block[dragIndex] as BlockType],
           ],
-        })
-      );
+        });
+        return { ...prevBlocks, [sectionId]: updatedBlock };
+      });
     }, []);
 
     // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-    const renderCard = useCallback(
-      (card: { id: number; text: string }, index: number) => {
-        return (
-          <Card
-            key={card.id}
-            index={index}
-            id={card.id}
-            text={card.text}
-            moveCard={moveCard}
-          />
-        );
-      },
-      []
-    );
+    const renderCard = useCallback((card: BlockType, index: number) => {
+      return (
+        <Card
+          key={card.order}
+          index={index}
+          id={card.order}
+          text={card.content}
+          moveCard={moveCard}
+        />
+      );
+    }, []);
     if (preview) {
       return (
         <div>
@@ -70,7 +69,7 @@ export default function BlockSortable({
           className="border border-dashed border-neutral-300 p-3 w-full"
           style={style}
         >
-          {cards.map((card, i) => renderCard(card, i))}
+          {blockComponents.map((card, i) => renderCard(card, i))}
         </div>
       </>
     );

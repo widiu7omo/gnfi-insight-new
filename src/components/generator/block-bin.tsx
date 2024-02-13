@@ -1,7 +1,6 @@
 "use client";
 import { useDrop } from "react-dnd";
-import { DraggableItem, ItemTypes } from "./types";
-import CardContainer from "./card-container";
+import { ItemTypes } from "./types";
 import { useBlocks } from "@/store/useBlocks";
 import { COMPONENT_CONTENT } from "@/data/component-front";
 import { useSections } from "@/store/useSections";
@@ -25,25 +24,23 @@ export default function BlockBin({ sectionId }: { sectionId: string }) {
           text: "Tesss tess",
         },
       ]);
+      setBlocks((prev) => {
+        console.log(prev);
+        const block = prev[sectionId] ?? [];
+        const newValue = [
+          ...block,
+          {
+            index: block.length + 1,
+            content: `Content here ${block.length + 1}`,
+            component: COMPONENT_CONTENT,
+            group: "",
+            order: block.length + 1,
+            contentType: "text",
+          } as BlockType,
+        ];
+        return { ...prev, [sectionId]: newValue };
+      });
     }
-    // setBlocks((prev) => {
-    //   const selectedBlocks = prev[sectionId] ?? [];
-    //   const updatedBlocks = [
-    //     ...selectedBlocks,
-    //     {
-    //       index: selectedBlocks.length + 1,
-    //       content: "Content here",
-    //       component: COMPONENT_CONTENT,
-    //       group: "",
-    //       order: selectedBlocks.length + 1,
-    //       contentType: "text",
-    //     } as BlockType,
-    //   ];
-    //   return {
-    //     ...prev,
-    //     [sectionId]: updatedBlocks,
-    //   };
-    // });
   };
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: ItemTypes.BLOCK,
@@ -68,11 +65,7 @@ export default function BlockBin({ sectionId }: { sectionId: string }) {
         {isActive ? "Release to drop" : "Drag block here"}
       </div>
       <div className="space-y-4 w-full">
-        <BlockSortable
-          cards={cards}
-          setCards={setCards}
-          sectionId={sectionId}
-        />
+        <BlockSortable sectionId={sectionId} />
       </div>
     </div>
   );
