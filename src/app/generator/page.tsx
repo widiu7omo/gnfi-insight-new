@@ -30,25 +30,19 @@ import { useTitle } from "@/store/useTitle";
 export default function GeneratePage() {
   const [title, setTitle] = useTitle();
   const handleOnDropSection = (item: DraggableItem) => {
-    const itemResult = {
-      ...item,
-      group: "BOXES",
-    };
+    console.log(item);
   };
   const handleOnDropComponent = (item: DraggableItem) => {
-    const itemResult = {
-      ...item,
-      group: "COMPONENTS",
-    };
+    console.log(item);
   };
-  const [blocks, setBlocks] = useBlocks();
+  const [blocks] = useBlocks();
   const generateBlocks = async () => {
     //Normalize
     const blockJoined: BlockType[] = [];
     for (const block of Object.keys(blocks)) {
       blockJoined.push(...blocks[block]);
     }
-    const normalizeBlock = blockJoined.map((item, index) => {
+    const normalizeBlock: BlockType[] = blockJoined.map((item, index) => {
       item.order = index;
       return item;
     });
