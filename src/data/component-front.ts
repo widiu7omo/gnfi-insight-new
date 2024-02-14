@@ -3,6 +3,7 @@ import Header from "@/components/dynamic/header";
 import { ReactElement } from "react";
 import { BlockType } from "@/data/types";
 import Hero from "@/components/dynamic/hero";
+import ContentAnimated from "@/components/dynamic/content-animated";
 
 export const getComponent = (
   componentId: number,
@@ -22,4 +23,4 @@ export const COMPONENT_CUSTOM: number = 5;
 export const componentList: Record<
   number,
   ({ block }: { block: BlockType }) => ReactElement
-> = { 0: Hero, 1: Content, 2: Header };
+> = { 0: Hero, 1: Content, 2: Header, 5: ContentAnimated };

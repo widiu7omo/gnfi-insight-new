@@ -5,5 +5,5 @@ export type FileExtended = {
   preview: string;
   name: string;
 };
-const filesAtom = atomWithStorage<Record<string, FileExtended[]>>('files', {});
+const filesAtom = atomWithStorage<Record<string, { [key: string]: FileExtended }>>('files', {});
 export const useFiles = () => useAtom(filesAtom);

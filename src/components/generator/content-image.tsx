@@ -17,16 +17,25 @@ export default function ContentImage({ sectionId, index }: ContentImageType) {
   const [blocks, setBlocks] = useBlocks();
   // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   const onDrop = useCallback(async (acceptedFiles: File[]) => {
-    setFiles((prev) => ({
-      ...prev,
-      [sectionId]: acceptedFiles.map(
-        (file) =>
-          ({
-            preview: URL.createObjectURL(file),
-            name: file.name,
-          } as FileExtended)
-      ),
-    }));
+    const file = acceptedFiles[0];
+    console.log(file);
+    console.log(index);
+    setFiles((prev) => {
+      if (!prev[sectionId]) {
+        prev[sectionId] = {};
+      }
+      const prevFile = prev[sectionId][index] ?? {};
+      prevFile.preview = URL.createObjectURL(file);
+      prevFile.name = file.name;
+      console.log(prevFile);
+      prev[sectionId][index] = prevFile;
+      const currentFiles = prev[sectionId];
+      console.log(currentFiles);
+      return {
+        ...prev,
+        [sectionId]: currentFiles,
+      };
+    });
 
     const formData = new FormData();
     for (const file of acceptedFiles) {
@@ -66,15 +75,17 @@ export default function ContentImage({ sectionId, index }: ContentImageType) {
     <div {...getRootProps()}>
       <div
         className={`rounded-xl ${
-          (files[sectionId] ?? []).length > 0 ? "h-full" : "h-[100px]"
+          files[sectionId] && files[sectionId][index] != null
+            ? "h-full"
+            : "h-[100px]"
         } flex items-center justify-center flex-col space-y-2`}
       >
-        {(files[sectionId] ?? []).length > 0 ? (
+        {files[sectionId] && files[sectionId][index] != null ? (
           <div className="h-full w-auto rounded-xl relative group">
             <img
               className="h-full w-auto rounded-xl"
-              src={files[sectionId].at(0)?.preview}
-              alt={files[sectionId].at(0)?.name}
+              src={files[sectionId][index]?.preview}
+              alt={files[sectionId][index]?.name}
             />
             <div className="absolute invisible group-hover:visible cursor-pointer flex items-center justify-center top-0 bottom-0 left-0 right-0 hover:bg-black/60 hover:backdrop-blur-sm transition-all rounded-xl">
               <div className="flex items-center justify-center flex-col flex-1">
