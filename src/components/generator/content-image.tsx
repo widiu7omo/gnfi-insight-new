@@ -18,8 +18,6 @@ export default function ContentImage({ sectionId, index }: ContentImageType) {
   // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   const onDrop = useCallback(async (acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
-    console.log(file);
-    console.log(index);
     setFiles((prev) => {
       if (!prev[sectionId]) {
         prev[sectionId] = {};
@@ -27,10 +25,8 @@ export default function ContentImage({ sectionId, index }: ContentImageType) {
       const prevFile = prev[sectionId][index] ?? {};
       prevFile.preview = URL.createObjectURL(file);
       prevFile.name = file.name;
-      console.log(prevFile);
       prev[sectionId][index] = prevFile;
       const currentFiles = prev[sectionId];
-      console.log(currentFiles);
       return {
         ...prev,
         [sectionId]: currentFiles,
@@ -84,8 +80,8 @@ export default function ContentImage({ sectionId, index }: ContentImageType) {
           <div className="h-full w-auto rounded-xl relative group">
             <img
               className="h-full w-auto rounded-xl"
-              src={files[sectionId][index]?.preview}
-              alt={files[sectionId][index]?.name}
+              src={blocks[sectionId][index]?.content}
+              alt={blocks[sectionId][index]?.contentCaption ?? "Unkown"}
             />
             <div className="absolute invisible group-hover:visible cursor-pointer flex items-center justify-center top-0 bottom-0 left-0 right-0 hover:bg-black/60 hover:backdrop-blur-sm transition-all rounded-xl">
               <div className="flex items-center justify-center flex-col flex-1">
