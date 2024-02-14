@@ -24,7 +24,11 @@ export async function POST(request: Request) {
         )
         return Response.json({
             success: true,
-            message: 'Uploaded successfully'
+            message: 'Uploaded successfully',
+            data: {
+                imagePath: folderPath.replaceAll('public/', ''),
+                imageName: fileName
+            }
         })
     } catch (error) {
         return Response.json({
