@@ -1,7 +1,9 @@
+"use client";
 import { BlockType } from "@/data/types";
 import { ChevronsDownIcon } from "lucide-react";
-
-export default function Hero({ block }: { block: BlockType }) {
+import { motion, useScroll } from "framer-motion";
+export default function IntroductionHero({ block }: { block: BlockType }) {
+  const { scrollYProgress } = useScroll();
   return (
     <div
       className="w-full h-screen relative !bg-cover"
@@ -20,9 +22,13 @@ export default function Hero({ block }: { block: BlockType }) {
             />
           </div>
           <div className="flex-1 flex items-center justify-center">
-            <h5 className="text-5xl font-bold text-white max-w-[60%] text-center leading-snug">
+            <motion.h5
+              initial={{ opacity: 0, y: 0 }}
+              whileInView={{ opacity: 1, y: -20 }}
+              className="text-5xl font-bold text-white max-w-[60%] text-center leading-snug"
+            >
               Pemilu dan Dinamikanya dari Masa ke Masa
-            </h5>
+            </motion.h5>
           </div>
           <div className="flex items-center justify-center">
             <ChevronsDownIcon size={40} className="text-white animate-bounce" />

@@ -48,7 +48,7 @@ export default function ContentCustom({
         </button>
         <span>Custom Block</span>
       </div>
-      <div className=" px-6">
+      <div className="px-6 w-full">
         <fieldset className="flex flex-col items-start justify-start w-full ">
           <label
             htmlFor="component-name"
