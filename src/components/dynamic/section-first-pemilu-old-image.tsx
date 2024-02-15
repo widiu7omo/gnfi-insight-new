@@ -3,6 +3,28 @@ import { Signika } from "next/font/google";
 import { motion } from "framer-motion";
 const signikaFont = Signika({ weight: "400" });
 export default function SectionFirstPemiluOldImage() {
+  const containerAnimate = {
+    hidden: {
+      x: 20,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delayChildren: 0.5,
+        staggerChildren: 0.3,
+        delay: 0.6,
+      },
+    },
+  };
+  const item = {
+    hidden: { x: 20, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+    },
+  };
   return (
     <div
       className="h-fit relative w-full mx-auto py-8 flex items-center justify-center flex-col shadow-[inset_0px_-2px_4.8px_2px_rgba(0,0,0,0.1),_inset_0px_4px_4px_rgba(0,0,0,0.1)]"
@@ -13,8 +35,8 @@ export default function SectionFirstPemiluOldImage() {
     >
       <div className="space-y-8">
         <motion.img
-          initial={{ rotate: 3, scale: 1.2 }}
-          whileInView={{ rotate: 0, scale: 1 }}
+          initial={{ opacity: 0, rotate: 3, scale: 1.2 }}
+          whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
           transition={{ delay: 0.3 }}
           src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/kulonprogokab.go.id.jpg"
           className="h-full border-8 border-white shadow-2xl"
@@ -64,6 +86,42 @@ export default function SectionFirstPemiluOldImage() {
             Sastroamidjojo dan Kabinet Burhanuddin Harahap.
           </p>
         </div>
+      </div>
+      <div className="max-w-7xl flex mt-20 space-x-6">
+        <motion.img
+          initial={{ opacity: 0, scale: 1.1, x: -20 }}
+          whileInView={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ delay: 0.3 }}
+          src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/Wikimedia_Commons.jpg"
+          className="h-full max-w-lg border-8 border-white shadow-2xl"
+        />
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={containerAnimate}
+          className="prose mx-auto !text-neutral-700 text-xl w-[60ch]"
+          style={{ ...signikaFont.style }}
+        >
+          <motion.p variants={item}>
+            Sistem pemilihan yang digunakan pada Pemilu 1955 adalah sistem
+            pemilihan proporsional tertutup atau dikenal sebagai sistem
+            berimbang. Dalam sistem ini, pemilih memiliki opsi untuk memberikan
+            suara kepada calon individual dan juga dapat memberikan suara kepada
+            parpol yang ikut serta dalam pemilihan.
+          </motion.p>
+          <motion.p variants={item}>
+            Suara yang diberikan kepada calon akan dianggap sebagai dukungan
+            langsung untuk calon tersebut, sedangkan suara yang diberikan kepada
+            parpol akan didistribusikan kepada calon sesuai dengan nomor
+            urutnya.
+          </motion.p>
+          <motion.p variants={item}>
+            Seseorang juga dapat menjadi kandidat independen tanpa melibatkan
+            diri dalam parpol tertentu. Penentuan kandidat terpilih dilakukan
+            berdasarkan suara yang diterima, sesuai dengan Pembagian Nomor
+            Pemilih Daftar (BPPD).
+          </motion.p>
+        </motion.div>
       </div>
     </div>
   );
