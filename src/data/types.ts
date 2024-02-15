@@ -5,4 +5,5 @@ export type BlockType = {
   component: number;
   contentCaption?: string;
   order: number;
+  index: number;
 };

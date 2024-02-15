@@ -1,7 +1,6 @@
 "use client";
 import ContentBin from "@/components/generator/content-bin";
 import { ContentSection } from "@/components/generator/content-section";
-import ContentImage from "@/components/generator/content-image";
 import DraggableWrapper from "@/components/generator/draggable-wrapper";
 import {
   ContentType,
@@ -10,10 +9,10 @@ import {
 } from "@/components/generator/types";
 import {
   COMPONENT_CONTENT,
-  COMPONENT_SECTION,
   COMPONENT_HEADER,
-  COMPONENT_HERO,
+  COMPONENT_IMAGE,
   COMPONENT_CUSTOM,
+  COMPONENT_SECTION,
 } from "@/data/component-front";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
@@ -107,7 +106,7 @@ export default function GeneratePage() {
               contentType={ContentType.IMAGE}
               type={ItemTypes.BLOCK}
               name="hero"
-              component={COMPONENT_HERO}
+              component={COMPONENT_IMAGE}
             >
               <div className="text-neutral-500 flex items-center flex-col">
                 <ImageIcon size={45} strokeWidth={1} />

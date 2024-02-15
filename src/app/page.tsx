@@ -16,7 +16,7 @@ const groupByToMap = <T, Q>(
 export default function Home() {
   const grouped = groupByToMap(generateBlocks, (item) => item.group);
   return (
-    <main className="min-h-dvh">
+    <main className="min-h-dvh space-y-8">
       {Object.keys(Object.fromEntries(grouped)).map((groupName) => {
         const blocks = Array.from(grouped.get(groupName)?.values() ?? []);
         return (

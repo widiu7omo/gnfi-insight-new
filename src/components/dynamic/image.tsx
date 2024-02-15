@@ -1,6 +1,6 @@
 import { BlockType } from "@/data/types";
 
-export default function Hero({ block }: { block: BlockType }) {
+export default function Image({ block }: { block: BlockType }) {
   return (
     <div
       className="w-full h-screen bg-cover"
