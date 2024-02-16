@@ -1,15 +1,17 @@
 import { BlockType } from './types';
-import { COMPONENT_CONTENT, COMPONENT_HEADER, COMPONENT_HERO } from './component-front';
+import { COMPONENT_CONTENT, COMPONENT_HEADER, COMPONENT_IMAGE } from './component-front';
 export const blocks: BlockType[] = [
   {
     order: 0,
+    index: 0,
     group: "section-1",
     contentType: "image",
-    component: COMPONENT_HERO,
+    component: COMPONENT_IMAGE,
     content: "assets/hero-section-one.png",
   },
   {
     order: 1,
+    index: 1,
     group: "section-1",
     contentType: "text",
     component: COMPONENT_CONTENT,
@@ -17,6 +19,7 @@ export const blocks: BlockType[] = [
   },
   {
     order: 2,
+    index: 2,
     group: "section-2",
     contentType: "text",
     component: COMPONENT_HEADER,
@@ -24,13 +27,15 @@ export const blocks: BlockType[] = [
   },
   {
     order: 3,
+    index: 3,
     group: "section-2",
     contentType: "image",
-    component: COMPONENT_HERO,
+    component: COMPONENT_IMAGE,
     content: "assets/hero-section-one.png",
   },
   {
     order: 4,
+    index: 4,
     group: "section-2",
     contentType: "text",
     component: COMPONENT_CONTENT,
@@ -38,13 +43,15 @@ export const blocks: BlockType[] = [
   },
   {
     order: 5,
+    index: 5,
     group: "section-2",
     contentType: "image",
-    component: COMPONENT_HERO,
+    component: COMPONENT_IMAGE,
     content: "assets/hero-section-one.png",
   },
   {
     order: 6,
+    index: 6,
     group: "section-2",
     contentType: "text",
     component: COMPONENT_CONTENT,
@@ -52,6 +59,7 @@ export const blocks: BlockType[] = [
   },
   {
     order: 7,
+    index: 7,
     group: "section-3",
     component: COMPONENT_HEADER,
     contentType: "text",
@@ -59,13 +67,15 @@ export const blocks: BlockType[] = [
   },
   {
     order: 8,
+    index: 8,
     group: "section-2",
     contentType: "image",
-    component: COMPONENT_HERO,
+    component: COMPONENT_IMAGE,
     content: "assets/hero-section-one.png",
   },
   {
     order: 9,
+    index: 9,
     group: "section-2",
     contentType: "text",
     component: COMPONENT_CONTENT,
@@ -73,6 +83,7 @@ export const blocks: BlockType[] = [
   },
   {
     order: 10,
+    index: 10,
     group: "section-3",
     contentType: "text",
     component: COMPONENT_HEADER,
@@ -80,6 +91,7 @@ export const blocks: BlockType[] = [
   },
   {
     order: 11,
+    index: 11,
     group: "section-3",
     contentType: "text",
     component: COMPONENT_CONTENT,
@@ -87,6 +99,7 @@ export const blocks: BlockType[] = [
   },
   {
     order: 12,
+    index: 12,
     group: "section-4",
     contentType: "text",
     component: COMPONENT_HEADER,
@@ -94,6 +107,7 @@ export const blocks: BlockType[] = [
   },
   {
     order: 13,
+    index: 13,
     group: "section-4",
     contentType: "text",
     component: COMPONENT_CONTENT,
@@ -101,13 +115,15 @@ export const blocks: BlockType[] = [
   },
   {
     order: 14,
+    index: 14,
     group: "section-4",
     contentType: "image",
-    component: COMPONENT_HERO,
+    component: COMPONENT_IMAGE,
     content: "assets/hero-section-one.png",
   },
   {
     order: 15,
+    index: 15,
     group: "section-4",
     contentType: "text",
     component: COMPONENT_CONTENT,
@@ -115,6 +131,7 @@ export const blocks: BlockType[] = [
   },
   {
     order: 16,
+    index: 16,
     group: "section-5",
     contentType: "text",
     component: COMPONENT_HEADER,
@@ -122,13 +139,15 @@ export const blocks: BlockType[] = [
   },
   {
     order: 17,
+    index: 17,
     group: "section-5",
     contentType: "image",
-    component: COMPONENT_HERO,
+    component: COMPONENT_IMAGE,
     content: "assets/hero-section-one.png",
   },
   {
     order: 18,
+    index: 18,
     group: "section-5",
     contentType: "text",
     component: COMPONENT_CONTENT,
@@ -136,13 +155,15 @@ export const blocks: BlockType[] = [
   },
   {
     order: 19,
+    index: 19,
     group: "section-5",
     contentType: "image",
-    component: COMPONENT_HERO,
+    component: COMPONENT_IMAGE,
     content: "assets/hero-section-one.png",
   },
   {
     order: 20,
+    index: 20,
     group: "section-5",
     contentType: "text",
     component: COMPONENT_CONTENT,
@@ -150,6 +171,7 @@ export const blocks: BlockType[] = [
   },
   {
     order: 21,
+    index: 21,
     group: "section-6",
     contentType: "text",
     component: COMPONENT_HEADER,
@@ -157,13 +179,15 @@ export const blocks: BlockType[] = [
   },
   {
     order: 22,
+    index: 22,
     group: "section-6",
     contentType: "image",
-    component: COMPONENT_HERO,
+    component: COMPONENT_IMAGE,
     content: "assets/hero-section-one.png",
   },
   {
     order: 23,
+    index: 23,
     group: "section-6",
     contentType: "text",
     component: COMPONENT_CONTENT,
@@ -171,6 +195,7 @@ export const blocks: BlockType[] = [
   },
   {
     order: 24,
+    index: 24,
     group: "section-7",
     contentType: "text",
     component: COMPONENT_HEADER,
@@ -178,6 +203,7 @@ export const blocks: BlockType[] = [
   },
   {
     order: 25,
+    index: 25,
     group: "section-7",
     contentType: "text",
     component: COMPONENT_CONTENT,
@@ -185,13 +211,15 @@ export const blocks: BlockType[] = [
   },
   {
     order: 26,
+    index: 26,
     group: "section-7",
     contentType: "image",
-    component: COMPONENT_HERO,
+    component: COMPONENT_IMAGE,
     content: "assets/hero-section-one.png",
   },
   {
     order: 27,
+    index: 27,
     group: "section-7",
     contentType: "text",
     component: COMPONENT_CONTENT,

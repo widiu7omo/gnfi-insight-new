@@ -1,7 +1,7 @@
 "use client";
 import { Signika } from "next/font/google";
 import { motion } from "framer-motion";
-const signikaFont = Signika({ weight: "400" });
+const signikaFont = Signika({ weight: "400", subsets: ["latin"] });
 export default function SectionFirstPemiluOldImage() {
   const containerAnimate = {
     hidden: {
