@@ -1,0 +1,162 @@
+"use client";
+import { motion } from "framer-motion";
+export default function SectionOrbaCollapsed() {
+  let indexImage = 0;
+  const containerAnimate = {
+    visible: {
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
+  return (
+    <div className="bg-[#1A1218] w-full py-12 mx-auto">
+      <div className=" mx-auto flex items-center justify-center flex-col">
+        <h5 className="text-white font-bold leading-snug text-5xl text-center max-w-4xl mx-auto h-[200px]">
+          Orde Baru Runtuh, Lahirlah Pemilu Luber Jurdil
+        </h5>
+        <div className="h-[800px] w-full relative flex justify-center items-center">
+          <div
+            className="!bg-cover absolute z-0 w-full flex items-center justify-center h-full"
+            style={{
+              background:
+                "linear-gradient(0deg, rgba(26, 18, 24, 0.6), rgba(26, 18, 24, 0.6)),url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse.jpg')",
+              filter: "blur(50px)",
+            }}
+          />
+          <img
+            src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse.jpg"
+            alt="Demo"
+            className="absolute max-w-7xl h-[700px] z-20"
+          />
+        </div>
+      </div>
+      <div className="prose text-white mx-auto z-20">
+        <p>
+          Rezim Orde Baru beserta kedigdayaan Golkar runtuh pada 1998. Kejadian
+          ini mengubah struktur politik dan ketatanegaraan di Indonesia.
+        </p>
+        <p>
+          Suharto mengundurkan diri dari kursi Presiden RI pada 21 Mei 1998 saat
+          masa jabatannya nyaris 32 tahun. Momen bersejarah itu diawali krisis
+          moneter dan fiskal sepanjang Juli—Agustus 1997, lalu berlanjut hingga
+          tahun berikutnya.
+        </p>
+        <p>
+          Sidang Umum Majelis Permusyawaratan Rakyat (MPR) RI pada 10 Maret 1998
+          memutuskan Suharto kembali menjadi presiden hingga 2003, berpasangan
+          dengan Bacharudin Jusuf (B.J.) Habibie. Pengumuman ini membuat rakyat
+          tambah berang.
+        </p>
+        <p>
+          Ribuan mahasiswa dan masyarakat umum turun ke jalan. Gelombang unjuk
+          rasa gempar di seluruh Indonesia. Empat orang mahasiswa Universitas
+          Trisakti Jakarta dilaporkan tewas tertembak saat berdemonstrasi di
+          gedung DPR/MPR RI pada 12 Mei 1998. Peristiwa itu hingga kini
+          diperingati sebagai Tragedi Trisakti. Situasi semakin tidak
+          terkendali. Desakan mundur terus berdatangan, termasuk dari para
+          aktivis dan cendekiawan.
+        </p>
+        <p>
+          Tuntutan “Presiden Turun” untuk Soeharto mencapai puncaknya ketika
+          Ketua DPR/MPR RI saat itu, Harun Mohamad Kohar alias Harmoko,
+          menyampaikan permintaan agar Suharto melepas jabatannya. Tepat 21 Mei
+          1998, Suharto mengumumkan pengunduran dirinya di Credentials Room,
+          Istana Merdeka, Jakarta. Jabatan presiden pun dia serahkan kepada sang
+          wakil, Habibie. Saat itu juga, Ketua Mahkamah Agung, Muladi, melantik
+          Habibie sebagai Presiden RI ketiga pada pukul 09.10 WIB.
+        </p>
+      </div>
+      <div className=" mx-auto flex items-center justify-center flex-col">
+        <div className="h-[800px] w-full relative flex justify-center items-center">
+          <div
+            className="!bg-cover absolute z-0 w-full flex items-center justify-center h-full"
+            style={{
+              background:
+                "linear-gradient(0deg, rgba(26, 18, 24, 0.6), rgba(26, 18, 24, 0.6)),url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse2.png')",
+              filter: "blur(50px)",
+            }}
+          />
+          <img
+            src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse2.png"
+            alt="Demo 2"
+            className="absolute max-w-7xl h-[700px] z-20"
+          />
+        </div>
+      </div>
+      <div className="prose text-white mx-auto z-20">
+        <p>
+          Era reformasi pun dimulai. Di bawah tangan Habibie, pemilu legislatif
+          kembali digelar pada Senin, 7 Juni 1999. Pesta demokrasi kali ini
+          dianggap publik sebagai pemilu Indonesia yang paling langsung, umum,
+          bebas, rahasia, jujur, dan adil alias Luber Jurdil, setelah terakhir
+          kali pada 1955.
+        </p>
+        <p>
+          Sejak 1999, Indonesia tetap melaksanakan pemilu setiap lima tahun
+          sekali. Kebebasan pers dan berpendapat menguat di era Habibie. Pemilu
+          legislatif 1999 berkonsep multipartai. Parpol menjamur pada masa
+          Reformasi setelah Habibie mengesahkan UU No.2 Tahun 1999 Tentang
+          Parpol, UU No.3 Tahun 1999 tentang Pemilu, dan UU No.4 Tahun 1999
+          Tentang MPR dan DPR.
+        </p>
+        <p>
+          Sebanyak 48 parpol mengikuti kontestasi Pemilu 1999. Pemungutan suara
+          dilaksanakan serentak di seluruh Indonesia pada 7 Juni 1999 untuk
+          memilih 462 anggota Dewan Perwakilan Rakyat (DPR), Dewan Perwakilan
+          Rakyat Daerah (DPRD) Provinsi, dan DPRD Kabupaten/Kota periode
+          1999—2004.
+        </p>
+        <p>
+          Pada tahun itu, untuk pertama kalinya, Komisi Pemilihan Umum (KPU),
+          selaku penyelenggara pemilu bersifat independen. Pemilu 1999
+          terlaksana sangat terbuka dan transparan karena melibatkan lembaga
+          pengawas independen dalam dan luar negeri.
+        </p>
+        <p>
+          Menurut Bahrul Ulum dalam{" "}
+          <i>
+            Bodohnya NU apa NU dibodohi?: Jejak Langkah NU Era Reformasi:
+            Menguji Khittah, Meneropong Paradigma Politik,
+          </i>
+          sejumlah lembaga pemantau pemilu independen menilai Pemilu 1999 jauh
+          lebih baik dan memenuhi syarat sebagai pemilu yang demokratis atau{" "}
+          <i>free</i> and <i>fair election</i>.
+        </p>
+      </div>
+      <div className="flex flex-row items-start justify-center w-full h-[1500px]">
+        <motion.div
+          className="relative w-full h-[785px]"
+          initial="hidden"
+          whileInView="visible"
+          variants={containerAnimate}
+        >
+          {new Array(7).fill(0).map((_, i) => {
+            indexImage++;
+            return (
+              <motion.img
+                variants={item}
+                key={`${
+                  // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+                  i
+                }`}
+                className="absolute z-20 w-[50%] left-[25%]"
+                src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/${indexImage}.png`}
+                alt={indexImage.toString()}
+              />
+            );
+          })}
+        </motion.div>
+      </div>
+    </div>
+  );
+}

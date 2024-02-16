@@ -8,7 +8,7 @@ export default function Content({ block }: { block: BlockType }) {
       initial={{ opacity: 0, y: -20 }}
       transition={{ delayChildren: 0.3 }}
       whileInView={{ opacity: 1, y: 0 }}
-      className="prose text-left"
+      className="prose text-left z-20"
     >
       {parse(block.content)}
     </motion.div>
