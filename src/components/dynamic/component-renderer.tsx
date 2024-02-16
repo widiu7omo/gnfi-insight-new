@@ -7,6 +7,7 @@ import SectionGolkarControllingElection from "./section-golkar-controlling-elect
 import SectionTimelineGolkar from "./section-timeline-golkar";
 import SectionGolkarOldImage from "./section-golkar-old-image";
 import SectionOrbaCollapsed from "./section-orba-collapsed";
+import SectionPresidentDirect from "./section-president-direct";
 
 export default function ComponentRenderer({ block }: { block: BlockType }) {
   // TODO: dynamic compenent renderer
@@ -34,6 +35,10 @@ export default function ComponentRenderer({ block }: { block: BlockType }) {
   if (block.content === "SectionOrbaCollapsed") {
     return <SectionOrbaCollapsed />;
   }
+  if (block.content === "SectionPresidentDirect") {
+    return <SectionPresidentDirect />;
+  }
+
   return (
     <div className="text-xl font-medium text-neutral-600">
       TODO: Dynamic Component Renderer
