@@ -19,7 +19,7 @@ export default function SectionOrbaCollapsed() {
   };
 
   return (
-    <div className="bg-[#1A1218] w-full py-12 mx-auto">
+    <div className="bg-[#1A1218] w-full py-12 mx-auto relative">
       <div className="mx-auto flex items-center justify-center flex-col">
         <h5 className="text-white font-bold leading-snug text-5xl text-center max-w-4xl mx-auto h-[200px]">
           Orde Baru Runtuh, Lahirlah Pemilu Luber Jurdil
@@ -80,7 +80,7 @@ export default function SectionOrbaCollapsed() {
         </div>
       </div>
 
-      <div className=" mx-auto flex items-center justify-center flex-col">
+      <div className="mx-auto flex items-center justify-center flex-col">
         <div className="h-[800px] w-full relative flex justify-center items-center">
           <div
             className="!bg-cover absolute z-0 w-[1000px] flex items-center justify-center h-full"
@@ -138,52 +138,58 @@ export default function SectionOrbaCollapsed() {
           </p>
         </div>
       </div>
-
-      <div className="flex flex-row items-start justify-center w-full h-[1500px]">
+      <div className="relative h-[1800px] flex flex-col items-center">
+        <div className="flex flex-row items-start justify-center w-full h-[1500px] z-0">
+          <motion.div
+            className="relative w-full h-[785px]"
+            initial="hidden"
+            animate="visible"
+            variants={containerAnimate}
+          >
+            {new Array(7).fill(0).map((_, i) => {
+              indexImage++;
+              return (
+                <motion.img
+                  variants={item}
+                  key={`${
+                    // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+                    i
+                  }`}
+                  className={`absolute z-0 w-[50%] left-[25%] `}
+                  src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/${indexImage}.png`}
+                  alt={indexImage.toString()}
+                />
+              );
+            })}
+          </motion.div>
+        </div>
         <motion.div
-          className="relative w-full h-[785px]"
           initial="hidden"
           whileInView="visible"
           variants={containerAnimate}
+          className="prose absolute bottom-0 text-white mx-auto z-10"
         >
-          {new Array(7).fill(0).map((_, i) => {
-            indexImage++;
-            return (
-              <motion.img
-                variants={item}
-                key={`${
-                  // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-                  i
-                }`}
-                className="absolute z-20 w-[50%] left-[25%]"
-                src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/${indexImage}.png`}
-                alt={indexImage.toString()}
-              />
-            );
-          })}
+          <motion.p variants={item}>
+            Meski dianggap demikian, Pemilu 1999 masih mengadopsi sistem Pemilu
+            Orde Baru. Beberapa di antaranya: penggunaan sistem proporsional
+            daftar tertutup, susunan MPR masih menggunakan utusan daerah dan
+            golongan, KPU masih melibatkan pemerintah ditambah anggota parpol.
+          </motion.p>
+          <motion.p variants={item}>
+            Setelah pemilihan dewan legislatif selesai, MPR RI menggelar sidang
+            umum untuk memilih presiden dan wakil presiden. Pemilihan presiden
+            Indonesia berlangsung pada 20 Oktober 1999, sedangkan pemilihan
+            wakil presiden dilaksanakan pada 21 Oktober.
+          </motion.p>
+          <motion.p variants={item}>
+            Dalam pemilu tidak langsung itu, Abdurrahman Wahid alias Gus Dur
+            dilantik sebagai Presiden RI bersama wakilnya, Megawati
+            Soekarnoputri. Dua tahun kemudian, terjadi pergantian presiden. MPR
+            RI mengadakan sidang istimewa dan menetapkan Megawati sebagai
+            presiden, menggantikan Gus Dur, dan Hamzah Haz sebagai wakilnya.
+            Itulah pemilihan presiden tidak langsung terakhir di era Reformasi.
+          </motion.p>
         </motion.div>
-      </div>
-      <div className="prose text-white mx-auto z-20">
-        <p>
-          Meski dianggap demikian, Pemilu 1999 masih mengadopsi sistem Pemilu
-          Orde Baru. Beberapa di antaranya: penggunaan sistem proporsional
-          daftar tertutup, susunan MPR masih menggunakan utusan daerah dan
-          golongan, KPU masih melibatkan pemerintah ditambah anggota parpol.
-        </p>
-        <p>
-          Setelah pemilihan dewan legislatif selesai, MPR RI menggelar sidang
-          umum untuk memilih presiden dan wakil presiden. Pemilihan presiden
-          Indonesia berlangsung pada 20 Oktober 1999, sedangkan pemilihan wakil
-          presiden dilaksanakan pada 21 Oktober.
-        </p>
-        <p>
-          Dalam pemilu tidak langsung itu, Abdurrahman Wahid alias Gus Dur
-          dilantik sebagai Presiden RI bersama wakilnya, Megawati Soekarnoputri.
-          Dua tahun kemudian, terjadi pergantian presiden. MPR RI mengadakan
-          sidang istimewa dan menetapkan Megawati sebagai presiden, menggantikan
-          Gus Dur, dan Hamzah Haz sebagai wakilnya. Itulah pemilihan presiden
-          tidak langsung terakhir di era Reformasi.
-        </p>
       </div>
     </div>
   );

@@ -15,4 +15,7 @@
   h3.heading {
     @apply text-2xl font-medium;
   }
+  #section-5 {
+    @apply bg-[#F6F0E2];
+  }
 }

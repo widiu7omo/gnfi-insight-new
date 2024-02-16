@@ -25,7 +25,7 @@ export default function IntroductionHero({ block }: { block: BlockType }) {
             <motion.h5
               initial={{ opacity: 0, y: 0 }}
               whileInView={{ opacity: 1, y: -20 }}
-              className="text-5xl font-bold text-white max-w-[60%] text-center leading-snug"
+              className="text-7xl font-bold text-white max-w-[80%] text-center leading-snug"
             >
               Pemilu dan Dinamikanya dari Masa ke Masa
             </motion.h5>
