@@ -3,6 +3,9 @@ import IntroductionHero from "./introduction-hero";
 import SectionFirstPemilu from "./section-first-pemilu";
 import SectionFirstPemiluOldImage from "./section-first-pemilu-old-image";
 import SectionHistoryFirstPemilu from "./section-history-first-pemilu";
+import SectionGolkarControllingElection from "./section-golkar-controlling-election";
+import SectionTimelineGolkar from "./section-timeline-golkar";
+import SectionGolkarOldImage from "./section-golkar-old-image";
 
 export default function ComponentRenderer({ block }: { block: BlockType }) {
   // TODO: dynamic compenent renderer
@@ -17,6 +20,15 @@ export default function ComponentRenderer({ block }: { block: BlockType }) {
   }
   if (block.content === "SectionHistoryFirstPemilu") {
     return <SectionHistoryFirstPemilu />;
+  }
+  if (block.content === "SectionGolkarControllingElection") {
+    return <SectionGolkarControllingElection />;
+  }
+  if (block.content === "SectionTimelineGolkar") {
+    return <SectionTimelineGolkar />;
+  }
+  if (block.content === "SectionGolkarOldImage") {
+    return <SectionGolkarOldImage />;
   }
   return (
     <div className="text-xl font-medium text-neutral-600">
