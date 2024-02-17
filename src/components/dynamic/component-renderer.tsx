@@ -9,6 +9,7 @@ import SectionGolkarOldImage from "./section-golkar-old-image";
 import SectionOrbaCollapsed from "./section-orba-collapsed";
 import SectionPresidentDirect from "./section-president-direct";
 import SectionDirectElection from "./section-direct-election";
+import SectionJokowiVPrabowo from "./section-jokowi-v-prabowo";
 
 export default function ComponentRenderer({ block }: { block: BlockType }) {
   // TODO: dynamic compenent renderer
@@ -41,6 +42,9 @@ export default function ComponentRenderer({ block }: { block: BlockType }) {
   }
   if (block.content === "SectionDirectElection") {
     return <SectionDirectElection />;
+  }
+  if (block.content === "SectionJokowiVPrabowo") {
+    return <SectionJokowiVPrabowo />;
   }
 
   return (
