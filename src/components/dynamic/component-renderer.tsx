@@ -8,6 +8,7 @@ import SectionTimelineGolkar from "./section-timeline-golkar";
 import SectionGolkarOldImage from "./section-golkar-old-image";
 import SectionOrbaCollapsed from "./section-orba-collapsed";
 import SectionPresidentDirect from "./section-president-direct";
+import SectionDirectElection from "./section-direct-election";
 
 export default function ComponentRenderer({ block }: { block: BlockType }) {
   // TODO: dynamic compenent renderer
@@ -37,6 +38,9 @@ export default function ComponentRenderer({ block }: { block: BlockType }) {
   }
   if (block.content === "SectionPresidentDirect") {
     return <SectionPresidentDirect />;
+  }
+  if (block.content === "SectionDirectElection") {
+    return <SectionDirectElection />;
   }
 
   return (
