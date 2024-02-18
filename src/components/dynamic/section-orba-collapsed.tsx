@@ -1,5 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
+import { useEffect } from "react";
 export default function SectionOrbaCollapsed() {
   let indexImage = 0;
   const containerAnimate = {
@@ -17,13 +18,42 @@ export default function SectionOrbaCollapsed() {
       opacity: 1,
     },
   };
-
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope);
+  useEffect(() => {
+    if (isInView) {
+      animate(
+        "p",
+        { opacity: 1, y: 0 },
+        { delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.3 }
+      );
+    } else {
+      animate("p", { opacity: 0, y: 20 });
+    }
+  }, [isInView]);
+  const [scopeP2, animateP2] = useAnimate();
+  const isInViewP2 = useInView(scopeP2);
+  useEffect(() => {
+    if (isInViewP2) {
+      animateP2(
+        "p",
+        { opacity: 1, y: 0 },
+        { delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.3 }
+      );
+    } else {
+      animateP2("p", { opacity: 0, y: 20 });
+    }
+  }, [isInViewP2]);
   return (
     <div className="bg-[#1A1218] w-full py-12 mx-auto relative">
       <div className="mx-auto flex items-center justify-center flex-col">
-        <h5 className="text-white font-bold leading-snug text-5xl text-center max-w-4xl mx-auto h-[200px]">
+        <motion.h5
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-white font-bold leading-snug text-5xl text-center max-w-4xl mx-auto h-[200px]"
+        >
           Orde Baru Runtuh, Lahirlah Pemilu Luber Jurdil
-        </h5>
+        </motion.h5>
         <div className="h-[800px] w-full relative flex justify-center items-center">
           <div
             className="!bg-cover absolute z-0 w-[1000px] flex items-center justify-center h-full"
@@ -40,7 +70,7 @@ export default function SectionOrbaCollapsed() {
             className="absolute w-[1000px] z-20"
           />
         </div>
-        <div className="prose text-white mx-auto z-50">
+        <div className="prose text-white mx-auto z-50" ref={scope}>
           <p>
             Rezim Orde Baru beserta kedigdayaan Golkar runtuh pada 1998.
             Kejadian ini mengubah struktur politik dan ketatanegaraan di
@@ -97,7 +127,7 @@ export default function SectionOrbaCollapsed() {
             className="absolute w-[1000px] z-20"
           />
         </div>
-        <div className="prose text-white mx-auto z-20">
+        <div className="prose text-white mx-auto z-20" ref={scopeP2}>
           <p>
             Era reformasi pun dimulai. Di bawah tangan Habibie, pemilu
             legislatif kembali digelar pada Senin, 7 Juni 1999. Pesta demokrasi
@@ -143,7 +173,7 @@ export default function SectionOrbaCollapsed() {
           <motion.div
             className="relative w-full h-[785px]"
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
             variants={containerAnimate}
           >
             {new Array(7).fill(0).map((_, i) => {

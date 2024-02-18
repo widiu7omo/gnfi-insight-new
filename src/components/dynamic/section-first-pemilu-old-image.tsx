@@ -1,6 +1,7 @@
 "use client";
 import { Signika } from "next/font/google";
-import { motion } from "framer-motion";
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
+import { useEffect } from "react";
 const signikaFont = Signika({ weight: "400", subsets: ["latin"] });
 export default function SectionFirstPemiluOldImage() {
   const containerAnimate = {
@@ -25,6 +26,19 @@ export default function SectionFirstPemiluOldImage() {
       opacity: 1,
     },
   };
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope);
+  useEffect(() => {
+    if (isInView) {
+      animate(
+        "p",
+        { opacity: 1, y: 0 },
+        { delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.3 }
+      );
+    } else {
+      animate("p", { opacity: 0, y: 20 });
+    }
+  }, [isInView]);
   return (
     <div
       className="h-fit relative w-full mx-auto py-8 flex items-center justify-center flex-col shadow-[inset_0px_-2px_4.8px_2px_rgba(0,0,0,0.1),_inset_0px_4px_4px_rgba(0,0,0,0.1)]"
@@ -43,6 +57,7 @@ export default function SectionFirstPemiluOldImage() {
           alt="kulon progo"
         />
         <div
+          ref={scope}
           className="prose mx-auto !text-neutral-700 text-xl w-[60ch]"
           style={{ ...signikaFont.style }}
         >
