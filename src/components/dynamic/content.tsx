@@ -17,7 +17,7 @@ export default function Content({ block }: { block: BlockType }) {
     } else {
       animate("p", { opacity: 0, y: 20 });
     }
-  }, [isInView]);
+  }, [isInView, animate]);
   return (
     <div ref={scope} className="prose text-left z-20 py-4">
       {parse(block.content)}

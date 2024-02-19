@@ -12,7 +12,10 @@ export default function SectionPresidentDirect() {
         >
           Pemilu 2004, Saat Presiden Dipilih Langsung
         </motion.h5>
-        <img
+        <motion.img
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
           className="w-[1000px] border-8 shadow rounded-xl border-[#fffaf0]"
           src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/Wikimedia_Commons_(3).jpg"
           alt="Surat Suara"

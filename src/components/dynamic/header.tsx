@@ -1,7 +1,16 @@
+"use client";
 import { BlockType } from "@/data/types";
+import { motion } from "framer-motion";
 import parse from "html-react-parser";
 export default function Header({ block }: { block: BlockType }) {
   return (
-    <div className="prose text-2xl font-black pt-6">{parse(block.content)}</div>
+    <motion.div
+      className="prose font-black py-8"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3 }}
+    >
+      {parse(block.content)}
+    </motion.div>
   );
 }
