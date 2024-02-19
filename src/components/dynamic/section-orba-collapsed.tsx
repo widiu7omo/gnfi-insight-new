@@ -74,7 +74,7 @@ export default function SectionOrbaCollapsed() {
             transition={{ delay: 0.5 }}
             src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse.jpg"
             alt="Demo"
-            className="absolute w-full xl:w-[1000px] z-20"
+            className="absolute w-full xl:w-[1000px] z-20 px-4 xl:px-0"
           />
         </div>
         <div className="prose text-white mx-auto z-50 px-4 xl:px-0" ref={scope}>
@@ -137,7 +137,7 @@ export default function SectionOrbaCollapsed() {
             transition={{ delay: 0.5 }}
             src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse2.png"
             alt="Demo 2"
-            className="absolute w-full xl:w-[1000px] z-20"
+            className="absolute w-full xl:w-[1000px] z-20 px-4 xl:px-0"
           />
         </div>
         <div

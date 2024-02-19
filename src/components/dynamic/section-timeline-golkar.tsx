@@ -21,7 +21,7 @@ export default function SectionTimelineGolkar() {
 
   return (
     <>
-      <div className="flex flex-row items-start justify-center w-full h-[800px]">
+      <div className="flex flex-row items-start justify-center w-full h-[600px] xl:h-[800px]">
         <motion.div
           className="relative w-full h-[635px]"
           initial="hidden"
@@ -33,7 +33,7 @@ export default function SectionTimelineGolkar() {
             variants={item}
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
-            className="absolute z-10 left-[49.76%] h-full top-[230px] w-[2px] bg-black"
+            className="absolute z-10 left-[49.50%] lg:left-[49.76%] h-full top-[8%] lg:top-[230px] w-[2px] bg-black"
           />
           {new Array(8).fill(0).map((_, i) => {
             indexImage++;
@@ -46,7 +46,7 @@ export default function SectionTimelineGolkar() {
                 }`}
                 className={`absolute ${
                   indexImage === 3 ? "z-30" : "z-20"
-                } w-[50%] left-[25%] -top-[230px] `}
+                } xl:w-[50%] left-0 xl:left-[25%] -top-[230px] `}
                 src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/golkar/${indexImage}.png`}
                 alt={indexImage.toString()}
               />
@@ -54,7 +54,6 @@ export default function SectionTimelineGolkar() {
           })}
         </motion.div>
       </div>
-      <CaptionFromWill />
     </>
   );
 }

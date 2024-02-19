@@ -1,6 +1,6 @@
 export default function SectionFooter() {
   return (
-    <div className="text-white bg-red-600 w-full text-center py-8 xl:py-32 font-base text-2xl relative overflow-clip">
+    <div className="text-white bg-red-600 w-full text-center py-8 xl:py-32 text-base xl:text-2xl relative overflow-clip">
       Dibuat oleh <span className="font-bold">Good News From Indonesia</span>
       <div className="xl:block hidden">
         <img
