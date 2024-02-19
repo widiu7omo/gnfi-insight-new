@@ -18,22 +18,14 @@ export default function SectionHistoryFirstPemilu() {
     },
   };
   return (
-    <div className="flex flex-row items-start justify-center w-full h-[450px] xs:h-[700px] sm:h-[800px] md:h-[1200px] lg:h-[1100px] xl:h-[1200px]">
+    <div className="flex flex-row items-start justify-center w-full h-[500px] xs:h-[700px] sm:h-[850px] md:h-[1000px] lg:h-[1400px] xl:h-[1600px]">
       <motion.div
         viewport={{ once: true }}
-        className="relative w-full h-[390px] xs:h-[500px] md:h-[550px] lg:h-[600px] xl:h-[785px]"
+        className="relative w-full h-full max-w-7xl mx-auto"
         initial="hidden"
         whileInView="visible"
         variants={containerAnimate}
       >
-        <motion.div
-          key={-1}
-          variants={item}
-          initial={{ scaleY: 0 }}
-          whileInView={{ scaleY: 1 }}
-          viewport={{ once: true }}
-          className="absolute z-10 left-[49.50%] lg:left-[49.76%] h-full top-[0px] lg:top-[200px] w-[2px] bg-[#e36414]"
-        />
         {new Array(8).fill(0).map((_, i) => {
           indexImage++;
           return (
@@ -44,7 +36,7 @@ export default function SectionHistoryFirstPemilu() {
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 i
               }`}
-              className="absolute z-20 w-full xl:w-[50%] left-0 xl:left-[25%] -top-[100px] md:-top-[200px] "
+              className="absolute z-20 w-full -top-[100px] xl:-top-[200px] max-w-full xl:max-w-7xl xl:mx-auto"
               src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/history/${indexImage}.png`}
               alt={indexImage.toString()}
             />
