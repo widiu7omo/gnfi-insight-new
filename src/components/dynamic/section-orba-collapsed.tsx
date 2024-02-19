@@ -45,29 +45,29 @@ export default function SectionOrbaCollapsed() {
     }
   }, [isInViewP2, animateP2]);
   return (
-    <div className="bg-[#1A1218] w-full py-12 mx-auto relative">
+    <div className="bg-[#1A1218] w-full py-12 mx-auto">
       <div className="mx-auto flex items-center justify-center flex-col">
         <motion.h5
           viewport={{ once: true }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-white font-bold leading-snug text-2xl md:text:3xl lg:text-4xl xl:text-5xl text-center max-w-4xl mx-auto py-0 lg:py-14"
+          className="text-white font-bold leading-snug text-2xl md:text:3xl lg:text-4xl xl:text-5xl text-center max-w-4xl mx-auto py-0 xl:py-14"
         >
           Orde Baru Runtuh, Lahirlah Pemilu Luber Jurdil
         </motion.h5>
-        <div className="h-[350px] xl:h-[800px] w-full relative flex justify-center items-center">
+        <div className="w-full relative flex justify-center items-center h-[280px] min-[320px]:h-[300px] min-[380px]:h-[330px] min-[620px]:h-[480px] xs:h-[450px] sm:h-[500px] min-[670px]:h-[630px] min-[730px]:h-[580px] min-[680px]:h-[550px] md:h-[650px] xl:h-[700px]">
           <motion.div
             viewport={{ once: true }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="!bg-cover absolute z-0 w-full xl:w-[calc(100%-32rem)] flex items-center justify-center h-full"
+            className="!bg-cover absolute z-0 flex items-center justify-center h-full top-0 w-[calc(100%-10rem)] xl:w-[calc(100%-40rem)]"
             style={{
               background:
                 "linear-gradient(0deg, rgba(26, 18, 24, 0.6), rgba(26, 18, 24, 0.6)), url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse.jpg')",
               filter: "blur(50px)",
-              transform: "scale(1.1)",
+              transform: "scale(2)",
             }}
           />
           <motion.img
@@ -77,7 +77,7 @@ export default function SectionOrbaCollapsed() {
             transition={{ delay: 0.5 }}
             src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse.jpg"
             alt="Demo"
-            className="absolute w-full xl:w-[1000px] z-20 px-4 xl:px-0"
+            className="absolute h-auto xl:h-[600px] max-w-full xl:max-w-7xl z-20 px-4 xl:px-0 top-10"
           />
         </div>
         <div className="prose text-white mx-auto z-50 px-4 xl:px-0" ref={scope}>
@@ -121,7 +121,7 @@ export default function SectionOrbaCollapsed() {
       </div>
 
       <div className="mx-auto flex items-center justify-center flex-col">
-        <div className="h-[350px] xl:h-[800px] w-full relative flex justify-center items-center">
+        <div className="h-[280px] min-[320px]:h-[300px] min-[380px]:h-[330px] min-[620px]:h-[480px] xs:h-[450px] sm:h-[500px] min-[670px]:h-[630px] min-[730px]:h-[580px] min-[680px]:h-[550px] md:h-[650px] xl:h-[700px] w-full relative flex justify-center items-center">
           <motion.div
             viewport={{ once: true }}
             initial={{ opacity: 0, y: 20 }}
@@ -142,7 +142,7 @@ export default function SectionOrbaCollapsed() {
             transition={{ delay: 0.5 }}
             src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse2.png"
             alt="Demo 2"
-            className="absolute w-full xl:w-[1000px] z-20 px-4 xl:px-0"
+            className="absolute h-auto xl:h-[600px] z-20 px-4 xl:px-0"
           />
         </div>
         <div
@@ -189,11 +189,11 @@ export default function SectionOrbaCollapsed() {
           </p>
         </div>
       </div>
-      <div className="relative h-[1230px] xl:h-[1800px] flex flex-col items-center">
-        <div className="flex flex-row items-start justify-center w-full h-fit xl:h-[1500px] z-0">
+      <div className="relative h-[1400px] min-[375px]:h-[1350px] min-[425px]:h-[1300px] min-[465px]:h-[1350px] min-[485px]:h-[1400px] min-[660px]:h-[1500px] min-[735px]:h-[1600px] min-[768px]:h-[1700px] min-[800px]:h-[1800px] lg:h-[2100px] xl:h-[2500px] flex flex-col items-center">
+        <div className="flex flex-row items-start justify-center w-full h-full z-0">
           <motion.div
             viewport={{ once: true }}
-            className="relative w-full h-[785px]"
+            className="relative w-full flex items-start justify-center"
             initial="hidden"
             whileInView="visible"
             variants={containerAnimate}
@@ -208,7 +208,7 @@ export default function SectionOrbaCollapsed() {
                     // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                     i
                   }`}
-                  className={`absolute z-0 w-full xl:w-[50%] left-0 xl:left-[25%]`}
+                  className={`absolute z-0 w-full xl:max-w-7xl`}
                   src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/${indexImage}.png`}
                   alt={indexImage.toString()}
                 />
