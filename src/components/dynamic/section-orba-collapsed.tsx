@@ -30,7 +30,7 @@ export default function SectionOrbaCollapsed() {
     } else {
       animate("p", { opacity: 0, y: 20 });
     }
-  }, [isInView]);
+  }, [isInView, animate]);
   const [scopeP2, animateP2] = useAnimate();
   const isInViewP2 = useInView(scopeP2);
   useEffect(() => {
@@ -43,20 +43,24 @@ export default function SectionOrbaCollapsed() {
     } else {
       animateP2("p", { opacity: 0, y: 20 });
     }
-  }, [isInViewP2]);
+  }, [isInViewP2, animateP2]);
   return (
     <div className="bg-[#1A1218] w-full py-12 mx-auto relative">
       <div className="mx-auto flex items-center justify-center flex-col">
         <motion.h5
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
           className="text-white font-bold leading-snug text-5xl text-center max-w-4xl mx-auto h-[200px]"
         >
           Orde Baru Runtuh, Lahirlah Pemilu Luber Jurdil
         </motion.h5>
         <div className="h-[800px] w-full relative flex justify-center items-center">
-          <div
-            className="!bg-cover absolute z-0 w-[1000px] flex items-center justify-center h-full"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="!bg-cover absolute z-0 w-[calc(100%-32rem)] flex items-center justify-center h-full"
             style={{
               background:
                 "linear-gradient(0deg, rgba(26, 18, 24, 0.6), rgba(26, 18, 24, 0.6)), url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse.jpg')",
@@ -64,7 +68,10 @@ export default function SectionOrbaCollapsed() {
               transform: "scale(1.1)",
             }}
           />
-          <img
+          <motion.img
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
             src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse.jpg"
             alt="Demo"
             className="absolute w-[1000px] z-20"
@@ -112,8 +119,11 @@ export default function SectionOrbaCollapsed() {
 
       <div className="mx-auto flex items-center justify-center flex-col">
         <div className="h-[800px] w-full relative flex justify-center items-center">
-          <div
-            className="!bg-cover absolute z-0 w-[1000px] flex items-center justify-center h-full"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="!bg-cover absolute z-0 w-[calc(100%-32rem)] flex items-center justify-center h-full"
             style={{
               background:
                 "linear-gradient(0deg, rgba(26, 18, 24, 0.6), rgba(26, 18, 24, 0.6)),url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse2.png')",
@@ -121,7 +131,10 @@ export default function SectionOrbaCollapsed() {
               transform: "scale(1.1)",
             }}
           />
-          <img
+          <motion.img
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
             src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse2.png"
             alt="Demo 2"
             className="absolute w-[1000px] z-20"
