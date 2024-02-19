@@ -26,6 +26,14 @@ export default function SectionHistoryFirstPemilu() {
         whileInView="visible"
         variants={containerAnimate}
       >
+        <motion.div
+          key={-1}
+          variants={item}
+          initial={{ scaleY: 0 }}
+          whileInView={{ scaleY: 1 }}
+          viewport={{ once: true }}
+          className="absolute z-10 left-[49.50%] lg:left-[49.76%] h-[calc(100%-80px)] xs:h-[calc(100%-20px)] md:h-[calc(100%-200px)] top-[20px] xs:top-[100px] lg:top-[200px] w-[2px] bg-[#e36414]"
+        />
         {new Array(8).fill(0).map((_, i) => {
           indexImage++;
           return (
