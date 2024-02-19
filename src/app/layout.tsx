@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body style={{ ...inter.style }} className="w-full">
         <Providers>{children}</Providers>
       </body>
     </html>

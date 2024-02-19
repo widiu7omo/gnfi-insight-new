@@ -30,7 +30,7 @@ export default function SectionHistoryFirstPemilu() {
           variants={item}
           initial={{ scaleY: 0 }}
           whileInView={{ scaleY: 1 }}
-          className="absolute z-10 left-[49.76%] h-full top-[200px] w-[2px] bg-[#e36414]"
+          className="absolute z-10 left-[49.50%] lg:left-[49.76%] h-full top-[8%] lg:top-[200px] w-[2px] bg-[#e36414]"
         />
         {new Array(8).fill(0).map((_, i) => {
           indexImage++;
@@ -41,7 +41,7 @@ export default function SectionHistoryFirstPemilu() {
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 i
               }`}
-              className="absolute z-20 w-[50%] left-[25%] -top-[200px]"
+              className="absolute z-20 w-full xl:w-[50%] left-0 xl:left-[25%] -top-[100px] md:-top-[200px] "
               src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/history/${indexImage}.png`}
               alt={indexImage.toString()}
             />

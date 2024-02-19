@@ -38,7 +38,7 @@ export default function SectionFirstPemiluOldImage() {
     } else {
       animate("p", { opacity: 0, y: 20 });
     }
-  }, [isInView]);
+  }, [isInView, animate]);
   return (
     <div
       className="h-fit relative w-full mx-auto py-8 flex items-center justify-center flex-col shadow-[inset_0px_-2px_4.8px_2px_rgba(0,0,0,0.1),_inset_0px_4px_4px_rgba(0,0,0,0.1)]"
@@ -47,18 +47,16 @@ export default function SectionFirstPemiluOldImage() {
           "url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/canvas-first-pemilu.png')",
       }}
     >
-      <div className="space-y-8">
-        <motion.img
-          initial={{ opacity: 0, rotate: 3, scale: 1.2 }}
-          whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
-          transition={{ delay: 0.3 }}
+      <div className="space-y-8 max-w-full lg:max-w-7xl px-8 lg:px-0">
+        <img
           src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/kulonprogokab.go.id.jpg"
           className="h-full border-8 border-white shadow-2xl"
           alt="kulon progo"
         />
+        {/* TODO: animate image */}
         <div
           ref={scope}
-          className="prose mx-auto !text-neutral-700 text-xl w-[60ch]"
+          className="prose mx-auto !text-neutral-700 text-xl w-full lg:w-[60ch]"
           style={{ ...signikaFont.style }}
         >
           <p>
@@ -102,7 +100,7 @@ export default function SectionFirstPemiluOldImage() {
           </p>
         </div>
       </div>
-      <div className="max-w-7xl flex mt-20 space-x-6">
+      <div className="flex flex-col justify-center xl:items-start items-center space-y-7 xl:space-x-7 py-8 xl:flex-row">
         <motion.img
           initial={{ opacity: 0, scale: 1.1, x: -20 }}
           whileInView={{ opacity: 1, scale: 1, x: 0 }}
@@ -114,7 +112,7 @@ export default function SectionFirstPemiluOldImage() {
           initial="hidden"
           whileInView="visible"
           variants={containerAnimate}
-          className="prose mx-auto !text-neutral-700 text-xl w-[60ch]"
+          className="prose mx-auto !text-neutral-700 text-xl px-6 lg:px-0 lg:w-[60ch]"
           style={{ ...signikaFont.style }}
         >
           <motion.p variants={item}>

@@ -12,20 +12,20 @@ export default function IntroductionHero({ block }: { block: BlockType }) {
       }}
     >
       <div className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/90">
-        <div className="h-full flex justify-between max-w-7xl mx-auto py-8 flex-col">
+        <div className="h-full flex justify-between max-w-7xl mx-auto py-8 flex-col px-4 xl:px-0">
           <div className="flex justify-between">
             <div className="text-xl font-bold">{""}</div>
             <img
               src="assets/logo_gnfi_white.png"
               alt="Logo GNFI"
-              className="w-[80px]"
+              className="w-[60px] xl:w-[80px]"
             />
           </div>
           <div className="flex-1 flex items-center justify-center">
             <motion.h5
               initial={{ opacity: 0, y: 0 }}
               whileInView={{ opacity: 1, y: -20 }}
-              className="text-7xl font-bold text-white max-w-[80%] text-center leading-snug"
+              className="text-2xl md:text-3xl lg:text-5xl xl:text-7xl font-bold text-white max-w-[80%] text-center leading-snug"
             >
               Pemilu dan Dinamikanya dari Masa ke Masa
             </motion.h5>

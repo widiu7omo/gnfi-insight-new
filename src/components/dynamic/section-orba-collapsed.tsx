@@ -51,7 +51,7 @@ export default function SectionOrbaCollapsed() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-white font-bold leading-snug text-5xl text-center max-w-4xl mx-auto h-[200px]"
+          className="text-white font-bold leading-snug text-xl md:text:2xl lg:text-3xl xl:text-5xl text-center max-w-4xl mx-auto py-0 lg:py-14"
         >
           Orde Baru Runtuh, Lahirlah Pemilu Luber Jurdil
         </motion.h5>
@@ -74,7 +74,7 @@ export default function SectionOrbaCollapsed() {
             transition={{ delay: 0.5 }}
             src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse.jpg"
             alt="Demo"
-            className="absolute w-[1000px] z-20"
+            className="absolute w-full xl:w-[1000px] z-20"
           />
         </div>
         <div className="prose text-white mx-auto z-50" ref={scope}>
@@ -137,7 +137,7 @@ export default function SectionOrbaCollapsed() {
             transition={{ delay: 0.5 }}
             src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse2.png"
             alt="Demo 2"
-            className="absolute w-[1000px] z-20"
+            className="absolute w-full xl:w-[1000px] z-20"
           />
         </div>
         <div className="prose text-white mx-auto z-20" ref={scopeP2}>
