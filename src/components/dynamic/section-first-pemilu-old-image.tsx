@@ -41,7 +41,7 @@ export default function SectionFirstPemiluOldImage() {
   }, [isInView, animate]);
   return (
     <div
-      className="h-fit relative w-full mx-auto py-8 flex items-center justify-center flex-col shadow-[inset_0px_-2px_4.8px_2px_rgba(0,0,0,0.1),_inset_0px_4px_4px_rgba(0,0,0,0.1)]"
+      className="h-fit w-full mx-auto py-8 flex items-center justify-center flex-col shadow-[inset_0px_-2px_4.8px_2px_rgba(0,0,0,0.1),_inset_0px_4px_4px_rgba(0,0,0,0.1)]"
       style={{
         background:
           "url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/canvas-first-pemilu.png')",
@@ -100,13 +100,13 @@ export default function SectionFirstPemiluOldImage() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col justify-center xl:items-start items-center space-y-7 xl:space-x-7 py-8 xl:flex-row">
+      <div className="flex flex-col justify-center xl:items-start items-center space-y-7 xl:space-x-7 py-8 xl:flex-row px-4 xl:px-0">
         <motion.img
           initial={{ opacity: 0, scale: 1.1, x: -20 }}
           whileInView={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ delay: 0.3 }}
           src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/Wikimedia_Commons.jpg"
-          className="h-full max-w-lg border-8 border-white shadow-2xl"
+          className="h-full w-fit xl:max-w-lg border-8 border-white shadow-2xl"
         />
         <motion.div
           initial="hidden"

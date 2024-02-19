@@ -18,7 +18,7 @@ export default function SectionDirectElection() {
     },
   };
   return (
-    <div className="flex flex-row items-start justify-center w-full h-[1470px] bg-orange-950 relative">
+    <div className="flex flex-row items-start justify-center w-full h-[630px] xl:h-[1470px] bg-orange-950 relative">
       <motion.div
         className="w-full h-full"
         initial="hidden"
@@ -34,7 +34,7 @@ export default function SectionDirectElection() {
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 i
               }`}
-              className="absolute z-20 w-[50%] left-[25%]"
+              className="absolute z-20 xl:w-[50%] left-0 xl:left-[25%]"
               src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/election2004/${indexImage}.png`}
               alt={indexImage.toString()}
             />

@@ -51,16 +51,16 @@ export default function SectionOrbaCollapsed() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-white font-bold leading-snug text-xl md:text:2xl lg:text-3xl xl:text-5xl text-center max-w-4xl mx-auto py-0 lg:py-14"
+          className="text-white font-bold leading-snug text-2xl md:text:3xl lg:text-4xl xl:text-5xl text-center max-w-4xl mx-auto py-0 lg:py-14"
         >
           Orde Baru Runtuh, Lahirlah Pemilu Luber Jurdil
         </motion.h5>
-        <div className="h-[800px] w-full relative flex justify-center items-center">
+        <div className="h-[350px] xl:h-[800px] w-full relative flex justify-center items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="!bg-cover absolute z-0 w-[calc(100%-32rem)] flex items-center justify-center h-full"
+            className="!bg-cover absolute z-0 w-full xl:w-[calc(100%-32rem)] flex items-center justify-center h-full"
             style={{
               background:
                 "linear-gradient(0deg, rgba(26, 18, 24, 0.6), rgba(26, 18, 24, 0.6)), url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse.jpg')",
@@ -77,7 +77,7 @@ export default function SectionOrbaCollapsed() {
             className="absolute w-full xl:w-[1000px] z-20"
           />
         </div>
-        <div className="prose text-white mx-auto z-50" ref={scope}>
+        <div className="prose text-white mx-auto z-50 px-4 xl:px-0" ref={scope}>
           <p>
             Rezim Orde Baru beserta kedigdayaan Golkar runtuh pada 1998.
             Kejadian ini mengubah struktur politik dan ketatanegaraan di
@@ -118,12 +118,12 @@ export default function SectionOrbaCollapsed() {
       </div>
 
       <div className="mx-auto flex items-center justify-center flex-col">
-        <div className="h-[800px] w-full relative flex justify-center items-center">
+        <div className="h-[350px] xl:h-[800px] w-full relative flex justify-center items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="!bg-cover absolute z-0 w-[calc(100%-32rem)] flex items-center justify-center h-full"
+            className="!bg-cover absolute z-0 w-full xl:w-[calc(100%-32rem)] flex items-center justify-center h-full"
             style={{
               background:
                 "linear-gradient(0deg, rgba(26, 18, 24, 0.6), rgba(26, 18, 24, 0.6)),url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse2.png')",
@@ -140,7 +140,10 @@ export default function SectionOrbaCollapsed() {
             className="absolute w-full xl:w-[1000px] z-20"
           />
         </div>
-        <div className="prose text-white mx-auto z-20" ref={scopeP2}>
+        <div
+          className="prose text-white mx-auto z-20 px-4 xl:px-0"
+          ref={scopeP2}
+        >
           <p>
             Era reformasi pun dimulai. Di bawah tangan Habibie, pemilu
             legislatif kembali digelar pada Senin, 7 Juni 1999. Pesta demokrasi
@@ -181,8 +184,8 @@ export default function SectionOrbaCollapsed() {
           </p>
         </div>
       </div>
-      <div className="relative h-[1800px] flex flex-col items-center">
-        <div className="flex flex-row items-start justify-center w-full h-[1500px] z-0">
+      <div className="relative h-[1230px] xl:h-[1800px] flex flex-col items-center">
+        <div className="flex flex-row items-start justify-center w-full h-fit xl:h-[1500px] z-0">
           <motion.div
             className="relative w-full h-[785px]"
             initial="hidden"
@@ -198,7 +201,7 @@ export default function SectionOrbaCollapsed() {
                     // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                     i
                   }`}
-                  className={`absolute z-0 w-[50%] left-[25%] `}
+                  className={`absolute z-0 w-full xl:w-[50%] left-0 xl:left-[25%]`}
                   src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/${indexImage}.png`}
                   alt={indexImage.toString()}
                 />
@@ -210,7 +213,7 @@ export default function SectionOrbaCollapsed() {
           initial="hidden"
           whileInView="visible"
           variants={containerAnimate}
-          className="prose absolute bottom-0 text-white mx-auto z-10"
+          className="prose absolute bottom-0 text-white mx-auto z-10 px-4 xl:px-0"
         >
           <motion.p variants={item}>
             Meski dianggap demikian, Pemilu 1999 masih mengadopsi sistem Pemilu

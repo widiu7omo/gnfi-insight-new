@@ -16,10 +16,10 @@ const item = {
 };
 export default function CaptionFromWill() {
   return (
-    <div className="w-full pt-[200px] h-fit pb-3">
-      <div className="flex space-x-6 mx-auto pt-16 bg-orange-500 w-full">
+    <div className="w-full h-fit pb-3 pt-32">
+      <div className="pt-16 pb-8 bg-orange-500">
         <motion.div
-          className="flex space-x-6 flex-col lg:flex-row relative max-w-full lg:max-w-7xl mx-auto"
+          className="flex space-x-6 flex-col-reverse xl:flex-row relative max-w-full xl:max-w-7xl mx-auto"
           variants={containerAnimate}
           initial="hidden"
           whileInView="visible"
@@ -30,6 +30,7 @@ export default function CaptionFromWill() {
             transition={{ delay: 0.4 }}
             src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/golkar/will.png"
             alt="Sir William"
+            className="w-[80px] xl:w-full"
           />
           <span className="right-0 -top-20 z-10 absolute leading-3 font-bold text-[400px] rotate-180 text-orange-300/80">
             “

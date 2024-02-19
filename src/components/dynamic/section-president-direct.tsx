@@ -8,7 +8,7 @@ export default function SectionPresidentDirect() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="font-bold text-5xl text-center my-6 max-w-[80%] leading-snug mx-auto"
+          className="font-bold text-2xl md:text:3xl lg:text-4xl xl:text-5xl text-center my-6 max-w-[80%] leading-snug mx-auto"
         >
           Pemilu 2004, Saat Presiden Dipilih Langsung
         </motion.h5>
