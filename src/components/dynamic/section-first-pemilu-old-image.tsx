@@ -27,7 +27,7 @@ export default function SectionFirstPemiluOldImage() {
     },
   };
   const [scope, animate] = useAnimate();
-  const isInView = useInView(scope);
+  const isInView = useInView(scope, { once: true });
   useEffect(() => {
     if (isInView) {
       animate(
@@ -102,6 +102,7 @@ export default function SectionFirstPemiluOldImage() {
       </div>
       <div className="flex flex-col justify-center xl:items-start items-center space-y-7 xl:space-x-7 py-8 xl:flex-row px-4 xl:px-0">
         <motion.img
+          viewport={{ once: true }}
           initial={{ opacity: 0, scale: 1.1, x: -20 }}
           whileInView={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ delay: 0.3 }}
@@ -109,26 +110,27 @@ export default function SectionFirstPemiluOldImage() {
           className="h-full w-fit xl:max-w-lg border-8 border-white shadow-2xl"
         />
         <motion.div
+          viewport={{ once: true }}
           initial="hidden"
           whileInView="visible"
           variants={containerAnimate}
           className="prose mx-auto !text-neutral-700 text-xl px-6 lg:px-0 lg:w-[60ch]"
           style={{ ...signikaFont.style }}
         >
-          <motion.p variants={item}>
+          <motion.p variants={item} viewport={{ once: true }}>
             Sistem pemilihan yang digunakan pada Pemilu 1955 adalah sistem
             pemilihan proporsional tertutup atau dikenal sebagai sistem
             berimbang. Dalam sistem ini, pemilih memiliki opsi untuk memberikan
             suara kepada calon individual dan juga dapat memberikan suara kepada
             parpol yang ikut serta dalam pemilihan.
           </motion.p>
-          <motion.p variants={item}>
+          <motion.p variants={item} viewport={{ once: true }}>
             Suara yang diberikan kepada calon akan dianggap sebagai dukungan
             langsung untuk calon tersebut, sedangkan suara yang diberikan kepada
             parpol akan didistribusikan kepada calon sesuai dengan nomor
             urutnya.
           </motion.p>
-          <motion.p variants={item}>
+          <motion.p variants={item} viewport={{ once: true }}>
             Seseorang juga dapat menjadi kandidat independen tanpa melibatkan
             diri dalam parpol tertentu. Penentuan kandidat terpilih dilakukan
             berdasarkan suara yang diterima, sesuai dengan Pembagian Nomor

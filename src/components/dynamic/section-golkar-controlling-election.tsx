@@ -11,6 +11,7 @@ export default function SectionGolkarControllingElection() {
     >
       <div className="bg-black/60 flex items-center justify-center w-full py-24 xl:py-64">
         <motion.h5
+          viewport={{ once: true }}
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}

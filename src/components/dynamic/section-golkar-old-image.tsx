@@ -11,6 +11,7 @@ export default function SectionGolkarOldImage() {
             z: -10,
             scale: 0.8,
           }}
+          viewport={{ once: true }}
           whileInView={{
             rotate: 1,
             opacity: 1,

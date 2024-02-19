@@ -5,6 +5,7 @@ export default function SectionPresidentDirect() {
     <div className="w-full mx-auto bg-[#F6F0E2] flex items-center justify-center">
       <div className="flex flex-col w-full items-center justify-center space-y-4 max-w-full lg:max-w-7xl">
         <motion.h5
+          viewport={{ once: true }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -14,6 +15,7 @@ export default function SectionPresidentDirect() {
         </motion.h5>
         <div className="px-4 xl:px-0">
           <motion.img
+            viewport={{ once: true }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}

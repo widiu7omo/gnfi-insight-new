@@ -23,6 +23,7 @@ export default function IntroductionHero({ block }: { block: BlockType }) {
           </div>
           <div className="flex-1 flex items-center justify-center">
             <motion.h5
+              viewport={{ once: true }}
               initial={{ opacity: 0, y: 0 }}
               whileInView={{ opacity: 1, y: -20 }}
               className="text-2xl md:text-3xl lg:text-5xl xl:text-7xl font-bold text-white max-w-[80%] text-center leading-snug"

@@ -19,7 +19,7 @@ export default function SectionOrbaCollapsed() {
     },
   };
   const [scope, animate] = useAnimate();
-  const isInView = useInView(scope);
+  const isInView = useInView(scope, { once: true });
   useEffect(() => {
     if (isInView) {
       animate(
@@ -32,7 +32,7 @@ export default function SectionOrbaCollapsed() {
     }
   }, [isInView, animate]);
   const [scopeP2, animateP2] = useAnimate();
-  const isInViewP2 = useInView(scopeP2);
+  const isInViewP2 = useInView(scopeP2, { once: true });
   useEffect(() => {
     if (isInViewP2) {
       animateP2(
@@ -48,6 +48,7 @@ export default function SectionOrbaCollapsed() {
     <div className="bg-[#1A1218] w-full py-12 mx-auto relative">
       <div className="mx-auto flex items-center justify-center flex-col">
         <motion.h5
+          viewport={{ once: true }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -57,6 +58,7 @@ export default function SectionOrbaCollapsed() {
         </motion.h5>
         <div className="h-[350px] xl:h-[800px] w-full relative flex justify-center items-center">
           <motion.div
+            viewport={{ once: true }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -69,6 +71,7 @@ export default function SectionOrbaCollapsed() {
             }}
           />
           <motion.img
+            viewport={{ once: true }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
@@ -120,6 +123,7 @@ export default function SectionOrbaCollapsed() {
       <div className="mx-auto flex items-center justify-center flex-col">
         <div className="h-[350px] xl:h-[800px] w-full relative flex justify-center items-center">
           <motion.div
+            viewport={{ once: true }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -132,6 +136,7 @@ export default function SectionOrbaCollapsed() {
             }}
           />
           <motion.img
+            viewport={{ once: true }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
@@ -187,6 +192,7 @@ export default function SectionOrbaCollapsed() {
       <div className="relative h-[1230px] xl:h-[1800px] flex flex-col items-center">
         <div className="flex flex-row items-start justify-center w-full h-fit xl:h-[1500px] z-0">
           <motion.div
+            viewport={{ once: true }}
             className="relative w-full h-[785px]"
             initial="hidden"
             whileInView="visible"
@@ -196,6 +202,7 @@ export default function SectionOrbaCollapsed() {
               indexImage++;
               return (
                 <motion.img
+                  viewport={{ once: true }}
                   variants={item}
                   key={`${
                     // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
@@ -210,24 +217,25 @@ export default function SectionOrbaCollapsed() {
           </motion.div>
         </div>
         <motion.div
+          viewport={{ once: true }}
           initial="hidden"
           whileInView="visible"
           variants={containerAnimate}
           className="prose absolute bottom-0 text-white mx-auto z-10 px-4 xl:px-0"
         >
-          <motion.p variants={item}>
+          <motion.p variants={item} viewport={{ once: true }}>
             Meski dianggap demikian, Pemilu 1999 masih mengadopsi sistem Pemilu
             Orde Baru. Beberapa di antaranya: penggunaan sistem proporsional
             daftar tertutup, susunan MPR masih menggunakan utusan daerah dan
             golongan, KPU masih melibatkan pemerintah ditambah anggota parpol.
           </motion.p>
-          <motion.p variants={item}>
+          <motion.p variants={item} viewport={{ once: true }}>
             Setelah pemilihan dewan legislatif selesai, MPR RI menggelar sidang
             umum untuk memilih presiden dan wakil presiden. Pemilihan presiden
             Indonesia berlangsung pada 20 Oktober 1999, sedangkan pemilihan
             wakil presiden dilaksanakan pada 21 Oktober.
           </motion.p>
-          <motion.p variants={item}>
+          <motion.p variants={item} viewport={{ once: true }}>
             Dalam pemilu tidak langsung itu, Abdurrahman Wahid alias Gus Dur
             dilantik sebagai Presiden RI bersama wakilnya, Megawati
             Soekarnoputri. Dua tahun kemudian, terjadi pergantian presiden. MPR

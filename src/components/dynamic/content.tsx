@@ -5,7 +5,7 @@ import { stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 export default function Content({ block }: { block: BlockType }) {
   const [scope, animate] = useAnimate();
-  const isInView = useInView(scope);
+  const isInView = useInView(scope, { once: true });
 
   useEffect(() => {
     if (isInView) {

@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import { screens as defaultScreens } from 'tailwindcss/defaultTheme'
 const config: Config = {
   darkMode: 'class',
   content: [
@@ -15,6 +15,10 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    screens: {
+      ...defaultScreens,
+      xs: '460px',
+    }
   },
   plugins: [
     require('@tailwindcss/typography')

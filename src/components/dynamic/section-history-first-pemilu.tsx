@@ -18,9 +18,10 @@ export default function SectionHistoryFirstPemilu() {
     },
   };
   return (
-    <div className="flex flex-row items-start justify-center w-full h-[1200px]">
+    <div className="flex flex-row items-start justify-center w-full h-[450px] xs:h-[700px] sm:h-[800px] md:h-[1200px] lg:h-[1100px] xl:h-[1200px]">
       <motion.div
-        className="relative w-full h-[785px]"
+        viewport={{ once: true }}
+        className="relative w-full h-[390px] xs:h-[500px] md:h-[550px] lg:h-[600px] xl:h-[785px]"
         initial="hidden"
         whileInView="visible"
         variants={containerAnimate}
@@ -30,12 +31,14 @@ export default function SectionHistoryFirstPemilu() {
           variants={item}
           initial={{ scaleY: 0 }}
           whileInView={{ scaleY: 1 }}
-          className="absolute z-10 left-[49.50%] lg:left-[49.76%] h-full top-[8%] lg:top-[200px] w-[2px] bg-[#e36414]"
+          viewport={{ once: true }}
+          className="absolute z-10 left-[49.50%] lg:left-[49.76%] h-full top-[0px] lg:top-[200px] w-[2px] bg-[#e36414]"
         />
         {new Array(8).fill(0).map((_, i) => {
           indexImage++;
           return (
             <motion.img
+              viewport={{ once: true }}
               variants={item}
               key={`${
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>

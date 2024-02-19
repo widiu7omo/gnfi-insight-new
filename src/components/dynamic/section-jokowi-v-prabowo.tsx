@@ -20,6 +20,7 @@ export default function SectionDirectElection() {
   return (
     <div className="flex flex-row items-start justify-center w-full h-[550px] xl:h-[1300px] bg-[#1D1D1D] relative">
       <motion.div
+        viewport={{ once: true }}
         className="w-full h-full"
         initial="hidden"
         whileInView="visible"
@@ -29,6 +30,7 @@ export default function SectionDirectElection() {
           indexImage++;
           return (
             <motion.img
+              viewport={{ once: true }}
               variants={item}
               key={`${
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>

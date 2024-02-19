@@ -19,12 +19,14 @@ export default function CaptionFromWill() {
     <div className="w-full h-fit pb-3 pt-32">
       <div className="pt-16 pb-8 bg-orange-500">
         <motion.div
+          viewport={{ once: true }}
           className="flex space-x-4 xl:space-x-6 flex-row relative max-w-full xl:max-w-7xl mx-auto "
           variants={containerAnimate}
           initial="hidden"
-          whileInView="visible"
+          whileInView={"visible"}
         >
           <motion.img
+            viewport={{ once: true }}
             initial={{ x: -20, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -36,6 +38,7 @@ export default function CaptionFromWill() {
             “
           </span>
           <motion.div
+            viewport={{ once: true }}
             className="space-y-5 px-4 xl:px-0 z-20"
             initial={{ x: 20, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}

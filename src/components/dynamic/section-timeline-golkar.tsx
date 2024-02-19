@@ -23,12 +23,14 @@ export default function SectionTimelineGolkar() {
     <>
       <div className="flex flex-row items-start justify-center w-full h-[600px] xl:h-[800px]">
         <motion.div
+          viewport={{ once: true }}
           className="relative w-full h-[635px]"
           initial="hidden"
           whileInView="visible"
           variants={containerAnimate}
         >
           <motion.div
+            viewport={{ once: true }}
             key={-1}
             variants={item}
             initial={{ scaleY: 0 }}
@@ -39,6 +41,7 @@ export default function SectionTimelineGolkar() {
             indexImage++;
             return (
               <motion.img
+                viewport={{ once: true }}
                 variants={item}
                 key={`${
                   // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
