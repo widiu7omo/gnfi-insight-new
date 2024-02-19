@@ -10,6 +10,7 @@ import SectionOrbaCollapsed from "./section-orba-collapsed";
 import SectionPresidentDirect from "./section-president-direct";
 import SectionDirectElection from "./section-direct-election";
 import SectionJokowiVPrabowo from "./section-jokowi-v-prabowo";
+import SectionFooter from "./section-footer";
 
 export default function ComponentRenderer({ block }: { block: BlockType }) {
   // TODO: dynamic compenent renderer
@@ -46,7 +47,9 @@ export default function ComponentRenderer({ block }: { block: BlockType }) {
   if (block.content === "SectionJokowiVPrabowo") {
     return <SectionJokowiVPrabowo />;
   }
-
+  if (block.content === "SectionFooter") {
+    return <SectionFooter />;
+  }
   return (
     <div className="text-xl font-medium text-neutral-600">
       TODO: Dynamic Component Renderer
