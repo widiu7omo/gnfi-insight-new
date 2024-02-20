@@ -1,5 +1,5 @@
 import Section from "@/components/dynamic/base-section";
-import generateBlocks from "@public/pemilu-dan-dinamikanya-dari-masa-ke-masa/generated-blocks.json";
+import generateBlocks from "@public/membangun-ikn-mewujudkan-wacana-lama-indonesia/generated-blocks.json";
 import { getComponent } from "@/data/component-front";
 import { BlockType } from "@/data/types";
 import Navbar from "@/components/dynamic/nav-bar";
