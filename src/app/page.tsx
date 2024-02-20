@@ -2,6 +2,8 @@ import Section from "@/components/dynamic/base-section";
 import generateBlocks from "@public/pemilu-dan-dinamikanya-dari-masa-ke-masa/generated-blocks.json";
 import { getComponent } from "@/data/component-front";
 import { BlockType } from "@/data/types";
+import Navbar from "@/components/dynamic/nav-bar";
+import Toc from "@/components/dynamic/toc";
 
 const groupByToMap = <T, Q>(
   array: T[],
@@ -16,7 +18,9 @@ const groupByToMap = <T, Q>(
 export default function Home() {
   const grouped = groupByToMap(generateBlocks, (item) => item.group);
   return (
-    <main className="bg-neutral-50 w-full">
+    <main className="bg-neutral-50 w-full relative">
+      <Navbar />
+      <Toc />
       {Object.keys(Object.fromEntries(grouped)).map((groupName) => {
         const blocks = Array.from(grouped.get(groupName)?.values() ?? []);
         return (

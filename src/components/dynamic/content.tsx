@@ -1,12 +1,17 @@
 "use client";
 import { BlockType } from "@/data/types";
 import parse from "html-react-parser";
-import { stagger, useAnimate, useInView } from "framer-motion";
+import {
+  stagger,
+  useAnimate,
+  useInView,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import { useEffect } from "react";
 export default function Content({ block }: { block: BlockType }) {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, { once: true });
-
   useEffect(() => {
     if (isInView) {
       animate(
