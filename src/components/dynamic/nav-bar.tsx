@@ -23,7 +23,7 @@ export default function Navbar() {
     <motion.div
       layout
       data-blur={shouldBlur}
-      className="data-[blur=true]:bg-white data-[blur=true]:shadow sticky data-[blur=true]:h-[60px] lg:data-[blur=true]:h-[90px] h-[150px] top-0 bg-transparent z-50 px-8 flex flex-col items-center justify-center"
+      className="data-[blur=true]:bg-white data-[blur=true]:shadow sticky data-[blur=true]:h-[60px] lg:data-[blur=true]:h-[90px] h-[150px] top-0 bg-transparent z-50 px-6 lg:px-8 flex flex-col items-center justify-center"
     >
       <div className="max-w-7xl mx-auto justify-between items-center flex w-full">
         <motion.button

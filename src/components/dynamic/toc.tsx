@@ -30,7 +30,7 @@ export default function Toc() {
     [currentHash]
   );
   return (
-    <div>
+    <>
       <motion.div
         data-show={isShow}
         layout
@@ -85,6 +85,6 @@ export default function Toc() {
         data-show={isShow}
         className="top-0 bottom-0 left-0 right-0 bg-black/60 transition-all z-[55] absolute data-[show=true]:visible invisible"
       />
-    </div>
+    </>
   );
 }

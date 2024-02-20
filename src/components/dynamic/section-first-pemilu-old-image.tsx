@@ -2,30 +2,9 @@
 import { Signika } from "next/font/google";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
+import FirstElectionMethod from "./section-first-pemilu-method";
 const signikaFont = Signika({ weight: "400", subsets: ["latin"] });
 export default function SectionFirstPemiluOldImage() {
-  const containerAnimate = {
-    hidden: {
-      x: 20,
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        delayChildren: 0.5,
-        staggerChildren: 0.3,
-        delay: 0.6,
-      },
-    },
-  };
-  const item = {
-    hidden: { x: 20, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-    },
-  };
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, { once: true });
   useEffect(() => {
@@ -41,14 +20,18 @@ export default function SectionFirstPemiluOldImage() {
   }, [isInView, animate]);
   return (
     <div
-      className="h-fit w-full mx-auto py-8 flex items-center justify-center flex-col shadow-[inset_0px_-2px_4.8px_2px_rgba(0,0,0,0.1),_inset_0px_4px_4px_rgba(0,0,0,0.1)]"
+      className="w-full py-8 space-y-8 flex items-center justify-center flex-col shadow-[inset_0px_-2px_4.8px_2px_rgba(0,0,0,0.1),_inset_0px_4px_4px_rgba(0,0,0,0.1)]"
       style={{
         background:
           "url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/canvas-first-pemilu.png')",
       }}
     >
-      <div className="space-y-8 max-w-full lg:max-w-7xl px-8 lg:px-0">
-        <img
+      <div className="space-y-8 max-w-full lg:max-w-7xl px-4 xl:px-0 flex flex-col items-center">
+        <motion.img
+          viewport={{ once: true }}
+          initial={{ opacity: 0, scale: 0.9, y: -20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
           src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/kulonprogokab.go.id.jpg"
           className="h-full border-8 border-white shadow-2xl"
           alt="kulon progo"
@@ -56,7 +39,7 @@ export default function SectionFirstPemiluOldImage() {
         {/* TODO: animate image */}
         <div
           ref={scope}
-          className="prose mx-auto !text-neutral-700 text-xl w-full lg:w-[60ch]"
+          className=" !text-neutral-800 prose text-left z-20 py-4 text-lg"
           style={{ ...signikaFont.style }}
         >
           <p>
@@ -99,44 +82,7 @@ export default function SectionFirstPemiluOldImage() {
             Sastroamidjojo dan Kabinet Burhanuddin Harahap.
           </p>
         </div>
-      </div>
-      <div className="flex flex-col justify-center xl:items-start items-center space-y-7 xl:space-x-7 py-8 xl:flex-row px-4 xl:px-0">
-        <motion.img
-          viewport={{ once: true }}
-          initial={{ opacity: 0, scale: 1.1, x: -20 }}
-          whileInView={{ opacity: 1, scale: 1, x: 0 }}
-          transition={{ delay: 0.3 }}
-          src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/Wikimedia_Commons.jpg"
-          className="h-full w-fit xl:max-w-lg border-8 border-white shadow-2xl"
-        />
-        <motion.div
-          viewport={{ once: true }}
-          initial="hidden"
-          whileInView="visible"
-          variants={containerAnimate}
-          className="prose mx-auto !text-neutral-700 text-xl px-6 lg:px-0 lg:w-[60ch]"
-          style={{ ...signikaFont.style }}
-        >
-          <motion.p variants={item} viewport={{ once: true }}>
-            Sistem pemilihan yang digunakan pada Pemilu 1955 adalah sistem
-            pemilihan proporsional tertutup atau dikenal sebagai sistem
-            berimbang. Dalam sistem ini, pemilih memiliki opsi untuk memberikan
-            suara kepada calon individual dan juga dapat memberikan suara kepada
-            parpol yang ikut serta dalam pemilihan.
-          </motion.p>
-          <motion.p variants={item} viewport={{ once: true }}>
-            Suara yang diberikan kepada calon akan dianggap sebagai dukungan
-            langsung untuk calon tersebut, sedangkan suara yang diberikan kepada
-            parpol akan didistribusikan kepada calon sesuai dengan nomor
-            urutnya.
-          </motion.p>
-          <motion.p variants={item} viewport={{ once: true }}>
-            Seseorang juga dapat menjadi kandidat independen tanpa melibatkan
-            diri dalam parpol tertentu. Penentuan kandidat terpilih dilakukan
-            berdasarkan suara yang diterima, sesuai dengan Pembagian Nomor
-            Pemilih Daftar (BPPD).
-          </motion.p>
-        </motion.div>
+        <FirstElectionMethod />
       </div>
     </div>
   );
