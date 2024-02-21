@@ -18,7 +18,7 @@ export default function SectionDirectElection() {
     },
   };
   return (
-    <div className="flex flex-row items-start justify-center w-full h-[530px] min-[375px]:h-[610px] min-[425px]:h-[680px] min-[768px]:h-[1200px] min-[1024px]:h-[1580px] min-[1440px]:h-[1130px] min-[1920px]:h-[1480px] min-[2560px]:h-[1970px] bg-orange-950 relative">
+    <div className="flex flex-row items-start justify-center w-full h-[530px] min-[375px]:h-[610px] min-[390px]:h-[630px] min-[425px]:h-[680px] min-[768px]:h-[1200px] min-[1024px]:h-[1580px] min-[1440px]:h-[1130px] min-[1920px]:h-[1480px] min-[2560px]:h-[1970px] bg-orange-950 relative">
       <motion.div
         viewport={{ once: true }}
         className="w-full h-full"
