@@ -23,7 +23,7 @@ export default function SectionFirstPemiluOldImage() {
       className="w-full py-8 space-y-8 flex items-center justify-center flex-col shadow-[inset_0px_-2px_4.8px_2px_rgba(0,0,0,0.1),_inset_0px_4px_4px_rgba(0,0,0,0.1)]"
       style={{
         background:
-          "url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/canvas-first-pemilu.png')",
+          "url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/canvas-first-pemilu.webp')",
       }}
     >
       <div className="space-y-8 max-w-full lg:max-w-7xl px-4 xl:px-0 flex flex-col items-center">
