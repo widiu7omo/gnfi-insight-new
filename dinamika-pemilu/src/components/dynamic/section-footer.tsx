@@ -1,26 +1,35 @@
+import {
+  ClipboardIcon,
+  CopyIcon,
+  FacebookIcon,
+  Share2Icon,
+  ShareIcon,
+  TwitterIcon,
+} from "lucide-react";
+
 export default function SectionFooter() {
   return (
-    <div className="text-white bg-red-600 w-full text-center py-8 xl:py-32 text-base xl:text-2xl relative overflow-clip">
-      Dibuat oleh <span className="font-bold">Good News From Indonesia</span>
-      <div className="xl:block hidden">
-        <img
-          src="assets/gnfi.svg"
-          alt="Logo GNFI"
-          className="opacity-50 -left-20 h-[500px] absolute -bottom-[56%] rotate-45"
-        />
-        <img
-          src="assets/gnfi.svg"
-          alt="Logo GNFI"
-          className="opacity-50 h-[800px] right-0 absolute -top-40"
-        />
+    <>
+      <div className="text-red-500 bg-white w-full text-center py-8 text-base xl:text-2xl relative overflow-clip flex flex-col items-center space-y-8">
+        <div className="flex space-x-4 z-10">
+          <button type="button" className="hover:bg-red-50 rounded-full p-2">
+            <TwitterIcon />
+          </button>
+          <button type="button" className="hover:bg-red-50 rounded-full p-2">
+            <Share2Icon />
+          </button>
+          <button type="button" className="hover:bg-red-50 rounded-full p-2">
+            <FacebookIcon />
+          </button>
+        </div>
+        <div>
+          <span className="text-lg">Dibuat oleh </span>
+          <span className="font-bold">Good News From Indonesia</span>
+        </div>
+        <div className="">
+          <img src="assets/gnfi.svg" alt="Logo GNFI" className="h-[80px]" />
+        </div>
       </div>
-      <div className="xl:hidden block">
-        <img
-          src="assets/gnfi.svg"
-          alt="Logo GNFI"
-          className="opacity-50 h-[200px] top-0 left-0 absolute "
-        />
-      </div>
-    </div>
+    </>
   );
 }
