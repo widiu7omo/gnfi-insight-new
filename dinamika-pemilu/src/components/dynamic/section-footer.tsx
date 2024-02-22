@@ -6,6 +6,7 @@ import {
   ShareIcon,
   TwitterIcon,
 } from "lucide-react";
+import WhatsappIcon from "../reusable/wa-icon";
 
 export default function SectionFooter() {
   return (
@@ -16,10 +17,13 @@ export default function SectionFooter() {
             <TwitterIcon />
           </button>
           <button type="button" className="hover:bg-red-50 rounded-full p-2">
-            <Share2Icon />
+            <FacebookIcon />
           </button>
           <button type="button" className="hover:bg-red-50 rounded-full p-2">
-            <FacebookIcon />
+            <WhatsappIcon className="fill-red-500 size-7" />
+          </button>
+          <button type="button" className="hover:bg-red-50 rounded-full p-2">
+            <Share2Icon />
           </button>
         </div>
         <div>
