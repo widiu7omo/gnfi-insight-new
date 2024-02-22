@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Providers from "@/store/providers";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <Script
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=65d7025dafa82e0019c9e3e8&product=sop"
+        async
+      />
       <body style={{ ...inter.style }} className="w-full">
         <Providers>{children}</Providers>
       </body>

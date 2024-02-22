@@ -1,31 +1,8 @@
-import {
-  ClipboardIcon,
-  CopyIcon,
-  FacebookIcon,
-  Share2Icon,
-  ShareIcon,
-  TwitterIcon,
-} from "lucide-react";
-import WhatsappIcon from "../reusable/wa-icon";
-
 export default function SectionFooter() {
   return (
     <>
       <div className="text-red-500 bg-white w-full text-center py-8 text-base xl:text-2xl relative overflow-clip flex flex-col items-center space-y-8">
-        <div className="flex space-x-4 z-10">
-          <button type="button" className="hover:bg-red-50 rounded-full p-2">
-            <TwitterIcon />
-          </button>
-          <button type="button" className="hover:bg-red-50 rounded-full p-2">
-            <FacebookIcon />
-          </button>
-          <button type="button" className="hover:bg-red-50 rounded-full p-2">
-            <WhatsappIcon className="fill-red-500 size-7" />
-          </button>
-          <button type="button" className="hover:bg-red-50 rounded-full p-2">
-            <Share2Icon />
-          </button>
-        </div>
+        <div className="sharethis-inline-share-buttons" />
         <div>
           <span className="text-lg">Dibuat oleh </span>
           <span className="font-bold">Good News From Indonesia</span>
