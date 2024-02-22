@@ -10,45 +10,15 @@ import SectionOrbaCollapsed from "./section-orba-collapsed";
 import SectionPresidentDirect from "./section-president-direct";
 import SectionDirectElection from "./section-direct-election";
 import SectionJokowiVPrabowo from "./section-jokowi-v-prabowo";
-import SectionFooter from "./section-footer";
+import Footer from "../reusable/footer";
 
 export default function ComponentRenderer({ block }: { block: BlockType }) {
   // TODO: dynamic compenent renderer
   if (block.content === "IntroductionHero") {
     return <IntroductionHero block={block} />;
   }
-  if (block.content === "SectionFirstPemilu") {
-    return <SectionFirstPemilu />;
-  }
-  if (block.content === "SectionFirstPemiluOldImage") {
-    return <SectionFirstPemiluOldImage />;
-  }
-  if (block.content === "SectionHistoryFirstPemilu") {
-    return <SectionHistoryFirstPemilu />;
-  }
-  if (block.content === "SectionGolkarControllingElection") {
-    return <SectionGolkarControllingElection />;
-  }
-  if (block.content === "SectionTimelineGolkar") {
-    return <SectionTimelineGolkar />;
-  }
-  if (block.content === "SectionGolkarOldImage") {
-    return <SectionGolkarOldImage />;
-  }
-  if (block.content === "SectionOrbaCollapsed") {
-    return <SectionOrbaCollapsed />;
-  }
-  if (block.content === "SectionPresidentDirect") {
-    return <SectionPresidentDirect />;
-  }
-  if (block.content === "SectionDirectElection") {
-    return <SectionDirectElection />;
-  }
-  if (block.content === "SectionJokowiVPrabowo") {
-    return <SectionJokowiVPrabowo />;
-  }
-  if (block.content === "SectionFooter") {
-    return <SectionFooter />;
+  if (block.content === "Footer") {
+    return <Footer />;
   }
   return (
     <div className="text-xl font-medium text-neutral-600">
