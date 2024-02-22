@@ -4,6 +4,7 @@ import { getComponent } from "@/data/component-front";
 import { BlockType } from "@/data/types";
 import Navbar from "@/components/dynamic/nav-bar";
 import Toc from "@/components/dynamic/toc";
+import { Metadata } from "next";
 
 const groupByToMap = <T, Q>(
   array: T[],
@@ -14,7 +15,11 @@ const groupByToMap = <T, Q>(
     map.get(key)?.push(value) ?? map.set(key, [value]);
     return map;
   }, new Map<Q, T[]>());
-
+export const metadata: Metadata = {
+  title:
+    "Membangun IKN, Mewujudkan Wacana Lama Indonesia | Good News From Indonesia",
+  description: "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
+};
 export default function Home() {
   const grouped = groupByToMap(generateBlocks, (item) => item.group);
   return (

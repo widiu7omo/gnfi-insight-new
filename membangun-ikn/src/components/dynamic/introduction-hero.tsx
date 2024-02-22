@@ -7,7 +7,8 @@ export default function IntroductionHero({ block }: { block: BlockType }) {
     <div
       className="relative !bg-cover w-full h-screen -top-[150px] -mb-[150px]"
       style={{
-        background: `url(pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/tangerangkota.go.id.jpeg)`,
+        background:
+          "url(membangun-ikn-mewujudkan-wacana-lama-indonesia/assets/hero-bg.png)",
       }}
     >
       <div className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/90">
@@ -17,9 +18,9 @@ export default function IntroductionHero({ block }: { block: BlockType }) {
               viewport={{ once: true }}
               initial={{ opacity: 0, y: 0 }}
               whileInView={{ opacity: 1, y: -20 }}
-              className="text-2xl md:text-3xl lg:text-5xl xl:text-7xl font-bold text-white max-w-[80%] text-center leading-snug"
+              className="text-2xl md:text-3xl lg:text-5xl xl:text-7xl font-bold text-white max-w-[80%] text-center !leading-snug"
             >
-              Pemilu dan Dinamikanya dari Masa ke Masa
+              Membangun IKN, Mewujudkan Wacana Lama Indonesia
             </motion.h5>
           </div>
           <div className="flex items-center justify-center">
