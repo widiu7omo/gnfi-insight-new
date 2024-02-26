@@ -48,34 +48,52 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Pemilu 1955, Pemilu “Resmi” Pertama Indonesia
+              Membangun IKN, Mewujudkan Wacana Lama Indonesia
             </a>
           </li>
           <li
             data-active={isSelected("#section-2")}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-2">Ketika Golkar Menguasai Pemilu</a>
+            <a href="#section-2">Pindah Ibu Kota sejak Baru Merdeka</a>
           </li>
           <li
             data-active={isSelected("#section-3")}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Orde Baru Runtuh, Lahirlah Pemilu Luber Jurdil
+              Pindah ke Palangkaraya, Ide Bung Karno atau Semaun?
             </a>
           </li>
           <li
             data-active={isSelected("#section-4")}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-4">Pemilu 2004, Saat Presiden Dipilih Langsung</a>
+            <a href="#section-4">Pindah ke Jonggol, Wacana Era Orde Baru</a>
           </li>
           <li
             data-active={isSelected("#section-5")}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-5">Ketika Dunia Maya Memanas</a>
+            <a href="#section-5">Tersandung Anggaran</a>
+          </li>
+          <li
+            data-active={isSelected("#section-6")}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-6">Mewujudkan Wacana Lama</a>
+          </li>
+          <li
+            data-active={isSelected("#section-7")}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-7">Belajar dari Negara Lain</a>
+          </li>
+          <li
+            data-active={isSelected("#section-8")}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-8">Peluang dan Tantangan IKN</a>
           </li>
         </ul>
       </motion.div>
