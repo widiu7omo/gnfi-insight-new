@@ -47,7 +47,7 @@ export default function SectionOrbaCollapsed() {
   return (
     <div className="bg-[#1A1218] w-full py-12 mx-auto">
       <div className="mx-auto flex items-center justify-center flex-col">
-        <motion.h5
+        <motion.h2
           viewport={{ once: true }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export default function SectionOrbaCollapsed() {
           className="text-white font-bold leading-snug text-2xl md:text:3xl lg:text-4xl xl:text-5xl text-center max-w-4xl mx-auto py-0 xl:py-14"
         >
           Orde Baru Runtuh, Lahirlah Pemilu Luber Jurdil
-        </motion.h5>
+        </motion.h2>
         <div className="w-full relative flex justify-center items-center h-[280px] min-[320px]:h-[300px] min-[380px]:h-[330px] min-[620px]:h-[480px] xs:h-[450px] sm:h-[500px] min-[670px]:h-[630px] min-[730px]:h-[580px] min-[680px]:h-[550px] md:h-[650px] xl:h-[700px]">
           <motion.div
             viewport={{ once: true }}
@@ -208,7 +208,7 @@ export default function SectionOrbaCollapsed() {
                     // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                     i
                   }`}
-                  className={`absolute z-0 w-full xl:max-w-7xl`}
+                  className={"absolute z-0 w-full xl:max-w-7xl"}
                   src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/${indexImage}.png`}
                   alt={indexImage.toString()}
                 />

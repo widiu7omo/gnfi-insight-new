@@ -10,7 +10,7 @@ export default function SectionFirstPemilu() {
             'url("pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/first-pemilu-bg.png")',
         }}
       >
-        <motion.h5
+        <motion.h2
           viewport={{ once: true }}
           initial={{ opacity: 0, y: 0 }}
           whileInView={{ opacity: 1, y: -20 }}
@@ -18,7 +18,7 @@ export default function SectionFirstPemilu() {
         >
           Pemilu 1955, <br />
           <span>Pemilu “Resmi” Pertama Indonesia</span>
-        </motion.h5>
+        </motion.h2>
       </div>
     </div>
   );

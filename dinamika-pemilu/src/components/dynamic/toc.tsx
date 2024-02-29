@@ -36,12 +36,12 @@ export default function Toc() {
         layout
         className="bg-white w-full -left-[100vw] lg:w-[400px] lg:-left-[400px] data-[show=true]:left-0 top-0 h-screen fixed z-[60] px-7 py-10 space-y-8"
       >
-        <motion.h6 className="text-3xl text-gray-800 font-semibold flex flex-row-reverse justify-between items-center">
+        <motion.div className="text-3xl text-gray-800 font-semibold flex flex-row-reverse justify-between items-center">
           <span>Table of Content</span>
           <button type="button" onClick={toggleNavHandler}>
             {isShow ? <MoveLeftIcon /> : <ListMinusIcon />}
           </button>
-        </motion.h6>
+        </motion.div>
         <ul className="leading-8 text-gray-600 text-lg space-y-4">
           <li
             data-active={isSelected("#section-1")}

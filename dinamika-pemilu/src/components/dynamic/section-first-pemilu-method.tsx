@@ -26,6 +26,7 @@ export default function FirstElectionMethod() {
         transition={{ delay: 0.3 }}
         src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/Wikimedia_Commons.jpg"
         className="border-8 border-white shadow-2xl"
+        alt="Sistem pemilihan pada pemilu 1995"
       />
       <motion.div
         ref={scope}

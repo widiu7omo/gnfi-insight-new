@@ -34,7 +34,7 @@ export default function SectionFirstPemiluOldImage() {
           transition={{ delay: 0.3 }}
           src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/kulonprogokab.go.id.jpg"
           className="h-full border-8 border-white shadow-2xl"
-          alt="kulon progo"
+          alt="Gambaran pemilu di tahun 1955"
         />
         {/* TODO: animate image */}
         <div
