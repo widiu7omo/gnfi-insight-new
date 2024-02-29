@@ -17,7 +17,7 @@ export default function SectionTwo() {
   return (
     <section
       id="section-2"
-      className="bg-gradient-to-b from-[#312C18] to-[#ACB1AA]"
+      className="bg-gradient-to-b from-[#312C18] to-[#B4B0AD]"
     >
       <div className="space-y-8 py-36">
         <motion.h2

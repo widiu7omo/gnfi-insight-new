@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import IntroductionHero from "@/components/dynamic/introduction-hero";
 import SectionOne from "@/components/sections/membangun-ikn";
 import SectionTwo from "@/components/sections/pindah-ibu-kota-merdeka";
+import SectionThree from "@/components/sections/ibu-kota-selain-jakarta";
 
 export const metadata: Metadata = {
   title:
@@ -18,6 +19,7 @@ export default function Home() {
       <IntroductionHero />
       <SectionOne />
       <SectionTwo />
+      <SectionThree />
     </main>
   );
 }
