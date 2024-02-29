@@ -5,7 +5,7 @@ export default function Quote() {
   return (
     <div className="relative max-w-[75ch] mx-auto bg-stone-800 rounded-full rounded-br-none w-full">
       <Ornament4 />
-      <div className="h-48 justify-end items-center inline-flex ">
+      <div className="h-48 justify-end items-center inline-flex space-x-4">
         <div
           className={`text-white text-[18px] font-bold pl-[90px] leading-7 ${vollkornFont.className} relative`}
         >

@@ -6,6 +6,8 @@ import Paragraph from "@/components/reusable/paragraph";
 import Ornament2 from "./ornament2";
 import Ornament3 from "./ornament3";
 import Quote from "./quote";
+import Ornament5 from "./ornament5";
+import Ornament6 from "./ornament6";
 export const vollkornFont = Libre_Baskerville({
   subsets: ["latin"],
   display: "swap",
@@ -15,7 +17,7 @@ export default function SectionTwo() {
   return (
     <section
       id="section-2"
-      className="bg-[linear-gradient(180deg, #312C18 30.74%, #ACB1AA 100%)] bg-gradient-to-b from-[#312C18] to-[#ACB1AA]"
+      className="bg-gradient-to-b from-[#312C18] to-[#ACB1AA]"
     >
       <div className="space-y-8 py-36">
         <motion.h2
@@ -31,7 +33,11 @@ export default function SectionTwo() {
           <Ornament1 />
         </motion.h2>
         <div className="relative xl:max-w-7xl mx-auto">
-          <img
+          <motion.img
+            viewport={{ once: true }}
+            initial={{ rotate: 0, y: 20 }}
+            whileInView={{ rotate: 2, opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
             src="/assets/section2/e42f5d290b3f0cf65ba5d712a3a4ae41.jpeg"
             alt="Dokumentasi Soekarno"
             className="origin-top-left rotate-2 border-4 border-white mx-auto shadow relative z-10 object-cover"
@@ -40,7 +46,7 @@ export default function SectionTwo() {
           <Ornament3 />
         </div>
         <Paragraph
-          className={`text-white pt-9 ${vollkornFont.className} font-[400]`}
+          className={`text-white pt-9 ${vollkornFont.className} font-[400] relative`}
         >
           <p>
             Memindahkan ibu kota memang bukan wacana baru. Ide tersebut sudah
@@ -67,10 +73,11 @@ export default function SectionTwo() {
             buku Bung Karno Penyambung Lidah Rakyat, Sukarno berkata seperti
             berikut:
           </p>
+          <Ornament5 />
         </Paragraph>
         <Quote />
         <Paragraph
-          className={`text-white ${vollkornFont.className} font-[400]`}
+          className={`text-white ${vollkornFont.className} font-[400] relative`}
         >
           <p>
             Pemindahan rombongan pemerintah pusat dilakukan menggunakan Kereta
@@ -109,6 +116,7 @@ export default function SectionTwo() {
             darurat, Bung Hatta pun kembali ke sana dan Syafruddin tetap di
             Bukittinggi untuk berjaga-jaga.
           </p>
+          <Ornament6 />
         </Paragraph>
       </div>
     </section>
