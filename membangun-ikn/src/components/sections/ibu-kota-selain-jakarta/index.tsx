@@ -1,10 +1,89 @@
+import Paragraph from "@/components/reusable/paragraph";
 import Illustration1 from "./illustration1";
 import Illustration2 from "./illustration2";
+import StepItem from "./step-item";
+import Ornament1 from "./ornament1";
+import Ornament2 from "./ornament2";
 export default function SectionThree() {
   return (
-    <section id="section-3" className="w-full relative">
+    <section id="section-3" className="w-full relative bg-neutral-200">
       <Illustration1 />
       <Illustration2 />
+      <div className="flex items-center justify-center flex-col py-12">
+        <StepItem
+          imageSource={"/assets/section3/yogya.png"}
+          title={"Yogyakarta"}
+          desc={"Januari 1946-Desember 1949"}
+        />
+        <StepItem
+          imageSource={"/assets/section3/bukittinggi.png"}
+          title={"Bukittinggi"}
+          desc={
+            "Desember 1848-Juni 1949 \n *(Ibu Kota Pemerintahan Darurat Republik Indonesia)"
+          }
+        />
+        <StepItem
+          imageSource={"/assets/section3/bireuen.png"}
+          title={"Bireuen"}
+          desc={
+            "Konon, Bireuen pernah menjadi ibu kota selama sepekean pada Juni 1948. Namun hal ini tidak tercatat \n dalam buku sejarah sehingga \n perlu diteliti lebih lanjut"
+          }
+        />
+      </div>
+      <Paragraph className="py-8">
+        <p>
+          Namun, mandat yang disampaikan ke Syafruddin lewat radiogram tidak
+          terkirim karena stasiun pemancar sudah terlanjur dihancurkan musuh.
+          Hebatnya, setelah mendengar kabar kejatuhan Yogyakarta, Syafruddin
+          bersama tokoh-tokoh nasional lainnya segera berinisiatif mengambil
+          langkah dan untuk rencana pembentukan Pemerintahan Darurat Republik
+          Indonesia. Dengan demikian, ibu kota pun pindah lagi dari Yogyakarta
+          ke Bukittinggi.
+        </p>
+
+        <p>
+          Sayangnya, Bukittinggi juga tidak aman. Setelah melaksanakan rapat di
+          dan mengetahui bila kota tersebut juga jadi sasaran tentara NICA, para
+          tokoh memutuskan segera bergerak ke utara menuju Halaban, nagari di
+          kaki Gunung Sago. Barulah pada 22 Desember 1948 PDRI diresmikan.
+        </p>
+
+        <p>
+          Dengan berbagai keterbatasan, PDRI menjalankan pemerintahan dengan
+          bergerak dari hutan ke hutan untuk menghindari NICA. Namun, komunikasi
+          dengan para pemimpin tetap berjalan dengan baik hingga akhirnya PDRI
+          dibubarkan pada tanggal 13 Juli 1949 setelah Persetujuan Roem-Royen
+          disepakati. Kekuasaan pun dikembalikan ke Sukarno-Hatta dan setelahnya
+          ibu kota dikembalikan ke Yogyakarta.
+        </p>
+
+        <p>
+          Menariknya, ada pula kisah yang menyebut Bireuen pernah menjadi ibu
+          kota Indonesia selama satu minggu. Sebagaimana tertulis dalam situs
+          web Pemerintah Provinsi Aceh, tidak sedikit para orang tua dari
+          kalangan tokoh masyarakat dan militer di era awal kemerdekaan yang
+          menyebutkan bila daerah yang berada di Kabupaten Aceh Utara ini pernah
+          menjadi ibu kota sementara, tepatnya setelah Yogyakarta jatuh ke
+          tangan Belanda.
+        </p>
+
+        <p>
+          Selain itu, Jusuf Kalla ketika masih menjabat sebagai wakil presiden
+          pernah menyatakan dalam pidatonya bila Bireuen pernah menjadi ibu kota
+          sementara pada tahun 1948. Ia mengatakan, ketika Yogyakarta sedang
+          genting, Bung Karno mengasingkan diri ke Bireuen dan mengendalikan
+          pemerintahan secara sementara di sana.
+        </p>
+
+        <p>
+          Kendati demikian, bukti konkret mengenai Bireuen yang pernah jadi ibu
+          kota ini pun masih diragukan. Hanya Yogyakarta dan Bukittinggi yang
+          memang terbukti benar-benar pernah menjadi ibu kota berkat adanya
+          catatan sejarah yang kuat.
+        </p>
+      </Paragraph>
+      <Ornament1 />
+      <Ornament2 />
     </section>
   );
 }
