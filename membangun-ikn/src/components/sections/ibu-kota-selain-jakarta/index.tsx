@@ -3,7 +3,6 @@ import Illustration1 from "./illustration1";
 import Illustration2 from "./illustration2";
 import StepItem from "./step-item";
 import Ornament1 from "./ornament1";
-import Ornament2 from "./ornament2";
 import Steps from "./steps";
 export default function SectionThree() {
   return (
@@ -64,7 +63,6 @@ export default function SectionThree() {
         </p>
       </Paragraph>
       <Ornament1 />
-      <Ornament2 />
     </section>
   );
 }

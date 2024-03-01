@@ -17,10 +17,10 @@ export default function Ornament2() {
     }
   }, [isInView, animate]);
   return (
-    <div className="overflow-clip absolute left-[25%] z-[1] bottom-[0]">
+    <div className="overflow-clip absolute left-[25%] z-[1] bottom-[0] xl:block hidden">
       <svg
         role="img"
-        aria-label="Food Steps"
+        aria-label="Foot Steps"
         width="307"
         height="638"
         viewBox="0 0 307 638"

@@ -1,6 +1,6 @@
 import YelloArrow from "@/components/reusable/yellow-arrow";
-import Ornament3 from "./ornament3";
-import Ornament4 from "./ornament4";
+import Ornament3 from "./ornament2";
+import Ornament4 from "./ornament3";
 
 type StepItemType = {
   imageSource: string;

@@ -16,11 +16,11 @@ export default function Ornament5() {
     }
   }, [isInView, animate]);
   return (
-    <div className="absolute bottom-0 -right-[80px]">
+    <div className="absolute bottom-0 -right-[80px] xl:block hidden">
       <svg
         width="60"
         role="img"
-        aria-label="Dashed"
+        aria-label="Stargaze"
         height="97"
         viewBox="0 0 60 97"
         fill="none"

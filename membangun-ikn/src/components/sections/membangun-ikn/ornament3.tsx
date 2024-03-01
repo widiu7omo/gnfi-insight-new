@@ -13,7 +13,7 @@ export default function Ornament3() {
     }),
   };
   return (
-    <div className="absolute bottom-0 z-[1] right-[25%]">
+    <div className="absolute bottom-0 z-[1] right-[25%] xl:block hidden">
       <svg
         role="img"
         aria-label="Dashed Line"

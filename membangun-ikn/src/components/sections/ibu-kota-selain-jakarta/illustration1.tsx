@@ -50,7 +50,7 @@ export default function Illustration1() {
           whileInView={{ x: 20, opacity: 1, transition: { delay: 0.6 } }}
           src="/assets/section3/monas.png"
           alt="Monas"
-          className="object-fit h-[700px]"
+          className="xl:object-fit xl:h-[700px] xl:w-full w-[40px]"
         />
       </div>
       <div className="absolute bottom-0 z-20 right-[10%]">
