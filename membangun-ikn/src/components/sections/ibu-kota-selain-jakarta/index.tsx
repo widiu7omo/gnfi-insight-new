@@ -4,32 +4,13 @@ import Illustration2 from "./illustration2";
 import StepItem from "./step-item";
 import Ornament1 from "./ornament1";
 import Ornament2 from "./ornament2";
+import Steps from "./steps";
 export default function SectionThree() {
   return (
     <section id="section-3" className="w-full relative bg-neutral-200">
       <Illustration1 />
       <Illustration2 />
-      <div className="flex items-center justify-center flex-col py-12">
-        <StepItem
-          imageSource={"/assets/section3/yogya.png"}
-          title={"Yogyakarta"}
-          desc={"Januari 1946-Desember 1949"}
-        />
-        <StepItem
-          imageSource={"/assets/section3/bukittinggi.png"}
-          title={"Bukittinggi"}
-          desc={
-            "Desember 1848-Juni 1949 \n *(Ibu Kota Pemerintahan Darurat Republik Indonesia)"
-          }
-        />
-        <StepItem
-          imageSource={"/assets/section3/bireuen.png"}
-          title={"Bireuen"}
-          desc={
-            "Konon, Bireuen pernah menjadi ibu kota selama sepekean pada Juni 1948. Namun hal ini tidak tercatat \n dalam buku sejarah sehingga \n perlu diteliti lebih lanjut"
-          }
-        />
-      </div>
+      <Steps />
       <Paragraph className="py-8">
         <p>
           Namun, mandat yang disampaikan ke Syafruddin lewat radiogram tidak
