@@ -8,7 +8,7 @@ import Ornament5 from "./ornament5";
 
 export default function SectionFive() {
   return (
-    <section id="section-5" className="-mb-[14rem]">
+    <section id="section-5" className="xl:-mb-[5rem] mb-0">
       <Header
         title="Pindah ke Jonggol, Wacana Era Orde Baru"
         coverImage="assets/section5/cover.jpeg"
