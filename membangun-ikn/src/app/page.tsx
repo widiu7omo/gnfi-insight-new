@@ -9,6 +9,7 @@ import SectionFour from "@/components/sections/pindah-ke-jonggol";
 import SectionSix from "@/components/sections/mewujudkan-wacana-lama";
 import SectionThree from "@/components/sections/pindah-ke-palangkaraya";
 import SectionFive from "@/components/sections/tersandung-anggaran";
+import SectionSeven from "@/components/sections/belajar-dari-negara-lain";
 
 export const metadata: Metadata = {
   title:
@@ -28,6 +29,7 @@ export default function Home() {
       <SectionFour />
       <SectionFive />
       <SectionSix />
+      <SectionSeven />
     </main>
   );
 }
