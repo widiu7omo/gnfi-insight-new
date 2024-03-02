@@ -3,6 +3,8 @@ import Paragraph from "@/components/reusable/paragraph";
 import Ornament1 from "./ornament1";
 import Ornament2 from "./ornament2";
 import FaktaIkn from "../fakta-ikn";
+import Ornament3 from "./ornament3";
+import Ornament4 from "./ornament4";
 
 export default function SectionSix() {
   return (
@@ -90,6 +92,53 @@ export default function SectionSix() {
         </Paragraph>
       </div>
       <FaktaIkn />
+      <div className="bg-[#374B1E] py-8">
+        <Paragraph className="py-12 text-white relative">
+          <Ornament3 />
+          <Ornament4 />
+          <p>
+            Tiga kota tersebut merupakan ekosistem utama pembentukan IKN yang
+            progresif. Samarinda diasosiasikan sebagai jantung yang menjadi
+            pusat sejarah Kalimantan Timur dengan sektor energi yang
+            diremajakan, Balikpapan sebagai pimpul hilir migas dan logistik,
+            serta IKN sebagai saraf pusat Inti pemerintah dan pusat inovasi
+            hijau. Terakhir, Kalimantan Timur berfungsi sebagai paru-paru
+            pertanian hulu dan pusat wisata alam.
+          </p>
+
+          <p>
+            Kolaborasi dari tiga kota itu merupakan bentuk dari perwujudan
+            konsep smart city yang diusung dalam pembangunan IKN. Juru Bicara
+            Otorita Ibu Kota Negara (IKN) Nusantara, Troy Pantouw menyebut,
+            Konsep smart city di IKN tidak hanya mendukung adaptasi teknologi
+            digital dalam kehidupan urban, tetapi juga keselarasan dengan alam.
+          </p>
+
+          <p>
+            Membangun IKN tentu saja adalah proyek besar yang membutuhkan dana
+            banyak. Untuk memenuhi kebutuhan dana, pemerintah tidak sepenuhnya
+            menggunakan Anggaran Pendapatan dan Belanja Negara (APBN), melainkan
+            juga menggunakan skema investasi. Keseluruhan pembangunan akan
+            menghabiskan Rp466 triliun.
+          </p>
+
+          <p>
+            Dari uang sebanyak itu, anggaran dari APBN sebesar Rp89,4 triliun
+            atau 19,2 persen akan digunakan untuk pembangunan Istana Negara,
+            bangunan strategis militer, pengadaan infrastruktur, dan ruang
+            terbuka hijau. Kemudian, skema Kerjasama Pemerintah dengan Badan
+            Usaha (KPBU) dan swasta yang digunakan untuk pembiayaan gedung
+            eksekutif, legislatif, yudikatif, rumah dinas ASN/TNI/POLRI, sarana
+            pendidikan, museum, dan sarana kesehatan berkontribusi sebesar 54,6
+            persen atau sebesar Rp 254,436 triliun. BUMN/D juga turut dilibatkan
+            untuk pembiayaan pembangunan perumahan umum, universitas, pusat
+            perbelanjaan, dan sektor ekonomi lainnya dengan porsi 26,2 persen
+            atau sebesar Rp122,092 triliun. Sementara itu, sektor KPBU dan
+            swasta akan menyumbang 253,4 triliun, lalu BUMN serta BUMD
+            berpartisipasi sebesar 123,2 triliun.
+          </p>
+        </Paragraph>
+      </div>
     </section>
   );
 }
