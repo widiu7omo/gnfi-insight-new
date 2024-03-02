@@ -2,6 +2,7 @@ import Header from "@/components/reusable/header";
 import Paragraph from "@/components/reusable/paragraph";
 import Ornament1 from "./ornament1";
 import Ornament2 from "./ornament2";
+import FaktaIkn from "../fakta-ikn";
 
 export default function SectionSix() {
   return (
@@ -88,6 +89,7 @@ export default function SectionSix() {
           </p>
         </Paragraph>
       </div>
+      <FaktaIkn />
     </section>
   );
 }
