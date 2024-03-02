@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 type HeaderType = {
   title: string;
   coverImage: string;
@@ -6,7 +8,10 @@ type HeaderType = {
 export default function Header({ title, coverImage, className }: HeaderType) {
   return (
     <div
-      className={`h-[600px] bg-center bg-cover flex items-center justify-center ${className}`}
+      className={cn(
+        "h-[600px] bg-center bg-cover flex items-center justify-center",
+        className
+      )}
       style={{
         backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),url(${coverImage})`,
       }}

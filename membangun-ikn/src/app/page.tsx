@@ -6,6 +6,7 @@ import SectionOne from "@/components/sections/membangun-ikn";
 import SectionTwo from "@/components/sections/pindah-ibu-kota-merdeka";
 import SectionThree from "@/components/sections/ibu-kota-selain-jakarta";
 import SectionFour from "@/components/sections/pindah-ke-palangkaraya";
+import SectionFive from "@/components/sections/pindah-ke-jonggol";
 
 export const metadata: Metadata = {
   title:
@@ -22,6 +23,7 @@ export default function Home() {
       <SectionTwo />
       <SectionThree />
       <SectionFour />
+      <SectionFive />
     </main>
   );
 }

@@ -12,6 +12,7 @@
     "@tiptap/pm": "^2.2.2",
     "@tiptap/react": "^2.2.2",
     "@tiptap/starter-kit": "^2.2.2",
+    "clsx": "^2.1.0",
     "framer-motion": "^11.0.5",
     "html-react-parser": "^5.1.4",
     "immutability-helper": "^3.1.1",
@@ -23,7 +24,8 @@
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18",
-    "react-dropzone": "^14.2.3"
+    "react-dropzone": "^14.2.3",
+    "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
