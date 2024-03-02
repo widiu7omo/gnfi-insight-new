@@ -1,11 +1,18 @@
 import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
 
 type HeaderType = {
-  title: string;
+  title?: string;
   coverImage: string;
+  customTitle?: ReactNode;
   className?: string;
 };
-export default function Header({ title, coverImage, className }: HeaderType) {
+export default function Header({
+  title,
+  coverImage,
+  className,
+  customTitle,
+}: HeaderType) {
   return (
     <div
       className={cn(
@@ -16,9 +23,13 @@ export default function Header({ title, coverImage, className }: HeaderType) {
         backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),url(${coverImage})`,
       }}
     >
-      <h2 className="text-5xl font-bold text-white max-w-5xl text-center leading-snug">
-        {title}
-      </h2>
+      {customTitle ? (
+        customTitle
+      ) : (
+        <h2 className="text-5xl font-bold text-white max-w-5xl text-center leading-snug">
+          {title}
+        </h2>
+      )}
     </div>
   );
 }

@@ -6,9 +6,9 @@ import IndoMap from "./indo-map";
 import MapCard from "./map-card";
 import Ornament3 from "./ornament3";
 
-export default function SectionSix() {
+export default function SectionFive() {
   return (
-    <section id="section-6">
+    <section id="section-5">
       <Header
         title="Tersandung Anggaran"
         coverImage="/assets/section6/cover.jpeg"

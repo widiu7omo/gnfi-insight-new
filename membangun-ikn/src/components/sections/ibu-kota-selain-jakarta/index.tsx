@@ -1,12 +1,11 @@
 import Paragraph from "@/components/reusable/paragraph";
 import Illustration1 from "./illustration1";
 import Illustration2 from "./illustration2";
-import StepItem from "./step-item";
 import Ornament1 from "./ornament1";
 import Steps from "./steps";
-export default function SectionThree() {
+export default function IllustrationJakarta() {
   return (
-    <section id="section-3" className="w-full relative bg-neutral-200">
+    <div className="w-full relative bg-neutral-200">
       <Illustration1 />
       <Illustration2 />
       <Steps />
@@ -63,6 +62,6 @@ export default function SectionThree() {
         </p>
       </Paragraph>
       <Ornament1 />
-    </section>
+    </div>
   );
 }

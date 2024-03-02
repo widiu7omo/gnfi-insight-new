@@ -7,9 +7,9 @@ import Ornament5 from "./ornament5";
 import Ornament4 from "./ornament4";
 import Ornament3 from "./ornament3";
 
-export default function SectionFour() {
+export default function SectionThree() {
   return (
-    <section id="section-4" className="relative">
+    <section id="section-3" className="relative">
       <Ornament2 />
       <Header
         title="Pindah ke Palangkaraya, Ide Bung Karno atau Semaun?"

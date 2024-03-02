@@ -6,9 +6,9 @@ import Ornament3 from "./ornament3";
 import Ornament4 from "./ornament4";
 import Ornament5 from "./ornament5";
 
-export default function SectionFive() {
+export default function SectionFour() {
   return (
-    <section id="section-5" className="xl:-mb-[5rem] mb-0">
+    <section id="section-4" className="xl:-mb-[5rem] mb-0">
       <Header
         title="Pindah ke Jonggol, Wacana Era Orde Baru"
         coverImage="assets/section5/cover.jpeg"

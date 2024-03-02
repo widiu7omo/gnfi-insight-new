@@ -4,10 +4,11 @@ import { Metadata } from "next";
 import IntroductionHero from "@/components/dynamic/introduction-hero";
 import SectionOne from "@/components/sections/membangun-ikn";
 import SectionTwo from "@/components/sections/pindah-ibu-kota-merdeka";
-import SectionThree from "@/components/sections/ibu-kota-selain-jakarta";
-import SectionFour from "@/components/sections/pindah-ke-palangkaraya";
-import SectionFive from "@/components/sections/pindah-ke-jonggol";
-import SectionSix from "@/components/sections/tersandung-anggaran";
+import IllustrationJakarta from "@/components/sections/ibu-kota-selain-jakarta";
+import SectionFour from "@/components/sections/pindah-ke-jonggol";
+import SectionSix from "@/components/sections/mewujudkan-wacana-lama";
+import SectionThree from "@/components/sections/pindah-ke-palangkaraya";
+import SectionFive from "@/components/sections/tersandung-anggaran";
 
 export const metadata: Metadata = {
   title:
@@ -22,6 +23,7 @@ export default function Home() {
       <IntroductionHero />
       <SectionOne />
       <SectionTwo />
+      <IllustrationJakarta />
       <SectionThree />
       <SectionFour />
       <SectionFive />
