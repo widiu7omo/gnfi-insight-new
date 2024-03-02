@@ -10,6 +10,8 @@ import SectionSix from "@/components/sections/mewujudkan-wacana-lama";
 import SectionThree from "@/components/sections/pindah-ke-palangkaraya";
 import SectionFive from "@/components/sections/tersandung-anggaran";
 import SectionSeven from "@/components/sections/belajar-dari-negara-lain";
+import SectionEight from "@/components/sections/peluang-dan-tantangan-ikn";
+import Footer from "@/components/reusable/footer";
 
 export const metadata: Metadata = {
   title:
@@ -30,6 +32,8 @@ export default function Home() {
       <SectionFive />
       <SectionSix />
       <SectionSeven />
+      <SectionEight />
+      <Footer />
     </main>
   );
 }
