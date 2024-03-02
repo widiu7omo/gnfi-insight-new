@@ -1,6 +1,6 @@
 export default function Ornament4() {
   return (
-    <div className="absolute -right-[3rem] top-[6rem]">
+    <div className="absolute -right-[3rem] top-[6rem] xl:block hidden">
       <svg
         aria-label="Hand draw sketch small"
         role="img"
