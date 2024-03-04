@@ -6,7 +6,7 @@ export default function IntroductionHero() {
     <div
       className="relative -top-[150px] -mb-[150px] h-screen w-full !bg-cover"
       style={{
-        background: "url(/assets/hero-bg.png)",
+        background: "url(/assets/hero-bg.webp)",
       }}
     >
       <div className="absolute h-full w-full bg-gradient-to-b from-black/0 to-black/90">

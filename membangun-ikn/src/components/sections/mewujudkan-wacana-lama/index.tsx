@@ -10,7 +10,7 @@ export default function SectionSix() {
   return (
     <section id="section-6">
       <Header
-        coverImage="/assets/section7/cover.jpeg"
+        coverImage="/assets/section7/cover.webp"
         customTitle={
           <div className="mx-4 max-w-full rounded-xl border-2 border-white/10 bg-white/30 px-10 py-8 text-center backdrop-blur-sm xl:mx-0 xl:max-w-5xl">
             <h2 className="text-3xl font-bold text-white drop-shadow-lg xl:text-5xl">

@@ -13,7 +13,7 @@ export default function SectionThree() {
       <Ornament2 />
       <Header
         title="Pindah ke Palangkaraya, Ide Bung Karno atau Semaun?"
-        coverImage="/assets/section4/cover.jpeg"
+        coverImage="/assets/section4/cover.webp"
         className="relative"
       />
       <Paragraph className="relative py-8">

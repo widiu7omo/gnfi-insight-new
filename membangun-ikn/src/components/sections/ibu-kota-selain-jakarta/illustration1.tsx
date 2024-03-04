@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 export default function Illustration1() {
   return (
-    <div className="relative flex h-[700px] items-start justify-center bg-[url('/assets/section3/da84d88dc706e90c8b1d715b4ee601bf.png')] bg-cover bg-[50%_70%]">
+    <div className="relative flex h-[700px] items-start justify-center bg-[url('/assets/section3/da84d88dc706e90c8b1d715b4ee601bf.webp')] bg-cover bg-[50%_70%]">
       <div className="absolute -top-3 bottom-0 left-0 right-0 bg-gradient-to-b from-[#B4B0AD] to-black/0" />
       <div className="relative bottom-0 left-0 right-0 top-0 z-40 flex h-[400px] w-full max-w-full flex-col items-center  justify-center md:max-w-3xl">
         <motion.div
