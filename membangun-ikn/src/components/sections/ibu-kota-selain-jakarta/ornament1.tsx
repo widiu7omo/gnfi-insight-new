@@ -5,8 +5,7 @@ export default function Ornament1() {
         <svg
           role="img"
           aria-label="Town"
-          width="799"
-          height="447"
+          className="w-full md:w-[500px] md:h-[300px] xl:w-[799px] xl:h-[447px]"
           viewBox="0 0 799 447"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -192,8 +191,7 @@ export default function Ornament1() {
           <svg
             role="img"
             aria-label="Skies"
-            width="417"
-            height="136"
+            className="w-[200px] h-[80px] md:w-[417px] md:h-[136px]"
             viewBox="0 0 417 136"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
