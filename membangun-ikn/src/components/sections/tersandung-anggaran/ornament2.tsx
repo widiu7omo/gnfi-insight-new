@@ -1,6 +1,6 @@
 export default function Ornament2() {
   return (
-    <div className="absolute -top-10 right-0 xl:block hidden">
+    <div className="absolute -top-10 right-0 hidden xl:block">
       <svg
         role="img"
         aria-label="Quote 2"

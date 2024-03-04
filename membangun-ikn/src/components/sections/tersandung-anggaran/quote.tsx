@@ -2,14 +2,14 @@ import Ornament2 from "./ornament2";
 
 export default function Quote() {
   return (
-    <div className="flex max-w-[65ch] mx-auto xl:flex-row flex-col">
+    <div className="mx-auto flex max-w-[65ch] flex-col px-4 xl:flex-row xl:px-0">
       <div className="flex-grow">
         <p className="text-2xl font-bold">
           “Meski ibu kota pindah, Jakarta tetap akan berfungsi sebagai pusat
           ekonomi dan perdagangan,” kata SBY kala itu.
         </p>
       </div>
-      <div className="flex-none w-[247px] relative">
+      <div className="relative w-[247px] flex-none">
         <img
           src="/assets/section6/sby.png"
           alt="Susilo B. Yudhoyono"

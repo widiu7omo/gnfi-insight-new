@@ -40,7 +40,7 @@ export default function SectionSeven() {
         </Paragraph>
       </div>
       <div className="relative flex items-start justify-center bg-[#E5E5E5] py-8">
-        <div className="flex max-w-4xl flex-col-reverse space-x-0 xl:flex-row xl:space-x-4 ">
+        <div className="flex max-w-4xl flex-col-reverse space-x-0 px-4 xl:flex-row xl:space-x-4 xl:px-0">
           <img
             src="/assets/section8/bambang.png"
             alt="Bambang Brojonegoro"

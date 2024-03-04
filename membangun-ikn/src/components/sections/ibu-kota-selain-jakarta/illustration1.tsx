@@ -54,10 +54,10 @@ export default function Illustration1() {
           whileInView={{ x: 20, opacity: 1, transition: { delay: 0.6 } }}
           src="/assets/section3/monas.png"
           alt="Monas"
-          className="xl:object-fit w-[400px] xl:h-[700px] xl:w-full"
+          className="xl:object-fit hidden w-[400px] xl:block xl:h-[700px] xl:w-full"
         />
       </div>
-      <div className="absolute bottom-0 right-[10%] z-20">
+      <div className="absolute bottom-0 right-0 z-20 md:right-[10%]">
         <motion.img
           viewport={{ once: true }}
           initial={{ x: 40, opacity: 0 }}

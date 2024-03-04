@@ -1,14 +1,11 @@
 import Header from "@/components/reusable/header";
 import Paragraph from "@/components/reusable/paragraph";
+import Card from "./card";
 import Ornament1 from "./ornament1";
 import Ornament2 from "./ornament2";
-import Arrow from "./arrow";
-import Card from "./card";
-import QuoteIcon from "./quote-icon";
-import QuoteIconSmall from "./quote-icon-small";
-import Quote from "./quote";
 import Ornament3 from "./ornament3";
 import Ornament4 from "./ornament4";
+import Quote from "./quote";
 
 export default function SectionEight() {
   return (
@@ -39,13 +36,9 @@ export default function SectionEight() {
           tumbuh karena didorong oleh market yang menginginkan orang tinggal di
           sana.
         </p>
-
-        <p>
-          "Dengan IKN, kita berharap, ketika kita membangun kota dari nol, kita
-          akan punya kota yang menjadi standar bagi pembangunan kota lain di
-          indonesia" ujar Bambang.
-        </p>
-
+      </Paragraph>
+      <Quote />
+      <Paragraph className="relative py-8">
         <p>
           Bambang menjelaskan bahwa idealisme IKN tertuang dalam visi sebagai
           kota paling berkelanjutan di dunia. IKN diharapkan menjadi kota yang
@@ -64,7 +57,6 @@ export default function SectionEight() {
         </div>
       </div>
       <Card />
-      <Quote />
       <Paragraph className="relative py-8">
         <Ornament3 />
         <Ornament4 />

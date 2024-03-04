@@ -3,7 +3,6 @@ import Paragraph from "@/components/reusable/paragraph";
 import Ornament1 from "./ornament1";
 import Quote from "./quote";
 import IndoMap from "./indo-map";
-import MapCard from "./map-card";
 import Ornament3 from "./ornament3";
 
 export default function SectionFive() {
@@ -13,7 +12,7 @@ export default function SectionFive() {
         title="Tersandung Anggaran"
         coverImage="/assets/section6/cover.jpeg"
       />
-      <Paragraph className="py-8 relative">
+      <Paragraph className="relative py-8">
         <Ornament1 />
         <p>
           Penguasa kembali berganti, namun ide memindahkan ibu kota tetap hidup
@@ -37,10 +36,10 @@ export default function SectionFive() {
         </p>
       </Paragraph>
       <Quote />
-      <div className="pt-8 bg-[#FC9803] relative">
+      <div className="relative bg-[#FC9803] pt-8">
         <div
           style={{ background: "url(/assets/section6/noise.png)" }}
-          className="absolute top-0 bottom-0 right-0 left-0 z-0 bg-cover opacity-20"
+          className="absolute bottom-0 left-0 right-0 top-0 z-0 bg-cover opacity-20"
         />
         <Paragraph className="relative z-20">
           <p>
@@ -59,9 +58,9 @@ export default function SectionFive() {
             transportasi, pemukiman, dan tata ruang wilayah.
           </p>
         </Paragraph>
-        <div className="bg-[#3C3C3B] relative my-8">
-          <Paragraph className="py-12 w-full">
-            <p className="text-3xl font-bold text-center px-[2rem] text-white leading-snug">
+        <div className="relative my-8 bg-[#3C3C3B]">
+          <Paragraph className="w-full py-12">
+            <p className="px-[2rem] text-center text-lg font-bold leading-snug text-white xl:text-3xl">
               Sebelum Kalimantan Timur Dipilih, Daerah-daerah Ini Pernah Disebut
               Akan Menggantikan Jakarta <br />
               <span>sebagai Ibu Kota</span>
@@ -69,10 +68,12 @@ export default function SectionFive() {
           </Paragraph>
         </div>
         <div className="flex items-center justify-center">
+          {/* Only For Desktop */}
           <IndoMap />
+          {/* Only For Mobile */}
         </div>
-        <div className="bg-[#3C3C3B] relative">
-          <Paragraph className="py-12 w-full text-white relative">
+        <div className="relative bg-[#3C3C3B]">
+          <Paragraph className="relative w-full py-12 text-white">
             <Ornament3 />
             <p>
               Skenario kedua, membangun ibu kota yang benar-benar baru.

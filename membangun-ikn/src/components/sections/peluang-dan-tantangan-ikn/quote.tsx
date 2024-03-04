@@ -3,7 +3,7 @@ import QuoteIconSmall from "./quote-icon-small";
 
 export default function Quote() {
   return (
-    <div className="flex items-center justify-center bg-[#231F20] ">
+    <div className="flex items-center justify-center bg-[#231F20] px-4 xl:px-0">
       <div className="max-w-[65ch] space-y-12 py-8">
         <div className="flex flex-col space-x-0 space-y-4 xl:flex-row xl:space-x-4 xl:space-y-0">
           <QuoteIcon />

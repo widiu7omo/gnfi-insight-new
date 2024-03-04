@@ -17,19 +17,19 @@ export default function StepItem({
   withLeftOrnament = false,
 }: StepItemType) {
   return (
-    <div className="flex justify-between items-start max-w-4xl w-full">
-      <div className="w-[400px] relative">
+    <div className="flex w-full max-w-4xl flex-col items-center justify-between sm:flex-row sm:items-start">
+      <div className="relative w-[50%] md:w-[400px]">
         <img
           src={imageSource}
           alt={title}
-          className="object-cover w-[400px] z-10 relative"
+          className="relative z-10 w-[400px] object-cover"
         />
         {withLeftOrnament && <Ornament4 />}
       </div>
       <div className="flex-1">
-        <div className="flex flex-col space-y-4 justify-start relative">
+        <div className="relative flex flex-col items-center justify-center space-y-4 sm:items-start">
           <YelloArrow />
-          <div className="space-y-2">
+          <div className="space-y-2 px-4 text-center sm:px-0 sm:text-left">
             <div className="text-3xl font-bold">{title}</div>
             <div className="text-xl">{desc}</div>
           </div>

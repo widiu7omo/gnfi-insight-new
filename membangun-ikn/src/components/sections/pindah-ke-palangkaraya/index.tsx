@@ -16,7 +16,7 @@ export default function SectionThree() {
         coverImage="/assets/section4/cover.jpeg"
         className="relative"
       />
-      <Paragraph className="py-8 relative">
+      <Paragraph className="relative py-8">
         <Ornament1 />
 
         <p>
@@ -96,11 +96,11 @@ export default function SectionThree() {
           Jakarta sebagai ibu kota.
         </p>
       </Paragraph>
-      <div className="bg-[#FFBEAA] relative">
+      <div className="relative bg-[#FFBEAA]">
         <Paragraph className="relative">
           <Quote />
-          <div className="flex space-x-2 relative">
-            <p className="text-lg flex-grow font-bold text-neutral-950">
+          <div className="relative flex flex-col items-center space-x-2 xl:flex-row xl:items-end">
+            <p className="flex-grow text-lg font-bold text-neutral-950">
               “Karena buat Soekarno tak ada kota lain yang punya identitas
               seperti Jakarta yang menjadi wadah tumbuhnya nasionalisme di
               Indonesia. Puncak nasionalisme di Indonesia itu di Jakarta. Inilah
@@ -108,7 +108,7 @@ export default function SectionThree() {
               Rizal yang dimuat Kompas.
             </p>
 
-            <div className="w-[165px] flex-none">
+            <div className="relative w-[165px] flex-none">
               <img
                 src="assets/section4/jj.png"
                 alt="JJ Rizal"
@@ -119,7 +119,7 @@ export default function SectionThree() {
             </div>
           </div>
         </Paragraph>
-        <Paragraph className="relative pb-8">
+        <Paragraph className="relative pb-8 text-neutral-950">
           <Ornament3 />
           <p>
             Rizal menjelaskan bukti Soekarno tetap memilih Jakarta sebagai
