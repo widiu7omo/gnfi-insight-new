@@ -14,6 +14,9 @@ import SectionEight from "@/components/sections/peluang-dan-tantangan-ikn";
 import Footer from "@/components/reusable/footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    "https://www.goodnewsfromindonesia.id/special-insights/membangun-ikn-mewujudkan-wacana-lama-indonesia"
+  ),
   title:
     "Membangun IKN, Mewujudkan Wacana Lama Indonesia | Good News From Indonesia",
   description: "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
