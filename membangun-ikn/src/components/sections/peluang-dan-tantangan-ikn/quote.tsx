@@ -18,7 +18,7 @@ export default function Quote() {
         </div>
         <div className="flex flex-col items-center space-x-0 space-y-4 xl:flex-row xl:space-x-12 xl:space-y-0">
           <img
-            src="/assets/section9/bambang.png"
+            src="/assets/bambang-9.png"
             alt="Bambang"
             className="size-[200px] flex-none"
           />

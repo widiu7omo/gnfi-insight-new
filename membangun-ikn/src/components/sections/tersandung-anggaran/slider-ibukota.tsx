@@ -4,17 +4,17 @@ import { PropsWithChildren, useRef, useState } from "react";
 const generateSlide = () => {
   return [
     {
-      image: "/assets/section6/sukarno-square.png",
+      image: "/assets/sukarno-square.png",
       title: "Palangkaraya",
       desc: "Wacana pada era Orde Lama saat Palangkaraya dibangun pada 1957",
     },
     {
-      image: "/assets/section6/suharto-square.png",
+      image: "/assets/suharto-square.png",
       title: "Jonggol",
       desc: "Ingin dikembangkan sebagai kota mandiri, namun tak terwujud hingga Orde Baru tumbang pada Mei 1988",
     },
     {
-      image: "/assets/section6/sby-square.png",
+      image: "/assets/sby-square.png",
       title: "Jawa Barat",
       desc: "Presiden Susilo Bambang Yudhoyono mulai mewacanakan perpindahan ibu kota sejak 2009, namun tak terwujud karena tersandung anggaran",
     },

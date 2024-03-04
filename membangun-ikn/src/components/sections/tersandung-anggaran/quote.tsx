@@ -11,7 +11,7 @@ export default function Quote() {
       </div>
       <div className="relative w-[247px] flex-none">
         <img
-          src="/assets/section6/sby.png"
+          src="/assets/sby.png"
           alt="Susilo B. Yudhoyono"
           className="relative z-10"
         />

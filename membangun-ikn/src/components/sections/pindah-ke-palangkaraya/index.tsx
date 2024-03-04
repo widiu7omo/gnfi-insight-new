@@ -13,7 +13,7 @@ export default function SectionThree() {
       <Ornament2 />
       <Header
         title="Pindah ke Palangkaraya, Ide Bung Karno atau Semaun?"
-        coverImage="/assets/section4/cover.webp"
+        coverImage="/assets/cover-section3.webp"
         className="relative"
       />
       <Paragraph className="relative py-8">
@@ -110,7 +110,7 @@ export default function SectionThree() {
 
             <div className="relative w-[165px] flex-none">
               <img
-                src="assets/section4/jj.png"
+                src="assets/jj.png"
                 alt="JJ Rizal"
                 className="object-contain"
               />

@@ -10,7 +10,7 @@ export default function Steps() {
       animate(
         "div",
         { opacity: 1, y: 0 },
-        { delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.3 },
+        { delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.3 }
       );
     } else {
       animate("div", { opacity: 0, y: 20 });
@@ -23,12 +23,12 @@ export default function Steps() {
     >
       <StepItem
         withRightOrnament
-        imageSource={"/assets/section3/yogya.png"}
+        imageSource={"/assets/yogya.png"}
         title={"Yogyakarta"}
         desc={"Januari 1946-Desember 1949"}
       />
       <StepItem
-        imageSource={"/assets/section3/bukittinggi.png"}
+        imageSource={"/assets/bukittinggi.png"}
         title={"Bukittinggi"}
         desc={
           "Desember 1848-Juni 1949 \n *(Ibu Kota Pemerintahan Darurat Republik Indonesia)"
@@ -36,7 +36,7 @@ export default function Steps() {
       />
       <StepItem
         withLeftOrnament
-        imageSource={"/assets/section3/bireuen.png"}
+        imageSource={"/assets/bireuen.png"}
         title={"Bireuen"}
         desc={
           "Konon, Bireuen pernah menjadi ibu kota selama sepekean pada Juni 1948. Namun hal ini tidak tercatat \n dalam buku sejarah sehingga \n perlu diteliti lebih lanjut"

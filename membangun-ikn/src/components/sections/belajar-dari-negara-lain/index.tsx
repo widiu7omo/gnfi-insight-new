@@ -9,7 +9,7 @@ export default function SectionSeven() {
     <section id="section-7">
       <Header
         title="Belajar dari Negara Lain"
-        coverImage="/assets/section8/cover.jpeg"
+        coverImage="/assets/cover-section7.jpeg"
       />
       <div className="relative flex items-start justify-center bg-[#435440]">
         <Ornament1 />
@@ -42,7 +42,7 @@ export default function SectionSeven() {
       <div className="relative flex items-start justify-center bg-[#E5E5E5] py-8">
         <div className="flex max-w-4xl flex-col-reverse space-x-0 px-4 xl:flex-row xl:space-x-4 xl:px-0">
           <img
-            src="/assets/section8/bambang.png"
+            src="/assets/bambang.png"
             alt="Bambang Brojonegoro"
             className="w-[175px] flex-none object-contain"
           />

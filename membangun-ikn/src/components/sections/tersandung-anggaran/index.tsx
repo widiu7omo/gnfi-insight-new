@@ -11,7 +11,7 @@ export default function SectionFive() {
     <section id="section-5">
       <Header
         title="Tersandung Anggaran"
-        coverImage="/assets/section6/cover.jpeg"
+        coverImage="/assets/cover-section5.jpeg"
       />
       <Paragraph className="relative py-8">
         <Ornament1 />
@@ -39,7 +39,7 @@ export default function SectionFive() {
       <Quote />
       <div className="relative bg-[#FC9803] pt-8">
         <div
-          style={{ background: "url(/assets/section6/noise.png)" }}
+          style={{ background: "url(/assets/noise.png)" }}
           className="absolute bottom-0 left-0 right-0 top-0 z-0 bg-cover opacity-20"
         />
         <Paragraph className="relative z-20">

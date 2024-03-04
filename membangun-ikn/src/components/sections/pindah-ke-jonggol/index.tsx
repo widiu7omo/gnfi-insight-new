@@ -11,7 +11,7 @@ export default function SectionFour() {
     <section id="section-4" className="mb-0 xl:-mb-[5rem]">
       <Header
         title="Pindah ke Jonggol, Wacana Era Orde Baru"
-        coverImage="assets/section5/cover.jpeg"
+        coverImage="assets/cover-section4.jpeg"
         className="!bg-[50%_80%]"
       />
       <div className="relative top-0 flex w-full flex-col items-center justify-center xl:-top-[14rem] ">

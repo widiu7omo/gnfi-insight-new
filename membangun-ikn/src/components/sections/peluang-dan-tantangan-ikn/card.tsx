@@ -5,7 +5,7 @@ export default function Card() {
     <div className="flex items-center justify-center pt-8">
       <div className="flex max-w-[65ch] flex-col items-center xl:flex-row">
         <img
-          src="/assets/section9/jokowi.png"
+          src="/assets/jokowi.png"
           alt="Joko Widodo"
           className="w-[187px] flex-none"
         />

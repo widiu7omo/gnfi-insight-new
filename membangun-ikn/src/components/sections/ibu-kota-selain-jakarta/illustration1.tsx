@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 export default function Illustration1() {
   return (
-    <div className="relative flex h-[700px] items-start justify-center bg-[url('/assets/section3/da84d88dc706e90c8b1d715b4ee601bf.webp')] bg-cover bg-[50%_70%]">
+    <div className="relative flex h-[700px] items-start justify-center bg-[url('/assets/da84d88dc706e90c8b1d715b4ee601bf.webp')] bg-cover bg-[50%_70%]">
       <div className="absolute -top-3 bottom-0 left-0 right-0 bg-gradient-to-b from-[#B4B0AD] to-black/0" />
       <div className="relative bottom-0 left-0 right-0 top-0 z-40 flex h-[400px] w-full max-w-full flex-col items-center  justify-center md:max-w-3xl">
         <motion.div
@@ -52,7 +52,7 @@ export default function Illustration1() {
           viewport={{ once: true }}
           initial={{ x: 0, opacity: 0 }}
           whileInView={{ x: 20, opacity: 1, transition: { delay: 0.6 } }}
-          src="/assets/section3/monas.png"
+          src="/assets/monas.png"
           alt="Monas"
           className="xl:object-fit w-[250px] object-contain xl:block xl:h-[700px] xl:w-full"
         />
@@ -62,7 +62,7 @@ export default function Illustration1() {
           viewport={{ once: true }}
           initial={{ x: 40, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { delay: 1 } }}
-          src="/assets/section3/soldier.png"
+          src="/assets/soldier.png"
           alt="Monas"
           className="hidden h-[300px] object-cover lg:block"
         />
@@ -70,7 +70,7 @@ export default function Illustration1() {
           viewport={{ once: true }}
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1, transition: { delay: 1 } }}
-          src="/assets/section3/soldier.png"
+          src="/assets/soldier.png"
           alt="Monas"
           className="block h-[200px] object-contain object-bottom lg:hidden"
         />

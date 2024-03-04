@@ -12,7 +12,7 @@ export default function SectionEight() {
     <section id="section-8">
       <Header
         title="Peluang dan Tantangan IKN"
-        coverImage="/assets/section9/cover.jpeg"
+        coverImage="/assets/cover-section9.jpeg"
       />
       <Paragraph className="relative py-8">
         <Ornament1 />

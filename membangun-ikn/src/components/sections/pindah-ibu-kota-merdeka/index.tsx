@@ -38,7 +38,7 @@ export default function SectionTwo() {
             initial={{ rotate: 0, y: 20 }}
             whileInView={{ rotate: 2, opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            src="/assets/section2/e42f5d290b3f0cf65ba5d712a3a4ae41.jpeg"
+            src="/assets/e42f5d290b3f0cf65ba5d712a3a4ae41.jpeg"
             alt="Dokumentasi Soekarno"
             className="relative z-10 mx-auto origin-top-left rotate-2 border-4 border-white object-cover shadow"
           />

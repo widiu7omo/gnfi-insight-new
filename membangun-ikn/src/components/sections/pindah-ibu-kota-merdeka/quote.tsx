@@ -16,7 +16,7 @@ export default function Quote() {
         <img
           className="h-48"
           alt="Soekarno Sticker"
-          src="/assets/section2/990bcf9dceabed1a2ff85967cae2d172.png"
+          src="/assets/990bcf9dceabed1a2ff85967cae2d172.png"
         />
       </div>
     </div>

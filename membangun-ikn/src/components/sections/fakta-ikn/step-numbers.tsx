@@ -89,7 +89,7 @@ export function Three() {
         />
       </svg>
       <img
-        src="/assets/section7/conceptor.png"
+        src="/assets/conceptor.png"
         alt="Nyoman Nuarta"
         className="absolute left-0 z-0 size-72 h-72 w-72 max-w-[18rem]"
       />
@@ -161,7 +161,7 @@ export function Five() {
         />
       </svg>
       <img
-        src="/assets/section7/ikn-circle.png"
+        src="/assets/ikn-circle.png"
         alt="Nyoman Nuarta"
         className="absolute left-0 z-0 size-72 h-72 w-72 max-w-[18rem]"
       />
