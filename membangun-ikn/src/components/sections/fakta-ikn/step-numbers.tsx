@@ -4,7 +4,6 @@ export function One() {
       <svg
         width="79"
         height="79"
-        className="size-8 xl:size-[79px]"
         viewBox="0 0 79 79"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
