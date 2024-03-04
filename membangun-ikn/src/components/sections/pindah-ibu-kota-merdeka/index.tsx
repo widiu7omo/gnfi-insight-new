@@ -19,20 +19,20 @@ export default function SectionTwo() {
       id="section-2"
       className="bg-gradient-to-b from-[#312C18] to-[#B4B0AD]"
     >
-      <div className="space-y-8 py-36">
+      <div className="space-y-8 py-16 xl:py-36">
         <motion.h2
           viewport={{ once: true }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className={`text-center text-white relative text-5xl font-bold max-w-2xl leading-snug mx-auto ${vollkornFont.className}`}
+          className={`relative mx-auto max-w-2xl text-center text-2xl font-bold leading-snug text-white lg:text-3xl xl:text-5xl ${vollkornFont.className}`}
         >
           <span className="relative z-50">
             Pindah Ibu Kota sejak Baru Merdeka
           </span>
           <Ornament1 />
         </motion.h2>
-        <div className="relative xl:max-w-7xl mx-auto">
+        <div className="relative mx-auto px-4  xl:max-w-7xl xl:px-0">
           <motion.img
             viewport={{ once: true }}
             initial={{ rotate: 0, y: 20 }}
@@ -40,13 +40,13 @@ export default function SectionTwo() {
             transition={{ delay: 0.5 }}
             src="/assets/section2/e42f5d290b3f0cf65ba5d712a3a4ae41.jpeg"
             alt="Dokumentasi Soekarno"
-            className="origin-top-left rotate-2 border-4 border-white mx-auto shadow relative z-10 object-cover"
+            className="relative z-10 mx-auto origin-top-left rotate-2 border-4 border-white object-cover shadow"
           />
           <Ornament2 />
           <Ornament3 />
         </div>
         <Paragraph
-          className={`text-white pt-9 ${vollkornFont.className} font-[400] relative`}
+          className={`pt-9 text-white ${vollkornFont.className} relative font-[400]`}
         >
           <p>
             Memindahkan ibu kota memang bukan wacana baru. Ide tersebut sudah
@@ -77,7 +77,7 @@ export default function SectionTwo() {
         </Paragraph>
         <Quote />
         <Paragraph
-          className={`text-white ${vollkornFont.className} font-[400] relative`}
+          className={`text-white ${vollkornFont.className} relative font-[400]`}
         >
           <p>
             Pemindahan rombongan pemerintah pusat dilakukan menggunakan Kereta

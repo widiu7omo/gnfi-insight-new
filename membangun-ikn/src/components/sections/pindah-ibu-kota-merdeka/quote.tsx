@@ -3,11 +3,11 @@ import Ornament4 from "./ornament4";
 
 export default function Quote() {
   return (
-    <div className="relative max-w-[75ch] mx-auto bg-stone-800 rounded-full rounded-br-none w-full">
+    <div className="relative mx-auto w-full max-w-[75ch] rounded-br-none bg-stone-800 pt-4 sm:rounded-full sm:pt-0">
       <Ornament4 />
-      <div className="h-48 justify-end items-center inline-flex space-x-4">
+      <div className="inline-flex h-48 flex-col items-end justify-end space-x-4 sm:flex-row sm:items-center">
         <div
-          className={`text-white text-[18px] font-bold pl-[90px] leading-7 ${vollkornFont.className} relative`}
+          className={`pl-4 text-[18px] font-bold leading-7 text-white sm:pl-[90px] ${vollkornFont.className} relative`}
         >
           “Kita akan memindahkan ibu kota besok malam. Tidak ada seorang pun
           dari saudara boleh membawa harta benda. Aku juga tidak”, ujar Presiden

@@ -1,11 +1,9 @@
 export default function Ornament1() {
   return (
-    <div className="absolute top-0 left-[25%] xl:block hidden">
+    <div className="absolute -top-[5rem] hidden h-[974px] w-[1121px] xl:block">
       <svg
         role="img"
         aria-label="Card Open"
-        width="1121"
-        height="974"
         viewBox="0 0 1121 974"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

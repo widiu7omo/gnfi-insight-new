@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 export default function Home() {
   return (
-    <main className="bg-neutral-50 w-full relative">
+    <main className="relative w-full bg-neutral-50">
       <Navbar />
       <Toc />
       <IntroductionHero />

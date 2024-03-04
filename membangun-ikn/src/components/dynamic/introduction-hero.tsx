@@ -4,25 +4,25 @@ import { motion } from "framer-motion";
 export default function IntroductionHero() {
   return (
     <div
-      className="relative !bg-cover w-full h-screen -top-[150px] -mb-[150px]"
+      className="relative -top-[150px] -mb-[150px] h-screen w-full !bg-cover"
       style={{
         background: "url(/assets/hero-bg.png)",
       }}
     >
-      <div className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/90">
-        <div className="h-full flex justify-between max-w-7xl mx-auto py-8 flex-col px-4 xl:px-0">
-          <div className="flex-1 flex items-center justify-center">
+      <div className="absolute h-full w-full bg-gradient-to-b from-black/0 to-black/90">
+        <div className="mx-auto flex h-full max-w-7xl flex-col justify-between px-4 py-8 xl:px-0">
+          <div className="flex flex-1 items-center justify-center">
             <motion.h1
               viewport={{ once: true }}
               initial={{ opacity: 0, y: 0 }}
               whileInView={{ opacity: 1, y: -20 }}
-              className="text-2xl md:text-3xl lg:text-5xl xl:text-7xl font-bold text-white max-w-[80%] text-center !leading-snug"
+              className="max-w-[80%] text-center text-3xl font-bold !leading-snug text-white lg:text-5xl xl:text-7xl"
             >
               Membangun IKN, Mewujudkan Wacana Lama Indonesia
             </motion.h1>
           </div>
           <div className="flex items-center justify-center">
-            <ChevronsDownIcon size={40} className="text-white animate-bounce" />
+            <ChevronsDownIcon size={40} className="animate-bounce text-white" />
           </div>
         </div>
       </div>

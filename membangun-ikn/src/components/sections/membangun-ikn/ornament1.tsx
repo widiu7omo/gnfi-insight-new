@@ -1,8 +1,8 @@
 export default function Ornament1() {
   return (
-    <div className="overflow-clip absolute -bottom-[10px] w-full z-[3]">
+    <div className="absolute -bottom-[10px] z-[3] w-full overflow-clip">
       <svg
-        className="w-full"
+        className="w-[1918px]"
         viewBox="0 0 1918 251"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

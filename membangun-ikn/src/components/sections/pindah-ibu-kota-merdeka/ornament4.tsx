@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 export default function Ornament4() {
   return (
-    <div className="absolute left-0 top-0 z-0">
+    <div className="absolute bottom-0 left-0 z-0 xl:top-0">
       <svg
         aria-label="Quote 1"
         role="img"

@@ -5,7 +5,7 @@ import Ornament3 from "./ornament3";
 
 export default function SectionOne() {
   return (
-    <section className="relative w-full pt-20 pb-20" id="section-1">
+    <section className="relative w-full pb-20 pt-10 xl:pt-20" id="section-1">
       <Paragraph>
         <p>
           Pada Jumat, 16 Agustus 2019, sebuah kabar besar datang: Indonesia
