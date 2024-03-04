@@ -57,14 +57,22 @@ export default function Illustration1() {
           className="xl:object-fit hidden w-[400px] xl:block xl:h-[700px] xl:w-full"
         />
       </div>
-      <div className="absolute bottom-0 right-0 z-20 md:right-[10%]">
+      <div className="absolute bottom-0 z-20 flex w-full flex-col items-center justify-center">
         <motion.img
           viewport={{ once: true }}
           initial={{ x: 40, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { delay: 1 } }}
           src="/assets/section3/soldier.png"
           alt="Monas"
-          className="h-[300px] object-cover "
+          className="hidden h-[300px] object-cover sm:block"
+        />
+        <motion.img
+          viewport={{ once: true }}
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1, transition: { delay: 1 } }}
+          src="/assets/section3/soldier.png"
+          alt="Monas"
+          className="block h-[300px] object-cover sm:hidden"
         />
       </div>
     </div>

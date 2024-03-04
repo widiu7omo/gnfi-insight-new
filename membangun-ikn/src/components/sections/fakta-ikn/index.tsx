@@ -1,4 +1,5 @@
 import Nusantara from "./nusantara";
+import SliderIkn from "./slider-ikn";
 import { Five, Four, One, Six, Three, Two } from "./step-numbers";
 
 export default function FaktaIkn() {
@@ -15,15 +16,15 @@ export default function FaktaIkn() {
           <span> Ibu Kota Baru Indonesia</span>
         </h3>
         <Nusantara />
-        {/* TODO: responsive */}
-        {/* <div className="flex flex-col space-y-6">
+        <div className="hidden flex-col space-y-6 md:flex ">
           <One />
           <Two />
           <Three />
           <Four />
           <Five />
           <Six />
-        </div> */}
+        </div>
+        <SliderIkn />
       </div>
     </div>
   );
