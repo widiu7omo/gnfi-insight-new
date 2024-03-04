@@ -47,14 +47,14 @@ export default function Illustration1() {
         <br />
         <span className="font-bold">bukanlah hal baru</span>
       </motion.div>
-      <div className="absolute bottom-0 left-2">
+      <div className="absolute bottom-0 left-0 z-[10] overflow-hidden">
         <motion.img
           viewport={{ once: true }}
           initial={{ x: 0, opacity: 0 }}
           whileInView={{ x: 20, opacity: 1, transition: { delay: 0.6 } }}
           src="/assets/section3/monas.png"
           alt="Monas"
-          className="xl:object-fit hidden w-[400px] xl:block xl:h-[700px] xl:w-full"
+          className="xl:object-fit w-[250px] object-contain xl:block xl:h-[700px] xl:w-full"
         />
       </div>
       <div className="absolute bottom-0 z-20 flex w-full flex-col items-center justify-center">
@@ -64,7 +64,7 @@ export default function Illustration1() {
           whileInView={{ x: 0, opacity: 1, transition: { delay: 1 } }}
           src="/assets/section3/soldier.png"
           alt="Monas"
-          className="hidden h-[300px] object-cover sm:block"
+          className="hidden h-[300px] object-cover lg:block"
         />
         <motion.img
           viewport={{ once: true }}
@@ -72,7 +72,7 @@ export default function Illustration1() {
           whileInView={{ y: 0, opacity: 1, transition: { delay: 1 } }}
           src="/assets/section3/soldier.png"
           alt="Monas"
-          className="block h-[300px] object-cover sm:hidden"
+          className="block h-[200px] object-contain object-bottom lg:hidden"
         />
       </div>
     </div>

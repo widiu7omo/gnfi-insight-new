@@ -1,6 +1,6 @@
 export default function Ornament1() {
   return (
-    <div className="absolute -left-[200px] top-8 xl:block hidden">
+    <div className="absolute -left-[200px] top-8 hidden xl:block">
       <svg
         width="133"
         aria-label="Plus Star Left "
