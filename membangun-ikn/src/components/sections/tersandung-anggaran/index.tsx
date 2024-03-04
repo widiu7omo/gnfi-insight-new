@@ -4,6 +4,7 @@ import Ornament1 from "./ornament1";
 import Quote from "./quote";
 import IndoMap from "./indo-map";
 import Ornament3 from "./ornament3";
+import SliderIbukota from "./slider-ibukota";
 
 export default function SectionFive() {
   return (
@@ -71,6 +72,7 @@ export default function SectionFive() {
           {/* Only For Desktop */}
           <IndoMap />
           {/* Only For Mobile */}
+          <SliderIbukota />
         </div>
         <div className="relative bg-[#3C3C3B]">
           <Paragraph className="relative w-full py-12 text-white">
@@ -95,7 +97,7 @@ export default function SectionFive() {
             <p>
               Soal konsep, sang presiden banyak terinspirasi dari negara
               tetangga, Malaysia saat memindahkan pusat pemerintahan Putrajaya
-              di luar Kuala Lumpur. 
+              di luar Kuala Lumpur.
             </p>
 
             <p>
@@ -106,7 +108,7 @@ export default function SectionFive() {
               yang lebih mendesak. SBY memang dikenal menitikberatkan pada
               kebutuhan anggaran, dibandingkan banyak membahas soal lokasi baru
               yang akan dijadikan sebagai ibu kota pengganti Jakarta seperti
-              yang dilakukan oleh presiden-presiden sebelumnya. 
+              yang dilakukan oleh presiden-presiden sebelumnya.
             </p>
 
             <p>

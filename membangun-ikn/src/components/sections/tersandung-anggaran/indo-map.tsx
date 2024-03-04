@@ -1,6 +1,6 @@
 export default function IndoMap() {
   return (
-    <div className="relative z-0 py-[5rem]">
+    <div className="relative z-0 hidden py-[5rem] md:block">
       <svg
         width="100%"
         height="1076"
