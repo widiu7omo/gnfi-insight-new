@@ -1,6 +1,6 @@
 export default function QuoteIconSmall() {
   return (
-    <div className="absolute -bottom-[20px] right-[18%] size-[54px]">
+    <div className="absolute -bottom-[20px] right-0 size-[54px]">
       <svg
         width="100%"
         height="100%"

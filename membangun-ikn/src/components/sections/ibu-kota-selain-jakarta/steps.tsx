@@ -10,7 +10,7 @@ export default function Steps() {
       animate(
         "div",
         { opacity: 1, y: 0 },
-        { delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.3 }
+        { delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.3 },
       );
     } else {
       animate("div", { opacity: 0, y: 20 });
@@ -18,7 +18,7 @@ export default function Steps() {
   }, [isInView, animate]);
   return (
     <div
-      className="flex items-center justify-center flex-col py-12"
+      className="flex flex-col items-center justify-center py-12"
       ref={scope}
     >
       <StepItem

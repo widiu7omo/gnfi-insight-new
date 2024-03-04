@@ -1,6 +1,6 @@
 export default function Ornament4() {
   return (
-    <div className="absolute -right-[7rem] top-[50%]">
+    <div className="absolute -right-[7rem] top-[50%] hidden xl:block">
       <svg
         role="img"
         aria-label="Wiggle 3"

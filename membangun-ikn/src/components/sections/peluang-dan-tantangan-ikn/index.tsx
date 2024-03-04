@@ -17,7 +17,7 @@ export default function SectionEight() {
         title="Peluang dan Tantangan IKN"
         coverImage="/assets/section9/cover.jpeg"
       />
-      <Paragraph className="py-8 relative">
+      <Paragraph className="relative py-8">
         <Ornament1 />
         <p>
           Berkaca dari kota-kota besar yang sudah lama berdiri di Indonesia,
@@ -56,16 +56,16 @@ export default function SectionEight() {
         </p>
       </Paragraph>
       <div className="flex items-center justify-center">
-        <div className="bg-black max-w-[65ch] px-[8rem] py-6 -skew-y-2 relative">
+        <div className="relative max-w-[65ch] -skew-y-2 bg-black px-[2rem] py-6 xl:px-[8rem]">
           <Ornament2 />
-          <h3 className="text-4xl font-bold text-white text-center skew-y-2 ">
+          <h3 className="skew-y-2 text-center text-lg font-bold text-white xl:text-4xl ">
             IKN, Standar Baru Pembangunan Kota?
           </h3>
         </div>
       </div>
       <Card />
       <Quote />
-      <Paragraph className="py-8 relative">
+      <Paragraph className="relative py-8">
         <Ornament3 />
         <Ornament4 />
         <p>

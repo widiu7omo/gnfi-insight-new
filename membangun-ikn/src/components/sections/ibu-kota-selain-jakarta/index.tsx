@@ -5,7 +5,7 @@ import Ornament1 from "./ornament1";
 import Steps from "./steps";
 export default function IllustrationJakarta() {
   return (
-    <div className="w-full relative bg-neutral-200">
+    <div className="relative w-full bg-neutral-200">
       <Illustration1 />
       <Illustration2 />
       <Steps />

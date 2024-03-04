@@ -4,6 +4,7 @@ export function One() {
       <svg
         width="79"
         height="79"
+        className="size-8 xl:size-[79px]"
         viewBox="0 0 79 79"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +24,7 @@ export function One() {
           fill="#DAAE6D"
         />
       </svg>
-      <p className="absolute -left-[250px] font-medium w-[200px] text-right text-neutral-800">
+      <p className="absolute -left-[250px] w-[200px] text-right font-medium text-neutral-800">
         Dibangun bertahap hingga 2045
       </p>
     </div>
@@ -55,7 +56,7 @@ export function Two() {
           fill="#DAAE6D"
         />
       </svg>
-      <p className="absolute -right-[250px] font-medium w-[200px] text-left text-neutral-800">
+      <p className="absolute -right-[250px] w-[200px] text-left font-medium text-neutral-800">
         Nama “Nusantara” dipilih dari 80 calon nama yang dihiumpun
       </p>
     </div>
@@ -64,7 +65,7 @@ export function Two() {
 
 export function Three() {
   return (
-    <div className="relative flex items-center h-[18rem]">
+    <div className="relative flex h-[18rem] items-center">
       <svg
         className="relative z-10"
         width="79"
@@ -91,9 +92,9 @@ export function Three() {
       <img
         src="/assets/section7/conceptor.png"
         alt="Nyoman Nuarta"
-        className="size-72 absolute z-0 left-0 w-72 h-72 max-w-[18rem]"
+        className="absolute left-0 z-0 size-72 h-72 w-72 max-w-[18rem]"
       />
-      <p className="absolute font-medium -left-[250px] w-[200px] text-right text-neutral-800">
+      <p className="absolute -left-[250px] w-[200px] text-right font-medium text-neutral-800">
         Instana Kepresidenan yang didesain oleh seniman Nyoman Nuarta menjadi
         prioritas pembangunan
       </p>
@@ -103,7 +104,7 @@ export function Three() {
 
 export function Four() {
   return (
-    <div className="relative flex items-start h-[180px]">
+    <div className="relative flex h-[180px] items-start">
       <svg
         width="79"
         height="79"
@@ -126,7 +127,7 @@ export function Four() {
           fill="#DAAE6D"
         />
       </svg>
-      <p className="absolute -right-[250px] font-medium w-[200px] text-left text-neutral-800">
+      <p className="absolute -right-[250px] w-[200px] text-left font-medium text-neutral-800">
         Pembangunannya membutuhkan Rp 466 triliun yang diambil dari berbagai
         skema pendanaan, mulai dari APBN hingga kerja sama dengan swasta
       </p>
@@ -136,7 +137,7 @@ export function Four() {
 
 export function Five() {
   return (
-    <div className="relative flex items-start justify-end h-[calc(18rem)]">
+    <div className="relative flex h-[calc(18rem)] items-start justify-end">
       <svg
         width="79"
         height="79"
@@ -163,9 +164,9 @@ export function Five() {
       <img
         src="/assets/section7/ikn-circle.png"
         alt="Nyoman Nuarta"
-        className="size-72 absolute z-0 left-0 w-72 h-72 max-w-[18rem]"
+        className="absolute left-0 z-0 size-72 h-72 w-72 max-w-[18rem]"
       />
-      <p className="absolute -left-[250px] font-medium w-[200px] text-right text-neutral-800">
+      <p className="absolute -left-[250px] w-[200px] text-right font-medium text-neutral-800">
         Wilayah daratnya seluas 252.600 hektare, sedangkan wilayah lautnya
         69.769 hektare
       </p>
@@ -175,7 +176,7 @@ export function Five() {
 
 export function Six() {
   return (
-    <div className="relative flex items-start justify-end h-[8rem]">
+    <div className="relative flex h-[8rem] items-start justify-end">
       <svg
         width="79"
         height="79"
@@ -198,7 +199,7 @@ export function Six() {
           fill="#DAAE6D"
         />
       </svg>
-      <p className="absolute -right-[250px] font-medium w-[200px] text-left text-neutral-800">
+      <p className="absolute -right-[250px] w-[200px] text-left font-medium text-neutral-800">
         Dipimpin oleh Kepala Otorita Ibu Kota Nusantara, jabatan setingkat
         menteri yang dipilih dan dilantik oleh presiden
       </p>

@@ -1,6 +1,6 @@
 export default function Ornament2() {
   return (
-    <div className="absolute -bottom-[2rem] -left-[5rem]">
+    <div className="absolute -bottom-[2rem] -left-[5rem] hidden xl:block">
       <svg
         aria-label="Circle dashed"
         role="img"

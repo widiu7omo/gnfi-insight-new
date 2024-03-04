@@ -2,8 +2,7 @@ export default function QuoteIcon() {
   return (
     <div>
       <svg
-        width="250"
-        height="196"
+        className="w-[150px] xl:h-[196px] xl:w-[250px]"
         viewBox="0 0 250 196"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

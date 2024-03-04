@@ -1,9 +1,12 @@
-export default function Ornament2() {
+import { cn } from "@/lib/utils";
+
+type Ornament2Type = {
+  className?: string;
+};
+export default function Ornament2({ className }: Ornament2Type) {
   return (
-    <div className="absolute -top-[20px] -left-[80px] z-0">
+    <div className={cn("absolute z-0 h-[73px] w-[91px]", className)}>
       <svg
-        width="91"
-        height="73"
         viewBox="0 0 91 73"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

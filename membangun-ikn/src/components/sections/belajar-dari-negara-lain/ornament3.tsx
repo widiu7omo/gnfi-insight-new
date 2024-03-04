@@ -1,11 +1,10 @@
 export default function Ornament3() {
   return (
-    <div className="absolute right-0 bottom-0">
+    <div className="absolute bottom-0 right-0">
       <svg
         role="img"
         aria-label="Books Illustration"
-        width="813"
-        height="638"
+        className="w-[300px] lg:w-[500px] xl:h-[638px] xl:w-[813px]"
         viewBox="0 0 813 638"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -12,7 +12,7 @@ export default function SectionSix() {
       <Header
         coverImage="/assets/section7/cover.jpeg"
         customTitle={
-          <div className="px-10 py-8 bg-white/30 backdrop-blur-sm rounded-xl border-2 border-white/10 max-w-5xl text-center">
+          <div className="max-w-full rounded-xl border-2 border-white/10 bg-white/30 px-10 py-8 text-center backdrop-blur-sm xl:max-w-5xl">
             <h2 className="text-5xl font-bold text-white drop-shadow-lg">
               Mewujudkan Wacana Lama
             </h2>
@@ -93,7 +93,7 @@ export default function SectionSix() {
       </div>
       <FaktaIkn />
       <div className="bg-[#374B1E] py-8">
-        <Paragraph className="py-12 text-white relative">
+        <Paragraph className="relative py-12 text-white">
           <Ornament3 />
           <Ornament4 />
           <p>

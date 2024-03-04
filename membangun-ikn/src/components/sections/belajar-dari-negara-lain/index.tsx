@@ -11,7 +11,7 @@ export default function SectionSeven() {
         title="Belajar dari Negara Lain"
         coverImage="/assets/section8/cover.jpeg"
       />
-      <div className="bg-[#435440] relative flex items-start justify-center">
+      <div className="relative flex items-start justify-center bg-[#435440]">
         <Ornament1 />
         <Paragraph className="py-8 text-white">
           <p>
@@ -39,15 +39,15 @@ export default function SectionSeven() {
           </p>
         </Paragraph>
       </div>
-      <div className="bg-[#E5E5E5] relative flex items-start justify-center py-8">
-        <div className="max-w-4xl flex space-x-4">
+      <div className="relative flex items-start justify-center bg-[#E5E5E5] py-8">
+        <div className="flex max-w-4xl flex-col-reverse space-x-0 xl:flex-row xl:space-x-4 ">
           <img
             src="/assets/section8/bambang.png"
             alt="Bambang Brojonegoro"
-            className="w-[175px] object-contain flex-none"
+            className="w-[175px] flex-none object-contain"
           />
           <div className="relative">
-            <p className="flex-grow font-bold text-lg z-10 relative">
+            <p className="relative z-10 flex-grow text-lg font-bold">
               “Ketika ekonomi bertumbuh di Rio De Janeiro dan Santos, wilayah
               pedalaman dan Amazon tertinggal dibandingkan wilayah pantai. Upaya
               pemindahan ibu kota ke wilayah Amazon bisa dibaca sebagai upaya
@@ -57,11 +57,12 @@ export default function SectionSeven() {
               Gedung Widjojo Nitisastro, Kementerian PPN/Bappenas, Rabu
               (10/7/2019).
             </p>
-            <Ornament2 />
+            <Ornament2 className="-left-[80px] -top-[20px] hidden xl:block " />
+            <Ornament2 className="bottom-0 right-0 block w-[200px] xl:hidden" />
           </div>
         </div>
       </div>
-      <div className="bg-[#435440] relative flex items-start justify-center">
+      <div className="relative flex items-start justify-center bg-[#435440]">
         <Ornament3 />
         <Paragraph className="py-8 text-white">
           <p>
