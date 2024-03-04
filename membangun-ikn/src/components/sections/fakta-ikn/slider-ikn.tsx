@@ -9,13 +9,19 @@ export default function SliderIkn() {
   const x = useMotionValue(0);
   const drag = useMotionValue(0);
   const slides = generateSlide().map((item, i) => (
-    <SlideItem key={`number-card-${i}`}>{item}</SlideItem>
+    <SlideItem
+      key={`number-card-${
+        // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+        i
+      }`}
+    >
+      {item}
+    </SlideItem>
   ));
-  const width =
-    (constraintsRef.current && constraintsRef.current?.offsetWidth) || 350;
+  const width = constraintsRef.current?.offsetWidth || 350;
   const dragEndHandler = (
     event: MouseEvent | TouchEvent | PointerEvent,
-    info: PanInfo,
+    info: PanInfo
   ) => {
     // TODO: fix offset
     const offset = info.offset.x;
@@ -34,7 +40,7 @@ export default function SliderIkn() {
         onDragEnd={dragEndHandler}
         drag="x"
         animate={{
-          x: -1 * active * width,
+          x: -1 * active * (width - 40),
         }}
       >
         {slides}
@@ -45,7 +51,7 @@ export default function SliderIkn() {
 
 const SlideItem = ({ children }: PropsWithChildren) => {
   return (
-    <div className="flex min-w-[100%] items-center justify-center">
+    <div className="flex min-w-[calc(100%-40px)] items-center justify-center">
       {children}
     </div>
   );
@@ -53,7 +59,8 @@ const SlideItem = ({ children }: PropsWithChildren) => {
 function clamp(value: number, lower: number, upper: number): number {
   if (value < lower) {
     return lower;
-  } else if (value > upper) {
+  }
+  if (value > upper) {
     return upper;
   }
   return value;
