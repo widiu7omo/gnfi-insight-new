@@ -17,6 +17,19 @@ export const metadata: Metadata = {
   title:
     "Membangun IKN, Mewujudkan Wacana Lama Indonesia | Good News From Indonesia",
   description: "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
+  alternates: {
+    canonical: "index.html",
+  },
+  openGraph: {
+    title:
+      "Membangun IKN, Mewujudkan Wacana Lama Indonesia | Good News From Indonesia",
+    images: "/assets/ikn-cover.jpg",
+  },
+  twitter: {
+    title:
+      "Membangun IKN, Mewujudkan Wacana Lama Indonesia | Good News From Indonesia",
+    images: "/assets/ikn-cover.jpg",
+  },
 };
 export default function Home() {
   return (
