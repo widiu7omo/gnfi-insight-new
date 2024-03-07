@@ -4,8 +4,9 @@ import { Metadata } from "next";
 import IntroductionHero from "@/components/dynamic/introduction-hero";
 import SectionOne from "@/components/sections/kucing-bagian-hidup";
 import SectionTwo from "@/components/sections/orang-indonesia-suka-kucing";
-import Footer from "@/components/reusable/footer";
 import SectionThree from "@/components/sections/dipelihara-sejak-lama";
+import SectionFour from "@/components/sections/hewan-penuh-mitos";
+import Footer from "@/components/reusable/footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -34,6 +35,7 @@ export default function Home() {
       <SectionOne />
       <SectionTwo />
       <SectionThree />
+      <SectionFour />
       <Footer />
     </main>
   );

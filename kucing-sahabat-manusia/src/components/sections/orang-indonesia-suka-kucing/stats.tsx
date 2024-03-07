@@ -4,7 +4,7 @@ export default function Stats() {
             <div className="relative w-[247px] flex-none">
                 <img
                 src="/assets/stats-peliharaan.png"
-                alt="Susilo B. Yudhoyono"
+                alt="Statistik Peliharaan"
                 className="relative z-10"
                 />
             </div>

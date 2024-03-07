@@ -9,11 +9,7 @@ import Ornament1 from "./ornament1";
 import StatsCat from "./stats-cat";
 import StatsDog from "./stats-dog";
 import StatsParrot from "./stats-parrot";
-// import Ornament2 from "./ornament2";
-// import Ornament3 from "./ornament3";
-// import Quote from "./quote";
-// import Ornament5 from "./ornament5";
-// import Ornament6 from "./ornament6";
+
 export const lilitaOneFont = Lilita_One({
   subsets: ["latin"],
   display: "swap",
