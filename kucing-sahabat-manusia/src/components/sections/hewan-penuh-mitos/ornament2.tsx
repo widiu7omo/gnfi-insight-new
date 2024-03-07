@@ -1,7 +1,7 @@
 "use client";
 export default function Ornament2() {
   return (
-    <div className="absolute left-[-4%] z-0 top-[2rem] xl:block hidden">
+    <div className="absolute left-[-4%] z-0 top-0 xl:block hidden">
       <svg
         role="img"
         width="8"
