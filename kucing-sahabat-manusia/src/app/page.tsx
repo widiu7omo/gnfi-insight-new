@@ -5,25 +5,23 @@ import IntroductionHero from "@/components/dynamic/introduction-hero";
 import SectionOne from "@/components/sections/kucing-bagian-hidup";
 import SectionTwo from "@/components/sections/orang-indonesia-suka-kucing";
 import Footer from "@/components/reusable/footer";
+import SectionThree from "@/components/sections/dipelihara-sejak-lama";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
     "https://www.goodnewsfromindonesia.id/special-insights/membangun-ikn-mewujudkan-wacana-lama-indonesia"
   ),
-  title:
-    "Kucing, Sahabat Manusia | Good News From Indonesia",
+  title: "Kucing, Sahabat Manusia | Good News From Indonesia",
   description: "Kucing, Sahabat Manusia",
   alternates: {
     canonical: "index.html",
   },
   openGraph: {
-    title:
-      "Kucing, Sahabat Manusia | Good News From Indonesia",
+    title: "Kucing, Sahabat Manusia | Good News From Indonesia",
     images: "/assets/ikn-cover.jpg",
   },
   twitter: {
-    title:
-      "Kucing, Sahabat Manusia | Good News From Indonesia",
+    title: "Kucing, Sahabat Manusia | Good News From Indonesia",
     images: "/assets/ikn-cover.jpg",
   },
 };
@@ -35,6 +33,7 @@ export default function Home() {
       <IntroductionHero />
       <SectionOne />
       <SectionTwo />
+      <SectionThree />
       <Footer />
     </main>
   );
