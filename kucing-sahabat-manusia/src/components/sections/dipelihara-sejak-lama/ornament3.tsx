@@ -2,7 +2,7 @@
 import { motion, useAnimate, useInView, stagger } from "framer-motion";
 import { useEffect } from "react";
 
-export default function Ornament2() {
+export default function Ornament3() {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, { once: false });
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function Ornament2() {
     }
   }, [isInView, animate]);
   return (
-    <div className="absolute bottom-0 z-[1] right-[15%] xl:block hidden">
+    <div className="absolute bottom-0 z-[1] -right-[20%] xl:block hidden opacity-60">
       <svg
         width="252"
         height="139"

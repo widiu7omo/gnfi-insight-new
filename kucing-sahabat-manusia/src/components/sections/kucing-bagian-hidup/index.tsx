@@ -1,6 +1,6 @@
 import Paragraph from "@/components/reusable/paragraph";
 import Ornament1 from "./ornament1";
-import Ornament2 from "./ornament2";
+import Ornament2 from "../dipelihara-sejak-lama/ornament3";
 
 export default function SectionOne() {
   return (
@@ -59,7 +59,6 @@ export default function SectionOne() {
           </p>
         </Paragraph>
         <Ornament1 />
-        {/* <Ornament2 /> */}
       </section>
     </div>
   );

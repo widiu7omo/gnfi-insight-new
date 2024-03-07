@@ -3,6 +3,7 @@ import Ornament1 from "./ornament1";
 import Ornament2 from "./ornament2";
 import Door from "./door";
 import Header from "@/components/reusable/header";
+import Ornament3 from "./ornament3";
 
 export default function SectionThree() {
   return (
@@ -193,57 +194,61 @@ export default function SectionThree() {
         }}
       />
       <div className="bg-[#FFF4E9]">
-        <Paragraph className="py-8">
-          <p>
-            “Kucing ini dijadikan sebagai penjaga gudang makanan dan hewan
-            pengerat dan seringkali dibawa dalam pelayaran. Hal inilah yang
-            menyebabkan kucing dapat tersebar ke seluruh penjuru dunia,” papar
-            Rosdiana Ngitung dalam artikelnya yang diterbitkan Jurnal Sainsmat.
-          </p>
+        <Paragraph className="py-8 relative">
+          <Ornament3 />
+          <div className="relative z-10">
+            <p>
+              “Kucing ini dijadikan sebagai penjaga gudang makanan dan hewan
+              pengerat dan seringkali dibawa dalam pelayaran. Hal inilah yang
+              menyebabkan kucing dapat tersebar ke seluruh penjuru dunia,” papar
+              Rosdiana Ngitung dalam artikelnya yang diterbitkan Jurnal
+              Sainsmat.
+            </p>
 
-          <p>
-            Profesor Antropologi di Washington University, Fiona Marshall
-            mengungkapkan bukti dimulainya hubungan antara kucing dan manusia
-            mulai terlihat jelas ketika pertanian di China semakin berkembang,
-            sekitar 5.500 sampai 5.280 tahun yang lalu.
-          </p>
+            <p>
+              Profesor Antropologi di Washington University, Fiona Marshall
+              mengungkapkan bukti dimulainya hubungan antara kucing dan manusia
+              mulai terlihat jelas ketika pertanian di China semakin berkembang,
+              sekitar 5.500 sampai 5.280 tahun yang lalu.
+            </p>
 
-          <p>
-            Ketika itu pertanian menjadi hal yang paling diminati. Hasil
-            pertanian cukup melimpah dan berlebih. Sehingga banyak penduduk yang
-            menyimpan di dalam keramik. Tetapi saat itu, ada gangguan tikus yang
-            membutuhkan bantuan kucing.
-          </p>
+            <p>
+              Ketika itu pertanian menjadi hal yang paling diminati. Hasil
+              pertanian cukup melimpah dan berlebih. Sehingga banyak penduduk
+              yang menyimpan di dalam keramik. Tetapi saat itu, ada gangguan
+              tikus yang membutuhkan bantuan kucing.
+            </p>
 
-          <p>
-            “Berdasarkan hasil pemeriksaan isotop pada gigi kucing diketahui
-            bahwa, kucing tersebut telah memakan hama petani tersebut. Sejak
-            saat itu diasumsikan hubungan antara manusia dan kucing semakin
-            dekat,” paparnya.
-          </p>
+            <p>
+              “Berdasarkan hasil pemeriksaan isotop pada gigi kucing diketahui
+              bahwa, kucing tersebut telah memakan hama petani tersebut. Sejak
+              saat itu diasumsikan hubungan antara manusia dan kucing semakin
+              dekat,” paparnya.
+            </p>
 
-          <p>
-            Para ahli percaya varietas kucing rumahan yang ada sekarang berasal
-            dari jenis kucing liar. Tapi hal tersebut masih diragukan. Sehingga,
-            satu tim peneliti yang dipimpin Carlos A. Driscolll mengumpulkan 979
-            DNA dari kucing liar dan kucing domestik untuk menggali fakta lebih
-            dalam guna menjawab keraguan itu.Dari penelitian yang hasilnya
-            dipublikasikan di Jurnal Nature itu, diketahui bahwa, karena kucing
-            liar adalah tipe hewan yang cenderung punya dan mempertahankan
-            daerah teritorial, diperkirakan bahwa DNA kucing liar cenderung
-            stabil dari waktu ke waktu,.
-          </p>
+            <p>
+              Para ahli percaya varietas kucing rumahan yang ada sekarang
+              berasal dari jenis kucing liar. Tapi hal tersebut masih diragukan.
+              Sehingga, satu tim peneliti yang dipimpin Carlos A. Driscolll
+              mengumpulkan 979 DNA dari kucing liar dan kucing domestik untuk
+              menggali fakta lebih dalam guna menjawab keraguan itu.Dari
+              penelitian yang hasilnya dipublikasikan di Jurnal Nature itu,
+              diketahui bahwa, karena kucing liar adalah tipe hewan yang
+              cenderung punya dan mempertahankan daerah teritorial, diperkirakan
+              bahwa DNA kucing liar cenderung stabil dari waktu ke waktu,.
+            </p>
 
-          <p>
-            Diperkirakan pula, semua kucing domestik yang ada merupakan hasil
-            evolusi dari salah satu populasi kucing liar, sehingga bukti
-            domestikasi kucing dapat dibangun. Ternyata berdasarkan hasil
-            analisis genetika menunjukkan bahwa DNA kucing sangat mirip.
-            Berdasarkan penelitian ini terungkaplah lima kelas genetik kucing
-            liar, Felis silvestris silvestris di Eropa, Silvestris bieti di
-            China, Felis silvestris ornate di Asia Tengah, dan Felis silvestris
-            cafra di Asia Tenggara.
-          </p>
+            <p>
+              Diperkirakan pula, semua kucing domestik yang ada merupakan hasil
+              evolusi dari salah satu populasi kucing liar, sehingga bukti
+              domestikasi kucing dapat dibangun. Ternyata berdasarkan hasil
+              analisis genetika menunjukkan bahwa DNA kucing sangat mirip.
+              Berdasarkan penelitian ini terungkaplah lima kelas genetik kucing
+              liar, Felis silvestris silvestris di Eropa, Silvestris bieti di
+              China, Felis silvestris ornate di Asia Tengah, dan Felis
+              silvestris cafra di Asia Tenggara.
+            </p>
+          </div>
         </Paragraph>
       </div>
     </section>
