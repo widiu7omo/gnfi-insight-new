@@ -7,6 +7,7 @@ import Ornament2 from "./ornament2";
 import BlackCat from "./black-cat";
 import CalicoCat from "./calico-cat";
 import Rectangle from "./rectangle";
+import WhiteCat from "./white-cat";
 
 export const interFont = Inter({
     subsets: ["latin"],
@@ -25,16 +26,15 @@ export default function SectionFour() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className={`relative z-10 mx-auto max-w-3xl text-center text-2xl font-bold font-[700] leading-snug text-[#FAD30D] lg:text-3xl xl:text-5xl ${interFont.className}`}
+                        className={`relative z-40 mx-auto max-w-3xl text-center text-2xl font-bold font-[700] leading-snug text-[#FAD30D] lg:text-3xl xl:text-5xl ${interFont.className}`}
                     >
-                        <span className="relative z-50">
+                        <span className="relative z-40">
                             Hewan Penuh Mitos
                         </span>
-                        {/* <Ornament1 /> */}
                     </motion.h2>
 
                     <Paragraph
-                        className={`pt-9 z-30 text-[#FAD30D] ${interFont.className} relative font-[300]`}
+                        className={`pt-9 z-40 text-[#FAD30D] ${interFont.className} relative font-[300]`}
                     >
                         <Ornament2 />
                         <p>
@@ -117,8 +117,58 @@ export default function SectionFour() {
                 </div>
             </div>
             <div className="space-y-8 h-screen p-8 flex-col relative bg-[#435348]"></div>
-            <div className="space-y-8 h-screen p-8 flex-col relative bg-[#D49C0B]">
+            <div className="space-y-8 h-fit pt-[32%] pb-32 px-8 flex-col relative bg-[#D49C0B]">
                 <Rectangle />
+                <WhiteCat />
+                <Paragraph
+                    className={`pt-9 z-40 text-dark ${interFont.className} relative font-[400]`}
+                >
+                    <p>
+                        Singkat cerita, Meong Palo Karellae dan Sangiang Serri 
+                        perke ke Barru dan disambut masyarakat di sana. Lalu, 
+                        Sangiang Serri meminta masyarakat agar jangan 
+                        bertengkar, nyalakan lampu pelita pada malam hari, 
+                        jaga agar periuk dan tempat air minum tetap terisi, 
+                        dan jangan pernah melakukan perbuatan curang. 
+                        Setelahnya Kehidupan manusia pun menjadi damai 
+                        dan penuh rasa saling menghargai.
+                    </p>
+                    <p>Tak hanya di Indonesia, di belahan dunia lain 
+                        pun ada mitos tentang kucing. Misalnya dalam 
+                        mitologi Mesir kuno, kucing dianggap sebagai 
+                        Bastet—dewi rumah tangga. Dia bertugas melindungi 
+                        rumah dari roh jahat serta penyakit yang berhubungan 
+                        dengan wanita dan anak-anak, termasuk persalinan. 
+                        Di samping itu, kucing juga disebut sebagai 
+                        hewan ilahi.
+                    </p>
+                    <p>
+                        Bastet terlahir sebagai putri Dewa Matahari, Ra. 
+                        Sama seperti banyak dewa dalam agama Mesir, dia 
+                        pun memainkan peran di akhirat, yakni pemandu dan 
+                        penolong orang mati.
+                    </p>
+                    <p>
+                        Britannica menggambarkan Bastet sebagai wanita 
+                        berkepala kucing, membawa sistrum (perkusi kuno) 
+                        di tangan kanannya, lalu aegis atau pelindung 
+                        dada di tangan kirinya, dan tas kecil di lengan 
+                        kiri. Dia mengenakan gaun berornamen rumit. 
+                        Kultusnya dibawa ke Italia oleh orang Romawi, 
+                        sedangkan jejaknya telah ditemukan di Roma, 
+                        Ostia, Nemi, dan Pompeii.
+                    </p>
+                    <p>
+                        Di samping mitos kucing dari berbagai wilayah dan 
+                        negara, ada kepercayaan paling populer di tengah 
+                        masyarakat yang mengatakan kucing memiliki sembilan 
+                        nyawa. Penjelasan logisnya, kucing memiliki tubuh 
+                        yang lentur. Kucing terdiri dari susunan tulang dan 
+                        otot yang lentur sehingga cukup fleksibel. Kondisi 
+                        tersebut yang menyebabkan sebagian besar kucing 
+                        selamat meskipun jatuh dari ketinggian.
+                    </p>
+                </Paragraph>
             </div>
         </section>
     );

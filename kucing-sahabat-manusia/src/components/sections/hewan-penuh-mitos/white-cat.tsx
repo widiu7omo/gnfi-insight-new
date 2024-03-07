@@ -1,9 +1,9 @@
 export default function BlackCat() {
     return (
-        <div className="absolute right-[3%] z-10 bottom-[-10%] xl:block hidden">
-            <div className="relative w-[370px] flex-none">
+        <div className="absolute left-0 z-10 bottom-[10%] xl:block hidden">
+            <div className="relative w-[380px] flex-none">
                 <img
-                src="/assets/black-cat.png"
+                src="/assets/white-cat.png"
                 alt="Statistik Peliharaan"
                 className="relative"
                 />

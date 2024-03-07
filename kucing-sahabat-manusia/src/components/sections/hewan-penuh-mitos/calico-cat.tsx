@@ -1,7 +1,7 @@
 export default function CalicoCat() {
     return (
-        <div className="absolute right-[10%] z-20 bottom-[-40%] xl:block hidden">
-            <div className="relative w-[340px] flex-none">
+        <div className="absolute right-[3%] z-20 bottom-[-47%] xl:block hidden">
+            <div className="relative w-[380px] flex-none">
                 <img
                 src="/assets/calico-cat.png"
                 alt="Kucing Calico"
