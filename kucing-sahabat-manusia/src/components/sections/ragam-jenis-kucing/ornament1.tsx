@@ -13,51 +13,51 @@ export default function Ornament1() {
         <path
           d="M3.18397 58.6026C3.18397 58.6026 64.5628 52.4187 66.3749 54.0294C68.1869 55.6113 65.4832 59.8969 65.4832 59.8969C65.4832 59.8969 66.0873 84.4312 51.9649 86.0994L22.8574 87.8827C22.8574 87.8827 5.8301 89.0332 4.47827 63.8374C4.47827 63.8374 2.37862 62.6294 3.18397 58.6026Z"
           stroke="#838383"
-          stroke-width="2"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
         />
         <path
           d="M4.47827 63.839C4.47827 63.839 35.5416 60.1862 65.7709 59.3809"
           stroke="#838383"
-          stroke-width="2"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
         />
         <path
           d="M12.9632 45.084C12.9632 45.084 8.10236 50.6639 9.22409 57.9983"
           stroke="#838383"
-          stroke-width="2"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
         />
         <path
           d="M20.3839 39.9063C20.3839 39.9063 31.745 35.7358 42.9911 39.9063"
           stroke="#838383"
-          stroke-width="2"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
         />
         <path
           d="M49.9803 45.084C49.9803 45.084 52.4539 49.1107 53.2305 54.0291"
           stroke="#838383"
-          stroke-width="2"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
         />
         <path
           d="M39.4821 38.8711C39.4821 38.8711 46.9315 33.4925 49.9803 34.039C53.0291 34.6142 51.6198 47.9024 51.6198 47.9024"
           stroke="#838383"
-          stroke-width="2"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
         />
         <path
           d="M21.7357 39.4743C21.7357 39.4743 12.733 34.3834 10.2595 36.5405C7.78591 38.669 10.7484 48.6495 10.7484 48.6495"
           stroke="#838383"
-          stroke-width="2"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
         />
         <path
           d="M17.7377 54.0845C20.0099 52.5601 22.8574 51.6109 25.5323 52.5889C26.7116 53.0203 27.2293 51.122 26.05 50.6906C22.6273 49.4538 19.4635 50.7193 17.0474 53.2216C16.6447 53.6531 17.1912 54.4584 17.7377 54.0845Z"

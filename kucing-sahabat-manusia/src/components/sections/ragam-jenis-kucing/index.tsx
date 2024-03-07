@@ -2,13 +2,14 @@ import Paragraph from "@/components/reusable/paragraph";
 import Header from "./header";
 import Ornament1 from "./ornament1";
 import Ornament2 from "./ornament2";
+import SliderCats from "./slider-cats";
 
 export default function SectionSix() {
   return (
-    <section id="section-6">
+    <section id="section-6" className="bg-[#060609]">
       <Header />
-      <div className="bg-[#060609]">
-        <Paragraph className="text-white relative py-8">
+      <div className="relative">
+        <Paragraph className="text-white relative py-8 z-0">
           <Ornament1 />
           <Ornament2 />
           <p>
@@ -30,6 +31,10 @@ export default function SectionSix() {
             Berikut ini beberapa jenis kucing lucu asli Indonesia:
           </p>
         </Paragraph>
+        <div className="h-[600px]" />
+        <div className="absolute z-10 bottom-0 w-full">
+          <SliderCats />
+        </div>
       </div>
     </section>
   );
