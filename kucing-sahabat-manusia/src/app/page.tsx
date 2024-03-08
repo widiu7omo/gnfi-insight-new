@@ -8,6 +8,7 @@ import SectionThree from "@/components/sections/dipelihara-sejak-lama";
 import SectionFour from "@/components/sections/hewan-penuh-mitos";
 import Footer from "@/components/reusable/footer";
 import SectionSix from "@/components/sections/ragam-jenis-kucing";
+import SectionSeven from "@/components/sections/tertarik-memelihara-kucing";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -38,6 +39,7 @@ export default function Home() {
       <SectionThree />
       <SectionFour />
       <SectionSix />
+      <SectionSeven />
       <Footer />
     </main>
   );
