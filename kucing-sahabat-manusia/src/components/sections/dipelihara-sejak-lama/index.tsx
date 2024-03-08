@@ -82,7 +82,7 @@ export default function SectionThree() {
         </div>
         <div className="relative max-w-[65ch] mx-auto space-y-8">
           <h3 className="w-[30rem] text-left text-4xl font-bold leading-snug text-white">
-            Ribuan Tahun Lalu. Kedekatan Manusia dengan Kucing Mulai Terialin
+            Ribuan Tahun Lalu, kedekatan manusia dengan kucing mulai terjalin
           </h3>
           <Paragraph className="text-white">
             <p className="w-[250px]">

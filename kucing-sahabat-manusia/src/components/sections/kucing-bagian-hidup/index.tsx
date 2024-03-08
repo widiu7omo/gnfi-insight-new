@@ -1,6 +1,5 @@
 import Paragraph from "@/components/reusable/paragraph";
 import Ornament1 from "./ornament1";
-import Ornament2 from "../dipelihara-sejak-lama/ornament3";
 
 export default function SectionOne() {
   return (
