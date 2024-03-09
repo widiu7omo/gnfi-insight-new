@@ -7,6 +7,9 @@ import BrownCat from "./brown-cat";
 import Hadits from "./hadits";
 import HaditsCaption from "./hadits-caption";
 import Quotes from "./quotes";
+import Ornament1 from "./ornament1";
+import Ornament2 from "./ornament2";
+import Ornament3 from "./ornament3";
 
 export const interFont = Inter({
     subsets: ["latin"],
@@ -103,7 +106,20 @@ export default function SectionFive() {
                         agama Islam.
                     </p>
                 </Paragraph>
-
+            </div>
+            <div className="space-y-8 py-24 flex-col relative bg-white ">
+                <Paragraph className={`text-[#353434]`}>
+                    <p>
+                        Ada pula sabda Nabi Muhammad SAW
+                        sebagai berikut:
+                    </p>
+                    <Ornament1 />
+                    <p className={`font-[700] lg:text-xl xl:text-2xl`}>
+                        Ada seorang wanita disiksa disebabkan seekor kucing yang dikurungnya hingga mati kelaparan, lalu wanita itu pun masuk neraka karena dia tidak memberinya makan dan minum ketika mengurungnya, dan tidak melepaskannya, sehingga dia dapat menyantap serangga tanah.
+                    </p>
+                    <Ornament2 />
+                </Paragraph>
+                <Ornament3 />
             </div>
         </section>
     );
