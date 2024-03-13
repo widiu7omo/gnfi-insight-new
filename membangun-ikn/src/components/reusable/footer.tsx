@@ -1,5 +1,5 @@
-import { TwitterIcon, FacebookIcon, Share2Icon } from "lucide-react";
-import WhatsappIcon from "./wa-icon";
+import { TwitterIcon, FacebookIcon, Share2Icon } from 'lucide-react'
+import WhatsappIcon from './wa-icon'
 
 export default function Footer() {
   return (
@@ -13,5 +13,5 @@ export default function Footer() {
         <img src="/assets/gnfi.svg" alt="Logo GNFI" className="h-[80px]" />
       </div>
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import { atom, useAtom } from "jotai";
+import { atom, useAtom } from 'jotai'
 type NavigationType = {
-    show: boolean;
+  show: boolean
 }
 const navigationAtom = atom<NavigationType>({ show: false })
 export const useNavigation = () => useAtom(navigationAtom)

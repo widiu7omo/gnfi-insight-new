@@ -1,45 +1,45 @@
-"use client";
-import { useDrop } from "react-dnd";
-import { ContentType, ItemTypes } from "./types";
-import { useBlocks } from "@/store/useBlocks";
-import { useSections } from "@/store/useSections";
-import { BlockType } from "@/data/types";
-import BlockSortable from "./block-sortable";
-import { DragItemType } from "./draggable-wrapper";
+'use client'
+import { useDrop } from 'react-dnd'
+import { ContentType, ItemTypes } from './types'
+import { useBlocks } from '@/store/useBlocks'
+import { useSections } from '@/store/useSections'
+import { BlockType } from '@/data/types'
+import BlockSortable from './block-sortable'
+import { DragItemType } from './draggable-wrapper'
 import {
   ArrowDownToLineIcon,
   BlocksIcon,
   PenIcon,
   SaveIcon,
-} from "lucide-react";
-import { useState } from "react";
+} from 'lucide-react'
+import { useState } from 'react'
 export default function BlockBin({ sectionId }: { sectionId: string }) {
-  const [_, setBlocks] = useBlocks();
-  const [sections] = useSections();
+  const [_, setBlocks] = useBlocks()
+  const [sections] = useSections()
 
   const handleOnDropBlock = (item: DragItemType) => {
     if (item.itemType === ItemTypes.BLOCK) {
-      console.log(item);
+      console.log(item)
       setBlocks((prev) => {
-        const block = prev[sectionId] ?? [];
+        const block = prev[sectionId] ?? []
         const newValue = [
           ...block,
           {
             index: block.length,
             content:
               ContentType.IMAGE === item.contentType
-                ? "https://placehold.co/600x400"
-                : "Edit your content here",
+                ? 'https://placehold.co/600x400'
+                : 'Edit your content here',
             component: item.component,
             group: sectionId,
             order: block.length,
             contentType: item.contentType,
           } as BlockType,
-        ];
-        return { ...prev, [sectionId]: newValue };
-      });
+        ]
+        return { ...prev, [sectionId]: newValue }
+      })
     }
-  };
+  }
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: ItemTypes.BLOCK,
     drop: handleOnDropBlock,
@@ -47,18 +47,18 @@ export default function BlockBin({ sectionId }: { sectionId: string }) {
       isOver: monitor.isOver(),
       canDrop: monitor.canDrop(),
     }),
-  }));
-  const isActive = canDrop && isOver;
-  const [sectionName, setSectionName] = useState("Section Name");
-  const [toggleSecName, setToggleSecName] = useState(true);
+  }))
+  const isActive = canDrop && isOver
+  const [sectionName, setSectionName] = useState('Section Name')
+  const [toggleSecName, setToggleSecName] = useState(true)
   return (
     <div
       ref={drop}
       data-testid="dustbin"
       className={`rounded-xl w-full border-4 border-neutral-400 mt-4 ${
-        sections.length > 0 ? "p-6" : "h-[200px]"
+        sections.length > 0 ? 'p-6' : 'h-[200px]'
       } flex items-center justify-center flex-col ${
-        isActive ? "bg-neutral-300/70" : "bg-neutral-200/60"
+        isActive ? 'bg-neutral-300/70' : 'bg-neutral-200/60'
       }`}
     >
       <div className="flex justify-between items-center w-full">
@@ -78,7 +78,7 @@ export default function BlockBin({ sectionId }: { sectionId: string }) {
       </div>
       <div
         className={`space-y-4 w-full ${
-          sections.length > 0 ? "p-6" : "h-[200px]"
+          sections.length > 0 ? 'p-6' : 'h-[200px]'
         }`}
       >
         <BlockSortable sectionId={sectionId} />
@@ -94,9 +94,9 @@ export default function BlockBin({ sectionId }: { sectionId: string }) {
               />
             )}
           </span>
-          <span>{isActive ? "Release to drop" : "Drag block here"}</span>
+          <span>{isActive ? 'Release to drop' : 'Drag block here'}</span>
         </div>
       </div>
     </div>
-  );
+  )
 }

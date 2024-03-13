@@ -1,17 +1,17 @@
 export const ItemTypes = {
-  BLOCK: "block",
+  BLOCK: 'block',
   SECTION: 'section',
-  SORTABLE: 'sortable'
-};
+  SORTABLE: 'sortable',
+}
 export const ContentType = {
   IMAGE: 'image',
   TEXT: 'text',
-  CUSTOM: 'custom'
+  CUSTOM: 'custom',
 }
 export type DraggableItem = {
-  name: string;
-  component: string;
-  order: number;
-  group: string;
-  index: number;
+  name: string
+  component: string
+  order: number
+  group: string
+  index: number
 }

@@ -1,5 +1,5 @@
-"use client";
-import { motion } from "framer-motion";
+'use client'
+import { motion } from 'framer-motion'
 export default function SectionPresidentDirect() {
   return (
     <div className="w-full mx-auto bg-[#F6F0E2] flex items-center justify-center">
@@ -26,5 +26,5 @@ export default function SectionPresidentDirect() {
         </div>
       </div>
     </div>
-  );
+  )
 }

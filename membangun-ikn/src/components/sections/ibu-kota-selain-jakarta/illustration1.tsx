@@ -1,5 +1,5 @@
-"use client";
-import { motion } from "framer-motion";
+'use client'
+import { motion } from 'framer-motion'
 export default function Illustration1() {
   return (
     <div className="relative flex h-[700px] items-start justify-center bg-[url('/assets/da84d88dc706e90c8b1d715b4ee601bf.webp')] bg-cover bg-[50%_70%]">
@@ -76,5 +76,5 @@ export default function Illustration1() {
         />
       </div>
     </div>
-  );
+  )
 }

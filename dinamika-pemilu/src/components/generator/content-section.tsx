@@ -1,14 +1,14 @@
-import { GroupIcon } from "lucide-react";
-import { DraggableItem } from "./types";
-import { FC, memo } from "react";
-import { useDrop } from "react-dnd";
+import { GroupIcon } from 'lucide-react'
+import { DraggableItem } from './types'
+import { FC, memo } from 'react'
+import { useDrop } from 'react-dnd'
 export type ContentSectionType = {
-  accept: string[];
-  lastDroppedItem?: DraggableItem;
-  preview?: boolean;
-  sectionName?: string;
-  onDrop: (item: DraggableItem) => void;
-};
+  accept: string[]
+  lastDroppedItem?: DraggableItem
+  preview?: boolean
+  sectionName?: string
+  onDrop: (item: DraggableItem) => void
+}
 
 export const ContentSection: FC<ContentSectionType> = memo(
   function ContentSection({
@@ -25,9 +25,9 @@ export const ContentSection: FC<ContentSectionType> = memo(
         isOver: monitor.isOver(),
         canDrop: monitor.canDrop(),
       }),
-    });
+    })
 
-    const isActive = isOver && canDrop;
+    const isActive = isOver && canDrop
 
     if (preview) {
       return (
@@ -35,7 +35,7 @@ export const ContentSection: FC<ContentSectionType> = memo(
           <GroupIcon size={45} strokeWidth={1} />
           <div className="text-sm">Group / Section</div>
         </div>
-      );
+      )
     }
     return (
       <div
@@ -47,9 +47,9 @@ export const ContentSection: FC<ContentSectionType> = memo(
         <div className="capitalize">{sectionName}</div>
         {JSON.stringify(lastDroppedItem)}
         {isActive
-          ? "Release to drop"
-          : `This dustbin accepts: ${accept.join(", ")}`}
+          ? 'Release to drop'
+          : `This dustbin accepts: ${accept.join(', ')}`}
       </div>
-    );
+    )
   }
-);
+)

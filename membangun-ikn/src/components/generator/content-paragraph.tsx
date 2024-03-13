@@ -1,41 +1,41 @@
-import { useBlocks } from "@/store/useBlocks";
-import { EditorContent, useEditor } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
-import { TrashIcon } from "lucide-react";
+import { useBlocks } from '@/store/useBlocks'
+import { EditorContent, useEditor } from '@tiptap/react'
+import StarterKit from '@tiptap/starter-kit'
+import { TrashIcon } from 'lucide-react'
 type ContentParagraphType = {
-  sectionId: string;
-  index: number;
-};
+  sectionId: string
+  index: number
+}
 export default function ContentParagraph({
   sectionId,
   index,
 }: ContentParagraphType) {
-  const [blocks, setBlocks] = useBlocks();
+  const [blocks, setBlocks] = useBlocks()
   const editor = useEditor({
     extensions: [StarterKit],
-    content: blocks[sectionId][index].content ?? "<p>Paragraph! 🌎️</p>",
+    content: blocks[sectionId][index].content ?? '<p>Paragraph! 🌎️</p>',
     onBlur: () => {
       setBlocks((prev) => {
-        const currentBlock = prev[sectionId][index];
-        currentBlock.content = editor?.getHTML() ?? "";
-        prev[sectionId][index] = currentBlock;
-        const currentSections = prev[sectionId];
-        return { ...prev, [sectionId]: currentSections };
-      });
+        const currentBlock = prev[sectionId][index]
+        currentBlock.content = editor?.getHTML() ?? ''
+        prev[sectionId][index] = currentBlock
+        const currentSections = prev[sectionId]
+        return { ...prev, [sectionId]: currentSections }
+      })
     },
-  });
+  })
   const removeBlock = () => {
     setBlocks((prev) => {
-      prev[sectionId].splice(index, 1);
+      prev[sectionId].splice(index, 1)
       for (const block of prev[sectionId]) {
-        const index = prev[sectionId].indexOf(block);
-        block.order = index;
-        block.index = index;
+        const index = prev[sectionId].indexOf(block)
+        block.order = index
+        block.index = index
       }
-      const currentSections = prev[sectionId];
-      return { ...prev, [sectionId]: currentSections };
-    });
-  };
+      const currentSections = prev[sectionId]
+      return { ...prev, [sectionId]: currentSections }
+    })
+  }
   return (
     <div className="">
       <div className="flex flex-row-reverse space-x-2 bg-neutral-200 rounded-t-xl justify-between p-2">
@@ -55,5 +55,5 @@ export default function ContentParagraph({
         <EditorContent editor={editor} />
       </div>
     </div>
-  );
+  )
 }

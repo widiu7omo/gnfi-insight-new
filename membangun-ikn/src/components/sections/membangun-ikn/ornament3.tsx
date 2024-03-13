@@ -1,17 +1,17 @@
-"use client";
-import { motion } from "framer-motion";
+'use client'
+import { motion } from 'framer-motion'
 export default function Ornament3() {
   const icon = {
     hidden: {
       pathLength: 0,
-      fill: "rgba(255, 255, 255, 0)",
+      fill: 'rgba(255, 255, 255, 0)',
     },
     visible: (custom: number) => ({
       pathLength: 1,
-      fill: "#E6E6E6",
+      fill: '#E6E6E6',
       transition: { delay: custom * 0.2 },
     }),
-  };
+  }
   return (
     <div className="absolute bottom-0 z-[1] right-[25%] xl:block hidden">
       <svg
@@ -41,5 +41,5 @@ export default function Ornament3() {
         />
       </svg>
     </div>
-  );
+  )
 }

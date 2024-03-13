@@ -1,84 +1,84 @@
-import { HttpResponseBody } from "@/app/api/types";
-import { useBlocks } from "@/store/useBlocks";
-import { FileExtended, useFiles } from "@/store/useFiles";
-import { useTitle } from "@/store/useTitle";
-import { ImageIcon, TrashIcon } from "lucide-react";
-import { useCallback, useEffect } from "react";
-import { useDropzone } from "react-dropzone";
+import { HttpResponseBody } from '@/app/api/types'
+import { useBlocks } from '@/store/useBlocks'
+import { FileExtended, useFiles } from '@/store/useFiles'
+import { useTitle } from '@/store/useTitle'
+import { ImageIcon, TrashIcon } from 'lucide-react'
+import { useCallback, useEffect } from 'react'
+import { useDropzone } from 'react-dropzone'
 
 export type ContentImageType = {
-  sectionId: string;
-  index: number;
-};
+  sectionId: string
+  index: number
+}
 
 export default function ContentImage({ sectionId, index }: ContentImageType) {
-  const [files, setFiles] = useFiles();
-  const [title] = useTitle();
-  const [blocks, setBlocks] = useBlocks();
+  const [files, setFiles] = useFiles()
+  const [title] = useTitle()
+  const [blocks, setBlocks] = useBlocks()
   // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   const onDrop = useCallback(async (acceptedFiles: File[]) => {
-    const file = acceptedFiles[0];
+    const file = acceptedFiles[0]
     setFiles((prev) => {
       if (!prev[sectionId]) {
-        prev[sectionId] = {};
+        prev[sectionId] = {}
       }
-      const prevFile = prev[sectionId][index] ?? {};
-      prevFile.preview = URL.createObjectURL(file);
-      prevFile.name = file.name;
-      prev[sectionId][index] = prevFile;
-      const currentFiles = prev[sectionId];
+      const prevFile = prev[sectionId][index] ?? {}
+      prevFile.preview = URL.createObjectURL(file)
+      prevFile.name = file.name
+      prev[sectionId][index] = prevFile
+      const currentFiles = prev[sectionId]
       return {
         ...prev,
         [sectionId]: currentFiles,
-      };
-    });
+      }
+    })
 
-    const formData = new FormData();
+    const formData = new FormData()
     for (const file of acceptedFiles) {
-      formData.append("image", file);
+      formData.append('image', file)
     }
-    formData.append("title", title);
-    const result = await fetch("api/upload-image", {
-      method: "POST",
+    formData.append('title', title)
+    const result = await fetch('api/upload-image', {
+      method: 'POST',
       headers: {
-        Accept: "application/json",
+        Accept: 'application/json',
       },
       body: formData,
-    });
+    })
     const response = (await result.json()) as HttpResponseBody<{
-      imagePath: string;
-      imageName: string;
-    }>;
+      imagePath: string
+      imageName: string
+    }>
     const localImagePath =
-      response.data?.imagePath ?? "https://placehold.co/600x400";
+      response.data?.imagePath ?? 'https://placehold.co/600x400'
     setBlocks((prev) => {
-      const currentBlock = prev[sectionId][index];
-      currentBlock.content = localImagePath;
-      currentBlock.contentType = "image";
-      currentBlock.contentCaption = response.data?.imageName ?? "Unknown";
-      prev[sectionId][index] = currentBlock;
-      const currentSections = prev[sectionId];
-      return { ...prev, [sectionId]: currentSections };
-    });
-  }, []);
+      const currentBlock = prev[sectionId][index]
+      currentBlock.content = localImagePath
+      currentBlock.contentType = 'image'
+      currentBlock.contentCaption = response.data?.imageName ?? 'Unknown'
+      prev[sectionId][index] = currentBlock
+      const currentSections = prev[sectionId]
+      return { ...prev, [sectionId]: currentSections }
+    })
+  }, [])
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: {
-      "image/*": [],
+      'image/*': [],
     },
-  });
+  })
   const removeBlock = () => {
     setBlocks((prev) => {
-      prev[sectionId].splice(index, 1);
+      prev[sectionId].splice(index, 1)
       for (const block of prev[sectionId]) {
-        const index = prev[sectionId].indexOf(block);
-        block.order = index;
-        block.index = index;
+        const index = prev[sectionId].indexOf(block)
+        block.order = index
+        block.index = index
       }
-      const currentSections = prev[sectionId];
-      return { ...prev, [sectionId]: currentSections };
-    });
-  };
+      const currentSections = prev[sectionId]
+      return { ...prev, [sectionId]: currentSections }
+    })
+  }
   return (
     <div className="flex flex-col bg-gray-200 rounded-xl">
       <div className="text-xl font-semibold group py-1 space-x-3 bg-neutral-200 w-full rounded-t-xl flex justify-end items-center px-2">
@@ -96,8 +96,8 @@ export default function ContentImage({ sectionId, index }: ContentImageType) {
         <div
           className={`rounded-xl ${
             files[sectionId] && files[sectionId][index] != null
-              ? "h-full"
-              : "h-[100px]"
+              ? 'h-full'
+              : 'h-[100px]'
           } flex items-center justify-center flex-col space-y-2`}
         >
           {files[sectionId] && files[sectionId][index] != null ? (
@@ -105,7 +105,7 @@ export default function ContentImage({ sectionId, index }: ContentImageType) {
               <img
                 className="h-full w-auto rounded-xl"
                 src={blocks[sectionId][index]?.content}
-                alt={blocks[sectionId][index]?.contentCaption ?? "Unkown"}
+                alt={blocks[sectionId][index]?.contentCaption ?? 'Unkown'}
               />
               <div className="absolute invisible group-hover:visible cursor-pointer flex items-center justify-center top-0 bottom-0 left-0 right-0 hover:bg-black/60 hover:backdrop-blur-sm transition-all rounded-xl">
                 <div className="flex items-center justify-center flex-col flex-1">
@@ -145,5 +145,5 @@ export default function ContentImage({ sectionId, index }: ContentImageType) {
         </div>
       </div>
     </div>
-  );
+  )
 }

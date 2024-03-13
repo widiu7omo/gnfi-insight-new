@@ -1,8 +1,8 @@
 "use client";
 
 import { Provider } from "jotai";
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 
 export default function Providers({ children }: PropsWithChildren) {
-  return <Provider>{children}</Provider>;
+	return <Provider>{children}</Provider>;
 }

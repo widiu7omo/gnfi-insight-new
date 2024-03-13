@@ -287,5 +287,5 @@ export default function IndoMap() {
         </defs>
       </svg>
     </div>
-  );
+  )
 }

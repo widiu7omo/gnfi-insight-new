@@ -1,21 +1,21 @@
-"use client";
-import { useAnimate, useInView, stagger } from "framer-motion";
-import { useEffect } from "react";
+'use client'
+import { useAnimate, useInView, stagger } from 'framer-motion'
+import { useEffect } from 'react'
 
 export default function Ornament2() {
-  const [scope, animate] = useAnimate();
-  const isInView = useInView(scope, { once: false });
+  const [scope, animate] = useAnimate()
+  const isInView = useInView(scope, { once: false })
   useEffect(() => {
     if (isInView) {
       animate(
-        "path",
+        'path',
         { opacity: 1, y: 0 },
         { delay: stagger(0.1, { startDelay: 0.11 }), duration: 0.1 }
-      );
+      )
     } else {
-      animate("path", { opacity: 0, y: 20 });
+      animate('path', { opacity: 0, y: 20 })
     }
-  }, [isInView, animate]);
+  }, [isInView, animate])
   return (
     <div className="overflow-clip absolute left-[25%] z-[1] bottom-[0] xl:block hidden">
       <svg
@@ -276,5 +276,5 @@ export default function Ornament2() {
         </defs>
       </svg>
     </div>
-  );
+  )
 }

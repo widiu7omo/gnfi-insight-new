@@ -1,7 +1,7 @@
-"use client";
-import { BlockType } from "@/data/types";
-import { motion } from "framer-motion";
-import parse from "html-react-parser";
+'use client'
+import { BlockType } from '@/data/types'
+import { motion } from 'framer-motion'
+import parse from 'html-react-parser'
 export default function Header({ block }: { block: BlockType }) {
   return (
     <motion.div
@@ -13,5 +13,5 @@ export default function Header({ block }: { block: BlockType }) {
     >
       {parse(block.content)}
     </motion.div>
-  );
+  )
 }

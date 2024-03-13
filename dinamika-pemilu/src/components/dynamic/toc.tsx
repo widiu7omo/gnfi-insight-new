@@ -1,34 +1,34 @@
-"use client";
-import { useNavigation } from "@/store/useNavigation";
-import { motion } from "framer-motion";
-import { ListMinusIcon, MoveLeftIcon } from "lucide-react";
-import { useCallback, useEffect, useState } from "react";
+'use client'
+import { useNavigation } from '@/store/useNavigation'
+import { motion } from 'framer-motion'
+import { ListMinusIcon, MoveLeftIcon } from 'lucide-react'
+import { useCallback, useEffect, useState } from 'react'
 export default function Toc() {
-  const [navigation, setNavigation] = useNavigation();
+  const [navigation, setNavigation] = useNavigation()
   const toggleNavHandler = () => {
-    setNavigation((prev) => ({ ...prev, show: !prev.show }));
-  };
-  const [currentHash, setCurrentHash] = useState("");
-  const isShow = navigation.show;
+    setNavigation((prev) => ({ ...prev, show: !prev.show }))
+  }
+  const [currentHash, setCurrentHash] = useState('')
+  const isShow = navigation.show
   useEffect(() => {
     const onHashChanged = () => {
       if (window.innerWidth <= 768) {
-        toggleNavHandler();
+        toggleNavHandler()
       }
-      setCurrentHash(window.location.hash);
-    };
-    window.addEventListener("hashchange", onHashChanged);
+      setCurrentHash(window.location.hash)
+    }
+    window.addEventListener('hashchange', onHashChanged)
 
     return () => {
-      window.removeEventListener("hashchange", onHashChanged);
-    };
-  }, [toggleNavHandler]);
+      window.removeEventListener('hashchange', onHashChanged)
+    }
+  }, [toggleNavHandler])
   const isSelected = useCallback(
     (selectedHash: string) => {
-      return currentHash === selectedHash;
+      return currentHash === selectedHash
     },
     [currentHash]
-  );
+  )
   return (
     <>
       <motion.div
@@ -44,7 +44,7 @@ export default function Toc() {
         </motion.div>
         <ul className="leading-8 text-gray-600 text-lg space-y-4">
           <li
-            data-active={isSelected("#section-1")}
+            data-active={isSelected('#section-1')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
@@ -52,13 +52,13 @@ export default function Toc() {
             </a>
           </li>
           <li
-            data-active={isSelected("#section-2")}
+            data-active={isSelected('#section-2')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">Ketika Golkar Menguasai Pemilu</a>
           </li>
           <li
-            data-active={isSelected("#section-3")}
+            data-active={isSelected('#section-3')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
@@ -66,13 +66,13 @@ export default function Toc() {
             </a>
           </li>
           <li
-            data-active={isSelected("#section-4")}
+            data-active={isSelected('#section-4')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">Pemilu 2004, Saat Presiden Dipilih Langsung</a>
           </li>
           <li
-            data-active={isSelected("#section-5")}
+            data-active={isSelected('#section-5')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-5">Ketika Dunia Maya Memanas</a>
@@ -86,5 +86,5 @@ export default function Toc() {
         className="top-0 bottom-0 left-0 right-0 bg-black/60 transition-all z-[55] absolute data-[show=true]:visible invisible"
       />
     </>
-  );
+  )
 }

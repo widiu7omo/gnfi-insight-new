@@ -13,5 +13,5 @@ export default function Arrow() {
         <path d="M17 10.5L0.5 20.0263L0.5 0.973721L17 10.5Z" fill="#F39200" />
       </svg>
     </div>
-  );
+  )
 }

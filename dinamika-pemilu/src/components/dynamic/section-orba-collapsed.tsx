@@ -1,8 +1,8 @@
-"use client";
-import { motion, stagger, useAnimate, useInView } from "framer-motion";
-import { useEffect } from "react";
+'use client'
+import { motion, stagger, useAnimate, useInView } from 'framer-motion'
+import { useEffect } from 'react'
 export default function SectionOrbaCollapsed() {
-  let indexImage = 0;
+  let indexImage = 0
   const containerAnimate = {
     visible: {
       transition: {
@@ -10,40 +10,40 @@ export default function SectionOrbaCollapsed() {
         staggerChildren: 0.2,
       },
     },
-  };
+  }
   const item = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
     },
-  };
-  const [scope, animate] = useAnimate();
-  const isInView = useInView(scope, { once: true });
+  }
+  const [scope, animate] = useAnimate()
+  const isInView = useInView(scope, { once: true })
   useEffect(() => {
     if (isInView) {
       animate(
-        "p",
+        'p',
         { opacity: 1, y: 0 },
         { delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.3 }
-      );
+      )
     } else {
-      animate("p", { opacity: 0, y: 20 });
+      animate('p', { opacity: 0, y: 20 })
     }
-  }, [isInView, animate]);
-  const [scopeP2, animateP2] = useAnimate();
-  const isInViewP2 = useInView(scopeP2, { once: true });
+  }, [isInView, animate])
+  const [scopeP2, animateP2] = useAnimate()
+  const isInViewP2 = useInView(scopeP2, { once: true })
   useEffect(() => {
     if (isInViewP2) {
       animateP2(
-        "p",
+        'p',
         { opacity: 1, y: 0 },
         { delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.3 }
-      );
+      )
     } else {
-      animateP2("p", { opacity: 0, y: 20 });
+      animateP2('p', { opacity: 0, y: 20 })
     }
-  }, [isInViewP2, animateP2]);
+  }, [isInViewP2, animateP2])
   return (
     <div className="bg-[#1A1218] w-full py-12 mx-auto">
       <div className="mx-auto flex items-center justify-center flex-col">
@@ -66,8 +66,8 @@ export default function SectionOrbaCollapsed() {
             style={{
               background:
                 "linear-gradient(0deg, rgba(26, 18, 24, 0.6), rgba(26, 18, 24, 0.6)), url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse.jpg')",
-              filter: "blur(50px)",
-              transform: "scale(2)",
+              filter: 'blur(50px)',
+              transform: 'scale(2)',
             }}
           />
           <motion.img
@@ -131,8 +131,8 @@ export default function SectionOrbaCollapsed() {
             style={{
               background:
                 "linear-gradient(0deg, rgba(26, 18, 24, 0.6), rgba(26, 18, 24, 0.6)),url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse2.png')",
-              filter: "blur(50px)",
-              transform: "scale(1.1)",
+              filter: 'blur(50px)',
+              transform: 'scale(1.1)',
             }}
           />
           <motion.img
@@ -178,13 +178,13 @@ export default function SectionOrbaCollapsed() {
             pengawas independen dalam dan luar negeri.
           </p>
           <p>
-            Menurut Bahrul Ulum dalam{" "}
+            Menurut Bahrul Ulum dalam{' '}
             <i>
               Bodohnya NU apa NU dibodohi?: Jejak Langkah NU Era Reformasi:
               Menguji Khittah, Meneropong Paradigma Politik,
             </i>
             sejumlah lembaga pemantau pemilu independen menilai Pemilu 1999 jauh
-            lebih baik dan memenuhi syarat sebagai pemilu yang demokratis atau{" "}
+            lebih baik dan memenuhi syarat sebagai pemilu yang demokratis atau{' '}
             <i>free</i> and <i>fair election</i>.
           </p>
         </div>
@@ -199,7 +199,7 @@ export default function SectionOrbaCollapsed() {
             variants={containerAnimate}
           >
             {new Array(7).fill(0).map((_, i) => {
-              indexImage++;
+              indexImage++
               return (
                 <motion.img
                   viewport={{ once: true }}
@@ -208,11 +208,11 @@ export default function SectionOrbaCollapsed() {
                     // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                     i
                   }`}
-                  className={"absolute z-0 w-full xl:max-w-7xl"}
+                  className={'absolute z-0 w-full xl:max-w-7xl'}
                   src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/${indexImage}.png`}
                   alt={indexImage.toString()}
                 />
-              );
+              )
             })}
           </motion.div>
         </div>
@@ -246,5 +246,5 @@ export default function SectionOrbaCollapsed() {
         </motion.div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,10 +1,10 @@
-import Header from "@/components/reusable/header";
-import Paragraph from "@/components/reusable/paragraph";
-import Ornament1 from "./ornament1";
-import Ornament2 from "./ornament2";
-import FaktaIkn from "../fakta-ikn";
-import Ornament3 from "./ornament3";
-import Ornament4 from "./ornament4";
+import Header from '@/components/reusable/header'
+import Paragraph from '@/components/reusable/paragraph'
+import Ornament1 from './ornament1'
+import Ornament2 from './ornament2'
+import FaktaIkn from '../fakta-ikn'
+import Ornament3 from './ornament3'
+import Ornament4 from './ornament4'
 
 export default function SectionSix() {
   return (
@@ -140,5 +140,5 @@ export default function SectionSix() {
         </Paragraph>
       </div>
     </section>
-  );
+  )
 }

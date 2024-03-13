@@ -1,24 +1,24 @@
-"use client";
-import { useNavigation } from "@/store/useNavigation";
-import { useMotionValueEvent, useScroll, useSpring } from "framer-motion";
-import { BarChart2Icon } from "lucide-react";
-import { useState } from "react";
-import { motion } from "framer-motion";
+'use client'
+import { useNavigation } from '@/store/useNavigation'
+import { useMotionValueEvent, useScroll, useSpring } from 'framer-motion'
+import { BarChart2Icon } from 'lucide-react'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 export default function Navbar() {
-  const [_, setNavigation] = useNavigation();
+  const [_, setNavigation] = useNavigation()
   const toggleNavHandler = () => {
-    setNavigation((prev) => ({ ...prev, show: !prev.show }));
-  };
-  const { scrollY } = useScroll();
-  const [shouldBlur, setShouldBlur] = useState(false);
+    setNavigation((prev) => ({ ...prev, show: !prev.show }))
+  }
+  const { scrollY } = useScroll()
+  const [shouldBlur, setShouldBlur] = useState(false)
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
+  useMotionValueEvent(scrollY, 'change', (latest) => {
     if (latest > 0) {
-      !shouldBlur && setShouldBlur(true);
+      !shouldBlur && setShouldBlur(true)
     } else {
-      shouldBlur && setShouldBlur(false);
+      shouldBlur && setShouldBlur(false)
     }
-  });
+  })
   return (
     <motion.div
       layout
@@ -44,5 +44,5 @@ export default function Navbar() {
         />
       </div>
     </motion.div>
-  );
+  )
 }

@@ -24,7 +24,7 @@ const texts = [
         />
       </svg>
     ),
-    desc: "Dibangun bertahap hingga 2045",
+    desc: 'Dibangun bertahap hingga 2045',
   },
   {
     icon: (
@@ -51,7 +51,7 @@ const texts = [
         />
       </svg>
     ),
-    desc: "Nama “Nusantara” dipilih dari 80 calon nama yang dihiumpun",
+    desc: 'Nama “Nusantara” dipilih dari 80 calon nama yang dihiumpun',
   },
   {
     icon: (
@@ -78,7 +78,7 @@ const texts = [
         />
       </svg>
     ),
-    desc: "Instana Kepresidenan yang didesain oleh seniman Nyoman Nuarta menjadi prioritas pembangunan",
+    desc: 'Instana Kepresidenan yang didesain oleh seniman Nyoman Nuarta menjadi prioritas pembangunan',
   },
   {
     icon: (
@@ -105,7 +105,7 @@ const texts = [
         />
       </svg>
     ),
-    desc: "Pembangunannya membutuhkan Rp 466 triliun yang diambil dari berbagai skema pendanaan, mulai dari APBN hingga kerja sama dengan swasta",
+    desc: 'Pembangunannya membutuhkan Rp 466 triliun yang diambil dari berbagai skema pendanaan, mulai dari APBN hingga kerja sama dengan swasta',
   },
   {
     icon: (
@@ -132,7 +132,7 @@ const texts = [
         />
       </svg>
     ),
-    desc: "Wilayah daratnya seluas 252.600 hektare, sedangkan wilayah lautnya 69.769 hektare",
+    desc: 'Wilayah daratnya seluas 252.600 hektare, sedangkan wilayah lautnya 69.769 hektare',
   },
   {
     icon: (
@@ -159,9 +159,9 @@ const texts = [
         />
       </svg>
     ),
-    desc: "Dipimpin oleh Kepala Otorita Ibu Kota Nusantara, jabatan setingkat menteri yang dipilih dan dilantik oleh presiden",
+    desc: 'Dipimpin oleh Kepala Otorita Ibu Kota Nusantara, jabatan setingkat menteri yang dipilih dan dilantik oleh presiden',
   },
-];
+]
 export function generateSlide() {
   return texts.map((item) => (
     <div className="flex items-center space-x-4 px-4 py-7">
@@ -170,5 +170,5 @@ export function generateSlide() {
         {item.desc}
       </p>
     </div>
-  ));
+  ))
 }

@@ -1,10 +1,10 @@
-import Header from "@/components/reusable/header";
-import Paragraph from "@/components/reusable/paragraph";
-import Ornament1 from "./ornament1";
-import Ornament2 from "./ornament2";
-import Ornament3 from "./ornament3";
-import Ornament4 from "./ornament4";
-import Ornament5 from "./ornament5";
+import Header from '@/components/reusable/header'
+import Paragraph from '@/components/reusable/paragraph'
+import Ornament1 from './ornament1'
+import Ornament2 from './ornament2'
+import Ornament3 from './ornament3'
+import Ornament4 from './ornament4'
+import Ornament5 from './ornament5'
 
 export default function SectionFour() {
   return (
@@ -117,5 +117,5 @@ export default function SectionFour() {
         </Paragraph>
       </div>
     </section>
-  );
+  )
 }

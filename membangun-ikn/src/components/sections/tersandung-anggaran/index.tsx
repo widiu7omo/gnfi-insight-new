@@ -1,10 +1,10 @@
-import Header from "@/components/reusable/header";
-import Paragraph from "@/components/reusable/paragraph";
-import Ornament1 from "./ornament1";
-import Quote from "./quote";
-import IndoMap from "./indo-map";
-import Ornament3 from "./ornament3";
-import SliderIbukota from "./slider-ibukota";
+import Header from '@/components/reusable/header'
+import Paragraph from '@/components/reusable/paragraph'
+import Ornament1 from './ornament1'
+import Quote from './quote'
+import IndoMap from './indo-map'
+import Ornament3 from './ornament3'
+import SliderIbukota from './slider-ibukota'
 
 export default function SectionFive() {
   return (
@@ -39,7 +39,7 @@ export default function SectionFive() {
       <Quote />
       <div className="relative bg-[#FC9803] pt-8">
         <div
-          style={{ background: "url(/assets/noise.png)" }}
+          style={{ background: 'url(/assets/noise.png)' }}
           className="absolute bottom-0 left-0 right-0 top-0 z-0 bg-cover opacity-20"
         />
         <Paragraph className="relative z-20">
@@ -120,5 +120,5 @@ export default function SectionFive() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import QuoteIcon from "./quote-icon";
-import QuoteIconSmall from "./quote-icon-small";
+import QuoteIcon from './quote-icon'
+import QuoteIconSmall from './quote-icon-small'
 
 export default function Quote() {
   return (
@@ -35,5 +35,5 @@ export default function Quote() {
         </div>
       </div>
     </div>
-  );
+  )
 }

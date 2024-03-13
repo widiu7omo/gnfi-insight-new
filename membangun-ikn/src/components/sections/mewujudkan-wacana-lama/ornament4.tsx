@@ -16,5 +16,5 @@ export default function Ornament4() {
         />
       </svg>
     </div>
-  );
+  )
 }

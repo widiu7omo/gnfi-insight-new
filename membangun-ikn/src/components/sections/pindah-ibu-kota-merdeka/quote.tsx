@@ -1,5 +1,5 @@
-import { vollkornFont } from ".";
-import Ornament4 from "./ornament4";
+import { vollkornFont } from '.'
+import Ornament4 from './ornament4'
 
 export default function Quote() {
   return (
@@ -20,5 +20,5 @@ export default function Quote() {
         />
       </div>
     </div>
-  );
+  )
 }

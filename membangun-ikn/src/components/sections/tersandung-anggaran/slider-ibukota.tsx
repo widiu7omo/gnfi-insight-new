@@ -1,33 +1,33 @@
-"use client";
-import { PanInfo, motion, useMotionValue } from "framer-motion";
-import { PropsWithChildren, useRef, useState } from "react";
+'use client'
+import { PanInfo, motion, useMotionValue } from 'framer-motion'
+import { PropsWithChildren, useRef, useState } from 'react'
 const generateSlide = () => {
   return [
     {
-      image: "/assets/sukarno-square.png",
-      title: "Palangkaraya",
-      desc: "Wacana pada era Orde Lama saat Palangkaraya dibangun pada 1957",
+      image: '/assets/sukarno-square.png',
+      title: 'Palangkaraya',
+      desc: 'Wacana pada era Orde Lama saat Palangkaraya dibangun pada 1957',
     },
     {
-      image: "/assets/suharto-square.png",
-      title: "Jonggol",
-      desc: "Ingin dikembangkan sebagai kota mandiri, namun tak terwujud hingga Orde Baru tumbang pada Mei 1988",
+      image: '/assets/suharto-square.png',
+      title: 'Jonggol',
+      desc: 'Ingin dikembangkan sebagai kota mandiri, namun tak terwujud hingga Orde Baru tumbang pada Mei 1988',
     },
     {
-      image: "/assets/sby-square.png",
-      title: "Jawa Barat",
-      desc: "Presiden Susilo Bambang Yudhoyono mulai mewacanakan perpindahan ibu kota sejak 2009, namun tak terwujud karena tersandung anggaran",
+      image: '/assets/sby-square.png',
+      title: 'Jawa Barat',
+      desc: 'Presiden Susilo Bambang Yudhoyono mulai mewacanakan perpindahan ibu kota sejak 2009, namun tak terwujud karena tersandung anggaran',
     },
-  ];
-};
+  ]
+}
 const Card = ({
   title,
   image,
   desc,
 }: {
-  title: string;
-  image: string;
-  desc: string;
+  title: string
+  image: string
+  desc: string
 }) => {
   return (
     <div className="space-y-2 px-4">
@@ -37,13 +37,13 @@ const Card = ({
         <div className="leading-6 text-neutral-900">{desc}</div>
       </div>
     </div>
-  );
-};
+  )
+}
 export default function SliderIbukota() {
-  const constraintsRef = useRef<HTMLDivElement | null>(null);
-  const [active, setActive] = useState(0);
-  const x = useMotionValue(0);
-  const drag = useMotionValue(0);
+  const constraintsRef = useRef<HTMLDivElement | null>(null)
+  const [active, setActive] = useState(0)
+  const x = useMotionValue(0)
+  const drag = useMotionValue(0)
   const slides = generateSlide().map((item, i) => (
     <SlideItem
       key={`number-card-${
@@ -53,19 +53,19 @@ export default function SliderIbukota() {
     >
       <Card title={item.title} desc={item.desc} image={item.image} />
     </SlideItem>
-  ));
-  const width = constraintsRef.current?.offsetWidth || 350;
+  ))
+  const width = constraintsRef.current?.offsetWidth || 350
   const dragEndHandler = (
     event: MouseEvent | TouchEvent | PointerEvent,
     info: PanInfo
   ) => {
     // TODO: fix offset
-    const offset = info.offset.x;
+    const offset = info.offset.x
     if (Math.abs(offset) > 20) {
-      const direction = offset < 0 ? 1 : -1;
-      setActive((active) => clamp(active + direction, 0, slides.length - 1));
+      const direction = offset < 0 ? 1 : -1
+      setActive((active) => clamp(active + direction, 0, slides.length - 1))
     }
-  };
+  }
   return (
     <div
       className="relative block h-[300px] w-full overflow-hidden md:hidden"
@@ -82,7 +82,7 @@ export default function SliderIbukota() {
         {slides}
       </motion.div>
     </div>
-  );
+  )
 }
 
 const SlideItem = ({ children }: PropsWithChildren) => {
@@ -90,14 +90,14 @@ const SlideItem = ({ children }: PropsWithChildren) => {
     <div className="flex min-w-[calc(100%-40px)] items-center justify-center">
       {children}
     </div>
-  );
-};
+  )
+}
 function clamp(value: number, lower: number, upper: number): number {
   if (value < lower) {
-    return lower;
+    return lower
   }
   if (value > upper) {
-    return upper;
+    return upper
   }
-  return value;
+  return value
 }

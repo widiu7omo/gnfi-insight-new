@@ -4,20 +4,20 @@ import { motion } from "framer-motion";
 import { ListMinusIcon, MoveLeftIcon } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 export default function Toc() {
-  const [navigation, setNavigation] = useNavigation();
-  const toggleNavHandler = () => {
-    setNavigation((prev) => ({ ...prev, show: !prev.show }));
-  };
-  const [currentHash, setCurrentHash] = useState("");
-  const isShow = navigation.show;
-  useEffect(() => {
-    const onHashChanged = () => {
-      if (window.innerWidth <= 768) {
-        toggleNavHandler();
-      }
-      setCurrentHash(window.location.hash);
-    };
-    window.addEventListener("hashchange", onHashChanged);
+	const [navigation, setNavigation] = useNavigation();
+	const toggleNavHandler = () => {
+		setNavigation((prev) => ({ ...prev, show: !prev.show }));
+	};
+	const [currentHash, setCurrentHash] = useState("");
+	const isShow = navigation.show;
+	useEffect(() => {
+		const onHashChanged = () => {
+			if (window.innerWidth <= 768) {
+				toggleNavHandler();
+			}
+			setCurrentHash(window.location.hash);
+		};
+		window.addEventListener("hashchange", onHashChanged);
 
     return () => {
       window.removeEventListener("hashchange", onHashChanged);

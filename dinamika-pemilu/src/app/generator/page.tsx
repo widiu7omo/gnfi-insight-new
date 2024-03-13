@@ -1,60 +1,60 @@
-"use client";
-import ContentBin from "@/components/generator/content-bin";
-import { ContentSection } from "@/components/generator/content-section";
-import DraggableWrapper from "@/components/generator/draggable-wrapper";
+'use client'
+import ContentBin from '@/components/generator/content-bin'
+import { ContentSection } from '@/components/generator/content-section'
+import DraggableWrapper from '@/components/generator/draggable-wrapper'
 import {
   ContentType,
   DraggableItem,
   ItemTypes,
-} from "@/components/generator/types";
+} from '@/components/generator/types'
 import {
   COMPONENT_CONTENT,
   COMPONENT_HEADER,
   COMPONENT_IMAGE,
   COMPONENT_CUSTOM,
   COMPONENT_SECTION,
-} from "@/data/component-front";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
-import { useBlocks } from "@/store/useBlocks";
-import { BlockType } from "@/data/types";
+} from '@/data/component-front'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
+import { useBlocks } from '@/store/useBlocks'
+import { BlockType } from '@/data/types'
 import {
   HeadingIcon,
   ImageIcon,
   LayoutTemplateIcon,
   TextIcon,
-} from "lucide-react";
-import { useTitle } from "@/store/useTitle";
+} from 'lucide-react'
+import { useTitle } from '@/store/useTitle'
 
 export default function GeneratePage() {
-  const [title, setTitle] = useTitle();
+  const [title, setTitle] = useTitle()
   const handleOnDropSection = (item: DraggableItem) => {
-    console.log(item);
-  };
+    console.log(item)
+  }
   const handleOnDropComponent = (item: DraggableItem) => {
-    console.log(item);
-  };
-  const [blocks] = useBlocks();
+    console.log(item)
+  }
+  const [blocks] = useBlocks()
   const generateBlocks = async () => {
     //Normalize
-    const blockJoined: BlockType[] = [];
+    const blockJoined: BlockType[] = []
     for (const block of Object.keys(blocks)) {
-      blockJoined.push(...blocks[block]);
+      blockJoined.push(...blocks[block])
     }
     const normalizeBlock: BlockType[] = blockJoined.map((item, index) => {
-      item.order = index;
-      return item;
-    });
-    const result = await fetch("/api/generate-content", {
-      method: "POST",
+      item.order = index
+      return item
+    })
+    const result = await fetch('/api/generate-content', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
       },
       body: JSON.stringify({ title: title, content: normalizeBlock }),
-    });
-    console.log(await result.json());
-  };
+    })
+    console.log(await result.json())
+  }
   return (
     <>
       <DndProvider backend={HTML5Backend}>
@@ -149,5 +149,5 @@ export default function GeneratePage() {
         </div>
       </DndProvider>
     </>
-  );
+  )
 }

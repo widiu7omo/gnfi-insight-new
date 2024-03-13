@@ -1,4 +1,4 @@
-import Ornament2 from "./ornament2";
+import Ornament2 from './ornament2'
 
 export default function Quote() {
   return (
@@ -18,5 +18,5 @@ export default function Quote() {
         <Ornament2 />
       </div>
     </div>
-  );
+  )
 }

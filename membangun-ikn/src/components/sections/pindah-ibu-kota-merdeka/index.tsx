@@ -1,18 +1,18 @@
-"use client";
-import { motion } from "framer-motion";
-import { Libre_Baskerville } from "next/font/google";
-import Ornament1 from "./ornament1";
-import Paragraph from "@/components/reusable/paragraph";
-import Ornament2 from "./ornament2";
-import Ornament3 from "./ornament3";
-import Quote from "./quote";
-import Ornament5 from "./ornament5";
-import Ornament6 from "./ornament6";
+'use client'
+import { motion } from 'framer-motion'
+import { Libre_Baskerville } from 'next/font/google'
+import Ornament1 from './ornament1'
+import Paragraph from '@/components/reusable/paragraph'
+import Ornament2 from './ornament2'
+import Ornament3 from './ornament3'
+import Quote from './quote'
+import Ornament5 from './ornament5'
+import Ornament6 from './ornament6'
 export const vollkornFont = Libre_Baskerville({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "700"],
-});
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '700'],
+})
 export default function SectionTwo() {
   return (
     <section
@@ -120,5 +120,5 @@ export default function SectionTwo() {
         </Paragraph>
       </div>
     </section>
-  );
+  )
 }

@@ -27,7 +27,7 @@ export function One() {
         Dibangun bertahap hingga 2045
       </p>
     </div>
-  );
+  )
 }
 
 export function Two() {
@@ -59,7 +59,7 @@ export function Two() {
         Nama “Nusantara” dipilih dari 80 calon nama yang dihiumpun
       </p>
     </div>
-  );
+  )
 }
 
 export function Three() {
@@ -98,7 +98,7 @@ export function Three() {
         prioritas pembangunan
       </p>
     </div>
-  );
+  )
 }
 
 export function Four() {
@@ -131,7 +131,7 @@ export function Four() {
         skema pendanaan, mulai dari APBN hingga kerja sama dengan swasta
       </p>
     </div>
-  );
+  )
 }
 
 export function Five() {
@@ -170,7 +170,7 @@ export function Five() {
         69.769 hektare
       </p>
     </div>
-  );
+  )
 }
 
 export function Six() {
@@ -203,5 +203,5 @@ export function Six() {
         menteri yang dipilih dan dilantik oleh presiden
       </p>
     </div>
-  );
+  )
 }

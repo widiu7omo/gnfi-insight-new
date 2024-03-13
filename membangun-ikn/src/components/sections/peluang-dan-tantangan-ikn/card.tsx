@@ -1,4 +1,4 @@
-import Arrow from "./arrow";
+import Arrow from './arrow'
 
 export default function Card() {
   return (
@@ -27,5 +27,5 @@ export default function Card() {
         </div>
       </div>
     </div>
-  );
+  )
 }

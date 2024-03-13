@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 const containerAnimate = {
   visible: {
     transition: {
@@ -6,14 +6,14 @@ const containerAnimate = {
       staggerChildren: 0.2,
     },
   },
-};
+}
 const item = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
   },
-};
+}
 export default function CaptionFromWill() {
   return (
     <div className="w-full h-fit pb-3 pt-32">
@@ -23,7 +23,7 @@ export default function CaptionFromWill() {
           className="flex space-x-4 xl:space-x-6 flex-row relative max-w-full xl:max-w-7xl mx-auto "
           variants={containerAnimate}
           initial="hidden"
-          whileInView={"visible"}
+          whileInView={'visible'}
         >
           <motion.img
             viewport={{ once: true }}
@@ -62,5 +62,5 @@ export default function CaptionFromWill() {
         </motion.div>
       </div>
     </div>
-  );
+  )
 }

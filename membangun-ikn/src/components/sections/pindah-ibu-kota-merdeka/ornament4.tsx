@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 export default function Ornament4() {
   return (
     <div className="absolute bottom-0 left-0 z-0 xl:top-0">
@@ -64,5 +64,5 @@ export default function Ornament4() {
         </defs>
       </svg>
     </div>
-  );
+  )
 }

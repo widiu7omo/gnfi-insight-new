@@ -48,5 +48,5 @@ export default function Ornament3() {
         />
       </svg>
     </div>
-  );
+  )
 }

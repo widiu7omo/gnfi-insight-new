@@ -1,15 +1,15 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 export default function Ornament2() {
   const icon = {
     hidden: {
       pathLength: 0,
-      fill: "rgba(255, 255, 255, 0)",
+      fill: 'rgba(255, 255, 255, 0)',
     },
     visible: {
       pathLength: 1,
-      fill: "#FF9800",
+      fill: '#FF9800',
     },
-  };
+  }
   return (
     <div className="absolute bottom-0 right-0 hidden xl:block">
       <svg
@@ -36,5 +36,5 @@ export default function Ornament2() {
         />
       </svg>
     </div>
-  );
+  )
 }

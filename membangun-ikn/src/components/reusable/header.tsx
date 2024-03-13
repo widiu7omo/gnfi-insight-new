@@ -1,12 +1,12 @@
-import { cn } from "@/lib/utils";
-import { ReactNode } from "react";
+import { cn } from '@/lib/utils'
+import { ReactNode } from 'react'
 
 type HeaderType = {
-  title?: string;
-  coverImage: string;
-  customTitle?: ReactNode;
-  className?: string;
-};
+  title?: string
+  coverImage: string
+  customTitle?: ReactNode
+  className?: string
+}
 export default function Header({
   title,
   coverImage,
@@ -16,8 +16,8 @@ export default function Header({
   return (
     <div
       className={cn(
-        "flex h-[600px] items-center justify-center bg-cover bg-center",
-        className,
+        'flex h-[600px] items-center justify-center bg-cover bg-center',
+        className
       )}
       style={{
         backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),url(${coverImage})`,
@@ -31,5 +31,5 @@ export default function Header({
         </h2>
       )}
     </div>
-  );
+  )
 }

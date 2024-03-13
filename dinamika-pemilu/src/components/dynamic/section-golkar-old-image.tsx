@@ -1,5 +1,5 @@
-"use client";
-import { motion } from "framer-motion";
+'use client'
+import { motion } from 'framer-motion'
 export default function SectionGolkarOldImage() {
   return (
     <div className="py-8 w-full max-w-7xl h-fit mx-auto">
@@ -25,5 +25,5 @@ export default function SectionGolkarOldImage() {
         />
       </div>
     </div>
-  );
+  )
 }

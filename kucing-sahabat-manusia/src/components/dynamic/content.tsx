@@ -1,31 +1,31 @@
 "use client";
-import { BlockType } from "@/data/types";
-import parse from "html-react-parser";
+import type { BlockType } from "@/data/types";
 import {
-  stagger,
-  useAnimate,
-  useInView,
-  useMotionValueEvent,
-  useScroll,
+	stagger,
+	useAnimate,
+	useInView,
+	useMotionValueEvent,
+	useScroll,
 } from "framer-motion";
+import parse from "html-react-parser";
 import { useEffect } from "react";
 export default function Content({ block }: { block: BlockType }) {
-  const [scope, animate] = useAnimate();
-  const isInView = useInView(scope, { once: true });
-  useEffect(() => {
-    if (isInView) {
-      animate(
-        "p",
-        { opacity: 1, y: 0 },
-        { delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.3 }
-      );
-    } else {
-      animate("p", { opacity: 0, y: 20 });
-    }
-  }, [isInView, animate]);
-  return (
-    <div ref={scope} className="prose text-left z-20 py-4 px-4 xl:px-0">
-      {parse(block.content)}
-    </div>
-  );
+	const [scope, animate] = useAnimate();
+	const isInView = useInView(scope, { once: true });
+	useEffect(() => {
+		if (isInView) {
+			animate(
+				"p",
+				{ opacity: 1, y: 0 },
+				{ delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.3 },
+			);
+		} else {
+			animate("p", { opacity: 0, y: 20 });
+		}
+	}, [isInView, animate]);
+	return (
+		<div ref={scope} className="prose text-left z-20 py-4 px-4 xl:px-0">
+			{parse(block.content)}
+		</div>
+	);
 }

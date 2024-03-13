@@ -1,4 +1,4 @@
-import { BlockType } from "@/data/types";
+import { BlockType } from '@/data/types'
 
 export default function Image({ block }: { block: BlockType }) {
   return (
@@ -6,10 +6,10 @@ export default function Image({ block }: { block: BlockType }) {
       <div className="flex items-center justify-center">
         <img
           src={block.content}
-          alt={block.contentCaption ?? "unknown"}
+          alt={block.contentCaption ?? 'unknown'}
           className="w-full"
         />
       </div>
     </div>
-  );
+  )
 }

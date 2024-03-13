@@ -1,5 +1,5 @@
-"use client";
-import { motion } from "framer-motion";
+'use client'
+import { motion } from 'framer-motion'
 export default function SectionFirstPemilu() {
   return (
     <div className="w-full">
@@ -21,5 +21,5 @@ export default function SectionFirstPemilu() {
         </motion.h2>
       </div>
     </div>
-  );
+  )
 }

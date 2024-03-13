@@ -1,8 +1,8 @@
-import Header from "@/components/reusable/header";
-import Paragraph from "@/components/reusable/paragraph";
-import Ornament1 from "./ornament1";
-import Ornament2 from "./ornament2";
-import Ornament3 from "./ornament3";
+import Header from '@/components/reusable/header'
+import Paragraph from '@/components/reusable/paragraph'
+import Ornament1 from './ornament1'
+import Ornament2 from './ornament2'
+import Ornament3 from './ornament3'
 
 export default function SectionSeven() {
   return (
@@ -114,5 +114,5 @@ export default function SectionSeven() {
         </Paragraph>
       </div>
     </section>
-  );
+  )
 }

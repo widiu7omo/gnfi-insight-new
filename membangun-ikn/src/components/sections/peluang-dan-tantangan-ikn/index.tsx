@@ -1,11 +1,11 @@
-import Header from "@/components/reusable/header";
-import Paragraph from "@/components/reusable/paragraph";
-import Card from "./card";
-import Ornament1 from "./ornament1";
-import Ornament2 from "./ornament2";
-import Ornament3 from "./ornament3";
-import Ornament4 from "./ornament4";
-import Quote from "./quote";
+import Header from '@/components/reusable/header'
+import Paragraph from '@/components/reusable/paragraph'
+import Card from './card'
+import Ornament1 from './ornament1'
+import Ornament2 from './ornament2'
+import Ornament3 from './ornament3'
+import Ornament4 from './ornament4'
+import Quote from './quote'
 
 export default function SectionEight() {
   return (
@@ -118,5 +118,5 @@ export default function SectionEight() {
         </p>
       </Paragraph>
     </section>
-  );
+  )
 }

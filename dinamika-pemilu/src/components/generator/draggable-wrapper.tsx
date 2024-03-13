@@ -1,20 +1,20 @@
-"use client";
-import { DragSourceMonitor, useDrag } from "react-dnd";
-import { DraggableItem, ItemTypes } from "./types";
-import { PropsWithChildren } from "react";
-import { useSections } from "@/store/useSections";
-import { useBlocks } from "@/store/useBlocks";
-import { useCards } from "@/store/useCards";
+'use client'
+import { DragSourceMonitor, useDrag } from 'react-dnd'
+import { DraggableItem, ItemTypes } from './types'
+import { PropsWithChildren } from 'react'
+import { useSections } from '@/store/useSections'
+import { useBlocks } from '@/store/useBlocks'
+import { useCards } from '@/store/useCards'
 
 interface DropResult extends DraggableItem {
-  dropEffect: string;
+  dropEffect: string
 }
 export type DragItemType = {
-  name?: string;
-  component: number;
-  itemType: string;
-  contentType: string;
-};
+  name?: string
+  component: number
+  itemType: string
+  contentType: string
+}
 
 export default function DraggableWrapper({
   name,
@@ -23,12 +23,12 @@ export default function DraggableWrapper({
   contentType,
   type,
 }: PropsWithChildren<{
-  name?: string;
-  component: number;
-  type: string;
-  contentType: string;
+  name?: string
+  component: number
+  type: string
+  contentType: string
 }>) {
-  const [_, setSections] = useSections();
+  const [_, setSections] = useSections()
   const [{ isDragging }, drag] = useDrag(() => ({
     type,
     item: {
@@ -37,9 +37,9 @@ export default function DraggableWrapper({
       itemType: type,
       contentType,
     },
-    options: { dropEffect: "copy" },
+    options: { dropEffect: 'copy' },
     end: (item, monitor) => {
-      const dropResult = monitor.getDropResult<DropResult>();
+      const dropResult = monitor.getDropResult<DropResult>()
       if (dropResult) {
         if (item.itemType === ItemTypes.SECTION) {
           setSections((prev) => {
@@ -49,10 +49,10 @@ export default function DraggableWrapper({
                 ...dropResult,
                 index: prev.length + 1,
                 order: prev.length + 1,
-                group: "BOXES",
+                group: 'BOXES',
               },
-            ];
-          });
+            ]
+          })
         }
       }
     },
@@ -60,8 +60,8 @@ export default function DraggableWrapper({
       isDragging: monitor.isDragging(),
       handlerId: monitor.getHandlerId(),
     }),
-  }));
-  const opacity = isDragging ? 0.4 : 1;
+  }))
+  const opacity = isDragging ? 0.4 : 1
   return (
     <div
       ref={drag}
@@ -71,5 +71,5 @@ export default function DraggableWrapper({
     >
       {children}
     </div>
-  );
+  )
 }

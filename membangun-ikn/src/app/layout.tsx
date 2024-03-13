@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Providers from "@/store/providers";
-import Script from "next/script";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import Providers from '@/store/providers'
+import Script from 'next/script'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -23,5 +23,5 @@ export default function RootLayout({
         <GoogleAnalytics gaId="G-HPD8SMYT1T" />
       </body>
     </html>
-  );
+  )
 }

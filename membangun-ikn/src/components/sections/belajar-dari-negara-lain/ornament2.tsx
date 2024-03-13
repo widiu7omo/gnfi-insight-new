@@ -1,11 +1,11 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 
 type Ornament2Type = {
-  className?: string;
-};
+  className?: string
+}
 export default function Ornament2({ className }: Ornament2Type) {
   return (
-    <div className={cn("absolute z-0 h-[73px] w-[91px]", className)}>
+    <div className={cn('absolute z-0 h-[73px] w-[91px]', className)}>
       <svg
         viewBox="0 0 91 73"
         fill="none"
@@ -23,5 +23,5 @@ export default function Ornament2({ className }: Ornament2Type) {
         />
       </svg>
     </div>
-  );
+  )
 }

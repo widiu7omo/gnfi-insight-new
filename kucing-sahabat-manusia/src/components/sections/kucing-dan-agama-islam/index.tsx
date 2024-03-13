@@ -1,7 +1,7 @@
 "use client";
 import Paragraph from "@/components/reusable/paragraph";
-import { Inter } from "next/font/google";
 import { motion } from "framer-motion";
+import { Inter } from "next/font/google";
 import AshCat from "./ash-cat";
 import BrownCat from "./brown-cat";
 import Hadits from "./hadits";
@@ -12,8 +12,8 @@ import Ornament2 from "./ornament2";
 import Ornament3 from "./ornament3";
 
 export const interFont = Inter({
-    subsets: ["latin"],
-    display: "swap",
+	subsets: ["latin"],
+	display: "swap",
 });
 
 export default function SectionFive() {

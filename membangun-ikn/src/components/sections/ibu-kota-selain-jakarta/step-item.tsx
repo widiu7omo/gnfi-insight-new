@@ -1,14 +1,14 @@
-import YelloArrow from "@/components/reusable/yellow-arrow";
-import Ornament3 from "./ornament2";
-import Ornament4 from "./ornament3";
+import YelloArrow from '@/components/reusable/yellow-arrow'
+import Ornament3 from './ornament2'
+import Ornament4 from './ornament3'
 
 type StepItemType = {
-  imageSource: string;
-  title: string;
-  desc: string;
-  withRightOrnament?: boolean;
-  withLeftOrnament?: boolean;
-};
+  imageSource: string
+  title: string
+  desc: string
+  withRightOrnament?: boolean
+  withLeftOrnament?: boolean
+}
 export default function StepItem({
   imageSource,
   title,
@@ -37,5 +37,5 @@ export default function StepItem({
         </div>
       </div>
     </div>
-  );
+  )
 }

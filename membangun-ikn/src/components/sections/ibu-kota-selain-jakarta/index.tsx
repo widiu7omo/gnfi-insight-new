@@ -1,8 +1,8 @@
-import Paragraph from "@/components/reusable/paragraph";
-import Illustration1 from "./illustration1";
-import Illustration2 from "./illustration2";
-import Ornament1 from "./ornament1";
-import Steps from "./steps";
+import Paragraph from '@/components/reusable/paragraph'
+import Illustration1 from './illustration1'
+import Illustration2 from './illustration2'
+import Ornament1 from './ornament1'
+import Steps from './steps'
 export default function IllustrationJakarta() {
   return (
     <div className="relative w-full bg-neutral-200">
@@ -63,5 +63,5 @@ export default function IllustrationJakarta() {
       </Paragraph>
       <Ornament1 />
     </div>
-  );
+  )
 }

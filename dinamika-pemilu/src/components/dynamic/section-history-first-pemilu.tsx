@@ -1,7 +1,7 @@
-"use client";
-import { motion } from "framer-motion";
+'use client'
+import { motion } from 'framer-motion'
 export default function SectionHistoryFirstPemilu() {
-  let indexImage = 2;
+  let indexImage = 2
   const containerAnimate = {
     visible: {
       transition: {
@@ -9,14 +9,14 @@ export default function SectionHistoryFirstPemilu() {
         staggerChildren: 0.2,
       },
     },
-  };
+  }
   const item = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
     },
-  };
+  }
   return (
     <div className="flex flex-row items-start justify-center w-full h-[500px] xs:h-[700px] sm:h-[850px] md:h-[1000px] lg:h-[1400px] xl:h-[1600px]">
       <motion.div
@@ -35,7 +35,7 @@ export default function SectionHistoryFirstPemilu() {
           className="absolute z-10 left-[49.50%] lg:left-[49.76%] h-[calc(100%-80px)] xs:h-[calc(100%-20px)] md:h-[calc(100%-200px)] top-[20px] xs:top-[100px] lg:top-[200px] w-[2px] bg-[#e36414]"
         />
         {new Array(8).fill(0).map((_, i) => {
-          indexImage++;
+          indexImage++
           return (
             <motion.img
               viewport={{ once: true }}
@@ -48,9 +48,9 @@ export default function SectionHistoryFirstPemilu() {
               src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/history/${indexImage}.png`}
               alt={indexImage.toString()}
             />
-          );
+          )
         })}
       </motion.div>
     </div>
-  );
+  )
 }

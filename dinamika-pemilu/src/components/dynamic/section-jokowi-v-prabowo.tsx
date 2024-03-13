@@ -1,7 +1,7 @@
-"use client";
-import { motion } from "framer-motion";
+'use client'
+import { motion } from 'framer-motion'
 export default function SectionDirectElection() {
-  let indexImage = 0;
+  let indexImage = 0
   const containerAnimate = {
     visible: {
       transition: {
@@ -9,14 +9,14 @@ export default function SectionDirectElection() {
         staggerChildren: 0.4,
       },
     },
-  };
+  }
   const item = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
     },
-  };
+  }
   return (
     <div className="flex flex-row items-start justify-center w-full h-[430px] min-[375px]:h-[540px] min-[425px]:h-[580px] min-[768px]:h-[1070px] min-[1024px]:h-[1400px] min-[1440px]:h-[1030px] min-[1920px]:h-[1300px] min-[2560px]:h-[1800px] bg-[#1D1D1D] relative">
       <motion.div
@@ -27,7 +27,7 @@ export default function SectionDirectElection() {
         variants={containerAnimate}
       >
         {new Array(9).fill(0).map((_, i) => {
-          indexImage++;
+          indexImage++
           return (
             <motion.img
               viewport={{ once: true }}
@@ -40,9 +40,9 @@ export default function SectionDirectElection() {
               src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/jokowivprabowo/${indexImage}.png`}
               alt={indexImage.toString()}
             />
-          );
+          )
         })}
       </motion.div>
     </div>
-  );
+  )
 }

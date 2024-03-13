@@ -19,5 +19,5 @@ export default function QuoteIcon() {
         />
       </svg>
     </div>
-  );
+  )
 }

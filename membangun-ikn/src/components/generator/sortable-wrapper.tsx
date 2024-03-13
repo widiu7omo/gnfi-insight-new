@@ -1,19 +1,19 @@
-import type { Identifier, XYCoord } from "dnd-core";
-import type { FC, PropsWithChildren } from "react";
-import { useRef } from "react";
-import { DragSourceMonitor, useDrag, useDrop } from "react-dnd";
-import { ItemTypes } from "./types";
+import type { Identifier, XYCoord } from 'dnd-core'
+import type { FC, PropsWithChildren } from 'react'
+import { useRef } from 'react'
+import { DragSourceMonitor, useDrag, useDrop } from 'react-dnd'
+import { ItemTypes } from './types'
 
 export interface SortableWrapperType {
-  id: unknown;
-  index: number;
-  moveBlock: (dragIndex: number, hoverIndex: number) => void;
+  id: unknown
+  index: number
+  moveBlock: (dragIndex: number, hoverIndex: number) => void
 }
 
 interface DragItem {
-  index: number;
-  id: string;
-  type: string;
+  index: number
+  id: string
+  type: string
 }
 
 export const SortableWrapper: FC<PropsWithChildren<SortableWrapperType>> = ({
@@ -22,7 +22,7 @@ export const SortableWrapper: FC<PropsWithChildren<SortableWrapperType>> = ({
   children,
   moveBlock,
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null)
   const [{ handlerId }, drop] = useDrop<
     DragItem,
     void,
@@ -32,32 +32,32 @@ export const SortableWrapper: FC<PropsWithChildren<SortableWrapperType>> = ({
     collect(monitor) {
       return {
         handlerId: monitor.getHandlerId(),
-      };
+      }
     },
     hover(item: DragItem, monitor) {
       if (!ref.current) {
-        return;
+        return
       }
-      const dragIndex = item.index;
-      const hoverIndex = index;
+      const dragIndex = item.index
+      const hoverIndex = index
 
       // Don't replace items with themselves
       if (dragIndex === hoverIndex) {
-        return;
+        return
       }
 
       // Determine rectangle on screen
-      const hoverBoundingRect = ref.current?.getBoundingClientRect();
+      const hoverBoundingRect = ref.current?.getBoundingClientRect()
 
       // Get vertical middle
       const hoverMiddleY =
-        (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
+        (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2
 
       // Determine mouse position
-      const clientOffset = monitor.getClientOffset();
+      const clientOffset = monitor.getClientOffset()
 
       // Get pixels to the top
-      const hoverClientY = (clientOffset as XYCoord).y - hoverBoundingRect.top;
+      const hoverClientY = (clientOffset as XYCoord).y - hoverBoundingRect.top
 
       // Only perform the move when the mouse has crossed half of the items height
       // When dragging downwards, only move when the cursor is below 50%
@@ -65,37 +65,37 @@ export const SortableWrapper: FC<PropsWithChildren<SortableWrapperType>> = ({
 
       // Dragging downwards
       if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
-        return;
+        return
       }
 
       // Dragging upwards
       if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
-        return;
+        return
       }
 
       // Time to actually perform the action
-      moveBlock(dragIndex, hoverIndex);
+      moveBlock(dragIndex, hoverIndex)
 
       // Note: we're mutating the monitor item here!
       // Generally it's better to avoid mutations,
       // but it's good here for the sake of performance
       // to avoid expensive index searches.
-      item.index = hoverIndex;
+      item.index = hoverIndex
     },
-  });
+  })
 
   const [{ isDragging }, drag] = useDrag({
     type: ItemTypes.SORTABLE,
     item: () => {
-      return { id, index };
+      return { id, index }
     },
     collect: (monitor: DragSourceMonitor) => ({
       isDragging: monitor.isDragging(),
     }),
-  });
+  })
 
-  const opacity = isDragging ? 0 : 1;
-  drag(drop(ref));
+  const opacity = isDragging ? 0 : 1
+  drag(drop(ref))
   return (
     <div
       ref={ref}
@@ -105,5 +105,5 @@ export const SortableWrapper: FC<PropsWithChildren<SortableWrapperType>> = ({
     >
       {children}
     </div>
-  );
-};
+  )
+}

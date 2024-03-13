@@ -1,7 +1,7 @@
-import Paragraph from "@/components/reusable/paragraph";
-import Ornament1 from "./ornament1";
-import Ornament2 from "./ornament2";
-import Ornament3 from "./ornament3";
+import Paragraph from '@/components/reusable/paragraph'
+import Ornament1 from './ornament1'
+import Ornament2 from './ornament2'
+import Ornament3 from './ornament3'
 
 export default function SectionOne() {
   return (
@@ -51,5 +51,5 @@ export default function SectionOne() {
       <Ornament2 />
       <Ornament3 />
     </section>
-  );
+  )
 }

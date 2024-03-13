@@ -1,5 +1,5 @@
-"use client";
-import { motion } from "framer-motion";
+'use client'
+import { motion } from 'framer-motion'
 export default function SectionGolkarControllingElection() {
   return (
     <div
@@ -21,5 +21,5 @@ export default function SectionGolkarControllingElection() {
         </motion.h2>
       </div>
     </div>
-  );
+  )
 }

@@ -1,55 +1,55 @@
-import { useBlocks } from "@/store/useBlocks";
-import { EditorContent, useEditor } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
+import { useBlocks } from '@/store/useBlocks'
+import { EditorContent, useEditor } from '@tiptap/react'
+import StarterKit from '@tiptap/starter-kit'
 import {
   Heading1Icon,
   Heading2Icon,
   Heading3Icon,
   TrashIcon,
-} from "lucide-react";
+} from 'lucide-react'
 export type ContentHeadingType = {
-  sectionId: string;
-  index: number;
-};
+  sectionId: string
+  index: number
+}
 export default function ContentHeading({
   sectionId,
   index,
 }: ContentHeadingType) {
-  const [blocks, setBlocks] = useBlocks();
+  const [blocks, setBlocks] = useBlocks()
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
         heading: {
           levels: [1, 2, 3],
           HTMLAttributes: {
-            class: "heading",
+            class: 'heading',
           },
         },
       }),
     ],
-    content: blocks[sectionId][index].content ?? "Heading Title",
+    content: blocks[sectionId][index].content ?? 'Heading Title',
     onBlur: () => {
       setBlocks((prev) => {
-        const currentBlock = prev[sectionId][index];
-        currentBlock.content = editor?.getHTML() ?? "";
-        prev[sectionId][index] = currentBlock;
-        const currentSections = prev[sectionId];
-        return { ...prev, [sectionId]: currentSections };
-      });
+        const currentBlock = prev[sectionId][index]
+        currentBlock.content = editor?.getHTML() ?? ''
+        prev[sectionId][index] = currentBlock
+        const currentSections = prev[sectionId]
+        return { ...prev, [sectionId]: currentSections }
+      })
     },
-  });
+  })
   const removeBlock = () => {
     setBlocks((prev) => {
-      prev[sectionId].splice(index, 1);
+      prev[sectionId].splice(index, 1)
       for (const block of prev[sectionId]) {
-        const index = prev[sectionId].indexOf(block);
-        block.order = index;
-        block.index = index;
+        const index = prev[sectionId].indexOf(block)
+        block.order = index
+        block.index = index
       }
-      const currentSections = prev[sectionId];
-      return { ...prev, [sectionId]: currentSections };
-    });
-  };
+      const currentSections = prev[sectionId]
+      return { ...prev, [sectionId]: currentSections }
+    })
+  }
   return (
     <div className="">
       <div className="flex flex-row-reverse space-x-2 bg-neutral-200 rounded-t-xl justify-between p-2">
@@ -68,11 +68,11 @@ export default function ContentHeading({
           <button
             type="button"
             onClick={() => {
-              editor?.commands.setHeading({ level: 1 });
-              editor?.chain().focus().toggleHeading({ level: 1 });
+              editor?.commands.setHeading({ level: 1 })
+              editor?.chain().focus().toggleHeading({ level: 1 })
             }}
             className={`rounded py-1 px-2 ${
-              editor?.isActive("heading", { level: 1 }) ? "bg-white" : ""
+              editor?.isActive('heading', { level: 1 }) ? 'bg-white' : ''
             }`}
           >
             <Heading1Icon size={20} />
@@ -80,11 +80,11 @@ export default function ContentHeading({
           <button
             type="button"
             onClick={() => {
-              editor?.commands.setHeading({ level: 2 });
-              editor?.chain().focus().toggleHeading({ level: 2 });
+              editor?.commands.setHeading({ level: 2 })
+              editor?.chain().focus().toggleHeading({ level: 2 })
             }}
             className={`rounded py-1 px-2 ${
-              editor?.isActive("heading", { level: 2 }) ? "bg-white" : ""
+              editor?.isActive('heading', { level: 2 }) ? 'bg-white' : ''
             }`}
           >
             <Heading2Icon size={20} />
@@ -92,11 +92,11 @@ export default function ContentHeading({
           <button
             type="button"
             onClick={() => {
-              editor?.commands.setHeading({ level: 3 });
-              editor?.chain().focus().toggleHeading({ level: 3 });
+              editor?.commands.setHeading({ level: 3 })
+              editor?.chain().focus().toggleHeading({ level: 3 })
             }}
             className={`rounded py-1 px-2 ${
-              editor?.isActive("heading", { level: 3 }) ? "bg-white" : ""
+              editor?.isActive('heading', { level: 3 }) ? 'bg-white' : ''
             }`}
           >
             <Heading3Icon size={20} />
@@ -107,5 +107,5 @@ export default function ContentHeading({
         <EditorContent editor={editor} />
       </div>
     </div>
-  );
+  )
 }

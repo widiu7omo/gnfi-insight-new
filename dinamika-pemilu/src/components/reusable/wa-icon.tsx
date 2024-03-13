@@ -17,5 +17,5 @@ export default function WhatsappIcon({ className }: { className?: string }) {
         fill="inherit"
       />
     </svg>
-  );
+  )
 }

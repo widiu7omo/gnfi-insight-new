@@ -232,5 +232,5 @@ export default function Ornament1() {
         </div>
       </div>
     </div>
-  );
+  )
 }

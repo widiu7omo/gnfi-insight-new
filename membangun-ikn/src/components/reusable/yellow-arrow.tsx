@@ -13,5 +13,5 @@ export default function YelloArrow({ className }: { className?: string }) {
         <path d="M36 29L0.492958 0.5L71.507 0.5L36 29Z" fill="#FF9801" />
       </svg>
     </div>
-  );
+  )
 }

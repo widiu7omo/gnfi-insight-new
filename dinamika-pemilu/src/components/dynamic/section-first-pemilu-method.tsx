@@ -1,22 +1,22 @@
-"use client";
-import { Signika } from "next/font/google";
-import { motion, stagger, useAnimate, useInView } from "framer-motion";
-import { useEffect } from "react";
-const signikaFont = Signika({ weight: "400", subsets: ["latin"] });
+'use client'
+import { Signika } from 'next/font/google'
+import { motion, stagger, useAnimate, useInView } from 'framer-motion'
+import { useEffect } from 'react'
+const signikaFont = Signika({ weight: '400', subsets: ['latin'] })
 export default function FirstElectionMethod() {
-  const [scope, animate] = useAnimate();
-  const isInView = useInView(scope, { once: true });
+  const [scope, animate] = useAnimate()
+  const isInView = useInView(scope, { once: true })
   useEffect(() => {
     if (isInView) {
       animate(
-        "p",
+        'p',
         { opacity: 1, y: 0 },
         { delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.3 }
-      );
+      )
     } else {
-      animate("p", { opacity: 0, y: 20 });
+      animate('p', { opacity: 0, y: 20 })
     }
-  }, [isInView, animate]);
+  }, [isInView, animate])
   return (
     <div className="flex flex-col xl:flex-row space-y-4 xl:space-x-8 xl:items-start">
       <motion.img
@@ -53,5 +53,5 @@ export default function FirstElectionMethod() {
         </p>
       </motion.div>
     </div>
-  );
+  )
 }

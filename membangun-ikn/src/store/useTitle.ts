@@ -1,5 +1,5 @@
-import { atom, useAtom } from "jotai";
-import { atomWithStorage } from "jotai/utils";
+import { atom, useAtom } from 'jotai'
+import { atomWithStorage } from 'jotai/utils'
 
-const titleAtom = atomWithStorage('title', "Title here");
-export const useTitle = () => useAtom(titleAtom);
+const titleAtom = atomWithStorage('title', 'Title here')
+export const useTitle = () => useAtom(titleAtom)

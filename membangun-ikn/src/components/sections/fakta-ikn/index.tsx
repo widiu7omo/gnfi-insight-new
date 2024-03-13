@@ -1,12 +1,12 @@
-import Nusantara from "./nusantara";
-import SliderIkn from "./slider-ikn";
-import { Five, Four, One, Six, Three, Two } from "./step-numbers";
+import Nusantara from './nusantara'
+import SliderIkn from './slider-ikn'
+import { Five, Four, One, Six, Three, Two } from './step-numbers'
 
 export default function FaktaIkn() {
   return (
     <div className="relative bg-[#DAAE6D]">
       <div
-        style={{ backgroundImage: "url(/assets/noise-6.png)" }}
+        style={{ backgroundImage: 'url(/assets/noise-6.png)' }}
         className="absolute bottom-0 left-0 right-0 top-0 opacity-30"
       />
       <div className="relative flex flex-col items-center justify-center py-12">
@@ -27,5 +27,5 @@ export default function FaktaIkn() {
         <SliderIkn />
       </div>
     </div>
-  );
+  )
 }

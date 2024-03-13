@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react'
 
 export default function Section({
   children,
@@ -11,5 +11,5 @@ export default function Section({
     >
       {children}
     </section>
-  );
+  )
 }

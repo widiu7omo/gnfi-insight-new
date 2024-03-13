@@ -100,5 +100,5 @@ export default function Nusantara() {
         />
       </svg>
     </div>
-  );
+  )
 }

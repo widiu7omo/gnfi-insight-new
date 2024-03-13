@@ -1,20 +1,20 @@
-import { useAnimate, useInView, stagger } from "framer-motion";
-import { useEffect } from "react";
+import { useAnimate, useInView, stagger } from 'framer-motion'
+import { useEffect } from 'react'
 
 export default function Ornament6() {
-  const [scope, animate] = useAnimate();
-  const isInView = useInView(scope, { once: false });
+  const [scope, animate] = useAnimate()
+  const isInView = useInView(scope, { once: false })
   useEffect(() => {
     if (isInView) {
       animate(
-        "path",
+        'path',
         { opacity: 1, y: 0 },
         { delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.3 }
-      );
+      )
     } else {
-      animate("path", { opacity: 0, y: 20 });
+      animate('path', { opacity: 0, y: 20 })
     }
-  }, [isInView, animate]);
+  }, [isInView, animate])
   return (
     <div className="absolute bottom-[80px] z-0 -left-[200px]">
       <svg
@@ -38,5 +38,5 @@ export default function Ornament6() {
         </g>
       </svg>
     </div>
-  );
+  )
 }
