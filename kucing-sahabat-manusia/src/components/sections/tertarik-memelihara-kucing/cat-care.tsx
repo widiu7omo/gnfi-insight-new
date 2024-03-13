@@ -2,8 +2,7 @@ export default function CatCare() {
 	return (
 		<div className="absolute bottom-0 left-0 z-10 hidden xl:block">
 			<svg
-				width="500"
-				height="537"
+				className="w-[500px] h-[537px] "
 				viewBox="0 0 500 537"
 				fill="none"
 				role="img"

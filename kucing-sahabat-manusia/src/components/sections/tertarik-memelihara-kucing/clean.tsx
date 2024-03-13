@@ -1,6 +1,6 @@
 export default function Clean() {
 	return (
-		<div className="absolute right-[-5rem] top-[5rem]">
+		<div className="absolute right-[-5rem] top-[5rem] opacity-45 xl:opacity-85">
 			<svg
 				width="416"
 				height="139"

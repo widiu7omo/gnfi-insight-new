@@ -15,7 +15,7 @@ export const interFont = Inter({
 
 export default function SectionFour() {
 	return (
-		<section id="section-4" className="">
+		<section id="section-4" className=" overflow-hidden">
 			<div className="space-y-8 flex item-center pb-24 flex-col bg-[#435348] relative">
 				<div className="bg-[#343434] top-0 w-full h-screen absolute">
 					<BlackCat />
@@ -96,7 +96,7 @@ export default function SectionFour() {
 				</div>
 			</div>
 
-			<div className="relative bg-[#D49C0B]">
+			<div className="relative bg-[#D49C0B] ">
 				<div
 					className="absolute top-0 left-0 bottom-0 right-0 opacity-10"
 					style={{ backgroundImage: "url('/assets/noise-wall.jpeg')" }}
@@ -104,7 +104,7 @@ export default function SectionFour() {
 				<Rectangle />
 				<WhiteCat />
 				<Paragraph
-					className={`py-12 ${interFont.className} relative font-medium`}
+					className={`relative z-20 py-12 ${interFont.className} relative font-medium`}
 				>
 					<p>
 						Singkat cerita, Meong Palo Karellae dan Sangiang Serri perke ke

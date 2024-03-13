@@ -1,6 +1,6 @@
 export default function GoodFood() {
 	return (
-		<div className="absolute left-[-5rem] top-0">
+		<div className="absolute left-[-5rem] top-0 opacity-45 xl:opacity-85">
 			<svg
 				width="416"
 				height="177"
