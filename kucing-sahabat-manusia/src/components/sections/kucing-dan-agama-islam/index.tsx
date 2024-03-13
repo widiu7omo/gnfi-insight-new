@@ -42,7 +42,7 @@ export default function SectionFive() {
 					</div>
 				</div>
 				<div className="space-y-8 py-24 flex-col relative bg-[#35472D]/60">
-					<motion.h2
+					<motion.h3
 						viewport={{ once: true }}
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export default function SectionFive() {
 							pernah berpesan kepada sahabatnya agar menyayangi kucing
 							peliharaan layaknya keluarga sendiri
 						</span>
-					</motion.h2>
+					</motion.h3>
 
 					<Paragraph className={`font-[300] text-white ${interFont.className}`}>
 						<p>

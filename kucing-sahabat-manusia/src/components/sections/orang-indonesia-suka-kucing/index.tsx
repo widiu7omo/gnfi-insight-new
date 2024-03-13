@@ -36,12 +36,11 @@ export default function SectionTwo() {
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.3 }}
-						className={`relative z-10 mx-auto max-w-3xl text-center text-2xl font-bold leading-snug text-dark lg:text-3xl xl:text-5xl ${lilitaOneFont.className}`}
+						className={`relative z-10 mx-auto max-w-3xl text-center text-2xl font-bold leading-snug text-dark lg:text-5xl xl:text-6xl ${lilitaOneFont.className}`}
 					>
 						<span className="relative z-50">
 							Data Membuktikan, Orang Indonesia Suka Kucing
 						</span>
-						{/* <Ornament1 /> */}
 					</motion.h2>
 
 					<Paragraph

@@ -7,7 +7,7 @@ export default function SectionSeven() {
 	return (
 		<section id="section-7">
 			<div className="relative bg-[#FFF7F7]">
-				<div className="absolute top-0 bottom-0 right-0 left-0 z-0 bg-[radial-gradient(100%_50%_at_50%_65%,_#FFFFFF_0%,_#060609_100%)] " />
+				<div className="absolute top-0 bottom-0 right-0 left-0 z-0 bg-[radial-gradient(100%_55%_at_50%_65%,_#FFFFFF_0%,_#060609_100%)] " />
 				<h2 className="text-6xl max-w-4xl mx-auto text-center text-white font-bold leading-snug relative top-[8rem] h-screen">
 					Tertarik Memelihara Kucing? Perhatikan Hal Ini!
 				</h2>
