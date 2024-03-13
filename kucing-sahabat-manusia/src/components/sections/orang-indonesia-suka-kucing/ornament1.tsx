@@ -2,12 +2,11 @@ import { motion } from "framer-motion";
 
 export default function Ornament1() {
 	return (
-		<div className="absolute z-0 top-0 right-0 left-0 bottom-0">
+		<div className="absolute z-0 top-0 right-0 left-0 bottom-0 xl:block hidden">
 			<svg
 				role="img"
 				aria-label="Or1"
-				width="100%"
-				height="100%"
+				className="w-full h-full"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
 			>

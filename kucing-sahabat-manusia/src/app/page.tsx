@@ -13,7 +13,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	metadataBase: new URL(
-		"https://www.goodnewsfromindonesia.id/special-insights/membangun-ikn-mewujudkan-wacana-lama-indonesia",
+		"https://www.goodnewsfromindonesia.id/special-insights/kucing-sahabat-manusia",
 	),
 	title: "Kucing, Sahabat Manusia | Good News From Indonesia",
 	description: "Kucing, Sahabat Manusia",
@@ -35,9 +35,9 @@ export default function Home() {
 			<Navbar />
 			<Toc />
 			<IntroductionHero />
-			{/* <SectionOne /> */}
-			{/* <SectionTwo /> */}
-			{/* <SectionThree /> */}
+			<SectionOne />
+			<SectionTwo />
+			<SectionThree />
 			{/* <SectionFour /> */}
 			{/* <SectionFive /> */}
 			{/* <SectionSix /> */}

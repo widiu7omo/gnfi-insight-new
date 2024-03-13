@@ -29,6 +29,9 @@ export default function Counter({ from, to }: { from: number; to: number }) {
 	}, [from, to, animate, isInView, scope.current]);
 
 	return (
-		<div className="text-2xl font-medium  transition-opacity" ref={scope} />
+		<div
+			className="text-xl xl:text-2xl font-medium  transition-opacity"
+			ref={scope}
+		/>
 	);
 }

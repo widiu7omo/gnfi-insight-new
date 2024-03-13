@@ -3,7 +3,7 @@ import Ornament1 from "./ornament1";
 
 export default function SectionOne() {
 	return (
-		<div className="bg-[#FFF4E4] py-8">
+		<div className="bg-[#FFF4E4] py-0 xl:py-8">
 			<section className="relative w-full pb-20 pt-10 xl:pt-20" id="section-1">
 				<Paragraph>
 					<p>

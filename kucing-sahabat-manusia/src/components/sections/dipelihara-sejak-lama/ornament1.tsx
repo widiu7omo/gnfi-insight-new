@@ -1,6 +1,6 @@
 export default function Ornament1() {
 	return (
-		<div className="absolute -right-[10rem] top-8">
+		<div className="absolute -right-[10rem] top-8 xl:block hidden">
 			<svg
 				width="119"
 				height="104"

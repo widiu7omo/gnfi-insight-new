@@ -1,12 +1,11 @@
 export default function Door() {
 	return (
-		<div className="absolute right-[10rem] bottom-0">
+		<div className="absolute xl:right-[10rem] right-0 bottom-0 ">
 			<div className="relative flex items-center justify-center pl-32">
 				<svg
 					aria-label="Door"
 					role="img"
-					width="318"
-					height="722"
+					className="w-full h-[300px] sm:h-[500px] md:w-[318px] md:h-[722px]"
 					viewBox="0 0 318 722"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -59,17 +58,17 @@ export default function Door() {
 					</defs>
 				</svg>
 				<img
-					className="absolute right-0 top-4 z-10"
+					className="absolute right-0 h-[200px] sm:h-[300px] md:h-auto bottom-0 md:top-4 z-10 "
 					src="assets/grand-cat.png"
 					alt="Grand Cat"
 				/>
 				<img
-					className="absolute z-10 h-[500px] mt-[10rem] mr-[4rem]"
+					className="absolute z-10 h-[200px] sm:h-[260px] md:h-[500px] bottom-0 md:mt-[10rem] right-0 md:mr-[4rem]"
 					src="assets/lion.png"
 					alt="Lion"
 				/>
 				<img
-					className="absolute z-10 -bottom-[2rem] left-0 w-[200px]"
+					className="absolute z-10 -bottom-[2rem] left-0 w-[100px] md:w-[200px]"
 					src="assets/cat.png"
 					alt="Cat"
 				/>
