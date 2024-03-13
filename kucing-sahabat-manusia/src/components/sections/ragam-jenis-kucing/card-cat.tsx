@@ -1,7 +1,7 @@
 import Paragraph from "@/components/reusable/paragraph";
 import { motion } from "framer-motion";
 import type { Cat } from "./indonesian-cats";
-export default function CardCat({ cat }: { cat: Cat }) {
+const CardCat = ({ cat }: { cat: Cat }) => {
 	return (
 		<div className="flex flex-col items-start h-full space-y-3 z-20 max-w-2xl mx-auto">
 			<div className="relative flex items-center justify-center h-[258px] flex-none  top-0">
@@ -24,4 +24,5 @@ export default function CardCat({ cat }: { cat: Cat }) {
 			<Paragraph className="text-white flex-grow">{cat.desc}</Paragraph>
 		</div>
 	);
-}
+};
+export default CardCat;

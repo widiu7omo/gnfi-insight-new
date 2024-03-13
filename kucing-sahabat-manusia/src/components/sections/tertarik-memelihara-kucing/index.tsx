@@ -6,9 +6,9 @@ import CatCare from "./cat-care";
 export default function SectionSeven() {
 	return (
 		<section id="section-7">
-			<div className="relative bg-[#FFF7F7]">
+			<div className="relative bg-[#FFF7F7] overflow-clip">
 				<div className="absolute top-0 bottom-0 right-0 left-0 z-0 bg-[radial-gradient(100%_55%_at_50%_65%,_#FFFFFF_0%,_#060609_100%)] " />
-				<h2 className="text-6xl max-w-4xl mx-auto text-center text-white font-bold leading-snug relative top-[8rem] h-screen">
+				<h2 className="text-3xl lg:text-5xl xl:text-6xl max-w-4xl mx-auto text-center text-white font-bold leading-snug relative top-[8rem] h-[400px] xl:h-screen">
 					Tertarik Memelihara Kucing? Perhatikan Hal Ini!
 				</h2>
 				<div className="bg-white relative pt-[10rem]">
@@ -16,9 +16,9 @@ export default function SectionSeven() {
 					<img
 						src="assets/cat-sleep.png"
 						alt="Cat Sleep"
-						className="top-[-52rem] absolute"
+						className="top-[-13.9rem] xl:top-[-52rem] absolute"
 					/>
-					<Paragraph className="py-8 relative ">
+					<Paragraph className="py-8 relative">
 						<p>
 							Kawan GNFI tertarik memelihara kucing juga? Tentu saja bisa, yang
 							penting perlu diperhatikan bahwa jenis kucing yang dipelihara
@@ -35,7 +35,7 @@ export default function SectionSeven() {
 							Pada dasarnya, hal yang harus diperhatikan dalam memelihara kucing
 							tak banyak berbeda dengan hewan lain.{" "}
 						</p>
-						<div className="pl-[15rem] relative">
+						<div className="pl-0 xl:pl-[15rem] relative">
 							<GoodFood />
 							<div className="relative">
 								<p className="text-3xl font-bold text-[#823600] mb-0">
@@ -53,7 +53,7 @@ export default function SectionSeven() {
 						</div>
 						<div className="relative">
 							<Clean />
-							<div className="relative pr-[15rem]">
+							<div className="relative pr-0 xl:pr-[15rem]">
 								<p className="text-3xl font-bold text-[#823600] mb-0">Kedua</p>
 								<p className="mt-2">
 									Pemilik harus memperhatikan kebersihan kucingnya. Apabila

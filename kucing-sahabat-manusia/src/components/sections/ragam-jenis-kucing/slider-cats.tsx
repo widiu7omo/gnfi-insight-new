@@ -1,18 +1,20 @@
 "use client";
 import { cn, uniqueKey } from "@/lib/utils";
-import { type PanInfo, motion, useMotionValue } from "framer-motion";
 import { ArrowLeft, ArrowRight, PawPrintIcon } from "lucide-react";
-import { type PropsWithChildren, useRef, useState } from "react";
+import { type PropsWithChildren, useRef } from "react";
 import CardCat from "./card-cat";
 import { indoCats } from "./indonesian-cats";
-
+import { useActiveSlide } from "@/store/useSlider";
+import Slider from "react-slick";
 export default function SliderCats() {
 	const constraintsRef = useRef<HTMLDivElement | null>(null);
-	const [active, setActive] = useState(0);
-	const x = useMotionValue(0);
-	const drag = useMotionValue(0);
+	const [active, setActive] = useActiveSlide();
+	const slickRef = useRef<Slider | null>(null);
+
 	const slides = indoCats
-		.map((item) => <CardCat cat={item} />)
+		.map((item) => {
+			return <CardCat cat={item} />;
+		})
 		.map((item, i) => (
 			<SlideItem
 				key={`number-card-${
@@ -23,46 +25,36 @@ export default function SliderCats() {
 				{item}
 			</SlideItem>
 		));
-	const width = constraintsRef.current?.offsetWidth || 350;
-	const dragEndHandler = (
-		event: MouseEvent | TouchEvent | PointerEvent,
-		info: PanInfo,
-	) => {
-		// TODO: fix offset
-		const offset = info.offset.x;
-		if (Math.abs(offset) > 20) {
-			const direction = offset < 0 ? 1 : -1;
-			setActive((active) => clamp(active + direction, 0, slides.length - 1));
-		}
-	};
 	const SliderIndicator = ({
 		totalSlide,
 		className,
 	}: { totalSlide: number; className?: string }) => {
 		return (
 			<div className={cn("absolute space-x-2", className)}>
-				<button type="button" onClick={() => setActive((prev) => prev - 1)}>
+				<button type="button" onClick={() => slickRef.current?.slickPrev()}>
 					<ArrowLeft className="text-neutral-600" />
 				</button>
 				{new Array(totalSlide).fill(0).map((item, i) => (
-					<div
+					<button
+						type="button"
+						onClick={() => slickRef.current?.slickGoTo(i)}
 						className={`${active === i ? "text-white" : "text-neutral-600"}`}
 						key={uniqueKey()}
 					>
 						<PawPrintIcon />
-					</div>
+					</button>
 				))}
 				<button type="button">
-					<ArrowRight className="text-neutral-600" />
+					<ArrowRight
+						className="text-neutral-600"
+						onClick={() => slickRef.current?.slickNext()}
+					/>
 				</button>
 			</div>
 		);
 	};
 	return (
-		<div
-			className="relative block h-[650px] xl:h-[600px] w-full overflow-hidden"
-			ref={constraintsRef}
-		>
+		<div className="relative h-full w-full pb-12 " ref={constraintsRef}>
 			<SliderIndicator
 				className="xl:flex hidden right-[4rem]"
 				totalSlide={slides.length}
@@ -71,16 +63,21 @@ export default function SliderCats() {
 				className="flex xl:hidden bottom-0 right-[25%] pb-2"
 				totalSlide={slides.length}
 			/>
-			<motion.div
-				className="absolute bottom-0 left-0 right-0 top-0 flex w-full flex-row"
-				onDragEnd={dragEndHandler}
-				drag="x"
-				animate={{
-					x: -1 * active * width,
+			<Slider
+				ref={slickRef}
+				{...{
+					dots: true,
+					infinite: false,
+					adaptiveHeight: true,
+					speed: 500,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					beforeChange: (currentSlide: number, next: number) => setActive(next),
 				}}
+				className="bottom-0 left-0 right-0 top-0 flex w-full flex-row"
 			>
 				{slides}
-			</motion.div>
+			</Slider>
 		</div>
 	);
 }

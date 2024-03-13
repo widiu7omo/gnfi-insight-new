@@ -11,6 +11,9 @@ import SectionSix from "@/components/sections/ragam-jenis-kucing";
 import SectionSeven from "@/components/sections/tertarik-memelihara-kucing";
 import type { Metadata } from "next";
 
+import "slick-carousel/slick/slick.css";
+import "./slick-carousel.css";
+
 export const metadata: Metadata = {
 	metadataBase: new URL(
 		"https://www.goodnewsfromindonesia.id/special-insights/kucing-sahabat-manusia",
@@ -41,7 +44,7 @@ export default function Home() {
 			<SectionFour />
 			<SectionFive />
 			<SectionSix />
-			{/* <SectionSeven /> */}
+			<SectionSeven />
 			<Footer />
 		</main>
 	);
