@@ -4,21 +4,25 @@ import GoodFood from "./good-food";
 import CatCare from "./cat-care";
 
 export default function SectionSeven() {
+	/* Section 7 */
+
+	// background: radial-gradient(46.32% 46.32% at 50% 53.68%, #FFFFFF 0%, #000000 100%);
+
 	return (
 		<section id="section-7">
-			<div className="relative bg-[#FFF7F7] mb-[10rem]">
-				<div className="absolute top-0 bottom-0 right-0 left-0 z-0 bg-gradient-to-b from-[#EDC3B7] to-[#6D9AF5]/50 h-screen" />
-				<h2 className="text-6xl max-w-4xl mx-auto text-center font-bold leading-snug relative top-[5rem] h-screen">
+			<div className="relative bg-[#FFF7F7]">
+				<div className="absolute top-0 bottom-0 right-0 left-0 z-0 bg-[radial-gradient(100%_50%_at_50%_65%,_#FFFFFF_0%,_#060609_100%)] " />
+				<h2 className="text-6xl max-w-4xl mx-auto text-center text-white font-bold leading-snug relative top-[8rem] h-screen">
 					Tertarik Memelihara Kucing? Perhatikan Hal Ini!
 				</h2>
-				<div className="bg-[#FFF7F7] relative top-[10rem] mb-[10rem]">
+				<div className="bg-white relative pt-[10rem]">
 					<CatCare />
 					<img
 						src="assets/cat-sleep.png"
 						alt="Cat Sleep"
-						className="top-[-62rem] absolute"
+						className="top-[-52rem] absolute"
 					/>
-					<Paragraph className="py-8 relative">
+					<Paragraph className="py-8 relative ">
 						<p>
 							Kawan GNFI tertarik memelihara kucing juga? Tentu saja bisa, yang
 							penting perlu diperhatikan bahwa jenis kucing yang dipelihara
