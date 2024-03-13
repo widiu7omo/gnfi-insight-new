@@ -8,15 +8,16 @@ export default function SectionSeven() {
 		<section id="section-7">
 			<div className="relative bg-[#FFF7F7] overflow-clip">
 				<div className="absolute top-0 bottom-0 right-0 left-0 z-0 bg-[radial-gradient(100%_55%_at_50%_65%,_#FFFFFF_0%,_#060609_100%)] " />
-				<h2 className="text-3xl lg:text-5xl xl:text-6xl max-w-4xl mx-auto text-center text-white font-bold leading-snug relative top-[8rem] h-[400px] xl:h-screen">
+				<h2 className="text-3xl lg:text-5xl xl:text-6xl max-w-full px-4 md:px-0 md:max-w-xl xl:max-w-4xl mx-auto text-center text-white font-bold leading-snug relative top-[8rem] h-[450px] sm:h-[500px] md:h-[calc(100vh-500px)] lg:h-screen">
 					Tertarik Memelihara Kucing? Perhatikan Hal Ini!
 				</h2>
-				<div className="bg-white relative pt-[10rem]">
+
+				<div className="bg-white relative pt-[2rem] md:pt-[4rem] lg:pt-[7rem] xl:pt-[10rem] flex items-center justify-center">
 					<CatCare />
 					<img
 						src="assets/cat-sleep.png"
 						alt="Cat Sleep"
-						className="top-[-13.9rem] xl:top-[-52rem] absolute"
+						className="-top-[152px] sm:-top-[189px] md:-top-[285px] lg:-top-[380px] xl:-top-[534px] w-[410px] h-[256px] sm:w-[510px] sm:h-[318px] md:w-[768px] md:h-[479px] lg:w-[1024px] lg:h-[639px] xl:w-[1411px] xl:h-[899px] absolute z-20 object-cover"
 					/>
 					<Paragraph className="py-8 relative">
 						<p>
