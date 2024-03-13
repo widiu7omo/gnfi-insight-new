@@ -35,13 +35,13 @@ export default function Home() {
 			<Navbar />
 			<Toc />
 			<IntroductionHero />
-			<SectionOne />
-			<SectionTwo />
-			<SectionThree />
-			<SectionFour />
-			<SectionFive />
-			<SectionSix />
-			<SectionSeven />
+			{/* <SectionOne /> */}
+			{/* <SectionTwo /> */}
+			{/* <SectionThree /> */}
+			{/* <SectionFour /> */}
+			{/* <SectionFive /> */}
+			{/* <SectionSix /> */}
+			{/* <SectionSeven /> */}
 			<Footer />
 		</main>
 	);

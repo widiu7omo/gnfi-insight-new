@@ -4,7 +4,7 @@ import { ChevronsDownIcon } from "lucide-react";
 export default function IntroductionHero() {
 	return (
 		<div
-			className="relative -top-[150px] -mb-[150px] h-screen w-full !bg-cover"
+			className="relative -top-[150px] -mb-[150px] h-screen w-full !bg-cover !bg-[50%_30%] md:bg-center"
 			style={{
 				background: "url(/assets/hero-bg.webp)",
 			}}
