@@ -20,13 +20,13 @@ export default function SectionFour() {
 				<div className="bg-[#343434] top-0 w-full h-screen absolute">
 					<BlackCat />
 				</div>
-				<div className="relative top-0 py-[8rem]">
+				<div className="relative top-0 py-4 xl:py-[8rem]">
 					<motion.h2
 						viewport={{ once: true }}
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.3 }}
-						className={`relative z-40 mx-auto max-w-3xl text-center !text-6xl font-bold leading-snug text-[#FAD30D] ${interFont.className}`}
+						className={`relative z-40 px-4 md:px-0 mx-auto max-w-full xl:max-w-3xl text-center !text-3xl lg:!text-5xl xl:!text-6xl font-bold leading-snug text-[#FAD30D] ${interFont.className}`}
 					>
 						<Ornament1 />
 						<span className="relative">Hewan Penuh Mitos</span>

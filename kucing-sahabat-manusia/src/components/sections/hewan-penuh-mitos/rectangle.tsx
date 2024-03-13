@@ -11,7 +11,7 @@ export const interFont = Inter({
 
 export default function Rectangle() {
 	return (
-		<div className="bg-[#2C2C2C] px-20 py-12 max-w-2xl mx-auto relative -top-[7rem] -mb-[7rem]">
+		<div className="bg-[#2C2C2C] px-4 xl:px-20 py-4 xl:py-12 max-w-full xl:max-w-2xl mx-auto relative -top-[7rem] -mb-[7rem]">
 			<CalicoCat />
 			<Paragraph
 				className={` text-white ${interFont.className} relative font-base text-xl`}
