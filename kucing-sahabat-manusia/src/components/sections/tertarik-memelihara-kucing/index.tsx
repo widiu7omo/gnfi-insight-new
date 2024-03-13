@@ -4,10 +4,6 @@ import GoodFood from "./good-food";
 import CatCare from "./cat-care";
 
 export default function SectionSeven() {
-	/* Section 7 */
-
-	// background: radial-gradient(46.32% 46.32% at 50% 53.68%, #FFFFFF 0%, #000000 100%);
-
 	return (
 		<section id="section-7">
 			<div className="relative bg-[#FFF7F7]">
