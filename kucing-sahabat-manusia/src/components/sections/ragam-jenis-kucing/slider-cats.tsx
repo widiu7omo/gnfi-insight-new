@@ -56,11 +56,11 @@ export default function SliderCats() {
 	return (
 		<div className="relative h-full w-full pb-12 " ref={constraintsRef}>
 			<SliderIndicator
-				className="xl:flex hidden right-[4rem]"
+				className="xl:flex hidden right-[4rem] z-20"
 				totalSlide={slides.length}
 			/>
 			<SliderIndicator
-				className="flex xl:hidden bottom-0 right-[25%] pb-2"
+				className="flex xl:hidden bottom-0 right-[25%] pb-2 z-20"
 				totalSlide={slides.length}
 			/>
 			<Slider
@@ -72,7 +72,7 @@ export default function SliderCats() {
 					speed: 500,
 					slidesToShow: 1,
 					slidesToScroll: 1,
-					beforeChange: (currentSlide: number, next: number) => setActive(next),
+					beforeChange: (_current: number, next: number) => setActive(next),
 				}}
 				className="bottom-0 left-0 right-0 top-0 flex w-full flex-row"
 			>
