@@ -8,7 +8,7 @@ export default function CardCat({ cat }: { cat: Cat }) {
 				<img
 					src={cat.image}
 					alt="Busok Cat"
-					className="left-0 top-0 w-fit relative z-10 h-[258px]"
+					className="left-4 xl:left-0 top-0 w-fit relative z-10 h-[258px]"
 				/>
 				<motion.div
 					initial={{ opacity: 0, scale: 0.5 }}

@@ -1,13 +1,13 @@
 export default function Ornament2() {
-    return (
-        <div className="left-0 z-10 bottom-0">
-        <div className="relative w-[600px] flex-none">
-            <img
-            src="/assets/reverse-quote-symbol.png"
-            alt="Reverse Quote Symbol"
-            className="relative"
-            />
-        </div>
-        </div>
-    );
+	return (
+		<div className="left-0 z-10 bottom-0">
+			<div className="relative w-full xl:w-[600px] flex-none">
+				<img
+					src="/assets/reverse-quote-symbol.png"
+					alt="Reverse Quote Symbol"
+					className="relative"
+				/>
+			</div>
+		</div>
+	);
 }

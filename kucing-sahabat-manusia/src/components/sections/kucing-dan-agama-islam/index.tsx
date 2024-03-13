@@ -3,13 +3,9 @@ import Paragraph from "@/components/reusable/paragraph";
 import { motion } from "framer-motion";
 import { Inter } from "next/font/google";
 import AshCat from "./ash-cat";
-import BrownCat from "./brown-cat";
 import Hadits from "./hadits";
-import HaditsCaption from "./hadits-caption";
 import Quotes from "./quotes";
-import Ornament1 from "./ornament1";
-import Ornament2 from "./ornament2";
-import Ornament3 from "./ornament3";
+import Quote2 from "./quote2";
 
 export const interFont = Inter({
 	subsets: ["latin"],
@@ -19,7 +15,7 @@ export const interFont = Inter({
 export default function SectionFive() {
 	return (
 		<section id="section-5" className="">
-			<div className="relative bg-[#2d5e16]">
+			<div className="relative bg-[#2d5e16] overflow-hidden">
 				<div
 					className="absolute top-0 left-0 bottom-0 right-0 opacity-10 bg-contain"
 					style={{ backgroundImage: "url('/assets/noise-paper2.jpeg')" }}
@@ -47,7 +43,7 @@ export default function SectionFive() {
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.3 }}
-						className={`relative z-40 mx-auto max-w-3xl text-center text-2xl font-medium leading-snug text-white lg:text-xl xl:text-2xl ${interFont.className}`}
+						className={`relative z-40 mx-auto max-w-full px-4 md:px-0 xl:max-w-3xl text-center font-medium leading-snug text-white text-xl xl:text-2xl ${interFont.className}`}
 					>
 						<span className="relative z-40">
 							Nabi Muhammad SAW diketahui memiliki kucing bernama Muezza, dan
@@ -56,7 +52,7 @@ export default function SectionFive() {
 						</span>
 					</motion.h3>
 
-					<Paragraph className={`font-[300] text-white ${interFont.className}`}>
+					<Paragraph className={`font-light text-white ${interFont.className}`}>
 						<p>
 							Kepercayaan mengenai kucing tidak hanya tertuang dalam mitos-mitos
 							di berbagai daerah, namun agama pun demikian. Agama Islam sebagai
@@ -106,20 +102,7 @@ export default function SectionFive() {
 					</Paragraph>
 				</div>
 			</div>
-			<div className="space-y-8 py-24 flex-col relative bg-white ">
-				<Paragraph className={"text-[#353434]"}>
-					<p>Ada pula sabda Nabi Muhammad SAW sebagai berikut:</p>
-					<Ornament1 />
-					<p className={"font-[700] lg:text-xl xl:text-2xl"}>
-						Ada seorang wanita disiksa disebabkan seekor kucing yang dikurungnya
-						hingga mati kelaparan, lalu wanita itu pun masuk neraka karena dia
-						tidak memberinya makan dan minum ketika mengurungnya, dan tidak
-						melepaskannya, sehingga dia dapat menyantap serangga tanah.
-					</p>
-					<Ornament2 />
-				</Paragraph>
-				<Ornament3 />
-			</div>
+			<Quote2 />
 		</section>
 	);
 }

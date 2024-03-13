@@ -39,8 +39,8 @@ export default function Home() {
 			<SectionTwo />
 			<SectionThree />
 			<SectionFour />
-			{/* <SectionFive /> */}
-			{/* <SectionSix /> */}
+			<SectionFive />
+			<SectionSix />
 			{/* <SectionSeven /> */}
 			<Footer />
 		</main>

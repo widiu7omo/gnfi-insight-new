@@ -31,7 +31,7 @@ export default function SectionSix() {
 						Berikut ini beberapa jenis kucing lucu asli Indonesia:
 					</p>
 				</Paragraph>
-				<div className="h-[600px]" />
+				<div className="h-[650px] xl:h-[600px]" />
 				<div className="absolute z-10 bottom-0 w-full">
 					<SliderCats />
 				</div>

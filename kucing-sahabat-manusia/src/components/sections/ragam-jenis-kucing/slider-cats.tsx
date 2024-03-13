@@ -1,13 +1,7 @@
 "use client";
-import { uniqueKey } from "@/lib/utils";
+import { cn, uniqueKey } from "@/lib/utils";
 import { type PanInfo, motion, useMotionValue } from "framer-motion";
-import {
-	ArrowLeft,
-	ArrowRight,
-	Cat,
-	CatIcon,
-	PawPrintIcon,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, PawPrintIcon } from "lucide-react";
 import { type PropsWithChildren, useRef, useState } from "react";
 import CardCat from "./card-cat";
 import { indoCats } from "./indonesian-cats";
@@ -41,9 +35,12 @@ export default function SliderCats() {
 			setActive((active) => clamp(active + direction, 0, slides.length - 1));
 		}
 	};
-	const SliderIndicator = ({ totalSlide }: { totalSlide: number }) => {
+	const SliderIndicator = ({
+		totalSlide,
+		className,
+	}: { totalSlide: number; className?: string }) => {
 		return (
-			<div className="absolute flex space-x-2 right-[4rem]">
+			<div className={cn("absolute space-x-2", className)}>
 				<button type="button" onClick={() => setActive((prev) => prev - 1)}>
 					<ArrowLeft className="text-neutral-600" />
 				</button>
@@ -63,10 +60,17 @@ export default function SliderCats() {
 	};
 	return (
 		<div
-			className="relative block h-[600px] w-full overflow-hidden"
+			className="relative block h-[650px] xl:h-[600px] w-full overflow-hidden"
 			ref={constraintsRef}
 		>
-			<SliderIndicator totalSlide={slides.length} />
+			<SliderIndicator
+				className="xl:flex hidden right-[4rem]"
+				totalSlide={slides.length}
+			/>
+			<SliderIndicator
+				className="flex xl:hidden bottom-0 right-[25%] pb-2"
+				totalSlide={slides.length}
+			/>
 			<motion.div
 				className="absolute bottom-0 left-0 right-0 top-0 flex w-full flex-row"
 				onDragEnd={dragEndHandler}

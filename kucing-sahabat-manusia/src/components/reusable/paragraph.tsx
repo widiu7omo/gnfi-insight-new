@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { stagger, useAnimate, useInView } from "framer-motion";
 import { type PropsWithChildren, useEffect } from "react";
 
@@ -22,7 +23,7 @@ export default function Paragraph({
 	}, [isInView, animate]);
 	return (
 		<div
-			className={`prose relative z-[5] mx-auto px-4 xl:px-0 ${className}`}
+			className={cn("prose relative z-[5] mx-auto px-4 xl:px-0", className)}
 			ref={scope}
 		>
 			{children}
