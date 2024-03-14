@@ -13,7 +13,7 @@ const meta = {
 	},
 	args: {
 		title: "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
-		coverImage: "/assets/hero-example.jpg",
+		coverImage: "/assets/section-header-example.webp",
 	},
 } satisfies Meta<typeof SectionHeader>;
 
