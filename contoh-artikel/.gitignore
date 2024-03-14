@@ -37,3 +37,4 @@ next-env.d.ts
 
 /public/tinymce/
 *storybook.log
+storybook-static/*

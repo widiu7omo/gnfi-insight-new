@@ -5,6 +5,7 @@ import "./page.css";
 import { ChevronsDownIcon } from "lucide-react";
 import { Paragraph } from "./Paragraph";
 import Ornament from "./Ornament";
+import { Navbar } from "./Navbar";
 
 type User = {
 	name: string;
@@ -15,6 +16,7 @@ export const Page: React.FC = () => {
 
 	return (
 		<article>
+			<Navbar />
 			<Hero
 				title="Membangun IKN, Mewujudkan Wacana Lama Indonesia"
 				coverUrl="/assets/hero-example.jpg"
