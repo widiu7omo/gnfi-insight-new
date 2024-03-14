@@ -10,7 +10,7 @@ export default function Quote2() {
 			<Paragraph
 				className={"text-[#353434] relative flex flex-grow flex-col !pr-6"}
 			>
-				<p>Ada pula sabda Nabi Muhammad SAW sebagai berikut:</p>
+				<p>Ada pula sabda Nabi Muhammad ﷺ sebagai berikut:</p>
 				<Ornament1 />
 				<p className={"font-semibold lg:text-xl xl:text-2xl"}>
 					Ada seorang wanita disiksa disebabkan seekor kucing yang dikurungnya

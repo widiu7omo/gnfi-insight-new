@@ -46,7 +46,7 @@ export default function SectionFive() {
 						className={`relative z-40 mx-auto max-w-full px-4 md:px-0 xl:max-w-3xl text-center font-medium leading-snug text-white text-xl xl:text-2xl ${interFont.className}`}
 					>
 						<span className="relative z-40">
-							Nabi Muhammad SAW diketahui memiliki kucing bernama Muezza, dan
+							Nabi Muhammad ﷺ diketahui memiliki kucing bernama Muezza, dan
 							pernah berpesan kepada sahabatnya agar menyayangi kucing
 							peliharaan layaknya keluarga sendiri
 						</span>
@@ -61,12 +61,12 @@ export default function SectionFive() {
 						</p>
 						<p>
 							Dalam ajaran Islam, kucing disebut sebagai hewan kesayangan Nabi
-							Muhammad SAW. “Kucing tidak najis. Ia binatang yang ada di sekitar
+							Muhammad ﷺ. “Kucing tidak najis. Ia binatang yang ada di sekitar
 							kalian,” demikian bunyi Hadis Riwayat (HR) Abu Dawud dan Tirmidzi.
 							Untuk itu, hukum memelihara kucing untuk umat Islam ialah boleh. 
 						</p>
 						<p>
-							Nabi Muhammad SAW juga pernah berpesan untuk menyayangi kucing
+							Nabi Muhammad ﷺ juga pernah berpesan untuk menyayangi kucing
 							peliharaan layaknya keluarga sendiri. Ia dapat memberikan
 							kebahagiaan bagi manusia, meredakan amarah, dan stres manusia.
 							Nabi pun memiliki kucing peliharaan bernama Muezza.
@@ -83,7 +83,7 @@ export default function SectionFive() {
 							Kitab hadis tentang para Nabi yang artinya: telah bercerita
 							kepadaku 'Abdullah bin Muhammad bin Asma' telah bercerita kepada
 							kami Juwairiyah bin Asmai dari Nafi' dari 'Abdullah bin 'Umar
-							radhiallahu'anhuma bahwa Nabi Muhammad SAW bersabda, "Ada seorang
+							radhiallahu'anhuma bahwa Nabi Muhammad ﷺ bersabda, "Ada seorang
 							wanita disiksa disebabkan seekor kucing yang dikurungnya hingga
 							mati kelaparan, lalu wanita itu pun masuk neraka karena dia tidak
 							memberinya makan dan minum ketika mengurungnya, dan tidak
