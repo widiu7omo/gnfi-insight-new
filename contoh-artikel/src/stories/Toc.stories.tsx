@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { NavbarPreview } from "./NavbarPreview";
+import { TocPreview } from "./TocPreview";
 
 const meta = {
-	title: "Insight/Navbar",
-	component: NavbarPreview,
+	title: "Insight/Table Of Content",
+	component: TocPreview,
 	// This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
 	tags: ["autodocs"],
 	parameters: {
@@ -14,17 +14,11 @@ const meta = {
 	args: {
 		blurEffect: false,
 	},
-} satisfies Meta<typeof NavbarPreview>;
+} satisfies Meta<typeof TocPreview>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	args: {},
-};
-
-export const GlassTransparent: Story = {
-	args: {
-		blurEffect: true,
-	},
 };
