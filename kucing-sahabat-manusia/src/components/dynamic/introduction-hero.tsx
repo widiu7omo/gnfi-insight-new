@@ -6,10 +6,10 @@ export default function IntroductionHero() {
 		<div
 			className="relative -top-[150px] -mb-[150px] h-screen w-full !bg-cover !bg-[50%_30%] md:bg-center"
 			style={{
-				background: "url(/assets/hero-bg.webp)",
+				background: "url(/assets/cat-hero.jpeg)",
 			}}
 		>
-			<div className="absolute h-full w-full bg-gradient-to-b from-white/0 to-[#FFF4E4]">
+			<div className="absolute h-full w-full bg-gradient-to-b via-white/10 from-white/0 to-[#FFF4E4]">
 				<div className="mx-auto flex h-full max-w-7xl flex-col justify-between px-4 py-8 xl:px-0">
 					<div className="flex flex-1 items-center justify-center">
 						<motion.h1
