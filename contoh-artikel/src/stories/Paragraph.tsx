@@ -3,13 +3,13 @@
 import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
 import { stagger, useAnimate, useInView } from "framer-motion";
-import { type PropsWithChildren, useEffect } from "react";
-type ParagraphType = {
+import { useEffect, type ReactNode, type ReactElement } from "react";
+export type ParagraphType = {
+	children: string | ReactElement;
 	className?: string;
 };
 export function Paragraph({ block }: { block: BlockType }) {
-	const { children, className } =
-		block.componentProps as PropsWithChildren<ParagraphType>;
+	const { children, className } = block.componentProps as ParagraphType;
 	const [scope, animate] = useAnimate();
 	const isInView = useInView(scope, { once: true });
 	useEffect(() => {

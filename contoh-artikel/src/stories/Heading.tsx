@@ -3,12 +3,12 @@ import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import parse from "html-react-parser";
-export type HeaderType = {
+export type HeadingType = {
 	content: string;
 	className?: string;
 };
 export function Heading({ block }: { block: BlockType }) {
-	const { content, className } = block.componentProps as HeaderType;
+	const { content, className } = block.componentProps as HeadingType;
 	return (
 		<motion.div
 			viewport={{ once: true }}

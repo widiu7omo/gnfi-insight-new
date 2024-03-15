@@ -1,10 +1,9 @@
 "use client";
 import { useDrop } from "react-dnd";
-import { ContentType, ItemTypes } from "./types";
+import { ItemTypes } from "./types";
 import { useBlocks } from "@/store/useBlocks";
 import { useSections } from "@/store/useSections";
 import type { BlockType } from "@/data/types";
-import BlockSortable from "./block-sortable";
 import type { DragItemType } from "./draggable-wrapper";
 import {
 	ArrowDownToLineIcon,
@@ -13,7 +12,8 @@ import {
 	SaveIcon,
 } from "lucide-react";
 import { useState } from "react";
-export default function BlockBin({ sectionId }: { sectionId: string }) {
+import Blocks from "./blocks";
+export default function SectionItem({ sectionId }: { sectionId: string }) {
 	const [_, setBlocks] = useBlocks();
 	const [sections] = useSections();
 
@@ -76,7 +76,7 @@ export default function BlockBin({ sectionId }: { sectionId: string }) {
 					sections.length > 0 ? "p-6" : "h-[200px]"
 				}`}
 			>
-				<BlockSortable sectionId={sectionId} />
+				<Blocks sectionId={sectionId} />
 				<div className="text-neutral-500 font-medium flex items-center justify-center flex-col w-full py-3 border border-dashed border-neutral-500 rounded-xl">
 					<span>
 						{!isActive && (

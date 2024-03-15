@@ -4,6 +4,7 @@ export type BlockType = {
   order?: number
   index?: number,
   component: number,
+  componentCustomName?: string;
   //Custom Config
   componentProps: unknown
 }

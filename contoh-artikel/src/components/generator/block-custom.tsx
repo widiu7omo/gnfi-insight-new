@@ -2,7 +2,7 @@ import { useBlocks } from "@/store/useBlocks";
 import { TrashIcon } from "lucide-react";
 import { type FormEvent, useState } from "react";
 
-export default function ContentCustom({
+export default function BlockCustom({
 	sectionId,
 	index,
 }: {
@@ -10,14 +10,16 @@ export default function ContentCustom({
 	index: number;
 }) {
 	const [blocks, setBlocks] = useBlocks();
-	const [value, setValue] = useState(blocks[sectionId][index].content);
+	const [value, setValue] = useState(
+		blocks[sectionId][index].componentCustomName,
+	);
 	const onChange = (e: FormEvent<HTMLInputElement>) => {
 		setValue(e.currentTarget.value);
 	};
 	const onBlur = (e: FormEvent<HTMLInputElement>) => {
 		setBlocks((prev) => {
 			const currentBlock = prev[sectionId][index];
-			currentBlock.content = e.currentTarget.value;
+			currentBlock.componentCustomName = e.currentTarget.value;
 			prev[sectionId][index] = currentBlock;
 			const currentSections = prev[sectionId];
 			return { ...prev, [sectionId]: currentSections };
@@ -46,7 +48,7 @@ export default function ContentCustom({
 					<TrashIcon size={20} className="mr-2" />
 					<span>Remove Block</span>
 				</button>
-				<span>Custom Block</span>
+				<span>Custom Component</span>
 			</div>
 			<div className="px-6 w-full">
 				<fieldset className="flex flex-col items-start justify-start w-full ">
@@ -54,7 +56,7 @@ export default function ContentCustom({
 						htmlFor="component-name"
 						className="text-medium text-sm text-neutral-500 font-medium"
 					>
-						Component Name
+						Nama Komponen
 					</label>
 					<input
 						type="text"

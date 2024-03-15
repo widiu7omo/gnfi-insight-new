@@ -1,6 +1,6 @@
 "use client";
-import ContentBin from "@/components/generator/content-bin";
-import { ContentSection } from "@/components/generator/content-section";
+import Sections from "@/components/generator/sections";
+import { BlockSection } from "@/components/generator/block-section";
 import DraggableWrapper from "@/components/generator/draggable-wrapper";
 import {
 	ContentType,
@@ -80,7 +80,7 @@ export default function GeneratePage() {
 							name="section-group"
 							component={COMPONENT_SECTION_GROUP}
 						>
-							<ContentSection
+							<BlockSection
 								preview
 								accept={[ItemTypes.BLOCK]}
 								onDrop={handleOnDropComponent}
@@ -214,7 +214,7 @@ export default function GeneratePage() {
 							/>
 						</div>
 					</div>
-					<ContentBin onDrop={handleOnDropSection} />
+					<Sections onDrop={handleOnDropSection} />
 				</div>
 			</DndProvider>
 		</>

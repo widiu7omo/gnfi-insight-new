@@ -2,12 +2,12 @@
 import { useDrop } from "react-dnd";
 import { type DraggableItem, ItemTypes } from "./types";
 import { useSections } from "@/store/useSections";
-type ContentBinType = {
+type SectionsType = {
 	onDrop: (item: DraggableItem) => void;
 };
-import BlockBin from "./block-bin";
+import SectionItem from "./section-item";
 import { ArrowBigDown, GroupIcon } from "lucide-react";
-export default function ContentBin({ onDrop }: ContentBinType) {
+export default function Sections({ onDrop }: SectionsType) {
 	const [{ canDrop, isOver }, drop] = useDrop(() => ({
 		accept: ItemTypes.SECTION,
 		drop: onDrop,
@@ -32,7 +32,7 @@ export default function ContentBin({ onDrop }: ContentBinType) {
 			<div className="space-y-4 w-full">
 				{components.map((component) => {
 					return (
-						<BlockBin
+						<SectionItem
 							sectionId={`section-${component.index}`}
 							key={`${component.index}-key-${Math.random()}`}
 						/>
