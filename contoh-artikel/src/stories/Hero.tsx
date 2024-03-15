@@ -1,18 +1,16 @@
+import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
-type HeroType = {
+export type HeroType = {
 	coverUrl: string;
 	title: string | ReactNode;
 	swipeUpIcon: ReactNode;
 	gradientColor?: string;
 };
-export function Hero({
-	coverUrl,
-	title,
-	swipeUpIcon,
-	gradientColor,
-}: HeroType) {
+export function Hero({ block }: { block: BlockType }) {
+	const { coverUrl, title, swipeUpIcon, gradientColor } =
+		block.componentProps as HeroType;
 	return (
 		<div
 			className="relative -top-[150px] -mb-[150px] h-screen w-full !bg-cover !bg-[50%_30%] md:bg-center"

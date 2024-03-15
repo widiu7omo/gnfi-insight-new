@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { Hero } from "./Hero";
 import { ChevronsDownIcon, MouseIcon } from "lucide-react";
+import { COMPONENT_HERO } from "@/data/component-front";
 
 const meta = {
 	title: "Insight/Hero",
@@ -13,11 +14,16 @@ const meta = {
 		layout: "fullscreen",
 	},
 	args: {
-		title: "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
-		coverUrl: "/assets/hero-example.jpg",
-		swipeUpIcon: (
-			<ChevronsDownIcon size={40} className="animate-bounce text-white" />
-		),
+		block: {
+			componentProps: {
+				title: "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
+				coverUrl: "/assets/hero-example.jpg",
+				swipeUpIcon: (
+					<ChevronsDownIcon size={40} className="animate-bounce text-white" />
+				),
+			},
+			component: COMPONENT_HERO,
+		},
 	},
 } satisfies Meta<typeof Hero>;
 
@@ -28,14 +34,28 @@ export const Default: Story = {};
 
 export const SwipeUpIcon: Story = {
 	args: {
-		title: "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
-		coverUrl: "/assets/hero-example.jpg",
-		swipeUpIcon: <MouseIcon size={40} className="animate-bounce text-white" />,
+		block: {
+			componentProps: {
+				title: "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
+				coverUrl: "/assets/hero-example.jpg",
+				swipeUpIcon: (
+					<MouseIcon size={40} className="animate-bounce text-white" />
+				),
+			},
+			component: COMPONENT_HERO,
+		},
 	},
 };
 
 export const DarkLinearOverlay: Story = {
 	args: {
-		gradientColor: "bg-gradient-to-b from-white/0 to-black",
+		block: {
+			componentProps: {
+				title: "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
+				coverUrl: "/assets/hero-example.jpg",
+				gradientColor: "bg-gradient-to-b from-white/0 to-black",
+			},
+			component: COMPONENT_HERO,
+		},
 	},
 };

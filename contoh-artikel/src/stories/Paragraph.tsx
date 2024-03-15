@@ -1,15 +1,15 @@
 "use client";
 
+import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
 import { stagger, useAnimate, useInView } from "framer-motion";
 import { type PropsWithChildren, useEffect } from "react";
 type ParagraphType = {
 	className?: string;
 };
-export function Paragraph({
-	children,
-	className,
-}: PropsWithChildren<ParagraphType>) {
+export function Paragraph({ block }: { block: BlockType }) {
+	const { children, className } =
+		block.componentProps as PropsWithChildren<ParagraphType>;
 	const [scope, animate] = useAnimate();
 	const isInView = useInView(scope, { once: true });
 	useEffect(() => {

@@ -1,9 +1,9 @@
 export type BlockType = {
-  content: string
-  contentType: 'image' | 'text'
-  group: string
+  //General Config
+  group?: string
+  order?: number
+  index?: number,
   component: number
-  contentCaption?: string
-  order: number
-  index: number
+  //Custom Config
+  componentProps: unknown
 }

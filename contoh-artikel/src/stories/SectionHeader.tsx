@@ -1,19 +1,17 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
+import type { BlockType } from "@/data/types";
 
-type SectionHeaderProps = {
+type SectionHeaderType = {
 	title?: string;
 	coverImage: string;
 	customTitle?: ReactNode;
 	className?: string;
 };
-export function SectionHeader({
-	title,
-	coverImage,
-	className,
-	customTitle,
-}: SectionHeaderProps) {
+export function SectionHeader({ block }: { block: BlockType }) {
+	const { title, coverImage, className, customTitle } =
+		block.componentProps as SectionHeaderType;
 	return (
 		<div
 			className={cn(

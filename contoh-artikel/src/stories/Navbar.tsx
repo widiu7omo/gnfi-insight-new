@@ -1,21 +1,22 @@
 "use client";
+import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
 import { useNavigation } from "@/store/useNavigation";
 import { useMotionValueEvent, useScroll, useSpring } from "framer-motion";
 import { motion } from "framer-motion";
 import { BarChart2Icon } from "lucide-react";
 import { useState } from "react";
-type NavbarType = {
+export type NavbarType = {
 	blurEffect?: boolean;
 };
-export function Navbar({ blurEffect }: NavbarType) {
+export function Navbar({ block }: { block: BlockType }) {
 	const [_, setNavigation] = useNavigation();
 	const toggleNavHandler = () => {
 		setNavigation((prev) => ({ ...prev, show: !prev.show }));
 	};
 	const { scrollY } = useScroll();
 	const [shouldBlur, setShouldBlur] = useState(false);
-
+	const config = block.componentProps as NavbarType;
 	useMotionValueEvent(scrollY, "change", (latest) => {
 		if (latest > 0) {
 			!shouldBlur && setShouldBlur(true);
@@ -29,7 +30,7 @@ export function Navbar({ blurEffect }: NavbarType) {
 			data-blur={shouldBlur}
 			className={cn(
 				" data-[blur=true]:shadow sticky data-[blur=true]:h-[60px] lg:data-[blur=true]:h-[90px] h-[150px] top-0 bg-transparent z-50 px-6 lg:px-8 flex flex-col items-center justify-center",
-				blurEffect
+				config?.blurEffect
 					? "data-[blur=true]:bg-white/60 data-[blur=true]:backdrop-blur-md"
 					: "data-[blur=true]:bg-white",
 			)}

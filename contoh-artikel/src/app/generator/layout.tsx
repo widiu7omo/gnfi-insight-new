@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Article Generator Dnd",
+	description: "Easy drag drop article components",
+};
 export default function GeneratorLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode
+	children: React.ReactNode;
 }>) {
-  return <div className="flex h-screen overflow-hidden">{children}</div>
+	return <div className="flex h-screen overflow-hidden">{children}</div>;
 }
