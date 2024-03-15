@@ -1,4 +1,3 @@
-import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 export type SectionGroupType = {
@@ -6,9 +5,11 @@ export type SectionGroupType = {
 	className?: string;
 	sectionId: string;
 };
-export default function SectionGroup({ block }: { block: BlockType }) {
-	const { children, className, sectionId } =
-		block.componentProps as SectionGroupType;
+export default function SectionGroup({
+	children,
+	className,
+	sectionId,
+}: SectionGroupType) {
 	return (
 		<section id={sectionId} className={cn("max-w-full", className)}>
 			{children}

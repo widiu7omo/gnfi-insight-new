@@ -3,7 +3,7 @@ export type BlockType = {
   group?: string
   order?: number
   index?: number,
-  component: number
+  component: number,
   //Custom Config
   componentProps: unknown
 }

@@ -1,10 +1,10 @@
-import Section from "@/components/dynamic/base-section";
 import generateBlocks from "@public/contoh-artikel/generated-blocks.json";
-import { getComponent } from "@/data/component-front";
+import { COMPONENT_NAVBAR, getComponent } from "@/data/component-front";
 import type { BlockType } from "@/data/types";
-import Navbar from "@/components/dynamic/nav-bar";
-import Toc from "@/components/dynamic/toc";
+import Toc from "@/components/reusable/toc";
 import type { Metadata } from "next";
+import { Navbar } from "@/stories/Navbar";
+import SectionGroup from "@/stories/SectionGroup";
 
 const groupByToMap = <T, Q>(
 	array: T[],
@@ -21,25 +21,33 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-	const grouped = groupByToMap(generateBlocks, (item) => item.group);
+	const grouped = groupByToMap(
+		generateBlocks,
+		(item) => item.group,
+	);
 	return (
 		<main className="bg-neutral-50 w-full relative">
-			<Navbar />
+			<Navbar
+				block={{
+					component: COMPONENT_NAVBAR,
+					componentProps: { blurEffect: false },
+				}}
+			/>
 			<Toc />
 			{Object.keys(Object.fromEntries(grouped)).map((groupName) => {
 				const blocks = Array.from(grouped.get(groupName)?.values() ?? []);
 				return (
-					<Section key={groupName} id={groupName}>
+					<SectionGroup key={groupName} sectionId={groupName}>
 						{blocks.map((block) => {
 							const result = getComponent(block.component);
 							return (
 								<result.component
 									key={Math.random()}
-									block={block as BlockType}
+									block={block as unknown as BlockType}
 								/>
 							);
 						})}
-					</Section>
+					</SectionGroup>
 				);
 			})}
 		</main>

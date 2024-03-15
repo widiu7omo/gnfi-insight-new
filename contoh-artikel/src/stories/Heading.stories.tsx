@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Header } from "./Header";
-import { COMPONENT_HEADER } from "@/data/component-front";
+import { Heading } from "./Heading";
+import { COMPONENT_HEADING } from "@/data/component-front";
 
 const meta = {
-	title: "Insight/Header",
-	component: Header,
+	title: "Insight/Heading",
+	component: Heading,
 	// This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
 	tags: ["autodocs"],
 	parameters: {
@@ -16,10 +16,10 @@ const meta = {
 			componentProps: {
 				content: "<h1>Kucing, semakin digemari masyarakat Indonesia</h1>",
 			},
-			component: COMPONENT_HEADER,
+			component: COMPONENT_HEADING,
 		},
 	},
-} satisfies Meta<typeof Header>;
+} satisfies Meta<typeof Heading>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

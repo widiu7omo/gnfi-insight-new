@@ -7,7 +7,7 @@ export type HeaderType = {
 	content: string;
 	className?: string;
 };
-export function Header({ block }: { block: BlockType }) {
+export function Heading({ block }: { block: BlockType }) {
 	const { content, className } = block.componentProps as HeaderType;
 	return (
 		<motion.div
