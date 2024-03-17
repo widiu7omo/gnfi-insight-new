@@ -1,3 +1,5 @@
+"use client";
+
 import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";

@@ -26,6 +26,7 @@ import {
 	AppWindowIcon,
 	GalleryThumbnailsIcon,
 	GalleryVerticalIcon,
+	GroupIcon,
 	HeadingIcon,
 	ImageIcon,
 	LayoutTemplateIcon,
@@ -80,11 +81,10 @@ export default function GeneratePage() {
 							name="section-group"
 							component={COMPONENT_SECTION_GROUP}
 						>
-							<BlockSection
-								preview
-								accept={[ItemTypes.BLOCK]}
-								onDrop={handleOnDropComponent}
-							/>
+							<div className="text-neutral-500 flex items-center flex-col">
+								<GroupIcon size={45} strokeWidth={1} />
+								<div className="text-sm">Group / Section</div>
+							</div>
 						</DraggableWrapper>
 						{/* BLOCK COMPONENTS */}
 						<div className="text-neutral-500 uppercase text-sm border-b border-neutral-300 pb-1 pt-3">
@@ -192,26 +192,38 @@ export default function GeneratePage() {
 							Generate
 						</button>
 					</div>
-					<div>
-						<input
-							type="text"
-							className="text-2xl font-semibold text-neutral-700 outline-none w-full"
-							value={title}
-							onChange={(e) => setTitle(e.target.value)}
-						/>
-						<div className="pt-4">
+					<div className="space-y-4">
+						<div>
+							<label
+								htmlFor="title"
+								className="text-base font-bold text-gray-500"
+							>
+								Article Title
+							</label>
 							<input
+								id="title"
 								type="text"
-								className="text-lg text-neutral-700 outline-none w-full"
-								value={seoTitle}
-								onChange={(e) => setSeoTitle(e.target.value)}
+								className="text-2xl font-semibold text-neutral-700 outline-none w-full"
+								value={title}
+								onChange={(e) => setTitle(e.target.value)}
 							/>
-							<input
-								type="text"
-								className="text-lg text-neutral-700 outline-none w-full"
-								value={seoDesc}
-								onChange={(e) => setSeoDesc(e.target.value)}
-							/>
+						</div>
+						<div>
+							<div className="text-base font-bold text-gray-500">SEO Meta</div>
+							<div className="">
+								<input
+									type="text"
+									className="text-lg text-neutral-700 outline-none w-full"
+									value={seoTitle}
+									onChange={(e) => setSeoTitle(e.target.value)}
+								/>
+								<input
+									type="text"
+									className="text-lg text-neutral-700 outline-none w-full"
+									value={seoDesc}
+									onChange={(e) => setSeoDesc(e.target.value)}
+								/>
+							</div>
 						</div>
 					</div>
 					<Sections onDrop={handleOnDropSection} />

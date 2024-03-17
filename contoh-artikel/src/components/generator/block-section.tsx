@@ -27,15 +27,6 @@ export const BlockSection: FC<BlockSectionType> = memo(function BlockSection({
 	});
 
 	const isActive = isOver && canDrop;
-
-	if (preview) {
-		return (
-			<div className="text-neutral-500 flex items-center flex-col">
-				<GroupIcon size={45} strokeWidth={1} />
-				<div className="text-sm">Group / Section</div>
-			</div>
-		);
-	}
 	return (
 		<div
 			ref={drop}

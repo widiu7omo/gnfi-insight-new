@@ -1,3 +1,5 @@
+"use client";
+// TODO: add motion
 import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
 export type ImageType = {

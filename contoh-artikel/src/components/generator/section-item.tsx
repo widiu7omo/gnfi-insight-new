@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import Blocks from "./blocks";
+import type { SectionGroupType } from "@/stories/SectionGroup";
 export default function SectionItem({ sectionId }: { sectionId: string }) {
 	const [_, setBlocks] = useBlocks();
 	const [sections] = useSections();
@@ -46,6 +47,12 @@ export default function SectionItem({ sectionId }: { sectionId: string }) {
 	const isActive = canDrop && isOver;
 	const [sectionName, setSectionName] = useState("Section Name");
 	const [toggleSecName, setToggleSecName] = useState(true);
+
+	//Add another config based on stories/SectionGroup
+	const componentsProps: SectionGroupType = {
+		children: undefined,
+		sectionId: "",
+	};
 	return (
 		<div
 			ref={drop}

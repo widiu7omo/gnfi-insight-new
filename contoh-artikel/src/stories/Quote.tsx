@@ -1,3 +1,5 @@
+"use client";
+
 import Quote1 from "@/components/reusable/quote1";
 import Quote2 from "@/components/reusable/quote2";
 import Quote3 from "@/components/reusable/quote3";
