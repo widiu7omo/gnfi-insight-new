@@ -1,3 +1,10 @@
-export default function BlockSectionHeader() {
-	return <div>Block Section Header</div>;
+type BlockSectionHeaderType = {
+	sectionId: string;
+	index: number;
+};
+export default function BlockSectionHeader({
+	sectionId,
+	index,
+}: BlockSectionHeaderType) {
+	return <div>Block Section Heading</div>;
 }

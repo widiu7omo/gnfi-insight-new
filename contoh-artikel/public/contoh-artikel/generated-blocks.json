@@ -1,1 +1,16 @@
-[{"index":0,"content":"Edit your content here","component":0,"group":"section-1","order":0,"contentType":"custom"}]
+[
+    {
+        "index": 0,
+        "component": 0,
+        "componentProps": {},
+        "group": "section-1",
+        "order": 0
+    },
+    {
+        "index": 1,
+        "component": 1,
+        "componentProps": {},
+        "group": "section-1",
+        "order": 1
+    }
+]

@@ -24,16 +24,16 @@ export type BlockItemType = {
 };
 export default function BlockItem({ block, sectionId, index }: BlockItemType) {
 	if (block.component === COMPONENT_NAVBAR) {
-		return <BlockNavbar />;
+		return <BlockNavbar sectionId={sectionId} index={index}  />;
 	}
 	if (block.component === COMPONENT_HERO) {
-		return <BlockHero />;
+		return <BlockHero sectionId={sectionId} index={index}  />;
 	}
 	if (block.component === COMPONENT_QUOTE) {
-		return <BlockQuote />;
+		return <BlockQuote sectionId={sectionId} index={index}  />;
 	}
 	if (block.component === COMPONENT_SECTION_HEADER) {
-		return <BlockSectionHeader />;
+		return <BlockSectionHeader sectionId={sectionId} index={index}  />;
 	}
 	if (block.component === COMPONENT_HEADING) {
 		return <BlockHeading sectionId={sectionId} index={index} />;

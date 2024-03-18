@@ -56,6 +56,7 @@ export default function GeneratePage() {
 			item.order = index;
 			return item;
 		});
+		console.log(normalizeBlock);
 		const result = await fetch("/api/generate-content", {
 			method: "POST",
 			headers: {
@@ -98,7 +99,7 @@ export default function GeneratePage() {
 						>
 							<div className="text-neutral-500 flex items-center flex-col">
 								<AppWindowIcon size={45} strokeWidth={1} />
-								<div className="text-sm">Navbar Config</div>
+								<div className="text-sm">Navbar Block</div>
 							</div>
 						</DraggableWrapper>
 						<DraggableWrapper
@@ -109,7 +110,7 @@ export default function GeneratePage() {
 						>
 							<div className="text-neutral-500 flex items-center flex-col">
 								<GalleryThumbnailsIcon size={45} strokeWidth={1} />
-								<div className="text-sm">Hero Editor</div>
+								<div className="text-sm">Hero Block</div>
 							</div>
 						</DraggableWrapper>
 						<DraggableWrapper
@@ -120,7 +121,7 @@ export default function GeneratePage() {
 						>
 							<div className="text-neutral-500 flex items-center flex-col">
 								<GalleryVerticalIcon size={45} strokeWidth={1} />
-								<div className="text-sm">Section Header</div>
+								<div className="text-sm">Section Heading Block</div>
 							</div>
 						</DraggableWrapper>
 						<DraggableWrapper
@@ -131,7 +132,7 @@ export default function GeneratePage() {
 						>
 							<div className="text-neutral-500 flex items-center flex-col">
 								<HeadingIcon size={45} strokeWidth={1} />
-								<div className="text-sm">Heading</div>
+								<div className="text-sm">Heading Block</div>
 							</div>
 						</DraggableWrapper>
 						<DraggableWrapper
@@ -142,7 +143,7 @@ export default function GeneratePage() {
 						>
 							<div className="text-neutral-500 flex items-center flex-col">
 								<TextIcon size={45} strokeWidth={1} />
-								<div className="text-sm">Paragraph Editor</div>
+								<div className="text-sm">Paragraph Block</div>
 							</div>
 						</DraggableWrapper>
 						<DraggableWrapper
@@ -153,7 +154,7 @@ export default function GeneratePage() {
 						>
 							<div className="text-neutral-500 flex items-center flex-col">
 								<QuoteIcon size={45} strokeWidth={1} />
-								<div className="text-sm">Quote Editor</div>
+								<div className="text-sm">Quote Block</div>
 							</div>
 						</DraggableWrapper>
 						<DraggableWrapper
@@ -164,7 +165,7 @@ export default function GeneratePage() {
 						>
 							<div className="text-neutral-500 flex items-center flex-col">
 								<ImageIcon size={45} strokeWidth={1} />
-								<div className="text-sm">Image Component</div>
+								<div className="text-sm">Image Block</div>
 							</div>
 						</DraggableWrapper>
 
@@ -176,7 +177,7 @@ export default function GeneratePage() {
 						>
 							<div className="text-neutral-500 flex items-center flex-col">
 								<LayoutTemplateIcon size={45} strokeWidth={1} />
-								<div className="text-sm">Custom Component</div>
+								<div className="text-sm">Custom Block</div>
 							</div>
 						</DraggableWrapper>
 					</div>
