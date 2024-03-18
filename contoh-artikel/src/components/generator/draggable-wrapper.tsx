@@ -48,6 +48,7 @@ export default function DraggableWrapper({
 								index: prev.length + 1,
 								order: prev.length + 1,
 								group: "BOXES",
+								groupClassName: "",
 							},
 						];
 					});

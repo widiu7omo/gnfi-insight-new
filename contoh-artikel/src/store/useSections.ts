@@ -1,9 +1,12 @@
-import { DraggableItem } from '@/components/generator/types'
-import { atom, useAtom } from 'jotai'
-import { atomWithStorage } from 'jotai/utils'
+import type { DraggableItem } from "@/components/generator/types";
+import { useAtom } from "jotai";
+import { atomWithStorage } from "jotai/utils";
 
-const sectionItems = atomWithStorage<DraggableItem[]>('sections', [])
+const sectionItems = atomWithStorage<DraggableItem[]>("sections", []);
 
 export function useSections() {
-  return useAtom(sectionItems)
+  return useAtom(sectionItems);
 }
+
+const sectionClassAtom = atomWithStorage<Record<string, string>>('sectionClassName', {});
+export const useSectionClassName = () => useAtom(sectionClassAtom);

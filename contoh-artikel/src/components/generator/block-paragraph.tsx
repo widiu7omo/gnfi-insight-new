@@ -4,6 +4,7 @@ import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { TrashIcon } from "lucide-react";
 import Input from "../reusable/input";
+import { useState } from "react";
 type BlockParagraphType = {
 	sectionId: string;
 	index: number;
@@ -13,6 +14,25 @@ export default function BlockParagraph({
 	index,
 }: BlockParagraphType) {
 	const [blocks, setBlocks] = useBlocks();
+	const sectionBlocks = blocks[sectionId];
+	const block = sectionBlocks[index];
+	const componentProps = (block.componentProps ?? {}) as ParagraphType;
+	const [paragraphState, setParagraphState] = useState<ParagraphType>(
+		componentProps ?? {
+			className: "",
+			children: "",
+		},
+	);
+	const saveConfig = () => {
+		const updatedBlock = { ...block, componentProps: paragraphState };
+		sectionBlocks[index] = updatedBlock;
+		setBlocks((prev) => {
+			const currentSections = {
+				[sectionId]: sectionBlocks,
+			};
+			return { ...prev, ...currentSections };
+		});
+	};
 	const editor = useEditor({
 		extensions: [StarterKit],
 		content:
@@ -58,9 +78,24 @@ export default function BlockParagraph({
 				<div className="text-sm text-gray-600 pb-1">Configuration</div>
 				<Input label="With Ornament" id="withOrnament" />
 			</div>
+			<div className="flex flex-col">
+				<div className="text-sm text-gray-600 pb-1">Customize Style</div>
+				<Input
+					label="Style with Tailwind classes"
+					id="className"
+					value={paragraphState.className}
+					onChange={(e) =>
+						setParagraphState((prev) => ({
+							...prev,
+							className: e.target.value,
+						}))
+					}
+					onBlur={saveConfig}
+				/>
+			</div>
 			<div className="">
 				<div className="text-sm text-gray-600 pb-1">Content</div>
-				<div className="p-4 bg-white">
+				<div className="py-2 bg-white">
 					<EditorContent editor={editor} />
 				</div>
 			</div>

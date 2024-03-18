@@ -4,6 +4,8 @@ import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
 import { stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect, type ReactNode, type ReactElement } from "react";
+import parse from "html-react-parser";
+
 export type ParagraphType = {
 	children: string | ReactElement;
 	className?: string;
@@ -23,13 +25,15 @@ export function Paragraph({ block }: { block: BlockType }) {
 			animate("p", { opacity: 0, y: 20 });
 		}
 	}, [isInView, animate]);
-
 	return (
 		<div
-			className={cn("prose relative z-[5] mx-auto px-4 xl:px-0", className)}
+			className={cn(
+				"prose relative z-[50] mx-auto py-8 px-4 xl:px-0",
+				className,
+			)}
 			ref={scope}
 		>
-			{children}
+			{typeof children === "string" ? parse(children) : children}
 		</div>
 	);
 }

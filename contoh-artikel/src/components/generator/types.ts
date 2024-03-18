@@ -13,5 +13,6 @@ export type DraggableItem = {
   component: string
   order: number
   group: string
+  groupClassName?: string
   index: number
 }
