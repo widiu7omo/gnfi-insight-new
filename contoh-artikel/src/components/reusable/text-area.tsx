@@ -1,11 +1,16 @@
 import { cn } from "@/lib/utils";
+import type { TextareaHTMLAttributes } from "react";
 
+type TextareaType = {
+	label: string;
+} & TextareaHTMLAttributes<HTMLTextAreaElement>;
 export default function Textarea({
 	label,
 	id,
 	className,
-	placeholder,
-}: { label: string; id: string; placeholder?: string; className?: string }) {
+	required,
+	...rest
+}: TextareaType) {
 	return (
 		<fieldset
 			className={cn("flex flex-col items-start w-full space-y-2", className)}
@@ -15,10 +20,10 @@ export default function Textarea({
 				className="text-gray-500 font-medium text-sm tracking-wide"
 			>
 				{label}
+				{required && <span className="ml-1 text-red-500 font-bold">*</span>}
 			</label>
 			<textarea
-				id={id}
-				placeholder={placeholder}
+				{...rest}
 				className="mr-2 px-4 w-full py-2 focus:outline-gray-400 outline outline-1 outline-gray-300 rounded-lg placeholder:text-sm"
 				rows={4}
 			/>

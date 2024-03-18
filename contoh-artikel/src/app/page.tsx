@@ -21,18 +21,9 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-	const grouped = groupByToMap(
-		generateBlocks,
-		(item) => item.group,
-	);
+	const grouped = groupByToMap(generateBlocks, (item) => item.group);
 	return (
 		<main className="bg-neutral-50 w-full relative">
-			<Navbar
-				block={{
-					component: COMPONENT_NAVBAR,
-					componentProps: { blurEffect: false },
-				}}
-			/>
 			<Toc />
 			{Object.keys(Object.fromEntries(grouped)).map((groupName) => {
 				const blocks = Array.from(grouped.get(groupName)?.values() ?? []);

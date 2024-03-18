@@ -1,32 +1,28 @@
 import { cn } from "@/lib/utils";
+import type { InputHTMLAttributes } from "react";
 
-export default function Input({
-	label,
-	id,
-	className,
-	required = false,
-	placeholder,
-}: {
+type InputType = {
 	label: string;
-	required?: boolean | false;
-	id: string;
-	placeholder?: string;
-	className?: string;
-}) {
+} & InputHTMLAttributes<HTMLInputElement>;
+export default function Input({
+	className,
+	label,
+	required = false,
+	...rest
+}: InputType) {
 	return (
 		<fieldset
 			className={cn("flex flex-col items-start w-full space-y-2", className)}
 		>
 			<label
-				htmlFor={id}
+				htmlFor={rest.id}
 				className="text-gray-500 font-medium text-sm tracking-wide"
 			>
 				{label}
-				{required && <span className="text-red-500 font-bold">*</span>}
+				{required && <span className="ml-1 text-red-500 font-bold">*</span>}
 			</label>
 			<input
-				placeholder={placeholder}
-				id={id}
+				{...rest}
 				type="text"
 				className="mr-2 focus:outline-gray-400 px-4 w-full py-2 outline outline-1 outline-gray-300 rounded-lg placeholder:text-sm"
 			/>

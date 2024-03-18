@@ -1,8 +1,10 @@
 "use client";
 
+import Icon from "@/components/reusable/Icon";
 import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import type dynamicIconImports from "lucide-react/dynamicIconImports";
 import type { ReactNode } from "react";
 export type HeroType = {
 	coverUrl: string;
@@ -13,6 +15,7 @@ export type HeroType = {
 export function Hero({ block }: { block: BlockType }) {
 	const { coverUrl, title, swipeUpIcon, gradientColor } =
 		block.componentProps as HeroType;
+	console.log(swipeUpIcon);
 	return (
 		<div
 			className="relative -top-[150px] -mb-[150px] h-screen w-full !bg-cover !bg-[50%_30%] md:bg-center"
@@ -32,7 +35,18 @@ export function Hero({ block }: { block: BlockType }) {
 							{title}
 						</motion.h1>
 					</div>
-					<div className="flex items-center justify-center">{swipeUpIcon}</div>
+					<div className="flex items-center justify-center">
+						{typeof swipeUpIcon === "string" ? (
+							<Icon
+								size={40}
+								strokeWidth={1}
+								className="animate-bounce text-white"
+								name={swipeUpIcon as keyof typeof dynamicIconImports}
+							/>
+						) : (
+							swipeUpIcon
+						)}
+					</div>
 				</div>
 			</div>
 		</div>
