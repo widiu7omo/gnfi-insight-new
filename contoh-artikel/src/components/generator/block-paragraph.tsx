@@ -3,6 +3,7 @@ import type { ParagraphType } from "@/stories/Paragraph";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { TrashIcon } from "lucide-react";
+import Input from "../reusable/input";
 type BlockParagraphType = {
 	sectionId: string;
 	index: number;
@@ -41,22 +42,27 @@ export default function BlockParagraph({
 		});
 	};
 	return (
-		<div className="">
-			<div className="flex flex-row-reverse space-x-2 bg-neutral-200 rounded-t-xl justify-between p-2">
-				<div className="text-xl font-semibold group space-x-3">
-					<button
-						onClick={removeBlock}
-						type="button"
-						className="text-white bg-red-800 rounded-lg text-sm invisible group-hover:visible opacity-0 hover:opacity-100 px-3 py-2 transition-all inline-flex"
-					>
-						<TrashIcon size={20} className="mr-2" />
-						<span>Remove Block</span>
-					</button>
-					<span>Paragraph Block</span>
-				</div>
+		<div className="p-4 space-y-4">
+			<div className="text-xl font-semibold flex justify-between">
+				<span>Paragraph Block</span>
+				<button
+					onClick={removeBlock}
+					type="button"
+					className="text-white bg-red-800 rounded-lg text-sm px-3 py-2 transition-all inline-flex"
+				>
+					<TrashIcon size={20} className="mr-2" />
+					<span>Remove Block</span>
+				</button>
 			</div>
-			<div className="p-4">
-				<EditorContent editor={editor} />
+			<div className="flex flex-col">
+				<div className="text-sm text-gray-600 pb-1">Configuration</div>
+				<Input label="With Ornament" id="withOrnament" />
+			</div>
+			<div className="">
+				<div className="text-sm text-gray-600 pb-1">Content</div>
+				<div className="p-4 bg-white">
+					<EditorContent editor={editor} />
+				</div>
 			</div>
 		</div>
 	);

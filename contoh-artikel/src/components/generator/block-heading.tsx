@@ -59,9 +59,9 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 		});
 	};
 	return (
-		<div className="p-4 space-x-2 bg-neutral-200 rounded-t-xl space-y-4">
+		<div className="p-4 space-x-2 rounded-t-xl space-y-4">
 			<div className="text-xl font-semibold flex justify-between">
-				<span>Heading Configuration</span>
+				<span>Heading Block</span>
 				<button
 					onClick={removeBlock}
 					type="button"
@@ -71,82 +71,88 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 					<span>Remove Block</span>
 				</button>
 			</div>
-			<div className="bg-neutral-300 rounded px-2 py-1">
-				<button
-					type="button"
-					onClick={() => {
-						editor?.commands.setHeading({ level: 1 });
-						editor?.chain().focus().toggleHeading({ level: 1 });
-					}}
-					className={`rounded py-1 px-2 ${
-						editor?.isActive("heading", { level: 1 }) ? "bg-white" : ""
-					}`}
-				>
-					<Heading1Icon size={20} />
-				</button>
-				<button
-					type="button"
-					onClick={() => {
-						editor?.commands.setHeading({ level: 2 });
-						editor?.chain().focus().toggleHeading({ level: 2 });
-					}}
-					className={`rounded py-1 px-2 ${
-						editor?.isActive("heading", { level: 2 }) ? "bg-white" : ""
-					}`}
-				>
-					<Heading2Icon size={20} />
-				</button>
-				<button
-					type="button"
-					onClick={() => {
-						editor?.commands.setHeading({ level: 3 });
-						editor?.chain().focus().toggleHeading({ level: 3 });
-					}}
-					className={`rounded py-1 px-2 ${
-						editor?.isActive("heading", { level: 3 }) ? "bg-white" : ""
-					}`}
-				>
-					<Heading3Icon size={20} />
-				</button>
-				<button
-					type="button"
-					onClick={() => {
-						editor?.commands.setHeading({ level: 4 });
-						editor?.chain().focus().toggleHeading({ level: 4 });
-					}}
-					className={`rounded py-1 px-2 ${
-						editor?.isActive("heading", { level: 4 }) ? "bg-white" : ""
-					}`}
-				>
-					<Heading4Icon size={20} />
-				</button>
-				<button
-					type="button"
-					onClick={() => {
-						editor?.commands.setHeading({ level: 5 });
-						editor?.chain().focus().toggleHeading({ level: 5 });
-					}}
-					className={`rounded py-1 px-2 ${
-						editor?.isActive("heading", { level: 5 }) ? "bg-white" : ""
-					}`}
-				>
-					<Heading5Icon size={20} />
-				</button>
-				<button
-					type="button"
-					onClick={() => {
-						editor?.commands.setHeading({ level: 6 });
-						editor?.chain().focus().toggleHeading({ level: 6 });
-					}}
-					className={`rounded py-1 px-2 ${
-						editor?.isActive("heading", { level: 6 }) ? "bg-white" : ""
-					}`}
-				>
-					<Heading6Icon size={20} />
-				</button>
+			<div className="flex flex-col">
+				<div className="text-sm text-gray-600 pb-1">Configuration</div>
+				<div className="bg-neutral-200 rounded">
+					<button
+						type="button"
+						onClick={() => {
+							editor?.commands.setHeading({ level: 1 });
+							editor?.chain().focus().toggleHeading({ level: 1 });
+						}}
+						className={`rounded py-1 px-2 ${
+							editor?.isActive("heading", { level: 1 }) ? "bg-white" : ""
+						}`}
+					>
+						<Heading1Icon size={20} />
+					</button>
+					<button
+						type="button"
+						onClick={() => {
+							editor?.commands.setHeading({ level: 2 });
+							editor?.chain().focus().toggleHeading({ level: 2 });
+						}}
+						className={`rounded py-1 px-2 ${
+							editor?.isActive("heading", { level: 2 }) ? "bg-white" : ""
+						}`}
+					>
+						<Heading2Icon size={20} />
+					</button>
+					<button
+						type="button"
+						onClick={() => {
+							editor?.commands.setHeading({ level: 3 });
+							editor?.chain().focus().toggleHeading({ level: 3 });
+						}}
+						className={`rounded py-1 px-2 ${
+							editor?.isActive("heading", { level: 3 }) ? "bg-white" : ""
+						}`}
+					>
+						<Heading3Icon size={20} />
+					</button>
+					<button
+						type="button"
+						onClick={() => {
+							editor?.commands.setHeading({ level: 4 });
+							editor?.chain().focus().toggleHeading({ level: 4 });
+						}}
+						className={`rounded py-1 px-2 ${
+							editor?.isActive("heading", { level: 4 }) ? "bg-white" : ""
+						}`}
+					>
+						<Heading4Icon size={20} />
+					</button>
+					<button
+						type="button"
+						onClick={() => {
+							editor?.commands.setHeading({ level: 5 });
+							editor?.chain().focus().toggleHeading({ level: 5 });
+						}}
+						className={`rounded py-1 px-2 ${
+							editor?.isActive("heading", { level: 5 }) ? "bg-white" : ""
+						}`}
+					>
+						<Heading5Icon size={20} />
+					</button>
+					<button
+						type="button"
+						onClick={() => {
+							editor?.commands.setHeading({ level: 6 });
+							editor?.chain().focus().toggleHeading({ level: 6 });
+						}}
+						className={`rounded py-1 px-2 ${
+							editor?.isActive("heading", { level: 6 }) ? "bg-white" : ""
+						}`}
+					>
+						<Heading6Icon size={20} />
+					</button>
+				</div>
 			</div>
-			<div className="p-4 bg-white rounded">
-				<EditorContent editor={editor} />
+			<div>
+				<div className="text-sm text-gray-600 pb-1">Content</div>
+				<div className="p-4 bg-white rounded">
+					<EditorContent editor={editor} />
+				</div>
 			</div>
 		</div>
 	);
