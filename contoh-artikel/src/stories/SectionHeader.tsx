@@ -4,8 +4,9 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 import type { BlockType } from "@/data/types";
+import parse from "html-react-parser";
 
-type SectionHeaderType = {
+export type SectionHeaderType = {
 	title?: string;
 	coverImage: string;
 	customTitle?: ReactNode;
@@ -25,7 +26,7 @@ export function SectionHeader({ block }: { block: BlockType }) {
 			}}
 		>
 			{customTitle ? (
-				customTitle
+				parse(customTitle as string)
 			) : (
 				<h2 className="max-w-5xl text-center text-3xl font-bold leading-snug text-white lg:text-4xl xl:text-5xl">
 					{title}

@@ -104,16 +104,6 @@ export default function BlockParagraph({
 						}
 					/>
 					<Input
-						label="Nama Ornamen Bottom Right"
-						id="obr"
-						placeholder="Biarkan kosong jika tidak ada"
-						value={paragraphState.ornamentBottomRight}
-						onBlur={saveConfig}
-						onChange={(e) =>
-							handleParagraphState("ornamentBottomRight", e.target.value)
-						}
-					/>
-					<Input
 						label="Nama Ornamen Bottom Left"
 						id="obl"
 						placeholder="Biarkan kosong jika tidak ada"
@@ -121,6 +111,16 @@ export default function BlockParagraph({
 						onBlur={saveConfig}
 						onChange={(e) =>
 							handleParagraphState("ornamentBottomLeft", e.target.value)
+						}
+					/>
+					<Input
+						label="Nama Ornamen Bottom Right"
+						id="obr"
+						placeholder="Biarkan kosong jika tidak ada"
+						value={paragraphState.ornamentBottomRight}
+						onBlur={saveConfig}
+						onChange={(e) =>
+							handleParagraphState("ornamentBottomRight", e.target.value)
 						}
 					/>
 				</div>

@@ -3,11 +3,13 @@ import type { InputHTMLAttributes } from "react";
 
 type InputType = {
 	label: string;
+	inputClassName?: string;
 } & InputHTMLAttributes<HTMLInputElement>;
 export default function Input({
 	className,
 	label,
 	required = false,
+	inputClassName,
 	...rest
 }: InputType) {
 	return (
@@ -23,8 +25,10 @@ export default function Input({
 			</label>
 			<input
 				{...rest}
-				type="text"
-				className="mr-2 focus:outline-gray-400 px-4 w-full py-2 outline outline-1 outline-gray-300 rounded-lg placeholder:text-sm"
+				className={cn(
+					"mr-2 focus:outline-gray-400 px-4 w-full py-2 outline outline-1 outline-gray-300 rounded-lg placeholder:text-sm",
+					inputClassName,
+				)}
 			/>
 		</fieldset>
 	);

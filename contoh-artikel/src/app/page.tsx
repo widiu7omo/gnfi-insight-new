@@ -1,5 +1,5 @@
 import generateBlocks from "@public/contoh-artikel/generated-blocks.json";
-import { getComponent } from "@/data/component-front";
+import { COMPONENT_NAVBAR, getComponent } from "@/data/component-front";
 import type { BlockType } from "@/data/types";
 import Toc from "@/components/reusable/toc";
 import type { Metadata } from "next";
