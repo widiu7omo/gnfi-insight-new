@@ -28,7 +28,7 @@ export function Paragraph({ block }: { block: BlockType }) {
 	return (
 		<div
 			className={cn(
-				"prose relative z-[50] mx-auto py-8 px-4 xl:px-0",
+				"prose relative z-[40] mx-auto py-8 px-4 xl:px-0",
 				className,
 			)}
 			ref={scope}
