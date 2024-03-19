@@ -30,10 +30,7 @@ export default function Home() {
 					<SectionGroup
 						key={groupName}
 						sectionId={groupName}
-						className={
-							blocks[blocks.length - 1].groupClassName ??
-							"bg-gradient-to-b from-black from-20% to-black/40"
-						}
+						className={blocks[blocks.length - 1].groupClassName ?? ""}
 					>
 						{blocks.map((block) => {
 							const result = getComponent(block.component);

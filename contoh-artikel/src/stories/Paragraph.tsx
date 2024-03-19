@@ -3,15 +3,27 @@
 import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
 import { stagger, useAnimate, useInView } from "framer-motion";
-import { useEffect, type ReactNode, type ReactElement } from "react";
+import { useEffect, type ReactElement } from "react";
 import parse from "html-react-parser";
+import Ornament from "./Ornament";
 
 export type ParagraphType = {
 	children: string | ReactElement;
 	className?: string;
+	ornamentTopLeft?: string;
+	ornamentTopRight?: string;
+	ornamentBottomLeft?: string;
+	ornamentBottomRight?: string;
 };
 export function Paragraph({ block }: { block: BlockType }) {
-	const { children, className } = block.componentProps as ParagraphType;
+	const {
+		children,
+		className,
+		ornamentTopRight,
+		ornamentTopLeft,
+		ornamentBottomLeft,
+		ornamentBottomRight,
+	} = block.componentProps as ParagraphType;
 	const [scope, animate] = useAnimate();
 	const isInView = useInView(scope, { once: true });
 	useEffect(() => {
@@ -25,6 +37,7 @@ export function Paragraph({ block }: { block: BlockType }) {
 			animate("p", { opacity: 0, y: 20 });
 		}
 	}, [isInView, animate]);
+	console.log(ornamentTopRight);
 	return (
 		<div
 			className={cn(
@@ -33,6 +46,29 @@ export function Paragraph({ block }: { block: BlockType }) {
 			)}
 			ref={scope}
 		>
+			{ornamentTopRight && (
+				<Ornament className="top-[-3rem] right-[-2rem]">
+					<img src={`/assets/${ornamentTopRight}`} alt={ornamentTopRight} />
+				</Ornament>
+			)}
+			{ornamentTopLeft && (
+				<Ornament className="top-[-2rem] left-[-5rem]">
+					<img src={`/assets/${ornamentTopLeft}`} alt={ornamentTopLeft} />
+				</Ornament>
+			)}
+			{ornamentBottomLeft && (
+				<Ornament className="bottom-[-5rem] right-[-4rem]">
+					<img src={`/assets/${ornamentBottomLeft}`} alt={ornamentBottomLeft} />
+				</Ornament>
+			)}
+			{ornamentBottomRight && (
+				<Ornament className="bottom-[-5rem] left-[-4rem]">
+					<img
+						src={`/assets/${ornamentBottomRight}`}
+						alt={ornamentBottomRight}
+					/>
+				</Ornament>
+			)}
 			{typeof children === "string" ? parse(children) : children}
 		</div>
 	);

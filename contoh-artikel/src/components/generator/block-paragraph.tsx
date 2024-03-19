@@ -37,7 +37,7 @@ export default function BlockParagraph({
 		extensions: [StarterKit],
 		content:
 			((blocks[sectionId][index].componentProps as ParagraphType)
-				.children as string) ?? "<p>Paragraph! 🌎️</p>",
+				.children as string) ?? "<p>Edit Paragraph Here ! 🌎️</p>",
 		onBlur: () => {
 			setBlocks((prev) => {
 				const currentBlock = prev[sectionId][index];
@@ -61,6 +61,12 @@ export default function BlockParagraph({
 			return { ...prev, [sectionId]: currentSections };
 		});
 	};
+	const handleParagraphState = (key: keyof ParagraphType, value: unknown) => {
+		setParagraphState((prev) => ({
+			...prev,
+			[key]: value,
+		}));
+	};
 	return (
 		<div className="p-4 space-y-4">
 			<div className="text-xl font-semibold flex justify-between">
@@ -76,10 +82,54 @@ export default function BlockParagraph({
 			</div>
 			<div className="flex flex-col">
 				<div className="text-sm text-gray-600 pb-1">Configuration</div>
-				<Input label="With Ornament" id="withOrnament" />
+				<div className="grid grid-cols-4 gap-4">
+					<Input
+						label="Nama Ornamen Top Right"
+						id="otr"
+						placeholder="Biarkan kosong jika tidak ada"
+						value={paragraphState.ornamentTopRight}
+						onBlur={saveConfig}
+						onChange={(e) =>
+							handleParagraphState("ornamentTopRight", e.target.value)
+						}
+					/>
+					<Input
+						label="Nama Ornamen Top Left"
+						id="otl"
+						placeholder="Biarkan kosong jika tidak ada"
+						value={paragraphState.ornamentTopLeft}
+						onBlur={saveConfig}
+						onChange={(e) =>
+							handleParagraphState("ornamentTopLeft", e.target.value)
+						}
+					/>
+					<Input
+						label="Nama Ornamen Bottom Right"
+						id="obr"
+						placeholder="Biarkan kosong jika tidak ada"
+						value={paragraphState.ornamentBottomRight}
+						onBlur={saveConfig}
+						onChange={(e) =>
+							handleParagraphState("ornamentBottomRight", e.target.value)
+						}
+					/>
+					<Input
+						label="Nama Ornamen Bottom Left"
+						id="obl"
+						placeholder="Biarkan kosong jika tidak ada"
+						value={paragraphState.ornamentBottomLeft}
+						onBlur={saveConfig}
+						onChange={(e) =>
+							handleParagraphState("ornamentBottomLeft", e.target.value)
+						}
+					/>
+				</div>
+				<small className="text-red-500 pt-2">
+					Letakkan ornamen di folder /public/assets/nama-ornamen.svg
+				</small>
 			</div>
 			<div className="flex flex-col">
-				<div className="text-sm text-gray-600 pb-1">Customize Style</div>
+				<div className="text-sm text-gray-600 pb-1">Style Paragraph</div>
 				<Input
 					label="Style with Tailwind classes"
 					id="className"

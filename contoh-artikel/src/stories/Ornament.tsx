@@ -9,6 +9,6 @@ export default function Ornament({
 	children,
 }: PropsWithChildren<OrnamentType>) {
 	return (
-		<div className={cn("absolute hidden xl:block", className)}>{children}</div>
+		<div className={cn("absolute hidden md:block", className)}>{children}</div>
 	);
 }
