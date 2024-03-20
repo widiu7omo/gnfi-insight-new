@@ -5,7 +5,7 @@ import Quote2 from "@/components/reusable/quote2";
 import Quote3 from "@/components/reusable/quote3";
 import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
-type QuoteType = {
+export type QuoteType = {
 	variant: number;
 	className?: string;
 	figureUrl: string;
