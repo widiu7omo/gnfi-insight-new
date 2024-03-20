@@ -10,12 +10,7 @@ export async function POST(request: Request) {
       return Response.json({ error: 'No files received.' }, { status: 400 })
     }
     const fileName = image.name.replaceAll(' ', '_')
-    //Checking directory
-    const articleName = articleTitle.toLowerCase().replaceAll(' ', '-')
-    if (!existsSync(`public/${articleName}/assets`)) {
-      mkdirSync(`public/${articleName}/assets`, { recursive: true })
-    }
-    const folderPath = `public/${articleName}/assets/${fileName}`
+    const folderPath = `public/assets/${fileName}`
     const imageBuffer = Buffer.from(await image.arrayBuffer())
     await writeFile(
       path.join(process.cwd(), folderPath),

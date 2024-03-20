@@ -4,8 +4,9 @@ import { FileExtended, useFiles } from "@/store/useFiles";
 import { useTitle } from "@/store/useTitle";
 import type { ImageType } from "@/stories/Image";
 import { ImageIcon, TrashIcon } from "lucide-react";
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
+import Input from "../reusable/input";
 
 export type BlockImageType = {
 	sectionId: string;
@@ -16,6 +17,17 @@ export default function BlockImage({ sectionId, index }: BlockImageType) {
 	const [files, setFiles] = useFiles();
 	const [title] = useTitle();
 	const [blocks, setBlocks] = useBlocks();
+	const sectionBlocks = blocks[sectionId];
+	const block = sectionBlocks[index];
+	const componentProps = (block.componentProps ?? {}) as ImageType;
+	const [imageState, setImageState] = useState<ImageType>(
+		componentProps ?? {
+			imageAlt: "",
+			imageUrl: "",
+			className: "",
+			imgClassName: "",
+		},
+	);
 	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	const onDrop = useCallback(async (acceptedFiles: File[]) => {
 		const file = acceptedFiles[0];
@@ -80,8 +92,16 @@ export default function BlockImage({ sectionId, index }: BlockImageType) {
 			return { ...prev, [sectionId]: currentSections };
 		});
 	};
-	const block = blocks[sectionId][index];
-	const props = block.componentProps as ImageType;
+	const saveConfig = () => {
+		const updatedBlock = { ...block, componentProps: imageState };
+		sectionBlocks[index] = updatedBlock;
+		setBlocks((prev) => {
+			const currentSections = {
+				[sectionId]: sectionBlocks,
+			};
+			return { ...prev, ...currentSections };
+		});
+	};
 	return (
 		<div className="flex flex-col bg-gray-200 rounded-xl">
 			<div className="text-xl font-semibold group py-1 space-x-3 bg-neutral-200 w-full rounded-t-xl flex justify-end items-center px-2">
@@ -95,6 +115,33 @@ export default function BlockImage({ sectionId, index }: BlockImageType) {
 				</button>
 				<span>Image Block</span>
 			</div>
+			<div className="flex flex-col px-4 py-4">
+				<div className="text-sm text-gray-600 pb-1">Customize Image Style</div>
+				<Input
+					label="Style container with Tailwind classes"
+					id="className"
+					value={imageState.className}
+					onChange={(e) =>
+						setImageState((prev) => ({
+							...prev,
+							className: e.target.value,
+						}))
+					}
+					onBlur={saveConfig}
+				/>
+				<Input
+					label="Style img tag with Tailwind classes"
+					id="imgClassName"
+					value={imageState.imgClassName}
+					onChange={(e) =>
+						setImageState((prev) => ({
+							...prev,
+							imgClassName: e.target.value,
+						}))
+					}
+					onBlur={saveConfig}
+				/>
+			</div>
 			<div {...getRootProps()}>
 				<div
 					className={`rounded-xl ${
@@ -107,8 +154,8 @@ export default function BlockImage({ sectionId, index }: BlockImageType) {
 						<div className="h-full w-auto rounded-xl relative group">
 							<img
 								className="h-full w-auto rounded-xl"
-								src={props.imageUrl}
-								alt={props.imageAlt}
+								src={componentProps.imageUrl}
+								alt={componentProps.imageAlt}
 							/>
 							<div className="absolute invisible group-hover:visible cursor-pointer flex items-center justify-center top-0 bottom-0 left-0 right-0 hover:bg-black/60 hover:backdrop-blur-sm transition-all rounded-xl">
 								<div className="flex items-center justify-center flex-col flex-1">
