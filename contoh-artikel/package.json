@@ -29,6 +29,7 @@
     "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18",
     "react-dropzone": "^14.2.3",
+    "react-hot-toast": "^2.4.1",
     "tailwind-merge": "^2.2.1",
     "tsconfig-paths-webpack-plugin": "^4.1.0"
   },

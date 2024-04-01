@@ -1,9 +1,11 @@
-import { MouseIcon, TrashIcon } from "lucide-react";
+import { MouseIcon, TrashIcon, ViewIcon } from "lucide-react";
 import Input from "../reusable/input";
 import Textarea from "../reusable/text-area";
 import { useBlocks } from "@/store/useBlocks";
-import type { HeroType } from "@/stories/Hero";
+import { Hero, type HeroType } from "@/stories/Hero";
 import { useState } from "react";
+import toast from "react-hot-toast";
+import { COMPONENT_HERO } from "@/data/component-front";
 type BlockHeroType = {
 	sectionId: string;
 	index: number;
@@ -42,26 +44,29 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 			};
 			return { ...prev, ...currentSections };
 		});
+		toast.success("Configuration Saved")
 	};
 
 	return (
 		<div className="p-4">
 			<div className="text-xl font-semibold flex justify-between">
 				<span>Hero Block</span>
-				<button
-					onClick={removeBlock}
-					type="button"
-					className="text-white bg-red-800 rounded-lg text-sm px-3 py-2 transition-all inline-flex"
-				>
-					<TrashIcon size={20} className="mr-2" />
-					<span>Remove Block</span>
-				</button>
+				<div className="space-x-2">
+					<button
+						onClick={removeBlock}
+						type="button"
+						className="text-white bg-red-800 rounded-lg text-sm px-3 py-2 transition-all inline-flex"
+					>
+						<TrashIcon size={20} className="mr-2" />
+						<span>Remove Block</span>
+					</button>
+				</div>
 			</div>
 			<div className="grid grid-cols-2 gap-4 pt-3">
 				<Input
-					label="Title"
+					label="Hero Title"
 					id="title"
-					placeholder="Judul Artikel"
+					placeholder="Hero Title"
 					required
 					value={(heroState?.title as string) ?? ""}
 					onChange={(e) => {
@@ -70,6 +75,7 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 							title: e.target.value ?? "",
 						}));
 					}}
+					onBlur={saveConfig}
 				/>
 				<Input
 					label="Cover URL"
@@ -80,6 +86,7 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 					onChange={(e) =>
 						setHeroState((prev) => ({ ...prev, coverUrl: e.target.value }))
 					}
+					onBlur={saveConfig}
 				/>
 				<Input
 					label="Swipe Icon"
@@ -90,6 +97,7 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 					onChange={(e) =>
 						setHeroState((prev) => ({ ...prev, swipeUpIcon: e.target.value }))
 					}
+					onBlur={saveConfig}
 				/>
 				<Textarea
 					label="Tailwind Class Gradient Color"
@@ -100,14 +108,8 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 					onChange={(e) =>
 						setHeroState((prev) => ({ ...prev, gradientColor: e.target.value }))
 					}
+					onBlur={saveConfig}
 				/>
-				<button
-					onClick={saveConfig}
-					className="px-3 py-2 font-medium text-sm bg-black text-white rounded"
-					type="button"
-				>
-					Save Config
-				</button>
 			</div>
 		</div>
 	);

@@ -13,16 +13,21 @@ import {
 	PaletteIcon,
 	PenIcon,
 	SaveIcon,
+	TrashIcon,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Blocks from "./blocks";
-import type { SectionGroupType } from "@/stories/SectionGroup";
 import { useCollapse } from 'react-collapsed'
-export default function SectionItem({ sectionId }: { sectionId: string }) {
+import ComponentStyler from "../reusable/component-styler";
+export default function SectionItem({ sectionId, index }: { sectionId: string, index: number }) {
 	const [sectionName, setSectionName] = useState("Edit Section Name");
 	const [toggleSecName, setToggleSecName] = useState(true);
+	const [sectionClass, setSectionClass] = useState('')
+	const [activeSession, setActiveSession] = useActiveSection();
+	const { getCollapseProps, getToggleProps, isExpanded } = useCollapse({ isExpanded: activeSession === sectionId })
 	const [sectionClassName, setSectionClassName] = useSectionClassName();
-
+	const [_s, setSection] = useSections()
+	const [_b, setBlock] = useBlocks()
 	const [_, setBlocks] = useBlocks();
 	const [sections] = useSections();
 	const handleOnDropBlock = (item: DragItemType) => {
@@ -44,7 +49,9 @@ export default function SectionItem({ sectionId }: { sectionId: string }) {
 			});
 		}
 	};
-
+	const updateSectionClass = () => {
+		setSectionClassName({ [sectionId]: sectionClass })
+	}
 	const updateBlocks = () => {
 		setBlocks((prev) => {
 			const blocks = prev[sectionId] ?? [];
@@ -65,13 +72,18 @@ export default function SectionItem({ sectionId }: { sectionId: string }) {
 		}),
 	}));
 	const isActive = canDrop && isOver;
-	const [activeSession, setActiveSession] = useActiveSection();
-	const { getCollapseProps, getToggleProps, isExpanded } = useCollapse({ isExpanded: activeSession === sectionId })
-	//Add another config based on stories/SectionGroup
-	const componentsProps: SectionGroupType = {
-		children: undefined,
-		sectionId: "",
-	};
+
+	const handleDeleteSection = () => {
+		setSectionClassName(prev => {
+			return Object.fromEntries(Object.entries(prev).filter(([key]) => key !== sectionId))
+		})
+		setSection(prev => {
+			return prev.filter((item, i) => index !== i);
+		})
+		setBlock(prev => {
+			return Object.fromEntries(Object.entries(prev).filter(([key]) => key !== sectionId))
+		})
+	}
 	return (
 		<div>
 			<div>
@@ -90,7 +102,7 @@ export default function SectionItem({ sectionId }: { sectionId: string }) {
 					) : (
 						<ChevronRight className="text-neutral-600" />
 					)}</span>
-					<span className="font-medium uppercase text-neutral-600">{sectionId}</span>
+					<span className="font-medium capitalize text-neutral-600">{sectionId}</span>
 				</button>
 			</div>
 			<div {...getCollapseProps()}>
@@ -123,34 +135,21 @@ export default function SectionItem({ sectionId }: { sectionId: string }) {
 									className="bg-transparent outline-none text-sm text-gray-500"
 								/>
 							</div>
-							<div className="text-xs text-neutral-500 w-fit flex-none">
-								ID:{" "}
+							<div className="text-xs text-neutral-500 w-fit flex-none flex flex-row items-center space-x-4">
+								<button className=" bg-red-800 rounded p-1" type="button" onClick={handleDeleteSection}>
+									<TrashIcon className="text-white p-0.5" size={18} />
+								</button>
 								<span className="rounded-full bg-black text-white px-3 py-1 ml-1">
-									{sectionId}
+									ID:{" "}{sectionId}
 								</span>
 							</div>
 						</div>
 						<div className="space-x-2 w-full">
-							<fieldset className="w-full space-y-1">
-								<label htmlFor="sectionClassName" className="flex space-x-2">
-									<PaletteIcon className="text-gray-600" size={16} />
-									<span className="text-sm text-gray-500">Customize Style</span>
-								</label>
-								<textarea
-									value={sectionClassName[sectionId]}
-									placeholder="Customize section with tailwind classes if you want. i.e bg-gradient-to-b from-black ...etc"
-									onChange={(e) =>
-										setSectionClassName({ [sectionId]: e.target.value })
-									}
-									onBlur={updateBlocks}
-									className="p-2 rounded-lg w-full bg-gray-50 outline-none text-sm text-gray-800 placeholder:text-gray-500"
-								/>
-							</fieldset>
+							<ComponentStyler defaultValue={sectionClassName[sectionId]} onValueChange={(value) => setSectionClassName(prev => ({ ...prev, [sectionId]: value }))} />
 						</div>
 					</div>
 					<div
-						className={`space-y-4 w-full ${sections.length > 0 ? "py-2" : "h-[200px]"
-							}`}
+						className={`space-y-4 w-full ${sections.length > 0 ? "py-2" : "h-[200px]"}`}
 					>
 						<Blocks sectionId={sectionId} />
 						<div className="text-neutral-500 font-medium flex items-center justify-center flex-col w-full py-3 border border-dashed border-neutral-500 rounded-xl">

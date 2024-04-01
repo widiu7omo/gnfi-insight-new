@@ -4,6 +4,7 @@ import { TrashIcon } from "lucide-react";
 import { useState } from "react";
 import Input from "../reusable/input";
 import Textarea from "../reusable/text-area";
+import toast from "react-hot-toast";
 
 type BlockQuoteType = {
 	sectionId: string;
@@ -45,6 +46,7 @@ export default function BlockQuote({ sectionId, index }: BlockQuoteType) {
 			};
 			return { ...prev, ...currentSections };
 		});
+		toast.success('Configuration Saved')
 	};
 	return (
 		<div className="p-4">
@@ -177,13 +179,6 @@ export default function BlockQuote({ sectionId, index }: BlockQuoteType) {
 					}
 					onBlur={saveConfig}
 				/>
-				<button
-					onClick={saveConfig}
-					className="px-3 py-2 font-medium text-sm bg-black text-white rounded"
-					type="button"
-				>
-					Save Config
-				</button>
 			</div>
 		</div>
 	);

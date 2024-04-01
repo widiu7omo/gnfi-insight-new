@@ -29,11 +29,12 @@ export default function Sections({ onDrop }: SectionsType) {
 				}`}
 		>
 			<div className="space-y-4 w-full">
-				{components.map((component) => {
+				{components.map((component,index) => {
 					return (
 						<SectionItem
 							sectionId={`section-${component.index}`}
 							key={`${component.index}-key-${Math.random()}`}
+							index={index}
 						/>
 					);
 				})}

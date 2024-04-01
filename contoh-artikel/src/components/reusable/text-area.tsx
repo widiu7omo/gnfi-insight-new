@@ -3,12 +3,14 @@ import type { TextareaHTMLAttributes } from "react";
 
 type TextareaType = {
 	label: string;
+	helperText?: string;
 } & TextareaHTMLAttributes<HTMLTextAreaElement>;
 export default function Textarea({
 	label,
 	id,
 	className,
 	required,
+	helperText,
 	...rest
 }: TextareaType) {
 	return (
@@ -24,9 +26,10 @@ export default function Textarea({
 			</label>
 			<textarea
 				{...rest}
-				className="mr-2 px-4 w-full py-2 focus:outline-gray-400 outline outline-1 outline-gray-300 rounded-lg placeholder:text-sm"
+				className="mr-2 px-2 w-full text-sm text-neutral-800 py-2 focus:outline-gray-400 outline outline-1 outline-gray-300 rounded-lg placeholder:text-sm"
 				rows={4}
 			/>
+			{helperText && <small>{helperText}</small>}
 		</fieldset>
 	);
 }

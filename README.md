@@ -9,4 +9,4 @@ You have to copy contoh-artikel to new folder.
 ### TODO: 
 - Perlu improvement, tanpa perlu copy project, generator dapat generate file .json, dan export assets yang bersangkutan
 - Untuk ornament perlu input file / dropzone supaya tidak perlu manual copy paste assets ke public folder
-- Collapsible Sections supaya User Friendly
+- ~~Collapsible Sections supaya User Friendly~~

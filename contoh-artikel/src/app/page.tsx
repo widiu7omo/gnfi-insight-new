@@ -1,4 +1,4 @@
-import generateBlocks from "@public/contoh-artikel/generated-blocks.json";
+import generateBlocks from "@public/article/generated-blocks.json";
 import { COMPONENT_NAVBAR, getComponent } from "@/data/component-front";
 import type { BlockType } from "@/data/types";
 import Toc from "@/components/reusable/toc";
@@ -6,16 +6,23 @@ import type { Metadata } from "next";
 import SectionGroup from "@/stories/SectionGroup";
 import { Navbar } from "@/stories/Navbar";
 import { groupByToMap } from "@/lib/utils";
+import PreviewBanner from "./components/preview-banner";
 
 export const metadata: Metadata = {
 	title: "Pemilu dan dinamikanya dari masa ke masa | Good News From Indonesia",
 	description: "Pemilu dan dinamikanya dari masa ke masa",
 };
-
-export default function Home() {
+type HomeType = {
+	searchParams?: Record<string, unknown>
+}
+export default function Home({ searchParams }: HomeType) {
+	console.log(searchParams)
 	const grouped = groupByToMap(generateBlocks, (item) => item.group);
+
 	return (
 		<main className="bg-neutral-50 w-full relative">
+			{/* biome-ignore lint/suspicious/noPrototypeBuiltins: <explanation> */}
+			{(searchParams?.hasOwnProperty('preview')) && <PreviewBanner />}
 			<Toc />
 			<Navbar
 				block={{

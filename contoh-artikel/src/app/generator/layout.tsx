@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
 	title: "Article Generator Dnd",
@@ -9,5 +10,11 @@ export default function GeneratorLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	return <div className="flex h-screen overflow-hidden">{children}</div>;
+	return <div className="flex h-screen overflow-hidden">
+		<Toaster
+			position="bottom-right"
+			reverseOrder={false}
+		/>
+		{children}
+	</div>;
 }

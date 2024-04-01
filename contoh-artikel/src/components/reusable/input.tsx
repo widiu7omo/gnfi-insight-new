@@ -4,10 +4,12 @@ import type { InputHTMLAttributes } from "react";
 type InputType = {
 	label: string;
 	inputClassName?: string;
+	helperText?: string
 } & InputHTMLAttributes<HTMLInputElement>;
 export default function Input({
 	className,
 	label,
+	helperText,
 	required = false,
 	inputClassName,
 	...rest
@@ -18,7 +20,7 @@ export default function Input({
 		>
 			<label
 				htmlFor={rest.id}
-				className="text-gray-500 font-medium text-sm tracking-wide"
+				className="text-gray-500 text-sm font-medium"
 			>
 				{label}
 				{required && <span className="ml-1 text-red-500 font-bold">*</span>}
@@ -30,6 +32,7 @@ export default function Input({
 					inputClassName,
 				)}
 			/>
+			{helperText && <small>{helperText}</small>}
 		</fieldset>
 	);
 }
