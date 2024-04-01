@@ -4,7 +4,8 @@ import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { TrashIcon } from "lucide-react";
 import Input from "../reusable/input";
-import { useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
+import ImageDropzone from "../reusable/image-dropzone";
 type BlockParagraphType = {
 	sectionId: string;
 	index: number;
@@ -26,6 +27,7 @@ export default function BlockParagraph({
 	const saveConfig = () => {
 		const updatedBlock = { ...block, componentProps: paragraphState };
 		sectionBlocks[index] = updatedBlock;
+		console.log(paragraphState)
 		setBlocks((prev) => {
 			const currentSections = {
 				[sectionId]: sectionBlocks,
@@ -61,6 +63,7 @@ export default function BlockParagraph({
 			return { ...prev, [sectionId]: currentSections };
 		});
 	};
+
 	const handleParagraphState = (key: keyof ParagraphType, value: unknown) => {
 		setParagraphState((prev) => ({
 			...prev,
@@ -83,46 +86,46 @@ export default function BlockParagraph({
 			<div className="flex flex-col">
 				<div className="text-sm text-gray-600 pb-1">Configuration</div>
 				<div className="grid grid-cols-4 gap-4">
-					<Input
-						label="Nama Ornamen Top Right"
-						id="otr"
-						placeholder="Biarkan kosong jika tidak ada"
-						value={paragraphState.ornamentTopRight}
+					<ImageDropzone
+						name={`otr-${sectionId}`}
+						label="Ornamen Top Right"
+						className="col-span-2"
+						staticHeight="h-[100px]"
+						defaultPreview={paragraphState.ornamentTopRight}
 						onBlur={saveConfig}
-						onChange={(e) =>
-							handleParagraphState("ornamentTopRight", e.target.value)
-						}
-					/>
-					<Input
-						label="Nama Ornamen Top Left"
-						id="otl"
-						placeholder="Biarkan kosong jika tidak ada"
-						value={paragraphState.ornamentTopLeft}
+						onUploaded={(file) => {
+							handleParagraphState("ornamentTopRight", file.preview)
+						}} />
+					<ImageDropzone
+						name={`otl-${sectionId}`}
+						label="Ornamen Top Left"
+						className="col-span-2"
+						staticHeight="h-[100px]"
+						defaultPreview={paragraphState.ornamentTopLeft}
 						onBlur={saveConfig}
-						onChange={(e) =>
-							handleParagraphState("ornamentTopLeft", e.target.value)
-						}
-					/>
-					<Input
-						label="Nama Ornamen Bottom Left"
-						id="obl"
-						placeholder="Biarkan kosong jika tidak ada"
-						value={paragraphState.ornamentBottomLeft}
+						onUploaded={(file) => {
+							handleParagraphState("ornamentTopLeft", file.preview)
+						}} />
+					<ImageDropzone
+						name={`obl-${sectionId}`}
+						label="Ornamen Bottom Left"
+						className="col-span-2"
+						staticHeight="h-[100px]"
+						defaultPreview={paragraphState.ornamentBottomLeft}
 						onBlur={saveConfig}
-						onChange={(e) =>
-							handleParagraphState("ornamentBottomLeft", e.target.value)
-						}
-					/>
-					<Input
-						label="Nama Ornamen Bottom Right"
-						id="obr"
-						placeholder="Biarkan kosong jika tidak ada"
-						value={paragraphState.ornamentBottomRight}
+						onUploaded={(file) => {
+							handleParagraphState("ornamentBottomLeft", file.preview)
+						}} />
+					<ImageDropzone
+						name={`obr-${sectionId}`}
+						label="Ornamen Bottom Right"
+						className="col-span-2"
+						staticHeight="h-[100px]"
+						defaultPreview={paragraphState.ornamentBottomRight}
 						onBlur={saveConfig}
-						onChange={(e) =>
-							handleParagraphState("ornamentBottomRight", e.target.value)
-						}
-					/>
+						onUploaded={(file) => {
+							handleParagraphState("ornamentBottomRight", file.preview)
+						}} />
 				</div>
 				<small className="text-red-500 pt-2">
 					Letakkan ornamen di folder /public/assets/nama-ornamen.svg

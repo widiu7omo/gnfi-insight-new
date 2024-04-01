@@ -48,23 +48,23 @@ export function Paragraph({ block }: { block: BlockType }) {
 		>
 			{ornamentTopRight && (
 				<Ornament className="top-[-3rem] right-[-2rem]">
-					<img src={`/assets/${ornamentTopRight}`} alt={ornamentTopRight} />
+					<img src={ornamentTopRight} alt={ornamentTopRight} />
 				</Ornament>
 			)}
 			{ornamentTopLeft && (
 				<Ornament className="top-[-2rem] left-[-5rem]">
-					<img src={`/assets/${ornamentTopLeft}`} alt={ornamentTopLeft} />
+					<img src={ornamentTopLeft} alt={ornamentTopLeft} />
 				</Ornament>
 			)}
 			{ornamentBottomLeft && (
 				<Ornament className="bottom-[-5rem] right-[-4rem]">
-					<img src={`/assets/${ornamentBottomLeft}`} alt={ornamentBottomLeft} />
+					<img src={ornamentBottomLeft} alt={ornamentBottomLeft} />
 				</Ornament>
 			)}
 			{ornamentBottomRight && (
 				<Ornament className="bottom-[-5rem] left-[-4rem]">
 					<img
-						src={`/assets/${ornamentBottomRight}`}
+						src={ornamentBottomRight}
 						alt={ornamentBottomRight}
 					/>
 				</Ornament>

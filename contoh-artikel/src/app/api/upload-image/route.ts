@@ -5,8 +5,7 @@ export async function POST(request: Request) {
   try {
     const formData = await request.formData()
     const image = formData.get('image') as File
-    const articleTitle = formData.get('title') as string
-    if (!image || !articleTitle) {
+    if (!image) {
       return Response.json({ error: 'No files received.' }, { status: 400 })
     }
     const fileName = image.name.replaceAll(' ', '_')
@@ -15,7 +14,7 @@ export async function POST(request: Request) {
     await writeFile(
       path.join(process.cwd(), folderPath),
       imageBuffer,
-      { flag: 'wx' },
+      { flag: 'w' },
       (error) => {
         throw error
       }

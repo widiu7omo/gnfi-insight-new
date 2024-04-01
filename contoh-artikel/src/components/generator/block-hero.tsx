@@ -6,6 +6,7 @@ import { Hero, type HeroType } from "@/stories/Hero";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { COMPONENT_HERO } from "@/data/component-front";
+import ImageDropzone from "../reusable/image-dropzone";
 type BlockHeroType = {
 	sectionId: string;
 	index: number;
@@ -78,17 +79,6 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 					onBlur={saveConfig}
 				/>
 				<Input
-					label="Cover URL"
-					id="coverUrl"
-					required
-					value={heroState.coverUrl ?? ""}
-					placeholder="Masukkan url untuk memberi background gambar pada hero"
-					onChange={(e) =>
-						setHeroState((prev) => ({ ...prev, coverUrl: e.target.value }))
-					}
-					onBlur={saveConfig}
-				/>
-				<Input
 					label="Swipe Icon"
 					id="swipeIcon"
 					required
@@ -99,6 +89,28 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 					}
 					onBlur={saveConfig}
 				/>
+				<ImageDropzone
+					name={`hero-image-${sectionId}`}
+					label="Hero Image"
+					className="col-span-2"
+					defaultPreview={heroState.coverUrl}
+					onUploaded={(file) => {
+						console.log(file)
+						setHeroState((prev) => ({ ...prev, coverUrl: file.preview }))
+						saveConfig()
+					}} />
+				{/* <Input
+					label="Cover URL"
+					id="coverUrl"
+					required
+					value={heroState.coverUrl ?? ""}
+					placeholder="Masukkan url untuk memberi background gambar pada hero"
+					onChange={(e) =>
+						setHeroState((prev) => ({ ...prev, coverUrl: e.target.value }))
+					}
+					onBlur={saveConfig}
+				/> */}
+
 				<Textarea
 					label="Tailwind Class Gradient Color"
 					className="col-span-2"
