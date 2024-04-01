@@ -8,17 +8,19 @@ export type ImageType = {
 	imageAlt: string;
 	className?: string;
 	imgClassName?: string;
+	overlayClassName?: string;
 };
 export function Image({ block }: { block: BlockType }) {
-	const { imageUrl, imageAlt, className, imgClassName } =
+	const { imageUrl, imageAlt, className, imgClassName, overlayClassName } =
 		block.componentProps as ImageType;
 	return (
 		<div
 			className={cn(
-				"w-full h-full max-w-[65ch] mx-auto bg-cover px-4 lg:px-0",
+				"w-full h-full max-w-[65ch] mx-auto bg-cover px-4 lg:px-0 relative",
 				className,
 			)}
 		>
+			{!!overlayClassName && <div className={cn("absolute z-10 top-0 left-0 right-0 bottom-0", overlayClassName)} />}
 			<div className="flex items-center justify-center">
 				<motion.img
 					initial={{ y: 20, opacity: 0 }}

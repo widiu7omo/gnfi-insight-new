@@ -37,3 +37,15 @@ export const FullScreen: Story = {
 		},
 	},
 };
+export const WithOverlay: Story = {
+	args: {
+		block: {
+			...meta.args.block,
+			componentProps: {
+				...meta.args.block.componentProps,
+				className: "max-w-full",
+				overlayClassName: "bg-gradient-to-b from-black via-white/0 to-black"
+			},
+		},
+	},
+};

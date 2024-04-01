@@ -2,11 +2,13 @@ import type { HttpResponseBody } from "@/app/api/types";
 import { useBlocks } from "@/store/useBlocks";
 import { FileExtended, useFiles } from "@/store/useFiles";
 import { useTitle } from "@/store/useTitle";
-import type { ImageType } from "@/stories/Image";
-import { ImageIcon, TrashIcon } from "lucide-react";
+import { Image, type ImageType } from "@/stories/Image";
+import { ImageIcon, TrashIcon, ViewIcon } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import Input from "../reusable/input";
+import { COMPONENT_IMAGE } from "@/data/component-front";
+import Textarea from "../reusable/text-area";
 
 export type BlockImageType = {
 	sectionId: string;
@@ -103,95 +105,114 @@ export default function BlockImage({ sectionId, index }: BlockImageType) {
 		});
 	};
 	return (
-		<div className="flex flex-col bg-gray-200 rounded-xl">
-			<div className="text-xl font-semibold group py-1 space-x-3 bg-neutral-200 w-full rounded-t-xl flex justify-end items-center px-2">
-				<button
-					onClick={removeBlock}
-					type="button"
-					className="text-white bg-red-800 rounded-lg text-sm invisible group-hover:visible opacity-0 hover:opacity-100 px-3 py-2 transition-all inline-flex"
-				>
-					<TrashIcon size={20} className="mr-2" />
-					<span>Remove Block</span>
-				</button>
+		<div className="flex flex-col bg-white rounded-xl">
+			<div className="text-xl font-semibold p-4 space-x-3 bg-neutral-200 w-full rounded-t-xl flex justify-between items-center">
 				<span>Image Block</span>
+				<div className="space-x-2">
+					<button
+						onClick={removeBlock}
+						type="button"
+						className="text-white bg-red-800 rounded-lg text-sm px-3 py-2 transition-all inline-flex"
+					>
+						<TrashIcon size={20} className="mr-2" />
+						<span>Remove Block</span>
+					</button>
+				</div>
 			</div>
-			<div className="flex flex-col px-4 py-4">
-				<div className="text-sm text-gray-600 pb-1">Customize Image Style</div>
-				<Input
-					label="Style container with Tailwind classes"
-					id="className"
-					value={imageState.className}
-					onChange={(e) =>
-						setImageState((prev) => ({
-							...prev,
-							className: e.target.value,
-						}))
-					}
-					onBlur={saveConfig}
-				/>
-				<Input
-					label="Style img tag with Tailwind classes"
-					id="imgClassName"
-					value={imageState.imgClassName}
-					onChange={(e) =>
-						setImageState((prev) => ({
-							...prev,
-							imgClassName: e.target.value,
-						}))
-					}
-					onBlur={saveConfig}
-				/>
-			</div>
-			<div {...getRootProps()}>
-				<div
-					className={`rounded-xl ${
-						files[sectionId] && files[sectionId][index] != null
-							? "h-full"
-							: "h-[100px]"
-					} flex items-center justify-center flex-col space-y-2`}
-				>
-					{files[sectionId] && files[sectionId][index] != null ? (
-						<div className="h-full w-auto rounded-xl relative group">
-							<img
-								className="h-full w-auto rounded-xl"
-								src={componentProps.imageUrl}
-								alt={componentProps.imageAlt}
-							/>
-							<div className="absolute invisible group-hover:visible cursor-pointer flex items-center justify-center top-0 bottom-0 left-0 right-0 hover:bg-black/60 hover:backdrop-blur-sm transition-all rounded-xl">
-								<div className="flex items-center justify-center flex-col flex-1">
-									<ImageIcon className="text-white" size={32} strokeWidth={1} />
+			<div className="flex flex-row w-full p-4 space-x-4">
+				<div className="flex flex-col space-y-2 w-1/3">
+					<div className="font-semibold text-gray-600">Customize Image Style</div>
+					<div className="space-y-4">
+						<Textarea
+							label="Container Style"
+							id="className"
+							value={imageState.className}
+							onChange={(e) =>
+								setImageState((prev) => ({
+									...prev,
+									className: e.target.value,
+								}))
+							}
+							onBlur={saveConfig}
+						/>
+						<Textarea
+							label="<img/> Style"
+							id="imgClassName"
+							value={imageState.imgClassName}
+							onChange={(e) =>
+								setImageState((prev) => ({
+									...prev,
+									imgClassName: e.target.value,
+								}))
+							}
+							onBlur={saveConfig}
+						/>
+						<Textarea
+							label="Overlay Style"
+							id="overlayClassName"
+							value={imageState.overlayClassName}
+							onChange={(e) =>
+								setImageState((prev) => ({
+									...prev,
+									overlayClassName: e.target.value,
+								}))
+							}
+							onBlur={saveConfig}
+						/>
+					</div>
+				</div>
+				<div className="w-full h-auto border border-dashed rounded-lg content-center">
+					<div {...getRootProps()} >
+						<div
+							className={`rounded-xl ${files[sectionId] && files[sectionId][index] != null
+								? "h-full"
+								: "h-[100px]"
+								} flex items-center justify-center flex-col space-y-2 p-4 w-full`}
+						>
+							{files[sectionId] && files[sectionId][index] != null ? (
+								<div className="h-full w-auto rounded-xl relative group">
+									<img
+										className="h-full w-auto rounded-xl"
+										src={componentProps.imageUrl}
+										alt={componentProps.imageAlt}
+									/>
+									<div className="absolute invisible group-hover:visible cursor-pointer flex items-center justify-center top-0 bottom-0 left-0 right-0 hover:bg-black/60 hover:backdrop-blur-sm transition-all rounded-xl">
+										<div className="flex items-center justify-center flex-col flex-1">
+											<ImageIcon className="text-white" size={32} strokeWidth={1} />
+											<input {...getInputProps()} />
+											{isDragActive ? (
+												<p className="text-white text-sm">
+													Drop the files here ...
+												</p>
+											) : (
+												<p className="text-white text-sm">
+													Drag 'n' drop some files here, or click to select files
+												</p>
+											)}
+										</div>
+									</div>
+								</div>
+							) : (
+								<div className="flex items-center justify-center flex-col">
+									<ImageIcon
+										className="text-neutral-500"
+										size={32}
+										strokeWidth={1}
+									/>
 									<input {...getInputProps()} />
 									{isDragActive ? (
-										<p className="text-white text-sm">
+										<p className="text-neutral-500 text-sm">
 											Drop the files here ...
 										</p>
 									) : (
-										<p className="text-white text-sm">
+										<p className="text-neutral-500 text-sm">
 											Drag 'n' drop some files here, or click to select files
 										</p>
 									)}
 								</div>
-							</div>
-						</div>
-					) : (
-						<div className="flex items-center justify-center flex-col">
-							<ImageIcon
-								className="text-neutral-500"
-								size={32}
-								strokeWidth={1}
-							/>
-							<input {...getInputProps()} />
-							{isDragActive ? (
-								<p className="text-neutral-500 text-sm">
-									Drop the files here ...
-								</p>
-							) : (
-								<p className="text-neutral-500 text-sm">
-									Drag 'n' drop some files here, or click to select files
-								</p>
 							)}
 						</div>
-					)}
+					</div>
 				</div>
 			</div>
 		</div>
