@@ -10,3 +10,6 @@ export function useSections() {
 
 const sectionClassAtom = atomWithStorage<Record<string, string>>('sectionClassName', {});
 export const useSectionClassName = () => useAtom(sectionClassAtom);
+
+const activeSectionAtom = atomWithStorage<string>('expanded-section', '')
+export const useActiveSection = () => useAtom(activeSectionAtom)

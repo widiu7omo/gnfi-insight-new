@@ -234,7 +234,7 @@ export default function PageWrapper({ initBlocks }: PageWrapperType) {
                         </DraggableWrapper>
                     </div>
                 </div>
-                <div className="flex-1 space-y-7min-h-screen overflow-auto relative">
+                <div className="flex-1 space-y-7 min-h-screen overflow-auto relative">
                     <div className="text-3xl font-semibold text-neutral-900 flex justify-between sticky z-[50] top-0 px-8 py-4 bg-white border-b">
                         <span> Page Content Generator</span>
                         <button
@@ -245,7 +245,7 @@ export default function PageWrapper({ initBlocks }: PageWrapperType) {
                             Generate
                         </button>
                     </div>
-                    <div className="space-y-4  p-8 ">
+                    <div className="space-y-4 p-8">
                         <div>
                             <label
                                 htmlFor="title"
@@ -279,7 +279,9 @@ export default function PageWrapper({ initBlocks }: PageWrapperType) {
                             </div>
                         </div>
                     </div>
-                    <Sections onDrop={handleOnDropSection} />
+                    <div className="p-8 pt-0">
+                        <Sections onDrop={handleOnDropSection} />
+                    </div>
                 </div>
             </DndProvider>
         </>
