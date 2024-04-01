@@ -5,16 +5,8 @@ import Toc from "@/components/reusable/toc";
 import type { Metadata } from "next";
 import SectionGroup from "@/stories/SectionGroup";
 import { Navbar } from "@/stories/Navbar";
+import { groupByToMap } from "@/lib/utils";
 
-const groupByToMap = <T, Q>(
-	array: T[],
-	predicate: (value: T, index: number, array: T[]) => Q,
-) =>
-	array.reduce((map, value, index, array) => {
-		const key = predicate(value, index, array);
-		map.get(key)?.push(value) ?? map.set(key, [value]);
-		return map;
-	}, new Map<Q, T[]>());
 export const metadata: Metadata = {
 	title: "Pemilu dan dinamikanya dari masa ke masa | Good News From Indonesia",
 	description: "Pemilu dan dinamikanya dari masa ke masa",

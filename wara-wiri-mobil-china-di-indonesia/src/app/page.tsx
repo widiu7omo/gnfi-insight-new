@@ -1,4 +1,4 @@
-import generateBlocks from "@public/contoh-artikel/generated-blocks.json";
+import generateBlocks from "@public/wara-wiri-mobil-china-di-indonesia/generated-blocks.json";
 import { COMPONENT_NAVBAR, getComponent } from "@/data/component-front";
 import type { BlockType } from "@/data/types";
 import Toc from "@/components/reusable/toc";
@@ -16,8 +16,8 @@ const groupByToMap = <T, Q>(
 		return map;
 	}, new Map<Q, T[]>());
 export const metadata: Metadata = {
-	title: "Pemilu dan dinamikanya dari masa ke masa | Good News From Indonesia",
-	description: "Pemilu dan dinamikanya dari masa ke masa",
+	title: "Wara-wiri Mobil China di Indonesia | Good News From Indonesia",
+	description: "Wara-wiri Mobil China di Indonesia",
 };
 
 export default function Home() {

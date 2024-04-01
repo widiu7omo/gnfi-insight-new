@@ -21,13 +21,12 @@ export default function Sections({ onDrop }: SectionsType) {
 
 	return (
 		<div
+			// @ts-ignore
 			ref={drop}
 			data-testid="dustbin"
-			className={`rounded-xl space-y-4 px-3 border-2 border-dashed ${
-				components.length > 0 ? "p-6" : "h-[200px]"
-			} flex items-center justify-center flex-col ${
-				isActive ? "bg-neutral-200" : "bg-neutral-100"
-			}`}
+			className={`rounded-xl space-y-4 px-3 border-2 border-dashed ${components.length > 0 ? "p-6" : "h-[200px]"
+				} flex items-center justify-center flex-col ${isActive ? "bg-neutral-200" : "bg-neutral-100"
+				}`}
 		>
 			<div className="space-y-4 w-full">
 				{components.map((component) => {
