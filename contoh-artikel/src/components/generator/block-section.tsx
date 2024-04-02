@@ -29,6 +29,7 @@ export const BlockSection: FC<BlockSectionType> = memo(function BlockSection({
 	const isActive = isOver && canDrop;
 	return (
 		<div
+			// @ts-ignore
 			ref={drop}
 			data-testid={sectionName}
 			className="border p-3 bg-neutral-50 w-full rounded-xl"

@@ -7,6 +7,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { COMPONENT_HERO } from "@/data/component-front";
 import ImageDropzone from "../reusable/image-dropzone";
+import BlockWrapper from "./block-wrapper";
 type BlockHeroType = {
 	sectionId: string;
 	index: number;
@@ -24,18 +25,6 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 			swipeUpIcon: <MouseIcon />,
 		},
 	);
-	const removeBlock = () => {
-		setBlocks((prev) => {
-			prev[sectionId].splice(index, 1);
-			for (const block of prev[sectionId]) {
-				const index = prev[sectionId].indexOf(block);
-				block.order = index;
-				block.index = index;
-			}
-			const currentSections = prev[sectionId];
-			return { ...prev, [sectionId]: currentSections };
-		});
-	};
 	const saveConfig = () => {
 		const updatedBlock = { ...block, componentProps: heroState };
 		sectionBlocks[index] = updatedBlock;
@@ -49,20 +38,7 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 	};
 
 	return (
-		<div className="p-4">
-			<div className="text-xl font-semibold flex justify-between">
-				<span>Hero Block</span>
-				<div className="space-x-2">
-					<button
-						onClick={removeBlock}
-						type="button"
-						className="text-white bg-red-800 rounded-lg text-sm px-3 py-2 transition-all inline-flex"
-					>
-						<TrashIcon size={20} className="mr-2" />
-						<span>Remove Block</span>
-					</button>
-				</div>
-			</div>
+		<BlockWrapper label="Hero Block" sectionId={sectionId} index={index}>
 			<div className="grid grid-cols-2 gap-4 pt-3">
 				<Input
 					label="Hero Title"
@@ -83,7 +59,8 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 					id="swipeIcon"
 					required
 					value={heroState.swipeUpIcon as string}
-					placeholder="Ambil icon dari Lucide Icon"
+					placeholder="Get icon from lucide icon"
+					helperText="Get icon from lucide icon"
 					onChange={(e) =>
 						setHeroState((prev) => ({ ...prev, swipeUpIcon: e.target.value }))
 					}
@@ -92,25 +69,15 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 				<ImageDropzone
 					name={`hero-image-${sectionId}`}
 					label="Hero Image"
+					onBlur={() => console.log('Blurr Input')}
 					className="col-span-2"
 					defaultPreview={heroState.coverUrl}
 					onUploaded={(file) => {
-						console.log(file)
 						setHeroState((prev) => ({ ...prev, coverUrl: file.preview }))
-						saveConfig()
+						setTimeout(() => {
+							saveConfig()
+						}, 1000)
 					}} />
-				{/* <Input
-					label="Cover URL"
-					id="coverUrl"
-					required
-					value={heroState.coverUrl ?? ""}
-					placeholder="Masukkan url untuk memberi background gambar pada hero"
-					onChange={(e) =>
-						setHeroState((prev) => ({ ...prev, coverUrl: e.target.value }))
-					}
-					onBlur={saveConfig}
-				/> */}
-
 				<Textarea
 					label="Tailwind Class Gradient Color"
 					className="col-span-2"
@@ -123,6 +90,6 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 					onBlur={saveConfig}
 				/>
 			</div>
-		</div>
+		</BlockWrapper>
 	);
 }

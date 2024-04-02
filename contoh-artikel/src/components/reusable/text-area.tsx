@@ -29,7 +29,7 @@ export default function Textarea({
 				className="mr-2 px-2 w-full text-sm text-neutral-800 py-2 focus:outline-gray-400 outline outline-1 outline-gray-300 rounded-lg placeholder:text-sm"
 				rows={4}
 			/>
-			{helperText && <small>{helperText}</small>}
+			{helperText && <small className="text-gray-500">{helperText}</small>}
 		</fieldset>
 	);
 }

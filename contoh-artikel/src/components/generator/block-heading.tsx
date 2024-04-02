@@ -12,6 +12,7 @@ import {
 	TrashIcon,
 } from "lucide-react";
 import { useState } from "react";
+import BlockWrapper from "./block-wrapper";
 export type BlockHeadingType = {
 	sectionId: string;
 	index: number;
@@ -59,18 +60,7 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 		});
 	};
 	return (
-		<div className="p-4 space-x-2 rounded-t-xl space-y-4">
-			<div className="text-xl font-semibold flex justify-between">
-				<span>Heading Block</span>
-				<button
-					onClick={removeBlock}
-					type="button"
-					className="text-white bg-red-800 rounded-lg text-sm px-3 py-2 transition-all inline-flex"
-				>
-					<TrashIcon size={20} className="mr-2" />
-					<span>Remove Block</span>
-				</button>
-			</div>
+		<BlockWrapper label="Navbar Block" sectionId={sectionId} index={index} className="p-4 space-x-2 rounded-t-xl space-y-4">
 			<div className="flex flex-col">
 				<div className="text-sm text-gray-600 pb-1">Configuration</div>
 				<div className="bg-neutral-200 rounded">
@@ -80,9 +70,8 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 							editor?.commands.setHeading({ level: 1 });
 							editor?.chain().focus().toggleHeading({ level: 1 });
 						}}
-						className={`rounded py-1 px-2 ${
-							editor?.isActive("heading", { level: 1 }) ? "bg-white" : ""
-						}`}
+						className={`rounded py-1 px-2 ${editor?.isActive("heading", { level: 1 }) ? "bg-white" : ""
+							}`}
 					>
 						<Heading1Icon size={20} />
 					</button>
@@ -92,9 +81,8 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 							editor?.commands.setHeading({ level: 2 });
 							editor?.chain().focus().toggleHeading({ level: 2 });
 						}}
-						className={`rounded py-1 px-2 ${
-							editor?.isActive("heading", { level: 2 }) ? "bg-white" : ""
-						}`}
+						className={`rounded py-1 px-2 ${editor?.isActive("heading", { level: 2 }) ? "bg-white" : ""
+							}`}
 					>
 						<Heading2Icon size={20} />
 					</button>
@@ -104,9 +92,8 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 							editor?.commands.setHeading({ level: 3 });
 							editor?.chain().focus().toggleHeading({ level: 3 });
 						}}
-						className={`rounded py-1 px-2 ${
-							editor?.isActive("heading", { level: 3 }) ? "bg-white" : ""
-						}`}
+						className={`rounded py-1 px-2 ${editor?.isActive("heading", { level: 3 }) ? "bg-white" : ""
+							}`}
 					>
 						<Heading3Icon size={20} />
 					</button>
@@ -116,9 +103,8 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 							editor?.commands.setHeading({ level: 4 });
 							editor?.chain().focus().toggleHeading({ level: 4 });
 						}}
-						className={`rounded py-1 px-2 ${
-							editor?.isActive("heading", { level: 4 }) ? "bg-white" : ""
-						}`}
+						className={`rounded py-1 px-2 ${editor?.isActive("heading", { level: 4 }) ? "bg-white" : ""
+							}`}
 					>
 						<Heading4Icon size={20} />
 					</button>
@@ -128,9 +114,8 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 							editor?.commands.setHeading({ level: 5 });
 							editor?.chain().focus().toggleHeading({ level: 5 });
 						}}
-						className={`rounded py-1 px-2 ${
-							editor?.isActive("heading", { level: 5 }) ? "bg-white" : ""
-						}`}
+						className={`rounded py-1 px-2 ${editor?.isActive("heading", { level: 5 }) ? "bg-white" : ""
+							}`}
 					>
 						<Heading5Icon size={20} />
 					</button>
@@ -140,9 +125,8 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 							editor?.commands.setHeading({ level: 6 });
 							editor?.chain().focus().toggleHeading({ level: 6 });
 						}}
-						className={`rounded py-1 px-2 ${
-							editor?.isActive("heading", { level: 6 }) ? "bg-white" : ""
-						}`}
+						className={`rounded py-1 px-2 ${editor?.isActive("heading", { level: 6 }) ? "bg-white" : ""
+							}`}
 					>
 						<Heading6Icon size={20} />
 					</button>
@@ -154,6 +138,6 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 					<EditorContent editor={editor} />
 				</div>
 			</div>
-		</div>
+		</BlockWrapper>
 	);
 }

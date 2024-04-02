@@ -78,7 +78,20 @@ export default function ImageDropzone({ onUploaded, label, className, defaultPre
                     </div>
                 </div>
             )}
-            <div {...getRootProps()} className="border border-dashed rounded-lg">
+            <div {...getRootProps()} className="border border-dashed rounded-lg relative hover:cursor-pointer group">
+                {isExist && <div className="absolute invisible z-20 group-hover:visible cursor-pointer flex items-center justify-center top-0 bottom-0 left-0 right-0 hover:bg-black/60 hover:backdrop-blur-sm transition-all rounded-xl">
+                    <div className="flex items-center justify-center flex-col flex-1">
+                        <ImageIcon className="text-white" size={32} strokeWidth={1} />
+                        <input {...getInputProps({ onBlur })} />
+                        {isDragActive ? (
+                            <p className="text-white text-sm">Drop the files here ...</p>
+                        ) : (
+                            <p className="text-white text-sm">
+                                Drag 'n' drop some files here, or click to select files
+                            </p>
+                        )}
+                    </div>
+                </div>}
 
                 <div
                     className={`rounded-xl ${isExist
@@ -87,26 +100,12 @@ export default function ImageDropzone({ onUploaded, label, className, defaultPre
                         } flex items-center justify-center flex-col space-y-2 p-4 w-full bg-gray-200`}
                 >
                     {isExist ? (
-                        <div className="h-full w-auto rounded-xl relative group">
+                        <div className="h-full w-auto rounded-xl relative">
                             <img
                                 className="h-full w-auto rounded-xl"
                                 src={fileState.preview}
                                 alt={fileState.name}
                             />
-
-                            <div className="absolute invisible group-hover:visible cursor-pointer flex items-center justify-center top-0 bottom-0 left-0 right-0 hover:bg-black/60 hover:backdrop-blur-sm transition-all rounded-xl">
-                                <div className="flex items-center justify-center flex-col flex-1">
-                                    <ImageIcon className="text-white" size={32} strokeWidth={1} />
-                                    <input {...getInputProps({ onBlur })} />
-                                    {isDragActive ? (
-                                        <p className="text-white text-sm">Drop the files here ...</p>
-                                    ) : (
-                                        <p className="text-white text-sm">
-                                            Drag 'n' drop some files here, or click to select files
-                                        </p>
-                                    )}
-                                </div>
-                            </div>
                         </div>
                     ) : (
                         <div className="flex items-center justify-center flex-col">

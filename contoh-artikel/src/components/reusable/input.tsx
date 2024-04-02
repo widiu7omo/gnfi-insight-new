@@ -32,7 +32,7 @@ export default function Input({
 					inputClassName,
 				)}
 			/>
-			{helperText && <small>{helperText}</small>}
+			{helperText && <small className="text-gray-500">{helperText}</small>}
 		</fieldset>
 	);
 }

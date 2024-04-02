@@ -2,10 +2,10 @@ import { useBlocks } from "@/store/useBlocks";
 import type { ParagraphType } from "@/stories/Paragraph";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import { TrashIcon } from "lucide-react";
 import Input from "../reusable/input";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useState } from "react";
 import ImageDropzone from "../reusable/image-dropzone";
+import BlockWrapper from "./block-wrapper";
 type BlockParagraphType = {
 	sectionId: string;
 	index: number;
@@ -51,18 +51,6 @@ export default function BlockParagraph({
 			});
 		},
 	});
-	const removeBlock = () => {
-		setBlocks((prev) => {
-			prev[sectionId].splice(index, 1);
-			for (const block of prev[sectionId]) {
-				const index = prev[sectionId].indexOf(block);
-				block.order = index;
-				block.index = index;
-			}
-			const currentSections = prev[sectionId];
-			return { ...prev, [sectionId]: currentSections };
-		});
-	};
 
 	const handleParagraphState = (key: keyof ParagraphType, value: unknown) => {
 		setParagraphState((prev) => ({
@@ -71,18 +59,7 @@ export default function BlockParagraph({
 		}));
 	};
 	return (
-		<div className="p-4 space-y-4">
-			<div className="text-xl font-semibold flex justify-between">
-				<span>Paragraph Block</span>
-				<button
-					onClick={removeBlock}
-					type="button"
-					className="text-white bg-red-800 rounded-lg text-sm px-3 py-2 transition-all inline-flex"
-				>
-					<TrashIcon size={20} className="mr-2" />
-					<span>Remove Block</span>
-				</button>
-			</div>
+		<BlockWrapper label="Paragraph Block" sectionId={sectionId} index={index}>
 			<div className="flex flex-col">
 				<div className="text-sm text-gray-600 pb-1">Configuration</div>
 				<div className="grid grid-cols-4 gap-4">
@@ -92,9 +69,11 @@ export default function BlockParagraph({
 						className="col-span-2"
 						staticHeight="h-[100px]"
 						defaultPreview={paragraphState.ornamentTopRight}
-						onBlur={saveConfig}
 						onUploaded={(file) => {
 							handleParagraphState("ornamentTopRight", file.preview)
+							setTimeout(() => {
+								saveConfig()
+							}, 1000)
 						}} />
 					<ImageDropzone
 						name={`otl-${sectionId}`}
@@ -102,9 +81,11 @@ export default function BlockParagraph({
 						className="col-span-2"
 						staticHeight="h-[100px]"
 						defaultPreview={paragraphState.ornamentTopLeft}
-						onBlur={saveConfig}
 						onUploaded={(file) => {
 							handleParagraphState("ornamentTopLeft", file.preview)
+							setTimeout(() => {
+								saveConfig()
+							}, 1000)
 						}} />
 					<ImageDropzone
 						name={`obl-${sectionId}`}
@@ -112,9 +93,11 @@ export default function BlockParagraph({
 						className="col-span-2"
 						staticHeight="h-[100px]"
 						defaultPreview={paragraphState.ornamentBottomLeft}
-						onBlur={saveConfig}
 						onUploaded={(file) => {
 							handleParagraphState("ornamentBottomLeft", file.preview)
+							setTimeout(() => {
+								saveConfig()
+							}, 1000)
 						}} />
 					<ImageDropzone
 						name={`obr-${sectionId}`}
@@ -122,9 +105,11 @@ export default function BlockParagraph({
 						className="col-span-2"
 						staticHeight="h-[100px]"
 						defaultPreview={paragraphState.ornamentBottomRight}
-						onBlur={saveConfig}
 						onUploaded={(file) => {
 							handleParagraphState("ornamentBottomRight", file.preview)
+							setTimeout(() => {
+								saveConfig()
+							}, 1000)
 						}} />
 				</div>
 				<small className="text-red-500 pt-2">
@@ -152,6 +137,6 @@ export default function BlockParagraph({
 					<EditorContent editor={editor} />
 				</div>
 			</div>
-		</div>
+		</BlockWrapper>
 	);
 }

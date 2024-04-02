@@ -1,6 +1,7 @@
 import { useBlocks } from "@/store/useBlocks";
 import type { NavbarType } from "@/stories/Navbar";
 import { TrashIcon } from "lucide-react";
+import BlockWrapper from "./block-wrapper";
 
 export type BlockNavbarType = {
 	sectionId: string;
@@ -38,18 +39,7 @@ export default function BlockNavbar({ sectionId, index }: BlockNavbarType) {
 		});
 	};
 	return (
-		<div className="p-4">
-			<div className="text-xl font-semibold flex justify-between">
-				<span>Navbar Block</span>
-				<button
-					onClick={removeBlock}
-					type="button"
-					className="text-white bg-red-800 rounded-lg text-sm px-3 py-2 transition-all inline-flex"
-				>
-					<TrashIcon size={20} className="mr-2" />
-					<span>Remove Block</span>
-				</button>
-			</div>
+		<BlockWrapper label="Navbar Block" sectionId={sectionId} index={index}>
 			<div>
 				<div className="text-sm text-gray-500">Configuration</div>
 				<div className="grid grid-cols-1 xl:grid-cols-4 gap-4 pt-2">
@@ -72,6 +62,6 @@ export default function BlockNavbar({ sectionId, index }: BlockNavbarType) {
 					</fieldset>
 				</div>
 			</div>
-		</div>
+		</BlockWrapper>
 	);
 }
