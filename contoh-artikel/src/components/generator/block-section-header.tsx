@@ -93,9 +93,9 @@ export default function BlockSectionHeader({
 						onBlur={saveConfig}
 						onUploaded={(file) => {
 							handleSectionHeaderState("coverImage", file.preview)
-							setTimeout(() => {
-								saveConfig()
-							}, 1000)
+							// setTimeout(() => {
+							// 	saveConfig()
+							// }, 1000)
 						}} />
 
 				</div>

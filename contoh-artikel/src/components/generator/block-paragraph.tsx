@@ -71,9 +71,9 @@ export default function BlockParagraph({
 						defaultPreview={paragraphState.ornamentTopRight}
 						onUploaded={(file) => {
 							handleParagraphState("ornamentTopRight", file.preview)
-							setTimeout(() => {
-								saveConfig()
-							}, 1000)
+							// setTimeout(() => {
+							// 	saveConfig()
+							// }, 1000)
 						}} />
 					<ImageDropzone
 						name={`otl-${sectionId}`}
@@ -83,9 +83,9 @@ export default function BlockParagraph({
 						defaultPreview={paragraphState.ornamentTopLeft}
 						onUploaded={(file) => {
 							handleParagraphState("ornamentTopLeft", file.preview)
-							setTimeout(() => {
-								saveConfig()
-							}, 1000)
+							// setTimeout(() => {
+							// 	saveConfig()
+							// }, 1000)
 						}} />
 					<ImageDropzone
 						name={`obl-${sectionId}`}
@@ -95,9 +95,9 @@ export default function BlockParagraph({
 						defaultPreview={paragraphState.ornamentBottomLeft}
 						onUploaded={(file) => {
 							handleParagraphState("ornamentBottomLeft", file.preview)
-							setTimeout(() => {
-								saveConfig()
-							}, 1000)
+							// setTimeout(() => {
+							// 	saveConfig()
+							// }, 1000)
 						}} />
 					<ImageDropzone
 						name={`obr-${sectionId}`}
@@ -107,9 +107,9 @@ export default function BlockParagraph({
 						defaultPreview={paragraphState.ornamentBottomRight}
 						onUploaded={(file) => {
 							handleParagraphState("ornamentBottomRight", file.preview)
-							setTimeout(() => {
-								saveConfig()
-							}, 1000)
+							// setTimeout(() => {
+							// 	saveConfig()
+							// }, 1000)
 						}} />
 				</div>
 				<small className="text-red-500 pt-2">

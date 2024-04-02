@@ -74,9 +74,9 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 					defaultPreview={heroState.coverUrl}
 					onUploaded={(file) => {
 						setHeroState((prev) => ({ ...prev, coverUrl: file.preview }))
-						setTimeout(() => {
-							saveConfig()
-						}, 1000)
+						// setTimeout(() => {
+						// 	saveConfig()
+						// }, 2000)
 					}} />
 				<Textarea
 					label="Tailwind Class Gradient Color"

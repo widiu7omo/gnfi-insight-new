@@ -162,9 +162,9 @@ export default function BlockQuote({ sectionId, index }: BlockQuoteType) {
 							...prev,
 							figureUrl: file.preview,
 						}));
-						setTimeout(() => {
-							saveConfig()
-						}, 1000)
+						// setTimeout(() => {
+						// 	saveConfig()
+						// }, 1000)
 					}} />
 			</div>
 		</BlockWrapper>

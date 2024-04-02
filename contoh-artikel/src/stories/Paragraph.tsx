@@ -57,12 +57,12 @@ export function Paragraph({ block }: { block: BlockType }) {
 				</Ornament>
 			)}
 			{ornamentBottomLeft && (
-				<Ornament className="bottom-[-5rem] right-[-4rem]">
+				<Ornament className="bottom-[-5rem] left-[-4rem]">
 					<img src={ornamentBottomLeft} alt={ornamentBottomLeft} />
 				</Ornament>
 			)}
 			{ornamentBottomRight && (
-				<Ornament className="bottom-[-5rem] left-[-4rem]">
+				<Ornament className="bottom-[-5rem] right-[-4rem]">
 					<img
 						src={ornamentBottomRight}
 						alt={ornamentBottomRight}
