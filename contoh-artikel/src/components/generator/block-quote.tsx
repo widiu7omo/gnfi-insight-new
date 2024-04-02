@@ -151,8 +151,8 @@ export default function BlockQuote({ sectionId, index }: BlockQuoteType) {
 					/>
 				</div>
 				<ImageDropzone
-					name={`heading-image-${sectionId}`}
-					label="Heading Image"
+					name={`figure-image-${sectionId}`}
+					label="Figure Image"
 					className="col-span-2"
 					defaultPreview={(quoteState?.figureUrl as string) ?? ""}
 					onBlur={saveConfig}

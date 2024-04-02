@@ -86,8 +86,8 @@ export default function BlockSectionHeader({
 				</div>
 				<div className="flex flex-col col-span-3">
 					<ImageDropzone
-						name={`heading-image-${sectionId}`}
-						label="Heading Image"
+						name={`cover-image-${sectionId}`}
+						label="Cover Image"
 						className="col-span-2"
 						defaultPreview={sectionHeaderState.coverImage}
 						onBlur={saveConfig}
