@@ -1,0 +1,192 @@
+[
+    {
+        "index": 0,
+        "component": 1,
+        "componentProps": {
+            "title": "Air, Sumber Kehidupan",
+            "coverUrl": "assets/Metal_faucet_in.jpeg",
+            "swipeUpIcon": "mouse",
+            "gradientColor": "bg-gradient-to-b from-white/0 to-black"
+        },
+        "group": "section-1",
+        "order": 0
+    },
+    {
+        "index": 0,
+        "component": 3,
+        "componentProps": {
+            "children": "<p>Apa hal terpenting bagi kehidupan manusia? Dari sekian banyak jawaban yang dapat terlontar, bisa jadi salah satu di antaranya adalah air.</p><p></p><p>Ya, air memang begitu penting bagi manusia. Tak berlebihan pula apabila kita menyebut air sebagai sumber daya vital yang turut menentukan kelangsungan hidupnya.</p><p> </p><p>Dari masa ke masa, cara dan pola hidup manusia senantiasa berubah dan berkembang. Namun, ketergantungan terhadap air adalah hal yang dipastikan tidak pernah berubah. Manusia bahkan senantiasa menemukan cara baru dalam memanfaatkan air guna meningkatkan kualitas hidupnya.</p><p> </p><p>Sebagai hal yang tidak bisa lepas dari kehidupan manusia, mulai dari asal-usulnya hingga permasalahan dalam pengelolaannya, beserta cara manusia untuk mengatasi masalah itu.</p><p></p>",
+            "className": "text-white",
+            "ornamentTopRight": "assets/paragraph-ornament1.svg",
+            "ornamentTopLeft": "",
+            "ornamentBottomRight": "",
+            "ornamentBottomLeft": "assets/paragraph-ornament3.svg"
+        },
+        "group": "section-2",
+        "groupClassName": "bg-gradient-to-b from-black from-10% to-black/40",
+        "order": 1
+    },
+    {
+        "index": 0,
+        "component": 4,
+        "componentProps": {
+            "coverImage": "assets/Landscape_Body.jpg",
+            "title": "Asal-usul Air, dari Mana Munculnya?",
+            "className": ""
+        },
+        "group": "section-3",
+        "order": 2,
+        "groupClassName": "bg-orange-500"
+    },
+    {
+        "index": 1,
+        "component": 3,
+        "componentProps": {
+            "children": "<p>Mungkin banyak orang termasuk Kawan GNFI pernah bertanya-tanya, dari mana asalnya air?</p><p></p><p>Sebenarnya, bagaimana awal mula air di bumi ini bisa hadir masih terus menjadi perdebatan di kalangan para ahli. Pertanyaan mengenai hal ini pun masih terus menjadi pertanyaan terbuka, khususnya mengenai awal mula zat hidrogen pada air, nitrogen, atau zat-zat mudah menguap lainnya.&nbsp;</p><p></p><p>Untuk saat ini, jawaban yang masih diyakini mengenai asal mula air adalah air ini berasal dari asteroid atau komet. Sebab, benda langit tersebut memiliki kandungan nitrogen, karbon, serta hidrogen (atau dalam bentuk es) yang kemungkinan menguap dan berubah menjadi air ketika menabrak bumi. Selain itu, ada pula pendapat yang menyebutkan bila memang bumi dari awal sudah terdiri dari unsur–unsur yang mendukung terciptanya air sejak awal pembentukannya sebagai planet.&nbsp;</p>",
+            "ornamentTopLeft": "assets/paragraph-ornament2.svg",
+            "ornamentBottomRight": "assets/paragraph-ornament4.svg",
+            "className": "text-neutral-500",
+            "ornamentBottomLeft": ""
+        },
+        "group": "section-3",
+        "groupClassName": "bg-orange-500",
+        "order": 3
+    },
+    {
+        "index": 2,
+        "component": 2,
+        "componentProps": {
+            "imageUrl": "assets/1._Dari_Mana_Asal-usul_Air_.png",
+            "imageAlt": "1._Dari_Mana_Asal-usul_Air_.png",
+            "className": ""
+        },
+        "group": "section-3",
+        "groupClassName": "",
+        "order": 4
+    },
+    {
+        "index": 3,
+        "component": 3,
+        "componentProps": {
+            "children": "<p>&nbsp;Penelitian terbaru dari proyek AEThER yang dipublikasikan <em>Science Daily</em>, muncul pula pendapat baru. Disebutkan bahwa ketika bumi masih dipenuhi oleh magma di permukaannya, air bumi bisa jadi bersumber dari interaksi zat antara magma ini serta atmosfer yang mengandung hidrogen dalam jumlah besar.</p><p></p><p>Dengan demikian, para ahli pun hingga saat ini masih terus mencari jawaban mengenai bagaimana air bisa tercipta di muka bumi. Namun dari sekian banyak teori yang berbeda-beda mengenai bagaimana asal usul air, setidaknya pendapat dari para ahli bisa saling melengkapi. Bahkan, bisa jadi pula bila air yang jumlahnya sangat banyak di bumi ini awal mulanya berasal dari berbagai sumber, entah itu dari asteroid, dari unsur awal pembentuk bumi sebagai planet, hingga interaksi antara atmosfer tersebut.</p>"
+        },
+        "group": "section-3",
+        "groupClassName": "",
+        "order": 5
+    },
+    {
+        "index": 0,
+        "component": 4,
+        "componentProps": {
+            "title": "",
+            "coverImage": "assets/Droplets_Vector_Art.jpg",
+            "customTitle": "<div className=\"mx-4 max-w-full rounded-xl border-2 border-white/10 bg-white/30 px-10 py-8 text-center backdrop-blur-sm xl:mx-0 xl:max-w-5xl\"><h2 className=\"text-3xl font-bold text-white drop-shadow-lg xl:text-5xl\">Jenis-jenis Air dan Karakteristiknya</h2>\n</div>"
+        },
+        "group": "section-4",
+        "groupClassName": "bg-gray-800",
+        "order": 6
+    },
+    {
+        "index": 1,
+        "component": 3,
+        "componentProps": {
+            "children": "<p>Dari sekian banyak air yang ada di planet ini, beragam pula jenisnya. Masing-masing jenis pun punya karakteristik yang berbeda, dan berbeda-beda pula letaknya.</p><p></p><p>Apa saja jenis air yang ada di sekitar kita? Inilah daftarnya:</p>",
+            "className": "text-white"
+        },
+        "group": "section-4",
+        "groupClassName": "bg-gray-800",
+        "order": 7
+    },
+    {
+        "index": 2,
+        "component": 2,
+        "componentProps": {
+            "imageUrl": "assets/2.png",
+            "imageAlt": "2.png",
+            "className": "",
+            "imgClassName": "object-cover object-center",
+            "overlayClassName": ""
+        },
+        "group": "section-4",
+        "groupClassName": "bg-gray-800",
+        "order": 8
+    },
+    {
+        "index": 3,
+        "component": 3,
+        "componentProps": {
+            "children": "<h2><strong>1.Air Tanah</strong></h2><p></p><p>Air tanah dapat ditemukan di rongga-rongga di lapisan kulit bumi atau akuifer. Air ini adalah bagian dari peredaran air di bumi, yaitu daur hidrologi. Siklus ini terjadi secara terus-menerus, dimulai dari penguapan, hujan, aliran permukaan, aliran air tanah, mengalir ke laut, lalu kembali menguap.</p><p></p><p>Survei Geologi Amerika serikat pada 2018 mencatat, volume air di tanah seribu kali lipat lebih banyak daripada air tawar di sungai dan danau seluruh dunia. Air ini terletak hampir di semua dasar bumi, termasuk bawah bukit, gunung, dataran, bahkan gurun. Pengambilan air tanah biasanya dilakukan dengan mengebor sumur sedalam 50—200 meter bahkan lebih, atau memasang turbin untuk memompa air tanah tersebut.</p><p></p><p>Air tanah sangat dibutuhkan untuk keberlangsungan hidup makhluk bumi. Dalam laporan International Groundwater Resource Assessment Centre (IGRAC), air tanah disebut menjadi salah satu sumber utama air yang cocok dikonsumsi manusia dan sangat berharga bagi sektor pertanian.</p><p></p><p>Tak hanya itu, air tanah juga berperang penting bagi lingkungan. Air ini membantu menjaga sungai, danau, dan lahan basah, tetap mengalir walau suatu daerah dilanda kekeringan. Air bermanfaat untuk mengontrol ekosistem agar tetap sehat. Air tanah yang terlalu rendah atau tercemar, dapat menyebabkan pengasaman tanah, subsidensi tanah gambut, dan pengeringan spesies tanaman sensitif.</p>",
+            "className": "text-white"
+        },
+        "group": "section-4",
+        "groupClassName": "bg-gray-800",
+        "order": 9
+    },
+    {
+        "index": 4,
+        "component": 2,
+        "componentProps": {
+            "imgClassName": "object-cover object-center",
+            "imageUrl": "assets/3.png",
+            "imageAlt": "3.png"
+        },
+        "group": "section-4",
+        "groupClassName": "",
+        "order": 10
+    },
+    {
+        "index": 5,
+        "component": 3,
+        "componentProps": {
+            "children": "<h2><strong>2. Air Garam</strong></h2><p>Tahukah Kawan GNFI bahwa ternyata sebagian besar air di bumi ini mengandung garam?</p><p>&nbsp;</p><p>Ya, sekitar 97,2 persen air di bumi mengandung garam dan 35 bagian per seribu berat air laut mengandung garam terlarut. </p><p>Layanan kelautan Amerika Serikat memperkirakan, jika garam di laut tersebar merata di seluruh permukaan bumi, maka garam-garam tersebut akan membentuk lapisan setebal 500 kaki atau 166 meter. Kira-kira setinggi gedung 40 lantai.</p><p></p><p>Menurut Rk Naresh dari Universitas Pertanian &amp; Teknologi Sardar Vallabhbhai Patel, 5 persen air yang digunakan industri mengandung garam, sementara 53 persen dimanfaatkan dalam pertambangan.</p><p></p><p>Air garam juga punya manfaat penting berkat kandungan ion di dalamnya. Air garam bisa dimanfaatkan untuk membuat baterai, digunakan dalam pendinginan pembangkit listrik termoelektrik, hingga dijadikan air minum melalui proses desalinasi. Selain itu, air garam juga banyak digunakan untuk menciptakan produk makanan, kosmetik, akuakultur, dan pertanian.</p>"
+        },
+        "group": "section-4",
+        "groupClassName": "",
+        "order": 11
+    },
+    {
+        "index": 6,
+        "component": 2,
+        "componentProps": {
+            "imageUrl": "assets/4.png",
+            "imageAlt": "4.png",
+            "imgClassName": "object-cover object-center"
+        },
+        "group": "section-4",
+        "groupClassName": "",
+        "order": 12
+    },
+    {
+        "index": 7,
+        "component": 3,
+        "componentProps": {
+            "children": "<h2><strong>3. Gletser</strong></h2><p>Hampir 10 persen dari daratan dunia saat ini ditutupi gletser—lapisan es yang bergerak turun dari lereng gunung atau daratan. Gletser menyimpan 69 persen air tawar dunia. Kalau semua es di daratan mencair, lautan akan naik 230 kaki atau 70 meter. Gletser sangat penting dalam siklus air bumi karena dapat memengaruhi volume, variabilitas, serta kualitas air limpasan di daerah manapun.</p><p></p><p>Sebagian besar gletser dan lapisan es terletak di Greenland dan Antarktika. Ketebalan es di Greenland mendekati dua mil atau 3,2 kilometer. Beberapa daratan di kawasan ini telah dikompresi sedemikian rupa, sehingga jauh di bawah permukaan laut. Sementara itu, Gletser terpanjang ada di Alaska, yaitu Gletser Bering, dengan ukuran 127 mil atau 204 kilometer.</p><p></p><p>Jika berada di lereng, seluruh lapisan es seiring waktu akan menuruni bukit. Ukurannya sangat variatif, mulai dari sebesar lapangan bola hingga sepanjang seratus mil atau 161 kilometer.</p><p></p><p>Saat zaman es belum berakhir—ketika gletser menutupi hampir sepertiga&nbsp; daratan—permukaan laut berada 400 kaki atau 122 meter lebih rendah daripada sekarang. Lalu, sekitar 125.000 tahun lalu, permukaan laut lebih tinggi 18 kaki atau 5,5 meter dari sekarang dan 165 kaki lebih tinggi pada tiga juta tahun yang lalu.</p>"
+        },
+        "group": "section-4",
+        "groupClassName": "",
+        "order": 13
+    },
+    {
+        "index": 8,
+        "component": 2,
+        "componentProps": {
+            "imageUrl": "assets/6.png",
+            "imageAlt": "6.png",
+            "imgClassName": "object-cover object-center ",
+            "className": ""
+        },
+        "group": "section-4",
+        "groupClassName": "",
+        "order": 14
+    },
+    {
+        "index": 9,
+        "component": 3,
+        "componentProps": {
+            "children": "<h2><strong>4. Air hujan</strong></h2><p>Hujan berasal dari penguapan air danau, laut, sungai, dan lainnya. Uap air itu bercampur dengan udara, lalu naik ke atmosfer dan mendingin dengan ekspansi. Uap air yang terkandung di udara mengembun di sekitar inti kondensasi, misalnya debu dan serbuk sari. Ketika udara mencapai tingkat supersaturasi, tetesan kemudian membentuk awan.</p><p></p><p>Saat baru terkumpul di awan, air hujan awalnya murni dan sedikit asam. Akan tetapi, selama pembentukan dan turun, air hujan terkontaminasi elemen mineral serta polutan yang membuatnya kurang murni, bahkan kadang-kadang sangat tercemar. Itulah mengapa air hujan tidak boleh diminum.</p><p></p><p>Curah hujan di daerah pertanian atau industri tinggi bisa saja terkontaminasi pestisida, hidrokarbon, logam berat, nitrogen oksida, sulfur dioksida, dan nitrat. Meski demikian, air hujan tetap punya segudang manfaat. Air ini bisa digunakan untuk menyiram kebun, mengairi irigasi, membersihkan toilet, membantu kerja mesin cuci, mengisi waduk, pembersihan kota, transportasi, pembangkit listrik, dan lainnya.</p><p></p><p>Itulah jenis-jenis air yang ada di sekitar kita. Semuanya punya manfaat masing-masing bagi manusia.</p>"
+        },
+        "group": "section-4",
+        "groupClassName": "",
+        "order": 15
+    }
+]
