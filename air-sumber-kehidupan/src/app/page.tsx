@@ -7,6 +7,7 @@ import SectionGroup from "@/stories/SectionGroup";
 import { Navbar } from "@/stories/Navbar";
 import { groupByToMap } from "@/lib/utils";
 import PreviewBanner from "./components/preview-banner";
+import Footer from "@/components/reusable/footer";
 
 export const metadata: Metadata = {
 	title: "Pemilu dan dinamikanya dari masa ke masa | Good News From Indonesia",
@@ -49,6 +50,7 @@ export default function Home({ searchParams }: HomeType) {
 					</SectionGroup>
 				);
 			})}
+			<Footer />
 		</main>
 	);
 }

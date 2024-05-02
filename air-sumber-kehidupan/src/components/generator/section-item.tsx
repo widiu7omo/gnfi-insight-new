@@ -49,20 +49,6 @@ export default function SectionItem({ sectionId, index }: { sectionId: string, i
 			});
 		}
 	};
-	const updateSectionClass = () => {
-		setSectionClassName({ [sectionId]: sectionClass })
-	}
-	const updateBlocks = () => {
-		setBlocks((prev) => {
-			const blocks = prev[sectionId] ?? [];
-			const updateBlocks = blocks.map((item) => {
-				item.groupClassName = sectionClassName[sectionId];
-				return item;
-			});
-			return { ...prev, [sectionId]: updateBlocks };
-		});
-	};
-
 	const [{ canDrop, isOver }, drop] = useDrop(() => ({
 		accept: ItemTypes.BLOCK,
 		drop: handleOnDropBlock,
@@ -145,7 +131,17 @@ export default function SectionItem({ sectionId, index }: { sectionId: string, i
 							</div>
 						</div>
 						<div className="space-x-2 w-full">
-							<ComponentStyler defaultValue={sectionClassName[sectionId]} onValueChange={(value) => setSectionClassName(prev => ({ ...prev, [sectionId]: value }))} />
+							<ComponentStyler defaultValue={sectionClassName[sectionId]} onValueChange={(value) => {
+								setSectionClassName(prev => ({ ...prev, [sectionId]: value }))
+								setBlocks((prev) => {
+									const blocks = prev[sectionId] ?? [];
+									const updateBlocks = blocks.map((item) => {
+										item.groupClassName = value;
+										return item;
+									});
+									return { ...prev, [sectionId]: updateBlocks };
+								});
+							}} />
 						</div>
 					</div>
 					<div

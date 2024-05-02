@@ -62,55 +62,111 @@ export default function BlockParagraph({
 		<BlockWrapper label="Paragraph Block" sectionId={sectionId} index={index}>
 			<div className="flex flex-col">
 				<div className="text-sm text-gray-600 pb-1">Configuration</div>
-				<div className="grid grid-cols-4 gap-4">
-					<ImageDropzone
-						name={`otr-${sectionId}`}
-						label="Ornamen Top Right"
-						className="col-span-2"
-						staticHeight="h-[100px]"
-						defaultPreview={paragraphState.ornamentTopRight}
-						onUploaded={(file) => {
-							handleParagraphState("ornamentTopRight", file.preview)
-							// setTimeout(() => {
-							// 	saveConfig()
-							// }, 1000)
-						}} />
-					<ImageDropzone
-						name={`otl-${sectionId}`}
-						label="Ornamen Top Left"
-						className="col-span-2"
-						staticHeight="h-[100px]"
-						defaultPreview={paragraphState.ornamentTopLeft}
-						onUploaded={(file) => {
-							handleParagraphState("ornamentTopLeft", file.preview)
-							// setTimeout(() => {
-							// 	saveConfig()
-							// }, 1000)
-						}} />
-					<ImageDropzone
-						name={`obl-${sectionId}`}
-						label="Ornamen Bottom Left"
-						className="col-span-2"
-						staticHeight="h-[100px]"
-						defaultPreview={paragraphState.ornamentBottomLeft}
-						onUploaded={(file) => {
-							handleParagraphState("ornamentBottomLeft", file.preview)
-							// setTimeout(() => {
-							// 	saveConfig()
-							// }, 1000)
-						}} />
-					<ImageDropzone
-						name={`obr-${sectionId}`}
-						label="Ornamen Bottom Right"
-						className="col-span-2"
-						staticHeight="h-[100px]"
-						defaultPreview={paragraphState.ornamentBottomRight}
-						onUploaded={(file) => {
-							handleParagraphState("ornamentBottomRight", file.preview)
-							// setTimeout(() => {
-							// 	saveConfig()
-							// }, 1000)
-						}} />
+				<div className="grid grid-cols-2 gap-4">
+					<div className="space-y-4 border border-gray-200 rounded-2xl p-4">
+						<Input
+							label="Style Ornamen Top Right"
+							id="className"
+							value={paragraphState.classOrnamentTopRight}
+							onChange={(e) =>
+								setParagraphState((prev) => ({
+									...prev,
+									classOrnamentTopRight: e.target.value,
+								}))
+							}
+							onBlur={saveConfig}
+						/>
+						<ImageDropzone
+							name={`otr-${sectionId}`}
+							label="Ornamen Top Right"
+							className="col-span-2"
+							staticHeight="h-[100px]"
+							defaultPreview={paragraphState.ornamentTopRight}
+							onUploaded={(file) => {
+								handleParagraphState("ornamentTopRight", file.preview)
+								// setTimeout(() => {
+								// 	saveConfig()
+								// }, 1000)
+							}} />
+					</div>
+					<div className="space-y-4 border border-gray-200 rounded-2xl p-4">
+						<Input
+							label="Style Ornamen Top Left"
+							id="className"
+							value={paragraphState.classOrnamentTopLeft}
+							onChange={(e) =>
+								setParagraphState((prev) => ({
+									...prev,
+									classOrnamentTopLeft: e.target.value,
+								}))
+							}
+							onBlur={saveConfig}
+						/>
+						<ImageDropzone
+							name={`otl-${sectionId}`}
+							label="Ornamen Top Left"
+							className="col-span-2"
+							staticHeight="h-[100px]"
+							defaultPreview={paragraphState.ornamentTopLeft}
+							onUploaded={(file) => {
+								handleParagraphState("ornamentTopLeft", file.preview)
+								// setTimeout(() => {
+								// 	saveConfig()
+								// }, 1000)
+							}} />
+					</div>
+					<div className="space-y-4 border border-gray-200 rounded-2xl p-4">
+						<Input
+							label="Style Ornamen Bottom Left"
+							id="className"
+							value={paragraphState.classOrnamentBottomLeft}
+							onChange={(e) =>
+								setParagraphState((prev) => ({
+									...prev,
+									classOrnamentBottomLeft: e.target.value,
+								}))
+							}
+							onBlur={saveConfig}
+						/>
+						<ImageDropzone
+							name={`obl-${sectionId}`}
+							label="Ornamen Bottom Left"
+							className="col-span-2"
+							staticHeight="h-[100px]"
+							defaultPreview={paragraphState.ornamentBottomLeft}
+							onUploaded={(file) => {
+								handleParagraphState("ornamentBottomLeft", file.preview)
+								// setTimeout(() => {
+								// 	saveConfig()
+								// }, 1000)
+							}} />
+					</div>
+					<div className="space-y-4 border border-gray-200 rounded-2xl p-4">
+						<Input
+							label="Style Ornamen Bottom Left"
+							id="className"
+							value={paragraphState.ornamentBottomRight}
+							onChange={(e) =>
+								setParagraphState((prev) => ({
+									...prev,
+									ornamentBottomRight: e.target.value,
+								}))
+							}
+							onBlur={saveConfig}
+						/>
+						<ImageDropzone
+							name={`obr-${sectionId}`}
+							label="Ornamen Bottom Right"
+							className="col-span-2"
+							staticHeight="h-[100px]"
+							defaultPreview={paragraphState.ornamentBottomRight}
+							onUploaded={(file) => {
+								handleParagraphState("ornamentBottomRight", file.preview)
+								// setTimeout(() => {
+								// 	saveConfig()
+								// }, 1000)
+							}} />
+					</div>
 				</div>
 				<small className="text-red-500 pt-2">
 					Letakkan ornamen di folder /public/assets/nama-ornamen.svg

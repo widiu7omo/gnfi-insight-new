@@ -16,6 +16,9 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        "lilita-one": ["Lilita One", " sans-serif"],
+      }
     },
     screens: {
       ...defaultScreens,
