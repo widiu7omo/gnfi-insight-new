@@ -24,7 +24,7 @@ export default function Home({ searchParams }: HomeType) {
 	return (
 		<main className="bg-neutral-50 w-full relative">
 			{/* biome-ignore lint/suspicious/noPrototypeBuiltins: <explanation> */}
-			{(searchParams?.hasOwnProperty('preview')) && <PreviewBanner />}
+			{/* {(searchParams?.hasOwnProperty('preview')) && <PreviewBanner />} */}
 			<Toc />
 			<Navbar
 				block={{

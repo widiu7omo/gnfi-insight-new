@@ -63,6 +63,7 @@ export default function DraggableWrapper({
 	const opacity = isDragging ? 0.4 : 1;
 	return (
 		<div
+			// @ts-ignore
 			ref={drag}
 			style={{ opacity }}
 			data-testid={"box"}

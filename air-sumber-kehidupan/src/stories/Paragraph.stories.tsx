@@ -26,7 +26,7 @@ export const WithOrnament: Story = {
 		className: "text-white",
 		withOrnament: true,
 		ornaments: [
-			<Ornament className="top-[-4rem] right-[-2rem]">
+			<Ornament key={'ornament-1'} className="top-[-4rem] right-[-2rem]">
 				<svg
 					aria-label="Circle dashed"
 					role="img"
@@ -66,7 +66,7 @@ export const WithOrnament: Story = {
 					/>
 				</svg>
 			</Ornament>,
-			<Ornament className="bottom-[-5rem] left-[-4rem] rotate-180">
+			<Ornament key={'ornament-2'} className="bottom-[-5rem] left-[-4rem] rotate-180">
 				<svg
 					aria-label="Circle dashed"
 					role="img"
