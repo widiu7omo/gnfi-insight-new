@@ -1,4 +1,5 @@
 import generateBlocks from "@public/article/generated-blocks.json";
+import generatedMeta from "@public/article/generated-meta.json"
 import { COMPONENT_NAVBAR, getComponent } from "@/data/component-front";
 import type { BlockType } from "@/data/types";
 import Toc from "@/components/reusable/toc";
@@ -11,8 +12,8 @@ import Footer from "@/components/reusable/footer";
 import CustomBackground from "@/components/reusable/custom-background";
 
 export const metadata: Metadata = {
-	title: "Pemilu dan dinamikanya dari masa ke masa | Good News From Indonesia",
-	description: "Pemilu dan dinamikanya dari masa ke masa",
+	title: `${generatedMeta.seo.title} | Good News From Indonesia`,
+	description: generatedMeta.seo.desc,
 };
 type HomeType = {
 	searchParams?: Record<string, unknown>
