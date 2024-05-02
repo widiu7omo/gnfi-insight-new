@@ -26,7 +26,7 @@ export default function Quote1(props: QuoteFunType) {
 				/>
 			</svg>
 			<div className="relative flex flex-col items-center space-x-2 xl:flex-row xl:items-end">
-				<p className="flex-grow text-lg font-bold text-neutral-950">
+				<p className="flex-grow text-lg font-bold text-inherit">
 					{props.quote}
 				</p>
 
