@@ -18,11 +18,13 @@ export type ParagraphType = {
 	classOrnamentTopRight?: string;
 	classOrnamentBottomLeft?: string;
 	classOrnamentBottomRight?: string;
+	containerClassName?: string;
 };
 export function Paragraph({ block }: { block: BlockType }) {
 	const {
 		children,
 		className,
+		containerClassName,
 		ornamentTopRight,
 		ornamentTopLeft,
 		ornamentBottomLeft,
@@ -45,39 +47,40 @@ export function Paragraph({ block }: { block: BlockType }) {
 			animate("p", { opacity: 0, y: 20 });
 		}
 	}, [isInView, animate]);
-	console.log(ornamentTopRight);
 	return (
-		<div
-			className={cn(
-				"prose relative z-[40] mx-auto py-8 px-4 xl:px-0",
-				className,
-			)}
-			ref={scope}
-		>
-			{ornamentTopRight && (
-				<Ornament className={cn("top-[-3rem] right-[-2rem]", classOrnamentTopRight)}>
-					<motion.img initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} src={ornamentTopRight} alt={ornamentTopRight} />
-				</Ornament>
-			)}
-			{ornamentTopLeft && (
-				<Ornament className={cn("top-[-2rem] left-[-5rem]", classOrnamentTopLeft)}>
-					<motion.img initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} src={ornamentTopLeft} alt={ornamentTopLeft} />
-				</Ornament>
-			)}
-			{ornamentBottomLeft && (
-				<Ornament className={cn("bottom-[-5rem] left-[-4rem]", classOrnamentBottomLeft)}>
-					<motion.img initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} src={ornamentBottomLeft} alt={ornamentBottomLeft} />
-				</Ornament>
-			)}
-			{ornamentBottomRight && (
-				<Ornament className={cn("bottom-[-5rem] right-[-4rem]", classOrnamentBottomRight)}>
-					<motion.img initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }}
-						src={ornamentBottomRight}
-						alt={ornamentBottomRight}
-					/>
-				</Ornament>
-			)}
-			{typeof children === "string" ? parse(children) : children}
+		<div className={containerClassName}>
+			<div
+				className={cn(
+					"prose relative z-[40] mx-auto py-8 px-4 xl:px-0",
+					className,
+				)}
+				ref={scope}
+			>
+				{ornamentTopRight && (
+					<Ornament className={cn("top-[-3rem] right-[-2rem]", classOrnamentTopRight)}>
+						<motion.img initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} src={ornamentTopRight} alt={ornamentTopRight} />
+					</Ornament>
+				)}
+				{ornamentTopLeft && (
+					<Ornament className={cn("top-[-2rem] left-[-5rem]", classOrnamentTopLeft)}>
+						<motion.img initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} src={ornamentTopLeft} alt={ornamentTopLeft} />
+					</Ornament>
+				)}
+				{ornamentBottomLeft && (
+					<Ornament className={cn("bottom-[-5rem] left-[-4rem]", classOrnamentBottomLeft)}>
+						<motion.img initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} src={ornamentBottomLeft} alt={ornamentBottomLeft} />
+					</Ornament>
+				)}
+				{ornamentBottomRight && (
+					<Ornament className={cn("bottom-[-5rem] right-[-4rem]", classOrnamentBottomRight)}>
+						<motion.img initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }}
+							src={ornamentBottomRight}
+							alt={ornamentBottomRight}
+						/>
+					</Ornament>
+				)}
+				{typeof children === "string" ? parse(children) : children}
+			</div>
 		</div>
 	);
 }

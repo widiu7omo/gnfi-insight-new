@@ -22,12 +22,12 @@ import ComponentStyler from "../reusable/component-styler";
 export default function SectionItem({ sectionId, index }: { sectionId: string, index: number }) {
 	const [sectionName, setSectionName] = useState("Edit Section Name");
 	const [toggleSecName, setToggleSecName] = useState(true);
-	const [sectionClass, setSectionClass] = useState('')
 	const [activeSession, setActiveSession] = useActiveSection();
 	const { getCollapseProps, getToggleProps, isExpanded } = useCollapse({ isExpanded: activeSession === sectionId })
 	const [sectionClassName, setSectionClassName] = useSectionClassName();
 	const [_s, setSection] = useSections()
-	const [_b, setBlock] = useBlocks()
+	const [blocks, setBlock] = useBlocks()
+	const block = blocks[sectionId] ?? [];
 	const [_, setBlocks] = useBlocks();
 	const [sections] = useSections();
 	const handleOnDropBlock = (item: DragItemType) => {
@@ -142,6 +142,24 @@ export default function SectionItem({ sectionId, index }: { sectionId: string, i
 									return { ...prev, [sectionId]: updateBlocks };
 								});
 							}} />
+							<div>
+								{block.length > 0
+									&& <div className="space-x-3">
+										<label htmlFor="with-background">With Background</label>
+										<input id="with-background" onChange={(e) => {
+											setBlocks((prev) => {
+												const blocks = prev[sectionId] ?? [];
+												const updateBlocks = blocks.map((item) => {
+													item.groupWithBackground = !item.groupWithBackground;
+													return item;
+												});
+												return { ...prev, [sectionId]: updateBlocks };
+											});
+										}} type="checkbox" checked={block[0]?.groupWithBackground} value={block[0]?.groupWithBackground === true ? 1 : 0} />
+
+									</div>
+								}
+							</div>
 						</div>
 					</div>
 					<div

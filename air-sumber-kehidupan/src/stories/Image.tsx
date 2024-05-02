@@ -25,8 +25,8 @@ export function Image({ block }: { block: BlockType }) {
 				<motion.img
 					initial={{ y: 20, opacity: 0 }}
 					transition={{ delay: 0.3 }}
-					animate={{ y: 0, opacity: 1 }}
-					viewport={{ once: false }}
+					whileInView={{ y: 0, opacity: 1 }}
+					viewport={{ once: true }}
 					src={imageUrl}
 					alt={imageAlt ?? "unknown"}
 					className={cn("w-full", imgClassName)}

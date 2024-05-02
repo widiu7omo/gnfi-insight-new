@@ -8,6 +8,7 @@ import { Navbar } from "@/stories/Navbar";
 import { groupByToMap } from "@/lib/utils";
 import PreviewBanner from "./components/preview-banner";
 import Footer from "@/components/reusable/footer";
+import CustomBackground from "@/components/reusable/custom-background";
 
 export const metadata: Metadata = {
 	title: "Pemilu dan dinamikanya dari masa ke masa | Good News From Indonesia",
@@ -47,6 +48,7 @@ export default function Home({ searchParams }: HomeType) {
 								/>
 							);
 						})}
+						{blocks[0].groupWithBackground && <CustomBackground id={`${groupName}-background`} />}
 					</SectionGroup>
 				);
 			})}

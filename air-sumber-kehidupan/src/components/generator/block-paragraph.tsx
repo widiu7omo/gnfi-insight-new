@@ -22,6 +22,7 @@ export default function BlockParagraph({
 		componentProps ?? {
 			className: "",
 			children: "",
+			containerClassName: ""
 		},
 	);
 	const saveConfig = () => {
@@ -145,11 +146,11 @@ export default function BlockParagraph({
 						<Input
 							label="Style Ornamen Bottom Left"
 							id="className"
-							value={paragraphState.ornamentBottomRight}
+							value={paragraphState.classOrnamentBottomRight}
 							onChange={(e) =>
 								setParagraphState((prev) => ({
 									...prev,
-									ornamentBottomRight: e.target.value,
+									classOrnamentBottomRight: e.target.value,
 								}))
 							}
 							onBlur={saveConfig}
@@ -168,20 +169,32 @@ export default function BlockParagraph({
 							}} />
 					</div>
 				</div>
-				<small className="text-red-500 pt-2">
-					Letakkan ornamen di folder /public/assets/nama-ornamen.svg
-				</small>
 			</div>
 			<div className="flex flex-col">
-				<div className="text-sm text-gray-600 pb-1">Style Paragraph</div>
+				<div className=" text-gray-600 text-lg pb-1">Style Paragraph</div>
 				<Input
-					label="Style with Tailwind classes"
+					label=""
+					placeholder="Style with Tailwind classes"
 					id="className"
 					value={paragraphState.className}
 					onChange={(e) =>
 						setParagraphState((prev) => ({
 							...prev,
 							className: e.target.value,
+						}))
+					}
+					onBlur={saveConfig}
+				/>
+				<div className="pt-4 text-gray-600 text-lg pb-1">Style Container</div>
+				<Input
+					label=""
+					placeholder="Style with Tailwind classes"
+					id="className"
+					value={paragraphState.containerClassName}
+					onChange={(e) =>
+						setParagraphState((prev) => ({
+							...prev,
+							containerClassName: e.target.value,
 						}))
 					}
 					onBlur={saveConfig}

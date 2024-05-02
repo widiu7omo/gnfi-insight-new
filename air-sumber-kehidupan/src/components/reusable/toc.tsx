@@ -44,38 +44,56 @@ export default function Toc() {
         </motion.div>
         <ul className="leading-8 text-gray-600 text-lg space-y-4">
           <li
-            data-active={isSelected('#section-1')}
-            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
-          >
-            <a href="#section-1">
-              Pemilu 1955, Pemilu “Resmi” Pertama Indonesia
-            </a>
-          </li>
-          <li
             data-active={isSelected('#section-2')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-2">Ketika Golkar Menguasai Pemilu</a>
+            <a href="#section-2">
+              Air, Sumber Kehidupan
+            </a>
           </li>
           <li
             data-active={isSelected('#section-3')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-3">
-              Orde Baru Runtuh, Lahirlah Pemilu Luber Jurdil
-            </a>
+            <a href="#section-3">Asal-usul Air, dari Mana Munculnya?</a>
           </li>
           <li
             data-active={isSelected('#section-4')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-4">Pemilu 2004, Saat Presiden Dipilih Langsung</a>
+            <a href="#section-4">
+              Jenis-jenis Air dan Karakteristiknya
+            </a>
           </li>
           <li
             data-active={isSelected('#section-5')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-5">Ketika Dunia Maya Memanas</a>
+            <a href="#section-5">Air dan Kehidupan Sosial Budaya Manusia</a>
+          </li>
+          <li
+            data-active={isSelected('#section-6')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-6">
+              Ungkapan Syukur atas Melimpahnya Air
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-7')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-7">
+              Masalah Pengelolaan Air dan Solusinya
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-8')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-8">
+              World Water Forum, Ketika Dunia Mencari Solusi Permasalahan Air
+            </a>
           </li>
         </ul>
       </motion.div>
