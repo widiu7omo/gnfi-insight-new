@@ -138,7 +138,7 @@ export default function BlockQuote({ sectionId, index }: BlockQuoteType) {
 						onBlur={saveConfig}
 					/>
 					<Textarea
-						label="<img/> Style"
+						label="Quote Style"
 						id="imgClassName"
 						value={quoteState.className}
 						onChange={(e) =>

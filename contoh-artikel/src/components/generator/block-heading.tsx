@@ -13,19 +13,30 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import BlockWrapper from "./block-wrapper";
+import Input from "../reusable/input";
+import toast from "react-hot-toast";
 export type BlockHeadingType = {
 	sectionId: string;
 	index: number;
 };
 export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 	const [blocks, setBlocks] = useBlocks();
+	const sectionBlocks = blocks[sectionId];
+	const block = sectionBlocks[index];
+	const componentProps = (block.componentProps ?? {}) as HeadingType;
+	const [headingState, setHeadingState] = useState<HeadingType>(
+		componentProps ?? {
+			className: "",
+			content: "",
+		},
+	);
 	// TODO: Persist=> move to atom jotai
 	const [className, setClassName] = useState();
 	const editor = useEditor({
 		extensions: [
 			StarterKit.configure({
 				heading: {
-					levels: [1, 2, 3],
+					levels: [1, 2, 3, 4, 5, 6],
 					HTMLAttributes: {
 						class: "heading",
 					},
@@ -36,17 +47,21 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 			(blocks[sectionId][index].componentProps as HeadingType).content ??
 			"Heading Title",
 		onBlur: () => {
-			setBlocks((prev) => {
-				const currentBlock = prev[sectionId][index];
-				const componentProps = currentBlock.componentProps as HeadingType;
-				componentProps.content = editor?.getHTML() ?? "";
-				componentProps.className = className ?? "";
-				prev[sectionId][index] = { ...currentBlock, componentProps };
-				const currentSections = prev[sectionId];
-				return { ...prev, [sectionId]: currentSections };
-			});
+			saveConfig()
 		},
 	});
+	const saveConfig = () => {
+		setBlocks((prev) => {
+			const currentBlock = prev[sectionId][index];
+			const componentProps = currentBlock.componentProps as HeadingType;
+			componentProps.content = editor?.getHTML() ?? "";
+			componentProps.className = headingState.className;
+			prev[sectionId][index] = { ...currentBlock, componentProps };
+			const currentSections = prev[sectionId];
+			return { ...prev, [sectionId]: currentSections };
+		});
+		toast.success("Configuration Saved")
+	}
 	const removeBlock = () => {
 		setBlocks((prev) => {
 			prev[sectionId].splice(index, 1);
@@ -60,7 +75,7 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 		});
 	};
 	return (
-		<BlockWrapper label="Navbar Block" sectionId={sectionId} index={index} className="p-4 space-x-2 rounded-t-xl space-y-4">
+		<BlockWrapper label="Heading Block" sectionId={sectionId} index={index} className="p-4 space-x-2 rounded-t-xl space-y-4">
 			<div className="flex flex-col">
 				<div className="text-sm text-gray-600 pb-1">Configuration</div>
 				<div className="bg-neutral-200 rounded">
@@ -132,6 +147,18 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 					</button>
 				</div>
 			</div>
+			<Input
+				label="Style Heading"
+				id="className"
+				value={headingState.className}
+				onChange={(e) =>
+					setHeadingState((prev) => ({
+						...prev,
+						className: e.target.value,
+					}))
+				}
+				onBlur={saveConfig}
+			/>
 			<div>
 				<div className="text-sm text-gray-600 pb-1">Content</div>
 				<div className="p-4 bg-white rounded">

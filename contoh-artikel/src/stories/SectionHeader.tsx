@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 import type { BlockType } from "@/data/types";
 import parse from "html-react-parser";
-
+import { motion } from 'framer-motion'
 export type SectionHeaderType = {
 	title?: string;
 	coverImage: string;
@@ -15,6 +15,7 @@ export type SectionHeaderType = {
 export function SectionHeader({ block }: { block: BlockType }) {
 	const { title, coverImage, className, customTitle } =
 		block.componentProps as SectionHeaderType;
+
 	return (
 		<div
 			className={cn(
@@ -26,11 +27,23 @@ export function SectionHeader({ block }: { block: BlockType }) {
 			}}
 		>
 			{customTitle ? (
-				parse(customTitle as string)
+				<motion.div
+					viewport={{ once: true }}
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.3 }}
+				>
+					{parse(customTitle as string)}
+				</motion.div>
 			) : (
-				<h2 className="max-w-5xl text-center text-3xl font-bold leading-snug text-white lg:text-4xl xl:text-5xl">
+				<motion.h2
+					viewport={{ once: true }}
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.3 }}
+					className="max-w-5xl text-center text-3xl font-bold leading-snug text-white lg:text-4xl xl:text-5xl">
 					{title}
-				</h2>
+				</motion.h2>
 			)}
 		</div>
 	);
