@@ -120,7 +120,7 @@ export default function PageWrapper({ initBlocks }: PageWrapperType) {
                             >
                                 Generate
                             </button>
-                            <Link href={"/?preview=true"}
+                            <Link href={"/preview"}
                                 type="button"
                                 className="text-lg text-white font-semibold px-4"
                             >
