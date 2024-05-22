@@ -30,4 +30,4 @@ export const COMPONENT_CUSTOM: number = 9;
 export const componentList: Record<
   number,
   ({ block }: { block: BlockType }) => ReactElement
-> = { 0: Navbar, 1: Hero, 2: Image, 3: Paragraph, 4: SectionHeader, 5: Heading, 6: Quote, 7: CustomComponent };
+> = { 0: Navbar, 1: Hero, 2: Image, 3: Paragraph, 4: SectionHeader, 5: Heading, 6: Quote, 9: CustomComponent };

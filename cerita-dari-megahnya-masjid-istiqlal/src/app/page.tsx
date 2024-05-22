@@ -46,7 +46,8 @@ export default function Home({ searchParams }: HomeType) {
 								/>
 							);
 						})}
-						{blocks[0].groupWithBackground && <CustomBackground id={`${groupName}-background`} />}
+						{/* biome-ignore lint/suspicious/noPrototypeBuiltins: <explanation> */}
+						{blocks[0].hasOwnProperty('groupWithBackground') && <CustomBackground id={`${groupName}-background`} />}
 					</SectionGroup>
 				);
 			})}
