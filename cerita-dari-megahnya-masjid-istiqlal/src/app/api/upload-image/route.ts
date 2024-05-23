@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, writeFile } from 'node:fs'
+import { writeFile } from 'node:fs'
 import path from 'node:path'
 
 export async function POST(request: Request) {
