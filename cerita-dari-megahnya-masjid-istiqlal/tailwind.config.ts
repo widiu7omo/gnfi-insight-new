@@ -16,11 +16,17 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        custom: {
+          yellow: "#FEDC60",
+        },
+      },
     },
     screens: {
       ...defaultScreens,
       xs: '460px',
     },
+
   },
   plugins: [require('@tailwindcss/typography')],
 }
