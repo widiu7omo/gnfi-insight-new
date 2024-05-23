@@ -1,5 +1,4 @@
 "use client"
-import { ChevronsDown } from "lucide-react";
 import ImageAnimation from "../animation/Image";
 import Image from "next/image";
 import Heading from "../animation/Heading";
@@ -28,7 +27,7 @@ export function SectionOneComponent() {
                     gradientColor: "bg-gradient-to-t from-[rgb(254_220_96/1)] from-[0%] to-[60%]"
                 }
             }} />
-        <section className="relative flex items-center justify-center flex-col min-h-screen space-y-10 bg-custom-yellow pb-20 pt-80 text-black lg:px-20 overflow-hidden">
+        <section className="relative flex items-center justify-center flex-col min-h-screen space-y-6 sm:space-y-10 bg-custom-yellow pb-20 pt-80 text-black lg:px-20 overflow-hidden">
             <Heading
                 className="prose py-8 px-4 xl:px-0 text-center mx-auto"
                 color="#000"
@@ -49,88 +48,93 @@ export function SectionOneComponent() {
                 />
             </ImageAnimation>
             <ul className="space-y-12 sm:space-y-20 max-w-4xl w-full">
-                <ImageAnimation start="left" className="timeline-box-1">
+                <ImageAnimation start="left" className="timeline-box-1 !rounded-none sm:!rounded-xl">
                     <h1 className="text-center text-3xl sm:text-5xl font-bold xl:text-7xl">1950</h1>
-                    <p className="text-sm font-light xl:text-xl">
+                    <p className="text-xs sm:text-sm font-light xl:text-xl">
                         Sejumlah tokoh Islam menggelar rapat di Deca Park untuk membahas
                         pembangunan masjid. Tokoh yang mengikuti rapat di antaranya Anwar
                         Tjokroaminoto, Taufiqurrahman, dan Wahid Hasyim.
                     </p>
                 </ImageAnimation>
-                <ImageAnimation start="right" className="relative flex flex-col items-start justify-center">
-                    <div className="absolute w-[50%] sm:w-[40%] bg-gradient-to-r from-[10%] from-black to-white/0 h-full flex items-center">
-                        <div className="flex flex-col space-y-10">
-                            <ImageAnimation start="left" className="bg-transparent p-5 text-custom-yellow">
-                                <h1 className="text-5xl font-bold xl:text-7xl">1955</h1>
-                                <p className="text-sm font-light xl:text-xl">
-                                    Pemerintah mengadakan sayembara maket Masjid Istiqlal dan
-                                    menggalang dana dari masyarakat untuk membiayai pembangunan.
-                                </p>
-                            </ImageAnimation>
-                            <ImageAnimation start="left" className="bg-transparent p-5 text-custom-yellow">
-                                <h1 className="text-5xl font-bold xl:text-7xl">1954</h1>
-                                <p className="text-sm font-light xl:text-xl">
-                                    Yayasan Masjid Istiqlal diresmikan setelah Presiden Sukarno
-                                    menyetujui rencana pembangunan masjid.
-                                </p>
-                            </ImageAnimation>
+                <ImageAnimation start="right" className="">
+                    <div className="relative flex flex-col items-start justify-center">
+                        <div className="absolute sm:bg-gradient-to-tr bg-gradient-to-r xl:bg-gradient-to-tr from-[20%] to-[60%] from-black to-white/0 h-full flex items-end">
+                            <div className="w-[80%] xl:w-[60%] sm:w-[40%]">
+                                <div className="flex flex-col justify-start items-start">
+                                    <ImageAnimation start="left" className="bg-transparent p-5 text-custom-yellow">
+                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl">1955</h1>
+                                        <p className="text-xs sm:text-sm font-light xl:text-xl">
+                                            Pemerintah mengadakan sayembara maket Masjid Istiqlal dan
+                                            menggalang dana dari masyarakat untuk membiayai pembangunan.
+                                        </p>
+                                    </ImageAnimation>
+                                    <ImageAnimation start="left" className="bg-transparent p-5 text-custom-yellow">
+                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl">1954</h1>
+                                        <p className="text-xs sm:text-sm font-light xl:text-xl">
+                                            Yayasan Masjid Istiqlal diresmikan setelah Presiden Sukarno
+                                            menyetujui rencana pembangunan masjid.
+                                        </p>
+                                    </ImageAnimation>
+                                </div>
+                            </div>
                         </div>
+                        <Image
+                            src={"/assets/doc-2.png"}
+                            alt=""
+                            width={750}
+                            height={512}
+                            className="w-full h-auto"
+                        />
                     </div>
-                    <Image
-                        src={"/assets/doc-2.png"}
-                        alt=""
-                        width={750}
-                        height={512}
-                        className="w-full h-auto"
-                    />
-
+                    <p className="p-1 text-justify text-xs tracking-wider max-md:text-xs">
+                        Presiden Sukarno dan dewan juri sayembara perancangan Masjid
+                        Istiqlal berfoto dengan tiga panel gambar karya F. Silaban
+                        yang ditetapkan sebagai pemenang pada 1955. Sumber: Selayang
+                        pandang Masjid Istiqlal (1987).
+                    </p>
                 </ImageAnimation>
-                <p className="p-1 text-justify text-xs tracking-wider max-md:text-xs">
-                    Presiden Sukarno dan dewan juri sayembara perancangan Masjid
-                    Istiqlal berfoto dengan tiga panel gambar karya F. Silaban
-                    yang ditetapkan sebagai pemenang pada 1955. Sumber: Selayang
-                    pandang Masjid Istiqlal (1987).
-                </p>
-                <li className="flex w-full flex-col items-center md:flex-row-reverse md:justify-center">
-                    <div className="flex flex-col gap-10">
-                        <ImageAnimation start="right" className="timeline-box-2">
-                            <h1 className="text-5xl font-bold xl:text-7xl">1961</h1>
-                            <p className="text-sm font-light xl:text-xl">
-                                Pemerintah mengadakan sayembara maket Masjid Istiqlal dan
-                                menggalang dana dari masyarakat untuk membiayai pembangunan.
-                            </p>
-                        </ImageAnimation>
-                        <ImageAnimation
-                            start="right"
-                            className="h-[12rem] rounded-xl bg-black p-5 text-custom-yellow"
-                        >
-                            <h1 className="text-5xl font-bold xl:text-7xl ">1978</h1>
-                            <p className="text-sm font-light xl:text-xl">
-                                Masjid Istiqlal selesai dibangun, peresmiannya dihadiri oleh
-                                Presiden Suharto.
-                            </p>
-                        </ImageAnimation>
+                <ImageAnimation start="right" className="">
+                    <div className="relative flex flex-col items-end justify-center">
+                        <div className="absolute w-full sm:bg-gradient-to-tl bg-gradient-to-l xl:bg-gradient-to-tl from-[20%] to-[60%] from-black to-white/0 h-full flex items-end">
+                            <div className="flex flex-col justify-start items-end">
+                                <div className="w-[80%] xl:w-[60%] sm:w-[60%]">
+                                    <ImageAnimation start="right" className="bg-transparent p-5 text-custom-yellow">
+                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl text-right">1961</h1>
+                                        <p className="text-xs md:text-sm font-light xl:text-xl text-right">
+                                            Pemerintah mengadakan sayembara maket Masjid Istiqlal dan
+                                            menggalang dana dari masyarakat untuk membiayai pembangunan.
+                                        </p>
+                                    </ImageAnimation>
+                                    <ImageAnimation
+                                        start="right"
+                                        className="bg-transparent p-5 text-custom-yellow"
+                                    >
+                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl text-right">1978</h1>
+                                        <p className="text-xs md:text-sm font-light xl:text-xl text-right">
+                                            Masjid Istiqlal selesai dibangun, peresmiannya dihadiri oleh
+                                            Presiden Suharto.
+                                        </p>
+                                    </ImageAnimation>
+                                </div>
+                            </div>
+                        </div>
+                        <Image
+                            src={"/assets/doc-1.png"}
+                            alt=""
+                            width={772}
+                            height={462}
+                            className="h-auto w-full"
+                        />
                     </div>
-                    <div className="flex flex-col">
-                        <ImageAnimation start="left">
-                            <Image
-                                src={"/assets/doc-1.png"}
-                                alt=""
-                                width={772}
-                                height={462}
-                                className="h-auto w-full"
-                            />
-                            <p className="p-1 text-justify text-xs tracking-wider">
-                                KOMPAS/H Kodhyat Persiapan pengecoran kubah Masjid Istiqlal
-                                pada awal Agustus 1971. Lokasi masjid negara yang tengah
-                                dibangun itu bersebelahan dengan Gereja Katheral Jakarta.
-                            </p>
-                        </ImageAnimation>
-                    </div>
-                </li>
+                    <p className="p-1 text-justify text-xs tracking-wider">
+                        KOMPAS/H Kodhyat Persiapan pengecoran kubah Masjid Istiqlal
+                        pada awal Agustus 1971. Lokasi masjid negara yang tengah
+                        dibangun itu bersebelahan dengan Gereja Katheral Jakarta.
+                    </p>
+                </ImageAnimation>
             </ul>
         </section>
-        <section className="relative flex flex-col items-center space-y-10 bg-white pb-20 pt-10 text-black md:pt-40 overflow-hidden">
+        <section className="relative flex flex-col items-center space-y-6 sm:space-y-10 bg-white pb-20 pt-10 text-black md:pt-40 overflow-hidden">
             <Heading
                 className="prose py-8 px-4 xl:px-0 text-center mx-auto"
                 color="#000"
@@ -187,13 +191,13 @@ export function SectionOneComponent() {
                 }}
             />
         </section>
-        <section className="relative flex flex-col items-center space-y-10 pt-10 text-custom-yellow px-0 md:px-20 md:pt-40 overflow-hidden">
+        <section className="relative flex flex-col items-center space-y-6 sm:space-y-10 pt-10 text-custom-yellow px-0 md:px-20 md:pt-40 overflow-hidden">
             <Image
                 src={"/assets/cover-3.png"}
                 alt=""
                 width={1739}
                 height={1737}
-                className="absolute bottom-0 -z-20 h-auto w-full opacity-50"
+                className="absolute bottom-0 h-auto w-full opacity-50"
             />
             <div className="absolute -bottom-40 left-0 -z-10 h-[40rem] w-full bg-gradient-to-t from-transparent via-[rgb(0_0_0/1)_30%] to-transparent" />
             <Heading
@@ -241,7 +245,7 @@ export function SectionOneComponent() {
                         height={420}
                         className="full h-auto"
                     />
-                    <p className="w-full text-sm tracking-wider">
+                    <p className="w-full px-4 text-sm tracking-wider text-gray-500">
                         Wilhelmina Park. Tropen museum
                     </p>
                 </ImageAnimation>
@@ -267,7 +271,7 @@ export function SectionOneComponent() {
                 }}
             />
         </section>
-        <section className="relative flex flex-col items-center space-y-10 pt-40 text-custom-yellow lg:px-20 overflow-hidden">
+        <section className="relative flex flex-col items-center space-y-6 sm:space-y-10 pt-10 text-custom-yellow lg:px-20 overflow-hidden">
             <Heading
                 className="prose py-8 px-4 xl:px-0 text-center mx-auto"
                 color="#FEDC60">
@@ -334,11 +338,11 @@ export function SectionOneComponent() {
                 alt=""
                 width={2178}
                 height={1226}
-                className="absolute bottom-0 -z-20 h-auto w-full opacity-50"
+                className="absolute bottom-0 h-auto w-full opacity-50"
             />
             <div className="absolute -bottom-20 left-0 -z-10 h-[20rem] w-full bg-gradient-to-t from-[rgb(0_0_0/1)_10%] to-transparent" />
         </section>
-        <section className="pb-[30rem]  text-custom-yellow overflow-hidden">
+        <section className="pb-12 sm:pb-[30rem] relative flex flex-col items-center space-y-6 sm:space-y-10 pt-10 lg:px-20 overflow-hidden text-custom-yellow">
             <Heading
                 className="prose py-8 px-4 xl:px-0 text-center mx-auto"
                 color="#FEDC60">
@@ -388,7 +392,7 @@ export function SectionOneComponent() {
                 alt=""
                 width={1703}
                 height={959}
-                className="absolute bottom-0 -z-20 h-auto w-full"
+                className="absolute bottom-0 h-auto w-full"
             />
             <div className="absolute bottom-0 left-0 -z-10 h-[20rem] w-full bg-gradient-to-t from-[#FEDC60]/50 to-transparent" />
         </section>
