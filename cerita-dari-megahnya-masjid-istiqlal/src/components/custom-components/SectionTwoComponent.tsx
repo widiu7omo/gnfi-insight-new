@@ -60,23 +60,29 @@ export function SectionTwoComponent() {
         </section>
         <section className="relative bg-black" style={{ background: "url('/assets/tiang.jpeg'),linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,1))", backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>
             <div className="bg-gradient-to-b from-black via-black/50 to-black h-full z-0 w-full absolute top-0 " />
-            <div className="mx-auto prose py-8 flex flex-col gap-6 px-4 relative">
-                <div className="text-custom-yellow relative">
-                    <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-                        Masjid Istiqlal tersusun dalam lima lantai yang merupakan lambang dari Rukun Islam. Lima lantai masjid juga merujuk pada Dasar Negara Republik Indonesia, yakni Pancasila. Kelima lantai tersebut disangga oleh tiang-tiang dengan
-                        berbagai ukuran.
-                    </motion.p>
+            <div className="mx-auto prose py-8 flex flex-col relative">
+                <Paragraph block={{
+                    component: COMPONENT_PARAGRAPH,
+                    componentProps: {
+                        className: "text-custom-yellow",
+                        children: (<>
+                            <p>
+                                Masjid Istiqlal tersusun dalam lima lantai yang merupakan lambang dari Rukun Islam. Lima lantai masjid juga merujuk pada Dasar Negara Republik Indonesia, yakni Pancasila. Kelima lantai tersebut disangga oleh tiang-tiang dengan
+                                berbagai ukuran.
+                            </p>
 
-                    <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-                        Tiang berukuran kecil berjumlah sekitar 4 ribu, sedangkan tiang yang berukuran besar berjumlah 12 buah. Angka 12 tersebut merujuk pada tanggal lahir Nabi Muhammad SAW, yakni 12 Rabiul Awwal.
-                    </motion.p>
+                            <p>
+                                Tiang berukuran kecil berjumlah sekitar 4 ribu, sedangkan tiang yang berukuran besar berjumlah 12 buah. Angka 12 tersebut merujuk pada tanggal lahir Nabi Muhammad SAW, yakni 12 Rabiul Awwal.
+                            </p>
 
-                    <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-                        Dari luar, Masjid Istiqlal juga terlihat kubah besar di bagian atas bangunan. Itu adalah kubah utama dengan diameter 45 meter yang merujuk pada tahun kemerdekaan Republik Indonesia, yakni 1945. Selain itu, Masjid Istiqlal juga
-                        memiliki kubah kedua yang berdiameter 8 meter. Angka tersebut menunjukkan bahwa Kemerdekaan Indonesia tepat pada bulan ke-8, yakni Agustus. Di atas kubah utama terdapat simbol bulan bintang dengan ketinggian 17 meter yang
-                        merujuk pada tanggal kemerdekaan Republik Indonesia.
-                    </motion.p>
-                </div>
+                            <p>
+                                Dari luar, Masjid Istiqlal juga terlihat kubah besar di bagian atas bangunan. Itu adalah kubah utama dengan diameter 45 meter yang merujuk pada tahun kemerdekaan Republik Indonesia, yakni 1945. Selain itu, Masjid Istiqlal juga
+                                memiliki kubah kedua yang berdiameter 8 meter. Angka tersebut menunjukkan bahwa Kemerdekaan Indonesia tepat pada bulan ke-8, yakni Agustus. Di atas kubah utama terdapat simbol bulan bintang dengan ketinggian 17 meter yang
+                                merujuk pada tanggal kemerdekaan Republik Indonesia.
+                            </p>
+                        </>)
+                    }
+                }} />
                 <div className="bg-[#FEDC60] text-black p-5 flex flex-col gap-5">
                     <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="relative">
                         <img src="/assets/tiang.webp" alt="tiang raksasa" className="relative w-full h-full object-cover opacity-85 m-0" />
@@ -103,15 +109,20 @@ export function SectionTwoComponent() {
                         </div>
                     </motion.div>
                 </div>
-                <div className="text-custom-yellow">
-                    <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-                        Sementara itu, menara Masjid Istiqlal hanya satu ini menunjukkan bahwa Allah itu esa. Tingginya yang 6666 cm atau 66,66 meter melambangkan jumlah ayat Al Qur’an, dengan bentuk seperti obor atau lilin yang merepresentasikan bahwa
-                        Masjid Istiqlal berfungsi sebagai cahaya penunjuk jalan. Di bagian puncak menara terdapat besi anti petir dengan ketinggian 30 meter yang merujuk pada jumlah juz dalam Al Qur’an.
-                    </motion.p>
-                    <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-                        Jika ditotal, menara Masjid Istiqlal memiliki ketinggian 114 meter yang menyimbolkan jumlah surat dalam Al Qur’an.
-                    </motion.p>
-                </div>
+                <Paragraph block={{
+                    component: COMPONENT_PARAGRAPH,
+                    componentProps: {
+                        className: "text-custom-yellow",
+                        children: (<>
+                            <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
+                                Sementara itu, menara Masjid Istiqlal hanya satu ini menunjukkan bahwa Allah itu esa. Tingginya yang 6666 cm atau 66,66 meter melambangkan jumlah ayat Al Qur’an, dengan bentuk seperti obor atau lilin yang merepresentasikan bahwa
+                                Masjid Istiqlal berfungsi sebagai cahaya penunjuk jalan. Di bagian puncak menara terdapat besi anti petir dengan ketinggian 30 meter yang merujuk pada jumlah juz dalam Al Qur’an.
+                            </motion.p>
+                            <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
+                                Jika ditotal, menara Masjid Istiqlal memiliki ketinggian 114 meter yang menyimbolkan jumlah surat dalam Al Qur’an.
+                            </motion.p></>)
+                    }
+                }} />
             </div>
         </section>
     </>
