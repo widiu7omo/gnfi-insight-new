@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss'
 import { screens as defaultScreens } from 'tailwindcss/defaultTheme'
 const config: Config = {
-  darkMode: 'media',
+  darkMode: ['class'],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
