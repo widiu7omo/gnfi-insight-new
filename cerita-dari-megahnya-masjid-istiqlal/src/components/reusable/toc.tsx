@@ -48,34 +48,34 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Pemilu 1955, Pemilu “Resmi” Pertama Indonesia
+              Sejarah Masjid Istiqlal
             </a>
           </li>
           <li
             data-active={isSelected('#section-2')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-2">Ketika Golkar Menguasai Pemilu</a>
+            <a href="#section-2">Masjid Penuh Simbol</a>
           </li>
           <li
             data-active={isSelected('#section-3')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Orde Baru Runtuh, Lahirlah Pemilu Luber Jurdil
+              Tak Cuma untuk Salat
             </a>
           </li>
           <li
             data-active={isSelected('#section-4')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-4">Pemilu 2004, Saat Presiden Dipilih Langsung</a>
+            <a href="#section-4">Semangat Toleransi dari Masjid Istiqlal</a>
           </li>
           <li
             data-active={isSelected('#section-5')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-5">Ketika Dunia Maya Memanas</a>
+            <a href="#section-5">Terbuka dan Insklusif</a>
           </li>
         </ul>
       </motion.div>
