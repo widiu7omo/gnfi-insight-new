@@ -10,7 +10,7 @@ export function SectionFourComponent() {
           "flex h-full flex-col items-center justify-start bg-cover bg-top",
         )}
         style={{
-          backgroundImage: `linear-gradient(0deg, rgb(208, 184, 229,0.0) 0%, rgb(208, 184, 229,1) 100%),url('assets/DJI_04630001.jpg')`,
+          backgroundImage: `linear-gradient(0deg, rgb(208, 184, 229,0.0) 0%, rgb(208, 184, 229,1) 100%),url('assets/DJI_04630001.webp')`,
         }}
       >
         <motion.img

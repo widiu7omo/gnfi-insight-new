@@ -12,7 +12,7 @@ export function SectionOneComponent() {
             block={{
                 component: COMPONENT_HERO,
                 componentProps: {
-                    coverUrl: "assets/cover-1.jpg",
+                    coverUrl: "assets/cover-1.webp",
                     title: (<motion.h1
                         viewport={{ once: true }}
                         initial={{ opacity: 0, y: 0 }}
