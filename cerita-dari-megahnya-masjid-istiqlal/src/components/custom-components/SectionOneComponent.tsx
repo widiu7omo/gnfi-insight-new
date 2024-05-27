@@ -48,7 +48,7 @@ export function SectionOneComponent() {
                 />
             </ImageAnimation>
             <ul className="space-y-12 sm:space-y-20 max-w-4xl w-full">
-                <ImageAnimation start="left" className="timeline-box-1 !rounded-none sm:!rounded-xl">
+                <ImageAnimation start="left" className="timeline-box-1 !rounded-none mx-auto max-w-[65ch]">
                     <h1 className="text-center text-3xl sm:text-5xl font-bold xl:text-7xl">1950</h1>
                     <p className="text-xs sm:text-sm font-light xl:text-xl">
                         Sejumlah tokoh Islam menggelar rapat di Deca Park untuk membahas
@@ -191,7 +191,7 @@ export function SectionOneComponent() {
                 }}
             />
         </section>
-        <section className="relative flex flex-col items-center space-y-6 sm:space-y-10 pt-10 text-custom-yellow px-0 md:px-20 md:pt-40 overflow-hidden">
+        <section className="relative bg-black  flex flex-col items-center space-y-6 sm:space-y-10 pt-10 text-custom-yellow px-0 md:px-20 md:pt-40 overflow-hidden">
             <Image
                 src={"/assets/cover-3.png"}
                 alt=""
@@ -203,7 +203,7 @@ export function SectionOneComponent() {
             <Heading
                 className="prose py-8 px-4 xl:px-0 text-center mx-auto"
                 color="#FEDC60">
-                <h3 className="heading">
+                <h3 className="heading text-custom-yellow">
                     <span className="italic">Sayembara</span> dan{" "}
                     <span className="italic">Lokasi</span>: Perjalanan Awal Pembangunan{" "}
                     <span className="italic">Masjid Istiqlal</span>
@@ -214,6 +214,7 @@ export function SectionOneComponent() {
                 block={{
                     component: COMPONENT_PARAGRAPH,
                     componentProps: {
+                        className: "text-custom-yellow",
                         children: (
                             <>
                                 <p>
@@ -245,7 +246,7 @@ export function SectionOneComponent() {
                         height={420}
                         className="full h-auto"
                     />
-                    <p className="w-full px-4 text-sm tracking-wider text-gray-500">
+                    <p className="w-full px-2 text-sm tracking-wider text-custom-yellow">
                         Wilhelmina Park. Tropen museum
                     </p>
                 </ImageAnimation>
@@ -254,6 +255,7 @@ export function SectionOneComponent() {
                 block={{
                     component: COMPONENT_PARAGRAPH,
                     componentProps: {
+                        className: "text-custom-yellow",
                         children: (
                             <>
                                 <p>
@@ -271,11 +273,11 @@ export function SectionOneComponent() {
                 }}
             />
         </section>
-        <section className="relative flex flex-col items-center space-y-6 sm:space-y-10 pt-10 text-custom-yellow lg:px-20 overflow-hidden">
+        <section className="relative flex bg-black flex-col items-center space-y-6 sm:space-y-10 pt-10 text-custom-yellow lg:px-20 overflow-hidden">
             <Heading
                 className="prose py-8 px-4 xl:px-0 text-center mx-auto"
                 color="#FEDC60">
-                <h3 className="heading">
+                <h3 className="heading text-custom-yellow">
                     Proses Panjang Pembangunan Masjid Istiqlal:{" "}
                     <span className="italic">Pembongkaran Benteng</span> dan{" "}
                     <span className="italic">Kendala Dana</span>.
@@ -287,6 +289,7 @@ export function SectionOneComponent() {
                 block={{
                     component: COMPONENT_PARAGRAPH,
                     componentProps: {
+                        className: "text-custom-yellow",
                         children: (
                             <>
                                 <p>
@@ -342,11 +345,11 @@ export function SectionOneComponent() {
             />
             <div className="absolute -bottom-20 left-0 -z-10 h-[20rem] w-full bg-gradient-to-t from-[rgb(0_0_0/1)_10%] to-transparent" />
         </section>
-        <section className="pb-12 sm:pb-[30rem] relative flex flex-col items-center space-y-6 sm:space-y-10 pt-10 lg:px-20 overflow-hidden text-custom-yellow">
+        <section className="pb-12 bg-black sm:pb-[30rem] relative flex flex-col items-center space-y-6 sm:space-y-10 pt-10 lg:px-20 overflow-hidden text-custom-yellow">
             <Heading
                 className="prose py-8 px-4 xl:px-0 text-center mx-auto"
                 color="#FEDC60">
-                <h3 className="heading">
+                <h3 className="heading text-custom-yellow">
                     Gerakan <span className="italic">Penggalangan Dana</span> dan{" "}
                     <span className="italic">Makna</span> di Balik Nama Masjid Istiqlal.
                 </h3>
@@ -356,6 +359,7 @@ export function SectionOneComponent() {
                 block={{
                     component: COMPONENT_PARAGRAPH,
                     componentProps: {
+                        className: "text-custom-yellow",
                         children: (
                             <>
                                 <p>
@@ -394,7 +398,7 @@ export function SectionOneComponent() {
                 height={959}
                 className="absolute bottom-0 h-auto w-full"
             />
-            <div className="absolute bottom-0 left-0 -z-10 h-[20rem] w-full bg-gradient-to-t from-[#FEDC60]/50 to-transparent" />
+            <div className="absolute bottom-0 left-0 h-[20rem] w-full bg-gradient-to-t from-[#FEDC60]/50" />
         </section>
     </>
 }
