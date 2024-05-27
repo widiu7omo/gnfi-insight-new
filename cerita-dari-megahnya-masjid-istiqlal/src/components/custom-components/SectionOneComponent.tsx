@@ -49,7 +49,7 @@ export function SectionOneComponent() {
             </ImageAnimation>
             <ul className="space-y-12 sm:space-y-20 max-w-4xl w-full">
                 <ImageAnimation start="left" className="timeline-box-1 !rounded-none mx-auto max-w-[65ch]">
-                    <h1 className="text-center text-3xl sm:text-5xl font-bold xl:text-7xl">1950</h1>
+                    <h1 className="text-center text-3xl sm:text-5xl font-bold xl:text-7xl font-apple">1950</h1>
                     <p className="text-xs sm:text-sm font-light xl:text-xl">
                         Sejumlah tokoh Islam menggelar rapat di Deca Park untuk membahas
                         pembangunan masjid. Tokoh yang mengikuti rapat di antaranya Anwar
@@ -62,14 +62,14 @@ export function SectionOneComponent() {
                             <div className="w-[80%] xl:w-[60%] sm:w-[40%]">
                                 <div className="flex flex-col justify-start items-start">
                                     <ImageAnimation start="left" className="bg-transparent p-5 text-custom-yellow">
-                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl">1955</h1>
+                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl font-apple">1955</h1>
                                         <p className="text-xs sm:text-sm font-light xl:text-xl">
                                             Pemerintah mengadakan sayembara maket Masjid Istiqlal dan
                                             menggalang dana dari masyarakat untuk membiayai pembangunan.
                                         </p>
                                     </ImageAnimation>
                                     <ImageAnimation start="left" className="bg-transparent p-5 text-custom-yellow">
-                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl">1954</h1>
+                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl font-apple">1954</h1>
                                         <p className="text-xs sm:text-sm font-light xl:text-xl">
                                             Yayasan Masjid Istiqlal diresmikan setelah Presiden Sukarno
                                             menyetujui rencana pembangunan masjid.
@@ -99,7 +99,7 @@ export function SectionOneComponent() {
                             <div className="flex flex-col justify-start items-end">
                                 <div className="w-[80%] xl:w-[60%] sm:w-[60%]">
                                     <ImageAnimation start="right" className="bg-transparent p-5 text-custom-yellow">
-                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl text-right">1961</h1>
+                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl text-right font-apple">1961</h1>
                                         <p className="text-xs md:text-sm font-light xl:text-xl text-right">
                                             Pemerintah mengadakan sayembara maket Masjid Istiqlal dan
                                             menggalang dana dari masyarakat untuk membiayai pembangunan.
@@ -109,7 +109,7 @@ export function SectionOneComponent() {
                                         start="right"
                                         className="bg-transparent p-5 text-custom-yellow"
                                     >
-                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl text-right">1978</h1>
+                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl text-right font-apple">1978</h1>
                                         <p className="text-xs md:text-sm font-light xl:text-xl text-right">
                                             Masjid Istiqlal selesai dibangun, peresmiannya dihadiri oleh
                                             Presiden Suharto.
@@ -141,7 +141,7 @@ export function SectionOneComponent() {
             >
                 <h3 className="heading">
                     Ide <span className="font-bold italic">Proklamasi</span> hingga
-                    Monumen <span className="font-bold italic">Keagungan Nasional</span>.
+                    Monumen <span className="font-bold italic">Keagungan Nasional</span>
                 </h3>
             </Heading>
             <ImageAnimation start="left">

@@ -21,6 +21,9 @@ const config: Config = {
           yellow: "#FEDC60",
         },
       },
+      fontFamily: {
+        apple: ["var(--font-apple)"],
+      },
     },
     screens: {
       ...defaultScreens,
