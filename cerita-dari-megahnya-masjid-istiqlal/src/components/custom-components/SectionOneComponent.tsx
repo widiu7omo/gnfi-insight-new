@@ -18,7 +18,7 @@ export function SectionOneComponent() {
                         initial={{ opacity: 0, y: 0 }}
                         whileInView={{ opacity: 1, y: -20 }}
                         className="max-w-full xl:max-w-[80%] text-center text-4xl font-bold !leading-snug text-white lg:text-5xl xl:text-7xl"
-                    >
+                    >Cerita dari Megahnya{" "}
                         <span className="font-bold">Masjid</span>
                         {" "}
                         <span className="italic">Istiqlal</span>
