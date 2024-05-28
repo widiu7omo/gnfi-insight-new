@@ -1,4 +1,5 @@
 "use client"
+import { baseUrl } from "@/constants/meta";
 import { COMPONENT_IMAGE, COMPONENT_PARAGRAPH } from "@/data/component-front";
 import { cn } from "@/lib/utils";
 import { Image } from "@/stories/Image";
@@ -20,7 +21,7 @@ export function SectionHeaderS5() {
                     transition={{ delay: 0.3 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
-                    src="assets/5.2.png" />
+                    src={`${baseUrl}/assets/5.2.png`} />
                 <div className="relative flex md:flex-row flex-col space-y-4 md:space-y-0 space-x-0 md:space-x-4 justify-end md:justify-center items-center md:items-end h-[800px] w-full overflow-clip">
                     <motion.img
                         initial={{ x: -20, opacity: 0 }}
@@ -28,14 +29,14 @@ export function SectionHeaderS5() {
                         whileInView={{ x: 0, opacity: 1 }}
                         viewport={{ once: true }}
                         className="overflow-hidden size-[400px] object-cover"
-                        src="assets/5.3.png" />
+                        src={`${baseUrl}/assets/5.3.png`} />
                     <motion.img
                         initial={{ x: 20, opacity: 0 }}
                         transition={{ delay: 0.5 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         viewport={{ once: true }}
                         className="overflow-hidden size-[400px] object-cover"
-                        src="assets/5.4.png" />
+                        src={`${baseUrl}/assets/5.4.png`} />
                 </div>
                 {/* Paragraph */}
                 <Paragraph

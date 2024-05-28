@@ -1,4 +1,5 @@
 "use client";
+import { baseUrl } from "@/constants/meta";
 import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
 import { useNavigation } from "@/store/useNavigation";
@@ -48,7 +49,7 @@ export function Navbar({ block }: { block: BlockType }) {
 				<motion.img
 					layout
 					data-blur={shouldBlur}
-					src="assets/logo_gnfi_white.png"
+					src={`${baseUrl}/assets/logo_gnfi_white.png`}
 					alt="Logo GNFI"
 					className="w-[40px] md:w-[60px] lg:w-[70px] data-[blur=true]:invert data-[blur=true]:w-[30px] lg:data-[blur=true]:w-[50px]"
 				/>

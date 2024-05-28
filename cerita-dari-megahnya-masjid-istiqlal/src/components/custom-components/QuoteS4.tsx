@@ -1,4 +1,5 @@
 "use client"
+import { baseUrl } from "@/constants/meta";
 import { cn } from "@/lib/utils";
 import { motion } from 'framer-motion'
 export function QuoteS4() {
@@ -12,7 +13,7 @@ export function QuoteS4() {
                     transition={{ delay: 0.3 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
-                    src={'assets/3.2.png'}
+                    src={`${baseUrl}/assets/3.2.png`}
                     alt={"unknown"}
                     className={cn("w-full")}
                 />

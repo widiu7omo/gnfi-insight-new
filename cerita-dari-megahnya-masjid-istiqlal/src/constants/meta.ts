@@ -1,3 +1,5 @@
 import { isProd } from "./env";
 import meta from '@public/article/generated-meta.json';
-export const baseUrl = isProd ? `https://www.goodnewsfromindonesia.id/special-insights/${meta.slug}` : "http://localhost:3000"
+import metaConfig from '@root/meta-config.json';
+const baseUrlWithSlug = isProd ? `${metaConfig.baseUrl}/${meta.slug}` : "http://localhost:3000/"
+export const baseUrl = baseUrlWithSlug.replaceAll(!metaConfig.withSlug ? `/${meta.slug}` : '', '')

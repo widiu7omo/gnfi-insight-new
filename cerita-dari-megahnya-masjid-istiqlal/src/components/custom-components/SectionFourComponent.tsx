@@ -1,4 +1,5 @@
 "use client"
+import { baseUrl } from "@/constants/meta";
 import { cn } from "@/lib/utils";
 import { motion } from 'framer-motion'
 export function SectionFourComponent() {
@@ -18,19 +19,19 @@ export function SectionFourComponent() {
           transition={{ delay: 0.3 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          src="assets/3.3.png" />
+          src={`${baseUrl}/assets/3.3.png`} />
         <motion.img
           initial={{ y: 20, opacity: 0 }}
           transition={{ delay: 0.3 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          src="assets/3.4.png" />
+          src={`${baseUrl}/assets/3.4.png`} />
         <motion.img
           initial={{ y: 20, opacity: 0 }}
           transition={{ delay: 0.3 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          src="assets/3.5.png" />
+          src={`${baseUrl}/assets/3.5.png`} />
       </div>
     </>
   );

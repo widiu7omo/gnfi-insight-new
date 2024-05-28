@@ -1,4 +1,5 @@
 "use client"
+import { baseUrl } from "@/constants/meta";
 import { COMPONENT_IMAGE, COMPONENT_PARAGRAPH } from "@/data/component-front";
 import { Image } from "@/stories/Image";
 import { Paragraph } from "@/stories/Paragraph";
@@ -8,7 +9,7 @@ export function SectionTwoComponent() {
     return <>
         <section className="bg-gradient-to-b from-[#ffeca8] to-[#FEDC60] text-black">
             <div className="w-full relative">
-                <img src="/assets/istiqlal.webp" alt="Masjid Istiqlal" className="w-full h-screen relative sm:h-[500px] object-cover object-center " />
+                <img src={`${baseUrl}/assets/istiqlal.webp`} alt="Masjid Istiqlal" className="w-full h-screen relative sm:h-[500px] object-cover object-center " />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/55" />
                 <motion.h2
                     initial={{ opacity: 0 }}
@@ -85,7 +86,7 @@ export function SectionTwoComponent() {
                 }} />
                 <div className="bg-[#FEDC60] text-black p-5 flex flex-col gap-5">
                     <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="relative">
-                        <img src="/assets/tiang.webp" alt="tiang raksasa" className="relative w-full h-full object-cover opacity-85 m-0" />
+                        <img src={`${baseUrl}/assets/tiang.webp`} alt="tiang raksasa" className="relative w-full h-full object-cover opacity-85 m-0" />
                         <div className="absolute bottom-0 bg-white w-full p-1">
                             <p className="text-sm sm:text-lg font-semibold px-2 my-0">
                                 12 Tiang Raksasa - <span className="font-thin text-sm">Tanggal Lahir Nabi Muhammad SAW, 12 Rabiul Awwal</span>
@@ -93,7 +94,7 @@ export function SectionTwoComponent() {
                         </div>
                     </motion.div>
                     <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="relative">
-                        <img src="/assets/lima-lantai.webp" alt="lima lantai" className="relative w-full h-full object-cover opacity-85 m-0" />
+                        <img src={`${baseUrl}/assets/lima-lantai.webp`} alt="lima lantai" className="relative w-full h-full object-cover opacity-85 m-0" />
                         <div className="absolute bottom-0 bg-white w-full p-1">
                             <p className="text-sm sm:text-lg font-semibold px-2 my-0">
                                 Lima lantai - <span className="font-thin text-sm">Rukun Islam dan Pancasila</span>
@@ -101,7 +102,7 @@ export function SectionTwoComponent() {
                         </div>
                     </motion.div>
                     <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="relative">
-                        <img src="/assets/kubah-masjid.webp" alt="kubah masjid" className="relative w-full h-full object-cover opacity-85 m-0" />
+                        <img src={`${baseUrl}/assets/kubah-masjid.webp`}alt="kubah masjid" className="relative w-full h-full object-cover opacity-85 m-0" />
                         <div className="absolute bottom-0 bg-white w-full p-1">
                             <p className="text-sm sm:text-lg font-semibold px-2 my-0">
                                 Kubah berdiameter 45 dan 8 meter, plus simbol bulan bintang setinggi 17 meter - <span className="font-thin text-sm">Tanggal Kemerdekaan Indonesia, 17 Agustus 1945</span>
