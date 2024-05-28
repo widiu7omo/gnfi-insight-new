@@ -27,6 +27,20 @@ export async function POST(request: Request) {
     JSON.stringify({ seo, title, slug }),
     (error) => console.log(error)
   )
+  //Generate OG & Twitter Image
+  if (seo?.image && existsSync(`public/${seo?.image}`)) {
+    const imageUrlSplit = seo?.image.split('.')
+    const imageExtension = imageUrlSplit[imageUrlSplit.length - 1];
+    const coverImageContent = fs.readFileSync(`public/${seo?.image}`);
+    if (!['jpg', 'jpeg', 'png', 'gif'].includes(imageExtension)) {
+      return Response.json({
+        success: false,
+        message: "Generate failed. Cover format is not supported"
+      })
+    }
+    fs.writeFileSync(`src/app/opengraph-image.${imageExtension}`, coverImageContent)
+    fs.writeFileSync(`src/app/twitter-image.${imageExtension}`, coverImageContent)
+  }
   return Response.json({
     success: true,
     message: 'Generated successfully',

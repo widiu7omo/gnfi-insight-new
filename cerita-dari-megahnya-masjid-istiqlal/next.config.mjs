@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+import meta from './public/article/generated-meta.json' assert {type: 'json'}
 const nextConfig = {
   output: 'export',
   transpilePackages: ['lucide-react'],
@@ -8,6 +10,7 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  assetPrefix: isProd ? `https://www.goodnewsfromindonesia.id/special-insights/${meta.slug}` : undefined,
 }
 
 export default nextConfig

@@ -7,12 +7,13 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { useBlocks } from "@/store/useBlocks";
 import type { BlockType } from "@/data/types";
 
-import { useSeoDesc, useSeoTitle, useTitle } from "@/store/useTitle";
+import { useSeoDesc, useSeoImage, useSeoTitle, useTitle } from "@/store/useTitle";
 import { useSectionClassName, useSections } from "@/store/useSections";
 import { useEffect } from "react";
 import { groupByToMap } from "@/lib/utils";
 import ListBlocks from "./list-blocks";
 import Link from "next/link";
+import SeoImage from "@/components/generator/seo-image";
 type PageWrapperType = {
     initBlocks: DraggableItem[];
 };
@@ -27,6 +28,7 @@ export default function PageWrapper({ initBlocks }: PageWrapperType) {
     const [title, setTitle] = useTitle();
     const [seoTitle, setSeoTitle] = useSeoTitle();
     const [seoDesc, setSeoDesc] = useSeoDesc();
+    const [seoImage] = useSeoImage();
     const handleOnDropSection = (item: DraggableItem) => {
         console.log(item);
     };
@@ -97,6 +99,7 @@ export default function PageWrapper({ initBlocks }: PageWrapperType) {
                 seo: {
                     title: seoTitle,
                     desc: seoDesc,
+                    image: seoImage
                 },
                 content: normalizeBlock,
             }),
@@ -146,20 +149,29 @@ export default function PageWrapper({ initBlocks }: PageWrapperType) {
                             />
                         </div>
                         <div>
-                            <div className="text-base font-bold text-gray-500">SEO Meta</div>
-                            <div className="">
-                                <input
-                                    type="text"
-                                    className="text-lg text-neutral-700 outline-none w-full"
-                                    value={seoTitle}
-                                    onChange={(e) => setSeoTitle(e.target.value)}
-                                />
-                                <input
-                                    type="text"
-                                    className="text-lg text-neutral-700 outline-none w-full"
-                                    value={seoDesc}
-                                    onChange={(e) => setSeoDesc(e.target.value)}
-                                />
+                            <div className="text-base font-bold text-gray-500">Metadata</div>
+                            <div className="space-y-2 p-5 rounded-2xl border border-dashed border-gray-200">
+                                <div>
+                                    <span className="text-gray-500">Meta Title</span>
+                                    <input id="seo-title"
+                                        type="text"
+                                        className="text-lg text-neutral-700 outline-none w-full"
+                                        value={seoTitle}
+                                        onChange={(e) => setSeoTitle(e.target.value)}
+                                    />
+                                </div>
+                                <div>
+                                    <span className="text-gray-500">Meta Description</span>
+                                    <textarea id="seo-desc"
+                                        className="text-lg text-neutral-700 outline-none w-full"
+                                        onChange={(e) => setSeoDesc(e.target.value)}
+                                        defaultValue={seoDesc}
+                                    />
+                                </div>
+                                <div className="text-gray-500">
+                                    <span>Seo Image</span>
+                                    <SeoImage />
+                                </div>
                             </div>
                         </div>
                     </div>
