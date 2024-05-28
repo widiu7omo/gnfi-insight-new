@@ -28,7 +28,7 @@ export function Image({ block }: { block: BlockType }) {
 					transition={{ delay: 0.3 }}
 					whileInView={{ y: 0, opacity: 1 }}
 					viewport={{ once: true }}
-					src={baseUrl + imageUrl}
+					src={`${baseUrl}/${imageUrl}`}
 					alt={imageAlt ?? "unknown"}
 					className={cn("w-full", imgClassName)}
 				/>
