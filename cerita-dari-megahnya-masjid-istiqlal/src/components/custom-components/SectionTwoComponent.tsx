@@ -59,7 +59,7 @@ export function SectionTwoComponent() {
                 }
             }} />
         </section>
-        <section className="relative bg-black" style={{ background: "url('/assets/tiang.jpeg'),linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,1))", backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>
+        <section className="relative bg-black" style={{ background: `url('${baseUrl}/assets/tiang.jpeg'),linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,1))`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>
             <div className="bg-gradient-to-b from-black via-black/50 to-black h-full z-0 w-full absolute top-0 " />
             <div className="mx-auto prose py-8 flex flex-col relative">
                 <Paragraph block={{

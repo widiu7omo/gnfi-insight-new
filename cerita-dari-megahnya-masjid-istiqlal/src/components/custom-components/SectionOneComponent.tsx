@@ -6,6 +6,7 @@ import { Paragraph } from "@/stories/Paragraph";
 import { COMPONENT_HERO, COMPONENT_PARAGRAPH } from "@/data/component-front";
 import { Hero } from "@/stories/Hero";
 import { motion } from 'framer-motion'
+import { baseUrl } from "@/constants/meta";
 export function SectionOneComponent() {
     return <>
         <Hero
@@ -40,7 +41,7 @@ export function SectionOneComponent() {
             </Heading>
             <ImageAnimation start="right">
                 <Image
-                    src={`/assets/pahlawan.png`}
+                    src={`${baseUrl}/assets/pahlawan.png`}
                     alt=""
                     width={1080}
                     height={893}
@@ -79,7 +80,7 @@ export function SectionOneComponent() {
                             </div>
                         </div>
                         <Image
-                            src={"/assets/doc-2.png"}
+                            src={`${baseUrl}/assets/doc-2.png`}
                             alt=""
                             width={750}
                             height={512}
@@ -119,7 +120,7 @@ export function SectionOneComponent() {
                             </div>
                         </div>
                         <Image
-                            src={"/assets/doc-1.png"}
+                            src={`${baseUrl}/assets/doc-1.png`}
                             alt=""
                             width={772}
                             height={462}
@@ -146,7 +147,7 @@ export function SectionOneComponent() {
             </Heading>
             <ImageAnimation start="left">
                 <Image
-                    src={"/assets/doc-3.png"}
+                    src={`${baseUrl}/assets/doc-3.png`}
                     alt=""
                     width={700}
                     height={393}
@@ -193,7 +194,7 @@ export function SectionOneComponent() {
         </section>
         <section className="relative bg-black  flex flex-col items-center space-y-6 sm:space-y-10 pt-10 text-custom-yellow px-0 md:px-20 md:pt-40 overflow-hidden">
             <Image
-                src={"/assets/cover-3.png"}
+                src={`${baseUrl}/assets/cover-3.png`}
                 alt=""
                 width={1739}
                 height={1737}
@@ -240,7 +241,7 @@ export function SectionOneComponent() {
             <div className="flex w-full flex-col items-center">
                 <ImageAnimation start="right">
                     <Image
-                        src={"/assets/doc-4.png"}
+                        src={`${baseUrl}/assets/doc-4.png`}
                         alt=""
                         width={920}
                         height={420}
@@ -337,7 +338,7 @@ export function SectionOneComponent() {
             />
 
             <Image
-                src={"/assets/cover-4.png"}
+                src={`${baseUrl}/assets/cover-4.png`}
                 alt=""
                 width={2178}
                 height={1226}
@@ -392,7 +393,7 @@ export function SectionOneComponent() {
                 }}
             />
             <Image
-                src={"/assets/cover-5.png"}
+                src={`${baseUrl}/assets/cover-5.png`}
                 alt=""
                 width={1703}
                 height={959}
