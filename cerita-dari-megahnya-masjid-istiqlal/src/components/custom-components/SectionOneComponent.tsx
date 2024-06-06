@@ -63,17 +63,17 @@ export function SectionOneComponent() {
                             <div className="w-[80%] xl:w-[60%] sm:w-[40%]">
                                 <div className="flex flex-col justify-start items-start">
                                     <ImageAnimation start="left" className="bg-transparent p-5 text-custom-yellow">
-                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl font-apple">1955</h1>
-                                        <p className="text-xs sm:text-sm font-light xl:text-xl">
-                                            Pemerintah mengadakan sayembara maket Masjid Istiqlal dan
-                                            menggalang dana dari masyarakat untuk membiayai pembangunan.
-                                        </p>
-                                    </ImageAnimation>
-                                    <ImageAnimation start="left" className="bg-transparent p-5 text-custom-yellow">
                                         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl font-apple">1954</h1>
                                         <p className="text-xs sm:text-sm font-light xl:text-xl">
                                             Yayasan Masjid Istiqlal diresmikan setelah Presiden Sukarno
                                             menyetujui rencana pembangunan masjid.
+                                        </p>
+                                    </ImageAnimation>
+                                    <ImageAnimation start="left" className="bg-transparent p-5 text-custom-yellow">
+                                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl font-apple">1955</h1>
+                                        <p className="text-xs sm:text-sm font-light xl:text-xl">
+                                            Pemerintah mengadakan sayembara maket Masjid Istiqlal dan
+                                            menggalang dana dari masyarakat untuk membiayai pembangunan.
                                         </p>
                                     </ImageAnimation>
                                 </div>
@@ -102,8 +102,8 @@ export function SectionOneComponent() {
                                     <ImageAnimation start="right" className="bg-transparent p-5 text-custom-yellow">
                                         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold xl:text-7xl text-right font-apple">1961</h1>
                                         <p className="text-xs md:text-sm font-light xl:text-xl text-right">
-                                            Pemerintah mengadakan sayembara maket Masjid Istiqlal dan
-                                            menggalang dana dari masyarakat untuk membiayai pembangunan.
+                                            Pembangunan Masjid Istiqlal selesai setelah melalui proses panjang, 
+                                            mulai dari pembersihan lahan hingga tahap konstruksi
                                         </p>
                                     </ImageAnimation>
                                     <ImageAnimation
@@ -120,7 +120,7 @@ export function SectionOneComponent() {
                             </div>
                         </div>
                         <Image
-                            src={`${baseUrl}/assets/doc-1.png`}
+                            src={`${baseUrl}/assets/doc-5.png`}
                             alt=""
                             width={772}
                             height={462}
