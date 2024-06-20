@@ -146,7 +146,7 @@ export default function SectionItem({ sectionId, index }: { sectionId: string, i
 								{block.length > 0
 									&& <div className="space-x-3">
 										<label htmlFor="with-background">With Background</label>
-										<input id="with-background" onChange={(e) => {
+										<input onChange={(e) => {
 											setBlocks((prev) => {
 												const blocks = prev[sectionId] ?? [];
 												const updateBlocks = blocks.map((item) => {

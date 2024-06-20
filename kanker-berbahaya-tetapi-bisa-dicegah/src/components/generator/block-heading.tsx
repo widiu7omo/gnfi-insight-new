@@ -149,7 +149,6 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 			</div>
 			<Input
 				label="Style Heading"
-				id="className"
 				value={headingState.className}
 				onChange={(e) =>
 					setHeadingState((prev) => ({

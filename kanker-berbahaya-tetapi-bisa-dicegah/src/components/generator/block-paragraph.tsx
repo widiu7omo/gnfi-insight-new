@@ -67,7 +67,6 @@ export default function BlockParagraph({
 					<div className="space-y-4 border border-gray-200 rounded-2xl p-4">
 						<Input
 							label="Style Ornamen Top Right"
-							id="className"
 							value={paragraphState.classOrnamentTopRight}
 							onChange={(e) =>
 								setParagraphState((prev) => ({
@@ -93,7 +92,6 @@ export default function BlockParagraph({
 					<div className="space-y-4 border border-gray-200 rounded-2xl p-4">
 						<Input
 							label="Style Ornamen Top Left"
-							id="className"
 							value={paragraphState.classOrnamentTopLeft}
 							onChange={(e) =>
 								setParagraphState((prev) => ({
@@ -119,7 +117,6 @@ export default function BlockParagraph({
 					<div className="space-y-4 border border-gray-200 rounded-2xl p-4">
 						<Input
 							label="Style Ornamen Bottom Left"
-							id="className"
 							value={paragraphState.classOrnamentBottomLeft}
 							onChange={(e) =>
 								setParagraphState((prev) => ({
@@ -145,7 +142,6 @@ export default function BlockParagraph({
 					<div className="space-y-4 border border-gray-200 rounded-2xl p-4">
 						<Input
 							label="Style Ornamen Bottom Left"
-							id="className"
 							value={paragraphState.classOrnamentBottomRight}
 							onChange={(e) =>
 								setParagraphState((prev) => ({
@@ -175,7 +171,6 @@ export default function BlockParagraph({
 				<Input
 					label=""
 					placeholder="Style with Tailwind classes"
-					id="className"
 					value={paragraphState.className}
 					onChange={(e) =>
 						setParagraphState((prev) => ({
@@ -189,7 +184,6 @@ export default function BlockParagraph({
 				<Input
 					label=""
 					placeholder="Style with Tailwind classes"
-					id="className"
 					value={paragraphState.containerClassName}
 					onChange={(e) =>
 						setParagraphState((prev) => ({

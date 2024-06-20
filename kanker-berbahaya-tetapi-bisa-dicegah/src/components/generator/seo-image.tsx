@@ -1,12 +1,15 @@
 import type { HttpResponseBody } from "@/app/api/types";
 import { useSeoImage } from "@/store/useTitle";
 import { ImageIcon } from "lucide-react";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
 
-export default function SeoImage() {
+export default function SeoImage({ defaultImage }: { defaultImage?: string }) {
     const [seoImage, setSeoImage] = useSeoImage();
-
+    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+    useEffect(() => {
+        defaultImage && setSeoImage(defaultImage)
+    }, [defaultImage])
     // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     const onDrop = useCallback(async (acceptedFiles: File[]) => {
         const formData = new FormData();

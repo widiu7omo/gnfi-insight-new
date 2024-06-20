@@ -42,7 +42,6 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 			<div className="grid grid-cols-2 gap-4 pt-3">
 				<Input
 					label="Hero Title"
-					id="title"
 					placeholder="Hero Title"
 					required
 					value={(heroState?.title as string) ?? ""}

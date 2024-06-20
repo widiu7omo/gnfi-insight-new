@@ -13,9 +13,18 @@ import { useEffect } from "react";
 import { groupByToMap } from "@/lib/utils";
 import ListBlocks from "./list-blocks";
 import Link from "next/link";
-import SeoImage from "@/components/generator/seo-image";
-type PageWrapperType = {
+import FormMetadata from "./form-metadata";
+export type PageWrapperType = {
     initBlocks: DraggableItem[];
+    initMetadata: {
+        title: string;
+        slug: string;
+        seo: {
+            title: string;
+            desc: string;
+            image: string;
+        }
+    }
 };
 export type SectionType = {
     dropEffect: string;
@@ -24,7 +33,7 @@ export type SectionType = {
     index: number;
     order: number;
 };
-export default function PageWrapper({ initBlocks }: PageWrapperType) {
+export default function PageWrapper({ initBlocks, initMetadata }: PageWrapperType) {
     const [title, setTitle] = useTitle();
     const [seoTitle, setSeoTitle] = useSeoTitle();
     const [seoDesc, setSeoDesc] = useSeoDesc();
@@ -38,6 +47,15 @@ export default function PageWrapper({ initBlocks }: PageWrapperType) {
     const [blocks, setBlocks] = useBlocks();
     const [_, setSections] = useSections();
     const [_sc, setSectionClass] = useSectionClassName();
+    useEffect(() => {
+        console.log('Mounted')
+    }, [])
+    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+    useEffect(() => {
+        setTitle(initMetadata.title)
+        setSeoDesc(initMetadata.seo.desc)
+        setSeoTitle(initMetadata.seo.title)
+    }, [initMetadata])
     // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     useEffect(() => {
         //Get blocks from static json data
@@ -104,7 +122,6 @@ export default function PageWrapper({ initBlocks }: PageWrapperType) {
                 content: normalizeBlock,
             }),
         });
-        console.log(await result.json());
     };
     return (
         <>
@@ -135,45 +152,18 @@ export default function PageWrapper({ initBlocks }: PageWrapperType) {
                     <div className="space-y-4 p-8">
                         <div>
                             <label
-                                htmlFor="title"
                                 className="text-base font-bold text-gray-500"
                             >
                                 Article Title
                             </label>
                             <input
-                                id="title"
                                 type="text"
                                 className="text-2xl font-semibold text-neutral-700 outline-none w-full"
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
                             />
                         </div>
-                        <div>
-                            <div className="text-base font-bold text-gray-500">Metadata</div>
-                            <div className="space-y-2 p-5 rounded-2xl border border-dashed border-gray-200">
-                                <div>
-                                    <span className="text-gray-500">Meta Title</span>
-                                    <input id="seo-title"
-                                        type="text"
-                                        className="text-lg text-neutral-700 outline-none w-full"
-                                        value={seoTitle}
-                                        onChange={(e) => setSeoTitle(e.target.value)}
-                                    />
-                                </div>
-                                <div>
-                                    <span className="text-gray-500">Meta Description</span>
-                                    <textarea id="seo-desc"
-                                        className="text-lg text-neutral-700 outline-none w-full"
-                                        onChange={(e) => setSeoDesc(e.target.value)}
-                                        defaultValue={seoDesc}
-                                    />
-                                </div>
-                                <div className="text-gray-500">
-                                    <span>Seo Image</span>
-                                    <SeoImage />
-                                </div>
-                            </div>
-                        </div>
+                        <FormMetadata metadata={initMetadata} />
                     </div>
                     <div className="p-8 pt-0">
                         <Sections onDrop={handleOnDropSection} />

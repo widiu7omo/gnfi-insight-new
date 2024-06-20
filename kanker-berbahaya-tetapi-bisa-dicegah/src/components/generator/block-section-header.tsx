@@ -53,7 +53,6 @@ export default function BlockSectionHeader({
 					<div className="w-full space-y-4">
 						<Textarea
 							label="Title"
-							id="title"
 							value={sectionHeaderState.title}
 							onBlur={saveConfig}
 							onChange={(e) => handleSectionHeaderState("title", e.target.value)}
@@ -71,7 +70,6 @@ export default function BlockSectionHeader({
 						/>
 						<Textarea
 							label="Heading Style"
-							id="className"
 							helperText="Use tailwindcss classes"
 							value={sectionHeaderState.className}
 							onChange={(e) =>

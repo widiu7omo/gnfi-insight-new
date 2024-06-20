@@ -101,7 +101,6 @@ export default function BlockImage({ sectionId, index }: BlockImageType) {
 					<div className="space-y-4">
 						<Textarea
 							label="Container Style"
-							id="className"
 							value={imageState.className}
 							onChange={(e) =>
 								setImageState((prev) => ({
