@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 import type { BlockType } from "@/data/types";
 import parse from "html-react-parser";
 import { motion } from 'framer-motion'
+import { baseUrl } from "@/constants/meta";
 export type SectionHeaderType = {
 	title?: string;
 	coverImage: string;
@@ -23,7 +24,7 @@ export function SectionHeader({ block }: { block: BlockType }) {
 				className,
 			)}
 			style={{
-				backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),url(${coverImage})`,
+				backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),url(${baseUrl}/${coverImage})`,
 			}}
 		>
 			{customTitle ? (
