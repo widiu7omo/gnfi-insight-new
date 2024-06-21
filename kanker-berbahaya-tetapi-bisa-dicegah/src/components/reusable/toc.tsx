@@ -22,6 +22,7 @@ export default function Toc() {
     return () => {
       window.removeEventListener('hashchange', onHashChanged)
     }
+    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   }, [toggleNavHandler])
   const isSelected = useCallback(
     (selectedHash: string) => {
@@ -48,34 +49,44 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Sejarah Masjid Istiqlal
+              Kanker, Berbahaya tetapi Bisa Dicegah
             </a>
           </li>
           <li
             data-active={isSelected('#section-2')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-2">Masjid Penuh Simbol</a>
+            <a href="#section-2">
+              Mengenal Apa itu Kanker
+            </a>
           </li>
           <li
             data-active={isSelected('#section-3')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Tak Cuma untuk Salat
+              Berapa Banyak Kasus Kanker di Indonesia?
             </a>
           </li>
           <li
             data-active={isSelected('#section-4')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-4">Semangat Toleransi dari Masjid Istiqlal</a>
+            <a href="#section-4">
+              Jangan Lupa Deteksi Dini
+            </a>
           </li>
           <li
             data-active={isSelected('#section-5')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-5">Terbuka dan Insklusif</a>
+            <a href="#section-5">Beragam Cara Mengobati Kanker</a>
+          </li>
+          <li
+            data-active={isSelected('#section-6')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-6">Pola Hidup Sehat, Jurus Jitu Mencegah Kanker</a>
           </li>
         </ul>
       </motion.div>
