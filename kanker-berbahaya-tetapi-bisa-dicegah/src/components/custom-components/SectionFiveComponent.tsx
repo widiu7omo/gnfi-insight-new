@@ -6,7 +6,7 @@ import { Paragraph } from "@/stories/Paragraph"
 import { SectionHeader } from "@/stories/SectionHeader"
 import { motion } from 'framer-motion'
 export function SectionFiveComponent() {
-    return <div style={{ backgroundImage: `url(${baseUrl}/assets/5.2.png)` }} className="bg-repeat">
+    return <div style={{ backgroundImage: `url(${baseUrl}/assets/5.2.png)` }} className="bg-repeat overflow-clip">
         <SectionHeader block={{
             component: COMPONENT_SECTION_HEADER,
             componentProps: {

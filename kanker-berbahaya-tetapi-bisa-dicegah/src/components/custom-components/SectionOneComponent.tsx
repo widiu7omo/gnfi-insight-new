@@ -35,7 +35,7 @@ export function SectionOneComponent() {
                     src={`${baseUrl}/assets/virus5.svg`} alt="Virus Orange" className="absolute right-[-8rem] size-[6rem] bottom-[-8rem]" />
             </h2>
         </div>
-        <div className="mb-[4rem]">
+        <div className="mb-[0.5rem] xl:mb-[4rem]">
             <Paragraph
                 block={{
                     component: COMPONENT_PARAGRAPH,
@@ -51,8 +51,8 @@ export function SectionOneComponent() {
             />
         </div>
         <div className="relative flex items-start justify-center overflow-clip">
-            <div className="w-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${baseUrl}/assets/1.1.png)` }}>
-                <div className="max-w-4xl pb-[4rem] mx-auto">
+            <div className="w-full !bg-cover !bg-[center_top_-20rem] xl:!bg-center !bg-no-repeat" style={{ background: `linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.10) 80%),url(${baseUrl}/assets/1.1.png),black` }}>
+                <div className="max-w-4xl pb-[0.5rem] xl:pb-[4rem] mx-auto">
                     <motion.img
                         initial={{ opacity: 0, y: 20 }}
                         viewport={{ once: true }}
