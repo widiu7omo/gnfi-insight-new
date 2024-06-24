@@ -2,14 +2,12 @@
 import { baseUrl } from "@/constants/meta";
 import { COMPONENT_PARAGRAPH } from "@/data/component-front";
 import { Paragraph } from "@/stories/Paragraph";
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
+import { motion, useScroll, useSpring } from 'framer-motion'
 export function SectionOneComponent() {
     const { scrollYProgress } = useScroll();
     const spring = useSpring(scrollYProgress, { mass: 0.1, restDelta: 0.0001 })
-    const rotate3 = useTransform(spring, progress => `${progress * 360}deg`)
-    const scale2 = useTransform(spring, progress => progress / .08)
-    return <section id="section-1" className="bg-[#0A121D] -mt-1">
-        <div className="flex flex-col h-[300px] overflow-clip items-center justify-center bg-cover bg-center">
+    return <section id="section-1" className="bg-[#0A121D] -mt-1 overflow-clip ">
+        <div className="flex flex-col h-[300px] items-center justify-center bg-cover bg-center">
             <h2 className="max-w-5xl px-4 sm:px-0 text-center text-3xl font-bold leading-snug text-white lg:text-4xl xl:text-5xl relative">
                 <motion.span
                     initial={{ opacity: 0, y: 20, scale: 0 }}
@@ -19,21 +17,9 @@ export function SectionOneComponent() {
                     Bagaimana Gempa Terjadi?
                 </motion.span>
                 <motion.img
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                    style={{ scale: scale2, rotate: rotate3 }}
-                    src={`${baseUrl}/assets/virus.svg`} alt="Virus Tencacle" className="absolute right-[-20rem] top-[-9rem]" />
+                    src={`${baseUrl}/assets/crack2.svg`} alt="Crack 2" className="absolute left-[-20rem] size-[40rem] bottom-[-27rem]" />
                 <motion.img
-                    animate={{ rotate: 360 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 50, ease: "linear", repeatType: 'loop', repeat: Number.POSITIVE_INFINITY, repeatDelay: 0 }}
-                    src={`${baseUrl}/assets/virus3.svg`} alt="Virus Star" className="absolute left-[-3rem] top-[-3rem] size-[5rem]" />
-                <motion.img
-                    animate={{ x: -100, y: -200 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 20, ease: "linear", repeatType: 'mirror', repeat: Number.POSITIVE_INFINITY, repeatDelay: 0 }}
-                    src={`${baseUrl}/assets/virus5.svg`} alt="Virus Orange" className="absolute right-[-8rem] size-[6rem] bottom-[-8rem]" />
+                    src={`${baseUrl}/assets/crack.svg`} alt="Crack" className="absolute right-[-8rem] size-[20rem] bottom-[-8rem]" />
             </h2>
         </div>
         <div className="mb-[4rem]">

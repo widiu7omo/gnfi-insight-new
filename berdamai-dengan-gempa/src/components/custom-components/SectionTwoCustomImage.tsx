@@ -1,64 +1,107 @@
 "use client"
 
 import { baseUrl } from "@/constants/meta"
+import { COMPONENT_PARAGRAPH } from "@/data/component-front";
+import { Paragraph } from "@/stories/Paragraph";
 import { motion } from 'framer-motion';
 
 export function SectionTwoCustomImage() {
-    return <div className="bg-cover bg-[center_top_-1rem] relative xl:bg-[center_top_-10rem]" style={{ backgroundImage: `url(${baseUrl}/assets/2.1.1.png)` }}>
-        <motion.img
-            animate={{ rotate: 360 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 200, ease: "linear", repeatType: 'loop', repeat: Number.POSITIVE_INFINITY, repeatDelay: 0 }}
-            className="absolute left-[-40%] xl:left-[-4rem] bottom-0 xl:bottom-[-9rem]" src={`${baseUrl}/assets/2.10.png`} alt="Blue Virus" />
-        <div className="max-w-4xl mx-auto pt-0 xl:pt-[14rem] z-20">
+    return <div className="bg-cover relative xl:bg-[center_top_-30rem]" style={{ backgroundImage: `url(${baseUrl}/assets/2.1.1.png)` }}>
+        <div className="absolute bg-gradient-to-b from-[#04070B] z-0 left-0 right-0 top-0 bottom-[20%]" />
+        <div className="max-w-4xl mx-auto pt-0 xl:pt-[14rem] z-20 relative">
             <motion.img
                 initial={{ opacity: 0, y: 20 }}
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
                 src={`${baseUrl}/assets/2.2.png`} alt="Title" />
-            <div className="relative flex items-center">
-                <motion.img
-                    initial={{ opacity: 0, x: -30 }}
-                    viewport={{ once: true }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.2 }}
-                    src={`${baseUrl}/assets/2.3.png`} alt="Who memperkirakan" className="" />
-                <motion.img
-                    initial={{ opacity: 0, x: 30 }}
-                    viewport={{ once: true }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.4 }}
-                    src={`${baseUrl}/assets/2.4.png`} alt="Semakin banyak pula" className="absolute" />
-            </div>
-            <div className="relative left-[-5rem]">
-                <div className="relative">
-                    <motion.img
-                        initial={{ opacity: 0, x: 30 }}
-                        viewport={{ once: true }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.8 }}
-                        className="absolute z-20 right-[-5rem] sm:right-[-8rem] xl:right-[-10rem] top-[-1.5rem]" src={`${baseUrl}/assets/2.5.png`} alt="Data Kemenkes" />
-                    <img
-                        src={`${baseUrl}/assets/2.8.png`} alt="Virus Orange" className="size-[8rem] sm:size-[14rem] md:size-[20rem] absolute right-[-2rem] top-[9rem] sm:top-[15rem] md:top-[18rem]" />
-                </div>
-                <motion.img
-                    initial={{ opacity: 0, scale: 0 }}
-                    viewport={{ once: true }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0 }}
-                    src={`${baseUrl}/assets/2.2.1.png`} alt="Globe" />
+            <motion.img
+                initial={{ opacity: 0, x: -30 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                src={`${baseUrl}/assets/2.3.png`} alt="Who memperkirakan" className="" />
+        </div>
+        <div className="max-w-full mx-auto pt-0 z-20">
+            <div className="relative flex items-center justify-center">
                 <motion.img
                     initial={{ opacity: 0, y: 20 }}
                     viewport={{ once: true }}
                     whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    src={`${baseUrl}/assets/2.2.1.png`} className="absolute top-0" alt="Cincin" />
+                <img
+                    src={`${baseUrl}/assets/2.4.png`} alt="World" />
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    viewport={{ once: false }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.2 }}
+                    src={`${baseUrl}/assets/2.5.png`} className="absolute mix-blend-color-dodge" alt="World Red Line" />
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    viewport={{ once: false }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.3 }}
+                    src={`${baseUrl}/assets/2.6.png`} className="absolute" alt="America" />
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    viewport={{ once: false }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                    src={`${baseUrl}/assets/2.7.png`} className="absolute" alt="America" />
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    viewport={{ once: false }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                    src={`${baseUrl}/assets/2.8.png`} className="absolute" alt="America" />
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    viewport={{ once: false }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.6 }}
+                    src={`${baseUrl}/assets/2.9.png`} className="absolute" alt="America" />
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    viewport={{ once: false }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.7 }}
+                    src={`${baseUrl}/assets/2.10.png`} className="absolute" alt="America" />
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    viewport={{ once: false }}
+                    whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.8 }}
-                    className="absolute left-[5rem] bottom-0" src={`${baseUrl}/assets/2.6.png`} alt="Title" />
+                    src={`${baseUrl}/assets/2.11.png`} className="absolute" alt="America" />
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    viewport={{ once: false }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.9 }}
+                    src={`${baseUrl}/assets/2.12.png`} className="absolute" alt="America" />
             </div>
+
         </div>
-        <motion.img
-            animate={{ x: -100, y: -200 }}
-            transition={{ duration: 20, ease: "linear", repeatType: 'reverse', repeat: Number.POSITIVE_INFINITY, repeatDelay: 0 }}
-            className="absolute hidden xl:block z-10 right-[-4rem] bottom-[-12rem]" src={`${baseUrl}/assets/2.7.png`} alt="" />
+        <div className="max-w-4xl mx-auto pt-0 z-20">
+            <motion.img
+                initial={{ opacity: 0, x: 30 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                src={`${baseUrl}/assets/2.13.png`} alt="90 Persen" />
+            <motion.img
+                initial={{ opacity: 0, y: 20 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                src={`${baseUrl}/assets/2.14.png`} alt="Informasi" />
+            <motion.img
+                initial={{ opacity: 0, y: 20 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                src={`${baseUrl}/assets/2.15.png`} alt="GNFI Insight" />
+        </div>
     </div>
 }
