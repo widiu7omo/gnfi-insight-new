@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Kanker, Berbahaya tetapi Bisa Dicegah
+              Berdamai dengan Gempa
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Mengenal Apa itu Kanker
+              Bagaimana Gempa Terjadi?
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Berapa Banyak Kasus Kanker di Indonesia?
+              Indonesia, Negara Rawan Gempa
             </a>
           </li>
           <li
@@ -73,20 +73,20 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              Jangan Lupa Deteksi Dini
+              Sudah Tepatkah Cara Kita Memandang Gempa?
             </a>
           </li>
           <li
             data-active={isSelected('#section-5')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-5">Beragam Cara Mengobati Kanker</a>
+            <a href="#section-5">Ini yang Perlu Dilakukan Saat Gempa Terjadi</a>
           </li>
           <li
             data-active={isSelected('#section-6')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-6">Pola Hidup Sehat, Jurus Jitu Mencegah Kanker</a>
+            <a href="#section-6">Pentingnya Rumah Tahan Gempa</a>
           </li>
         </ul>
       </motion.div>
