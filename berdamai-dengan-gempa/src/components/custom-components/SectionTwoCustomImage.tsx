@@ -6,7 +6,7 @@ import { Paragraph } from "@/stories/Paragraph";
 import { motion } from 'framer-motion';
 
 export function SectionTwoCustomImage() {
-    return <div className="bg-cover relative xl:bg-[center_top_-30rem]" style={{ backgroundImage: `url(${baseUrl}/assets/2.1.1.png)` }}>
+    return <div className="bg-cover relative xl:bg-[center_top_-30rem]" style={{ backgroundImage: `url(${baseUrl}/assets/2.1.1.webp)` }}>
         <div className="absolute bg-gradient-to-b from-[#04070B] z-0 left-0 right-0 top-0 bottom-[20%]" />
         <div className="max-w-4xl mx-auto pt-0 xl:pt-[14rem] z-20 relative">
             <motion.img

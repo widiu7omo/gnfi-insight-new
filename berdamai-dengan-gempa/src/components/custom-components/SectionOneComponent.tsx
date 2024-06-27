@@ -40,7 +40,7 @@ export function SectionOneComponent() {
             />
         </div>
         <div className="relative flex items-start justify-center overflow-clip">
-            <div className="w-full bg-cover bg-no-repeat bg-[center_top_-8rem]" style={{ backgroundImage: `url(${baseUrl}/assets/1.1.png)` }}>
+            <div className="w-full bg-cover bg-no-repeat bg-[center_top_-8rem]" style={{ backgroundImage: `url(${baseUrl}/assets/1.1.webp)` }}>
                 <div className="absolute z-0 bg-gradient-to-b top-0 bottom-[10%] left-0 right-0 from-[#0A121D] to-black/0" />
                 <img src={`${baseUrl}/assets/1.7.png`} className="absolute w-full right-0 left-0 bottom-0" alt="Bottom Earth" />
                 <div className="absolute z-0 bg-gradient-to-t top-[35%] bottom-0 left-0 right-0 from-black to-black/0" />
