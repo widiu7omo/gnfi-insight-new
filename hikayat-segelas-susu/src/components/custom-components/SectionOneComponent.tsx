@@ -6,9 +6,9 @@ import { motion, useScroll, useSpring } from 'framer-motion'
 export function SectionOneComponent() {
     const { scrollYProgress } = useScroll();
     const spring = useSpring(scrollYProgress, { mass: 0.1, restDelta: 0.0001 })
-    return <section id="section-1" className="bg-[#0A121D] -mt-1 overflow-clip ">
+    return <section id="section-1" className="bg-[#fff6e9] -mt-1 overflow-clip ">
         <div className="flex flex-col h-[300px] items-center justify-center bg-cover bg-center">
-            <h2 className="max-w-5xl px-4 sm:px-0 text-center text-3xl font-bold leading-snug text-white lg:text-4xl xl:text-5xl relative">
+            <h2 className="max-w-5xl px-4 sm:px-0 text-center text-3xl font-bold leading-snug lg:text-4xl xl:text-5xl relative">
                 <motion.span
                     initial={{ opacity: 0, y: 20, scale: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ export function SectionOneComponent() {
                 block={{
                     component: COMPONENT_PARAGRAPH,
                     componentProps: {
-                        className: "text-white",
+                        className: "",
                         children: (
                             <>
                                 <p>Susu memang merupakan sumber zat gizi penting bagi manusia. Minuman ini mengandung gizi lengkap: karbohidrat 5 persen, protein 3,5 persen, lemak 3—4 persen, asam lemak, asam amino, kolesterol, vitamin, dan mineral. Profesor Peternakan Universitas Muhammadiyah Malang, Wahyu Widodo, dalam Bioteknologi Industri Susu, menyebut bahwa mutu protein susu sepadan dengan protein daging dan telur.</p>
@@ -42,7 +42,7 @@ export function SectionOneComponent() {
         </div>
         <div className="relative flex items-start justify-center overflow-clip">
             <div className="w-full bg-cover bg-no-repeat bg-[center_top_-8rem]" style={{ backgroundImage: `url(${baseUrl}/assets/1.1.webp)` }}>
-                <div className="absolute z-0 bg-gradient-to-b top-0 bottom-[10%] left-0 right-0 from-[#0A121D] to-black/0" />
+                <div className="absolute z-0 bg-gradient-to-b top-0 bottom-[10%] left-0 right-0 from-[#fff6e9] to-black/0" />
                 <img src={`${baseUrl}/assets/1.7.png`} className="absolute w-full right-0 left-0 bottom-0" alt="Bottom Earth" />
                 <div className="absolute z-0 bg-gradient-to-t top-[35%] bottom-0 left-0 right-0 from-black to-black/0" />
 
@@ -85,7 +85,7 @@ export function SectionOneComponent() {
                         block={{
                             component: COMPONENT_PARAGRAPH,
                             componentProps: {
-                                className: "!text-white",
+                                className: "",
                                 children: (<>
                                     <p>“Oleh karena itu, susu dan produk olahan susu dapat menurunkan risiko obesitas pada anak-anak. Produk olahan susu dapat memperbaiki komposisi tubuh dan memfasilitasi penurunan berat badan selama pembatasan energi pada orang dewasa,” demikian penjelasan Eva dalam laman resmi Polinela.</p>
                                     <p>Produk olahan susu yang rendah lemak dan kaya kalsium  menurunkan tekanan darah. Jika mengonsumsi susu 200—300 mililiter per hari, seseorang bisa terhindar dari risiko hipertensi dan penyakit kardiovaskular, terutama stroke.</p>
