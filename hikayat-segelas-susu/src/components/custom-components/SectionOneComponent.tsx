@@ -63,13 +63,13 @@ export function SectionOneComponent() {
                         viewport={{ once: true }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        src={`${baseUrl}/assets/1.2.png`} alt="Gempa Bumi Bagaiman Terjadi" />
+                        src={`${baseUrl}/assets/1.2.png`} alt="Susu" />
                     <motion.img
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
-                        src={`${baseUrl}/assets/1.3.png`} alt="Quote" />
+                        src={`${baseUrl}/assets/1.3.png`} alt="Manfaat Susu" />
                     <div className="space-y-0">
                         <div className="relative flex items-center justify-center">
                             <motion.img
@@ -77,10 +77,16 @@ export function SectionOneComponent() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.3 }}
-                                src={`${baseUrl}/assets/1.4.png`} alt="Question" />
+                                src={`${baseUrl}/assets/1.4.png`} alt="Nutrition" />
                             {renderImages()}
                         </div>
                     </div>
+                    <motion.img
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 }}
+                        src={`${baseUrl}/assets/1.20.png`} alt="Manfaat Susu" />
                     <Paragraph
                         block={{
                             component: COMPONENT_PARAGRAPH,
