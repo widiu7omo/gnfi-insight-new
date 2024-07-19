@@ -43,6 +43,12 @@ export function SectionTwoCustomImage() {
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.2 }}
                     src={`${baseUrl}/assets/2.4.png`} className="absolute" alt="World Red Line" />
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    viewport={{ once: false }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 1 }}
+                    src={`${baseUrl}/assets/2.3.png`} className="absolute" alt="World Red Line" />
             </div>
 
         </div>
@@ -53,7 +59,7 @@ export function SectionTwoCustomImage() {
                     viewport={{ once: true }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
-                    src={`${baseUrl}/assets/2.7.png`} className="-mt-16" alt="Badge" />
+                    src={`${baseUrl}/assets/2.7.png`} className="xl:-mt-16 -mt-8" alt="Badge" />
                 <motion.img
                     initial={{ opacity: 0, y: 20 }}
                     viewport={{ once: true }}
