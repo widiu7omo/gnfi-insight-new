@@ -6,6 +6,19 @@ import { motion, useScroll, useSpring } from 'framer-motion'
 export function SectionOneComponent() {
     const { scrollYProgress } = useScroll();
     const spring = useSpring(scrollYProgress, { mass: 0.1, restDelta: 0.0001 })
+    const renderImages = () => {
+        const images = [];
+        for (let i = 5; i < 20; i++) {
+            images.push(<motion.img key={`${i}`}
+                viewport={{ once: false }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: (i * 0.2 / (i % 2 === 0 ? 2 : 4)), duration: i % 2 === 0 ? 0.8 : 0.5 }}
+                className="absolute"
+                src={`${baseUrl}/assets/1.${i}.png`} alt={`Milk Comp ${i}`} />)
+        }
+        return images;
+    }
     return <section id="section-1" className="bg-[#fff6e9] -mt-1 overflow-clip ">
         <div className="flex flex-col h-[300px] items-center justify-center bg-cover bg-center">
             <h2 className="max-w-5xl px-4 sm:px-0 text-center text-3xl font-bold leading-snug lg:text-4xl xl:text-5xl relative">
@@ -17,9 +30,9 @@ export function SectionOneComponent() {
                     Manfaat dan Nutrisi Susu
                 </motion.span>
                 <motion.img
-                    src={`${baseUrl}/assets/crack2.svg`} alt="Crack 2" className="absolute left-[-20rem] size-[40rem] bottom-[-27rem]" />
+                    src={`${baseUrl}/assets/milk2.svg`} alt="Milk 2" className="absolute left-[-20rem] size-[40rem] bottom-[-27rem]" />
                 <motion.img
-                    src={`${baseUrl}/assets/crack.svg`} alt="Crack" className="absolute right-[-8rem] size-[20rem] bottom-[-8rem]" />
+                    src={`${baseUrl}/assets/milk.svg`} alt="Milk" className="absolute right-[-8rem] size-[20rem] bottom-[-8rem]" />
             </h2>
         </div>
         <div className="mb-[4rem]">
@@ -41,11 +54,9 @@ export function SectionOneComponent() {
             />
         </div>
         <div className="relative flex items-start justify-center overflow-clip">
-            <div className="w-full bg-cover bg-no-repeat bg-[center_top_-8rem]" style={{ backgroundImage: `url(${baseUrl}/assets/1.1.webp)` }}>
+            <div className="w-full bg-cover bg-no-repeat bg-[center_top_-8rem]" style={{ backgroundImage: `url(${baseUrl}/assets/1.1.png)` }}>
                 <div className="absolute z-0 bg-gradient-to-b top-0 bottom-[10%] left-0 right-0 from-[#fff6e9] to-black/0" />
-                <img src={`${baseUrl}/assets/1.7.png`} className="absolute w-full right-0 left-0 bottom-0" alt="Bottom Earth" />
-                <div className="absolute z-0 bg-gradient-to-t top-[35%] bottom-0 left-0 right-0 from-black to-black/0" />
-
+                <div className="absolute z-0 bg-gradient-to-t top-[35%] bottom-0 left-0 right-0 from-white to-black/0" />
                 <div className="max-w-4xl pb-[4rem] mx-auto relative z-10">
                     <motion.img
                         initial={{ opacity: 0, y: 20 }}
@@ -59,26 +70,15 @@ export function SectionOneComponent() {
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
                         src={`${baseUrl}/assets/1.3.png`} alt="Quote" />
-                    <div className="space-y-0 relative">
-                        <div className="relative z-10">
+                    <div className="space-y-0">
+                        <div className="relative flex items-center justify-center">
                             <motion.img
-                                viewport={{ once: true }}
+                                viewport={{ once: false }}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.3 }}
-                                src={`${baseUrl}/assets/1.4.png`} className="pt-0 xl:pt-[15rem]" alt="Menurut" />
-                            <motion.img
-                                viewport={{ once: true }}
-                                initial={{ opacity: 0, x: -10 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ delay: 0.2 }}
-                                src={`${baseUrl}/assets/1.5.png`} alt="Question" />
-                            <motion.img
-                                viewport={{ once: true }}
-                                initial={{ opacity: 0, x: 10 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ delay: 0.3 }}
-                                src={`${baseUrl}/assets/1.6.png`} alt="Question" />
+                                src={`${baseUrl}/assets/1.4.png`} alt="Question" />
+                            {renderImages()}
                         </div>
                     </div>
                     <Paragraph
