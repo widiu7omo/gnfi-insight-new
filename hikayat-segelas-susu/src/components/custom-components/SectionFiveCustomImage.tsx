@@ -32,7 +32,7 @@ export function SectionFiveCustomImage() {
         />
         {/* Main Title */}
         <motion.div
-          className="bg-[#B58F47] z-0 absolute text-3xl top-28 left-14 text-white p-2 rounded-lg font-bold"
+          className="bg-[#B58F47] z-0 absolute text-sm sm:text-3xl top-10 left-2 lg:top-28 sm:left-14 text-white p-2 rounded-lg font-bold"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -41,7 +41,7 @@ export function SectionFiveCustomImage() {
         </motion.div>
         {/* Description */}
         <motion.div
-          className="z-0 absolute text-xl top-28 right-8 text-white p-2 rounded-lg w-96"
+          className="z-0 absolute text-xs sm:text-xl top-36 left-0 md:top-80 md:left-10 lg:top-96 lg:w-[30rem] sm:right-8 text-white p-2 rounded-lg w-80 sm:w-96"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -55,14 +55,14 @@ export function SectionFiveCustomImage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
-          className="w-full text-8xl font-bold text-white absolute top-48 left-10 -translate-x-1/2 -translate-y-1/2"
+          className="w-full text-3xl md:text-7xl xl:text-8xl font-bold text-white absolute top-20 left-2 sm:top-32 lg:top-48 sm:left-10 -translate-x-1/2 -translate-y-1/2"
         >
           Akankah <br />
           Terealisasi?
         </motion.h2>
         {/* Program Target */}
         <motion.div
-          className="z-0 absolute text-xl top-72 bg-[#FFC949] right-14 text-black p-2 rounded-lg w-52"
+          className="max-sm:hidden z-0 absolute sm:text-xl text-sm top-60 sm:top-72 md:top-40 bg-[#FFC949] sm:right-14 text-black p-2 rounded-lg w-52"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -81,9 +81,9 @@ export function SectionFiveCustomImage() {
       </div>
 
       {/* Images Section */}
-      <div className="flex flex-col sm:flex-row items-center mx-auto max-w-6xl mt-5">
+      <div className="flex flex-col sm:flex-row items-center mx-auto max-w-6xl mt-5 px-4 sm-px-0">
         <div className="w-full">
-          <div className="relative flex items-end justify-center gap-x-10">
+          <div className="relative flex items-end justify-center gap-x-0 sm:gap-x-10">
             <motion.img
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
