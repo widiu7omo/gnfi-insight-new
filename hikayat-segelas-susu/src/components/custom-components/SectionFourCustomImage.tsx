@@ -3,11 +3,9 @@ import { baseUrl } from "@/constants/meta";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export function SectionFourCustomImage() {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, -100]);
   return (
     <section>
-      <motion.div style={{ y }} className="relative w-full">
+      <motion.div className="relative w-full">
         <img
           src={`${baseUrl}/assets/bg.png`}
           width={1079}

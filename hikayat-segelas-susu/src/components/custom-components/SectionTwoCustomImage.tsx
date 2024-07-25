@@ -26,26 +26,26 @@ export function SectionTwoCustomImage() {
             <div className="relative flex items-center justify-center">
                 <motion.img
                     initial={{ opacity: 0, y: -40 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
                     src={`${baseUrl}/assets/2.6.png`} alt="World" />
 
                 <motion.img
                     initial={{ opacity: 0 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
                     src={`${baseUrl}/assets/2.5.png`} className="absolute" alt="World Red Line" />
                 <motion.img
                     initial={{ opacity: 0 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.2 }}
                     src={`${baseUrl}/assets/2.4.png`} className="absolute" alt="World Red Line" />
                 <motion.img
                     initial={{ opacity: 0 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 1 }}
                     src={`${baseUrl}/assets/2.3.png`} className="absolute" alt="World Red Line" />
@@ -80,19 +80,19 @@ export function SectionTwoCustomImage() {
                     src={`${baseUrl}/assets/2.10.png`} className="absolute" alt="Informasi" />
                 <motion.img
                     initial={{ opacity: 0, y: 20 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                     src={`${baseUrl}/assets/2.11.png`} className="absolute" alt="Informasi" />
                 <motion.img
                     initial={{ opacity: 0, y: 20 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                     src={`${baseUrl}/assets/2.12.png`} className="absolute" alt="Milk 1" />
                 <motion.img
                     initial={{ opacity: 0, y: 20 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
                     src={`${baseUrl}/assets/2.13.png`} className="absolute" alt="Milk 2" />

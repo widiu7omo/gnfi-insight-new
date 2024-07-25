@@ -10,7 +10,7 @@ export function SectionOneComponent() {
         const images = [];
         for (let i = 5; i < 20; i++) {
             images.push(<motion.img key={`${i}`}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: (i * 0.2 / (i % 2 === 0 ? 2 : 4)), duration: i % 2 === 0 ? 0.8 : 0.5 }}
