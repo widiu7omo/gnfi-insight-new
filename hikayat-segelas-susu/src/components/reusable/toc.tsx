@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Berdamai dengan Gempa
+              Hikayat Segelas Susu
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Bagaimana Gempa Terjadi?
+              Manfaat dan Nutrisi Susu
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Indonesia, Negara Rawan Gempa
+              Sejarah Susu: Minuman sejak Era Neolitik
             </a>
           </li>
           <li
@@ -73,20 +73,20 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              Sudah Tepatkah Cara Kita Memandang Gempa?
+              Aneka Kuliner Tradisional dan Produk Susu Indonesia
             </a>
           </li>
           <li
             data-active={isSelected('#section-5')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-5">Ini yang Perlu Dilakukan Saat Gempa Terjadi</a>
+            <a href="#section-5">Data Produksi dan Konsumsi Susu Indonesia</a>
           </li>
           <li
             data-active={isSelected('#section-6')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-6">Pentingnya Rumah Tahan Gempa</a>
+            <a href="#section-6">Susu Gratis dari Prabowo-Gibran, Akankah Terwujud?</a>
           </li>
         </ul>
       </motion.div>
