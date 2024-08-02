@@ -2,6 +2,7 @@ import Paragraph from "@/components/reusable/paragraph";
 import Clean from "./clean";
 import GoodFood from "./good-food";
 import CatCare from "./cat-care";
+import { baseUrl } from "@/constants/meta";
 
 export default function SectionSeven() {
 	return (
@@ -15,7 +16,7 @@ export default function SectionSeven() {
 				<div className="bg-white relative pt-[2rem] md:pt-[4rem] lg:pt-[7rem] xl:pt-[10rem] flex items-center justify-center">
 					<CatCare />
 					<img
-						src="assets/cat-sleep.png"
+						src={`${baseUrl}/assets/cat-sleep.png`}
 						alt="Cat Sleep"
 						className="-top-[152px] sm:-top-[189px] md:-top-[285px] lg:-top-[380px] xl:-top-[534px] w-[410px] h-[256px] sm:w-[510px] sm:h-[318px] md:w-[768px] md:h-[479px] lg:w-[1024px] lg:h-[639px] xl:w-[1411px] xl:h-[899px] absolute z-20 object-cover"
 					/>

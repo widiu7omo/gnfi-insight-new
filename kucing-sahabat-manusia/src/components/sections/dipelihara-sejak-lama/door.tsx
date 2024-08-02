@@ -1,3 +1,5 @@
+import { baseUrl } from "@/constants/meta";
+
 export default function Door() {
 	return (
 		<div className="absolute xl:right-[10rem] right-0 bottom-0 ">
@@ -59,17 +61,17 @@ export default function Door() {
 				</svg>
 				<img
 					className="absolute right-0 h-[200px] sm:h-[300px] md:h-auto bottom-0 md:top-4 z-10 "
-					src="assets/grand-cat.png"
+					src={`${baseUrl}/assets/grand-cat.png`}
 					alt="Grand Cat"
 				/>
 				<img
 					className="absolute z-10 h-[200px] sm:h-[260px] md:h-[500px] bottom-0 md:mt-[10rem] right-0 md:mr-[4rem]"
-					src="assets/lion.png"
+					src={`${baseUrl}/assets/lion.png`}
 					alt="Lion"
 				/>
 				<img
 					className="absolute z-10 -bottom-[2rem] left-0 w-[100px] md:w-[200px]"
-					src="assets/cat.png"
+					src={`${baseUrl}/assets/cat.png`}
 					alt="Cat"
 				/>
 			</div>

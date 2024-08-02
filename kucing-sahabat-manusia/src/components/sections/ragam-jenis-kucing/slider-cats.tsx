@@ -13,14 +13,15 @@ export default function SliderCats() {
 
 	const slides = indoCats
 		.map((item) => {
-			return <CardCat cat={item} />;
+			// @ts-ignore
+			return <CardCat cat={item} key={item.title} />;
 		})
 		.map((item, i) => (
 			<SlideItem
 				key={`number-card-${
 					// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 					i
-				}`}
+					}`}
 			>
 				{item}
 			</SlideItem>

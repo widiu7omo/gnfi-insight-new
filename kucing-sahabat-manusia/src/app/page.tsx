@@ -16,7 +16,7 @@ import "./slick-carousel.css";
 
 export const metadata: Metadata = {
 	metadataBase: new URL(
-		"https://www.goodnewsfromindonesia.id/special-insights/kucing-sahabat-manusia",
+		"https://insight.goodnewsfromindonesia.id/kucing-sahabat-manusia",
 	),
 	title: "Kucing, Sahabat Manusia | Good News From Indonesia",
 	description: "Kucing, Sahabat Manusia",

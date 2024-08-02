@@ -1,4 +1,5 @@
 "use client";
+import { baseUrl } from "@/constants/meta";
 import { motion } from "framer-motion";
 import { ChevronsDownIcon } from "lucide-react";
 export default function IntroductionHero() {
@@ -6,7 +7,7 @@ export default function IntroductionHero() {
 		<div
 			className="relative -top-[150px] -mb-[150px] h-screen w-full !bg-cover !bg-[50%_30%] md:bg-center"
 			style={{
-				background: "url(/assets/cat-hero.jpeg)",
+				background: `url(${baseUrl}/assets/cat-hero.jpeg)`,
 			}}
 		>
 			<div className="absolute h-full w-full bg-gradient-to-b via-white/10 from-white/0 to-[#FFF4E4]">

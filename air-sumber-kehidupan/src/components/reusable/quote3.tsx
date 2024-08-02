@@ -1,3 +1,5 @@
+import { baseUrl } from "@/constants/meta";
+
 type QuoteFunType = {
 	figureUrl: string;
 	figureName: string;
@@ -53,7 +55,7 @@ export default function Quote3(props: QuoteFunType) {
 				</div>
 				<div className="flex flex-col items-center space-x-0 space-y-4 xl:flex-row xl:space-x-12 xl:space-y-0">
 					<img
-						src={props.figureUrl}
+						src={`${baseUrl}/${props.figureUrl}`}
 						alt="Bambang"
 						className="size-[200px]  flex-none"
 					/>

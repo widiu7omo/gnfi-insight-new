@@ -5,13 +5,14 @@ import Ornament2 from "./ornament2";
 import Ornament3 from "./ornament3";
 import CatStatue from "./cat-statue";
 import DoorWrapperLg from "./door-wrapper-lg";
+import { baseUrl } from "@/constants/meta";
 
 export default function SectionThree() {
 	return (
 		<section id="section-3" className="bg-[#CFCFCF]">
 			<div className="bg-[#EF9402] relative py-8 ">
 				<div
-					style={{ backgroundImage: "url('assets/old-texture.png')" }}
+					style={{ backgroundImage: `url('${baseUrl}/assets/old-texture.png')` }}
 					className="top-0 bottom-0 left-0 right-0 absolute z-0 opacity-30"
 				/>
 				<div className="relative pb-24 z-30">
@@ -145,7 +146,7 @@ export default function SectionThree() {
 				}
 				style={{
 					backgroundImage:
-						"linear-gradient(180deg, #97BDD6 0%, rgba(0, 0, 0, 0) 100%),url(assets/cat-sit.jpeg)",
+						`linear-gradient(180deg, #97BDD6 0%, rgba(0, 0, 0, 0) 100%),url(${baseUrl}/assets/cat-sit.jpeg)`,
 				}}
 			/>
 			<div className="bg-[#FFF4E9]">

@@ -1,4 +1,5 @@
 "use client";
+import { baseUrl } from "@/constants/meta";
 import { useNavigation } from "@/store/useNavigation";
 import { useMotionValueEvent, useScroll, useSpring } from "framer-motion";
 import { motion } from "framer-motion";
@@ -38,7 +39,7 @@ export default function Navbar() {
 				<motion.img
 					layout
 					data-blur={shouldBlur}
-					src="assets/logo_gnfi_white.png"
+					src={`${baseUrl}/assets/logo_gnfi_white.png`}
 					alt="Logo GNFI"
 					className="w-[40px] md:w-[60px] lg:w-[70px] data-[blur=true]:invert data-[blur=true]:w-[30px] lg:data-[blur=true]:w-[50px]"
 				/>

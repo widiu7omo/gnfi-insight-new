@@ -1,4 +1,5 @@
 import Paragraph from "@/components/reusable/paragraph";
+import { baseUrl } from "@/constants/meta";
 
 export default function CatStatue() {
 	return (
@@ -6,12 +7,12 @@ export default function CatStatue() {
 			<div className="flex flex-col xl:flex-row items-start justify-center">
 				<div className="relative flex-none w-full xl:w-[520px] pb-[12rem]">
 					<img
-						src="assets/cat-hunt.png"
+						src={`${baseUrl}/assets/cat-hunt.png`}
 						alt="Cat Hunt"
 						className="object-cover"
 					/>
 					<img
-						src="assets/cat-statue.png"
+						src={`${baseUrl}/assets/cat-statue.png`}
 						alt="Cat Statue"
 						className="absolute -left-[2rem] xl:-left-[5rem] bottom-0"
 					/>

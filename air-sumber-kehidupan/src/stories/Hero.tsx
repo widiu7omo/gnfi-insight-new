@@ -1,6 +1,7 @@
 "use client";
 
 import Icon from "@/components/reusable/Icon";
+import { baseUrl } from "@/constants/meta";
 import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -20,7 +21,7 @@ export function Hero({ block }: { block: BlockType }) {
 		<div
 			className="relative -top-[150px] -mb-[150px] h-screen w-full !bg-cover !bg-[50%_30%] md:bg-center"
 			style={{
-				background: `url(${coverUrl})`,
+				background: `url(${baseUrl}/${coverUrl})`,
 			}}
 		>
 			<div className={cn("absolute h-full w-full bg-black/30", gradientColor)}>

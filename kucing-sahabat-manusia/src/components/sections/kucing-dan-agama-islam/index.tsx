@@ -6,6 +6,7 @@ import AshCat from "./ash-cat";
 import Hadits from "./hadits";
 import Quotes from "./quotes";
 import Quote2 from "./quote2";
+import { baseUrl } from "@/constants/meta";
 
 export const interFont = Inter({
 	subsets: ["latin"],
@@ -18,7 +19,7 @@ export default function SectionFive() {
 			<div className="relative bg-[#2d5e16] overflow-hidden">
 				<div
 					className="absolute top-0 left-0 bottom-0 right-0 opacity-10 bg-contain"
-					style={{ backgroundImage: "url('/assets/noise-paper2.jpeg')" }}
+					style={{ backgroundImage: `url('${baseUrl}/assets/noise-paper2.jpeg')` }}
 				/>
 
 				<div className="space-y-8 h-screen pt-16 flex-col ">

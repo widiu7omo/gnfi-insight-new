@@ -7,6 +7,7 @@ import Ornament1 from "./ornament1";
 import Ornament2 from "./ornament2";
 import Rectangle from "./rectangle";
 import WhiteCat from "./white-cat";
+import { baseUrl } from "@/constants/meta";
 
 export const interFont = Inter({
 	subsets: ["latin"],
@@ -99,7 +100,7 @@ export default function SectionFour() {
 			<div className="relative bg-[#D49C0B] ">
 				<div
 					className="absolute top-0 left-0 bottom-0 right-0 opacity-10"
-					style={{ backgroundImage: "url('/assets/noise-wall.jpeg')" }}
+					style={{ backgroundImage: `url('${baseUrl}/assets/noise-wall.jpeg')` }}
 				/>
 				<Rectangle />
 				<WhiteCat />

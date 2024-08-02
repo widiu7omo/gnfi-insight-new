@@ -1,4 +1,5 @@
 "use client";
+import { baseUrl } from "@/constants/meta";
 // TODO: add motion
 import type { BlockType } from "@/data/types";
 import { cn } from "@/lib/utils";
@@ -27,7 +28,7 @@ export function Image({ block }: { block: BlockType }) {
 					transition={{ delay: 0.3 }}
 					whileInView={{ y: 0, opacity: 1 }}
 					viewport={{ once: true }}
-					src={imageUrl}
+					src={`${baseUrl}/${imageUrl}`}
 					alt={imageAlt ?? "unknown"}
 					className={cn("w-full", imgClassName)}
 				/>

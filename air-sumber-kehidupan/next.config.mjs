@@ -1,7 +1,20 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.APP_ENV === 'production'
+import meta from './public/article/generated-meta.json' assert {type: 'json'}
+import metaConfig from './meta-config.json' assert {type: 'json'}
+const prefixWithSlug = isProd ? `${metaConfig.baseUrl}/${meta.slug}` : ''
+const assetPrefix = prefixWithSlug.replaceAll(!metaConfig.withSlug ? meta.slug : '', '')
 const nextConfig = {
+  crossOrigin: 'anonymous',
   output: 'export',
-  transpilePackages: ['lucide-react']
+  transpilePackages: ['lucide-react'],
+  images: { unoptimized: true },
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
+  assetPrefix,
 }
 
 export default nextConfig

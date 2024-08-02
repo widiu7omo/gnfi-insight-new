@@ -1,3 +1,4 @@
+import { baseUrl } from "@/constants/meta";
 import type { ReactNode } from "react";
 
 export type Cat = {
@@ -48,7 +49,7 @@ export const indoCats: Cat[] = [
 				</p>
 			</>
 		),
-		image: "assets/cangkok.png",
+		image: `${baseUrl}/assets/cangkok.png`,
 	},
 	{
 		title: (
@@ -76,7 +77,7 @@ export const indoCats: Cat[] = [
 				</p>
 			</>
 		),
-		image: "assets/kepdatar.png",
+		image: `${baseUrl}/assets/kepdatar.png`,
 	},
 	{
 		title: (
@@ -101,7 +102,7 @@ export const indoCats: Cat[] = [
 				</p>
 			</>
 		),
-		image: "assets/merah.png",
+		image: `${baseUrl}/assets/merah.png`,
 	},
 	{
 		title: <p className="font-bold">Kucing Emas Asia</p>,
@@ -123,7 +124,7 @@ export const indoCats: Cat[] = [
 				</p>
 			</>
 		),
-		image: "assets/emas-asia.png",
+		image: `${baseUrl}assets/emas-asia.png`,
 	},
 	{
 		title: <p className="font-bold">Kucing Kampung</p>,
@@ -144,6 +145,6 @@ export const indoCats: Cat[] = [
 				</p>
 			</>
 		),
-		image: "assets/kampung.png",
+		image: `${baseUrl}/assets/kampung.png`,
 	},
 ];

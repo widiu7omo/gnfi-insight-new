@@ -10,6 +10,7 @@ import StatsCat from "./stats-cat";
 import StatsDog from "./stats-dog";
 import StatsParrot from "./stats-parrot";
 import StatsWrapper from "./stats-wrapper";
+import { baseUrl } from "@/constants/meta";
 
 export const lilitaOneFont = Lilita_One({
 	subsets: ["latin"],
@@ -72,7 +73,7 @@ export default function SectionTwo() {
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
 							transition={{ delay: 0.3 }}
-							src="./assets/foot-left.png"
+							src={`${baseUrl}/assets/foot-left.png`}
 							alt="Foot Left"
 							className="size-4 xl:size-6 absolute -top-[20%] left-[30%]"
 						/>
@@ -80,7 +81,7 @@ export default function SectionTwo() {
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
 							transition={{ delay: 0.6 }}
-							src="./assets/foot-right.png"
+							src={`${baseUrl}/assets/foot-right.png`}
 							alt="Foot Left"
 							className="size-4 xl:size-6 absolute -top-[40%] left-[50%]"
 						/>
