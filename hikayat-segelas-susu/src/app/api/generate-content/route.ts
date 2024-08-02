@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     return Response.json({ success: false, message: 'Content not valid' })
   }
   const title = body.title
-  const slug = title.toLowerCase().replaceAll(' ', '-')
+  const slug = title.toLowerCase().replaceAll(' ', '-').replaceAll(":", "")
   const seo = body.seo;
   const content = body.content
   //Checking directory
