@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Hikayat Segelas Susu
+              Shin Tae-yong dan Tangan Dinginnya yang Mengubah Timnas Indonesia
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Manfaat dan Nutrisi Susu
+              Shin Tae-yong Melatih Timnas Indonesia sejak 2019
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Sejarah Susu: Minuman sejak Era Neolitik
+              Pengalaman Panjang Shin Tae-yong di Dunia Sepak Bola
             </a>
           </li>
           <li
@@ -73,20 +73,20 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              Aneka Kuliner Tradisional dan Produk Susu Indonesia
+              Fisik dan Disiplin, Fokus Shin Tae-yong di Timnas Indonesia
             </a>
           </li>
           <li
             data-active={isSelected('#section-5')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-5">Data Produksi dan Konsumsi Susu Indonesia</a>
+            <a href="#section-5">Di Tangan Shin Tae-yong, Kini Timnas Indonesia Tak Seperti Dulu</a>
           </li>
           <li
             data-active={isSelected('#section-6')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-6">Susu Gratis dari Prabowo-Gibran, Akankah Terwujud?</a>
+            <a href="#section-6">Shin Tae-yong Perpanjang Kontrak, Selanjutnya Apa?</a>
           </li>
         </ul>
       </motion.div>
