@@ -6,21 +6,15 @@ import { Paragraph } from "@/stories/Paragraph";
 import { motion } from 'framer-motion';
 
 export function SectionTwoCustomImage() {
-    return <div className="bg-cover relative xl:bg-[center_top_-30rem]" style={{ backgroundImage: `url(${baseUrl}/assets/2.1.1.webp)` }}>
-        <div className="absolute bg-gradient-to-b to-[70%] from-[#624029] z-0 left-0 right-0 top-0 bottom-[20%]" />
-        <div className="max-w-4xl mx-auto pt-0 xl:pt-[14rem] z-20 relative">
+    return <div className="bg-cover relative xl:bg-center bg-[center_top]" style={{ backgroundImage: `url(${baseUrl}/assets/2.1.png)`, backgroundColor: '#517B2C' }}>
+        <div className="absolute bg-gradient-to-b to-[20%] from-[#5093DD] z-10 left-0 right-0 top-0 bottom-[40%]" />
+        <div className="max-w-4xl mx-auto pt-0 xl:pt-[4rem] z-20 relative">
             <motion.img
                 initial={{ opacity: 0, y: 20 }}
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                src={`${baseUrl}/assets/2.1.png`} alt="Title" />
-            <motion.img
-                initial={{ opacity: 0, x: -30 }}
-                viewport={{ once: true }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
-                src={`${baseUrl}/assets/2.2.png`} alt="Who memperkirakan" className="" />
+                src={`${baseUrl}/assets/2.2.png`} className="h-[50%] xl:h-full" alt="Title" />
         </div>
         <div className="max-w-4xl mx-auto pt-0 z-20">
             <div className="relative flex items-center justify-center">
@@ -30,7 +24,6 @@ export function SectionTwoCustomImage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
                     src={`${baseUrl}/assets/2.6.png`} alt="World" />
-
                 <motion.img
                     initial={{ opacity: 0 }}
                     viewport={{ once: true }}
@@ -52,61 +45,74 @@ export function SectionTwoCustomImage() {
             </div>
 
         </div>
-        <div className="bg-white">
+        <div className="">
             <div className="max-w-4xl mx-auto pt-0 z-20 relative flex items-center justify-center ">
+                <motion.img
+                    initial={{ opacity: 0, x: -30 }}
+                    viewport={{ once: true }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.2, duration: .5 }}
+                    src={`${baseUrl}/assets/2.7.png`} className="" alt="Badge" />
+                <motion.img
+                    initial={{ opacity: 0, x: -30 }}
+                    viewport={{ once: true }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.4, duration: .5 }}
+                    src={`${baseUrl}/assets/2.8.png`} className="absolute" alt="Informasi" />
+                <motion.img
+                    initial={{ opacity: 0, x: -30 }}
+                    viewport={{ once: true }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.6, duration: .5 }}
+                    src={`${baseUrl}/assets/2.9.png`} className="absolute" alt="Informasi" />
+                <motion.img
+                    initial={{ opacity: 0, x: -30 }}
+                    viewport={{ once: true }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.8, duration: .5 }}
+                    src={`${baseUrl}/assets/2.10.png`} className="absolute" alt="Informasi" />
+                <motion.img
+                    initial={{ opacity: 0, x: -30 }}
+                    viewport={{ once: true }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 1, duration: .5 }}
+                    src={`${baseUrl}/assets/2.11.png`} className="absolute" alt="Informasi" />
+                <motion.img
+                    initial={{ opacity: 0, x: -30 }}
+                    viewport={{ once: true }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 1.2, duration: .5 }}
+                    src={`${baseUrl}/assets/2.12.png`} className="absolute" alt="Milk 1" />
                 <motion.img
                     initial={{ opacity: 0, x: 30 }}
                     viewport={{ once: true }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.2 }}
-                    src={`${baseUrl}/assets/2.7.png`} className="xl:-mt-16 -mt-8" alt="Badge" />
-                <motion.img
-                    initial={{ opacity: 0, y: 20 }}
-                    viewport={{ once: true }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                    src={`${baseUrl}/assets/2.8.png`} className="absolute" alt="Informasi" />
-                <motion.img
-                    initial={{ opacity: 0, y: 20 }}
-                    viewport={{ once: true }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                    src={`${baseUrl}/assets/2.9.png`} className="absolute" alt="Informasi" />
-                <motion.img
-                    initial={{ opacity: 0, y: 20 }}
-                    viewport={{ once: true }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                    src={`${baseUrl}/assets/2.10.png`} className="absolute" alt="Informasi" />
-                <motion.img
-                    initial={{ opacity: 0, y: 20 }}
-                    viewport={{ once: true }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                    src={`${baseUrl}/assets/2.11.png`} className="absolute" alt="Informasi" />
-                <motion.img
-                    initial={{ opacity: 0, y: 20 }}
-                    viewport={{ once: true }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                    src={`${baseUrl}/assets/2.12.png`} className="absolute" alt="Milk 1" />
-                <motion.img
-                    initial={{ opacity: 0, y: 20 }}
-                    viewport={{ once: true }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 }}
+                    transition={{ delay: 0.2, duration: .5 }}
                     src={`${baseUrl}/assets/2.13.png`} className="absolute" alt="Milk 2" />
                 <motion.img
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, x: 30 }}
                     viewport={{ once: true }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 }}
-                    src={`${baseUrl}/assets/2.15.png`} className="invert absolute bottom-0" alt="Informasi" />
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.4, duration: .5 }}
+                    src={`${baseUrl}/assets/2.14.png`} className="absolute" alt="Informasi" />
+                <motion.img
+                    initial={{ opacity: 0, x: 30 }}
+                    viewport={{ once: true }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.6, duration: .5 }}
+                    src={`${baseUrl}/assets/2.15.png`} className="absolute" alt="Informasi" />
+                <motion.img
+                    initial={{ opacity: 0, x: 30 }}
+                    viewport={{ once: true }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.6, duration: .5 }}
+                    src={`${baseUrl}/assets/2.16.png`} className="absolute" alt="Informasi" />
             </div>
 
             <Paragraph block={{
                 component: COMPONENT_PARAGRAPH,
                 componentProps: {
+                    className: "text-white",
                     children: (<>
                         <p>Selepas bermain, Shin mulai melatih pada 2009 sebagai pelatih interim di klub lamanya yang telah bernama Seongnam Ilhwa Chunwa. Ia mengantar tim ke peringkat kedua di K League dan Piala FA Korea 2009, meskipun saat itu timnya sedang mengalami kekurangan dana.  Lalu, ia pun mempersembahkan gelar juara Liga Champions Asia 2010 dan Piala FA Korea 2011. Shin sekaligus menjadi orang pertama yang memenangkan Liga Champions Asia sebagai pemain dan pelatih.</p>
                         <p>Pada 2014, Shin didapuk sebagai asisten pelatih Timnas Korea Selatan. Di bawah Shin, Korsel mencapai final Piala Asia 2015 untuk pertama kalinya dalam 27 tahun. Pada saat yang sama, ia juga menangani Timnas Korsel U-23, hingga dipromosikan sebagai pelatih kepala di tim senior pasukan Taeguk Warriors pada 2017.</p>
