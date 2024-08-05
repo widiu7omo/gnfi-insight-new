@@ -2,23 +2,8 @@
 import { baseUrl } from "@/constants/meta";
 import { COMPONENT_PARAGRAPH } from "@/data/component-front";
 import { Paragraph } from "@/stories/Paragraph";
-import { motion, useScroll, useSpring } from 'framer-motion'
+import { motion } from 'framer-motion'
 export function SectionOneComponent() {
-    const { scrollYProgress } = useScroll();
-    const spring = useSpring(scrollYProgress, { mass: 0.1, restDelta: 0.0001 })
-    const renderImages = () => {
-        const images = [];
-        for (let i = 5; i < 20; i++) {
-            images.push(<motion.img key={`${i}`}
-                viewport={{ once: true }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: (i * 0.2 / (i % 2 === 0 ? 2 : 4)), duration: i % 2 === 0 ? 0.8 : 0.5 }}
-                className="absolute"
-                src={`${baseUrl}/assets/1.${i}.png`} alt={`Milk Comp ${i}`} />)
-        }
-        return images;
-    }
     return <section id="section-1" className="bg-[#fff6e9] -mt-1 overflow-clip ">
         <div className="flex flex-col h-[300px] items-center justify-center bg-cover bg-center">
             <h2 className="max-w-5xl px-4 sm:px-0 text-center text-3xl font-bold leading-snug lg:text-4xl xl:text-5xl relative">
@@ -30,9 +15,15 @@ export function SectionOneComponent() {
                     Shin Tae-yong Melatih Timnas Indonesia sejak 2019
                 </motion.span>
                 <motion.img
-                    src={`${baseUrl}/assets/milk2.svg`} alt="Milk 2" className="absolute left-[-20rem] size-[40rem] bottom-[-27rem]" />
+                    initial={{ x: 20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: .2 }}
+                    transition={{ ease: 'easeInOut', duration: .3, }}
+                    src={`${baseUrl}/assets/ball.svg`} alt="Ball Big" className="absolute right-[-8rem] top-0 size-[40rem] bottom-[-8rem]" />
                 <motion.img
-                    src={`${baseUrl}/assets/milk.svg`} alt="Milk" className="absolute right-[-8rem] size-[20rem] bottom-[-8rem]" />
+                    initial={{ x: -300, rotate: 0, opacity: 0 }}
+                    whileInView={{ x: 0, rotate: 360 * 0.298, opacity: .3 }}
+                    transition={{ ease: 'easeInOut', duration: 2 }}
+                    src={`${baseUrl}/assets/ball.svg`} alt="Ball " className="absolute left-[-10rem] size-[20rem] bottom-[-10rem]" />
             </h2>
         </div>
         <div className="mb-[4rem]">
@@ -54,50 +45,97 @@ export function SectionOneComponent() {
             />
         </div>
         <div className="relative flex items-start justify-center overflow-clip">
-            <div className="w-full bg-cover bg-no-repeat bg-[center_top_-8rem]" style={{ backgroundImage: `url(${baseUrl}/assets/1.1.png)` }}>
-                <div className="absolute z-0 bg-gradient-to-b top-0 bottom-[10%] left-0 right-0 from-[#fff6e9] to-black/0" />
-                <div className="absolute z-0 bg-gradient-to-t top-[35%] bottom-0 left-0 right-0 from-white to-black/0" />
-                <div className="max-w-4xl pb-[4rem] mx-auto relative z-10">
-                    <motion.img
-                        initial={{ opacity: 0, y: 20 }}
-                        viewport={{ once: true }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                        src={`${baseUrl}/assets/1.2.png`} alt="Susu" />
-                    <motion.img
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        src={`${baseUrl}/assets/1.3.png`} alt="Manfaat Susu" />
+            <div className="w-full bg-cover bg-no-repeat bg-[center_top_-8rem]" style={{ backgroundImage: `url(${baseUrl}/assets/1.1.webp)` }}>
+                <div className="absolute z-0 bg-gradient-to-b top-0 bottom-[10%] left-0 right-0 from-[#fff6e9] to-[80%] to-black/0" />
+                <div className="max-w-4xl mx-auto relative z-10">
                     <div className="space-y-0">
-                        <div className="relative flex items-center justify-center">
+                        <div className="relative flex items-center justify-center z-0">
                             <motion.img
-                                viewport={{ once: false }}
+                                initial={{ opacity: 0, x: 20 }}
+                                viewport={{ once: true }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0.4, duration: .8 }}
+                                src={`${baseUrl}/assets/1.2.png`} alt="Title" />
+                            <motion.img
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.8, duration: .3 }}
+                                src={`${baseUrl}/assets/1.3.png`} className="absolute" alt="Sub Title" />
+                            <motion.img
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.3 }}
-                                src={`${baseUrl}/assets/1.4.png`} alt="Nutrition" />
-                            {renderImages()}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.5, duration: .8 }}
+                                src={`${baseUrl}/assets/1.4.png`} className="absolute top-0" alt="Shy Lg" />
+                            <motion.img
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 1, duration: .8 }}
+                                src={`${baseUrl}/assets/1.8.png`} className="absolute top-0" alt="Card" />
                         </div>
                     </div>
-                    <motion.img
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        src={`${baseUrl}/assets/1.20.png`} alt="Manfaat Susu" />
-                    <Paragraph
-                        block={{
-                            component: COMPONENT_PARAGRAPH,
-                            componentProps: {
-                                className: "",
-                                children: (<>
-                                    <p>Sejak saat itulah, Shin mengemban amanah untuk membangun tim sepak bola Indonesia yang solid dan berprestasi. Beberapa tugas awal yang harus dijalankannya saat pertama kali melatih Indonesia di antaranya adalah mempersiapkan tim untuk Kualifikasi Piala Dunia 2022, Piala AFF. Tak hanya di tim senior, Shin juga membesut timnas level U-16 dan U-19 guna menyambut Piala Asia.</p>
-                                </>)
-                            }
-                        }}
-                    />
+                </div>
+                <div className="relative z-10">
+                    <div className="z-10 relative max-w-4xl mx-auto">
+                        <motion.img
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            src={`${baseUrl}/assets/1.5.png`} className="z-20 w-full" alt="Shin Tae Young Md" />
+                    </div>
+                    <div className="z-[11] bottom-0 top-[40%] to-[90%] absolute left-0 right-0 w-full bg-gradient-to-b from-white/0 to-[#1d1d1d]" />
+                </div>
+                <div className="bg-[#1d1d1d]">
+                    <div className="max-w-4xl pb-[4rem] mx-auto relative z-20">
+                        <div className="space-y-0">
+                            <div className="flex items-center justify-center z-0 relative">
+                                <motion.img
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.3, duration: .5 }}
+                                    src={`${baseUrl}/assets/1.6.png`} className="z-40 bottom-0 absolute" alt="Shin Taeyoung sm" />
+                                <motion.img
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.6, duration: .8 }}
+                                    src={`${baseUrl}/assets/1.9.png`} className="z-30 absolute bottom-0" alt="Shin Tae Young Md" />
+                                <motion.img
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.8, duration: .8 }}
+                                    src={`${baseUrl}/assets/1.10.png`} className="z-30 absolute bottom-0" alt="Shin Tae Young Md" />
+                                <motion.img
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 1, duration: .5 }}
+                                    src={`${baseUrl}/assets/1.11.png`} className="z-30 absolute bottom-0" alt="Shin Tae Young Md" />
+                                <motion.img
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 1.3, duration: .5 }}
+                                    src={`${baseUrl}/assets/1.12.png`} className="z-30 absolute bottom-0" alt="Shin Tae Young Md" />
+                            </div>
+                        </div>
+                        <Paragraph
+                            block={{
+                                component: COMPONENT_PARAGRAPH,
+                                componentProps: {
+                                    className: "text-white",
+                                    children: (<>
+                                        <p>Sejak saat itulah, Shin mengemban amanah untuk membangun tim sepak bola Indonesia yang solid dan berprestasi. Beberapa tugas awal yang harus dijalankannya saat pertama kali melatih Indonesia di antaranya adalah mempersiapkan tim untuk Kualifikasi Piala Dunia 2022, Piala AFF. Tak hanya di tim senior, Shin juga membesut timnas level U-16 dan U-19 guna menyambut Piala Asia.</p>
+                                    </>)
+                                }
+                            }}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
