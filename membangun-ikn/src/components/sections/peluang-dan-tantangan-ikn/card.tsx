@@ -1,3 +1,4 @@
+import { baseUrl } from '@/constants/meta'
 import Arrow from './arrow'
 
 export default function Card() {
@@ -5,7 +6,7 @@ export default function Card() {
     <div className="flex items-center justify-center pt-8">
       <div className="flex max-w-[65ch] flex-col items-center xl:flex-row">
         <img
-          src="/assets/jokowi.png"
+          src={`${baseUrl}/assets/jokowi.png`}
           alt="Joko Widodo"
           className="w-[187px] flex-none"
         />

@@ -1,3 +1,4 @@
+import { baseUrl } from '@/constants/meta'
 import Ornament2 from './ornament2'
 
 export default function Quote() {
@@ -11,7 +12,7 @@ export default function Quote() {
       </div>
       <div className="relative w-[247px] flex-none">
         <img
-          src="/assets/sby.png"
+          src={`${baseUrl}/assets/sby.png`}
           alt="Susilo B. Yudhoyono"
           className="relative z-10"
         />

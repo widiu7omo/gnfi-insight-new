@@ -2,6 +2,7 @@
 import { useEffect } from 'react'
 import StepItem from './step-item'
 import { stagger, useAnimate, useInView } from 'framer-motion'
+import { baseUrl } from '@/constants/meta'
 export default function Steps() {
   const [scope, animate] = useAnimate()
   const isInView = useInView(scope, { once: true })
@@ -23,12 +24,12 @@ export default function Steps() {
     >
       <StepItem
         withRightOrnament
-        imageSource={'/assets/yogya.png'}
+        imageSource={`${baseUrl}/assets/yogya.png`}
         title={'Yogyakarta'}
         desc={'Januari 1946-Desember 1949'}
       />
       <StepItem
-        imageSource={'/assets/bukittinggi.png'}
+        imageSource={`${baseUrl}/assets/bukittinggi.png`}
         title={'Bukittinggi'}
         desc={
           'Desember 1848-Juni 1949 \n *(Ibu Kota Pemerintahan Darurat Republik Indonesia)'
@@ -36,7 +37,7 @@ export default function Steps() {
       />
       <StepItem
         withLeftOrnament
-        imageSource={'/assets/bireuen.png'}
+        imageSource={`${baseUrl}/assets/bireuen.png`}
         title={'Bireuen'}
         desc={
           'Konon, Bireuen pernah menjadi ibu kota selama sepekean pada Juni 1948. Namun hal ini tidak tercatat \n dalam buku sejarah sehingga \n perlu diteliti lebih lanjut'

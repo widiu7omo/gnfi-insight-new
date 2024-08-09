@@ -1,12 +1,13 @@
 'use client'
 import { ChevronsDownIcon } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { baseUrl } from '@/constants/meta'
 export default function IntroductionHero() {
   return (
     <div
       className="relative -top-[150px] -mb-[150px] h-screen w-full !bg-cover"
       style={{
-        background: 'url(/assets/hero-bg.webp)',
+        background: `url(${baseUrl}/assets/hero-bg.webp)`,
       }}
     >
       <div className="absolute h-full w-full bg-gradient-to-b from-black/0 to-black/90">

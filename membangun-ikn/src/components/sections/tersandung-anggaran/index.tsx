@@ -5,13 +5,14 @@ import Quote from './quote'
 import IndoMap from './indo-map'
 import Ornament3 from './ornament3'
 import SliderIbukota from './slider-ibukota'
+import { baseUrl } from '@/constants/meta'
 
 export default function SectionFive() {
   return (
     <section id="section-5">
       <Header
         title="Tersandung Anggaran"
-        coverImage="/assets/cover-section5.jpeg"
+        coverImage={`${baseUrl}/assets/cover-section5.jpeg`}
       />
       <Paragraph className="relative py-8">
         <Ornament1 />
@@ -39,7 +40,7 @@ export default function SectionFive() {
       <Quote />
       <div className="relative bg-[#FC9803] pt-8">
         <div
-          style={{ background: 'url(/assets/noise.png)' }}
+          style={{ background: `url(${baseUrl}/assets/noise.png)`}}
           className="absolute bottom-0 left-0 right-0 top-0 z-0 bg-cover opacity-20"
         />
         <Paragraph className="relative z-20">

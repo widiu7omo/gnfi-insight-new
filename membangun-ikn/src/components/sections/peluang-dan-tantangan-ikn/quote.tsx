@@ -1,3 +1,4 @@
+import { baseUrl } from '@/constants/meta'
 import QuoteIcon from './quote-icon'
 import QuoteIconSmall from './quote-icon-small'
 
@@ -18,7 +19,7 @@ export default function Quote() {
         </div>
         <div className="flex flex-col items-center space-x-0 space-y-4 xl:flex-row xl:space-x-12 xl:space-y-0">
           <img
-            src="/assets/bambang-9.png"
+            src={`${baseUrl}/assets/bambang-9.png`}
             alt="Bambang"
             className="size-[200px] flex-none"
           />

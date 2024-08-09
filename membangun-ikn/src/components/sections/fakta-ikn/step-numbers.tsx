@@ -1,3 +1,5 @@
+import { baseUrl } from "@/constants/meta"
+
 export function One() {
   return (
     <div className="relative flex items-center">
@@ -89,7 +91,7 @@ export function Three() {
         />
       </svg>
       <img
-        src="/assets/conceptor.png"
+        src={`${baseUrl}/assets/conceptor.png`}
         alt="Nyoman Nuarta"
         className="absolute left-0 z-0 size-72 h-72 w-72 max-w-[18rem]"
       />
@@ -161,7 +163,7 @@ export function Five() {
         />
       </svg>
       <img
-        src="/assets/ikn-circle.png"
+        src={`${baseUrl}/assets/ikn-circle.png`}
         alt="Nyoman Nuarta"
         className="absolute left-0 z-0 size-72 h-72 w-72 max-w-[18rem]"
       />

@@ -1,3 +1,4 @@
+import { baseUrl } from '@/constants/meta'
 import { vollkornFont } from '.'
 import Ornament4 from './ornament4'
 
@@ -16,7 +17,7 @@ export default function Quote() {
         <img
           className="h-48"
           alt="Soekarno Sticker"
-          src="/assets/990bcf9dceabed1a2ff85967cae2d172.png"
+          src={`${baseUrl}/assets/990bcf9dceabed1a2ff85967cae2d172.png`}
         />
       </div>
     </div>

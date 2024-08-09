@@ -5,13 +5,14 @@ import Ornament2 from './ornament2'
 import Ornament3 from './ornament3'
 import Ornament4 from './ornament4'
 import Ornament5 from './ornament5'
+import { baseUrl } from '@/constants/meta'
 
 export default function SectionFour() {
   return (
     <section id="section-4" className="mb-0 xl:-mb-[5rem]">
       <Header
         title="Pindah ke Jonggol, Wacana Era Orde Baru"
-        coverImage="assets/cover-section4.jpeg"
+        coverImage={`${baseUrl}/assets/cover-section4.jpeg`}
         className="!bg-[50%_80%]"
       />
       <div className="relative top-0 flex w-full flex-col items-center justify-center xl:-top-[14rem] ">

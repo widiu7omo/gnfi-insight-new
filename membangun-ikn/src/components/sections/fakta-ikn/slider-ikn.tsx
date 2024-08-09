@@ -1,6 +1,6 @@
 'use client'
-import { PanInfo, motion, useMotionValue } from 'framer-motion'
-import { PropsWithChildren, useRef, useState } from 'react'
+import { type PanInfo, motion, useMotionValue } from 'framer-motion'
+import { type PropsWithChildren, useRef, useState } from 'react'
 import { generateSlide } from './step-numbers-sm'
 
 export default function SliderIkn() {
@@ -13,7 +13,7 @@ export default function SliderIkn() {
       key={`number-card-${
         // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
         i
-      }`}
+        }`}
     >
       {item}
     </SlideItem>

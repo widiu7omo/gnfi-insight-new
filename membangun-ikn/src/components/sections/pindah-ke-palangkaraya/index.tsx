@@ -6,6 +6,7 @@ import Quote from './quote'
 import Ornament5 from './ornament5'
 import Ornament4 from './ornament4'
 import Ornament3 from './ornament3'
+import { baseUrl } from '@/constants/meta'
 
 export default function SectionThree() {
   return (
@@ -13,7 +14,7 @@ export default function SectionThree() {
       <Ornament2 />
       <Header
         title="Pindah ke Palangkaraya, Ide Bung Karno atau Semaun?"
-        coverImage="/assets/cover-section3.webp"
+        coverImage={`${baseUrl}/assets/cover-section3.webp`}
         className="relative"
       />
       <Paragraph className="relative py-8">
@@ -110,7 +111,7 @@ export default function SectionThree() {
 
             <div className="relative w-[165px] flex-none">
               <img
-                src="assets/jj.png"
+                src={`${baseUrl}/assets/jj.png`}
                 alt="JJ Rizal"
                 className="object-contain"
               />

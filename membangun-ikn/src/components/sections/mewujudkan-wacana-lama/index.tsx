@@ -5,12 +5,13 @@ import Ornament2 from './ornament2'
 import FaktaIkn from '../fakta-ikn'
 import Ornament3 from './ornament3'
 import Ornament4 from './ornament4'
+import { baseUrl } from '@/constants/meta'
 
 export default function SectionSix() {
   return (
     <section id="section-6">
       <Header
-        coverImage="/assets/cover-section6.webp"
+        coverImage={`${baseUrl}/assets/cover-section6.webp`}
         customTitle={
           <div className="mx-4 max-w-full rounded-xl border-2 border-white/10 bg-white/30 px-10 py-8 text-center backdrop-blur-sm xl:mx-0 xl:max-w-5xl">
             <h2 className="text-3xl font-bold text-white drop-shadow-lg xl:text-5xl">

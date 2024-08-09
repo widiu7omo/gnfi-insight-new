@@ -6,13 +6,14 @@ import Ornament2 from './ornament2'
 import Ornament3 from './ornament3'
 import Ornament4 from './ornament4'
 import Quote from './quote'
+import { baseUrl } from '@/constants/meta'
 
 export default function SectionEight() {
   return (
     <section id="section-8">
       <Header
         title="Peluang dan Tantangan IKN"
-        coverImage="/assets/cover-section9.jpeg"
+        coverImage={`${baseUrl}/assets/cover-section9.jpeg`}
       />
       <Paragraph className="relative py-8">
         <Ornament1 />
@@ -76,7 +77,7 @@ export default function SectionEight() {
 
         <p>
           Terkait ancaman longsor, Andang menjelaskan bahwa penyebabnya adalah
-          IKN berada di wilayah yang didominasi oleh struktur patahan naik. 
+          IKN berada di wilayah yang didominasi oleh struktur patahan naik.
         </p>
 
         <p>
