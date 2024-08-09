@@ -1,4 +1,5 @@
 'use client'
+import { baseUrl } from '@/constants/meta'
 import { motion } from 'framer-motion'
 export default function SectionPresidentDirect() {
   return (
@@ -20,7 +21,7 @@ export default function SectionPresidentDirect() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             className="w-full xl:w-[1000px] border-8 shadow rounded-xl border-[#fffaf0]"
-            src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/Wikimedia_Commons_(3).jpg"
+            src={`${baseUrl}/assets/Wikimedia_Commons_(3).jpg`}
             alt="Surat Suara"
           />
         </div>

@@ -1,5 +1,5 @@
 "use client";
-import { BlockType } from "@/data/types";
+import type { BlockType } from "@/data/types";
 import parse from "html-react-parser";
 import {
 	stagger,

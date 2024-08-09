@@ -1,3 +1,5 @@
+import { baseUrl } from "@/constants/meta";
+
 export default function SectionFooter() {
   return (
     <>
@@ -8,7 +10,7 @@ export default function SectionFooter() {
           <span className="font-bold">Good News From Indonesia</span>
         </div>
         <div className="">
-          <img src="assets/gnfi.svg" alt="Logo GNFI" className="h-[80px]" />
+          <img src={`${baseUrl}/assets/gnfi.svg`} alt="Logo GNFI" className="h-[80px]" />
         </div>
       </div>
     </>

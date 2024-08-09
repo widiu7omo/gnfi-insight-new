@@ -1,14 +1,15 @@
-'use client'
-import { BlockType } from '@/data/types'
-import { ChevronsDownIcon } from 'lucide-react'
-import { motion } from 'framer-motion'
+"use client";
+import type { BlockType } from "@/data/types";
+import { ChevronsDownIcon } from "lucide-react";
+import { motion } from "framer-motion";
+import { baseUrl } from "@/constants/meta";
 export default function IntroductionHero({ block }: { block: BlockType }) {
   return (
     <div
       className="relative !bg-cover w-full h-screen -top-[150px] -mb-[150px]"
       style={{
         background:
-          'url(pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/tangerangkota.go.id.jpeg)',
+          `url(${baseUrl}/assets/tangerangkota.go.id.jpeg)`,
       }}
     >
       <div className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/90">
@@ -29,5 +30,5 @@ export default function IntroductionHero({ block }: { block: BlockType }) {
         </div>
       </div>
     </div>
-  )
+  );
 }

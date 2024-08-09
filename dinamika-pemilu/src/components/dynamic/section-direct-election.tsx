@@ -1,4 +1,5 @@
 'use client'
+import { baseUrl } from '@/constants/meta'
 import { motion } from 'framer-motion'
 export default function SectionDirectElection() {
   let indexImage = 0
@@ -35,9 +36,9 @@ export default function SectionDirectElection() {
               key={`${
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 i
-              }`}
+                }`}
               className="absolute z-20 xl:w-[50%] left-0 xl:left-[25%]"
-              src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/election2004/${indexImage}.png`}
+              src={`${baseUrl}/assets/election2004/${indexImage}.png`}
               alt={indexImage.toString()}
             />
           )

@@ -1,4 +1,5 @@
 'use client'
+import { baseUrl } from '@/constants/meta'
 import { motion } from 'framer-motion'
 export default function SectionGolkarOldImage() {
   return (
@@ -20,7 +21,7 @@ export default function SectionGolkarOldImage() {
           }}
           transition={{ delay: 0.3 }}
           className="px-16 w-full xl:h-[600px] rotate-1"
-          src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/arsip.jogjaprov.go.id.jpg"
+          src={`${baseUrl}/assets/arsip.jogjaprov.go.id.jpg`}
           alt="Jogja Arsip"
         />
       </div>

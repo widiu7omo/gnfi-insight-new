@@ -1,12 +1,12 @@
 'use client'
+import { baseUrl } from '@/constants/meta'
 import { motion } from 'framer-motion'
 export default function SectionGolkarControllingElection() {
   return (
     <div
       className="h-full !bg-cover w-full flex items-center justify-center"
       style={{
-        background:
-          "url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/golkar/bg-title.png')",
+        background: `url('${baseUrl}/assets/golkar/bg-title.png')`,
       }}
     >
       <div className="bg-black/60 flex items-center justify-center w-full py-24 xl:py-64">

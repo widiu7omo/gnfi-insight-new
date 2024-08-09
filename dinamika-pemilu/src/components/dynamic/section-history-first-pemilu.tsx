@@ -1,4 +1,5 @@
 'use client'
+import { baseUrl } from '@/constants/meta'
 import { motion } from 'framer-motion'
 export default function SectionHistoryFirstPemilu() {
   let indexImage = 2
@@ -43,9 +44,9 @@ export default function SectionHistoryFirstPemilu() {
               key={`${
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 i
-              }`}
+                }`}
               className="absolute z-20 w-full -top-[100px] xl:-top-[200px] max-w-full xl:max-w-7xl xl:mx-auto"
-              src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/history/${indexImage}.png`}
+              src={`${baseUrl}/assets/history/${indexImage}.png`}
               alt={indexImage.toString()}
             />
           )

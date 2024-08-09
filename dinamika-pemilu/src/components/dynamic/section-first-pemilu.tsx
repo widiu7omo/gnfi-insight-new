@@ -1,4 +1,5 @@
 'use client'
+import { baseUrl } from '@/constants/meta'
 import { motion } from 'framer-motion'
 export default function SectionFirstPemilu() {
   return (
@@ -7,7 +8,7 @@ export default function SectionFirstPemilu() {
         className="!bg-cover flex items-center justify-center py-28"
         style={{
           background:
-            'url("pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/first-pemilu-bg.png")',
+            `url("${baseUrl}/assets/first-pemilu-bg.png")`,
         }}
       >
         <motion.h2

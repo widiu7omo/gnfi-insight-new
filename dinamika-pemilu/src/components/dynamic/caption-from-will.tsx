@@ -1,3 +1,4 @@
+import { baseUrl } from '@/constants/meta'
 import { motion } from 'framer-motion'
 const containerAnimate = {
   visible: {
@@ -30,7 +31,7 @@ export default function CaptionFromWill() {
             initial={{ x: -20, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
-            src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/golkar/will.png"
+            src={`${baseUrl}/assets/golkar/will.png`}
             alt="Sir William"
             className="min-w-[250px] w-[250px] xl:w-full"
           />

@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import CaptionFromWill from './caption-from-will'
+import { baseUrl } from '@/constants/meta'
 const containerAnimate = {
   visible: {
     transition: {
@@ -46,11 +47,10 @@ export default function SectionTimelineGolkar() {
                 key={`${
                   // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                   i
-                }`}
-                className={`absolute ${
-                  indexImage === 3 ? 'z-30' : 'z-20'
-                } -top-[100px] xl:-top-[300px] max-w-full xl:max-w-7xl xl:mx-auto`}
-                src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/golkar/${indexImage}.png`}
+                  }`}
+                className={`absolute ${indexImage === 3 ? 'z-30' : 'z-20'
+                  } -top-[100px] xl:-top-[300px] max-w-full xl:max-w-7xl xl:mx-auto`}
+                src={`${baseUrl}/assets/golkar/${indexImage}.png`}
                 alt={indexImage.toString()}
               />
             )

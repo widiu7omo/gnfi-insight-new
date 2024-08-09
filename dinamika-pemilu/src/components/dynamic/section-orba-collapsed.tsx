@@ -1,4 +1,5 @@
 'use client'
+import { baseUrl } from '@/constants/meta'
 import { motion, stagger, useAnimate, useInView } from 'framer-motion'
 import { useEffect } from 'react'
 export default function SectionOrbaCollapsed() {
@@ -64,8 +65,7 @@ export default function SectionOrbaCollapsed() {
             transition={{ delay: 0.3 }}
             className="!bg-cover absolute z-0 flex items-center justify-center h-full top-0 w-[calc(100%-10rem)] xl:w-[calc(100%-40rem)]"
             style={{
-              background:
-                "linear-gradient(0deg, rgba(26, 18, 24, 0.6), rgba(26, 18, 24, 0.6)), url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse.jpg')",
+              background:`linear-gradient(0deg, rgba(26, 18, 24, 0.6), rgba(26, 18, 24, 0.6)), url('${baseUrl}/assets/collapsed/collapse.jpg')`,
               filter: 'blur(50px)',
               transform: 'scale(2)',
             }}
@@ -75,7 +75,7 @@ export default function SectionOrbaCollapsed() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse.jpg"
+            src={`${baseUrl}/assets/collapsed/collapse.jpg`}
             alt="Demo"
             className="absolute h-auto xl:h-[600px] max-w-full xl:max-w-7xl z-20 px-4 xl:px-0 top-10"
           />
@@ -129,8 +129,7 @@ export default function SectionOrbaCollapsed() {
             transition={{ delay: 0.3 }}
             className="!bg-cover absolute z-0 w-full xl:w-[calc(100%-32rem)] flex items-center justify-center h-full"
             style={{
-              background:
-                "linear-gradient(0deg, rgba(26, 18, 24, 0.6), rgba(26, 18, 24, 0.6)),url('pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse2.png')",
+              background: `linear-gradient(0deg, rgba(26, 18, 24, 0.6), rgba(26, 18, 24, 0.6)),url('${baseUrl}/assets/collapsed/collapse2.png')`,
               filter: 'blur(50px)',
               transform: 'scale(1.1)',
             }}
@@ -140,7 +139,7 @@ export default function SectionOrbaCollapsed() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/collapse2.png"
+            src={`${baseUrl}/assets/collapsed/collapse2.png`}
             alt="Demo 2"
             className="absolute h-auto xl:h-[600px] z-20 px-4 xl:px-0"
           />
@@ -207,9 +206,9 @@ export default function SectionOrbaCollapsed() {
                   key={`${
                     // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                     i
-                  }`}
+                    }`}
                   className={'absolute z-0 w-full xl:max-w-7xl'}
-                  src={`pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/collapsed/${indexImage}.png`}
+                  src={`${baseUrl}/assets/collapsed/${indexImage}.png`}
                   alt={indexImage.toString()}
                 />
               )

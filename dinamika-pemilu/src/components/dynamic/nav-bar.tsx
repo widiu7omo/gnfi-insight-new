@@ -4,6 +4,7 @@ import { useMotionValueEvent, useScroll, useSpring } from 'framer-motion'
 import { BarChart2Icon } from 'lucide-react'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { baseUrl } from '@/constants/meta'
 export default function Navbar() {
   const [_, setNavigation] = useNavigation()
   const toggleNavHandler = () => {
@@ -38,7 +39,7 @@ export default function Navbar() {
         <motion.img
           layout
           data-blur={shouldBlur}
-          src="assets/logo_gnfi_white.png"
+          src={`${baseUrl}/assets/logo_gnfi_white.png`}
           alt="Logo GNFI"
           className="w-[40px] md:w-[60px] lg:w-[70px] data-[blur=true]:invert data-[blur=true]:w-[30px] lg:data-[blur=true]:w-[50px]"
         />

@@ -2,6 +2,7 @@
 import { Signika } from 'next/font/google'
 import { motion, stagger, useAnimate, useInView } from 'framer-motion'
 import { useEffect } from 'react'
+import { baseUrl } from '@/constants/meta'
 const signikaFont = Signika({ weight: '400', subsets: ['latin'] })
 export default function FirstElectionMethod() {
   const [scope, animate] = useAnimate()
@@ -24,7 +25,7 @@ export default function FirstElectionMethod() {
         initial={{ opacity: 0, scale: 0.9, x: -20 }}
         whileInView={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ delay: 0.3 }}
-        src="pemilu-dan-dinamikanya-dari-masa-ke-masa/assets/Wikimedia_Commons.jpg"
+        src={`${baseUrl}/assets/Wikimedia_Commons.jpg`}
         className="border-8 border-white shadow-2xl"
         alt="Sistem pemilihan pada pemilu 1995"
       />
