@@ -4,7 +4,7 @@ import { COMPONENT_PARAGRAPH } from "@/data/component-front";
 import { Paragraph } from "@/stories/Paragraph";
 import { motion } from 'framer-motion'
 export function SectionOneComponent() {
-    return <section id="section-1" className="bg-[#fff6e9] -mt-1 overflow-clip ">
+    return <section id="section-1" className="bg-[#fffcf3] -mt-1 overflow-clip ">
         <div className="flex flex-col h-[300px] items-center justify-center bg-cover bg-center">
             <h2 className="max-w-5xl px-4 sm:px-0 text-center text-3xl font-bold leading-snug lg:text-4xl xl:text-5xl relative">
                 <motion.span
@@ -12,18 +12,18 @@ export function SectionOneComponent() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                     className="relative z-10">
-                    Asal-usul Gula, Bermula dari Papua Nugini
+                    Asal-usul Gula, Bermula dari <br />Papua Nugini
                 </motion.span>
                 <motion.img
-                    initial={{ x: 20, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: .2 }}
-                    transition={{ ease: 'easeInOut', duration: .3, }}
-                    src={`${baseUrl}/assets/ball.svg`} alt="Ball Big" className="absolute right-[-8rem] top-0 size-[40rem] bottom-[-8rem]" />
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ ease: 'easeInOut', duration: 1, delay: .3 }}
+                    src={`${baseUrl}/assets/sugar2.svg`} alt="Sack" className="absolute right-[-10rem] -top-[8rem] size-[20rem]" />
                 <motion.img
-                    initial={{ x: -300, rotate: 0, opacity: 0 }}
-                    whileInView={{ x: 0, rotate: 360 * 0.298, opacity: .3 }}
-                    transition={{ ease: 'easeInOut', duration: 2 }}
-                    src={`${baseUrl}/assets/ball.svg`} alt="Ball " className="absolute left-[-10rem] size-[20rem] bottom-[-10rem]" />
+                    initial={{ x: 20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ ease: 'easeInOut', duration: .5, }}
+                    src={`${baseUrl}/assets/sugar.svg`} alt="Sugar Plate" className="absolute right-0 xl:right-[-12rem] -top-[0.5rem] size-[22rem]" />
             </h2>
         </div>
         <div className="mb-[4rem]">
@@ -45,7 +45,7 @@ export function SectionOneComponent() {
         </div>
         <div className="relative flex items-start justify-center overflow-clip">
             <div className="w-full bg-cover bg-no-repeat bg-[center_top_-8rem]" >
-                <div className="absolute z-0 bg-gradient-to-b top-0 bottom-[10%] left-0 right-0 from-[#fff6e9] to-[80%] to-black/0" />
+                <div className="absolute z-0 bg-gradient-to-b top-0 bottom-[10%] left-0 right-0 from-[#fffcf3] to-[80%] to-black/0" />
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="space-y-0">
                         <div className="relative flex items-center justify-center z-0">
@@ -68,12 +68,11 @@ export function SectionOneComponent() {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.5, duration: .8 }}
                                 src={`${baseUrl}/assets/1.3.png`} className="absolute top-0" alt="Shy Lg" />
-
                         </div>
                     </div>
                 </div>
-                <img src={`${baseUrl}/assets/1.4.png`} className="top-0 object-contain left-0 bottom-0 w-full h-full right-0 absolute" alt="Shy Lg" />
-                <div className="top-0 object-contain left-0 bottom-0 w-full h-full right-0 absolute bg-gradient-to-b from-white/0 to-black/30 backdrop-blur-2xl" />
+                <img src={`${baseUrl}/assets/1.4.png`} className="top-0 object-contain px-[10rem] bottom-0 w-full h-full absolute" alt="Shy Lg" />
+                <div className="top-0 object-contain bottom-0 w-full h-full absolute bg-gradient-to-b from-white/0 to-black/30 backdrop-blur-3xl" />
                 <div className="max-w-7xl mx-auto relative z-10 -mt-[10rem] sm:-mt-[15rem] lg:-mt-[25rem] xl:-mt-[29rem]">
                     <div className="space-y-0">
                         <div className="relative flex items-center justify-center z-0">
