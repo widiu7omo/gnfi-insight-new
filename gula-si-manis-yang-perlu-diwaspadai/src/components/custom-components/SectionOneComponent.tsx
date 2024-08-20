@@ -167,7 +167,6 @@ export function SectionOneComponent() {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.5, duration: .8 }}
                                 src={`${baseUrl}/assets/1.17.png`} className="absolute top-0" alt="Shy Lg" />
-
                             <motion.img
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
