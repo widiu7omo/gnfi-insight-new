@@ -11,8 +11,8 @@ export function SectionFourCustomImage() {
         </motion.p>
       </div>
       <div className="my-14 flex flex-col gap-10">
-        <motion.p initial={{ opacity: 0, y: 20 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} className="text-center text-lg sm:text-xl font-semibold">
-          Konsumsi gula berlebih dapat menimbulkan penyakit, <br /> salah satunya diabetes. Oleh karena itu, asupannya <br /> harus dibatasi
+        <motion.p initial={{ opacity: 0, y: 20 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} className="text-center text-lg sm:text-xl font-semibold px-10 sm:max-w-xl sm:mx-auto">
+          Konsumsi gula berlebih dapat menimbulkan penyakit, salah satunya diabetes. Oleh karena itu, asupannya harus dibatasi
         </motion.p>
         <motion.p initial={{ opacity: 0, y: 20 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} className="text-center text-base sm:text-lg font-medium">
           Rekomendasi asupan gula harian:
