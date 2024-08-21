@@ -4,14 +4,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export function SectionFourCustomImage() {
   return (
-    <section className="h-[2200px] relative">
+    <section className="h-[1350px] sm:h-[2200px] relative">
       <div className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: `url(${baseUrl}/assets/header-image.png)` }}>
         <motion.p initial={{ opacity: 0, y: 20 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} className="text-3xl font-bold text-center lg:text-4xl xl:text-5xl">
           Hati-hati, <br /> Jangan Berlebihan <br /> Mengonsumsi Gula!
         </motion.p>
       </div>
-      <div className="my-14 flex flex-col gap-10">
-        <motion.p initial={{ opacity: 0, y: 20 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} className="text-center text-lg sm:text-xl font-semibold px-10 sm:max-w-xl sm:mx-auto">
+      <div className="my-14 flex flex-col gap-4 sm:gap-10">
+        <motion.p initial={{ opacity: 0, y: 20 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} className="text-center text-lg sm:text-xl font-semibold px-5 sm:max-w-xl sm:mx-auto">
           Konsumsi gula berlebih dapat menimbulkan penyakit, salah satunya diabetes. Oleh karena itu, asupannya harus dibatasi
         </motion.p>
         <motion.p initial={{ opacity: 0, y: 20 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} className="text-center text-base sm:text-lg font-medium">
@@ -82,7 +82,7 @@ export function SectionFourCustomImage() {
         <motion.img initial={{ opacity: 0, y: 30 }} viewport={{ once: false }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} src={`${baseUrl}/assets/doctorquote.png`} alt="doctorquote" className="absolute bottom-0" />
         <motion.img initial={{ opacity: 0, x: -30 }} viewport={{ once: false }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} src={`${baseUrl}/assets/petik-atas.png`} alt="petik-atas" className="absolute bottom-0" />
         <motion.img initial={{ opacity: 0, x: 30 }} viewport={{ once: false }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} src={`${baseUrl}/assets/petik-bawah.png`} alt="petik-bawah" className="absolute bottom-0" />
-        <motion.img initial={{ opacity: 0, y: 30 }} viewport={{ once: false }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} src={`${baseUrl}/assets/doctor.png`} alt="doctor" className="absolute bottom-[90px]" />
+        <motion.img initial={{ opacity: 0, y: 30 }} viewport={{ once: false }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} src={`${baseUrl}/assets/doctor.png`} alt="doctor" className="absolute bottom-0" />
       </div>
     </section>
   );
