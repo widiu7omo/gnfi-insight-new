@@ -77,6 +77,13 @@ export function SectionFourCustomImage() {
           className="absolute top-[525px] sm:top-10 z-10"
         />
       </div>
+      <div className="flex items-center justify-center w-full mx-auto">
+        <motion.img initial={{ opacity: 0, x: -30 }} viewport={{ once: false }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} src={`${baseUrl}/assets/bg-wheat.png`} alt="bg-wheat" className="absolute bottom-0" />
+        <motion.img initial={{ opacity: 0, y: 30 }} viewport={{ once: false }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} src={`${baseUrl}/assets/doctorquote.png`} alt="doctorquote" className="absolute bottom-0" />
+        <motion.img initial={{ opacity: 0, x: -30 }} viewport={{ once: false }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} src={`${baseUrl}/assets/petik-atas.png`} alt="petik-atas" className="absolute bottom-0" />
+        <motion.img initial={{ opacity: 0, x: 30 }} viewport={{ once: false }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} src={`${baseUrl}/assets/petik-bawah.png`} alt="petik-bawah" className="absolute bottom-0" />
+        <motion.img initial={{ opacity: 0, y: 30 }} viewport={{ once: false }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} src={`${baseUrl}/assets/doctor.png`} alt="doctor" className="absolute bottom-[90px]" />
+      </div>
     </section>
   );
 }
