@@ -106,7 +106,7 @@
         "group": "section-3",
         "groupClassName": "overflow-clip ",
         "order": 4,
-        "componentCustomName": "SectionTwoCustomImage",
+        "componentCustomName": "SectionThreeCustomImage",
         "groupWithBackground": true
     },
     {
@@ -150,7 +150,7 @@
         "group": "section-4",
         "groupClassName": "bg-[#D5D5D5] overflow-clip",
         "order": 8,
-        "componentCustomName": "SectionThreeCustomImage"
+        "componentCustomName": "SectionFourCustomImage"
     },
     {
         "index": 2,
@@ -199,7 +199,7 @@
         "group": "section-5",
         "groupClassName": "overflow-clip",
         "order": 12,
-        "componentCustomName": "SectionFourCustomImage"
+        "componentCustomName": "SectionFiveCustomImage"
     },
     {
         "index": 3,
@@ -241,7 +241,7 @@
         "group": "section-6",
         "groupClassName": "overflow-clip",
         "order": 16,
-        "componentCustomName": "SectionFiveCustomImage"
+        "componentCustomName": "SectionSixCustomImage"
     },
     {
         "index": 3,
