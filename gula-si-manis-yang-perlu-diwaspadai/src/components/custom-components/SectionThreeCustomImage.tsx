@@ -20,7 +20,7 @@ export function SectionThreeCustomImage() {
   })
   return (
     <div className="flex flex-col" ref={ref}>
-      <div className="flex items-center z-10 relative justify-center bg-cover bg-[center_bottom] bg-no-repeat" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.3) 0%,rgba(0,0,0,1) 120% ),url('${baseUrl}/assets/3.0.jpg')` }}>
+      <div className="flex items-center z-10 relative justify-center bg-cover bg-[center_bottom] bg-no-repeat" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.3) 0%,rgba(0,0,0,1) 120% ),url('${baseUrl}/assets/3.0.jpeg')` }}>
         <div className="justify-center max-w-7xl mx-auto ">
           <motion.img
             initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}

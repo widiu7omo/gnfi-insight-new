@@ -71,101 +71,106 @@ export function SectionOneComponent() {
                         </div>
                     </div>
                 </div>
-                <img src={`${baseUrl}/assets/1.4.png`} className="top-0 object-contain px-[10rem] bottom-0 w-full h-full absolute" alt="Shy Lg" />
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: .8, duration: .8 }}
+                    src={`${baseUrl}/assets/1.4.png`} className="top-0 object-contain px-[10rem] bottom-0 w-full h-full absolute" alt="Shy Lg" />
                 <div className="top-0 object-contain bottom-0 w-full h-full absolute bg-gradient-to-b from-white/0 to-black/30 backdrop-blur-3xl" />
                 <div className="max-w-7xl mx-auto relative z-10 -mt-[10rem] sm:-mt-[15rem] lg:-mt-[25rem] xl:-mt-[29rem]">
                     <div className="space-y-0">
                         <div className="relative flex items-center justify-center z-0">
                             <img src={`${baseUrl}/assets/1.4.png`} className="top-0" alt="Shy Lg" />
                             <motion.img
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, x: -10, y: 90 }}
+                                whileInView={{ opacity: 1, x: 0, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: .8 }}
+                                transition={{ delay: 1, duration: .3 }}
                                 src={`${baseUrl}/assets/1.18.png`} className="absolute top-0" alt="Shy Lg" />
                             <motion.img
-                                initial={{ opacity: 0, x: 20 }}
+                                initial={{ opacity: 0, y: 20 }}
                                 viewport={{ once: true }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.4, duration: .8 }}
                                 src={`${baseUrl}/assets/1.5.png`} alt="Title" className="absolute top-0" />
                             <motion.img
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.8, duration: .3 }}
+                                transition={{ delay: 0.3, duration: .3 }}
                                 src={`${baseUrl}/assets/1.6.png`} className="absolute" alt="Sub Title" />
                             <motion.img
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, }}
+                                whileInView={{ opacity: 1, }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.8, duration: .3 }}
+                                transition={{ delay: 0.4, duration: .3 }}
                                 src={`${baseUrl}/assets/1.7.png`} className="absolute" alt="Sub Title" />
                             <motion.img
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: .8 }}
+                                transition={{ delay: 0.3, duration: .3, ease: "easeOut", }}
                                 src={`${baseUrl}/assets/1.6.1.png`} className="absolute top-0" alt="Shy Lg" />
                             <motion.img
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, scale: .7 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: .8 }}
+                                transition={{ delay: 0.4, duration: .3, ease: "easeOut", }}
                                 src={`${baseUrl}/assets/1.8.png`} className="absolute top-0" alt="Shy Lg" />
                             <motion.img
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, scale: .7 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: .8 }}
+                                transition={{ delay: 0.5, duration: .3, ease: "easeOut", }}
                                 src={`${baseUrl}/assets/1.9.png`} className="absolute top-0" alt="Shy Lg" />
                             <motion.img
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, scale: .7 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: .8 }}
+                                transition={{ delay: 0.6, duration: .3, ease: "easeOut", }}
                                 src={`${baseUrl}/assets/1.10.png`} className="absolute top-0" alt="Shy Lg" />
                             <motion.img
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, scale: .7 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: .8 }}
+                                transition={{ delay: 0.7, duration: .3, ease: "easeOut", }}
                                 src={`${baseUrl}/assets/1.11.png`} className="absolute top-0" alt="Shy Lg" />
                             <motion.img
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: .8 }}
+                                transition={{ delay: 0.2, duration: .5 }}
                                 src={`${baseUrl}/assets/1.12.png`} className="absolute top-0" alt="Shy Lg" />
                             <motion.img
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: .8 }}
+                                transition={{ delay: 0.3, duration: .5 }}
                                 src={`${baseUrl}/assets/1.13.png`} className="absolute top-0" alt="Shy Lg" />
                             <motion.img
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: .8 }}
+                                transition={{ delay: 0.4, duration: .5 }}
                                 src={`${baseUrl}/assets/1.14.png`} className="absolute top-0" alt="Shy Lg" />
                             <motion.img
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: .8 }}
+                                transition={{ delay: 0.2, duration: .8 }}
                                 src={`${baseUrl}/assets/1.15.png`} className="absolute top-0" alt="Shy Lg" />
                             <motion.img
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: .8 }}
+                                transition={{ delay: 0.3, duration: .8 }}
                                 src={`${baseUrl}/assets/1.16.png`} className="absolute top-0" alt="Shy Lg" />
                             <motion.img
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: .8 }}
+                                transition={{ delay: 0, duration: .3 }}
                                 src={`${baseUrl}/assets/1.17.png`} className="absolute top-0" alt="Shy Lg" />
                             <motion.img
                                 initial={{ opacity: 0, y: 20 }}
