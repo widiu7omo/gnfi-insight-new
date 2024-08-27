@@ -22,13 +22,6 @@ export function SectionTwoCustomImage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                         src={`${baseUrl}/assets/2.1.png`} className="relative top-0" alt="Title" />
-
-                    {/* <motion.img
-                            initial={{ opacity: 0, y: 20 }}
-                            viewport={{ once: true }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                            src={`${baseUrl}/assets/2.2.png`} className="absolute top-0" alt="Title" /> */}
                 </div>
             </div>
         </div>
