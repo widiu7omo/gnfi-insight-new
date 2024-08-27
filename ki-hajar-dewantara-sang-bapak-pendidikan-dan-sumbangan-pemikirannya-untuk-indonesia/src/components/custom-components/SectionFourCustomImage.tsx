@@ -17,7 +17,52 @@ export function SectionFourCustomImage() {
       <motion.img initial={{ opacity: 0, x: -10 }} viewport={{ once: false }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 1.3 }} src={`${baseUrl}/assets/quote.png`} alt="quote" className="absolute top-0 z-20" />
       <motion.img initial={{ opacity: 0, x: 10 }} viewport={{ once: false }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 1.6 }} src={`${baseUrl}/assets/quote-description.png`} alt="quote" className="absolute top-0 z-20" />
       <motion.img initial={{ opacity: 0, y: 20 }} viewport={{ once: false }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 1.9 }} src={`${baseUrl}/assets/quote-ki-hajar.png`} alt="quote" className="absolute top-0 z-20" />
-      <motion.img initial={{ opacity: 0, x: -20 }} viewport={{ once: false }} whileInView={{ opacity: 1, x1: 0 }} transition={{ delay: 2.2 }} src={`${baseUrl}/assets/student.png`} alt="quote" className="absolute bottom-0 z-30" />
+      <motion.img
+        initial={{ opacity: 0, x: 20 }}
+        viewport={{ once: false }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: 1.9 }}
+        src={`${baseUrl}/assets/bendera-kanan-atas.png`}
+        alt="quote"
+        className="absolute top-0 right-0 z-20"
+      />
+      <motion.img
+        initial={{ opacity: 0, x: 20 }}
+        viewport={{ once: false }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: 2.3 }}
+        src={`${baseUrl}/assets/bendera-kanan-tengah.png`}
+        alt="quote"
+        className="absolute top-0 right-0 z-40"
+      />
+      <motion.img
+        initial={{ opacity: 0, x: 20 }}
+        viewport={{ once: false }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: 2.9 }}
+        src={`${baseUrl}/assets/bendera-kanan-bawah-pojok.png`}
+        alt="quote"
+        className="absolute bottom-0 right-0 z-40"
+      />
+      <motion.img
+        initial={{ opacity: 0, x: 20 }}
+        viewport={{ once: false }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: 1.5 }}
+        src={`${baseUrl}/assets/bendera-kiri-tengah.png`}
+        alt="quote"
+        className="absolute top-0 left-0 z-10"
+      />
+      <motion.img
+        initial={{ opacity: 0, x: 20 }}
+        viewport={{ once: false }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: 2.5 }}
+        src={`${baseUrl}/assets/bendera-kiri-bawah.png`}
+        alt="quote"
+        className="absolute bottom-0 left-0 z-40"
+      />
+      <motion.img initial={{ opacity: 0, y: 20 }} viewport={{ once: false }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 2.2 }} src={`${baseUrl}/assets/student.png`} alt="quote" className="absolute bottom-0 z-30" />
       <motion.img initial={{ opacity: 0, x: 20 }} viewport={{ once: false }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 2.4 }} src={`${baseUrl}/assets/student-toga.png`} alt="quote" className="absolute bottom-0 z-30" />
       <motion.img initial={{ opacity: 0, x: 20 }} viewport={{ once: false }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 2.6 }} src={`${baseUrl}/assets/student-jacket.png`} alt="quote" className="absolute bottom-0 z-30" />
       <motion.img initial={{ opacity: 0, x: -20 }} viewport={{ once: false }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 2.8 }} src={`${baseUrl}/assets/student-jilbab.png`} alt="quote" className="absolute bottom-0 z-30" />
