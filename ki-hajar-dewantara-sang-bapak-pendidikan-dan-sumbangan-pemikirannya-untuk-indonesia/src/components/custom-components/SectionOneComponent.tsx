@@ -1,7 +1,5 @@
 "use client"
 import { baseUrl } from "@/constants/meta";
-import { COMPONENT_PARAGRAPH } from "@/data/component-front";
-import { Paragraph } from "@/stories/Paragraph";
 import { motion } from 'framer-motion'
 export function SectionOneComponent() {
     return <section id="section-1" className="bg-[#fffcf3] -mt-1 overflow-clip ">
