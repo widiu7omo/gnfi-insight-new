@@ -28,6 +28,7 @@ export function SectionFiveCustomImage() {
         <img src={`${baseUrl}/assets/4.13.png`} alt="elipse-atas" className="absolute w-full bottom-0 left-0 right-0 z-10" />
         <img src={`${baseUrl}/assets/4.14.png`} alt="elipse-atas" className="absolute w-full bottom-0 left-0 right-0 z-10" />
         <img src={`${baseUrl}/assets/4.15.png`} alt="elipse-atas" className="absolute w-full bottom-0 left-0 right-0 z-10" />
+        <img src={`${baseUrl}/assets/4.16.png`} alt="elipse-atas" className="absolute w-full bottom-0 left-0 right-0 z-10 max-w-4xl mx-auto" />
       </div>
     </section>
   );
