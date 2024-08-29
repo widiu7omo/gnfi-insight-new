@@ -41,11 +41,43 @@ export function SectionFiveCustomImage() {
           </div>
         </div>
         <div className="flex items-center justify-center">
-          <img src={`${baseUrl}/assets/4.10.png`} alt="elipse-atas" className="absolute bottom-0 z-10" />
-          <img src={`${baseUrl}/assets/4.9.png`} alt="elipse-atas" className="absolute bottom-0 z-10" />
-          <img src={`${baseUrl}/assets/4.8.png`} alt="elipse-atas" className="absolute bottom-0 z-10" />
-          <img src={`${baseUrl}/assets/4.7.png`} alt="elipse-atas" className="absolute bottom-0 z-10" />
-          <img src={`${baseUrl}/assets/4.6.png`} alt="elipse-atas" className="top-0 z-10" />
+          <motion.img
+            initial={{ opacity: 0, y: 20 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.2 }}
+            src={`${baseUrl}/assets/4.10.png`}
+            alt="pelajar berpakaian kebaya"
+            className="absolute bottom-0 z-10"
+          />
+          <motion.img
+            initial={{ opacity: 0, x: 20 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 2.4 }}
+            src={`${baseUrl}/assets/4.9.png`}
+            alt="pelajar memakai toga"
+            className="absolute bottom-0 z-10"
+          />
+          <motion.img
+            initial={{ opacity: 0, x: -20 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 2.8 }}
+            src={`${baseUrl}/assets/4.8.png`}
+            alt="pelajar memakai jilbab"
+            className="absolute bottom-0 z-10"
+          />
+          <motion.img
+            initial={{ opacity: 0, x: 20 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 2.6 }}
+            src={`${baseUrl}/assets/4.7.png`}
+            alt="pelajar memakai jaket"
+            className="absolute bottom-0 z-10"
+          />
+          <motion.img initial={{ opacity: 0, y: -20 }} viewport={{ once: false }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 2.1 }} src={`${baseUrl}/assets/4.6.png`} alt="pelajar sma, smp, dan sd" className="top-0 z-10" />
         </div>
       </div>
       <div className="flex items-center justify-center absolute bottom-0 w-full">
