@@ -81,11 +81,51 @@ export function SectionFiveCustomImage() {
         </div>
       </div>
       <div className="flex items-center justify-center absolute bottom-0 w-full">
-        <img src={`${baseUrl}/assets/4.11.png`} alt="elipse-atas" className="absolute w-full bottom-0 left-0 right-0 z-10" />
-        <img src={`${baseUrl}/assets/4.12.png`} alt="elipse-atas" className="absolute w-full bottom-0 left-0 right-0 z-10" />
-        <img src={`${baseUrl}/assets/4.13.png`} alt="elipse-atas" className="absolute w-full bottom-0 left-0 right-0 z-10" />
-        <img src={`${baseUrl}/assets/4.14.png`} alt="elipse-atas" className="absolute w-full bottom-0 left-0 right-0 z-10" />
-        <img src={`${baseUrl}/assets/4.15.png`} alt="elipse-atas" className="absolute w-full bottom-0 left-0 right-0 z-10" />
+        <motion.img
+          initial={{ opacity: 0, x: 20 }}
+          viewport={{ once: false }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.9 }}
+          src={`${baseUrl}/assets/4.11.png`}
+          alt="bendera kanan atas"
+          className="absolute w-full bottom-0 left-0 right-0 z-10"
+        />
+        <motion.img
+          initial={{ opacity: 0, x: 20 }}
+          viewport={{ once: false }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.5 }}
+          src={`${baseUrl}/assets/4.12.png`}
+          alt="bendera-kiri-tengah"
+          className="absolute w-full bottom-0 left-0 right-0 z-10"
+        />
+        <motion.img
+          initial={{ opacity: 0, x: 20 }}
+          viewport={{ once: false }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 2.3 }}
+          src={`${baseUrl}/assets/4.13.png`}
+          alt="bendera-kanan-tengah"
+          className="absolute w-full bottom-0 left-0 right-0 z-10"
+        />
+        <motion.img
+          initial={{ opacity: 0, x: 20 }}
+          viewport={{ once: false }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 2.5 }}
+          src={`${baseUrl}/assets/4.14.png`}
+          alt="bendera-kiri-bawah"
+          className="absolute w-full bottom-0 left-0 right-0 z-10"
+        />
+        <motion.img
+          initial={{ opacity: 0, x: 20 }}
+          viewport={{ once: false }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 2.9 }}
+          src={`${baseUrl}/assets/4.15.png`}
+          alt="bendera-kanan-bawah-pojok"
+          className="absolute w-full bottom-0 left-0 right-0 z-10"
+        />
       </div>
     </section>
   );
