@@ -27,7 +27,7 @@ export function SectionSixCustomImage() {
 
   return <section
     className="w-full min-h-screen relative overflow-hidden bg-cover bg-center"
-    style={{ backgroundImage: `url(${baseUrl}/assets/background-old-paper.png)` }}
+    style={{ backgroundImage: `url(${baseUrl}/assets/background-old-paper.jpg)` }}
   >
     <div className="absolute bottom-0 top-[90%] bg-gradient-to-b to-[#f6ebd7] from-white/0 left-0 right-0" />
     <motion.img
