@@ -31,7 +31,7 @@ export function SectionSixCustomImage() {
   >
     <div className="absolute bottom-0 top-[90%] bg-gradient-to-b to-[#f6ebd7] from-white/0 left-0 right-0" />
     <motion.img
-      src="/assets/cover-ki-hajar-dewantara.png"
+      src={`${baseUrl}/assets/cover-ki-hajar-dewantara.png`}
       alt="Ki Hajar Dewantara"
       className="w-full mb-4"
       initial={{ opacity: 0, y: 30 }}
@@ -47,7 +47,7 @@ export function SectionSixCustomImage() {
       transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
     >
       <motion.img
-        src="/assets/title.png"
+        src={`${baseUrl}/assets/title.png`}
         alt="Title"
         className="w-full sm:w-2/3 md:w-1/2 lg:w-2/3 xl:max-w-4xl"
         initial={{ x: -50, opacity: 0 }}
@@ -56,7 +56,7 @@ export function SectionSixCustomImage() {
         transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
       />
       <motion.img
-        src="/assets/logo-tut-wuri-handayani.png"
+        src={`${baseUrl}/assets/logo-tut-wuri-handayani.png`}
         alt="Tut Wuri Handayani Logo"
         className="absolute w-1/3 sm:w-1/4 md:w-1/3 lg:w-1/2 right-0 -top-16 sm:-top-24 md:-top-32 lg:-top-48"
         initial={{ opacity: 0, scale: 0.95 }}
@@ -80,7 +80,7 @@ export function SectionSixCustomImage() {
             }}
           >
             <motion.img
-              src={`/assets/${item.image}`}
+              src={`${baseUrl}/assets/${item.image}`}
               alt={item.title}
               className="w-full md:w-1/2"
               initial={{ scale: 0.95, opacity: 0 }}
@@ -97,7 +97,7 @@ export function SectionSixCustomImage() {
                 {item.title}
               </h2>
               <motion.img
-                src="/assets/separator.png"
+                src={`${baseUrl}/assets/separator.png`}
                 alt={item.title}
                 className="w-3/4"
                 initial={{ opacity: 0, scaleX: 0.9 }}
