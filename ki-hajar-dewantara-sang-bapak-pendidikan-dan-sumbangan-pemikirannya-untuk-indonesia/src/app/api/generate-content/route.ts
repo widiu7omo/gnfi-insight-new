@@ -11,6 +11,9 @@ function cleanAndDashifyString(str: string) {
   // Replace all characters that are not letters, numbers, or dashes
   result = result.replace(/[^a-zA-Z0-9-]/g, '');
 
+  // Replace double dashes with a single dash
+  result = result.replace(/-+/g, '-');
+
   return result.toLocaleLowerCase();
 }
 export async function POST(request: Request) {
