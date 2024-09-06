@@ -18,17 +18,17 @@ export const metadata: Metadata = {
 	metadataBase: new URL(
 		"https://insight.goodnewsfromindonesia.id/kucing-sahabat-manusia",
 	),
-	title: "Kucing, Sahabat Manusia | Good News From Indonesia",
+	title: "Kucing, Sahabat Manusia | GNFI Insight",
 	description: "Kucing, Sahabat Manusia",
 	alternates: {
 		canonical: "index.html",
 	},
 	openGraph: {
-		title: "Kucing, Sahabat Manusia | Good News From Indonesia",
+		title: "Kucing, Sahabat Manusia | GNFI Insight",
 		images: "/assets/ikn-cover.jpg",
 	},
 	twitter: {
-		title: "Kucing, Sahabat Manusia | Good News From Indonesia",
+		title: "Kucing, Sahabat Manusia | GNFI Insight",
 		images: "/assets/ikn-cover.jpg",
 	},
 };

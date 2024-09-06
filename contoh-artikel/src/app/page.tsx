@@ -11,7 +11,7 @@ import Footer from "@/components/reusable/footer";
 import CustomBackground from "@/components/reusable/custom-background";
 
 export const metadata: Metadata = {
-	title: `${generatedMeta.seo.title} | Good News From Indonesia`,
+	title: `${generatedMeta.seo.title} | GNFI Insight`,
 	description: generatedMeta.seo.desc,
 };
 type HomeType = {
