@@ -20,9 +20,6 @@ export const metadata: Metadata = {
 	),
 	title: "Kucing, Sahabat Manusia | GNFI Insight",
 	description: "Kucing, Sahabat Manusia",
-	alternates: {
-		canonical: "index.html",
-	},
 	openGraph: {
 		title: "Kucing, Sahabat Manusia | GNFI Insight",
 		images: "/assets/ikn-cover.jpg",

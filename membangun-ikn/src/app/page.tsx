@@ -20,9 +20,6 @@ export const metadata: Metadata = {
   title:
     "Membangun IKN, Mewujudkan Wacana Lama Indonesia | GNFI Insight",
   description: "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
-  alternates: {
-    canonical: "index.html",
-  },
   openGraph: {
     title:
       "Membangun IKN, Mewujudkan Wacana Lama Indonesia | GNFI Insight",
