@@ -50,7 +50,7 @@ export default function RootLayout({
       <head>
         <link
           rel="canonical"
-          href={baseUrl}
+          href={`${baseUrl}/`}
           key="canonical"
         />
         <link rel="icon" href={`${baseUrl}/favicon.ico`} type="image/x-icon" />
