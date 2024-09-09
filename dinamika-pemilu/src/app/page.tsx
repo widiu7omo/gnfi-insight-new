@@ -16,7 +16,7 @@ const groupByToMap = <T, Q>(
     return map;
   }, new Map<Q, T[]>());
 export const metadata: Metadata = {
-  title: "Pemilu dan dinamikanya dari masa ke masa | Good News From Indonesia",
+  title: "Pemilu dan dinamikanya dari masa ke masa | GNFI Insight",
   description: "Pemilu dan dinamikanya dari masa ke masa",
 };
 

@@ -16,7 +16,7 @@ const groupByToMap = <T, Q>(
 		return map;
 	}, new Map<Q, T[]>());
 export const metadata: Metadata = {
-	title: "Wara-wiri Mobil China di Indonesia | Good News From Indonesia",
+	title: "Wara-wiri Mobil China di Indonesia | GNFI Insight",
 	description: "Wara-wiri Mobil China di Indonesia",
 };
 

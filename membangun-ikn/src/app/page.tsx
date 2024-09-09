@@ -18,19 +18,19 @@ export const metadata: Metadata = {
     "https://insight.goodnewsfromindonesia.id/membangun-ikn-mewujudkan-wacana-lama-indonesia",
   ),
   title:
-    "Membangun IKN, Mewujudkan Wacana Lama Indonesia | Good News From Indonesia",
+    "Membangun IKN, Mewujudkan Wacana Lama Indonesia | GNFI Insight",
   description: "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
   alternates: {
     canonical: "index.html",
   },
   openGraph: {
     title:
-      "Membangun IKN, Mewujudkan Wacana Lama Indonesia | Good News From Indonesia",
+      "Membangun IKN, Mewujudkan Wacana Lama Indonesia | GNFI Insight",
     images: "/assets/ikn-cover.jpg",
   },
   twitter: {
     title:
-      "Membangun IKN, Mewujudkan Wacana Lama Indonesia | Good News From Indonesia",
+      "Membangun IKN, Mewujudkan Wacana Lama Indonesia | GNFI Insight",
     images: "/assets/ikn-cover.jpg",
   },
 };
