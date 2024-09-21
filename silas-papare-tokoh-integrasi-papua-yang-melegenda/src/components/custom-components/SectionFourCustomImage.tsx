@@ -3,49 +3,108 @@ import { baseUrl } from "@/constants/meta";
 import { motion } from "framer-motion";
 
 export function SectionFourCustomImage() {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const staggerChildren = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
-    <section className="relative">
-      <div className="flex flex-col">
-        <div className="flex flex-col z-10 relative bg-cover bg-[center_top] bg-no-repeat" style={{ backgroundImage: `url('${baseUrl}/assets/3.0.png')` }}>
-          <div className="absolute top-0 bg-gradient-to-b from-[#82ded8] to-[#82ded8]/0 left-0 right-0 bottom-[90%] w-full" />
-          <div className="flex justify-center max-w-4xl mx-auto relative lg:mt-[27rem]">
-            <motion.img
-              initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
-              whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-              src={`${baseUrl}/assets/3.1.png`} alt="" className="top-0" />
-          </div>
-          <div className="flex justify-center max-w-4xl mx-auto relative xl:mt-[5rem]">
-            <motion.img
-              initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
-              whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-              src={`${baseUrl}/assets/3.2.png`} alt="" className="top-0 invert" />
-            <motion.img
-              initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
-              whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-              src={`${baseUrl}/assets/3.3.png`} alt="" className="absolute top-0 " />
-            <motion.img
-              initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
-              whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-              src={`${baseUrl}/assets/3.4.png`} alt="" className="absolute top-0 " />
-            <motion.img
-              initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
-              whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-              src={`${baseUrl}/assets/3.5.png`} alt="" className="absolute top-0 " />
-          </div>
-          <div className="flex justify-center max-w-4xl mx-auto relative lg:top-[8rem] lg:pb-[8rem]">
-            <motion.img
-              initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
-              whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-              src={`${baseUrl}/assets/3.6.png`} alt="" className="top-0" />
-            <div className="absolute bottom-0 lg:pb-[8rem]">
-              <div className="relative bottom-0 top-0 left-0 right-0">
-                <motion.img
-                  initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-                  src={`${baseUrl}/assets/3.7.png`} alt="" className="z-10" />
-              </div>
-            </div>
-          </div>
+    <section
+      className="relative bg-cover flex flex-col min-h-screen"
+      style={{ backgroundImage: "url('/assets/3.5.png')" }}
+    >
+      <img src="/assets/3.0.png" className="absolute top-0 left-0 w-full" />
+      <div className="grid grid-cols-2 mx-auto max-w-4xl pt-[340px] max-sm:-mt-40">
+        <motion.div
+          className="space-y-5 lg:pt-20 xl:pt-56"
+          variants={staggerChildren}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          <motion.h1
+            className="bg-red-500 text-base whitespace-nowrap lg:text-3xl p-1 lg:p-2 font-bold text-white text-center w-fit"
+            variants={fadeIn}
+          >
+            Perjuangan Silas Papare
+          </motion.h1>
+          <motion.h1
+            className="font-black text-[#5A0E0E] text-4xl lg:text-6xl"
+            variants={fadeIn}
+          >
+            Demi Integrasi Irian dengan NKRI
+          </motion.h1>
+          <motion.ul
+            className="px-5 text-lg lg:text-2xl space-y-5 w-full lg:w-3/4"
+            style={{ listStyleImage: "url('/assets/list.png')" }}
+            variants={staggerChildren}
+          >
+            <motion.li variants={fadeIn}>
+              <span>
+                Meski awalnya bekerja untuk Belanda dan Sekutu, Silas berbelok
+                arah saat keduanya menguasai Papua. Ia menyatakan pro terhadap
+                kemerdekaan Indonesia dan tak mau mendukung Netherlands Indies
+                Civil Administration (NICA).
+              </span>
+            </motion.li>
+            <motion.li variants={fadeIn}>
+              Keberpihakan Silas tak lepas dari pertemuannya dengan berbagai
+              tokoh yang sama-sama menginginkan Indonesia merdeka, mulai dari
+              Sugoro hingga Sam Ratulangi.
+            </motion.li>
+          </motion.ul>
+          <motion.img
+            src="/assets/3.2.png"
+            variants={fadeIn}
+            transition={{ duration: 0.5 }}
+          />
+        </motion.div>
+        <div className="bg-[#0C6958] text-white -mt-20 xl:mt-0 ">
+          <motion.img
+            src="/assets/3.4.png"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+          />
+          <motion.ul
+            className="px-8 text-lg lg:text-2xl space-y-5 w-full lg:w-3/4 "
+            style={{ listStyleImage: "url('/assets/list.png')" }}
+            variants={staggerChildren}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            <motion.li variants={fadeIn}>
+              <span>
+                Ngotot mendukung kemerdekaan Indonesia, Silas berkali-kali ingin
+                memberontak kepada Belanda. Namun, rencana pemberontakan itu
+                selalu gagal hingga membuatnya langganan masuk penjara
+              </span>
+            </motion.li>
+            <motion.li variants={fadeIn}>
+              Selain pemberontakan, Silas juga menempuh jalur perjuangan melalui
+              Partai Kemerdekaan Indonesia lrian (PKII). Dalam perjalanannya,
+              organisasi ini terus berkibar bersama gerakan-gerakan lainnya yang
+              sejalur, kendati Belanda menganggapnya berbahaya.
+            </motion.li>
+            <motion.li variants={fadeIn}>
+              Perjuangan Silas demi integrasi Papua dengan Indonesia akhirnya
+              berakhir manis meski prosesnya begitu rumit. Berdasarkan hasil
+              Penentuan Pendapat Rakyat (PEPERA) pada 1969, Papua atau Irian
+              Barat berhasil menjadi bagian dari Indonesia.
+            </motion.li>
+          </motion.ul>
         </div>
       </div>
     </section>
