@@ -24,7 +24,7 @@ export function SectionFourCustomImage() {
       style={{ backgroundImage: "url('/assets/3.5.png')" }}
     >
       <img src="/assets/3.0.png" className="absolute top-0 left-0 w-full" />
-      <div className="grid grid-cols-2 mx-auto max-w-4xl pt-[340px] max-sm:-mt-40">
+      <div className="grid grid-cols-2 mx-auto max-w-4xl pt-[340px] max-sm:-mt-40 2xl:pt-[480px]">
         <motion.div
           className="space-y-5 lg:pt-20 xl:pt-56"
           variants={staggerChildren}
