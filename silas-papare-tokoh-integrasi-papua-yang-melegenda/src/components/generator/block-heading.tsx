@@ -28,6 +28,7 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 		componentProps ?? {
 			className: "",
 			content: "",
+			containerClassName: ""
 		},
 	);
 	// TODO: Persist=> move to atom jotai
@@ -56,6 +57,7 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 			const componentProps = currentBlock.componentProps as HeadingType;
 			componentProps.content = editor?.getHTML() ?? "";
 			componentProps.className = headingState.className;
+			componentProps.containerClassName = headingState.containerClassName;
 			prev[sectionId][index] = { ...currentBlock, componentProps };
 			const currentSections = prev[sectionId];
 			return { ...prev, [sectionId]: currentSections };
@@ -154,6 +156,17 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 					setHeadingState((prev) => ({
 						...prev,
 						className: e.target.value,
+					}))
+				}
+				onBlur={saveConfig}
+			/>
+			<Input
+				label="Style Container"
+				value={headingState.containerClassName}
+				onChange={(e) =>
+					setHeadingState((prev) => ({
+						...prev,
+						containerClassName: e.target.value,
 					}))
 				}
 				onBlur={saveConfig}
