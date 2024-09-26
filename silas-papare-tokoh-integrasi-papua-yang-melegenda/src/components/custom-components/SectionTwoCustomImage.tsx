@@ -81,7 +81,7 @@ export function SectionTwoCustomImage() {
                       <p className="text-lg">Istri:</p>
                       <p className="font-bold text-2xl">Raden Ajeng Sutartinah</p>
                     </div>
-                    <ul className="flex-1 md:mt-14 mt-8 pl-[3rem] sm:pl-[6rem] xl:pl-[8rem] pr-[1.5rem] xl:pr-[3rem] list-disc space-y-1.5 xl:space-y-6">
+                    <ul className="flex-1 md:mt-14 mt-8 pl-[3rem] sm:pl-[6rem] xl:pl-[8rem] pr-[1.5rem] xl:pr-[3rem] list-disc marker:text-red-700 space-y-1.5 xl:space-y-6">
                       <li className="text-base md:text-xl xl:text-2xl">Dikenal sebagai tokoh yang berperan penting dalam proses integrasi Papua ke dalam NKRI</li>
                       <li className="text-base md:text-xl xl:text-2xl">Dinobatkan sebagai Pahlawan Nasional oleh Presiden Suharto pada 14 September 1993.</li>
                     </ul>
