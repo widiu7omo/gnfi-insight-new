@@ -56,11 +56,20 @@ export function SectionThreeCustomImage() {
             whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
             src={`${baseUrl}/assets/3.4.png`} alt="" className="bottom-0 absolute z-10" />
         </div>
-        <div className="flex justify-center flex-col max-w-4xl mx-auto relative mt-[-10rem] z-0">
+        <div className="flex justify-center flex-col max-w-4xl mx-auto relative mt-[-7%] z-0">
           <motion.img
             initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
             src={`${baseUrl}/assets/3.3.png`} alt="" className="top-0" />
+          <div className="absolute top-[35%] left-[40%] right-[10%]">
+            <ul className="list-disc marker:text-red-600 text-base space-y-2">
+              <li>Setelah terjun di dunia kesehatan dan
+                militer, ia berkecimpung di ranah politik hingga menjadi anggota DPR mewakili lrian Jaya dengan SK</li>
+              <li>
+                Presiden RI No. 143 tanggal I Agustus 1956 dan pernah diangkat sebagai anggota Dewan Perancang Nasional Sementara Republik Indonesia serta anggota MPRS
+              </li>
+            </ul>
+          </div>
           <motion.img
             initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
