@@ -21,9 +21,9 @@ export function SectionFourCustomImage() {
   return (
     <section
       className="relative bg-cover flex flex-col min-h-screen"
-      style={{ backgroundImage: "url('/assets/3.5.png')" }}
+      style={{ backgroundImage: "url('/assets/4.5.png')" }}
     >
-      <img src="/assets/3.0.png" className="absolute top-0 left-0 w-full" />
+      <img src="/assets/4.0.png" className="absolute top-0 left-0 w-full" alt="Background" />
       <div className="grid grid-cols-2 mx-auto max-w-4xl pt-[340px] max-sm:-mt-40 2xl:pt-[480px]">
         <motion.div
           className="space-y-5 lg:pt-20 xl:pt-56"
@@ -64,14 +64,14 @@ export function SectionFourCustomImage() {
             </motion.li>
           </motion.ul>
           <motion.img
-            src="/assets/3.2.png"
+            src="/assets/4.2.png"
             variants={fadeIn}
             transition={{ duration: 0.5 }}
           />
         </motion.div>
         <div className="bg-[#0C6958] text-white -mt-20 xl:mt-0 ">
           <motion.img
-            src="/assets/3.4.png"
+            src="/assets/4.4.png"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}
