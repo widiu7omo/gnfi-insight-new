@@ -19,24 +19,26 @@ export function SectionThreeCustomImage() {
     console.log(blur.get())
   })
   return (
-    <div className="flex flex-col bg-[hsl(30,40%,90%)] overflow-clip" ref={ref}>
-      <div className="flex flex-col z-10 relative bg-cover bg-[center_top] bg-no-repeat" style={{ backgroundImage: `url('${baseUrl}/assets/3.1.png')` }}>
-        <img src={`${baseUrl}/assets/3.0.png`} alt="" className="top-0 absolute left-0 right-0 w-full" />
+    <div className="flex flex-col bg-[#fffcf3] overflow-clip " ref={ref}>
+      <div className="flex flex-col z-10 relative bg-cover bg-[center_top] bg-no-repeat mb-[20rem] sm:mb-0" style={{ backgroundImage: `url('${baseUrl}/assets/3.1.png')` }}>
+        <img src={`${baseUrl}/assets/3.0.png`} alt="" className="top-0 absolute left-0 right-0 w-full " />
         <div className="flex justify-center flex-col max-w-4xl mx-auto relative lg:mt-[27rem]">
           <motion.img
             initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-            src={`${baseUrl}/assets/3.2.png`} alt="" className="top-0 relative z-10" />
-          <div className="absolute top-[13%] max-w-[75%] mx-auto space-y-4 z-10">
-            <h4 className="pl-[30%] text-2xl sm:text-6xl font-extrabold">
+            src={`${baseUrl}/assets/3.2.png`} alt="" className="top-0 hidden sm:block relative z-10" />
+          <img
+            src={`${baseUrl}/assets/3.2-sm.png`} alt="" className="top-0 sm:hidden block relative z-10 opacity-0" />
+          <div className="absolute top-[5%] sm:top-[13%] max-w-full sm:max-w-[75%] mx-auto space-y-4 z-10">
+            <h4 className="pt-[43%] sm:pt-0 pl-4 pr-4 sm:pr-0 sm:pl-[30%] text-3xl sm:text-5xl xl:text-6xl font-extrabold">
               Kedekatan
               Silas Papare
               dengan <span className="text-red-600">Papua</span>
             </h4>
-            <p className="text-lg sm:text-xl pl-[30%]">
+            <p className="text-base sm:text-xl pl-4 pr-4 sm:pr-0 sm:pl-[30%]">
               Sebagai putra daerah Papua, Silas sangat dekat dengan tanah kelahirannya. Di sana, ia mengabdikan dirinya mulai sebagai tenaga medis, anggota militer, hingga politisi
             </p>
-            <ul className="list-disc marker:text-red-600 text-base pl-[30%] space-y-2 max-w-[70%]">
+            <ul className="list-disc marker:text-red-600 text-base pl-10 pr-4 sm:pr-0 sm:pl-[30%] space-y-2 max-w-full sm:max-w-[70%]">
               <li>
                 <p>Selain bertugas sebagai juru rawat di Serui, Silas juga pernah  bekerja rumah sakit saat sebuah perusahaan minyak asal Belanda dibuka di Babo.</p>
               </li>
@@ -54,17 +56,19 @@ export function SectionThreeCustomImage() {
           <motion.img
             initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-            src={`${baseUrl}/assets/3.4.png`} alt="" className="bottom-0 absolute z-10" />
+            src={`${baseUrl}/assets/3.4.png`} alt="" className="bottom-0 absolute z-10 hidden sm:block" />
         </div>
         <div className="flex justify-center flex-col max-w-4xl mx-auto relative mt-[-7%] z-0">
           <motion.img
             initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-            src={`${baseUrl}/assets/3.3.png`} alt="" className="top-0" />
-          <div className="absolute top-[35%] left-[40%] right-[10%]">
+            src={`${baseUrl}/assets/3.3.png`} alt="" className="top-0 hidden sm:block" />
+          <div className="absolute top-[120%] sm:top-[30%] left-10 sm:left-[40%] right-[10%]">
             <ul className="list-disc marker:text-red-600 text-base space-y-2">
-              <li>Setelah terjun di dunia kesehatan dan
-                militer, ia berkecimpung di ranah politik hingga menjadi anggota DPR mewakili lrian Jaya dengan SK</li>
+              <li>
+                Setelah terjun di dunia kesehatan dan
+                militer, ia berkecimpung di ranah politik hingga menjadi anggota DPR mewakili lrian Jaya dengan SK
+              </li>
               <li>
                 Presiden RI No. 143 tanggal I Agustus 1956 dan pernah diangkat sebagai anggota Dewan Perancang Nasional Sementara Republik Indonesia serta anggota MPRS
               </li>
@@ -73,7 +77,9 @@ export function SectionThreeCustomImage() {
           <motion.img
             initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-            src={`${baseUrl}/assets/3.5.png`} alt="" className="absolute top-0" />
+            src={`${baseUrl}/assets/3.5.png`} alt="" className="absolute top-0 hidden sm:block" />
+          <img
+            src={`${baseUrl}/assets/3.5-sm.png`} alt="" className="max-w-[60%] top-0 block sm:hidden opacity-0 sm:opacity-100" />
         </div>
       </div>
     </div>
