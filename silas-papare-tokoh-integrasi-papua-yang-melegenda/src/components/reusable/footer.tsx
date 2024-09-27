@@ -11,6 +11,21 @@ export default function Footer() {
             <div className="">
                 <img src={`${baseUrl}/assets/gnfi.svg`} alt="Logo GNFI" className="h-[80px]" />
             </div>
+            <footer
+                className="relative flex justify-center items-end"
+                style={{ backgroundColor: "#F2F2F2" }}
+            >
+                <div className="lg:w-1/2 p-6 lg:px-0 lg:py-12 mx-auto relative z-10">
+                    <p className="text-center font-bold">Editor</p>
+                    <p className="text-center mb-6">Aul</p>
+                    <p className="text-center font-bold">Penulis </p>
+                    <p className="text-center mb-6">Dian Afrillia, Lydia Fransisca</p>
+                    <p className="text-center font-bold">Desan & Visual</p>
+                    <p className="text-center mb-6">Juang M Nugraha</p>
+                    <p className="text-center font-bold">Web Developer</p>
+                    <p className="text-center mb-6">Anang Yoga Harwinto, Danar Widi Utomo & Naufal</p>
+                </div>
+            </footer>
         </div>
     );
 }

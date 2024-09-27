@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Sang Bapak Pendidikan dan Sumbangan Pemikirannya untuk Indonesia
+              Silas Papare, Pejuang Integrasi Papua yang Melegenda
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Profil Ki Hajar Dewantara dan Pemikirannya tentang Pendidikan
+              Profil Silas Papare dan Kisah Masa Kecilnya
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Taman Siswa, Sekolah Sekaligus Wadah Pemikiran Ki Hajar Dewantara
+              Papua, Medan Perjuangan Silas Papare
             </a>
           </li>
           <li
@@ -73,20 +73,14 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              Pandangan Ki Hajar Dewantara tentang Pendidikan Anak Usia Dini
+              Silas Papare Menyambut Kemerdekaan Republik Indonesia
             </a>
           </li>
           <li
             data-active={isSelected('#section-5')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-5">Pentingnya Pendidikan bagi Perempuan Menurut Ki Hajar Dewantara</a>
-          </li>
-          <li
-            data-active={isSelected('#section-6')}
-            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
-          >
-            <a href="#section-6">Filosofi Pendidikan Indonesia : 3 Semboyan Ki Hajar Dewantara dan Maknanya</a>
+            <a href="#section-5">Penghormatan untuk Silas Papare</a>
           </li>
         </ul>
       </motion.div>
