@@ -4,6 +4,27 @@ import { baseUrl } from "@/constants/meta";
 import { motion } from "framer-motion";
 
 export function SectionTwoCustomImage() {
+  const variants = {
+    pOpen: {
+      opacity: 1, y: 0, transition: {
+        staggerChildren: 0.2,
+      },
+    },
+    pClose: { opacity: 0, y: 5 },
+  }
+  const childVariants = {
+    pOpen: {
+      opacity: 1, x: 0, transition: { duration: .3 }
+    },
+    pClose: { opacity: 0, x: -5, transition: { duration: .3 } },
+  }
+  const childLiVariants = {
+    pOpen: {
+      opacity: 1, x: 0, transition: { duration: .3 }
+    },
+    pClose: { opacity: 0, x: 20, transition: { duration: .3 } },
+  }
+
   return (
     <section id="section-1" className="bg-[#fffcf3] -mt-1 overflow-clip ">
       <div className="relative flex items-start justify-center overflow-clip">
@@ -21,14 +42,14 @@ export function SectionTwoCustomImage() {
                     initial={{ opacity: 0, y: 5, x: 5 }}
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.2, duration: 0.3 }}
+                    transition={{ delay: 0.4, duration: 0.3 }}
                     src={`${baseUrl}/assets/1.3.png`}
                     className="relative"
                     alt="Silas Papare"
                   />
                   <motion.img
-                    initial={{ opacity: 0, y: 5, x: 5 }}
-                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    initial={{ opacity: 0, y: 5 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2, duration: 0.3 }}
                     src={`${baseUrl}/assets/1.3.1.png`}
@@ -36,10 +57,10 @@ export function SectionTwoCustomImage() {
                     alt="Profil"
                   />
                   <motion.img
-                    initial={{ opacity: 0, y: 5, x: 5 }}
-                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    initial={{ opacity: 0, y: 5 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.2, duration: 0.3 }}
+                    transition={{ delay: 0.3, duration: 0.3 }}
                     src={`${baseUrl}/assets/1.3.2.png`}
                     className="absolute top-0"
                     alt="Title"
@@ -63,28 +84,40 @@ export function SectionTwoCustomImage() {
                         opacity: 1,
                       }}
                       viewport={{ once: true }}
-                      transition={{ delay: 0.4, duration: 0.4 }}
+                      transition={{ delay: 0, duration: 0.4 }}
                       src={`${baseUrl}/assets/1.4.png`}
                       className="top-0 "
                       alt="Paper Backgroud"
                     />
                   </div>
                   <div className="flex flex-col sm:flex-row absolute top-0 sm:top-[2rem]">
-                    <div className="flex-1 pl-[2rem] pt-[2rem] sm:pt-0">
-                      <p className="text-lg">Lahir:</p>
-                      <p className="font-bold text-2xl">Serui, 18 Desember 1918</p>
-                      <p className="text-lg">Wafat:</p>
-                      <p className="font-bold text-2xl">7 Maret 1978</p>
-                      <p className="text-lg">Orang Tua:</p>
-                      <p className="font-bold text-2xl">Musa Papare &</p>
-                      <p className="font-bold text-2xl">Dorkas Mangge</p>
-                      <p className="text-lg">Istri:</p>
-                      <p className="font-bold text-2xl">Raden Ajeng Sutartinah</p>
-                    </div>
-                    <ul className="flex-1 md:mt-14 mt-8 pl-[3rem] sm:pl-[6rem] xl:pl-[8rem] pr-[1.5rem] xl:pr-[3rem] list-disc marker:text-red-700 space-y-1.5 xl:space-y-6">
-                      <li className="text-base md:text-xl xl:text-2xl">Dikenal sebagai tokoh yang berperan penting dalam proses integrasi Papua ke dalam NKRI</li>
-                      <li className="text-base md:text-xl xl:text-2xl">Dinobatkan sebagai Pahlawan Nasional oleh Presiden Suharto pada 14 September 1993.</li>
-                    </ul>
+                    <motion.div
+                      initial="pClose"
+                      animate="pOpen"
+                      variants={variants}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.4, duration: 0.4 }}
+                      className="flex-1 pl-[2rem] pt-[2rem] sm:pt-0">
+                      <motion.p variants={childVariants} className="text-lg">Lahir:</motion.p>
+                      <motion.p variants={childVariants} className="font-bold text-2xl">Serui, 18 Desember 1918</motion.p>
+                      <motion.p variants={childVariants} className="text-lg">Wafat:</motion.p>
+                      <motion.p variants={childVariants} className="font-bold text-2xl">7 Maret 1978</motion.p>
+                      <motion.p variants={childVariants} className="text-lg">Orang Tua:</motion.p>
+                      <motion.p variants={childVariants} className="font-bold text-2xl">Musa Papare &</motion.p>
+                      <motion.p variants={childVariants} className="font-bold text-2xl">Dorkas Mangge</motion.p>
+                      <motion.p variants={childVariants} className="text-lg">Istri:</motion.p>
+                      <motion.p variants={childVariants} className="font-bold text-2xl">Raden Ajeng Sutartinah</motion.p>
+                    </motion.div>
+                    <motion.ul
+                      initial="pClose"
+                      animate="pOpen"
+                      variants={variants}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.3, duration: 0.5 }}
+                      className="flex-1 md:mt-14 mt-8 pl-[3rem] sm:pl-[6rem] xl:pl-[8rem] pr-[1.5rem] xl:pr-[3rem] list-disc marker:text-red-700 space-y-1.5 xl:space-y-6">
+                      <motion.li variants={childLiVariants} className="text-base md:text-xl xl:text-2xl">Dikenal sebagai tokoh yang berperan penting dalam proses integrasi Papua ke dalam NKRI</motion.li>
+                      <motion.li variants={childLiVariants} className="text-base md:text-xl xl:text-2xl">Dinobatkan sebagai Pahlawan Nasional oleh Presiden Suharto pada 14 September 1993.</motion.li>
+                    </motion.ul>
                   </div>
                 </div>
               </div>

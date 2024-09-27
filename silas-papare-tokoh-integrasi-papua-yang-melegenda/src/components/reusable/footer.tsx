@@ -13,17 +13,16 @@ export default function Footer() {
             </div>
             <footer
                 className="relative flex justify-center items-end"
-                style={{ backgroundColor: "#F2F2F2" }}
             >
                 <div className="lg:w-1/2 p-6 lg:px-0 lg:py-12 mx-auto relative z-10">
                     <p className="text-center font-bold">Editor</p>
-                    <p className="text-center mb-6">Aul</p>
+                    <p className="text-center mb-6">Aulli Atmam</p>
                     <p className="text-center font-bold">Penulis </p>
-                    <p className="text-center mb-6">Dian Afrillia, Lydia Fransisca</p>
-                    <p className="text-center font-bold">Desan & Visual</p>
+                    <p className="text-center mb-6">Aslamatur Rizqiyah, Firdarainy Nuril Izzah, Firdarainy Nuril Izzah & Rizky Kusumo</p>
+                    <p className="text-center font-bold">Desain & Visual</p>
                     <p className="text-center mb-6">Juang M Nugraha</p>
                     <p className="text-center font-bold">Web Developer</p>
-                    <p className="text-center mb-6">Anang Yoga Harwinto, Danar Widi Utomo & Naufal</p>
+                    <p className="text-center mb-6">Anang Yoga Harwinto, Danar Widi Utomo & Muhammad Naufal Rafianto</p>
                 </div>
             </footer>
         </div>
