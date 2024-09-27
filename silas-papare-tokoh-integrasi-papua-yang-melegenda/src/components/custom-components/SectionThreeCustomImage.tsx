@@ -20,7 +20,7 @@ export function SectionThreeCustomImage() {
   })
   return (
     <div className="flex flex-col bg-[#fffcf3] overflow-clip " ref={ref}>
-      <div className="flex flex-col z-10 relative bg-cover bg-[center_top] bg-no-repeat mb-[20rem] sm:mb-0" style={{ backgroundImage: `url('${baseUrl}/assets/3.1.png')` }}>
+      <div className="flex flex-col z-10 relative bg-cover bg-[center_top] bg-no-repeat mb-[20rem] sm:mb-0" style={{ backgroundImage: `url('${baseUrl}/assets/3.1.jpeg')` }}>
         <img src={`${baseUrl}/assets/3.0.png`} alt="" className="top-0 absolute left-0 right-0 w-full " />
         <div className="flex justify-center flex-col max-w-4xl mx-auto relative lg:mt-[27rem]">
           <motion.img
