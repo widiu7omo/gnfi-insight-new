@@ -24,28 +24,28 @@ export function SectionFourCustomImage() {
       style={{ backgroundImage: `url('${baseUrl}/assets/4.5.png')` }}
     >
       <img src={`${baseUrl}/assets/4.0.png`} className="absolute top-0 left-0 w-full" alt="Background" />
-      <div className="grid grid-cols-2 mx-auto max-w-4xl pt-[340px] max-sm:-mt-40 2xl:pt-[480px]">
+      <div className="flex flex-col sm:flex-row mx-auto max-w-4xl pt-[340px] max-sm:-mt-40 2xl:pt-[480px]">
         <motion.div
-          className="space-y-5 lg:pt-20 xl:pt-56"
+          className="space-y-5 lg:pt-20 xl:pt-56 flex-1"
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
           <motion.h1
-            className="bg-red-500 text-base whitespace-nowrap lg:text-3xl p-1 lg:p-2 font-bold text-white text-center w-fit"
+            className="bg-red-500 pl-4 text-base whitespace-nowrap sm:text-2xl lg:text-3xl p-1 lg:p-2 font-bold text-white text-center w-fit z-20 relative"
             variants={fadeIn}
           >
             Perjuangan Silas Papare
           </motion.h1>
           <motion.h1
-            className="font-black text-[#5A0E0E] text-4xl lg:text-6xl"
+            className="font-black pl-4 text-[#5A0E0E] text-4xl lg:text-6xl"
             variants={fadeIn}
           >
             Demi Integrasi Irian dengan NKRI
           </motion.h1>
           <motion.ul
-            className="px-5 text-lg lg:text-2xl space-y-5 w-full lg:w-3/4"
+            className="px-5 text-lg lg:text-2xl space-y-5 w-full lg:w-3/4 pl-4"
             style={{ listStyleImage: `url('${baseUrl}/assets/list.png')` }}
             variants={staggerChildren}
           >
@@ -69,8 +69,9 @@ export function SectionFourCustomImage() {
             transition={{ duration: 0.5 }}
           />
         </motion.div>
-        <div className="bg-[#0C6958] text-white -mt-20 xl:mt-0 ">
+        <div className="bg-[#0C6958] text-white -mt-20 xl:mt-0 flex-1 overflow-clip sm:overflow-visible">
           <motion.img
+            className="-mt-8 sm:-mt-[8rem]"
             src={`${baseUrl}/assets/4.4.png`}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -78,7 +79,7 @@ export function SectionFourCustomImage() {
             transition={{ duration: 0.5 }}
           />
           <motion.ul
-            className="px-8 text-lg lg:text-2xl space-y-5 w-full lg:w-3/4 "
+            className="px-8 text-lg lg:text-2xl space-y-5 w-full lg:w-3/4 pl-4 sm:pl-4"
             style={{ listStyleImage: `url('${baseUrl}/assets/list.png')` }}
             variants={staggerChildren}
             initial="hidden"
