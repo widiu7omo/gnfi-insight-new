@@ -55,6 +55,28 @@ export function CustomImageJadiWarisanDunia() {
           </div>
         </div>
       </div>
+      <div className="relative flex flex-col items-start bg-cover bg-top bg-no-repeat" style={{ backgroundImage: `url(${baseUrl}/assets/7.4.png)` }}>
+        <img src={`${baseUrl}/assets/7.5.png`} alt="yellow background" className="w-full absolute bottom-0" />
+        <motion.img
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6, duration: 1 }}
+          src={`${baseUrl}/assets/7.6.png`}
+          alt="rhoma irama"
+          className="w-full absolute bottom-0"
+        />
+        <motion.img
+          initial={{ opacity: 0, x: -15 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          src={`${baseUrl}/assets/7.7.png`}
+          alt="sandiaga uno"
+          className="w-full relative bottom-0"
+        />
+        <motion.img initial={{ opacity: 0, y: 5 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} src={`${baseUrl}/assets/7.8.png`} alt="footer" className="w-full absolute bottom-0" />
+      </div>
     </section>
   );
 }
