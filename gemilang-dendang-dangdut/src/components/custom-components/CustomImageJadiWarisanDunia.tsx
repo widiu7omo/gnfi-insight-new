@@ -55,8 +55,11 @@ export function CustomImageJadiWarisanDunia() {
           </div>
         </div>
       </div>
-      <div className="relative flex flex-col items-start bg-cover bg-top bg-no-repeat" style={{ backgroundImage: `url(${baseUrl}/assets/7.4.png)` }}>
+      <div className="relative flex flex-col bg-cover bg-top bg-no-repeat" style={{ backgroundImage: `url(${baseUrl}/assets/7.4.png)` }}>
         <img src={`${baseUrl}/assets/7.5.png`} alt="yellow background" className="w-full absolute bottom-0" />
+        {/* <div className="w-[1080px] h-[800px] absolute m-auto">
+          <p className="text-white">Dangdut memang sekarang bukan hanya milik Indonesia, tetapi juga sudah menjadi warisan dunia.</p>
+        </div> */}
         <motion.img
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -77,6 +80,9 @@ export function CustomImageJadiWarisanDunia() {
         />
         <motion.img initial={{ opacity: 0, y: 5 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} src={`${baseUrl}/assets/7.8.png`} alt="footer" className="w-full absolute bottom-0" />
       </div>
+      {/* 
+        <p className="text-white">Dangdut memang sekarang bukan hanya milik Indonesia, tetapi juga sudah menjadi warisan dunia.</p>
+        <p className="text-white">Hal ini terlihat dari upaya pemerintah mengusulkan dangdut sebagai warisan budaya tak benda Indonesia kepada UNESCO pada 2022 lalu.</p> */}
     </section>
   );
 }
