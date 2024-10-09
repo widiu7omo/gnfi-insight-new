@@ -3,7 +3,7 @@
 import { baseUrl } from "@/constants/meta";
 import { motion } from "framer-motion";
 
-export function SectionTwoCustomImage() {
+export function CustomImageAsalUsul() {
   const variants = {
     pOpen: {
       opacity: 1, y: 0, transition: {
@@ -30,10 +30,8 @@ export function SectionTwoCustomImage() {
       <div className="relative flex items-start justify-center overflow-clip">
         <div
           className="w-full bg-no-repeat bg-[cover,contain] xl:bg-[cover,auto] bg-[center_top] relative bg-blend-multiply"
-          style={{ backgroundImage: `url('${baseUrl}/assets/1.0.png'),url('${baseUrl}/assets/1.2.png')` }}
+          style={{ backgroundImage: `url('${baseUrl}/assets/1.0.png')` }}
         >
-          <div className="absolute top-[50%] left-0 right-0 w-full bg-[#d7d5d2] bottom-0" />
-          <img src={`${baseUrl}/assets/1.1.png`} alt="Bg 1" className="absolute top-0 lg:top-[-200px] xl:top-[-400px] 2xl:top-[-580px] left-0 right-0 w-full" />
           <div className="max-w-4xl mx-auto relative z-10 top-0 mb-[20rem]  sm:mb-0">
             <div className="space-y-0">
               <div className="relative flex flex-col items-center justify-center z-0">
