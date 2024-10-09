@@ -12,7 +12,7 @@ export function CustomImageJadiWarisanDunia() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
         </div>
         <div className="bg-black w-full h-24 sm:h-80"></div>
-        <div className="absolute m-auto top-0 bottom-0 left-0 right-0 flex items-center justify-center gap-5 sm:gap-20 mg:gap-48">
+        <div className="absolute m-auto top-0 bottom-0 left-0 right-0 flex items-center justify-center gap-5 sm:gap-20 md:gap-60">
           <motion.div
             initial={{ opacity: 0, y: 0, x: -5 }}
             whileInView={{ opacity: 1, y: 0, x: 0 }}
