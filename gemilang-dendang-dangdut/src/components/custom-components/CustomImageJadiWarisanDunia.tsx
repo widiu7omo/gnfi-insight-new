@@ -76,14 +76,14 @@ export function CustomImageJadiWarisanDunia() {
           className="w-full relative bottom-0"
         />
         <motion.img initial={{ opacity: 0, y: 5 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} src={`${baseUrl}/assets/7.8.png`} alt="footer" className="w-full absolute bottom-0" />
-        <div className="absolute top-0 bottom-0 w-1/3 flex items-center justify-center">
-          <div className="max-w-6xl flex flex-col gap-48">
+        <div className="absolute top-0 bottom-0 lg:w-1/3 flex items-center justify-center">
+          <div className="max-w-6xl flex flex-col gap-4 sm:gap-24 lg:gap-48">
             <motion.p
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6 }}
-              className="text-white text-sm sm:text-xl font-semibold leading-4 md:leading-5 lg:leading-9 tracking-widest pl-20"
+              className="text-white text-xs sm:text-xl font-semibold leading-4 md:leading-5 md:tracking-wider lg:leading-9 lg:tracking-widest pl-8 md:pl-12 lg:pl-20"
             >
               Dangdut memang <br /> sekarang bukan <br /> hanya milik <br /> Indonesia, tetapi <br /> juga sudah menjadi <br /> warisan dunia.
             </motion.p>
@@ -92,7 +92,7 @@ export function CustomImageJadiWarisanDunia() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.9 }}
-              className="text-white text-sm sm:text-xl font-semibold leading-4 md:leading-5 lg:leading-9 tracking-widest pl-20"
+              className="text-xs sm:text-xl font-medium lg:font-semibold leading-3 lg:tracking-widest pl-8 md:pl-12 lg:pl-20 pt-1"
             >
               Hal ini terlihat dari upaya <br /> pemerintah mengusulkan <br /> dangdut sebagai warisan <br /> budaya tak benda Indonesia <br /> kepada UNESCO <br /> pada 2022 lalu.
             </motion.p>
