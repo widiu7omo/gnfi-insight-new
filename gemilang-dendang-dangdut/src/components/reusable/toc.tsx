@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Silas Papare, Pejuang Integrasi Papua yang Melegenda
+              Gemilang Dendang Dangdut
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Profil Silas Papare dan Kisah Masa Kecilnya
+              Sejarah dan Asal Mula Musik Dangdut
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Papua, Medan Perjuangan Silas Papare
+              Pelopor Musik Dangdut Indonesia
             </a>
           </li>
           <li
@@ -73,14 +73,62 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              Silas Papare Menyambut Kemerdekaan Republik Indonesia
+              Tahun Emas Dangdut
             </a>
           </li>
           <li
             data-active={isSelected('#section-5')}
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
-            <a href="#section-5">Penghormatan untuk Silas Papare</a>
+            <a href="#section-5">Gembira Ria Dangdut di Masyarakat</a>
+          </li>
+          <li
+            data-active={isSelected('#section-6')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-6">Meriah Dangdut dalam Kampanye Politik</a>
+          </li>
+          <li
+            data-active={isSelected('#section-7')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-7">Dangdut Goyang Jepang</a>
+          </li>
+          <li
+            data-active={isSelected('#section-8')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-8">Kontes Dangdut</a>
+          </li>
+          <li
+            data-active={isSelected('#section-9')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-9">Periodisasi dan Maestro Dangdut Abad ke-20</a>
+          </li>
+          <li
+            data-active={isSelected('#section-10')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-10">Pandangan Masyarakat terhadap Lirik Dangdut</a>
+          </li>
+          <li
+            data-active={isSelected('#section-11')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-11">Dangdut, Kini dan Nanti</a>
+          </li>
+          <li
+            data-active={isSelected('#section-12')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-12">Genre Lain</a>
+          </li>
+          <li
+            data-active={isSelected('#section-13')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-13">Jadi Warisan Dunia</a>
           </li>
         </ul>
       </motion.div>
