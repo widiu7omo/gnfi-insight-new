@@ -103,7 +103,7 @@ export function CustomImageAsalUsul() {
                     <div className="flex-1">
                       <p className="text-5xl font-semibold text-white px-8 tracking-normal leading-[3.7rem]">Konon, istilah dangdut
                         dipercaya muncul
-                        pertama kali pada tahun <span className="text-blue-600">1970-an</span></p>
+                        pertama kali pada tahun <span className="text-[#ed8906]">1970-an</span></p>
                     </div>
                     <div className="flex-1 space-y-4 px-4 text-white text-2xl">
                       <p>Istilah tersebut berkembang dari ejekan yang dilakukan oleh anak-anak band rock
