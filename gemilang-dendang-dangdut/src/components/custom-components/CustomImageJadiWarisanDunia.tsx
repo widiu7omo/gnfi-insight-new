@@ -49,7 +49,13 @@ export function CustomImageJadiWarisanDunia() {
         <div className="absolute bottom-0 w-full">
           <div className="relative flex items-center justify-end sm:justify-center">
             <motion.img initial={{ opacity: 0, x: 5 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} src={`${baseUrl}/assets/7.3.png`} alt="background hitam" className="relative w-full" />
-            <motion.p initial={{ opacity: 0, x: 5 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.6 }} className="text-white absolute text-sm max-w-xl lg:text-lg font-semibold lg:tracking-widest z-10">
+            <motion.p
+              initial={{ opacity: 0, x: 5 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="text-white absolute text-xs lg:max-w-xl w-4/6 lg:text-lg lg:font-semibold lg:tracking-widest z-10 leading-3 tracking-tight"
+            >
               Hal ini dilihat dari bisnis Cafe Dangdut yang dibuka oleh penyanyi dangdut Fitri Carlina. Cafe yang menyajikan kopi asal Indonesia ini dibuka olehnya di New York Amerika Serikat.
             </motion.p>
           </div>
