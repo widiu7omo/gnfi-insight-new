@@ -57,9 +57,6 @@ export function CustomImageJadiWarisanDunia() {
       </div>
       <div className="relative flex flex-col bg-cover bg-top bg-no-repeat" style={{ backgroundImage: `url(${baseUrl}/assets/7.4.png)` }}>
         <img src={`${baseUrl}/assets/7.5.png`} alt="yellow background" className="w-full absolute bottom-0" />
-        {/* <div className="w-[1080px] h-[800px] absolute m-auto">
-          <p className="text-white">Dangdut memang sekarang bukan hanya milik Indonesia, tetapi juga sudah menjadi warisan dunia.</p>
-        </div> */}
         <motion.img
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -79,10 +76,29 @@ export function CustomImageJadiWarisanDunia() {
           className="w-full relative bottom-0"
         />
         <motion.img initial={{ opacity: 0, y: 5 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} src={`${baseUrl}/assets/7.8.png`} alt="footer" className="w-full absolute bottom-0" />
+        <div className="absolute top-0 bottom-0 w-1/3 flex items-center justify-center">
+          <div className="max-w-6xl flex flex-col gap-48">
+            <motion.p
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="text-white text-sm sm:text-xl font-semibold leading-4 md:leading-5 lg:leading-9 tracking-widest pl-20"
+            >
+              Dangdut memang <br /> sekarang bukan <br /> hanya milik <br /> Indonesia, tetapi <br /> juga sudah menjadi <br /> warisan dunia.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.9 }}
+              className="text-white text-sm sm:text-xl font-semibold leading-4 md:leading-5 lg:leading-9 tracking-widest pl-20"
+            >
+              Hal ini terlihat dari upaya <br /> pemerintah mengusulkan <br /> dangdut sebagai warisan <br /> budaya tak benda Indonesia <br /> kepada UNESCO <br /> pada 2022 lalu.
+            </motion.p>
+          </div>
+        </div>
       </div>
-      {/* 
-        <p className="text-white">Dangdut memang sekarang bukan hanya milik Indonesia, tetapi juga sudah menjadi warisan dunia.</p>
-        <p className="text-white">Hal ini terlihat dari upaya pemerintah mengusulkan dangdut sebagai warisan budaya tak benda Indonesia kepada UNESCO pada 2022 lalu.</p> */}
     </section>
   );
 }
