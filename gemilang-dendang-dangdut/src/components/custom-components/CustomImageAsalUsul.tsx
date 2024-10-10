@@ -32,16 +32,18 @@ export function CustomImageAsalUsul() {
           className="w-full bg-no-repeat bg-[cover,contain] xl:bg-[cover,auto] bg-[center_top] relative bg-blend-multiply"
           style={{ backgroundImage: `url('${baseUrl}/assets/1.0.png')` }}
         >
-          <div className="max-w-4xl mx-auto relative z-10 top-0 mb-[20rem]  sm:mb-0">
+          <div className="absolute top-0 h-[10%] bg-gradient-to-b from-[#cec5be]  left-0 right-0" />
+          <img src={`${baseUrl}/assets/1.1.png`} alt="Bg 1" className="absolute top-0 lg:top-[-200px] xl:top-[-400px] 2xl:top-[-580px] left-0 right-0 w-full" />
+          <div className="max-w-4xl mx-auto relative z-10 top-0 mb-[20rem] sm:mb-0">
             <div className="space-y-0">
               <div className="relative flex flex-col items-center justify-center z-0">
-                <div className="2xl:mt-[650px] xl:mt-[600px] lg:mt-[500px] md:mt-[600px] sm:mt-[350px] mt-[280px] relative z-10">
+                <div className="mt-[10%] relative z-10">
                   <motion.img
                     initial={{ opacity: 0, y: 5, x: 5 }}
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.3 }}
-                    src={`${baseUrl}/assets/1.3.png`}
+                    src={`${baseUrl}/assets/1.2.png`}
                     className="relative"
                     alt="Silas Papare"
                   />
@@ -49,22 +51,13 @@ export function CustomImageAsalUsul() {
                     initial={{ opacity: 0, y: 5 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.2, duration: 0.3 }}
-                    src={`${baseUrl}/assets/1.3.1.png`}
-                    className="absolute top-0"
-                    alt="Profil"
-                  />
-                  <motion.img
-                    initial={{ opacity: 0, y: 5 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
                     transition={{ delay: 0.3, duration: 0.3 }}
-                    src={`${baseUrl}/assets/1.3.2.png`}
-                    className="absolute top-0"
+                    src={`${baseUrl}/assets/1.2.1.png`}
+                    className="absolute top-[-9%]"
                     alt="Title"
                   />
                 </div>
-                <div className="mt-[-80px] relative z-0">
+                <div className=" relative z-0">
                   <div className="relative opacity-0 sm:opacity-100">
                     <motion.img
                       initial={{
@@ -83,54 +76,59 @@ export function CustomImageAsalUsul() {
                       }}
                       viewport={{ once: true }}
                       transition={{ delay: 0, duration: 0.4 }}
-                      src={`${baseUrl}/assets/1.4.png`}
-                      className="top-0 "
-                      alt="Paper Backgroud"
+                      src={`${baseUrl}/assets/1.3.png`}
+                      className="top-0 z-10"
+                      alt="Rhoma Irama"
                     />
                   </div>
-                  <div className="flex flex-col sm:flex-row absolute top-0 sm:top-[2rem]">
+                  <div className="flex flex-col sm:flex-row absolute top-0 sm:top-[20rem]">
                     <motion.div
                       initial="pClose"
                       animate="pOpen"
                       variants={variants}
                       viewport={{ once: true }}
                       transition={{ delay: 0.4, duration: 0.4 }}
-                      className="flex-1 pl-[2rem] pt-[2rem] sm:pt-0">
-                      <motion.p variants={childVariants} className="text-lg">Lahir:</motion.p>
-                      <motion.p variants={childVariants} className="font-bold text-2xl">Serui, 18 Desember 1918</motion.p>
-                      <motion.p variants={childVariants} className="text-lg">Wafat:</motion.p>
-                      <motion.p variants={childVariants} className="font-bold text-2xl">7 Maret 1978</motion.p>
-                      <motion.p variants={childVariants} className="text-lg">Orang Tua:</motion.p>
-                      <motion.p variants={childVariants} className="font-bold text-2xl">Musa Papare &</motion.p>
-                      <motion.p variants={childVariants} className="font-bold text-2xl">Dorkas Mangge</motion.p>
-                      <motion.p variants={childVariants} className="text-lg">Istri:</motion.p>
-                      <motion.p variants={childVariants} className="font-bold text-2xl">Regina Aibui</motion.p>
+                      className="flex-1 pl-[2rem] pt-[2rem] sm:pt-0 max-w-[50%] space-y-[30%]">
+                      <div className="relative">
+                        <motion.img variants={childVariants} className="text-lg absolute left-[-5%] top-[-120%]" src={`${baseUrl}/assets/1.3.1.png`} />
+                        <motion.p variants={childVariants} className="text-2xl font-semibold">Penamaan dangdut merupakan pembentukan kata yang menirukan suara gendang, yaitu “dang”</motion.p>
+                      </div>
+                      <div className="relative">
+                        <motion.img variants={childVariants} className="text-lg absolute left-[-5%] top-[-80%]" src={`${baseUrl}/assets/1.3.2.png`} />
+                        <motion.p variants={childVariants} className="text-2xl font-semibold">“dut” menjadi ungkapan yang digunakan untuk menghina dari lapisan masyarakat kelas atas kepada rakyat miskin</motion.p>
+                      </div>
                     </motion.div>
-                    <motion.ul
-                      initial="pClose"
-                      animate="pOpen"
-                      variants={variants}
+                  </div>
+                  <div className="flex">
+                    <div className="flex-1">
+                      <p className="text-5xl font-semibold text-white px-8 tracking-normal leading-[3.7rem]">Konon, istilah dangdut
+                        dipercaya muncul
+                        pertama kali pada tahun <span className="text-blue-600">1970-an</span></p>
+                    </div>
+                    <div className="flex-1 space-y-4 px-4 text-white text-2xl">
+                      <p>Istilah tersebut berkembang dari ejekan yang dilakukan oleh anak-anak band rock
+                        di Bandung</p>
+                      <p>Ejekan mereka ditujukan pada corak musik Melayu bergaya India yang disertai dengan tablah</p>
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <img src={`${baseUrl}/assets/1.4.png`} alt="Group Music" />
+                    <motion.img
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
-                      transition={{ delay: 0.3, duration: 0.5 }}
-                      className="flex-1 md:mt-14 mt-8 pl-[3rem] sm:pl-[6rem] xl:pl-[8rem] pr-[1.5rem] xl:pr-[3rem] list-disc marker:text-red-700 space-y-1.5 xl:space-y-6">
-                      <motion.li variants={childLiVariants} className="text-base md:text-xl xl:text-2xl">Dikenal sebagai tokoh yang berperan penting dalam proses integrasi Papua ke dalam NKRI</motion.li>
-                      <motion.li variants={childLiVariants} className="text-base md:text-xl xl:text-2xl">Dinobatkan sebagai Pahlawan Nasional oleh Presiden Suharto pada 14 September 1993.</motion.li>
-                    </motion.ul>
+                      transition={{ delay: 0.6, duration: 0.4 }}
+                      src={`${baseUrl}/assets/1.6.png`}
+                      className="absolute bottom-0 invert max-w-full z-20 md:max-w-4xl mx-0 md:mx-auto left-0 right-0 hidden sm:block"
+                      alt="Sub Title"
+                    />
+                    <div className="absolute bottom-0 z-10 left-0 w-full h-[20%] bg-gradient-to-b from-[#c1bfbb]/0 to-[#fbf8f0]" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[90%] from-transparent to-[#fffcf3]" />
-          <motion.img
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6, duration: 0.4 }}
-            src={`${baseUrl}/assets/1.6.png`}
-            className="bottom-[-2rem] invert max-w-full md:max-w-4xl mx-0 md:mx-auto left-0 right-0 hidden sm:block"
-            alt="Sub Title"
-          />
+          <div className="absolute top-0 left-0 w-full from-[80%] h-full bg-gradient-to-b from-[#090d16]/0 to-[#fffcf3]" />
         </div>
       </div>
     </section>
