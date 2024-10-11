@@ -5,150 +5,104 @@ import { motion } from "framer-motion";
 
 export function CustomImageJadiWarisanDunia() {
   return (
-    <section id="section-1" className="bg-[#c1bbb5] -mt-1 overflow-clip ">
-      <div className="relative flex items-start justify-center overflow-clip flex-col">
-        <div
-          className="w-full bg-cover bg-no-repeat bg-[center_top] relative"
-          style={{ backgroundImage: `url('${baseUrl}/assets/2.0.jpeg')` }}
-        >
-          <div className="max-w-4xl mx-auto relative z-10 mt-[15rem]">
-            <div className="space-y-0">
-              <div className="relative flex items-center justify-center z-0">
-                <motion.img
-                  initial={{ opacity: 0, x: -20 }}
-                  viewport={{ once: true }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4, duration: 0.5 }}
-                  src={`${baseUrl}/assets/2.2.png`}
-                  alt="Paper Torn"
-                  className="top-0 hidden sm:block"
-                />
-                <motion.img
-                  initial={{ opacity: 0, x: -20 }}
-                  viewport={{ once: true }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3, duration: 0.5 }}
-                  src={`${baseUrl}/assets/2.2-sm.png`}
-                  alt="Paper Torn"
-                  className="top-0 block sm:hidden"
-                />
-                <motion.img
-                  initial={{ opacity: 0, x: -20 }}
-                  viewport={{ once: true }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3, duration: 0.5 }}
-                  src={`${baseUrl}/assets/2.1.png`}
-                  alt="Silas Papare Top"
-                  className="absolute top-[-20%] sm:top-[-35%]"
-                />
-                <div className="absolute left-[15%] sm:left-[10%] top-[15%] sm:top-[20%] max-w-[75%] sm:max-w-[50%] space-y-1 sm:space-y-4 xl:space-y-8">
-                  <motion.p
-                    initial={{ opacity: 0, x: -20 }}
-                    viewport={{ once: true }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.45, duration: 0.7 }}
-                    className="text-4xl xl:text-6xl font-extrabold">
-                    <span className="text-red-600">Masa Kecil</span>
-                    <br />
-                    <span>Silas Papare</span>
-                  </motion.p>
-                  <motion.ul className="list-disc marker:text-red-600 text-base xl:text-lg space-y-1 sm:space-y-2 xl:space-y-4">
-                    <motion.li
-                      initial={{ opacity: 0, x: -10 }}
-                      viewport={{ once: true }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.5, duration: 0.7 }}
-                    ><p>Silas kecil banyak menghabiskan waktu untuk <b>belajar agama</b> di rumah bersama orangtuanya</p></motion.li>
-                    <motion.li
-                      initial={{ opacity: 0, x: -10 }}
-                      viewport={{ once: true }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.6, duration: 0.7 }}
-                    ><p>Musa memberi pendidikan agama kepada Silas lewat dongeng sebelum tidur</p></motion.li>
-                    <motion.li
-                      initial={{ opacity: 0, x: -10 }}
-                      viewport={{ once: true }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.7, duration: 0.7 }}
-                    ><p>Lalu bersama Dorkas, ia <b>belajar memahami pandangan hidup orang-orang Serui</b></p></motion.li>
-                    <motion.li
-                      initial={{ opacity: 0, x: -10 }}
-                      viewport={{ once: true }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.8, duration: 0.7 }}
-                    ><p>Dari ilmu yang diberikan orang tua, Silas belajar tentang ibadah serta pergaulan dengan sesama</p></motion.li>
-                  </motion.ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[90%] from-transparent to-[#c1bbb5]" />
+    <section id="section-1" className="relative">
+      <div className="relative">
+        <div className="relative">
+          <img src={`${baseUrl}/assets/7.0.png`} alt="people festival" className="w-full h-full relative inset-0 object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
         </div>
-        <div
-          className="w-full bg-cover bg-no-repeat bg-[center_top] xl:bg-center relative"
-          style={{ backgroundImage: `url('${baseUrl}/assets/2.4.png')` }}
-        >
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b to-[80%] to-transparent from-[#c1bbb5]" />
-          <div className="max-w-4xl mx-auto relative z-10 mb-20 mt-[5rem] sm:mt-0">
-            <div className="space-y-0">
-              <div className="relative flex items-center justify-center z-0">
-                <motion.img
-                  initial={{ opacity: 0, x: 20 }}
-                  viewport={{ once: true }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.35, duration: 0.5 }}
-                  src={`${baseUrl}/assets/2.5.png`}
-                  alt="Paper Torn"
-                  className="top-0 z-10 hidden sm:block"
-                />
-                <motion.img
-                  initial={{ opacity: 0, x: 20 }}
-                  viewport={{ once: true }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.35, duration: 0.5 }}
-                  src={`${baseUrl}/assets/2.5-sm.png`}
-                  alt="Paper Torn"
-                  className="top-0 z-10 block sm:hidden"
-                />
-                <motion.img
-                  initial={{ opacity: 0, x: 20 }}
-                  viewport={{ once: true }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3, duration: 0.5 }}
-                  src={`${baseUrl}/assets/2.3.png`}
-                  alt="Silas Papare Top"
-                  className="absolute z-0 top-[-20%] sm:top-[-40%] right-[4%] sm:right-[-.7rem]"
-                />
-                <div className="absolute top-[10%] left-[15%] px-0 sm:px-14 max-w-[70%] sm:max-w-[50%] sm:ml-auto z-10 right-0">
-                  <ul className="list-disc marker:text-red-600 text-base xl:text-lg space-y-1 sm:space-y-2 xl:space-y-4">
-                    <motion.li
-                      initial={{ opacity: 0, x: 10 }}
-                      viewport={{ once: true }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.5, duration: 0.7 }}
-                    >
-                      <p>Di tengah keterbatasan dan banyaknya orang tua yang melarang anak-anaknya
-                        bersekolah, Silas juga
-                        berkesempatan menempuh pendidikan formal hingga berkesempatan <b>belajar
-                          di sekolah juru rawat</b> di Serui pada tahun 1931</p>
-                    </motion.li>
-                    <motion.li
-                      initial={{ opacity: 0, x: 10 }}
-                      viewport={{ once: true }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.6, duration: 0.7 }}
-                    >
-                      <p>Silas memilih belajar menjadi juru rawat mengingat kualitas kesehatan di Serui sangat
-                        memprihatinkan, sementara masih belum banyak orang
-                        yang menekuni bidang tersebut
-                      </p>
-                    </motion.li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+        <div className="bg-black w-full h-24 sm:h-80"></div>
+        <div className="absolute m-auto top-0 bottom-0 left-0 right-0 flex items-center justify-center gap-5 sm:gap-20 md:gap-32 lg:gap-60">
+          <motion.div
+            initial={{ opacity: 0, y: 0, x: -5 }}
+            whileInView={{ opacity: 1, y: 0, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.3 }}
+            className="flex flex-col text-3xl gap-2 md:text-8xl md:gap-4 lg:gap-5 lg:text-9xl font-semibold text-yellow-500"
+          >
+            <h2>Jadi</h2>
+            <h2>Warisan</h2>
+            <h2>Dunia</h2>
+          </motion.div>
+          <div className="flex flex-col text-sm sm:text-lg font-semibold md:gap-8 gap-2 lg:gap-10 max-w-md text-white leading-4 md:leading-5 lg:leading-9">
+            <motion.p initial={{ opacity: 0, y: 0, x: 5 }} whileInView={{ opacity: 1, y: 0, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.5, duration: 1 }}>
+              Kuatnya pengaruh <br />
+              dangdut di Indonesia, <br /> membuat beberapa <br /> orang menjadikannya <br /> sebuah brand untuk <br /> menarik konsumen.
+            </motion.p>
+            <motion.p initial={{ opacity: 0, y: 0, x: 5 }} whileInView={{ opacity: 1, y: 0, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.8, duration: 1.3 }}>
+              Tidak hanya di Indonesia, <br /> hal ini dilakukan <br /> beberapa orang <br /> ke pasar luar negeri.
+            </motion.p>
           </div>
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[80%] from-transparent to-[#f3f1e9]" />
+        </div>
+      </div>
+      <div className="relative">
+        <img src={`${baseUrl}/assets/7.1.png`} alt="background image cafe dangdut" className="w-full" />
+        <motion.img
+          initial={{ opacity: 0, y: 5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          src={`${baseUrl}/assets/7.2.png`}
+          alt="pedangdut Fitri Carlina"
+          className="absolute bottom-0 z-10 w-full"
+        />
+        <div className="absolute bottom-0 w-full">
+          <div className="relative flex items-center justify-end sm:justify-center">
+            <motion.img initial={{ opacity: 0, x: 5 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} src={`${baseUrl}/assets/7.3.png`} alt="background hitam" className="relative w-full" />
+            <motion.p
+              initial={{ opacity: 0, x: 5 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="text-white absolute text-xs md:max-w-sm md:w-full md:pl-10 lg:pl-0 lg:max-w-xl w-4/6 md:text-lg lg:font-semibold lg:tracking-widest z-10 leading-3 tracking-tight"
+            >
+              Hal ini dilihat dari bisnis Cafe Dangdut yang dibuka oleh penyanyi dangdut Fitri Carlina. Cafe yang menyajikan kopi asal Indonesia ini dibuka olehnya di New York Amerika Serikat.
+            </motion.p>
+          </div>
+        </div>
+      </div>
+      <div className="relative flex flex-col bg-cover bg-top bg-no-repeat" style={{ backgroundImage: `url(${baseUrl}/assets/7.4.png)` }}>
+        <img src={`${baseUrl}/assets/7.5.png`} alt="yellow background" className="w-full absolute bottom-0" />
+        <motion.img
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6, duration: 1 }}
+          src={`${baseUrl}/assets/7.6.png`}
+          alt="rhoma irama"
+          className="w-full absolute bottom-0"
+        />
+        <motion.img
+          initial={{ opacity: 0, x: -15 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          src={`${baseUrl}/assets/7.7.png`}
+          alt="sandiaga uno"
+          className="w-full relative bottom-0"
+        />
+        <motion.img initial={{ opacity: 0, y: 5 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} src={`${baseUrl}/assets/7.8.png`} alt="footer" className="w-full absolute bottom-0" />
+        <div className="absolute top-0 bottom-0 lg:w-2/3 flex items-center justify-center">
+          <div className="max-w-6xl flex flex-col gap-4 sm:gap-24 lg:gap-56">
+            <motion.p
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="text-white  text-xs sm:text-xl md:text-2xl font-semibold leading-4 md:leading-5 md:tracking-wider lg:leading-9 lg:tracking-widest pl-8 md:pl-12 lg:pl-4"
+            >
+              Dangdut memang <br /> sekarang bukan <br /> hanya milik <br /> Indonesia, tetapi <br /> juga sudah menjadi <br /> warisan dunia.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.9 }}
+              className="text-xs  sm:text-xl md:text-2xl font-medium lg:font-semibold leading-3 lg:tracking-widest pl-8 md:pl-12 md:pt-4 lg:pl-4 pt-1"
+            >
+              Hal ini terlihat dari upaya <br /> pemerintah mengusulkan <br /> dangdut sebagai warisan <br /> budaya tak benda Indonesia <br /> kepada UNESCO <br /> pada 2022 lalu.
+            </motion.p>
+          </div>
         </div>
       </div>
     </section>
