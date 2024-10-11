@@ -5,9 +5,57 @@ import { motion } from "framer-motion";
 
 export function CustomImageKontesDangdut() {
   return (
-    <section id="section-1" className="bg-[#c1bbb5] -mt-1 overflow-clip ">
+    <section id="section-1" className="bg-gradient-to-b from-[#989da1] to-white -mt-1 overflow-clip ">
       <div className="relative flex items-start justify-center overflow-clip flex-col">
-        
+        <div className="max-w-4xl mx-auto relative">
+          <img src={`${baseUrl}/assets/4.0.png`} alt="Artist Dangdut Show" />
+          <img src={`${baseUrl}/assets/4.1.png`} alt="Copy Kontent Dangdut" className="absolute bottom-[45%]" />
+          <div className="flex items-center justify-center">
+            <div className="bg-[#e2c15c] rounded-lg p-8 absolute bottom-0 max-w-3xl ">
+              <p className="text-xl font-medium text-center">Kelas dangdut di masyarakat semakin tinggi seiring diterimanya genre musik ini di sejumlah stasiun televisi nasional.
+                Beragam kontes pencarian bakat pun digelar pada awal 2000-an hingga kini yang menyedot perhatian publik dan sekaligus melahirkan bintang dangdut top.</p>
+            </div>
+
+          </div>
+        </div>
+        <div className="flex items-center justify-center flex-col w-full space-y-4 py-12">
+          <p className="text-5xl font-semibold text-[#9955a5]">Apa Saja?</p>
+          <p className="text-2xl tracking-wide text-gray-600">Berikut beberapa contohnya:</p>
+        </div>
+        <div className="max-w-4xl mx-auto relative space-y-8">
+          <div className="flex">
+            <div>
+              <img src={`${baseUrl}/assets/4.2.png`} alt="KDI" />
+              <div>
+                <p className="text-center font-semibold text-[#9955a5] text-3xl">Kontes Dangdut Indonesia</p>
+                <p className="text-center text-xl tracking-wide text-gray-600">MNC TV (2004 - Sekarang)</p>
+              </div>
+            </div>
+            <div>
+              <img src={`${baseUrl}/assets/4.3.png`} alt="KDI" />
+              <div>
+                <p className="text-center font-semibold text-[#9955a5] text-3xl">Kontes Dangdut Indonesia</p>
+                <p className="text-center text-xl tracking-wide text-gray-600">MNC TV (2004 - Sekarang)</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex">
+            <div>
+              <img src={`${baseUrl}/assets/4.4.png`} alt="KDI" />
+              <div>
+                <p className="text-center font-semibold text-[#9955a5] text-3xl">Kontes Dangdut Indonesia</p>
+                <p className="text-center text-xl tracking-wide text-gray-600">MNC TV (2004 - Sekarang)</p>
+              </div>
+            </div>
+            <div>
+              <img src={`${baseUrl}/assets/4.5.png`} alt="KDI" />
+              <div>
+                <p className="text-center font-semibold text-[#9955a5] text-3xl">Kontes Dangdut Indonesia</p>
+                <p className="text-center text-xl tracking-wide text-gray-600">MNC TV (2004 - Sekarang)</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
