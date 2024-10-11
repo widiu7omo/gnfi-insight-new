@@ -21,9 +21,9 @@ export function CustomImageTahunEmas() {
   return (
     <section
       className="relative bg-cover flex flex-col pt-[10rem]"
-      style={{ backgroundImage: `url('${baseUrl}/assets/4.0.png')` }}
+      style={{ backgroundImage: `url('${baseUrl}/assets/3.0.png')` }}
     >
-      <img src={`${baseUrl}/assets/4.1.png`} className="absolute top-0 left-0 w-full" alt="Background" />
+      <img src={`${baseUrl}/assets/3.1.png`} className="absolute top-0 left-0 w-full" alt="Background" />
       <div className="flex flex-col sm:flex-row mx-auto max-w-4xl relative z-10">
         <motion.div
           className="space-y-5 flex-1"
@@ -33,7 +33,7 @@ export function CustomImageTahunEmas() {
           viewport={{ once: true, amount: 0.5 }}
         >
           <motion.img
-            src={`${baseUrl}/assets/4.2.png`}
+            src={`${baseUrl}/assets/3.2.png`}
             variants={fadeIn}
             transition={{ duration: 0.5 }}
           />
@@ -46,8 +46,8 @@ export function CustomImageTahunEmas() {
       <div className="flex flex-col relative z-10 max-w-4xl mx-auto gap-8 mt-[20rem]">
         <div className="relative flex bg-[#c5842b]/60 space-x-8 items-center justify-start">
           <div className="flex-auto flex items-center justify-center h-[20rem]">
-            <img src={`${baseUrl}/assets/4.4.png`} className="absolute h-[25rem] left-0 top-[-5rem]" alt="Artist" />
-            <img src={`${baseUrl}/assets/4.5.png`} alt="Artist" className="absolute left-[-3rem] h-[12rem]" />
+            <img src={`${baseUrl}/assets/3.4.png`} className="absolute h-[25rem] left-0 top-[-5rem]" alt="Artist" />
+            <img src={`${baseUrl}/assets/3.5.png`} alt="Artist" className="absolute left-[-3rem] h-[12rem]" />
           </div>
           <div className="p-8 w-9/12">
             <p className="text-white font-semibold text-3xl">Film, acara televisi, dan radio senantiasa menyiarkan lagu-lagu dangdut</p>
@@ -55,7 +55,7 @@ export function CustomImageTahunEmas() {
         </div>
         <div className="relative flex bg-[#c5842b]/60 space-x-8 items-center justify-start">
           <div className="w-3/12 flex items-end justify-center h-[20rem]">
-            <img src={`${baseUrl}/assets/4.3.png`} alt="Artist" className="absolute h-[25rem]" />
+            <img src={`${baseUrl}/assets/3.3.png`} alt="Artist" className="absolute h-[25rem]" />
           </div>
           <div className="w-9/12">
             <p className="text-white font-semibold text-3xl">Di acara pesta, lagu yang dibawakan penyanyi yang tampil menghibur adalah dangdut</p>
@@ -63,7 +63,7 @@ export function CustomImageTahunEmas() {
         </div>
         <div className="relative flex bg-[#c5842b]/60 space-x-8 items-center justify-start">
           <div className="w-3/12 items-end justify-center h-[20rem]">
-            <img src={`${baseUrl}/assets/4.6.png`} alt="Artist" className="absolute w-[15rem] left-[-5%] top-[-5%]" />
+            <img src={`${baseUrl}/assets/3.6.png`} alt="Artist" className="absolute w-[15rem] left-[-5%] top-[-5%]" />
           </div>
           <div className="w-9/12">
             <p className="text-white font-semibold text-3xl">
