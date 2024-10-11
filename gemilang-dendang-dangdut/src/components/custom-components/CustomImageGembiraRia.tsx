@@ -104,8 +104,9 @@ export function CustomImageGembiraRia() {
               transition={{ duration: 1.6 }}
               src={`${baseUrl}/assets/footer.png`}
               alt="footer"
-              className="mt-8 w-full"
+              className="mt-8 w-full max-w-4xl"
             />
+            <div className="absolute bottom-0 w-full bg-gradient-to-b from-[#512b19]/0 to-[#402213] h-[90px]" />
           </div>
           <motion.img
             src={`${baseUrl}/assets/5.2.png`}

@@ -9,9 +9,9 @@ export function CustomImageJadiWarisanDunia() {
       <div className="relative">
         <div className="relative">
           <img src={`${baseUrl}/assets/7.0.png`} alt="people festival" className="w-full h-full relative inset-0 object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black" />
         </div>
-        <div className="bg-black w-full h-24 sm:h-80"></div>
+        <div className="bg-black w-full h-24 sm:h-80" />
         <div className="absolute m-auto top-0 bottom-0 left-0 right-0 flex items-center justify-center gap-5 sm:gap-20 md:gap-32 lg:gap-60">
           <motion.div
             initial={{ opacity: 0, y: 0, x: -5 }}
@@ -36,7 +36,7 @@ export function CustomImageJadiWarisanDunia() {
         </div>
       </div>
       <div className="relative">
-        <img src={`${baseUrl}/assets/7.1.png`} alt="background image cafe dangdut" className="w-full" />
+        <img src={`${baseUrl}/assets/7.1.png`} alt="background cafe dangdut" className="w-full" />
         <motion.img
           initial={{ opacity: 0, y: 5 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ export function CustomImageJadiWarisanDunia() {
           alt="sandiaga uno"
           className="w-full relative bottom-0"
         />
-        <motion.img initial={{ opacity: 0, y: 5 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} src={`${baseUrl}/assets/7.8.png`} alt="footer" className="w-full absolute bottom-0" />
+        <motion.img initial={{ opacity: 0, y: 5 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} src={`${baseUrl}/assets/7.8.png`} alt="footer" className="w-full left-[25%] absolute bottom-0 max-w-4xl" />
         <div className="absolute top-0 bottom-0 lg:w-2/3 flex items-center justify-center">
           <div className="max-w-6xl flex flex-col gap-4 sm:gap-24 lg:gap-56">
             <motion.p
