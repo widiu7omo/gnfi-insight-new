@@ -15,7 +15,6 @@ export function CustomImageKontesDangdut() {
               <p className="text-xl font-medium text-center">Kelas dangdut di masyarakat semakin tinggi seiring diterimanya genre musik ini di sejumlah stasiun televisi nasional.
                 Beragam kontes pencarian bakat pun digelar pada awal 2000-an hingga kini yang menyedot perhatian publik dan sekaligus melahirkan bintang dangdut top.</p>
             </div>
-
           </div>
         </div>
         <div className="flex items-center justify-center flex-col w-full space-y-4 py-12">

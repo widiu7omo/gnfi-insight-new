@@ -10,6 +10,7 @@ export function CustomImageJadiWarisanDunia() {
         <div className="relative">
           <img src={`${baseUrl}/assets/7.0.png`} alt="people festival" className="w-full h-full relative inset-0 object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#e6a8a4] h-[10rem]" />
         </div>
         <div className="bg-black w-full h-24 sm:h-80" />
         <div className="absolute m-auto top-0 bottom-0 left-0 right-0 flex items-center justify-center gap-5 sm:gap-20 md:gap-32 lg:gap-60">
