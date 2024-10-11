@@ -28,6 +28,9 @@
   .timeline-box-2 {
     @apply space-y-5 rounded-xl bg-black p-3 text-custom-yellow md:p-5;
   }
+  .heading.white{
+    @apply text-white
+  }
 }
 
 

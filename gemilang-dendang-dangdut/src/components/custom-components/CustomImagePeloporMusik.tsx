@@ -21,13 +21,16 @@ export function CustomImagePeloporMusik() {
   return (
     <div className="flex flex-col bg-[#fffcf3] overflow-clip " ref={ref}>
       <div className="flex flex-col z-10 relative bg-cover bg-[center_top] bg-no-repeat" style={{ backgroundImage: `url('${baseUrl}/assets/2.0.png')` }}>
-        {/* <img src={`${baseUrl}/assets/2.1.png`} alt="" className="top-0 left-0 right-0 w-full absolute" /> */}
         <div className="w-full absolute h-[80px] bg-gradient-to-b from-[#ed8b37]" />
         <div className="flex justify-center flex-col max-w-4xl mx-auto relative mt-[10rem]">
           <motion.img
             initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-            src={`${baseUrl}/assets/2.4.png`} alt="" className="top-0 hidden sm:block relative" />
+            src={`${baseUrl}/assets/2.4.png`} alt="" className="top-0 relative" />
+          <div className="absolute right-0 top-[50%] text-white text-xl font-semibold max-w-[50%] space-y-4">
+            <p>Pada 1950-an musik India mulai merambah dan masuk dalam tubuh musik Melayu</p>
+            <p>Pengaruh tersebut mulai terlihat dengan adanya syair pada lagu Boneka dari India ciptaan Husein Bawafie</p>
+          </div>
           <motion.img
             initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
@@ -38,11 +41,14 @@ export function CustomImagePeloporMusik() {
             src={`${baseUrl}/assets/2.2.png`} alt="" className="top-20 absolute z-10" />
         </div>
         <div className="bg-[center_top_0rem] bg-no-repeat w-full bg-cover" style={{ backgroundImage: `url('${baseUrl}/assets/2.1.png')` }}>
-          <div className="flex justify-center flex-col max-w-4xl mx-auto relative mt-[-20rem]">
+          <div className="flex justify-center flex-col max-w-4xl mx-auto relative mt-[-15rem]">
             <motion.img
               initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
               src={`${baseUrl}/assets/2.8.png`} alt="" className="top-0" />
+            <div className="absolute text-xl text-white font-semibold max-w-[50%] right-0 bottom-[2rem]">
+              <p>Lagu ini dinyanyikan oleh Ellya Khadam, yang digadang-gadang menjadi lagu dangdut pertama meskipun belum muncul istilah dangdut</p>
+            </div>
             <motion.img
               initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
@@ -80,6 +86,7 @@ export function CustomImagePeloporMusik() {
               className="absolute bottom-0 max-w-full z-20 md:max-w-4xl mx-0 md:mx-auto left-0 right-0 hidden sm:block"
               alt="Sub Title"
             />
+            <div className="bg-gradient-to-b from-white/0 to-[#180605] w-full h-[150px] absolute bottom-0" />
           </div>
         </div>
       </div>
