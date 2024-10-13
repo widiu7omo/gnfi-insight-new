@@ -18,9 +18,9 @@ export function CustomImageGembiraRia() {
   };
 
   return (
-    <div className="mx-auto w-full">
+    <div className="mx-auto w-full overflow-hidden">
       <div
-        className="relative h-[150vh] w-full"
+        className="relative h-[160vh] w-full overflow-hidden"
         style={{ paddingBottom: "177.78%" }}
       >
         <div
@@ -104,7 +104,7 @@ export function CustomImageGembiraRia() {
               transition={{ duration: 1.6 }}
               src={`${baseUrl}/assets/footer.png`}
               alt="footer"
-              className="mt-8 w-full max-w-4xl"
+              className="mt-8 w-full max-w-4xl relative z-10"
             />
             <div className="absolute bottom-0 w-full bg-gradient-to-b from-[#512b19]/0 to-[#402213] h-[90px]" />
           </div>
