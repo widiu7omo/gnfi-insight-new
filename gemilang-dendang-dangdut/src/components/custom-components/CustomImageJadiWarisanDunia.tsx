@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export function CustomImageJadiWarisanDunia() {
   return (
-    <section id="section-1" className="relative">
-      {/* <div className="relative">
+    <section id="section-1" className="relative overflow-clip">
+      <div className="relative">
         <div className="relative">
           <img src={`${baseUrl}/assets/7.0.png`} alt="people festival" className="w-full h-full relative inset-0 object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black" />
@@ -105,7 +105,7 @@ export function CustomImageJadiWarisanDunia() {
             </motion.p>
           </div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 }
