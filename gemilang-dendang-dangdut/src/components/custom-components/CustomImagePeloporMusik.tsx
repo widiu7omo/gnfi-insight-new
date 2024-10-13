@@ -24,20 +24,20 @@ export function CustomImagePeloporMusik() {
         <div className="w-full absolute h-[80px] bg-gradient-to-b from-[#ed8b37]" />
         <div className="flex justify-center flex-col max-w-4xl mx-auto relative mt-[5rem] lg:mt-[10rem]">
           <motion.img
-            initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
-            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
+            initial={{ opacity: 0, x: -10 }} viewport={{ once: true }}
+            whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .7, delay: 0.4 }}
             src={`${baseUrl}/assets/2.4.png`} alt="" className="top-0 relative" />
           <div className="absolute right-0 top-[100%] xs:top-[50%] text-white text-base sm:text-xl font-semibold lg:px-0 px-4 xs:max-w-[50%] space-y-4">
-            <p>Pada 1950-an musik India mulai merambah dan masuk dalam tubuh musik Melayu</p>
-            <p>Pengaruh tersebut mulai terlihat dengan adanya syair pada lagu Boneka dari India ciptaan Husein Bawafie</p>
+            <motion.p initial={{ opacity: 0, y: 20 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.2 }}>Pada 1950-an musik India mulai merambah dan masuk dalam tubuh musik Melayu</motion.p>
+            <motion.p initial={{ opacity: 0, y: 20 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.4 }}>Pengaruh tersebut mulai terlihat dengan adanya syair pada lagu Boneka dari India ciptaan Husein Bawafie</motion.p>
           </div>
           <motion.img
             initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
-            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
+            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.4 }}
             src={`${baseUrl}/assets/2.3.png`} alt="" className="top-0 absolute z-10" />
           <motion.img
             initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
-            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
+            whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.2 }}
             src={`${baseUrl}/assets/2.2.png`} alt="" className="top-14 sm:top-20 absolute z-10" />
         </div>
         <div className="bg-[center_top_0rem] bg-no-repeat w-full bg-cover" style={{ backgroundImage: `url('${baseUrl}/assets/2.1.png')` }}>
@@ -47,7 +47,8 @@ export function CustomImagePeloporMusik() {
               whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
               src={`${baseUrl}/assets/2.8.png`} alt="" className="top-0 lg:block hidden" />
             <div className="absolute text-base sm:text-xl text-white font-semibold px-4 lg:px-0 lg:max-w-[50%] max-w-full xs:max-w-2xl mx-0 xs:mx-auto left-0 xs:left-auto right-0 bottom-[-2rem] xs:bottom-0 lg:bottom-[2rem]">
-              <p>Lagu ini dinyanyikan oleh Ellya Khadam, yang digadang-gadang menjadi lagu dangdut pertama meskipun belum muncul istilah dangdut</p>
+              <motion.p initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.2 }}>Lagu ini dinyanyikan oleh Ellya Khadam, yang digadang-gadang menjadi lagu dangdut pertama meskipun belum muncul istilah dangdut</motion.p>
             </div>
             <motion.img
               initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
