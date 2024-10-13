@@ -18,12 +18,6 @@ export function CustomImageAsalUsul() {
     },
     pClose: { opacity: 0, x: -5, transition: { duration: .3 } },
   }
-  const childLiVariants = {
-    pOpen: {
-      opacity: 1, x: 0, transition: { duration: .3 }
-    },
-    pClose: { opacity: 0, x: 20, transition: { duration: .3 } },
-  }
 
   return (
     <section id="section-1" className="bg-[#fffcf3] -mt-1 overflow-clip">
@@ -123,7 +117,12 @@ export function CustomImageAsalUsul() {
                     </div>
                   </div>
                   <div className="relative">
-                    <img src={`${baseUrl}/assets/1.4.png`} alt="Group Music" />
+                    <motion.img
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.6, duration: 0.4 }}
+                      src={`${baseUrl}/assets/1.4.png`} alt="Group Music Bands" />
                     <motion.img
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
