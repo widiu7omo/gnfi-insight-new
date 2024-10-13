@@ -22,12 +22,12 @@ export function CustomImagePeloporMusik() {
     <div className="flex flex-col bg-[#fffcf3] overflow-clip " ref={ref}>
       <div className="flex flex-col z-10 relative bg-cover bg-[center_top] bg-no-repeat" style={{ backgroundImage: `url('${baseUrl}/assets/2.0.png')` }}>
         <div className="w-full absolute h-[80px] bg-gradient-to-b from-[#ed8b37]" />
-        <div className="flex justify-center flex-col max-w-4xl mx-auto relative mt-[10rem]">
+        <div className="flex justify-center flex-col max-w-4xl mx-auto relative mt-[5rem] lg:mt-[10rem]">
           <motion.img
             initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
             src={`${baseUrl}/assets/2.4.png`} alt="" className="top-0 relative" />
-          <div className="absolute right-0 top-[50%] text-white text-xl font-semibold max-w-[50%] space-y-4">
+          <div className="absolute right-0 top-[100%] xs:top-[50%] text-white text-base sm:text-xl font-semibold lg:px-0 px-4 xs:max-w-[50%] space-y-4">
             <p>Pada 1950-an musik India mulai merambah dan masuk dalam tubuh musik Melayu</p>
             <p>Pengaruh tersebut mulai terlihat dengan adanya syair pada lagu Boneka dari India ciptaan Husein Bawafie</p>
           </div>
@@ -38,35 +38,35 @@ export function CustomImagePeloporMusik() {
           <motion.img
             initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-            src={`${baseUrl}/assets/2.2.png`} alt="" className="top-20 absolute z-10" />
+            src={`${baseUrl}/assets/2.2.png`} alt="" className="top-14 sm:top-20 absolute z-10" />
         </div>
         <div className="bg-[center_top_0rem] bg-no-repeat w-full bg-cover" style={{ backgroundImage: `url('${baseUrl}/assets/2.1.png')` }}>
-          <div className="flex justify-center flex-col max-w-4xl mx-auto relative mt-[-15rem]">
+          <div className="justify-center flex-col max-w-4xl mx-auto relative mt-[8rem] lg:mt-[-15rem]">
             <motion.img
               initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-              src={`${baseUrl}/assets/2.8.png`} alt="" className="top-0" />
-            <div className="absolute text-xl text-white font-semibold max-w-[50%] right-0 bottom-[2rem]">
+              src={`${baseUrl}/assets/2.8.png`} alt="" className="top-0 lg:block hidden" />
+            <div className="absolute text-base sm:text-xl text-white font-semibold px-4 lg:px-0 lg:max-w-[50%] max-w-full xs:max-w-2xl mx-0 xs:mx-auto left-0 xs:left-auto right-0 bottom-[-2rem] xs:bottom-0 lg:bottom-[2rem]">
               <p>Lagu ini dinyanyikan oleh Ellya Khadam, yang digadang-gadang menjadi lagu dangdut pertama meskipun belum muncul istilah dangdut</p>
             </div>
             <motion.img
               initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-              src={`${baseUrl}/assets/2.6.png`} alt="" className="top-0 absolute" />
+              src={`${baseUrl}/assets/2.6.png`} alt="" className="top-0 pt-8 lg:pt-0 lg:absolute" />
             <motion.img
               initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
-              src={`${baseUrl}/assets/2.7.png`} alt="" className="top-0 absolute" />
+              src={`${baseUrl}/assets/2.7.png`} alt="" className="top-0 absolute lg:block hidden" />
             <motion.img
               initial={{ opacity: 0, y: 20 }} viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: 0.1 }}
               src={`${baseUrl}/assets/2.5.png`} alt="" className="top-0 absolute" />
           </div>
-          <div className="flex justify-center flex-col max-w-4xl mx-auto relative mt-[0rem] px-14 space-y-8">
-            <motion.p className="text-4xl max-w-[50%] font-semibold text-white">
+          <div className="flex justify-center flex-col max-w-4xl mx-auto relative mt-[8rem] lg:mt-[0rem] px-4 lg:px-14 space-y-8">
+            <motion.p className="text-2xl sm:text-4xl max-w-full lg:max-w-[50%] font-semibold text-white">
               Dangdut perlahan mulai tumbuh subur
             </motion.p>
-            <ul className="flex space-x-8 text-white text-xl font-medium list-disc marker:text-[#ed8b37] px-4">
+            <ul className="flex flex-col lg:flex-row lg:space-x-8 space-y-4 lg:space-y-0 text-white text-base lg:text-xl font-medium list-disc marker:text-[#ed8b37] px-4">
               <li>
                 <p>Ditambah lagi dengan pencampuran beberapa etnik Indonesia, seperti Jawa, Minangkabau, dan Tapanuli</p>
               </li>
