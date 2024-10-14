@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function CustomImageKontesDangdut() {
   return (
-    <section id="section-1" className="bg-gradient-to-b from-[#989da1] -mt-1 overflow-clip ">
+    <section id="section-1" className="bg-gradient-to-b from-[#989da1] -mt-1 overflow-clip pb-[4rem]">
       <div className="relative flex items-start justify-center overflow-clip flex-col">
         <div className="max-w-4xl mx-auto relative">
           <img src={`${baseUrl}/assets/4.0.png`} alt="Artist Dangdut Show" />
