@@ -2,7 +2,7 @@
 import { baseUrl } from "@/constants/meta";
 import { motion } from "framer-motion";
 
-export function CustomImageTahunEmas() {
+export function CustomImageMobilListrik() {
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },

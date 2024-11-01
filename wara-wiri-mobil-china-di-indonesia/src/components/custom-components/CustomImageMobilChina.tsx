@@ -3,7 +3,7 @@ import { baseUrl } from "@/constants/meta";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-export function CustomImagePeloporMusik() {
+export function CustomImageMobilChina() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,

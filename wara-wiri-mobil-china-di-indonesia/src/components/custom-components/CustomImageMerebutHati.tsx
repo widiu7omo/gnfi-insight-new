@@ -3,7 +3,7 @@
 import { baseUrl } from "@/constants/meta";
 import { motion } from "framer-motion";
 
-export function CustomImageGembiraRia() {
+export function CustomImageMerebutHati() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },

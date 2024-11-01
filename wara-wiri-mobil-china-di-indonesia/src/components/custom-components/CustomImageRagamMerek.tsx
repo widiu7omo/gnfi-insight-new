@@ -3,7 +3,7 @@
 import { baseUrl } from "@/constants/meta";
 import { motion } from "framer-motion";
 
-export function CustomImageAsalUsul() {
+export function CustomImageRagamMerek() {
   const variants = {
     pOpen: {
       opacity: 1, y: 0, transition: {
