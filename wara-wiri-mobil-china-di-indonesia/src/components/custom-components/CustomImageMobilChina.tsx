@@ -23,7 +23,7 @@ export function CustomImageMobilChina() {
       <div className="flex flex-col z-10 relative bg-cover bg-[center_top] bg-no-repeat items-center justify-center">
         <p className="text-center md:text-4xl text-2xl text-white font-extrabold px-4 md:px-15 pt-6">IIMS, Panggungnya <br />
           Mobil China untuk Unjuk Gigi</p>
-        <img src={`${baseUrl}/assets/2.1.png`} alt="Pattern" className="absolute z-0" />
+        <img src={`${baseUrl}/assets/2.1.png`} alt="Pattern" className="absolute z-0 w-full" />
         <div className="max-w-4xl mx-auto mt-10 relative">
           <div className="relative z-10 flex items-center justify-center flex-col">
             <div className="h-[100px]" />
@@ -43,45 +43,48 @@ export function CustomImageMobilChina() {
           Pameran otomotif Indonesia International Motor Show (IIMS) 2024 di Jakarta pada 15-25 Februari 2024 jadi panggung bagi berbagai produk otomotif mutakhir, tak terkecuali mobil China
         </p>
       </div>
-      <div className="py-10 bg-[#a20624]">
-        <p className="text-white max-w-3xl mx-auto text-lg md:text-2xl text-center md:px-10 lg:px-0">Wuling, Chery, GWM, dan BYD tak ketinggalan hadir.
-          Tak sekedar memamerkan produknya, mereka juga meraih
-          sejumlah penghargaan bergengsi</p>
-      </div>
-      <div className="bg-[#a20624] space-y-6">
-        <div className="max-w-4xl mx-auto w-full ">
-          <div className="flex flex-col md:flex-row">
-            <div className="relative flex items-center justify-center py-2">
-              <img src={`${baseUrl}/assets/2.6.png`} alt="Car 4" />
-              <img src={`${baseUrl}/assets/2.7.png`} alt="Car 5" className="absolute" />
+      <div className="relative">
+        <div className="py-10 relative z-20">
+          <p className="text-white max-w-3xl mx-auto text-lg md:text-2xl text-center md:px-10 lg:px-0">Wuling, Chery, GWM, dan BYD tak ketinggalan hadir.
+            Tak sekedar memamerkan produknya, mereka juga meraih
+            sejumlah penghargaan bergengsi</p>
+        </div>
+        <div className="bg-[#a20624] space-y-6  relative z-20">
+          <div className="max-w-4xl mx-auto w-full ">
+            <div className="flex flex-col md:flex-row">
+              <div className="relative flex items-center justify-center py-2">
+                <img src={`${baseUrl}/assets/2.6.png`} alt="Car 4" />
+                <img src={`${baseUrl}/assets/2.7.png`} alt="Car 5" className="absolute" />
+              </div>
+              <div className="bg-white md:rounded-ee-3xl ml-[-4%] p-4 flex items-center justify-center w-fit">
+                <p className="text-lg font-medium md:text-2xl pl-[4%] md:pl-10 lg:pr-[10rem]">Wuling mendapat tiga penghargaan lewat Wuling Air EV dan Wuling Binguo EV</p>
+              </div>
             </div>
-            <div className="bg-white md:rounded-ee-3xl ml-[-4%] p-4 flex items-center justify-center w-fit">
-              <p className="text-lg font-medium md:text-2xl pl-[4%] md:pl-10 lg:pr-[10rem]">Wuling mendapat tiga penghargaan lewat Wuling Air EV dan Wuling Binguo EV</p>
+          </div>
+          <div className="max-w-4xl mx-auto w-full ">
+            <div className="flex flex-col md:flex-row">
+              <div className="relative flex items-center justify-center py-2">
+                <img src={`${baseUrl}/assets/2.8.png`} alt="Car 4" />
+                <img src={`${baseUrl}/assets/2.9.png`} alt="Car 5" className="absolute" />
+              </div>
+              <div className="bg-white md:rounded-ee-3xl ml-[-4%] p-4 flex items-center justify-center w-fit">
+                <p className="text-lg font-medium md:text-2xl pl-[4%] md:pl-10 lg:pr-[10rem]">Dua mobil Chery, yakni Chery Omoda 5 GT dan Chery Omoda E5 meraih total tiga penghargaan</p>
+              </div>
+            </div>
+          </div>
+          <div className="max-w-4xl mx-auto w-full ">
+            <div className="flex flex-col md:flex-row">
+              <div className="relative flex items-center justify-center py-2">
+                <img src={`${baseUrl}/assets/2.10.png`} alt="Car 4" />
+                <img src={`${baseUrl}/assets/2.11.png`} alt="Car 5" className="absolute" />
+              </div>
+              <div className="bg-white md:rounded-ee-3xl ml-[-4%] p-4 flex items-center justify-center w-fit">
+                <p className="text-lg font-medium md:text-2xl pl-[4%] md:pl-10 lg:pr-[10rem]">BYD meraih empat penghargaan. Atto3 dan Seal jadi dua produk penymbang penghargaan itu</p>
+              </div>
             </div>
           </div>
         </div>
-        <div className="max-w-4xl mx-auto w-full ">
-          <div className="flex flex-col md:flex-row">
-            <div className="relative flex items-center justify-center py-2">
-              <img src={`${baseUrl}/assets/2.8.png`} alt="Car 4" />
-              <img src={`${baseUrl}/assets/2.9.png`} alt="Car 5" className="absolute" />
-            </div>
-            <div className="bg-white md:rounded-ee-3xl ml-[-4%] p-4 flex items-center justify-center w-fit">
-              <p className="text-lg font-medium md:text-2xl pl-[4%] md:pl-10 lg:pr-[10rem]">Dua mobil Chery, yakni Chery Omoda 5 GT dan Chery Omoda E5 meraih total tiga penghargaan</p>
-            </div>
-          </div>
-        </div>
-        <div className="max-w-4xl mx-auto w-full ">
-          <div className="flex flex-col md:flex-row">
-            <div className="relative flex items-center justify-center py-2">
-              <img src={`${baseUrl}/assets/2.10.png`} alt="Car 4" />
-              <img src={`${baseUrl}/assets/2.11.png`} alt="Car 5" className="absolute" />
-            </div>
-            <div className="bg-white md:rounded-ee-3xl ml-[-4%] p-4 flex items-center justify-center w-fit">
-              <p className="text-lg font-medium md:text-2xl pl-[4%] md:pl-10 lg:pr-[10rem]">BYD meraih empat penghargaan. Atto3 dan Seal jadi dua produk penymbang penghargaan itu</p>
-            </div>
-          </div>
-        </div>
+        <div className="bottom-0 w-full h-full bg-gradient-to-t from-[#a20624] to-[#a20624]/0 from-[80%] absolute z-10" />
       </div>
     </div>
   );
