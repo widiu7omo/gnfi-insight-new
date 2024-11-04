@@ -24,7 +24,7 @@ export function SectionHeader({ block }: { block: BlockType }) {
 				className,
 			)}
 			style={{
-				backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 100%),url('${baseUrl}/${coverImage}')`,
+				// backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 100%),url('${baseUrl}/${coverImage}')`,
 			}}
 		>
 			{customTitle ? (
