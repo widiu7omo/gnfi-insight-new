@@ -74,11 +74,11 @@ export function CustomImageRagamMerek() {
       >
         <div className="relative flex items-start justify-center max-w-4xl mx-auto z-10">
           <div className="w-full bg-no-repeat bg-[cover,contain] xl:bg-[cover,auto] bg-[center_top] relative bg-blend-multiply">
-            <motion.p className="text-center md:text-4xl text-xl text-white font-extrabold px-4 md:px-10 pt-6" variants={paragraphVariant} initial="close" whileInView="open">
+            <motion.p viewport={{ once: true }} className="text-center md:text-4xl text-xl text-white font-extrabold px-4 md:px-10 pt-6" variants={paragraphVariant} initial="close" whileInView="open">
               Sejak kapan gelombang mobil China menyerbu Indonesia?
             </motion.p>
             <div className="relative flex items-center justify-center">
-              <motion.img
+              <motion.img viewport={{ once: true }}
                 variants={variants}
                 initial="pClose"
                 whileInView="pOpen"
@@ -87,7 +87,7 @@ export function CustomImageRagamMerek() {
                 alt="Car Wuling"
                 className="z-50 relative"
               />
-              <motion.img
+              <motion.img viewport={{ once: true }}
                 variants={flagVariant}
                 initial="close"
                 whileInView="open"
@@ -97,8 +97,8 @@ export function CustomImageRagamMerek() {
               />
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center space-x-0 md:space-x-8 px-0 md:px-4 w-full">
-              <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} className="flex-1 flex flex-col items-center sm:items-start">
-                <motion.img initial={{ opacity: 0, x: 0 }} transition={{ delay: .2 }} whileInView={{ opacity: 1, x: 20 }} src={`${baseUrl}/assets/1.2.png`} alt="Wuling Logo" />
+              <motion.div viewport={{ once: true }} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} className="flex-1 flex flex-col items-center sm:items-start">
+                <motion.img viewport={{ once: true }} initial={{ opacity: 0, x: 0 }} transition={{ delay: .2 }} whileInView={{ opacity: 1, x: 20 }} src={`${baseUrl}/assets/1.2.png`} alt="Wuling Logo" />
                 <p className="text-lg sm:text-2xl font-bold text-[#f19445]">
                   Wuling adalah pionirnya.{" "}
                 </p>
@@ -107,8 +107,8 @@ export function CustomImageRagamMerek() {
                   mobil terlaris di Indonesia hanya dalam waktu tujuh tahun
                 </p>
               </motion.div>
-              <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: .1 }} className="flex-1 pt-[2rem] sm:pt-[6.2rem] flex flex-col items-center sm:items-start">
-                <motion.img initial={{ opacity: 0, x: 20 }} transition={{ delay: .2 }} whileInView={{ opacity: 1, x: 0 }} src={`${baseUrl}/assets/1.3.png`} alt="Chery Logo" />
+              <motion.div viewport={{ once: true }} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: .1 }} className="flex-1 pt-[2rem] sm:pt-[6.2rem] flex flex-col items-center sm:items-start">
+                <motion.img viewport={{ once: true }} initial={{ opacity: 0, x: 20 }} transition={{ delay: .2 }} whileInView={{ opacity: 1, x: 0 }} src={`${baseUrl}/assets/1.3.png`} alt="Chery Logo" />
                 <p className="text-base sm:text-xl font-medium text-white text-center sm:text-start">
                   Sebelumnya Chery juga pernah hadir di Indonesia, namun
                   hengkang pada 2013 karena penjualannya terus melandai
@@ -118,11 +118,11 @@ export function CustomImageRagamMerek() {
           </div>
         </div>
         <div className="space-y-4 max-w-4xl mx-auto z-20 relative">
-          <motion.p className="text-center text-3xl text-white font-extrabold px-4 md:px-0" variants={paragraphVariant} initial="close" whileInView="open">
+          <motion.p viewport={{ once: true }} className="text-center text-3xl text-white font-extrabold px-4 md:px-0" variants={paragraphVariant} initial="close" whileInView="open">
             Kini, semakin banyak produsen mobil China yang masuk ke Indonesia:
           </motion.p>
-          <motion.div className="grid grid-cols-2 md:grid-cols-4" variants={carsVariant} initial="close" whileInView="open">
-            <motion.div className="relative flex items-center justify-center" variants={carVariant}>
+          <motion.div viewport={{ once: true }} className="grid grid-cols-2 md:grid-cols-4" variants={carsVariant} initial="close" whileInView="open">
+            <motion.div viewport={{ once: true }} className="relative flex items-center justify-center" variants={carVariant}>
               <div className="absolute rounded-full right-[15%] size-[10rem] bg-[#63302f] shadow-lg" />
               <img
                 src={`${baseUrl}/assets/1.4.png`}
@@ -133,7 +133,7 @@ export function CustomImageRagamMerek() {
                 Wuling
               </p>
             </motion.div>
-            <motion.div className="relative flex items-center justify-center" variants={carVariant}>
+            <motion.div viewport={{ once: true }} className="relative flex items-center justify-center" variants={carVariant}>
               <div className="absolute rounded-full right-[15%] size-[10rem] bg-[#63302f] shadow-lg" />
               <img
                 src={`${baseUrl}/assets/1.5.png`}
@@ -144,7 +144,7 @@ export function CustomImageRagamMerek() {
                 Chery
               </p>
             </motion.div>
-            <motion.div className="relative flex items-center justify-center" variants={carVariant}>
+            <motion.div viewport={{ once: true }} className="relative flex items-center justify-center" variants={carVariant}>
               <div className="absolute rounded-full right-[15%] size-[10rem] bg-[#63302f] shadow-lg" />
               <img
                 src={`${baseUrl}/assets/1.6.png`}
@@ -156,7 +156,7 @@ export function CustomImageRagamMerek() {
                 (GWM)
               </p>
             </motion.div>
-            <motion.div className="relative flex items-center justify-center" variants={carVariant}>
+            <motion.div viewport={{ once: true }} className="relative flex items-center justify-center" variants={carVariant}>
               <div className="absolute rounded-full right-[15%] size-[10rem] bg-[#63302f] shadow-lg" />
               <img
                 src={`${baseUrl}/assets/1.7.png`}
