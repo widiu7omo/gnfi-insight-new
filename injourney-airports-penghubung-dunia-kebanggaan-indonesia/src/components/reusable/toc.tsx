@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Wara-Wiri Mobil China di Indonesia
+              InJourney Airports, Penghubung Dunia Kebanggaan Indonesia
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Ragam Merek Mobil China di Indonesia
+              Dari Angkasa Pura Jadi InJourney Airports
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Mobil China di Tengah Dominasi Jepang
+              Lahirnya InJourney Airports, Sebuah Transformasi Menuju Kemajuan
             </a>
           </li>
           <li
@@ -73,7 +73,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              Mobil Listrik, Wujud Kedigdayaan Mobil China
+              Langkah InJourney Airports demi Wujudkan Visi dan Misi
             </a>
           </li>
           <li
@@ -81,7 +81,15 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-5">
-              Merebut Hati Konsumen, Menjamah Dunia
+              Peningkatan Pelayanan, Janji InJourney Airports untuk Masyarakat Indonesia
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-6')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-6">
+              InJourney Airports dalam Industri Penerbangan Global
             </a>
           </li>
         </ul>
