@@ -42,7 +42,7 @@ export function SectionHeader({ block }: { block: BlockType }) {
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ delay: 0.3 }}
-					className="max-w-5xl text-center text-3xl font-bold leading-snug text-white lg:text-4xl xl:text-5xl">
+					className="max-w-5xl text-center text-3xl font-bold leading-snug lg:text-4xl xl:text-5xl">
 					{title}
 				</motion.h2>
 			)}
