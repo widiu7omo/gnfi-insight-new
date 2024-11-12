@@ -88,7 +88,7 @@ export default function SectionItem({ sectionId, index }: { sectionId: string, i
 					) : (
 						<ChevronRight className="text-neutral-600" />
 					)}</span>
-					<span className="font-medium capitalize text-neutral-600">{sectionId}</span>
+					<span className="font-medium capitalize text-neutral-600">Section {index}</span>
 				</button>
 			</div>
 			<div {...getCollapseProps()}>
