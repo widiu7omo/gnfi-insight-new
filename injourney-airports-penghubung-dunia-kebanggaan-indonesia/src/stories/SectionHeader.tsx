@@ -7,6 +7,7 @@ import type { BlockType } from "@/data/types";
 import parse from "html-react-parser";
 import { motion } from 'framer-motion'
 import { baseUrl } from "@/constants/meta";
+import { BoxReveal } from "./BoxReveal";
 export type SectionHeaderType = {
 	title?: string;
 	coverImage: string;
@@ -36,15 +37,12 @@ export function SectionHeader({ block }: { block: BlockType }) {
 				>
 					{parse(customTitle as string)}
 				</motion.div>
-			) : (
-				<motion.h2
-					viewport={{ once: true }}
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					transition={{ delay: 0.3 }}
-					className="max-w-5xl text-center text-3xl font-bold leading-snug lg:text-4xl xl:text-5xl">
-					{title}
-				</motion.h2>
+			) : (<div className="max-w-5xl mx-auto">
+				<BoxReveal boxColor="#0d192f"
+				>
+					<div className="text-center text-3xl font-bold !leading-snug lg:text-4xl xl:text-5xl font-sora">{title}</div>
+				</BoxReveal>
+			</div>
 			)}
 		</div>
 	);
