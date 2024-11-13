@@ -10,7 +10,7 @@ export function CustomImageSection2() {
 
   return (
     <div className="relative flex flex-col items-center overflow-hidden bg-cover bg-[#eee9dd]">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col space-y-8">
           <div className="flex flex-col items-center space-y-2 text-[#064038] py-12">
             <div className="text-5xl font-sora font-semibold tracking-[.03em]">Jurus InJourney Airports</div>
@@ -40,7 +40,11 @@ export function CustomImageSection2() {
             </div>
           </div>
         </div>
-        <div className="max-w-4xl mx-auto space-y-8 pt-8">
+      </div>
+      <div className="relative w-full overflow-hidden">
+        <img src={`${baseUrl}/assets/2.0.jpg`} alt="Background Airport" className="absolute bottom-0 w-full" />
+        <div className="absolute bottom-0 top-0 w-full bg-gradient-to-b from-[#eee9dd] to-[80%] h-full" />
+        <div className="max-w-4xl mx-auto space-y-8 pt-8 relative z-10">
           <div className="flex flex-col items-center">
             <div className="text-2xl text-[#064038] font-sora tracking-wide text-center max-w-[80%]">
               Beberapa cara InJourney Airports untuk menjalankan transformasi tersebut:
@@ -51,7 +55,7 @@ export function CustomImageSection2() {
               <div className="flex space-x-4 bg-[#064038] h-[200px] overflow-hidden rounded-2xl ring-8 ring-gray-50 shadow-md">
                 <div className="relative w-[350px]">
                   <img src={`${baseUrl}/assets/2.6.png`} alt="How 1" className="w-full object-cover" />
-                  <div className="rounded-xl absolute text-xl font-semibold text-[#064038] px-4 py-1 bg-[#adbf52] top-0 left-0">Fisik</div>
+                  <div className="rounded-xl absolute text-xl font-semibold text-[#064038] px-4 py-1 bg-[#adbf52] top-1 left-1">Fisik</div>
                 </div>
                 <div className="flex-1 text-2xl font-medium text-white py-8 px-6">
                   Beautifikasi terminal,  peningkatan kapasitas penumpang
@@ -60,7 +64,7 @@ export function CustomImageSection2() {
               <div className="flex space-x-4 bg-[#064038] h-fit overflow-clip rounded-2xl ring-8 ring-gray-50 shadow-md">
                 <div className="relative w-[350px]">
                   <img src={`${baseUrl}/assets/2.7.png`} alt="How 2" className="w-full object-cover" />
-                  <div className="rounded-xl absolute text-xl font-semibold text-[#064038] px-4 py-1 bg-[#adbf52] top-0 left-0">Non Fisik</div>
+                  <div className="rounded-xl absolute text-xl font-semibold text-[#064038] px-4 py-1 bg-[#adbf52] top-1 left-1">Non Fisik</div>
                 </div>
                 <div className="flex-1 text-2xl font-medium text-white py-8 px-6">
                   Pembekalan General Manager bandara lewat GM Airport Academy dan Immersion Program GM Airport Academy, pelatihan hospitality, customer service and experience, dan lainnya untuk staf di level teknis
