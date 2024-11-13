@@ -24,7 +24,7 @@ export function CustomImageSection1() {
   ]
 
   return (
-    <div className="bg-[#f7f7f7] bg-inherit sm:bg-contain bg-no-repeat" style={{ backgroundImage: `url("${baseUrl}/assets/pattern-logo.svg")` }}>
+    <div className="!bg-[#f7f7f7] bg-inherit sm:bg-contain bg-no-repeat" style={{ backgroundImage: `url("${baseUrl}/assets/pattern-logo.svg")` }}>
       <div className="relative flex items-center justify-center flex-col ">
         <div className="h-[25rem] bg-gradient-radial from-[#f7f7f7] from-[20%] absolute w-full max-w-7xl top-0" />
         <div className="h-[25rem] bg-gradient-to-t from-[#f7f7f7] absolute w-full top-0" />
