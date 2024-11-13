@@ -4,68 +4,6 @@ import { baseUrl } from "@/constants/meta";
 import { motion, type Variants } from "framer-motion";
 
 export function CustomImageSection1() {
-  const variants: Variants = {
-    pOpen: {
-      opacity: 1,
-      y: 0,
-      x: 0,
-      rotate: 0,
-      transition: { duration: .4, delay: 0.2 },
-    },
-    pClose: {
-      opacity: 0,
-      y: -20,
-      x: -20,
-      rotate: 1,
-      transition: { duration: 1 },
-    },
-  };
-  const flagVariant: Variants = {
-    open: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.3, delay: 0.3 },
-    },
-    close: { opacity: 0, x: -20, transition: { duration: 0.3 } },
-  };
-  const paragraphVariant: Variants = {
-    open: {
-      opacity: 1,
-      y: 20
-    },
-    close: {
-      opacity: 0,
-      y: 0
-    }
-  };
-
-  const carsVariant: Variants = {
-    open: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0,
-        duration: 3
-      }
-    },
-    close: {
-      opacity: 0
-    }
-  }
-
-  const carVariant: Variants = {
-    open: {
-      opacity: 1,
-      y: 20,
-      transition: {
-        duration: .5
-      }
-    },
-    close: {
-      opacity: 0,
-      y: 0
-    }
-  }
   const timelines = [
     {
       year: 1962,
@@ -93,9 +31,9 @@ export function CustomImageSection1() {
         <div className="flex flex-col items-center justify-end h-[25rem] max-w-7xl mx-auto relative pb-8">
           <div className="flex flex-col items-center space-y-4 ">
             <img src={`${baseUrl}/assets/1.1.png`} alt="In Journey" className="w-fit" />
-            <p className="font-sora text-3xl xl:text-6xl font-semibold text-center">
+            <div className="font-sora text-3xl xl:text-6xl font-semibold text-center">
               InJourney Airports, Sang Penerus PT Angkasa Pura I dan II
-            </p>
+            </div>
           </div>
         </div>
         <div className=" w-full relative">
@@ -109,11 +47,11 @@ export function CustomImageSection1() {
                     <div className="absolute left-[-10%] top-[25%]">
                       <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[25px] border-l-[#4dc1c6] border-b-[10px] border-b-transparent" />
                     </div>
-                    <p className="text-4xl font-sora text-[#f9af3f] font-medium">{item.year}</p>
+                    <div className="text-4xl font-sora text-[#f9af3f] font-medium">{item.year}</div>
                   </div>
-                  <p className="font-sora text-3xl text-white">
+                  <div className="font-sora text-3xl text-white">
                     {item.desc}
-                  </p>
+                  </div>
                 </li>)
                 )}
               </ul>
@@ -148,24 +86,28 @@ export function CustomImageSection1() {
           </div>
         </div>
         <div className="bg-[#4dc1c6] w-full overflow-clip">
-          <div className="w-full relative flex max-w-7xl mx-auto items-end">
+          <div className="w-full relative flex max-w-7xl mx-auto items-center">
             <div className="flex-1 relative">
-              <img src={`${baseUrl}/assets/1.5.png`} alt="Airport" className="absolute bottom-0" />
-              <img src={`${baseUrl}/assets/1.6.png`} alt="Cloud" className="absolute top-0" />
+              <img src={`${baseUrl}/assets/1.5.png`} alt="Airport" className="absolute top-0" />
+              <img src={`${baseUrl}/assets/1.6.png`} alt="Cloud" className="absolute top-0 left-10" />
               <img src={`${baseUrl}/assets/1.3.png`} alt="Logo InJourney" className="absolute top-[5%]" />
-              <img src={`${baseUrl}/assets/1.4.png`} alt="Dony Oskaria" className="relative max-w-[80%]" />
-
+              <img src={`${baseUrl}/assets/1.4.png`} alt="Dony Oskaria" className="relative max-w-[80%] start-8" />
             </div>
             <div className="flex-1 py-6">
               <div className="px-12 py-16 space-y-4">
-                <p className="font-sora font-medium text-3xl text-gray-700 leading-normal">“Merger ini berjalan lancar
+                <div className="font-sora font-medium text-xl xl:text-3xl text-gray-700 leading-normal">“Merger ini berjalan lancar
                   sesuai dengan tujuan pemerintah untuk meningkatkan sektor aviasi dan kebandarudaraan Indonesia menjadi 5 top global airports
                   operator. Terlebih merger ini sudah masuk dalam Program Strategis Nasional yang telah disetujui oleh pemerintah,”
-                </p>
-                <p className="text-2xl text-gray-700"><span className="font-bold text-3xl font-sora text-gray-800">Dony Oskaria</span>,<br />
+                </div>
+                <div className="text-lg xl:text-2xl text-gray-700"><span className="font-bold text-xl xl:text-3xl font-sora text-gray-800">Dony Oskaria</span>,<br />
                   eks Direktur Utama InJourney,
-                  kini Wakil Menteri BUMN </p>
+                  kini Wakil Menteri BUMN </div>
               </div>
+            </div>
+          </div>
+          <div className="relative z-10 flex items-center bg-[#ec6a56] -mt-[4rem] ">
+            <div className="max-w-7xl mx-auto">
+              <img src={`${baseUrl}/assets/footer.png`} alt="Footer" />
             </div>
           </div>
         </div>
