@@ -24,7 +24,7 @@ export function CustomImageSection1() {
   ]
 
   return (
-    <div className="bg-[#f7f7f7] bg-contain bg-no-repeat" style={{ backgroundImage: `url("${baseUrl}/assets/pattern-logo.svg")` }}>
+    <div className="bg-[#f7f7f7] bg-inherit sm:bg-contain bg-no-repeat" style={{ backgroundImage: `url("${baseUrl}/assets/pattern-logo.svg")` }}>
       <div className="relative flex items-center justify-center flex-col ">
         <div className="h-[25rem] bg-gradient-radial from-[#f7f7f7] from-[20%] absolute w-full max-w-7xl top-0" />
         <div className="h-[25rem] bg-gradient-to-t from-[#f7f7f7] absolute w-full top-0" />
@@ -36,57 +36,68 @@ export function CustomImageSection1() {
             </div>
           </div>
         </div>
-        <div className=" w-full relative">
-          <div className="flex max-w-7xl mx-auto relative z-10">
-            <div className="flex-1 py-16 relative">
-              <div className="absolute border-4 top-[4.6rem] bottom-[0rem] left-[-10%]  border-l border-[#4dc1c6]" />
+        <div className="w-full relative">
+          <div className="flex flex-col md:flex-row items-stretch h-full max-w-7xl mx-auto relative z-10 px-8 sm:px-16 xl:px-0">
+            <div className="flex-1 py-8 xl:py-16 relative">
+              <div className="absolute border-4 top-0 xl:top-[4.6rem] bottom-[0rem] left-[-4%] sm:left-[-6%] xl:left-[-10%] border-l border-[#4dc1c6]" />
               <ul className="space-y-8 pr-10">
                 {timelines.map((item) =>
                 (<li key={item.year} className="space-y-1">
                   <div className="relative">
-                    <div className="absolute left-[-10%] top-[25%]">
-                      <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[25px] border-l-[#4dc1c6] border-b-[10px] border-b-transparent" />
+                    <div className="absolute left-[-4%] sm:left-[-6%] xl:left-[-10%] top-[25%]">
+                      <div className="w-0 h-0 
+                      border-t-[5px]
+                      border-l-[15px]
+                      border-b-[5px]
+                      xl:border-t-[10px]
+                      xl:border-l-[25px]
+                      xl:border-b-[10px]
+                      border-t-transparent 
+                    border-l-[#4dc1c6]
+                      border-b-transparent" />
                     </div>
-                    <div className="text-4xl font-sora text-[#f9af3f] font-medium">{item.year}</div>
+                    <div className="text-xl sm:text-2xl xl:text-4xl font-sora text-[#f9af3f] font-medium">{item.year}</div>
                   </div>
-                  <div className="font-sora text-3xl text-white">
+                  <div className="font-sora sm:text-xl xl:text-3xl text-white">
                     {item.desc}
                   </div>
                 </li>)
                 )}
               </ul>
             </div>
-            <div className="flex-1 h-full w-full">
-              <div className="h-[50rem] w-full flex flex-col items-center justify-end space-y-8">
-                <img src={`${baseUrl}/assets/1.2.png`} alt="Map In Journey" className="" />
-                <div className="px-12 space-y-6 text-white">
-                  <div className="font-sora font-medium text-4xl tracking-wide leading-snug">
-                    InJourney Airports
-                    kini menjadi operator
-                    bandara terbesar
-                    kelima di dunia.
-                  </div>
-                  <img src={`${baseUrl}/assets/1.7.png`} alt="Dots" />
-                  <div className="font-sora font-medium text-3xl text-white leading-normal">
-                    Dengan 37
-                    bandara yang dikelola,
-                    penumpangnya diproyeksikan
-                    akan mencapai 170 juta
-                    pada akhir tahun nanti
+            <div className="flex-1 my-auto w-full flex justify-center">
+              <div className="h-full w-full flex flex-col items-stretch justify-end space-y-8 flex-1">
+                <div className="flex-grow">
+                  <img src={`${baseUrl}/assets/1.2.png`} alt="Map In Journey" className="" />
+                  <div className="px-4 py-6 xl:py-12 xl:px-12 space-y-6 text-white">
+                    <div className="font-sora font-medium sm:text-2xl xl:text-4xl tracking-wide leading-snug">
+                      InJourney Airports
+                      kini menjadi operator
+                      bandara terbesar
+                      kelima di dunia.
+                    </div>
+                    <img src={`${baseUrl}/assets/1.7.png`} alt="Dots" />
+                    <div className="font-sora font-medium sm:text-xl xl:text-3xl text-white leading-normal">
+                      Dengan 37
+                      bandara yang dikelola,
+                      penumpangnya diproyeksikan
+                      akan mencapai 170 juta
+                      pada akhir tahun nanti
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-row absolute top-0 bottom-0 left-0 right-0">
-            <div className="flex-1 bg-[#3f3f41]" />
+          <div className="flex flex-col md:flex-row absolute top-0 bottom-0 left-0 right-0">
+            <div className="xl:flex-1 xl:bg-[#3f3f41]" />
             <div className="flex-1 bg-no-repeat bg-cover bg-right" style={{ backgroundImage: `url(${baseUrl}/assets/1.0.jpg)` }}>
-              <div className="bg-gradient-to-tr from-black/70 to-[90%] w-full h-full" />
+              <div className="bg-gradient-to-r bg-black/30 xl:bg-transparent xl:bg-gradient-to-tr from-black/80 sm:from-black/70 sm:to-[90%] w-full h-full " />
             </div>
           </div>
         </div>
         <div className="bg-[#4dc1c6] w-full overflow-clip">
-          <div className="w-full relative flex max-w-7xl mx-auto items-center">
+          <div className="w-full relative flex flex-col-reverse lg:flex-row max-w-7xl mx-auto items-center">
             <div className="flex-1 relative">
               <img src={`${baseUrl}/assets/1.5.png`} alt="Airport" className="absolute top-0" />
               <img src={`${baseUrl}/assets/1.6.png`} alt="Cloud" className="absolute top-0 left-10" />
@@ -95,7 +106,7 @@ export function CustomImageSection1() {
             </div>
             <div className="flex-1 py-6">
               <div className="px-12 py-16 space-y-4">
-                <div className="font-sora font-medium text-xl xl:text-3xl text-gray-700 leading-normal">“Merger ini berjalan lancar
+                <div className="font-sora font-medium text-xl sm:text-2xl xl:text-3xl text-gray-700 leading-normal">“Merger ini berjalan lancar
                   sesuai dengan tujuan pemerintah untuk meningkatkan sektor aviasi dan kebandarudaraan Indonesia menjadi 5 top global airports
                   operator. Terlebih merger ini sudah masuk dalam Program Strategis Nasional yang telah disetujui oleh pemerintah,”
                 </div>
