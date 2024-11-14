@@ -32,7 +32,8 @@ export function CustomImageSection4() {
           alt="People"
           className="z-0 h-auto w-full object-cover"
         />
-        <div className="absolute top-0 z-10 flex w-full justify-center md:top-24">
+        <div className="lg:hidden absolute inset-0 bg-gradient-to-t from-black/100 to-transparent z-10"/>
+        <div className="absolute bottom-0 pb-12 lg:pb-0 lg:top-0 z-10 flex w-full justify-center md:top-24">
           <div className="flex w-full flex-col items-start px-4 md:max-w-4xl md:px-10">
             <div className="mx-auto">
               <motion.p
@@ -40,7 +41,7 @@ export function CustomImageSection4() {
                 initial={{ opacity: 0, x: 10, y: 0 }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.4 }}
-                className="md:px-15 mx-auto pt-6 text-center text-2xl font-extrabold text-black md:pt-12 md:text-5xl"
+                className="md:px-15 mx-auto pt-6 text-center text-2xl font-extrabold text-white lg:text-black md:pt-12 md:text-5xl"
               >
                 Peningkatan Pelayanan
               </motion.p>
@@ -58,7 +59,7 @@ export function CustomImageSection4() {
                 initial={{ opacity: 0, x: -10, y: -10 }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.4 }}
-                className="md:px-15 mx-auto max-w-[10rem] text-center text-[10px] font-semibold text-black md:max-w-lg md:text-2xl"
+                className="md:px-15 mx-auto max-w-md text-center text-base font-semibold text-black md:max-w-lg md:text-2xl"
               >
                 {"InJourney Airports mendorong bandara untuk fokus kepada pelayanan kepada para penggunanya"
                   .split("")
@@ -76,7 +77,7 @@ export function CustomImageSection4() {
                 initial={{ opacity: 0, x: 0, y: -10 }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.4 }}
-                className="md:px-15 mx-auto max-w-[10rem] text-center text-[10px] text-black md:mt-4 md:max-w-lg md:text-2xl"
+                className="md:px-15 mx-auto max-w-md text-center text-base text-black md:mt-4 md:max-w-lg md:text-2xl"
               >
                 {"Berbagai perbaikan pun dilakukan demi peningkatan pelayanan"
                   .split("")
@@ -102,7 +103,7 @@ export function CustomImageSection4() {
             transition={{ delay: 0.3, duration: 0.4 }}
             src={`${baseUrl}/assets/4.3.png`}
             alt="People in Airport"
-            className="z-20 h-[25rem] w-full object-cover md:h-[32rem]"
+            className="z-20 h-[32rem] w-full object-cover md:h-[32rem]"
           />
         </div>
         <div className="relative bottom-0 z-30 mx-auto flex w-full px-4 md:max-w-4xl md:px-10">
@@ -115,7 +116,7 @@ export function CustomImageSection4() {
               className="-mt-[2rem] mb-4 ml-4 rounded-md bg-[#ee6a57] px-2 py-2 md:-mt-[4rem] md:mb-8 md:px-4 md:py-4"
             >
               <motion.p
-                className="max-w-xs text-[10px] font-semibold text-white md:text-3xl"
+                className="max-w-4xl md:max-w-xs text-base font-semibold text-white md:text-2xl"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -131,11 +132,11 @@ export function CustomImageSection4() {
               whileInView="open"
               className="max-w-lg list-disc pl-5 text-left text-sm text-white"
             >
-              <li className="mb-2 text-[10px] marker:text-red-500 md:mb-4 md:text-xl">
+              <li className="mb-2 text-base marker:text-red-500 md:mb-4 md:text-xl">
                 Proses pemeriksaan keamanan, pelaporan penumpang, dan
                 pengambilan bagasi yang lebih cepat
               </li>
-              <li className="text-[10px] marker:text-red-500 md:text-xl">
+              <li className="text-base marker:text-red-500 md:text-xl">
                 Pelayanan yang lebih ramah dari petugas
               </li>
             </motion.ul>
@@ -161,17 +162,17 @@ export function CustomImageSection4() {
           transition={{ delay: 0.3, duration: 0.4 }}
           src={`${baseUrl}/assets/4.5.png`}
           alt="Koper"
-          className="z-30 h-[25rem] w-full object-cover md:h-[32rem]"
+          className="z-30 h-[32rem] w-full object-cover"
         />
         <div className="absolute inset-0 top-0">
-          <div className="mx-auto flex w-full justify-center space-x-4 px-4 md:max-w-4xl md:px-10">
-            <div className="w-1/2 bg-[#0c9fad] px-4 py-4">
+          <div className="mx-auto flex flex-col lg:flex-row w-full justify-center space-y-4 lg:space-y-0 lg:space-x-4 px-4 md:max-w-4xl md:px-10">
+            <div className="w-full lg:w-1/2 bg-[#0c9fad] px-4 py-4">
               <motion.p
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: -10, y: -10 }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.4 }}
-                className="text-xs text-white md:text-lg"
+                className="text-base text-white md:text-lg"
               >
                 Berbagai fasilitas pendukung juga disediakan, mulai dari Self
                 Bag Drop dan nantinya akan menyusul Automatic Tray Return
@@ -179,13 +180,13 @@ export function CustomImageSection4() {
                 dan suhu ruangan turut diperhatikan
               </motion.p>
             </div>
-            <div className="w-1/2 rounded-b-3xl bg-[#0c9fad] px-4 py-4">
+            <div className="w-full lg:w-1/2 rounded-b-3xl bg-[#0c9fad] px-4 py-4">
               <motion.p
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: 10, y: -10 }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.4 }}
-                className="text-xs text-white md:text-lg"
+                className="text-base text-white md:text-lg"
               >
                 “Tujuan transformasi bandara yang sedang berjalan adalah untuk
                 menciptakan pengalaman yang menyenangkan pada seluruh rangkaian
@@ -197,7 +198,7 @@ export function CustomImageSection4() {
                 initial={{ opacity: 0, x: 0, y: -10 }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.4 }}
-                className="mt-4 text-xs font-bold text-white md:text-lg"
+                className="mt-4 text-base font-bold text-white md:text-lg"
               >
                 Direktur Utama
                 <br />
