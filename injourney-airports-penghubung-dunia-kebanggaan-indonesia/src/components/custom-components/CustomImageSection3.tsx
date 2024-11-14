@@ -9,6 +9,7 @@ export function CustomImageSection3() {
     open: {
       opacity: 1,
       y: 0,
+      transition: { duration: .8, delayChildren: 0.3 }
     },
     close: {
       opacity: 0,
@@ -20,6 +21,7 @@ export function CustomImageSection3() {
       className="relative flex flex-col items-center overflow-hidden"
       ref={ref}
     >
+      <div className="bg-gradient-to-b from-[#ccf2fb] w-full h-[300px] absolute z-10" />
       <div className="relative w-full">
         <img
           src={`${baseUrl}/assets/3.3.png`}
@@ -30,21 +32,21 @@ export function CustomImageSection3() {
           <div className="absolute z-10 flex w-full justify-center md:-top-[34rem]">
             <motion.img
               viewport={{ once: true }}
-              initial={{ opacity: 0, x: 10, y: -10 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.4 }}
               src={`${baseUrl}/assets/3.1.png`}
               alt="People"
               className="h-full w-full object-cover md:max-w-4xl"
             />
           </div>
-          <div className="absolute -bottom-20 flex w-full justify-center">
-            <div className="absolute bottom-0 z-30 h-[16rem] w-full bg-gradient-to-t from-white via-white/95 to-transparent" />
+          <div className="absolute -bottom-20 flex w-full justify-center z-10">
+            <div className="absolute bottom-20 z-30 h-[20rem] w-full bg-gradient-to-t from-[#ffffff]" />
             <motion.img
               viewport={{ once: true }}
-              initial={{ opacity: 0, x: 10, y: -10 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
               src={`${baseUrl}/assets/3.2.png`}
               alt="Airport"
               className="z-20 h-auto w-full object-cover"
@@ -67,6 +69,7 @@ export function CustomImageSection3() {
                 viewport={{ once: true }}
                 variants={paragraphVariant}
                 initial="close"
+                transition={{ delay: 0.3 }}
                 whileInView="open"
                 className="md:px-15 text-left text-2xl font-extrabold text-[#042d73] md:mt-6 md:text-[2.75rem]"
               >
@@ -140,7 +143,7 @@ export function CustomImageSection3() {
           />
         </div>
       </div>
-      <div className="relative z-30 w-full bg-white pb-12">
+      <div className="relative z-50 w-full bg-white pb-12 pt-10">
         <div className="col mx-auto flex w-full flex-col justify-center px-4 md:max-w-4xl md:px-10">
           <motion.p
             viewport={{ once: true }}
@@ -186,7 +189,7 @@ export function CustomImageSection3() {
                 </p>
               </motion.ul>
             </div>
-            <div className="mt-2 mt-4 md:mt-6">
+            <div className="mt-4 md:mt-6">
               <motion.ul
                 viewport={{ once: true }}
                 variants={paragraphVariant}
@@ -202,7 +205,7 @@ export function CustomImageSection3() {
                 </p>
               </motion.ul>
             </div>
-            <div className="mt-2 mt-4 md:mt-6">
+            <div className="mt-4 md:mt-6">
               <motion.ul
                 viewport={{ once: true }}
                 variants={paragraphVariant}
