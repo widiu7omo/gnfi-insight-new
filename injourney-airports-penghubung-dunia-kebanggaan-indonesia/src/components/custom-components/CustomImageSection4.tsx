@@ -38,7 +38,7 @@ export function CustomImageSection4() {
             initial={{ opacity: 0, x: 10, y: 0 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             transition={{ delay: 0.3, duration: 0.4 }}
-            className="mx-auto text-2xl font-extrabold text-center text-white md:px-15 lg:text-black lg:text-4xl xl:text-6xl font-sora leading-snug tracking-wider"
+            className="mx-auto font-extrabold text-center md:px-15 text-black text-xl xs:text-3xl sm:text-4xl xl:text-5xl sm:pt-8 md:pt-12 font-sora leading-snug tracking-wider"
           >
             Peningkatan Pelayanan
           </motion.p>
@@ -52,13 +52,13 @@ export function CustomImageSection4() {
             className="object-contain w-full h-auto px-4 mx-auto my-4 md:my-8 md:max-w-4xl md:px-10"
           />
         </div>
-        <div className="absolute lg:bottom-[10%] xl:top-[20%] z-10">
+        <div className="absolute bottom-[10%] xl:top-[25%] z-10 space-y-2 md:space-y-4">
           <motion.p
             viewport={{ once: true }}
             initial={{ opacity: 0, x: -10, y: -10 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             transition={{ delay: 0.3, duration: 0.4 }}
-            className="max-w-md mx-auto text-base font-semibold leading-snug tracking-wide text-center text-white md:text-black md:max-w-xl lg:text-white xl:text-black lg:text-2xl xl:text-3xl"
+            className="mx-auto font-semibold xl:leading-snug xl:tracking-wide text-center text-white max-w-full leading-tight sm:leading-normal xl:max-w-xl xl:text-black text-xl lg:text-2xl 2xl:text-3xl"
           >
             InJourney Airports mendorong <br /> bandara untuk fokus kepada <br /> pelayanan kepada para penggunanya
           </motion.p>
@@ -67,14 +67,14 @@ export function CustomImageSection4() {
             initial={{ opacity: 0, x: 0, y: -10 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             transition={{ delay: 0.3, duration: 0.4 }}
-            className="max-w-md mx-auto text-base text-center md:px-15 md:mt-4 md:max-w-lg md:text-2xl lg:text-white xl:text-black"
+            className="mx-auto text-sm text-center md:px-15 md:mt-4 leading-tight sm:leading-normal max-w-md xl:max-w-md sm:text-lg lg:text-xl 2xl:text-2xl text-white xl:text-black"
           >
             Berbagai perbaikan pun dilakukan demi peningkatan pelayanan
           </motion.p>
         </div>
         <div className="block xl:hidden absolute bottom-0 w-full top-[5rem] bg-gradient-to-t from-black z-0" />
       </div>
-      <div className="relative w-full">
+      <div className="relative w-full pt-8 sm:pt-0">
         <div className="absolute inset-0 flex flex-col w-full h-full">
           <motion.img
             viewport={{ once: true }}
@@ -83,11 +83,11 @@ export function CustomImageSection4() {
             transition={{ delay: 0.3, duration: 0.4 }}
             src={`${baseUrl}/assets/4.3.png`}
             alt="People in Airport"
-            className="z-20 h-[32rem] w-full object-cover md:h-[32rem]"
+            className="z-20 w-full object-cover h-full"
           />
         </div>
-        <div className="relative bottom-0 z-30 flex w-full px-4 mx-auto md:max-w-4xl md:px-10">
-          <div className="flex flex-col justify-start w-1/2 pb-8 md:pb-16">
+        <div className="relative bottom-0 z-40 flex w-full px-4 mx-auto md:max-w-4xl md:px-10">
+          <div className="flex flex-col justify-start sm:w-1/2 pb-8 md:pb-16">
             <motion.div
               viewport={{ once: true }}
               initial="hidden"
@@ -123,19 +123,10 @@ export function CustomImageSection4() {
           </div>
         </div>
       </div>
-      <div className="relative z-30 w-full">
-        <motion.img
-          viewport={{ once: true }}
-          initial={{ opacity: 0, x: -10, y: -10 }}
-          whileInView={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.4 }}
-          src={`${baseUrl}/assets/4.5.png`}
-          alt="Koper"
-          className="z-30 h-[32rem] w-full object-cover"
-        />
-        <div className="absolute inset-0 top-0">
-          <div className="flex flex-col justify-center w-full px-4 mx-auto lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 md:max-w-4xl md:px-10">
-            <div className="w-full lg:w-1/2 bg-gradient-to-t from-[#10a7b5] to-[#0f6e78] px-4 md:px-8 py-4 md:py-8 h-fit rounded-b-3xl">
+      <div className="relative z-30 w-full h-full flex flex-col items-center justify-center bg-cover bg-no-repeat bg-bottom" style={{ backgroundImage: `url("${baseUrl}/assets/4.5.png")` }}>
+        <div className="top-0 h-full max-w-4xl mx-auto z-30 sm:pb-[20rem]">
+          <div className="flex flex-col sm:flex-row justify-center w-full sm:space-x-8 space-y-[10rem] xs:space-y-8 sm:space-y-0 ">
+            <div className="w-full flex-1 bg-gradient-to-t from-[#10a7b5] to-[#0f6e78] px-4 md:px-8 py-4 md:py-8 h-fit mx-4 sm:mx-0 rounded-b-3xl xs:max-w-[70%] xs:ml-auto ml-0 max-w-full sm:ml-0 sm:max-w-full">
               <motion.p
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: -10, y: -10 }}
@@ -149,8 +140,8 @@ export function CustomImageSection4() {
                 dan suhu ruangan turut diperhatikan
               </motion.p>
             </div>
-            <div className="w-full lg:w-1/2 rounded-b-3xl bg-gradient-to-t from-[#10a7b5] to-[#0f6e78] relative">
-              <div className="absolute w-full top-0 bottom-0 z-40 bg-gradient-to-t from-[#10a7b5] via-[#0f6e78] to-[#0f6e78]/0 via-[80%] rounded-b-3xl" />
+            <div className="w-full flex-1 rounded-t-3xl sm:rounded-t-none rounded-b-none sm:rounded-b-3xl bg-gradient-to-t from-[#10a7b5] to-[#0f6e78] relative ">
+              <div className="absolute w-full top-0 bottom-0 z-40 bg-gradient-to-t from-[#10a7b5] via-[#0f6e78] to-[#0f6e78]/0 via-[80%] rounded-t-3xl sm:rounded-t-none rounded-b-none sm:rounded-b-3xl" />
               <motion.img
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: 10, y: 0 }}
@@ -158,7 +149,7 @@ export function CustomImageSection4() {
                 transition={{ delay: 0.3, duration: 0.4 }}
                 src={`${baseUrl}/assets/4.4.png`}
                 alt="Direktur Utama Faik Fahmi"
-                className="flex-end absolute top-[-50%] ml-auto lg:max-h-[20rem] h-full xl:h-auto w-[80%] object-bottom object-contain z-30"
+                className="absolute top-[-50%] lg:max-h-[20rem] h-full xl:h-auto ml-0 sm:ml-auto mr-auto sm:mr-none sm:w-[80%] object-bottom object-contain z-30"
               />
               <div className="pt-12 pb-8 relative z-40 px-4 md:px-8 ">
                 <motion.p
