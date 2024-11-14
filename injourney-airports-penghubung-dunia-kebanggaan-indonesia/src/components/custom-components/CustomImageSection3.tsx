@@ -18,128 +18,116 @@ export function CustomImageSection3() {
   };
   return (
     <div
-      className="relative flex flex-col items-center overflow-hidden"
-      ref={ref}
+      className="relative flex flex-col items-center overflow-hidden bg-cover bg-no-repeat"
+      ref={ref} style={{ backgroundImage: `url("${baseUrl}/assets/3.3.png")` }}
     >
       <div className="bg-gradient-to-b from-[#ccf2fb] w-full h-[300px] absolute z-10" />
       <div className="relative w-full">
-        <img
-          src={`${baseUrl}/assets/3.3.png`}
-          alt="Sky"
-          className="z-0 h-auto w-full object-cover lg:h-[78rem]"
-        />
-        <div className="hidden lg:block">
-          <div className="absolute z-10 flex w-full justify-center md:-top-[34rem]">
-            <motion.img
-              viewport={{ once: true }}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
-              src={`${baseUrl}/assets/3.1.png`}
-              alt="People"
-              className="h-full w-full object-cover md:max-w-4xl"
-            />
-          </div>
-          <div className="absolute -bottom-20 flex w-full justify-center z-10">
-            <div className="absolute bottom-20 z-30 h-[20rem] w-full bg-gradient-to-t from-[#ffffff]" />
-            <motion.img
-              viewport={{ once: true }}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              src={`${baseUrl}/assets/3.2.png`}
-              alt="Airport"
-              className="z-20 h-auto w-full object-cover"
-            />
-          </div>
-        </div>
-        <div className="absolute inset-0 z-10 flex justify-center">
-          <div className="flex w-full flex-col items-start px-4 md:max-w-4xl md:px-10">
-            <div className="mx-auto">
+        <div className="inset-0 z-10 relative">
+          <div className="w-full lg:max-w-4xl mx-auto md:px-0 lg:px-10">
+            <div className="flex flex-col items-center px-4">
               <motion.p
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: .8, ease: "easeInOut" }}
                 viewport={{ once: true }}
-                variants={paragraphVariant}
-                initial="close"
-                whileInView="open"
-                className="md:px-15 pt-6 text-left text-2xl font-extrabold text-[#18b1bf] md:pt-12 md:text-[2.5rem]"
+                className="md:px-15 pt-6 text-left tracking-wider font-sora text-xl xs:text-3xl sm:text-4xl xl:text-5xl font-extrabold text-[#18b1bf] sm:pt-8 md:pt-12 "
               >
                 InJourney Airports
               </motion.p>
               <motion.p
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: .8, ease: "easeInOut", delay: .3 }}
                 viewport={{ once: true }}
-                variants={paragraphVariant}
-                initial="close"
-                transition={{ delay: 0.3 }}
-                whileInView="open"
-                className="md:px-15 text-left text-2xl font-extrabold text-[#042d73] md:mt-6 md:text-[2.75rem]"
+                className="md:px-15 text-left text-2xl xs:text-4xl sm:text-5xl xl:text-6xl font-sora font-extrabold text-[#042d73] md:mt-6 "
               >
                 Menatap Masa Depan
               </motion.p>
-              <div className="mt-4 w-3/5 space-y-4 rounded-lg bg-[#fdfdfd] px-4 py-4 md:mt-16 md:space-y-10 md:px-8 md:pb-20 md:pt-12 md:w-1/2">
-                <div>
-                  <motion.p
-                    viewport={{ once: true }}
-                    variants={paragraphVariant}
-                    initial="close"
-                    whileInView="open"
-                    className="mb-0 text-left text-base font-extrabold text-[#18b1bf] md:mb-4 md:text-3xl"
-                  >
-                    Visi
-                  </motion.p>
-                  <motion.p
-                    viewport={{ once: true }}
-                    variants={paragraphVariant}
-                    initial="close"
-                    whileInView="open"
-                    className="text-left text-sm text-black md:text-xl"
-                  >
-                    Menjadi operator bandara kelas dunia yang menghubungkan
-                    global travelers dengan hospitality khas Indonesia
-                  </motion.p>
-                </div>
-                <div>
-                  <motion.p
-                    viewport={{ once: true }}
-                    variants={paragraphVariant}
-                    initial="close"
-                    whileInView="open"
-                    className="mb-0 text-left text-base font-extrabold text-[#18b1bf] md:mb-4 md:text-3xl"
-                  >
-                    Misi
-                  </motion.p>
-                  <motion.ul
-                    viewport={{ once: true }}
-                    variants={paragraphVariant}
-                    initial="close"
-                    whileInView="open"
-                    className="list-disc pl-5 text-left text-sm text-black md:text-xl"
-                    style={{ color: "black" }}
-                  >
-                    <li className="mb-4 marker:text-red-500">
-                      Meningkatkan kualitas layanan bandara dengan standar
-                      internasional
-                    </li>
-                    <li className="marker:text-red-500">
-                      Menjadikan bandara sebagai wajah kebanggaan bangsa dan
-                      membentuk bandara yang dapat menciptakan nilai tambah (
-                      <span className="italic">value creator</span>)
-                    </li>
-                  </motion.ul>
+            </div>
+            <div className="relative z-10 flex w-full justify-end">
+              <div className="relative md:absolute z-20 md:left-0 lg:left-2 w-full md:w-1/2 mt-[20rem] md:mt-4 mx-4 flex justify-center">
+                <div className="bg-[#fdfdfd] shadow-sm px-6 py-6 lg:py-12 rounded-lg space-y-4 ">
+                  <div>
+                    <motion.p
+                      viewport={{ once: true }}
+                      variants={paragraphVariant}
+                      initial="close"
+                      whileInView="open"
+                      className="text-left font-sora font-extrabold text-[#18b1bf] mb-4 text-2xl sm:text-3xl"
+                    >
+                      Visi
+                    </motion.p>
+                    <motion.p
+                      viewport={{ once: true }}
+                      variants={paragraphVariant}
+                      initial="close"
+                      whileInView="open"
+                      className="text-left font-sora text-gray-800 text-lg sm:text-xl md:text-lg xl:text-xl"
+                    >
+                      Menjadi operator bandara kelas dunia yang menghubungkan
+                      global travelers dengan hospitality khas Indonesia
+                    </motion.p>
+                  </div>
+                  <div>
+                    <motion.p
+                      viewport={{ once: true }}
+                      variants={paragraphVariant}
+                      initial="close"
+                      whileInView="open"
+                      className="text-left font-sora font-extrabold text-[#18b1bf] mb-4 text-2xl md:text-3xl"
+                    >
+                      Misi
+                    </motion.p>
+                    <motion.ul
+                      viewport={{ once: true }}
+                      variants={paragraphVariant}
+                      initial="close"
+                      whileInView="open"
+                      className="list-disc pl-5 text-left font-sora text-lg sm:text-xl md:text-lg xl:text-xl"
+                      style={{ color: "black" }}
+                    >
+                      <li className="mb-4 marker:text-red-500 text-gray-800">
+                        Meningkatkan kualitas layanan bandara dengan standar
+                        internasional
+                      </li>
+                      <li className="marker:text-red-500 text-gray-800">
+                        Menjadikan bandara sebagai wajah kebanggaan bangsa dan
+                        membentuk bandara yang dapat menciptakan nilai tambah (
+                        <span className="italic">value creator</span>)
+                      </li>
+                    </motion.ul>
+                  </div>
                 </div>
               </div>
+              <motion.img
+                viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.4 }}
+                src={`${baseUrl}/assets/3.1.png`}
+                alt="People"
+                className="absolute top-0 md:relative h-full w-full md:w-1/2 right-0 object-contain object-top md:max-w-4xl mt-0 md:mt-[5rem] lg:mt-0"
+              />
+              <motion.img
+                viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.4 }}
+                src={`${baseUrl}/assets/3.1.1.png`}
+                alt="People with plane"
+                className="h-full absolute w-1/2 bottom-[-50%] hidden lg:block right-0 object-cover md:max-w-4xl"
+              />
             </div>
           </div>
-        </div>
-        <div className="flex w-full justify-center lg:hidden">
-          <div className="absolute bottom-0 z-30 h-[6rem] w-full bg-gradient-to-t from-white via-white/95 to-transparent" />
           <motion.img
             viewport={{ once: true }}
-            initial={{ opacity: 0, x: 10, y: -10 }}
-            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.4 }}
-            src={`${baseUrl}/assets/3.4.png`}
+            src={`${baseUrl}/assets/3.2.png`}
             alt="People"
-            className="z-8 absolute -top-16 h-full w-full object-cover md:max-w-4xl"
+            className="h-full w-full bottom-[-50%] right-0 object-cover relative z-20 mt-0 md:mt-[-5rem] lg:mt-0"
           />
         </div>
       </div>
@@ -150,24 +138,24 @@ export function CustomImageSection3() {
             variants={paragraphVariant}
             initial="close"
             whileInView="open"
-            className="mx-auto mb-4 text-center text-base font-bold text-[#054037] md:mb-12 md:mb-8 md:max-w-2xl md:text-3xl"
+            className="mx-auto mb-4 text-center font-bold text-[#054037] md:mb-12 md:max-w-2xl text-lg sm:text-xl md:text-3xl"
           >
             InJourney Airports akan fokus melakukan pengembangan terhadap 4
             pilar berikut untuk mencapai visi dan misinya:
           </motion.p>
-          <div className="grid grid-cols-2 gap-x-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             <div className="space-y-4">
               <motion.ul
                 viewport={{ once: true }}
                 variants={paragraphVariant}
                 initial="close"
                 whileInView="open"
-                className="list-disc pl-5 text-left text-lg text-[#18b1bf] md:text-xl"
+                className="list-disc pl-5 text-left text-[#18b1bf]"
               >
-                <li className="text-sm font-bold italic md:text-xl">
+                <li className="font-bold italic sm:text-lg">
                   Premises
                 </li>
-                <p className="text-sm text-black md:text-xl">
+                <p className="text-gray-800">
                   infrastruktur dan fasilitas bandara berkualitas prima
                 </p>
               </motion.ul>
@@ -178,45 +166,45 @@ export function CustomImageSection3() {
                 variants={paragraphVariant}
                 initial="close"
                 whileInView="open"
-                className="list-disc pl-5 text-left text-lg text-[#18b1bf] md:text-xl"
+                className="list-disc pl-5 text-left text-[#18b1bf]"
               >
-                <li className="text-sm font-bold italic md:text-xl">
+                <li className="font-bold italic sm:text-lg">
                   People
                 </li>
-                <p className="text-sm text-black md:text-xl">
+                <p className="text-gray-800">
                   SDM di sektor pelayanan yang berkualitas, serta memenuhi
                   standar global
                 </p>
               </motion.ul>
             </div>
-            <div className="mt-4 md:mt-6">
+            <div className="space-y-4">
               <motion.ul
                 viewport={{ once: true }}
                 variants={paragraphVariant}
                 initial="close"
                 whileInView="open"
-                className="list-disc pl-5 text-left text-lg text-[#18b1bf] md:text-xl"
+                className="list-disc pl-5 text-left text-[#18b1bf]"
               >
-                <li className="text-sm font-bold italic md:text-xl">
+                <li className="font-bold italic sm:text-lg">
                   Process
                 </li>
-                <p className="text-sm text-black md:text-xl">
+                <p className="text-gray-800">
                   kolaborasi erat InJourney Airports dengan ekosistem aviasi
                 </p>
               </motion.ul>
             </div>
-            <div className="mt-4 md:mt-6">
+            <div className="space-y-4">
               <motion.ul
                 viewport={{ once: true }}
                 variants={paragraphVariant}
                 initial="close"
                 whileInView="open"
-                className="list-disc pl-5 text-left text-lg text-[#18b1bf] md:text-xl"
+                className="list-disc pl-5 text-left text-[#18b1bf]"
               >
-                <li className="text-sm font-bold italic md:text-xl">
+                <li className="font-bold italic sm:text-lg">
                   Enabler
                 </li>
-                <p className="text-sm text-black md:text-xl">
+                <p className="text-gray-800">
                   implementasi beragam inovasi teknologi, serta digitalisasi
                 </p>
               </motion.ul>

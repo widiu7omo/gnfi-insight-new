@@ -32,7 +32,7 @@ export function CustomImageSection4() {
           alt="People"
           className="z-0 h-auto w-full object-cover"
         />
-        <div className="lg:hidden absolute inset-0 bg-gradient-to-t from-black/100 to-transparent z-10"/>
+        <div className="lg:hidden absolute inset-0 bg-gradient-to-t from-black/100 to-transparent z-10" />
         <div className="absolute bottom-0 pb-12 lg:pb-0 lg:top-0 z-10 flex w-full justify-center md:top-24">
           <div className="flex w-full flex-col items-start px-4 md:max-w-4xl md:px-10">
             <div className="mx-auto">
@@ -59,36 +59,18 @@ export function CustomImageSection4() {
                 initial={{ opacity: 0, x: -10, y: -10 }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.4 }}
-                className="md:px-15 mx-auto max-w-md text-center text-base font-semibold text-black md:max-w-lg md:text-2xl"
+                className="md:px-15 mx-auto max-w-md text-center text-base font-semibold md:text-black text-white md:max-w-lg md:text-2xl"
               >
-                {"InJourney Airports mendorong bandara untuk fokus kepada pelayanan kepada para penggunanya"
-                  .split("")
-                  .map((char, index) => (
-                    <span
-                      key={index}
-                      className={`bg-white ${char === " " ? "bg-transparent" : ""}`}
-                    >
-                      {char}
-                    </span>
-                  ))}
+                InJourney Airports mendorong bandara untuk fokus kepada pelayanan kepada para penggunanya
               </motion.p>
               <motion.p
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: 0, y: -10 }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.4 }}
-                className="md:px-15 mx-auto max-w-md text-center text-base text-black md:mt-4 md:max-w-lg md:text-2xl"
+                className="md:px-15 mx-auto max-w-md text-center text-base text-white md:text-black md:mt-4 md:max-w-lg md:text-2xl"
               >
-                {"Berbagai perbaikan pun dilakukan demi peningkatan pelayanan"
-                  .split("")
-                  .map((char, index) => (
-                    <span
-                      key={index}
-                      className={`bg-white ${char === " " ? "bg-transparent" : ""}`}
-                    >
-                      {char}
-                    </span>
-                  ))}
+                Berbagai perbaikan pun dilakukan demi peningkatan pelayanan
               </motion.p>
             </div>
           </div>
