@@ -16,7 +16,8 @@ export function CustomImageSection5() {
           alt="Airport"
           className="z-0 h-auto w-full object-cover"
         />
-        <div className="absolute bottom-4 z-10 flex w-full transform justify-start md:bottom-auto md:top-1/2 md:-translate-y-1/2">
+        <div className="absolute inset-0 z-10 bg-white bg-opacity-60" />
+        <div className="absolute top-0 z-10 flex w-full transform justify-start pt-12 md:bottom-auto">
           <div className="mx-auto flex w-full flex-col items-start space-y-4 px-4 md:max-w-4xl md:space-y-8 md:px-10">
             <motion.p
               viewport={{ once: true }}
@@ -32,7 +33,7 @@ export function CustomImageSection5() {
               initial={{ opacity: 0, x: -10, y: -10 }}
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               transition={{ delay: 0.3, duration: 0.4 }}
-              className="mt-2 max-w-[90%] text-left text-xs font-semibold text-[#131313] md:max-w-lg md:text-2xl"
+              className="mt-2 max-w-[90%] text-left text-base font-semibold text-[#131313] md:max-w-lg md:text-2xl"
             >
               Peningkatan pelayanan dan kerja sama seluas-luasnya, itulah dua
               senjata InJourney Airports untuk berkibar sampai ke mancanegara
@@ -40,10 +41,10 @@ export function CustomImageSection5() {
           </div>
         </div>
       </div>
-      <div className="relative flex w-full items-center justify-center bg-gradient-to-r from-[#0c9fad] to-[#066e74] md:h-[24rem]">
-        <div className="relative z-30 mx-auto flex w-full px-4 md:max-w-4xl md:space-x-4 md:px-10">
-          <div className="my-auto w-1/2 space-y-4 text-white md:max-w-md">
-            <p className="text-left text-xs font-semibold leading-relaxed md:text-xl">
+      <div className="relative flex w-full items-center justify-center bg-gradient-to-r from-[#0c9fad] to-[#066e74] pt-4 md:pt-20">
+        <div className="relative mx-auto flex w-full justify-between px-4 md:max-w-4xl md:space-x-4 md:px-10">
+          <div className="relative z-40 my-auto w-1/2 space-y-4 text-white md:mb-48 md:max-w-md">
+            <p className="text-left text-base font-semibold leading-relaxed md:text-xl">
               <span className="text-2xl font-bold text-[#131313]">"</span>
               Kami mengubah pendekatan dari yang berfokus pada operasional
               menjadi
@@ -56,31 +57,24 @@ export function CustomImageSection5() {
               </span>
             </p>
             <div className="mt-12 bg-[#0c9fad] px-4 py-4">
-              <p className="text-xs font-semibold text-white md:text-base md:font-bold">
+              <p className="text-base font-semibold text-white md:text-base md:font-bold">
                 Pgs. Corporate Secretary Group Head InJourney Airports, Arie
                 Ahsanurrohim
               </p>
             </div>
           </div>
+          <div className="w-full md:w-1/2 overflow-hidden">
+            <motion.img
+              viewport={{ once: true }}
+              initial={{ opacity: 0, x: 10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.4 }}
+              src={`${baseUrl}/assets/5.2.png`}
+              alt="Airport"
+              className="absolute bottom-0 z-20 h-auto -right-[2rem] md:right-0 overflow-hidden object-cover md:max-w-7xl"
+            />
+          </div>
         </div>
-        <motion.img
-          viewport={{ once: true }}
-          initial={{ opacity: 0, x: 10 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3, duration: 0.4 }}
-          src={`${baseUrl}/assets/5.2.png`}
-          alt="Airport"
-          className="absolute bottom-0 right-0 z-10 h-auto w-1/2 object-cover md:object-right-bottom"
-        />
-        <motion.img
-          viewport={{ once: true }}
-          initial={{ opacity: 0, x: 0, y: 10 }}
-          whileInView={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.4 }}
-          src={`${baseUrl}/assets/5.3.png`}
-          alt="Hand"
-          className="absolute -bottom-[8rem] z-20 h-auto w-full object-cover lg:-top-[20%]"
-        />
       </div>
       <div className="relative flex w-full flex-col justify-center">
         <motion.img
@@ -92,6 +86,15 @@ export function CustomImageSection5() {
           alt="Airport2"
           className="z-10 min-h-[36rem] w-auto object-cover lg:h-auto lg:w-full"
         />
+        <motion.img
+          viewport={{ once: true }}
+          initial={{ opacity: 0, x: 0, y: 10 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.4 }}
+          src={`${baseUrl}/assets/5.3.png`}
+          alt="Hand"
+          className="absolute -top-[8rem] z-30 h-auto w-full object-cover md:-top-[18rem]"
+        />
         <div className="absolute inset-0 z-30 flex items-center justify-center px-4">
           <div className="flex w-full flex-col space-y-12 md:max-w-4xl md:px-10 lg:space-y-8">
             <motion.p
@@ -99,7 +102,7 @@ export function CustomImageSection5() {
               initial={{ opacity: 0, x: 0, y: -10 }}
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               transition={{ delay: 0.3, duration: 0.4 }}
-              className="md:px-15 mx-auto w-full text-center text-xs font-semibold text-white md:mt-4 md:max-w-lg md:text-2xl md:font-bold"
+              className="md:px-15 mx-auto w-full text-center text-base font-semibold text-white md:mt-4 md:max-w-lg md:text-2xl md:font-bold"
             >
               {"Sebagian inisiatif kerja sama internasional yang telah ditempuh InJourney Airports"
                 .split("")
@@ -131,7 +134,7 @@ export function CustomImageSection5() {
                     />
                   </svg>
                 </div>
-                <p className="text-[10px] text-white md:text-2xl">
+                <p className="text-base text-white md:text-2xl">
                   Kolaborasi dengan Incheon International Airport Corporation
                   (IIAC) untuk mengelola Bandara Kualanamu dan Hang Nadim
                   sebagai hub internasional baru
@@ -158,7 +161,7 @@ export function CustomImageSection5() {
                     />
                   </svg>
                 </div>
-                <p className="text-[10px] text-white md:text-2xl">
+                <p className="text-base text-white md:text-2xl">
                   Menandatangani MoU dengan IIAC untuk menjajaki peluang
                   pengelolaan bandara di Kuwait, Uzbekistan, dan Filipina
                 </p>
@@ -169,7 +172,7 @@ export function CustomImageSection5() {
               initial={{ opacity: 0, x: 0, y: -10 }}
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               transition={{ delay: 0.3, duration: 0.4 }}
-              className="md:px-15 mx-auto w-full text-center text-[10px] text-white md:mt-4 md:max-w-3xl md:text-2xl"
+              className="md:px-15 mx-auto w-full text-center text-base text-white md:mt-4 md:max-w-3xl md:text-2xl"
             >
               Dengan langkah-langkah ini, InJourney Airports punya target
               menjadi operator bandara terbesar kedua di dunia pada 2045
