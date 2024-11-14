@@ -39,7 +39,7 @@ export default function BlockHero({ sectionId, index }: BlockHeroType) {
 
 	return (
 		<BlockWrapper label="Hero Block" sectionId={sectionId} index={index}>
-			<div className="grid grid-cols-2 gap-4 pt-3">
+			<div className="pt-3 grid grid-cols-2 gap-4">
 				<Input
 					label="Hero Title"
 					placeholder="Hero Title"

@@ -21,8 +21,8 @@ export function CustomImageSection4() {
   };
 
   return (
-    <div className="relative flex flex-col items-center overflow-hidden">
-      <div className="relative w-full">
+    <div className="relative flex flex-col items-start overflow-hidden">
+      <div className="relative flex flex-col items-center w-full">
         <motion.img
           viewport={{ once: true }}
           initial={{ opacity: 0, x: 0, y: 10 }}
@@ -30,54 +30,51 @@ export function CustomImageSection4() {
           transition={{ delay: 0.3, duration: 0.4 }}
           src={`${baseUrl}/assets/4.1.png`}
           alt="People"
-          className="z-0 h-auto w-full object-cover"
+          className="z-0 object-cover w-full"
         />
-        <div className="lg:hidden absolute inset-0 bg-gradient-to-t from-black/100 to-transparent z-10" />
-        <div className="absolute bottom-0 pb-12 lg:pb-0 lg:top-0 z-10 flex w-full justify-center md:top-24">
-          <div className="flex w-full flex-col items-start px-4 md:max-w-4xl md:px-10">
-            <div className="mx-auto">
-              <motion.p
-                viewport={{ once: true }}
-                initial={{ opacity: 0, x: 10, y: 0 }}
-                whileInView={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.4 }}
-                className="md:px-15 mx-auto pt-6 text-center text-2xl font-extrabold text-white lg:text-black md:pt-12 md:text-5xl"
-              >
-                Peningkatan Pelayanan
-              </motion.p>
-              <motion.img
-                viewport={{ once: true }}
-                initial={{ opacity: 0, x: 10, y: -10 }}
-                whileInView={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.4 }}
-                src={`${baseUrl}/assets/4.2.png`}
-                alt="Ala In Journey"
-                className="mx-auto my-4 h-auto w-full object-contain px-4 md:my-8 md:max-w-4xl md:px-10"
-              />
-              <motion.p
-                viewport={{ once: true }}
-                initial={{ opacity: 0, x: -10, y: -10 }}
-                whileInView={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.4 }}
-                className="md:px-15 mx-auto max-w-md text-center text-base font-semibold md:text-black text-white md:max-w-lg md:text-2xl"
-              >
-                InJourney Airports mendorong bandara untuk fokus kepada pelayanan kepada para penggunanya
-              </motion.p>
-              <motion.p
-                viewport={{ once: true }}
-                initial={{ opacity: 0, x: 0, y: -10 }}
-                whileInView={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.4 }}
-                className="md:px-15 mx-auto max-w-md text-center text-base text-white md:text-black md:mt-4 md:max-w-lg md:text-2xl"
-              >
-                Berbagai perbaikan pun dilakukan demi peningkatan pelayanan
-              </motion.p>
-            </div>
-          </div>
+        <div className="absolute xl:top-[5%]">
+          <motion.p
+            viewport={{ once: true }}
+            initial={{ opacity: 0, x: 10, y: 0 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.4 }}
+            className="mx-auto text-2xl font-extrabold text-center text-white md:px-15 lg:text-black lg:text-4xl xl:text-6xl"
+          >
+            Peningkatan Pelayanan
+          </motion.p>
+          <motion.img
+            viewport={{ once: true }}
+            initial={{ opacity: 0, x: 10, y: -10 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.4 }}
+            src={`${baseUrl}/assets/4.2.png`}
+            alt="Ala In Journey"
+            className="object-contain w-full h-auto px-4 mx-auto my-4 md:my-8 md:max-w-4xl md:px-10"
+          />
+        </div>
+        <div className="absolute lg:bottom-0 xl:top-[20%]">
+          <motion.p
+            viewport={{ once: true }}
+            initial={{ opacity: 0, x: -10, y: -10 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.4 }}
+            className="max-w-md mx-auto text-base font-semibold leading-snug tracking-wide text-center text-white  md:text-black md:max-w-xl lg:text-2xl xl:text-3xl"
+          >
+            InJourney Airports mendorong <br /> bandara untuk fokus kepada <br /> pelayanan kepada para penggunanya
+          </motion.p>
+          <motion.p
+            viewport={{ once: true }}
+            initial={{ opacity: 0, x: 0, y: -10 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.4 }}
+            className="max-w-md mx-auto text-base text-center text-white md:px-15 md:text-black md:mt-4 md:max-w-lg md:text-2xl"
+          >
+            Berbagai perbaikan pun dilakukan demi peningkatan pelayanan
+          </motion.p>
         </div>
       </div>
       <div className="relative w-full">
-        <div className="absolute inset-0 flex h-full w-full flex-col">
+        <div className="absolute inset-0 flex flex-col w-full h-full">
           <motion.img
             viewport={{ once: true }}
             initial={{ opacity: 0, x: 10, y: -10 }}
@@ -88,8 +85,8 @@ export function CustomImageSection4() {
             className="z-20 h-[32rem] w-full object-cover md:h-[32rem]"
           />
         </div>
-        <div className="relative bottom-0 z-30 mx-auto flex w-full px-4 md:max-w-4xl md:px-10">
-          <div className="flex w-1/2 flex-col justify-start pb-8 md:pb-16">
+        <div className="relative bottom-0 z-30 flex w-full px-4 mx-auto md:max-w-4xl md:px-10">
+          <div className="flex flex-col justify-start w-1/2 pb-8 md:pb-16">
             <motion.div
               viewport={{ once: true }}
               initial="hidden"
@@ -98,7 +95,7 @@ export function CustomImageSection4() {
               className="-mt-[2rem] mb-4 ml-4 rounded-md bg-[#ee6a57] px-2 py-2 md:-mt-[4rem] md:mb-8 md:px-4 md:py-4"
             >
               <motion.p
-                className="max-w-4xl md:max-w-xs text-base font-semibold text-white md:text-2xl"
+                className="max-w-4xl text-base font-semibold text-white md:max-w-xs md:text-2xl"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -112,7 +109,7 @@ export function CustomImageSection4() {
               variants={staggerChildren}
               initial="close"
               whileInView="open"
-              className="max-w-lg list-disc pl-5 text-left text-sm text-white"
+              className="max-w-lg pl-5 text-sm text-left text-white list-disc"
             >
               <li className="mb-2 text-base marker:text-red-500 md:mb-4 md:text-xl">
                 Proses pemeriksaan keamanan, pelaporan penumpang, dan
@@ -123,7 +120,7 @@ export function CustomImageSection4() {
               </li>
             </motion.ul>
           </div>
-          <div className="flex w-1/2 justify-end">
+          <div className="flex justify-end w-1/2">
             <motion.img
               viewport={{ once: true }}
               initial={{ opacity: 0, x: 10, y: 0 }}
@@ -147,7 +144,7 @@ export function CustomImageSection4() {
           className="z-30 h-[32rem] w-full object-cover"
         />
         <div className="absolute inset-0 top-0">
-          <div className="mx-auto flex flex-col lg:flex-row w-full justify-center space-y-4 lg:space-y-0 lg:space-x-4 px-4 md:max-w-4xl md:px-10">
+          <div className="flex flex-col justify-center w-full px-4 mx-auto lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 md:max-w-4xl md:px-10">
             <div className="w-full lg:w-1/2 bg-[#0c9fad] px-4 py-4">
               <motion.p
                 viewport={{ once: true }}

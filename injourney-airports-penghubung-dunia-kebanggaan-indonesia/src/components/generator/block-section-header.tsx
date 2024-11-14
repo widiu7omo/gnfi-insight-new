@@ -49,7 +49,7 @@ export default function BlockSectionHeader({
 		<BlockWrapper sectionId={sectionId} index={index} label="Section Header Block">
 			<div className="grid grid-cols-4 gap-4">
 				<div className="flex flex-col w-full">
-					<div className="text-sm text-gray-600 pb-1">Configuration</div>
+					<div className="pb-1 text-sm text-gray-600">Configuration</div>
 					<div className="w-full space-y-4">
 						<Textarea
 							label="Title"

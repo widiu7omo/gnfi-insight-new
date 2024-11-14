@@ -25,7 +25,7 @@ export function CustomImageSection1() {
 
   return (
     <div className="!bg-[#f7f7f7] bg-inherit sm:bg-contain bg-no-repeat" style={{ backgroundImage: `url("${baseUrl}/assets/pattern-logo.svg")` }}>
-      <div className="relative flex items-center justify-center flex-col ">
+      <div className="relative flex flex-col items-center justify-center ">
         <div className="h-[25rem] bg-gradient-radial from-[#f7f7f7] from-[20%] absolute w-full max-w-7xl top-0" />
         <div className="h-[25rem] bg-gradient-to-t from-[#f7f7f7] absolute w-full top-0" />
         <div className="flex flex-col items-center justify-end h-[25rem] max-w-7xl mx-auto relative pb-8">
@@ -48,11 +48,11 @@ export function CustomImageSection1() {
             </motion.div>
           </div>
         </div>
-        <div className="w-full relative">
-          <div className="flex flex-col md:flex-row items-stretch h-full max-w-7xl mx-auto relative z-10 px-8 sm:px-16 xl:px-0">
-            <div className="flex-1 py-8 xl:py-16 relative">
+        <div className="relative w-full">
+          <div className="relative z-10 flex flex-col items-stretch h-full px-8 mx-auto md:flex-row max-w-7xl sm:px-16 xl:px-0">
+            <div className="relative flex-1 py-8 xl:py-16">
               <div className="absolute border-4 top-0 xl:top-[4.6rem] bottom-[0rem] left-[-4%] sm:left-[-6%] xl:left-[-10%] border-l border-[#4dc1c6]" />
-              <ul className="space-y-8 pr-10">
+              <ul className="pr-10 space-y-8">
                 {timelines.map((item, i) =>
                 (<motion.li viewport={{ once: true }}
                   initial={{ opacity: 0, x: -10 }}
@@ -86,27 +86,27 @@ export function CustomImageSection1() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: .8, ease: "easeInOut", delay: i * .3 }}
-                    className="font-sora sm:text-xl xl:text-3xl text-white">
+                    className="text-white font-sora sm:text-xl xl:text-3xl">
                     {item.desc}
                   </motion.div>
                 </motion.li>)
                 )}
               </ul>
             </div>
-            <div className="flex-1 my-auto w-full flex justify-center">
-              <div className="h-full w-full flex flex-col items-stretch justify-end space-y-8 flex-1">
+            <div className="flex justify-center flex-1 w-full my-auto">
+              <div className="flex flex-col items-stretch justify-end flex-1 w-full h-full space-y-8">
                 <div className="flex-grow">
                   <motion.img viewport={{ once: true }}
                     initial={{ opacity: 0, }}
                     whileInView={{ opacity: 1, }}
                     transition={{ duration: .5, ease: "easeIn" }}
                     src={`${baseUrl}/assets/1.2.png`} alt="Map In Journey" className="" />
-                  <div className="px-4 py-6 xl:py-12 xl:px-12 space-y-6 text-white">
+                  <div className="px-4 py-6 text-white xl:py-12 xl:px-12 space-y-6">
                     <motion.div viewport={{ once: true }}
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: .8, ease: "easeIn" }}
-                      className="font-sora font-medium sm:text-2xl xl:text-4xl tracking-wide leading-snug">
+                      className="font-medium leading-snug tracking-wide font-sora sm:text-2xl xl:text-4xl">
                       InJourney Airports
                       kini menjadi operator
                       bandara terbesar
@@ -121,7 +121,7 @@ export function CustomImageSection1() {
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: .8, ease: "easeIn", delay: .3 }}
-                      className="font-sora font-medium sm:text-xl xl:text-3xl text-white leading-normal">
+                      className="font-medium leading-normal text-white font-sora sm:text-xl xl:text-3xl">
                       Dengan 37
                       bandara yang dikelola,
                       penumpangnya diproyeksikan
@@ -133,16 +133,16 @@ export function CustomImageSection1() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row absolute top-0 bottom-0 left-0 right-0">
+          <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col md:flex-row">
             <div className="xl:flex-1 xl:bg-[#3f3f41]" />
-            <div className="flex-1 bg-no-repeat bg-cover bg-right" style={{ backgroundImage: `url(${baseUrl}/assets/1.0.jpg)` }}>
+            <div className="flex-1 bg-right bg-no-repeat bg-cover" style={{ backgroundImage: `url(${baseUrl}/assets/1.0.jpg)` }}>
               <div className="bg-gradient-to-r bg-black/30 xl:bg-transparent xl:bg-gradient-to-tr from-black/80 sm:from-black/70 sm:to-[90%] w-full h-full " />
             </div>
           </div>
         </div>
         <div className="bg-[#5bcbcf] w-full overflow-clip">
-          <div className="w-full relative flex flex-col-reverse lg:flex-row max-w-7xl mx-auto items-center">
-            <div className="flex-1 relative">
+          <div className="relative flex flex-col-reverse items-center w-full mx-auto lg:flex-row max-w-7xl">
+            <div className="relative flex-1">
               <img src={`${baseUrl}/assets/1.5.png`} alt="Airport" className="absolute top-0" />
               <img src={`${baseUrl}/assets/1.6.png`} alt="Cloud" className="absolute top-0 left-10" />
               <img src={`${baseUrl}/assets/1.3.png`} alt="Logo InJourney" className="absolute top-[5%] animate-[spin_120s_linear_infinite]" />
@@ -160,17 +160,17 @@ export function CustomImageSection1() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: .8, ease: "easeInOut" }}
                   viewport={{ once: true }}
-                  className="font-sora font-medium text-xl sm:text-2xl xl:text-3xl text-gray-700 leading-normal">“Merger ini berjalan lancar
+                  className="text-xl font-medium leading-normal text-gray-700 font-sora sm:text-2xl xl:text-3xl">“Merger ini berjalan lancar
                   sesuai dengan tujuan pemerintah untuk meningkatkan sektor aviasi dan kebandarudaraan Indonesia menjadi 5 top global airports
                   operator. Terlebih merger ini sudah masuk dalam Program Strategis Nasional yang telah disetujui oleh pemerintah,”
                 </motion.div>
-                <div className="text-lg xl:text-2xl text-gray-700">
+                <div className="text-lg text-gray-700 xl:text-2xl">
                   <motion.span
                     initial={{ opacity: 0, }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: .8, ease: "easeInOut", delay: .7 }}
                     viewport={{ once: true }}
-                    className="font-bold text-xl xl:text-3xl font-sora text-gray-800">Dony Oskaria</motion.span>,<br />
+                    className="text-xl font-bold text-gray-800 xl:text-3xl font-sora">Dony Oskaria</motion.span>,<br />
                   <motion.span
                     initial={{ opacity: 0, }}
                     whileInView={{ opacity: 1 }}
@@ -183,7 +183,7 @@ export function CustomImageSection1() {
             </div>
           </div>
           <div className="relative z-10 flex items-center bg-[#ec6a56] -mt-[4rem] ">
-            <div className="max-w-7xl mx-auto">
+            <div className="mx-auto max-w-7xl">
               <img src={`${baseUrl}/assets/footer.png`} alt="Footer" />
             </div>
           </div>

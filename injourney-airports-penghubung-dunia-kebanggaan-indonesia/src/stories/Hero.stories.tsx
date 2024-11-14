@@ -19,7 +19,7 @@ const meta = {
 				title: "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
 				coverUrl: "/assets/hero-example.jpg",
 				swipeUpIcon: (
-					<ChevronsDownIcon size={40} className="animate-bounce text-white" />
+					<ChevronsDownIcon size={40} className="text-white animate-bounce" />
 				),
 			},
 			component: COMPONENT_HERO,
@@ -39,7 +39,7 @@ export const SwipeUpIcon: Story = {
 				title: "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
 				coverUrl: "/assets/hero-example.jpg",
 				swipeUpIcon: (
-					<MouseIcon size={40} className="animate-bounce text-white" />
+					<MouseIcon size={40} className="text-white animate-bounce" />
 				),
 			},
 			component: COMPONENT_HERO,

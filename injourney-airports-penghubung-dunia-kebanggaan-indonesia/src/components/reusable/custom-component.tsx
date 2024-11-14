@@ -11,7 +11,7 @@ export default function CustomComponent({ block }: { block: BlockType }) {
 		return <Component />
 	}
 	return (<div className="max-w-4xl mx-auto">
-		<div className="text-xl font-medium text-center text-neutral-600 bg-gray-50 my-8 p-8 rounded-lg shadow border border-gray-200">
+		<div className="p-8 my-8 text-xl font-medium text-center border border-gray-200 rounded-lg shadow text-neutral-600 bg-gray-50">
 			<div className="text-sm">Dynamic Component Renderer for</div> <div>{block.componentCustomName}</div>
 		</div>
 	</div>

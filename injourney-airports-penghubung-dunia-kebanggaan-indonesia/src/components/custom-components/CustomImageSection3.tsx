@@ -18,13 +18,13 @@ export function CustomImageSection3() {
   };
   return (
     <div
-      className="relative flex flex-col items-center overflow-hidden bg-cover bg-no-repeat"
+      className="relative flex flex-col items-center overflow-hidden bg-no-repeat bg-cover"
       ref={ref} style={{ backgroundImage: `url("${baseUrl}/assets/3.3.png")` }}
     >
       <div className="bg-gradient-to-b from-[#ccf2fb] w-full h-[300px] absolute z-10" />
       <div className="relative w-full">
-        <div className="inset-0 z-10 relative">
-          <div className="w-full lg:max-w-4xl mx-auto md:px-0 lg:px-10">
+        <div className="relative inset-0 z-10">
+          <div className="w-full mx-auto lg:max-w-4xl md:px-0 lg:px-10">
             <div className="flex flex-col items-center px-4">
               <motion.p
                 initial={{ opacity: 0, y: -20 }}
@@ -45,7 +45,7 @@ export function CustomImageSection3() {
                 Menatap Masa Depan
               </motion.p>
             </div>
-            <div className="relative z-10 flex w-full justify-end">
+            <div className="relative z-10 flex justify-end w-full">
               <div className="relative md:absolute z-20 md:left-0 lg:left-2 w-full md:w-1/2 mt-[20rem] md:mt-4 mx-4 flex justify-center">
                 <div className="bg-[#fdfdfd] shadow-sm px-6 py-6 lg:py-12 rounded-lg space-y-4 ">
                   <div>
@@ -63,7 +63,7 @@ export function CustomImageSection3() {
                       variants={paragraphVariant}
                       initial="close"
                       whileInView="open"
-                      className="text-left font-sora text-gray-800 text-lg sm:text-xl md:text-lg xl:text-xl"
+                      className="text-lg text-left text-gray-800 font-sora sm:text-xl md:text-lg xl:text-xl"
                     >
                       Menjadi operator bandara kelas dunia yang menghubungkan
                       global travelers dengan hospitality khas Indonesia
@@ -84,14 +84,14 @@ export function CustomImageSection3() {
                       variants={paragraphVariant}
                       initial="close"
                       whileInView="open"
-                      className="list-disc pl-5 text-left font-sora text-lg sm:text-xl md:text-lg xl:text-xl"
+                      className="pl-5 text-lg text-left list-disc font-sora sm:text-xl md:text-lg xl:text-xl"
                       style={{ color: "black" }}
                     >
-                      <li className="mb-4 marker:text-red-500 text-gray-800">
+                      <li className="mb-4 text-gray-800 marker:text-red-500">
                         Meningkatkan kualitas layanan bandara dengan standar
                         internasional
                       </li>
-                      <li className="marker:text-red-500 text-gray-800">
+                      <li className="text-gray-800 marker:text-red-500">
                         Menjadikan bandara sebagai wajah kebanggaan bangsa dan
                         membentuk bandara yang dapat menciptakan nilai tambah (
                         <span className="italic">value creator</span>)
@@ -131,8 +131,8 @@ export function CustomImageSection3() {
           />
         </div>
       </div>
-      <div className="relative z-50 w-full bg-white pb-12 pt-10">
-        <div className="col mx-auto flex w-full flex-col justify-center px-4 md:max-w-4xl md:px-10">
+      <div className="relative z-50 w-full pt-10 pb-12 bg-white">
+        <div className="flex flex-col justify-center w-full px-4 mx-auto col md:max-w-4xl md:px-10">
           <motion.p
             viewport={{ once: true }}
             variants={paragraphVariant}
@@ -152,7 +152,7 @@ export function CustomImageSection3() {
                 whileInView="open"
                 className="list-disc pl-5 text-left text-[#18b1bf]"
               >
-                <li className="font-bold italic sm:text-lg">
+                <li className="italic font-bold sm:text-lg">
                   Premises
                 </li>
                 <p className="text-gray-800">
@@ -168,7 +168,7 @@ export function CustomImageSection3() {
                 whileInView="open"
                 className="list-disc pl-5 text-left text-[#18b1bf]"
               >
-                <li className="font-bold italic sm:text-lg">
+                <li className="italic font-bold sm:text-lg">
                   People
                 </li>
                 <p className="text-gray-800">
@@ -185,7 +185,7 @@ export function CustomImageSection3() {
                 whileInView="open"
                 className="list-disc pl-5 text-left text-[#18b1bf]"
               >
-                <li className="font-bold italic sm:text-lg">
+                <li className="italic font-bold sm:text-lg">
                   Process
                 </li>
                 <p className="text-gray-800">
@@ -201,7 +201,7 @@ export function CustomImageSection3() {
                 whileInView="open"
                 className="list-disc pl-5 text-left text-[#18b1bf]"
               >
-                <li className="font-bold italic sm:text-lg">
+                <li className="italic font-bold sm:text-lg">
                   Enabler
                 </li>
                 <p className="text-gray-800">
@@ -211,7 +211,7 @@ export function CustomImageSection3() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 right-0 flex w-full justify-end">
+        <div className="absolute bottom-0 right-0 flex justify-end w-full">
           <motion.img
             viewport={{ once: true }}
             initial={{ opacity: 0, x: 10, y: -10 }}

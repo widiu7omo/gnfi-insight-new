@@ -31,7 +31,7 @@ export const Page: React.FC = () => {
 						swipeUpIcon: (
 							<ChevronsDownIcon
 								size={40}
-								className="animate-bounce text-white"
+								className="text-white animate-bounce"
 							/>
 						),
 					},

@@ -24,8 +24,8 @@ export function Hero({ block }: { block: BlockType }) {
 			}}
 		>
 			<div className={cn("absolute h-full w-full bg-black/30", gradientColor)}>
-				<div className="mx-auto flex h-full max-w-7xl flex-col justify-between px-4 py-8 xl:px-0">
-					<div className="flex flex-1 items-center justify-center">
+				<div className="flex flex-col justify-between h-full px-4 py-8 mx-auto max-w-7xl xl:px-0">
+					<div className="flex items-center justify-center flex-1">
 						{typeof title === "string" ?
 							<motion.h1
 								viewport={{ once: true }}
@@ -44,7 +44,7 @@ export function Hero({ block }: { block: BlockType }) {
 							<Icon
 								size={40}
 								strokeWidth={1}
-								className="animate-bounce text-white"
+								className="text-white animate-bounce"
 								name={swipeUpIcon as keyof typeof dynamicIconImports}
 							/>
 						) : (

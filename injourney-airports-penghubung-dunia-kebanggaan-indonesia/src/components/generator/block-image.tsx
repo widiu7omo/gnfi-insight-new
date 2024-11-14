@@ -94,7 +94,7 @@ export default function BlockImage({ sectionId, index }: BlockImageType) {
 	return (
 		<BlockWrapper label="Image Block" sectionId={sectionId} index={index}>
 			<div className="flex flex-row w-full p-4 space-x-4">
-				<div className="flex flex-col space-y-2 w-1/3">
+				<div className="flex flex-col w-1/3 space-y-2">
 					<div className="font-semibold text-gray-600">
 						Customize Image Style
 					</div>
@@ -136,7 +136,7 @@ export default function BlockImage({ sectionId, index }: BlockImageType) {
 						/>
 					</div>
 				</div>
-				<div className="w-full h-auto border border-dashed rounded-lg content-center">
+				<div className="content-center w-full h-auto border border-dashed rounded-lg">
 					<div {...getRootProps()}>
 						<div
 							className={`rounded-xl ${files[sectionId] && files[sectionId][index] != null
@@ -145,14 +145,14 @@ export default function BlockImage({ sectionId, index }: BlockImageType) {
 								} flex items-center justify-center flex-col space-y-2 p-4 w-full`}
 						>
 							{files[sectionId] && files[sectionId][index] != null ? (
-								<div className="h-full w-auto rounded-xl relative group">
+								<div className="relative w-auto h-full rounded-xl group">
 									<img
-										className="h-full w-auto rounded-xl"
+										className="w-auto h-full rounded-xl"
 										src={componentProps.imageUrl}
 										alt={componentProps.imageAlt}
 									/>
-									<div className="absolute invisible group-hover:visible cursor-pointer flex items-center justify-center top-0 bottom-0 left-0 right-0 hover:bg-black/60 hover:backdrop-blur-sm transition-all rounded-xl">
-										<div className="flex items-center justify-center flex-col flex-1">
+									<div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center invisible cursor-pointer group-hover:visible hover:bg-black/60 hover:backdrop-blur-sm transition-all rounded-xl">
+										<div className="flex flex-col items-center justify-center flex-1">
 											<ImageIcon
 												className="text-white"
 												size={32}
@@ -160,11 +160,11 @@ export default function BlockImage({ sectionId, index }: BlockImageType) {
 											/>
 											<input {...getInputProps()} />
 											{isDragActive ? (
-												<p className="text-white text-sm">
+												<p className="text-sm text-white">
 													Drop the files here ...
 												</p>
 											) : (
-												<p className="text-white text-sm">
+												<p className="text-sm text-white">
 													Drag 'n' drop some files here, or click to select
 													files
 												</p>
@@ -173,7 +173,7 @@ export default function BlockImage({ sectionId, index }: BlockImageType) {
 									</div>
 								</div>
 							) : (
-								<div className="flex items-center justify-center flex-col">
+								<div className="flex flex-col items-center justify-center">
 									<ImageIcon
 										className="text-neutral-500"
 										size={32}
@@ -181,11 +181,11 @@ export default function BlockImage({ sectionId, index }: BlockImageType) {
 									/>
 									<input {...getInputProps()} />
 									{isDragActive ? (
-										<p className="text-neutral-500 text-sm">
+										<p className="text-sm text-neutral-500">
 											Drop the files here ...
 										</p>
 									) : (
-										<p className="text-neutral-500 text-sm">
+										<p className="text-sm text-neutral-500">
 											Drag 'n' drop some files here, or click to select files
 										</p>
 									)}

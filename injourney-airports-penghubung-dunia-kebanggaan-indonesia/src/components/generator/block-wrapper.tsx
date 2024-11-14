@@ -25,12 +25,12 @@ export default function BlockWrapper({ children, sectionId, index, label, classN
     };
 
     return <div className={cn("p-4 space-y-4", className)}>
-        <div className="text-xl font-semibold flex justify-between">
+        <div className="flex justify-between text-xl font-semibold">
             <span>{label}</span>
             <button
                 onClick={removeBlock}
                 type="button"
-                className="text-white bg-red-800 rounded-lg text-sm px-3 py-2 transition-all inline-flex">
+                className="inline-flex px-3 py-2 text-sm text-white bg-red-800 rounded-lg transition-all">
                 <TrashIcon size={20} className="mr-2" />
                 <span>Remove Block</span>
             </button>

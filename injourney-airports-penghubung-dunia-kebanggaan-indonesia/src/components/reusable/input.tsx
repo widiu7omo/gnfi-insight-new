@@ -20,10 +20,10 @@ export default function Input({
 		>
 			<label
 				htmlFor={rest.id}
-				className="text-gray-500 text-sm font-medium"
+				className="text-sm font-medium text-gray-500"
 			>
 				{label}
-				{required && <span className="ml-1 text-red-500 font-bold">*</span>}
+				{required && <span className="ml-1 font-bold text-red-500">*</span>}
 			</label>
 			<input
 				{...rest}
