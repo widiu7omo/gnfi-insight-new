@@ -16,6 +16,26 @@ export function CustomImageSection3() {
       y: -20,
     },
   };
+  const containerGrid: Variants = {
+    open: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, staggerChildren: 0.4 }
+    },
+    close: {
+      opacity: 0,
+      y: -20,
+    },
+  };
+  const gridItem: Variants = {
+    open: {
+      opacity: 1, y: 0,
+    },
+    close: {
+      opacity: 0,
+      y: -10,
+    },
+  }
   return (
     <div
       className="relative flex flex-col items-center overflow-hidden bg-no-repeat bg-cover"
@@ -143,8 +163,13 @@ export function CustomImageSection3() {
             InJourney Airports akan fokus melakukan pengembangan terhadap 4
             pilar berikut untuk mencapai visi dan misinya:
           </motion.p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-            <div className="space-y-4">
+          <motion.div
+            variants={containerGrid}
+            initial="close" whileInView="open"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+            <motion.div
+              variants={gridItem}
+              className="space-y-4">
               <motion.ul
                 viewport={{ once: true }}
                 variants={paragraphVariant}
@@ -159,8 +184,10 @@ export function CustomImageSection3() {
                   infrastruktur dan fasilitas bandara berkualitas prima
                 </p>
               </motion.ul>
-            </div>
-            <div className="space-y-4">
+            </motion.div>
+            <motion.div
+              variants={gridItem}
+              className="space-y-4">
               <motion.ul
                 viewport={{ once: true }}
                 variants={paragraphVariant}
@@ -176,8 +203,10 @@ export function CustomImageSection3() {
                   standar global
                 </p>
               </motion.ul>
-            </div>
-            <div className="space-y-4">
+            </motion.div>
+            <motion.div
+              variants={gridItem}
+              className="space-y-4">
               <motion.ul
                 viewport={{ once: true }}
                 variants={paragraphVariant}
@@ -192,8 +221,10 @@ export function CustomImageSection3() {
                   kolaborasi erat InJourney Airports dengan ekosistem aviasi
                 </p>
               </motion.ul>
-            </div>
-            <div className="space-y-4">
+            </motion.div>
+            <motion.div
+              variants={gridItem}
+              className="space-y-4">
               <motion.ul
                 viewport={{ once: true }}
                 variants={paragraphVariant}
@@ -208,8 +239,8 @@ export function CustomImageSection3() {
                   implementasi beragam inovasi teknologi, serta digitalisasi
                 </p>
               </motion.ul>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
         <div className="absolute bottom-0 right-0 flex justify-end w-full">
           <motion.img
