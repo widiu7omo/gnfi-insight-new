@@ -76,7 +76,7 @@ export function CustomImageSection2() {
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: .8, ease: "easeInOut", delay: .5 }}
+                transition={{ duration: .8, ease: "easeInOut", delay: .4 }}
                 viewport={{ once: true }}
                 className="flex flex-col md:flex-row space-x-4 bg-[#064038] h-fit md:h-[200px] overflow-hidden rounded-2xl ring-4 md:ring-8 ring-gray-50 shadow-md">
                 <div className="relative w-full md:w-[350px]">
@@ -90,7 +90,7 @@ export function CustomImageSection2() {
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: .8, ease: "easeInOut", delay: .8 }}
+                transition={{ duration: .8, ease: "easeInOut", delay: .6 }}
                 viewport={{ once: true }}
                 className="flex flex-col md:flex-row space-x-4 bg-[#064038] h-fit overflow-clip rounded-2xl ring-4 md:ring-8 ring-gray-50 shadow-md">
                 <div className="relative w-full md:w-[350px]">
