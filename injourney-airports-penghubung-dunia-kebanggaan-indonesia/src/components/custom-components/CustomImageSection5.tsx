@@ -86,13 +86,13 @@ export function CustomImageSection5() {
           <div className="w-full overflow-hidden md:w-1/2 pt-[4rem] xs:pt-[2rem] sm:pt-0 z-50 xs:z-0">
             <div className="absolute bottom-0 z-20 h-auto w-[50%] sm:w-[53%] -right-[2rem] md:right-0 overflow-hidden object-cover md:max-w-7xl">
               <motion.img
-                initial={{ opacity: 0, y: 200 }}
+                initial={{ opacity: 0, y: '100%' }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.6, ease: "anticipate", delay: .3 }}
                 viewport={{ once: true }}
                 src={`${baseUrl}/assets/5.2.png`}
                 alt="Pgs. Corporate"
-                className=""
+                className="relative bottom-0"
               />
               <div className="absolute h-[40%] w-full bottom-0 bg-gradient-to-t from-[#0b8d98]" />
             </div>
