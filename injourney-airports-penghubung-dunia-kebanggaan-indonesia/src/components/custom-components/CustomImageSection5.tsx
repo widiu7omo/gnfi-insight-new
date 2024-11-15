@@ -14,10 +14,10 @@ export function CustomImageSection5() {
           transition={{ delay: 0.3, duration: 0.4 }}
           src={`${baseUrl}/assets/5.1.png`}
           alt="Airport"
-          className="z-0 object-cover w-full h-auto"
+          className="z-0 object-cover w-full h-auto 2xl:!h-[60rem] object-center"
         />
-        <div className="absolute inset-0 z-10 bg-gradient-to-b h-[20%] from-[#f9f9fa]" />
-        <div className="absolute bottom-0 z-10 flex justify-start w-full transform pb-4">
+        <div className="absolute inset-0 z-10 bg-gradient-to-b h-[30%] from-[#f9f9fa]" />
+        <div className="absolute bottom-0 z-10 flex justify-start w-full transform pb-4 2xl:pb-12">
           <div className="flex flex-col items-start w-full px-4 mx-auto space-y-4 md:max-w-4xl md:space-y-8 md:px-10">
             <motion.p
               viewport={{ once: true }}
@@ -41,7 +41,7 @@ export function CustomImageSection5() {
           </div>
         </div>
       </div>
-      <div className="relative flex w-full items-center justify-center bg-gradient-to-r from-[#0c9fad] to-[#066e74] pt-4 md:pt-20">
+      <div className="relative flex w-full items-center justify-center bg-gradient-to-r from-[#0b8d98] to-[#0b8d98] pt-4 md:pt-20">
         <div className="relative flex justify-between w-full px-4 mx-auto md:max-w-4xl md:space-x-4 md:px-10">
           <div className="relative z-40 w-1/2 my-auto text-white space-y-4 md:mb-48 md:max-w-md">
             <div className="text-base font-semibold leading-relaxed text-left md:text-lg">
@@ -61,33 +61,51 @@ export function CustomImageSection5() {
               </p>
             </div>
           </div>
-          <div className="w-full overflow-hidden md:w-1/2">
+          <div className="w-full overflow-hidden md:w-1/2 ">
+            <div className="absolute bottom-0 z-20 h-auto -right-[2rem] md:right-0 overflow-hidden object-cover md:max-w-7xl">
+              <motion.img
+                viewport={{ once: true }}
+                initial={{ opacity: 0, x: 10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3, duration: 0.4 }}
+                src={`${baseUrl}/assets/5.2.png`}
+                alt="Pgs. Corporate"
+                className=""
+              />
+              <div className="absolute h-[40%] w-full bottom-0 bg-gradient-to-t from-[#0b8d98]" />
+            </div>
+          </div>
+        </div>
+        {/* <div className="absolute bottom-[-45%] z-30 max-w-7xl mx-auto">
+          <div className="relative">
             <motion.img
               viewport={{ once: true }}
-              initial={{ opacity: 0, x: 10 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 0, y: 10 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
               transition={{ delay: 0.3, duration: 0.4 }}
-              src={`${baseUrl}/assets/5.2.png`}
-              alt="Airport"
-              className="absolute bottom-0 z-20 h-auto -right-[2rem] md:right-0 overflow-hidden object-cover md:max-w-7xl"
+              src={`${baseUrl}/assets/5.3.png`}
+              alt="Hand"
+              className=" h-auto w-full object-cover"
             />
           </div>
-
-        </div>
-        <div className="absolute bottom-[-45%] z-30 max-w-7xl mx-auto">
-          <motion.img
-            viewport={{ once: true }}
-            initial={{ opacity: 0, x: 0, y: 10 }}
-            whileInView={{ opacity: 1, x: 0, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.4 }}
-            src={`${baseUrl}/assets/5.3.png`}
-            alt="Hand"
-            className=" h-auto w-full object-cover"
-          />
-        </div>
+        </div> */}
       </div>
-      <div className="relative flex flex-col justify-center w-full bg-bottom" style={{ backgroundImage: `url(${baseUrl}/assets/5.4.png)` }}>
-        <div className="inset-0 z-30 flex items-center justify-center px-4 pb-[10rem]">
+      <div className="relative flex flex-col items-center justify-center w-full bg-bottom overflow-hidden" style={{ backgroundImage: `url(${baseUrl}/assets/5.4.png)` }}>
+        <div className="h-[40%] bg-gradient-to-b from-[#0b8d98] to-black/0 from-[30%] absolute top-0 w-full z-10" />
+        <div className="absolute top-[-15%] z-0 max-w-7xl mx-auto">
+          <div className="relative">
+            <motion.img
+              viewport={{ once: true }}
+              initial={{ opacity: 0, x: 0, y: 10 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.4 }}
+              src={`${baseUrl}/assets/5.3.png`}
+              alt="Hand"
+              className=" h-auto w-full object-cover"
+            />
+          </div>
+        </div>
+        <div className="inset-0 z-30 flex items-center justify-center px-4 py-[10rem]">
           <div className="flex flex-col w-full space-y-12 md:max-w-4xl md:px-10 lg:space-y-[4rem]">
             <motion.p
               viewport={{ once: true }}
@@ -98,7 +116,7 @@ export function CustomImageSection5() {
             >
               <span className="bg-[#ee6a57] box-decoration-clone px-4">Sebagian inisiatif kerja sama internasional yang telah ditempuh InJourney Airports</span>
             </motion.p>
-            <div className="items-stretch min-h-full grid grid-cols-2 gap-4 md:gap-16  pt-[10rem] ">
+            <div className="items-stretch min-h-full grid grid-cols-2 gap-4 md:gap-16 pt-[10rem] ">
               <motion.div
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: 0, y: 10 }}
