@@ -27,8 +27,8 @@ export function CustomHeroSection0() {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
                 className={cn("absolute h-full w-full bg-gradient-to-tr from-black/80")}>
-                <div className="mx-auto flex h-full max-w-7xl flex-col justify-between px-4 py-8 xl:px-0">
-                    <div className="flex flex-1 items-center xl:items-end justify-center xl:justify-start w-full ">
+                <div className="flex flex-col justify-between h-full px-4 py-8 mx-auto max-w-7xl xl:px-0">
+                    <div className="flex items-center justify-center flex-1 w-full xl:items-end xl:justify-start ">
                         <h1
                             className="max-w-full text-center xl:text-start text-4xl font-bold !leading-snug text-[#fb8a24] lg:text-5xl xl:text-7xl py-6 relative"
                         >

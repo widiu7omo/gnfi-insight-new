@@ -4,7 +4,7 @@ import { Paragraph } from "./Paragraph";
 import { COMPONENT_PARAGRAPH } from "@/data/component-front";
 const CarouselItem = ({ item, className }: { item: CarouselItemType, className?: string }) => {
 	return (
-		<div className="flex flex-col items-start h-full space-y-3 z-20 max-w-2xl mx-auto">
+		<div className="z-20 flex flex-col items-start h-full max-w-2xl mx-auto space-y-3">
 			<div className="relative flex items-center justify-center h-[258px] flex-none  top-0">
 				<motion.img
 					initial={{ opacity: 0, scale: 0.5 }}

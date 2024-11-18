@@ -41,10 +41,10 @@ export default function BlockQuote({ sectionId, index }: BlockQuoteType) {
 	return (
 		<BlockWrapper label="Quote Block" sectionId={sectionId} index={index}>
 			<Quote block={{ component: COMPONENT_QUOTE, componentProps: { ...quoteState, className: "w-full bg-neutral-200 p-4 rounded-lg" } }} />
-			<div className="grid grid-cols-4 gap-4 pt-3">
+			<div className="pt-3 grid grid-cols-4 gap-4">
 				<div className="col-span-2">
 					<fieldset>
-						<div className="text-gray-500 font-medium">Varian Quote</div>
+						<div className="font-medium text-gray-500">Varian Quote</div>
 						<div className="space-x-2">
 							<input
 								type="radio"

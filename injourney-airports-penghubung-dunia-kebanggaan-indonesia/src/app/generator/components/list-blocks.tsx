@@ -24,9 +24,9 @@ import {
 } from "@/data/component-front";
 import { ContentType, ItemTypes } from "@/components/generator/types";
 export default function ListBlocks() {
-    return <div className="w-20px space-y-2 min-h-screen h-full overflow-y-auto p-6">
+    return <div className="h-full min-h-screen p-6 overflow-y-auto w-20px space-y-2">
         {/* SECTIONS COMPONENTS */}
-        <div className="text-neutral-500 uppercase text-sm border-b border-neutral-300 pb-1">
+        <div className="pb-1 text-sm uppercase border-b text-neutral-500 border-neutral-300">
             sections
         </div>
         <DraggableWrapper
@@ -35,13 +35,13 @@ export default function ListBlocks() {
             name="section-group"
             component={COMPONENT_SECTION_GROUP}
         >
-            <div className="text-neutral-500 flex items-center flex-col">
+            <div className="flex flex-col items-center text-neutral-500">
                 <GroupIcon size={45} strokeWidth={1} />
                 <div className="text-sm">Group / Section</div>
             </div>
         </DraggableWrapper>
         {/* BLOCK COMPONENTS */}
-        <div className="text-neutral-500 uppercase text-sm border-b border-neutral-300 pb-1 pt-3">
+        <div className="pt-3 pb-1 text-sm uppercase border-b text-neutral-500 border-neutral-300">
             blocks
         </div>
         <DraggableWrapper
@@ -50,7 +50,7 @@ export default function ListBlocks() {
             name="navbar"
             component={COMPONENT_NAVBAR}
         >
-            <div className="text-neutral-500 flex items-center flex-col">
+            <div className="flex flex-col items-center text-neutral-500">
                 <AppWindowIcon size={45} strokeWidth={1} />
                 <div className="text-sm">Navbar Block</div>
             </div>
@@ -61,7 +61,7 @@ export default function ListBlocks() {
             name="hero"
             component={COMPONENT_HERO}
         >
-            <div className="text-neutral-500 flex items-center flex-col">
+            <div className="flex flex-col items-center text-neutral-500">
                 <GalleryThumbnailsIcon size={45} strokeWidth={1} />
                 <div className="text-sm">Hero Block</div>
             </div>
@@ -72,7 +72,7 @@ export default function ListBlocks() {
             name="section-header"
             component={COMPONENT_SECTION_HEADER}
         >
-            <div className="text-neutral-500 flex items-center flex-col">
+            <div className="flex flex-col items-center text-neutral-500">
                 <GalleryVerticalIcon size={45} strokeWidth={1} />
                 <div className="text-sm">Section Heading Block</div>
             </div>
@@ -83,7 +83,7 @@ export default function ListBlocks() {
             name="heading"
             component={COMPONENT_HEADING}
         >
-            <div className="text-neutral-500 flex items-center flex-col">
+            <div className="flex flex-col items-center text-neutral-500">
                 <HeadingIcon size={45} strokeWidth={1} />
                 <div className="text-sm">Heading Block</div>
             </div>
@@ -94,7 +94,7 @@ export default function ListBlocks() {
             name="paragraph"
             component={COMPONENT_PARAGRAPH}
         >
-            <div className="text-neutral-500 flex items-center flex-col">
+            <div className="flex flex-col items-center text-neutral-500">
                 <TextIcon size={45} strokeWidth={1} />
                 <div className="text-sm">Paragraph Block</div>
             </div>
@@ -105,7 +105,7 @@ export default function ListBlocks() {
             name="quote"
             component={COMPONENT_QUOTE}
         >
-            <div className="text-neutral-500 flex items-center flex-col">
+            <div className="flex flex-col items-center text-neutral-500">
                 <QuoteIcon size={45} strokeWidth={1} />
                 <div className="text-sm">Quote Block</div>
             </div>
@@ -116,7 +116,7 @@ export default function ListBlocks() {
             name="image"
             component={COMPONENT_IMAGE}
         >
-            <div className="text-neutral-500 flex items-center flex-col">
+            <div className="flex flex-col items-center text-neutral-500">
                 <ImageIcon size={45} strokeWidth={1} />
                 <div className="text-sm">Image Block</div>
             </div>
@@ -128,7 +128,7 @@ export default function ListBlocks() {
             name="custom-component"
             component={COMPONENT_CUSTOM}
         >
-            <div className="text-neutral-500 flex items-center flex-col">
+            <div className="flex flex-col items-center text-neutral-500">
                 <LayoutTemplateIcon size={45} strokeWidth={1} />
                 <div className="text-sm">Custom Block</div>
             </div>

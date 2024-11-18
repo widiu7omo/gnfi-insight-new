@@ -39,29 +39,29 @@ export default function BlockCustom({
 	};
 	return (
 		<div className="rounded-xl h-[110px] flex items-start justify-start flex-col space-y-2">
-			<div className="text-xl font-semibold group space-x-3 bg-neutral-200 w-full rounded-t-xl flex justify-end items-center px-2">
+			<div className="flex items-center justify-end w-full px-2 text-xl font-semibold group space-x-3 bg-neutral-200 rounded-t-xl">
 				<button
 					onClick={removeBlock}
 					type="button"
-					className="text-white bg-red-800 rounded-lg text-sm invisible group-hover:visible opacity-0 hover:opacity-100 px-3 py-2 transition-all inline-flex"
+					className="inline-flex invisible px-3 py-2 text-sm text-white bg-red-800 rounded-lg opacity-0 group-hover:visible hover:opacity-100 transition-all"
 				>
 					<TrashIcon size={20} className="mr-2" />
 					<span>Remove Block</span>
 				</button>
 				<span>Custom Component</span>
 			</div>
-			<div className="px-6 w-full">
+			<div className="w-full px-6">
 				<fieldset className="flex flex-col items-start justify-start w-full ">
 					<label
 						htmlFor="component-name"
-						className="text-medium text-sm text-neutral-500 font-medium"
+						className="text-sm font-medium text-medium text-neutral-500"
 					>
 						Nama Komponen
 					</label>
 					<input
 						type="text"
 						id="component-name"
-						className="outline-none text-semibold w-full text-xl"
+						className="w-full text-xl outline-none text-semibold"
 						placeholder="Type Component Here"
 						onBlur={onBlur}
 						onChange={onChange}

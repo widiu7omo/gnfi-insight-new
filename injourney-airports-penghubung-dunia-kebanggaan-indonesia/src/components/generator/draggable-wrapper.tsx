@@ -67,7 +67,7 @@ export default function DraggableWrapper({
 			ref={drag}
 			style={{ opacity }}
 			data-testid={"box"}
-			className="cursor-pointer p-4 hover:bg-neutral-300 hover:shadow-sm bg-neutral-200 "
+			className="p-4 cursor-pointer hover:bg-neutral-300 hover:shadow-sm bg-neutral-200 "
 		>
 			{children}
 		</div>

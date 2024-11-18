@@ -59,7 +59,7 @@ export function Carousel({ items, childClassName, indicator }: CarouselType) {
         );
     };
     return (
-        <div className="relative h-full w-full pb-12 flex items-center justify-center" ref={constraintsRef}>
+        <div className="relative flex items-center justify-center w-full h-full pb-12" ref={constraintsRef}>
             <SliderIndicator
                 indicator={indicator}
                 className="xl:flex hidden right-[4rem] z-20"
@@ -67,7 +67,7 @@ export function Carousel({ items, childClassName, indicator }: CarouselType) {
             />
             <SliderIndicator
                 indicator={indicator}
-                className="flex xl:hidden bottom-5 pb-2 z-20"
+                className="z-20 flex pb-2 xl:hidden bottom-5"
                 totalSlide={slides.length}
             />
             <Slider
@@ -82,7 +82,7 @@ export function Carousel({ items, childClassName, indicator }: CarouselType) {
                     arrows: false,
                     beforeChange: (_current: number, next: number) => setActive(next),
                 }}
-                className="bottom-0 left-0 right-0 top-0 flex w-full flex-row"
+                className="top-0 bottom-0 left-0 right-0 flex flex-row w-full"
             >
                 {slides}
             </Slider>

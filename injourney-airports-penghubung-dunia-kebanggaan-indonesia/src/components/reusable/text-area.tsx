@@ -19,14 +19,14 @@ export default function Textarea({
 		>
 			<label
 				htmlFor={id}
-				className="text-gray-500 font-medium text-sm tracking-wide"
+				className="text-sm font-medium tracking-wide text-gray-500"
 			>
 				{label}
-				{required && <span className="ml-1 text-red-500 font-bold">*</span>}
+				{required && <span className="ml-1 font-bold text-red-500">*</span>}
 			</label>
 			<textarea
 				{...rest}
-				className="mr-2 px-2 w-full text-sm text-neutral-800 py-2 focus:outline-gray-400 outline outline-1 outline-gray-300 rounded-lg placeholder:text-sm"
+				className="w-full px-2 py-2 mr-2 text-sm rounded-lg text-neutral-800 focus:outline-gray-400 outline outline-1 outline-gray-300 placeholder:text-sm"
 				rows={4}
 			/>
 			{helperText && <small className="text-gray-500">{helperText}</small>}

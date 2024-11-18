@@ -100,7 +100,7 @@ export const SortableWrapper: FC<PropsWithChildren<SortableWrapperType>> = ({
 		<div
 			ref={ref}
 			style={{ opacity }}
-			className="border border-dashed bg-white border-neutral-600 rounded-xl"
+			className="bg-white border border-dashed border-neutral-600 rounded-xl"
 			data-handler-id={handlerId}
 		>
 			{children}

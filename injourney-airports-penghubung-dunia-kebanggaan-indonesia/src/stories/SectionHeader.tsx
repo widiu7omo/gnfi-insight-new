@@ -21,7 +21,7 @@ export function SectionHeader({ block }: { block: BlockType }) {
 	return (
 		<div
 			className={cn(
-				"flex h-[600px] items-center justify-center bg-cover bg-center",
+				"flex h-[600px] items-center justify-center bg-cover bg-center px-4 sm:px-12 xl:px-0",
 				className,
 			)}
 			style={{

@@ -129,27 +129,27 @@ export default function PageWrapper({ initBlocks, initMetadata }: PageWrapperTyp
                 <div className="w-[30%] border-r bg-neutral-100">
                     <ListBlocks />
                 </div>
-                <div className="flex-1 space-y-7 min-h-screen overflow-auto relative">
+                <div className="relative flex-1 min-h-screen overflow-auto space-y-7">
                     <div className="text-3xl font-semibold text-neutral-900 flex justify-between sticky z-[50] top-0 px-8 py-4 bg-white border-b">
                         <span> Page Content Generator</span>
                         <div className="bg-neutral-800">
                             <button
                                 onClick={generateBlocks}
                                 type="button"
-                                className="text-lg text-white bg-black px-4 py-2 font-semibold"
+                                className="px-4 py-2 text-lg font-semibold text-white bg-black"
                             >
                                 Generate
                             </button>
                             <Link href={"/preview"}
                                 type="button"
-                                className="text-lg text-white font-semibold px-4"
+                                className="px-4 text-lg font-semibold text-white"
                             >
                                 Preview
                             </Link>
 
                         </div>
                     </div>
-                    <div className="space-y-4 p-8">
+                    <div className="p-8 space-y-4">
                         <div>
                             <label
                                 className="text-base font-bold text-gray-500"
@@ -158,7 +158,7 @@ export default function PageWrapper({ initBlocks, initMetadata }: PageWrapperTyp
                             </label>
                             <input
                                 type="text"
-                                className="text-2xl font-semibold text-neutral-700 outline-none w-full"
+                                className="w-full text-2xl font-semibold outline-none text-neutral-700"
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
                             />
