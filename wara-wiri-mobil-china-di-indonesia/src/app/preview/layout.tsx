@@ -24,7 +24,7 @@ export default function RootLayout({
       <body style={{ ...inter.style }} className="w-full">
         <Providers>{children}</Providers>
       </body>
-      <GoogleAnalytics gaId="G-HPD8SMYT1T" />
+      <GoogleAnalytics gaId="G-1CY08P02JH" />
     </html>
   )
 }
