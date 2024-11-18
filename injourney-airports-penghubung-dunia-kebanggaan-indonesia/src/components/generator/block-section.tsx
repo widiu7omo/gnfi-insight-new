@@ -32,7 +32,7 @@ export const BlockSection: FC<BlockSectionType> = memo(function BlockSection({
 			// @ts-ignore
 			ref={drop}
 			data-testid={sectionName}
-			className="border p-3 bg-neutral-50 w-full rounded-xl"
+			className="w-full p-3 border bg-neutral-50 rounded-xl"
 			id={sectionName}
 		>
 			<div className="capitalize">{sectionName}</div>

@@ -20,7 +20,7 @@ export default function ComponentStyler({ onValueChange, defaultValue }: Compone
                 setState(e.target.value)
             }
             onBlur={() => onValueChange?.(state)}
-            className="p-2 rounded-lg w-full bg-gray-50 outline-none text-sm text-gray-800 placeholder:text-gray-500"
+            className="w-full p-2 text-sm text-gray-800 rounded-lg outline-none bg-gray-50 placeholder:text-gray-500"
         />
     </fieldset>
 }

@@ -42,7 +42,7 @@ export default function BlockNavbar({ sectionId, index }: BlockNavbarType) {
 		<BlockWrapper label="Navbar Block" sectionId={sectionId} index={index}>
 			<div>
 				<div className="text-sm text-gray-500">Configuration</div>
-				<div className="grid grid-cols-1 xl:grid-cols-4 gap-4 pt-2">
+				<div className="pt-2 grid grid-cols-1 xl:grid-cols-4 gap-4">
 					<fieldset className="flex items-center">
 						<input
 							id="blurEffect"
@@ -55,7 +55,7 @@ export default function BlockNavbar({ sectionId, index }: BlockNavbarType) {
 						/>
 						<label
 							htmlFor="blurEffect"
-							className="text-gray-500 font-medium text-sm tracking-wide"
+							className="text-sm font-medium tracking-wide text-gray-500"
 						>
 							Blur Transparent Navbar
 						</label>

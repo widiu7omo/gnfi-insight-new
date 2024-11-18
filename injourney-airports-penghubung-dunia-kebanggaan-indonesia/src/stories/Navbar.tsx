@@ -36,7 +36,7 @@ export function Navbar({ block }: { block: BlockType }) {
 					: "data-[blur=true]:bg-white",
 			)}
 		>
-			<div className="max-w-7xl mx-auto justify-between items-center flex w-full">
+			<div className="flex items-center justify-between w-full mx-auto max-w-7xl">
 				<motion.button
 					layout
 					data-blur={shouldBlur}

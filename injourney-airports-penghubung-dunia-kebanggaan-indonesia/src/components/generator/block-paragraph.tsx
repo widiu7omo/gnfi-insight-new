@@ -62,9 +62,9 @@ export default function BlockParagraph({
 	return (
 		<BlockWrapper label="Paragraph Block" sectionId={sectionId} index={index}>
 			<div className="flex flex-col">
-				<div className="text-sm text-gray-600 pb-1">Configuration</div>
+				<div className="pb-1 text-sm text-gray-600">Configuration</div>
 				<div className="grid grid-cols-2 gap-4">
-					<div className="space-y-4 border border-gray-200 rounded-2xl p-4">
+					<div className="p-4 border border-gray-200 space-y-4 rounded-2xl">
 						<Input
 							label="Style Ornamen Top Right"
 							value={paragraphState.classOrnamentTopRight}
@@ -89,7 +89,7 @@ export default function BlockParagraph({
 								// }, 1000)
 							}} />
 					</div>
-					<div className="space-y-4 border border-gray-200 rounded-2xl p-4">
+					<div className="p-4 border border-gray-200 space-y-4 rounded-2xl">
 						<Input
 							label="Style Ornamen Top Left"
 							value={paragraphState.classOrnamentTopLeft}
@@ -114,7 +114,7 @@ export default function BlockParagraph({
 								// }, 1000)
 							}} />
 					</div>
-					<div className="space-y-4 border border-gray-200 rounded-2xl p-4">
+					<div className="p-4 border border-gray-200 space-y-4 rounded-2xl">
 						<Input
 							label="Style Ornamen Bottom Left"
 							value={paragraphState.classOrnamentBottomLeft}
@@ -139,7 +139,7 @@ export default function BlockParagraph({
 								// }, 1000)
 							}} />
 					</div>
-					<div className="space-y-4 border border-gray-200 rounded-2xl p-4">
+					<div className="p-4 border border-gray-200 space-y-4 rounded-2xl">
 						<Input
 							label="Style Ornamen Bottom Left"
 							value={paragraphState.classOrnamentBottomRight}
@@ -167,7 +167,7 @@ export default function BlockParagraph({
 				</div>
 			</div>
 			<div className="flex flex-col">
-				<div className=" text-gray-600 text-lg pb-1">Style Paragraph</div>
+				<div className="pb-1 text-lg text-gray-600 ">Style Paragraph</div>
 				<Input
 					label=""
 					placeholder="Style with Tailwind classes"
@@ -180,7 +180,7 @@ export default function BlockParagraph({
 					}
 					onBlur={saveConfig}
 				/>
-				<div className="pt-4 text-gray-600 text-lg pb-1">Style Container</div>
+				<div className="pt-4 pb-1 text-lg text-gray-600">Style Container</div>
 				<Input
 					label=""
 					placeholder="Style with Tailwind classes"
@@ -195,7 +195,7 @@ export default function BlockParagraph({
 				/>
 			</div>
 			<div className="">
-				<div className="text-sm text-gray-600 pb-1">Content</div>
+				<div className="pb-1 text-sm text-gray-600">Content</div>
 				<div className="py-2 bg-white">
 					<EditorContent editor={editor} />
 				</div>

@@ -86,7 +86,7 @@ export default function CardContainer({ preview }: { preview?: boolean }) {
     return (
       <>
         <div
-          className="border border-dashed border-neutral-300 p-3 w-full"
+          className="w-full p-3 border border-dashed border-neutral-300"
           style={style}
         >
           {cards.map((card, i) => renderCard(card, i))}

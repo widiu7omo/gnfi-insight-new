@@ -15,7 +15,7 @@ export default function Quote2(props: QuoteFunType) {
 					alt={props.figureName}
 					className="relative z-10"
 				/>
-				<div className="absolute -top-10 right-0 hidden xl:block">
+				<div className="absolute right-0 hidden -top-10 xl:block">
 					<svg
 						role="img"
 						aria-label="Quote 2"

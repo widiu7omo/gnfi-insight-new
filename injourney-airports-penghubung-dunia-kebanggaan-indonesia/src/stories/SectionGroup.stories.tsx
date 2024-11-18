@@ -12,8 +12,8 @@ const meta = {
 	},
 	args: {
 		children: (
-			<div className="p-8 max-w-7xl mx-auto">
-				<div className="font-bold text-center space-y-4 p-8 rounded-xl border border-gray-300 border-dashed ">
+			<div className="p-8 mx-auto max-w-7xl">
+				<div className="p-8 font-bold text-center border border-gray-300 border-dashed space-y-4 rounded-xl ">
 					<h1>Header Component</h1>
 					<p>Paragraph Component</p>
 					<footer>Footer Component</footer>

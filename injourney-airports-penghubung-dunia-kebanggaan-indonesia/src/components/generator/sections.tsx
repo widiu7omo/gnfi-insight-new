@@ -28,7 +28,7 @@ export default function Sections({ onDrop }: SectionsType) {
 				} flex items-center justify-center flex-col ${isActive ? "bg-neutral-200" : "bg-neutral-100"
 				}`}
 		>
-			<div className="space-y-4 w-full">
+			<div className="w-full space-y-4">
 				{components.map((component,index) => {
 					return (
 						<SectionItem
@@ -39,7 +39,7 @@ export default function Sections({ onDrop }: SectionsType) {
 					);
 				})}
 			</div>
-			<div className="text-neutral-500 space-y-3 font-medium flex items-center justify-center flex-col w-full py-3 border border-dashed border-neutral-500 rounded-xl">
+			<div className="flex flex-col items-center justify-center w-full py-3 font-medium border border-dashed text-neutral-500 space-y-3 border-neutral-500 rounded-xl">
 				<span>
 					{!isActive && (
 						<GroupIcon strokeWidth={1} className="text-neutral-500" size={50} />

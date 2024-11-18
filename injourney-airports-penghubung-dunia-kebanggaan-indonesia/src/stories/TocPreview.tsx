@@ -10,7 +10,7 @@ export function TocPreview() {
 		<div className="h-screen">
 			<button
 				onClick={toggleNavHandler}
-				className="bg-black text-white rounded-full px-4 py-2"
+				className="px-4 py-2 text-white bg-black rounded-full"
 				type="button"
 			>
 				Open TOC

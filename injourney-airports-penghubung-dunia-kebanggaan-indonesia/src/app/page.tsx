@@ -21,7 +21,7 @@ export default function Home({ searchParams }: HomeType) {
 	const grouped = groupByToMap(generateBlocks, (item) => item.group);
 
 	return (
-		<main className="bg-neutral-50 w-full relative">
+		<main className="relative w-full bg-neutral-50">
 			<Toc />
 			<Navbar
 				block={{

@@ -17,13 +17,13 @@ export default function FormMetadata({
     return (
         <div>
             <div className="text-base font-bold text-gray-500">Metadata</div>
-            <div className="space-y-2 p-5 rounded-2xl border border-dashed border-gray-200">
+            <div className="p-5 border border-gray-200 border-dashed space-y-2 rounded-2xl">
                 <div>
                     <span className="text-gray-500">Meta Title</span>
                     <input
                         id="seo-title"
                         type="text"
-                        className="text-lg text-neutral-700 outline-none w-full"
+                        className="w-full text-lg outline-none text-neutral-700"
                         value={seoTitle}
                         onChange={(e) => setSeoTitle(e.target.value)}
                         onBlur={() => {
@@ -36,7 +36,7 @@ export default function FormMetadata({
                     <span className="text-gray-500">Meta Description</span>
                     <textarea
                         id="seo-desc"
-                        className="text-lg text-neutral-700 outline-none w-full"
+                        className="w-full text-lg outline-none text-neutral-700"
                         onChange={(e) => setSeoDesc(e.target.value)}
                         value={seoDesc}
                         onBlur={() => {

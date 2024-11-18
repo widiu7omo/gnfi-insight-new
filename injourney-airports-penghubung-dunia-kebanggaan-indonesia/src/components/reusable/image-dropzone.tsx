@@ -66,7 +66,7 @@ export default function ImageDropzone({ onUploaded, label, className, defaultPre
     });
     return (
         <div className={cn('relative', className)}>
-            <div className=" font-medium text-gray-500 text-sm pb-2">{label}</div>
+            <div className="pb-2 text-sm font-medium text-gray-500 ">{label}</div>
             {isExist && (
                 <div className="absolute top-0 right-0 z-10">
                     <div
@@ -74,19 +74,19 @@ export default function ImageDropzone({ onUploaded, label, className, defaultPre
                         onClick={removeImage}
                         onKeyDown={removeImage}
                     >
-                        <XIcon className="size-4 text-white" />
+                        <XIcon className="text-white size-4" />
                     </div>
                 </div>
             )}
-            <div {...getRootProps()} className="border border-dashed rounded-lg relative hover:cursor-pointer group">
-                {isExist && <div className="absolute invisible z-20 group-hover:visible cursor-pointer flex items-center justify-center top-0 bottom-0 left-0 right-0 hover:bg-black/60 hover:backdrop-blur-sm transition-all rounded-xl">
-                    <div className="flex items-center justify-center flex-col flex-1">
+            <div {...getRootProps()} className="relative border border-dashed rounded-lg hover:cursor-pointer group">
+                {isExist && <div className="absolute top-0 bottom-0 left-0 right-0 z-20 flex items-center justify-center invisible cursor-pointer group-hover:visible hover:bg-black/60 hover:backdrop-blur-sm transition-all rounded-xl">
+                    <div className="flex flex-col items-center justify-center flex-1">
                         <ImageIcon className="text-white" size={32} strokeWidth={1} />
                         <input {...getInputProps({ onBlur })} />
                         {isDragActive ? (
-                            <p className="text-white text-sm">Drop the files here ...</p>
+                            <p className="text-sm text-white">Drop the files here ...</p>
                         ) : (
-                            <p className="text-white text-sm">
+                            <p className="text-sm text-white">
                                 Drag 'n' drop some files here, or click to select files
                             </p>
                         )}
@@ -100,23 +100,23 @@ export default function ImageDropzone({ onUploaded, label, className, defaultPre
                         } flex items-center justify-center flex-col space-y-2 p-4 w-full bg-gray-200`}
                 >
                     {isExist ? (
-                        <div className="h-full w-auto rounded-xl relative">
+                        <div className="relative w-auto h-full rounded-xl">
                             <img
-                                className="h-full w-auto rounded-xl"
+                                className="w-auto h-full rounded-xl"
                                 src={fileState.preview}
                                 alt={fileState.name}
                             />
                         </div>
                     ) : (
-                        <div className="flex items-center justify-center flex-col">
+                        <div className="flex flex-col items-center justify-center">
                             <ImageIcon className="text-neutral-500" size={32} strokeWidth={1} />
                             <input {...getInputProps({ onBlur })} />
                             {isDragActive ? (
-                                <p className="text-neutral-500 text-sm">
+                                <p className="text-sm text-neutral-500">
                                     Drop the files here ...
                                 </p>
                             ) : (
-                                <p className="text-neutral-500 text-sm">
+                                <p className="text-sm text-neutral-500">
                                     Drag 'n' drop some files here, or click to select files
                                 </p>
                             )}

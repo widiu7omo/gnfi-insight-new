@@ -100,9 +100,9 @@ export default function SectionItem({ sectionId, index }: { sectionId: string, i
 						} flex items-center justify-center flex-col ${isActive ? "bg-neutral-300/70" : "bg-neutral-200/60"
 						}`}
 				>
-					<div className="flex flex-col justify-between items-start w-full">
-						<div className="flex space-y-4 justify-between items-center w-full">
-							<div className="flex space-x-2 items-center justify-start">
+					<div className="flex flex-col items-start justify-between w-full">
+						<div className="flex items-center justify-between w-full space-y-4">
+							<div className="flex items-center justify-start space-x-2">
 								<button
 									type="button"
 									onClick={() => setToggleSecName((val) => !val)}
@@ -118,19 +118,19 @@ export default function SectionItem({ sectionId, index }: { sectionId: string, i
 									value={sectionName}
 									onChange={(e) => setSectionName(e.target.value)}
 									readOnly={toggleSecName}
-									className="bg-transparent outline-none text-sm text-gray-500"
+									className="text-sm text-gray-500 bg-transparent outline-none"
 								/>
 							</div>
-							<div className="text-xs text-neutral-500 w-fit flex-none flex flex-row items-center space-x-4">
-								<button className=" bg-red-800 rounded p-1" type="button" onClick={handleDeleteSection}>
+							<div className="flex flex-row items-center flex-none text-xs text-neutral-500 w-fit space-x-4">
+								<button className="p-1 bg-red-800 rounded " type="button" onClick={handleDeleteSection}>
 									<TrashIcon className="text-white p-0.5" size={18} />
 								</button>
-								<span className="rounded-full bg-black text-white px-3 py-1 ml-1">
+								<span className="px-3 py-1 ml-1 text-white bg-black rounded-full">
 									ID:{" "}{sectionId}
 								</span>
 							</div>
 						</div>
-						<div className="space-x-2 w-full">
+						<div className="w-full space-x-2">
 							<ComponentStyler defaultValue={sectionClassName[sectionId]} onValueChange={(value) => {
 								setSectionClassName(prev => ({ ...prev, [sectionId]: value }))
 								setBlocks((prev) => {
@@ -166,7 +166,7 @@ export default function SectionItem({ sectionId, index }: { sectionId: string, i
 						className={`space-y-4 w-full ${sections.length > 0 ? "py-2" : "h-[200px]"}`}
 					>
 						<Blocks sectionId={sectionId} />
-						<div className="text-neutral-500 font-medium flex items-center justify-center flex-col w-full py-3 border border-dashed border-neutral-500 rounded-xl">
+						<div className="flex flex-col items-center justify-center w-full py-3 font-medium border border-dashed text-neutral-500 border-neutral-500 rounded-xl">
 							<span>
 								{!isActive && (
 									<BlocksIcon strokeWidth={2} className="text-neutral-500" />

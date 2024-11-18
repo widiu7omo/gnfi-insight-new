@@ -79,8 +79,8 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 	return (
 		<BlockWrapper label="Heading Block" sectionId={sectionId} index={index} className="p-4 space-x-2 rounded-t-xl space-y-4">
 			<div className="flex flex-col">
-				<div className="text-sm text-gray-600 pb-1">Configuration</div>
-				<div className="bg-neutral-200 rounded">
+				<div className="pb-1 text-sm text-gray-600">Configuration</div>
+				<div className="rounded bg-neutral-200">
 					<button
 						type="button"
 						onClick={() => {
@@ -172,7 +172,7 @@ export default function BlockHeading({ sectionId, index }: BlockHeadingType) {
 				onBlur={saveConfig}
 			/>
 			<div>
-				<div className="text-sm text-gray-600 pb-1">Content</div>
+				<div className="pb-1 text-sm text-gray-600">Content</div>
 				<div className="p-4 bg-white rounded">
 					<EditorContent editor={editor} />
 				</div>
