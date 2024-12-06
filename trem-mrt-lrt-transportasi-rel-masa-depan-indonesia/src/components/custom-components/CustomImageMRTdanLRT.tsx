@@ -82,21 +82,31 @@ export function CustomImageMRTdanLRT() {
               MRT dan LRT
             </motion.p>
             <ul className="list-none space-y-4 p-0">
-              <li className="flex text-base md:text-xl">
+              <motion.li 
+                initial={{ opacity: 0, x: -20 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+                className="flex text-base md:text-xl">
                 <span className="text-[#973131]">&#9658;</span>
                 <span className="ml-2 text-black">
                   Setelah trem punah dari jalan-jalan kota, era bus diesel pun
                   hadir.
                 </span>
-              </li>
-              <li className="flex text-base md:text-xl">
+              </motion.li>
+              <motion.li 
+                initial={{ opacity: 0, x: -20 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }} 
+                className="flex text-base md:text-xl">
                 <span className="text-[#973131]">&#9658;</span>
                 <span className="ml-2 text-black">
                   Seiring waktu pemerintah menilai transportasi rel lebih
                   efektif dan tidak menyumbang polusi seperti transportasi umum
                   seperti bus.
                 </span>
-              </li>
+              </motion.li>
             </ul>
           </div>
           <motion.img
@@ -104,7 +114,7 @@ export function CustomImageMRTdanLRT() {
             viewport={{ once: true }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
-            src={`${baseUrl}/assets/3.3.png`}
+            src={`${baseUrl}/assets/3.1.png`}
             alt="Kereta MRT"
             className="self-end h-full w-1/2 object-cover"
           />
@@ -113,21 +123,30 @@ export function CustomImageMRTdanLRT() {
       <div className="px-4">
         <div className="mx-auto flex max-w-4xl bg-[#8a1b2f] p-4 md:p-8">
           <ul className="list-none space-y-4 p-0 md:pr-20">
-            <li className="flex text-base md:text-xl">
+            <motion.li 
+                initial={{ opacity: 0, x: -20 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+                className="flex text-base md:text-xl">
               <span className="text-[#faffbc]">&#9658;</span>
               <span className="ml-2 text-white">
                 Maka dari itu, dihadirkanlah MRT dan LRT di Jakarta pada 2019.
               </span>
-            </li>
+            </motion.li>
           </ul>
           <ul className="list-none space-y-4 p-0 md:pr-20">
-            <li className="flex text-base md:text-xl">
+            <motion.li 
+                initial={{ opacity: 0, x: -20 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }} className="flex text-base md:text-xl">
               <span className="text-[#faffbc]">&#9658;</span>
               <span className="ml-2 text-white">
                 Khusus untuk LRT, Kota Palembang, Sumatra Selatan malahan lebih
                 dulu beroperasi dibandingkan Jakarta yakni pada 2018.
               </span>
-            </li>
+            </motion.li>
           </ul>
         </div>
       </div>
