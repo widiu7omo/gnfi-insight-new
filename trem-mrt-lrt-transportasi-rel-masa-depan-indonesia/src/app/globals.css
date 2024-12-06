@@ -7,6 +7,9 @@
   .text-balance {
     text-wrap: balance;
   }
+  .heading{
+    @apply text-inherit
+  }
   h1.heading {
     @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-snug;
   }
@@ -27,9 +30,6 @@
   }
   .timeline-box-2 {
     @apply space-y-5 rounded-xl bg-black p-3 text-custom-yellow md:p-5;
-  }
-  .heading.white{
-    @apply text-white
   }
 }
 

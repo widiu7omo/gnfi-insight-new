@@ -70,7 +70,7 @@ export function CustomImageMRTdanLRT() {
     <div className="relative">
       <section
         id="section-1"
-        className="bg-[#3b1312] -mt-1 overflow-clip space-y-14 pb-10"
+        className="bg-[#3b1312] -mt-1 overflow-hidden space-y-14 pb-10"
       >
         <div className="relative flex items-start justify-center max-w-4xl mx-auto z-10">
           <div className="w-full bg-no-repeat bg-[cover,contain] xl:bg-[cover,auto] bg-[center_top] relative bg-blend-multiply">
@@ -171,7 +171,6 @@ export function CustomImageMRTdanLRT() {
           </motion.div>
         </div>
       </section>
-      <div className="absolute top-[-5rem] right-[-20%] h-[40rem] w-full bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-[#b22025] from-0% to-[#3b1312] to-70% z-0" />
       <div className="relative z-0 hidden md:block">
         <div className="absolute bottom-[35rem] h-[20rem] w-full bg-gradient-to-b from-[#8a201d] from-0% to-[#3b1312] to-70% z-10" />
         <div className="absolute bottom-[35rem] h-[20rem] w-full bg-gradient-to-l from-[#3b1312]/0 from-0% to-[130%] to-[#3b1312] z-10" />
