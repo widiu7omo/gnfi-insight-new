@@ -19,7 +19,7 @@ export function CustomImageMakinPanjang() {
             viewport={{ once: true, amount: 0.5 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
             className="text-3xl font-extrabold text-black md:text-6xl"
           >
             Makin <span className="text-[#2e469f]">Panjang</span>
@@ -46,7 +46,7 @@ export function CustomImageMakinPanjang() {
               initial={{ opacity: 0, x: -30 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
               src={`${baseUrl}/assets/4.2.png`}
               alt="Title"
               className="h-auto w-full max-w-sm"
@@ -57,7 +57,7 @@ export function CustomImageMakinPanjang() {
               initial={{ opacity: 0, x: 30 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
               src={`${baseUrl}/assets/4.3.png`}
               alt="Title"
               className="mb-4 h-12 w-auto max-w-sm md:h-24"
@@ -66,7 +66,7 @@ export function CustomImageMakinPanjang() {
               initial={{ opacity: 0, y: 10 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
               className="text-base text-white md:text-3xl"
             >
               Untuk MRT nantinya <br /> penumpang bisa menikmati <br />
@@ -86,7 +86,7 @@ export function CustomImageMakinPanjang() {
               initial={{ opacity: 0, x: -30 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
               src={`${baseUrl}/assets/4.5.png`}
               alt="Title"
               className="h-auto w-[90%] max-w-sm"
@@ -97,7 +97,7 @@ export function CustomImageMakinPanjang() {
               initial={{ opacity: 0, x: 30 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
               src={`${baseUrl}/assets/4.4.png`}
               alt="Title"
               className="mb-4 h-12 w-auto max-w-sm md:h-24"
@@ -106,7 +106,7 @@ export function CustomImageMakinPanjang() {
               initial={{ opacity: 0, y: 10 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
               className="text-base text-white md:text-3xl"
             >
               Sementara LRT rute, <br /> barunya akan mencapai
