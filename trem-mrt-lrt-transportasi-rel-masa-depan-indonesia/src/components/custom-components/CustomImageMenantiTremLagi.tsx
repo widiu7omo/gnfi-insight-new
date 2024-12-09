@@ -39,7 +39,7 @@ export function CustomImageMenantiTremLagi() {
               initial={{ opacity: 0, x: -30 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
               src={`${baseUrl}/assets/5.2.png`}
               alt="Title"
               className="z-20 -mt-14 h-auto w-[90%] max-w-sm md:-mt-[4.5rem] md:pb-4"
@@ -50,7 +50,7 @@ export function CustomImageMenantiTremLagi() {
               initial={{ opacity: 0, y: 10 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
               className="text-base text-white md:text-2xl"
             >
               Kabarnya, Kota Bogor siap mengoperasikan trem yang "tidak seperti"
@@ -63,7 +63,7 @@ export function CustomImageMenantiTremLagi() {
             initial={{ opacity: 0, x: -30 }}
             viewport={{ once: true }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
             src={`${baseUrl}/assets/5.3.png`}
             alt="Title"
             className="z-20 h-auto w-full"
@@ -74,7 +74,7 @@ export function CustomImageMenantiTremLagi() {
                 initial={{ opacity: 0, y: 10 }}
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
                 className="mb-2 md:mb-4"
               >
                 Trem itu adalah trem otonom, yang sebelumnya sudah dioperasikan
