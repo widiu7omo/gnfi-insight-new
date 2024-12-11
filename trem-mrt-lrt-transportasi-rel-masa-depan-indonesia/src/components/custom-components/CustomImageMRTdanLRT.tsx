@@ -70,7 +70,7 @@ export function CustomImageMRTdanLRT() {
   return (
     <section className="relative flex flex-col items-center overflow-hidden bg-[#cecfc1] pt-8 md:px-0">
       <div className="relative flex w-full items-start bg-[#cecfc1] md:justify-center xl:pb-8">
-        <div className="flex hidden w-full max-w-4xl items-start md:flex">
+        <div className="hidden w-full max-w-4xl items-start md:flex">
           <div className="mb-4 pl-4 md:pr-12 lg:mt-20 lg:pl-0">
             <motion.p
               initial={{ opacity: 0, y: 10 }}
@@ -121,57 +121,59 @@ export function CustomImageMRTdanLRT() {
             className="h-full w-1/2 self-end object-cover"
           />
         </div>
-        <div className="block md:hidden">
+        <div className="block md:hidden max-w-4xl mx-auto">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duratio: .3 }}
-            className="mb-4 text-left text-2xl font-extrabold text-[#420913] md:text-6xl"
+            className="mb-4  px-4 md:px-0 text-left text-5xl font-extrabold text-[#420913] md:text-6xl"
           >
             MRT dan LRT
           </motion.p>
-          <ul className="list-none space-y-4 p-0">
-            <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              viewport={{ once: true }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3, duration: .4 }}
-              className="flex text-base md:text-xl pr-4"
-            >
-              <span className="text-[#973131]">&#9658;</span>
-              <span className="ml-2 text-black">
-                Setelah trem punah dari jalan-jalan kota, era bus diesel pun
-                hadir.
-              </span>
-            </motion.li>
-          </ul>
-          <div className="flex">
-            <ul>
+          <div className="space-y-4 px-4">
+            <ul className="list-none space-y-4 p-0">
               <motion.li
                 initial={{ opacity: 0, x: -20 }}
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3, duration: .4 }}
-                className="flex text-base md:text-xl"
+                className="flex text-base md:text-xl pr-4"
               >
                 <span className="text-[#973131]">&#9658;</span>
-                <span className="ml-2 text-black">
-                  Seiring waktu pemerintah menilai transportasi rel lebih
-                  efektif dan tidak menyumbang polusi seperti transportasi umum
-                  seperti bus.
+                <span className="ml-2 text-neutral-800 text-base xs:text-xl sm:text-2xl font-medium">
+                  Setelah trem punah dari jalan-jalan kota, era bus diesel pun
+                  hadir.
                 </span>
               </motion.li>
             </ul>
-            <motion.img
-              initial={{ opacity: 0, x: 30 }}
-              viewport={{ once: true }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }} 
-              transition={{ delay: 0.5, duration: .6 }}
-              src={`${baseUrl}/assets/3.1.png`}
-              alt="Kereta MRT"
-              className="h-full w-1/2 self-end object-cover"
-            />
+            <div className="flex">
+              <ul>
+                <motion.li
+                  initial={{ opacity: 0, x: -20 }}
+                  viewport={{ once: true }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3, duration: .4 }}
+                  className="flex text-base md:text-xl"
+                >
+                  <span className="text-[#973131]">&#9658;</span>
+                  <span className="ml-2 text-neutral-800 text-base xs:text-xl sm:text-2xl font-medium">
+                    Seiring waktu pemerintah menilai transportasi rel lebih
+                    efektif dan tidak menyumbang polusi seperti transportasi umum
+                    seperti bus.
+                  </span>
+                </motion.li>
+              </ul>
+              <motion.img
+                initial={{ opacity: 0, x: 30 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ delay: 0.5, duration: .6 }}
+                src={`${baseUrl}/assets/3.1.png`}
+                alt="Kereta MRT"
+                className="h-full w-1/2 self-end object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -211,7 +213,7 @@ export function CustomImageMRTdanLRT() {
       <motion.img
         initial={{ opacity: 0, x: -30 }}
         viewport={{ once: true }}
-        whileInView={{ opacity: 1, x: 0, y: 0 }} 
+        whileInView={{ opacity: 1, x: 0, y: 0 }}
         transition={{ delay: 0.5, duration: .6 }}
         src={`${baseUrl}/assets/3.2.png`}
         alt="Title"
