@@ -1,157 +1,219 @@
 "use client";
 import { baseUrl } from "@/constants/meta";
-import { motion, useScroll, useTransform, type Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { useRef } from "react";
 
 export function CustomImageSerupaTapi() {
   const ref = useRef(null);
-  const paragraphVariant: Variants = {
-    open: {
-      opacity: 1,
-      y: 0,
-    },
-    close: {
-      opacity: 0,
-      y: -20,
-    },
-  };
   return (
     <div
-      className="flex flex-col bg-gradient-to-b from-[#531b1a] to-[#da472e] overflow-clip "
+      className="flex flex-col bg-[#f9fafb] overflow-clip relative items-center h-full"
       ref={ref}
     >
-      <div className="flex flex-col z-10 relative bg-cover bg-[center_top] bg-no-repeat items-center justify-center">
-        <motion.p viewport={{ once: true }} variants={paragraphVariant} initial="close" whileInView="open" className="text-center md:text-4xl text-2xl text-white font-extrabold px-4 md:px-15 pt-6">
-          IIMS, Panggungnya <br />
-          Mobil China untuk Unjuk Gigi
+      <div className="max-w-4xl mx-auto relative z-10 py-12 space-y-6 px-4 md:px-0">
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0, duration: .6 }}
+          className="text-3xl md:text-6xl text-center font-sora font-bold text-red-800">
+          Serupa, tapi Tak Sama
+        </motion.h3>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: .4 }}
+          className="text-xl md:text-2xl font-sora text-center">
+          Baik trem, MRT, dan LRT sama-sama transportasi berbasis rel intrakota,
+          tapi ada beberapa poin yang membedakannya.{" "}
         </motion.p>
-        <img
+      </div>
+      <div className="relative flex items-end justify-center max-w-4xl w-full mx-auto pt-28">
+        <div
+          className="absolute w-full h-full bottom-0 mx-auto object-center flex justify-center" >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: .4, duration: .4 }}
+            className="rounded-full bg-[#8e1d2c] object-center size-[50rem] md:size-[60rem] mt-[20%] md:mt-0 w-full" />
+        </div>
+        <motion.img
+          initial={{ opacity: 0, y: -20, scale: 0.8 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ delay: 0, duration: .3 }}
           src={`${baseUrl}/assets/2.1.png`}
-          alt="Pattern"
-          className="absolute z-0 w-full"
+          alt="Train Center"
+          className="relative z-[3] w-[50%] md:w-auto"
         />
-        <div className="max-w-4xl mx-auto mt-10 relative">
-          <div className="relative z-10 flex items-center justify-center flex-col">
-            <div className="h-[100px]" />
-            <motion.img viewport={{ once: true }}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: .9 }}
-              src={`${baseUrl}/assets/2.5.png`}
-              alt="China Flag"
-              className="absolute"
-            />
-            <motion.img viewport={{ once: true }}
-              initial={{ opacity: 0, x: -10, y: -10 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ delay: 0.7, duration: .7 }}
-              src={`${baseUrl}/assets/2.3.png`}
-              alt="Car 2"
-              className="absolute"
-            />
-            <motion.img viewport={{ once: true }}
-              initial={{ opacity: 0, x: 10, y: -10 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ delay: 0.3, duration: .9 }}
+        <motion.img
+          initial={{ opacity: 0, x: -40, scale: 0.9 }}
+          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          transition={{ delay: 0.2, duration: .3 }}
+          src={`${baseUrl}/assets/2.3.png`}
+          alt="Train Right"
+          className="absolute z-[2] right-[-3%] md:right-[-8rem] w-[70%] md:w-auto"
+        />
+        <motion.img
+          initial={{ opacity: 0, x: 40, scale: 0.9 }}
+          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          transition={{ delay: 0.4, duration: .3 }}
+          src={`${baseUrl}/assets/2.2.png`}
+          alt="Train Left"
+          className="absolute z-[1] left-[-5%] md:left-[-5rem] w-[90%] md:w-auto"
+        />
+      </div>
+      <div className="block lg:hidden bg-[#8e1d2c] w-full">
+        <div className="md:flex-row flex-col flex items-center">
+          <motion.img
+            initial={{ opacity: 0, y: -20, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0, duration: .5 }}
+            src={`${baseUrl}/assets/2.6.png`}
+            alt="Serupa, tapi Tak Sama"
+            className="flex-1 relative z-10 h-full w-full object-contain max-h-[50rem] -mt-[6rem]"
+          />
+          <motion.div
+            initial={{ opacity: 0, y: -20, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0.2, duration: .3 }}
+            className="bg-white p-4 sm:p-8 flex h-fit overflow-clip relative w-full flex-1 -mt-20 sm:-mt-32 md:-ml-24  max-w-xl">
+            <div className="flex flex-col space-y-2 absolute">
+              {/* biome-ignore lint/suspicious/noArrayIndexKey: <explanation> */}
+              {new Array(20).fill(0).map((i, inx) => (<div className="bg-[#8c162b] size-4" key={inx} />))}
+            </div>
+            <div className="flex flex-col space-y-2">
+              <div className="space-x-2 pl-12 pt-4 flex items-start">
+                <div className="w-0 h-0 border-t-[1rem] border-t-[#8c162b] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
+                <p className="text-base sm:text-xl font-sora font-medium flex-1">
+                  Trem, sekalipun sudah tidak ada lagi di Indonesia, bisa
+                  diketahui ciri khasnya dengan beroperasi di tengah jalan-jalan
+                  kota.
+                </p>
+              </div>
+              <div className="space-x-2 pl-12 pt-4 flex items-start">
+                <div className="w-0 h-0 border-t-[1rem] border-t-[#8c162b] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
+                <p className="text-base sm:text-xl font-sora font-medium flex-1">
+                  Sementara, MRT dan LRT  yang bisa dilihat di Jakarta berbeda.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+        <div className="max-w-5xl flex flex-col mx-auto relative h-fit items-center">
+          <div className="flex flex-row-reverse items-start justify-center">
+            <motion.img
+              initial={{ opacity: 0, y: -20, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ delay: 0, duration: .5 }}
               src={`${baseUrl}/assets/2.4.png`}
-              alt="Car 3"
-              className="absolute"
+              alt="Serupa, tapi Tak Sama"
+              className="relative z-10 max-w-full sm:max-w-[80%] top-0 sm:top-[-2rem]"
             />
-            <motion.img viewport={{ once: true }}
-              initial={{ opacity: 0, x: 10, y: -10 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ delay: 0.6, duration: .5 }}
-              src={`${baseUrl}/assets/2.2.png`}
-              alt="Car 1"
-              className="relative z-0"
+            <motion.img
+              initial={{ opacity: 0, y: -20, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ delay: 0.3, duration: .2 }}
+              src={`${baseUrl}/assets/2.5.png`}
+              alt="MRT"
+              className="absolute z-10 max-w-[50%] right-0"
             />
           </div>
+          <motion.div
+            initial={{ opacity: 0, y: -20, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0.2, duration: .3 }}
+            className="bg-white pl-4 pt-4 p-4 sm:p-8 flex h-fit relative overflow-clip w-full -rotate-1 max-w-sm mt-[-5rem] ml-[-5rem] sm:mt-[-3rem]">
+            <div className="flex flex-col space-y-2 absolute">
+              {/* biome-ignore lint/suspicious/noArrayIndexKey: <explanation> */}
+              {new Array(20).fill(0).map((i, inx) => (<div className="bg-[#8c162b] size-4" key={inx} />))}
+            </div>
+            <div className="flex flex-col space-y-2">
+              <div className="space-x-2 pl-12 pt-4 flex items-start">
+                <div className="w-0 h-0 border-t-[1rem] border-t-[#8c162b] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
+                <p className="text-base sm:text-xl font-sora font-medium flex-1">
+                  MRT mengoperasikan armadanya di jalur layang dan bawah tanah, sementara LRT di jalur layang saja.
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
-        <div className="absolute bottom-0 w-full flex flex-col justify-center items-center z-0 overflow-hidden">
-          <div className="bg-[#531a19] w-full h-[80px] absolute bottom-[0rem] z-10 left-0 right-0" />
-          <motion.img viewport={{ once: true }}
-            initial={{ zoom: .2, opacity: 0 }}
-            whileInView={{ zoom: 1, opacity: 1 }}
-            transition={{ duration: .4 }}
-            src={`${baseUrl}/assets/2.6.1.png`}
-            alt="Stage"
-            className="w-[80rem] min-w-[80rem] relative z-10"
+      </div>
+      <div className="relative z-10 bg-[#911e2d] w-full hidden lg:block">
+        <div className="mx-auto max-w-4xl flex items-center -mt-20">
+          <motion.img
+            initial={{ opacity: 0, y: -20, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0, duration: .5 }}
+            src={`${baseUrl}/assets/2.6.png`}
+            alt="Serupa, tapi Tak Sama"
+            className="flex-1 relative z-10"
+          />
+          <motion.div
+            initial={{ opacity: 0, y: -20, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0.2, duration: .3 }}
+            className="bg-white pl-4 pt-4 p-8 flex h-fit overflow-clip relative w-full flex-1 -ml-24 rotate-1">
+            <div className="flex flex-col space-y-2 absolute">
+              {/* biome-ignore lint/suspicious/noArrayIndexKey: <explanation> */}
+              {new Array(20).fill(0).map((i, inx) => (<div className="bg-[#8c162b] size-4" key={inx} />))}
+            </div>
+            <div className="flex flex-col space-y-2">
+              <div className="space-x-2 pl-12 pt-4 flex items-start">
+                <div className="w-0 h-0 border-t-[1rem] border-t-[#8c162b] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
+                <p className="text-xl font-sora font-medium flex-1">
+                  Trem, sekalipun sudah tidak ada lagi di Indonesia, bisa
+                  diketahui ciri khasnya dengan beroperasi di tengah jalan-jalan
+                  kota.
+                </p>
+              </div>
+              <div className="space-x-2 pl-12 pt-4 flex items-start">
+                <div className="w-0 h-0 border-t-[1rem] border-t-[#8c162b] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
+                <p className="text-xl font-sora font-medium flex-1">
+                  Sementara, MRT dan LRT  yang bisa dilihat di Jakarta berbeda.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+        <div className="max-w-5xl flex mx-auto justify-between relative">
+          <motion.img
+            initial={{ opacity: 0, y: -20, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0, duration: .5 }}
+            src={`${baseUrl}/assets/2.4.png`}
+            alt="Serupa, tapi Tak Sama"
+            className="relative z-10 max-w-[80%] top-[-5rem]"
+          />
+          <motion.div
+            initial={{ opacity: 0, y: -20, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0.2, duration: .3 }}
+            className="bg-white pl-4 pt-4 p-8 flex h-fit overflow-clip w-full -rotate-1 max-w-sm absolute left-[30%]">
+            <div className="flex flex-col space-y-2 absolute">
+              {/* biome-ignore lint/suspicious/noArrayIndexKey: <explanation> */}
+              {new Array(20).fill(0).map((i, inx) => (<div className="bg-[#8c162b] size-4" key={inx} />))}
+            </div>
+            <div className="flex flex-col space-y-2">
+              <div className="space-x-2 pl-12 pt-4 flex items-start">
+                <div className="w-0 h-0 border-t-[1rem] border-t-[#8c162b] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
+                <p className="text-xl font-sora font-medium flex-1">
+                  MRT mengoperasikan armadanya di jalur layang dan bawah tanah, sementara LRT di jalur layang saja.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+          <motion.img
+            initial={{ opacity: 0, y: -20, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0.3, duration: .2 }}
+            src={`${baseUrl}/assets/2.5.png`}
+            alt="Serupa, tapi Tak Sama"
+            className="relative z-10 max-w-[80%] top-[-12rem]"
           />
         </div>
       </div>
-      <div className="bg-[#531a19] relative z-20 w-full py-6">
-        <motion.p viewport={{ once: true }} variants={paragraphVariant} initial="close" whileInView="open" className="text-white max-w-3xl mx-auto text-lg md:text-2xl text-center md:px-10 lg:px-0">
-          Pameran otomotif Indonesia International Motor Show (IIMS) 2024 di
-          Jakarta pada 15-25 Februari 2024 jadi panggung bagi berbagai produk
-          otomotif mutakhir, tak terkecuali mobil China
-        </motion.p>
-      </div>
-      <div className="relative">
-        <div className="py-10 relative z-20">
-          <motion.p viewport={{ once: true }} variants={paragraphVariant} initial="close" whileInView="open" className="text-white max-w-3xl mx-auto text-lg md:text-2xl text-center md:px-10 lg:px-0">
-            Wuling, Chery, GWM, dan BYD tak ketinggalan hadir. Tak sekedar
-            memamerkan produknya, mereka juga meraih sejumlah penghargaan
-            bergengsi
-          </motion.p>
-        </div>
-        <div className="bg-[#a20624] space-y-6  relative z-20">
-          <div className="max-w-4xl mx-auto w-full ">
-            <div className="flex flex-col md:flex-row">
-              <div className="relative flex items-center justify-center py-2">
-                <motion.img viewport={{ once: true }} initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} transition={{ delay: 0.3, duration: .4 }} src={`${baseUrl}/assets/2.6.png`} alt="Car 4" />
-                <motion.img viewport={{ once: true }} initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} transition={{ delay: 0.2, duration: .4 }}
-                  src={`${baseUrl}/assets/2.7.png`}
-                  alt="Car 5"
-                  className="absolute"
-                />
-              </div>
-              <motion.div viewport={{ once: true }} className="bg-white md:rounded-ee-3xl ml-[-4%] p-4 flex items-center justify-center w-fit" initial={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0, duration: .15 }}>
-                <p className="text-lg font-medium md:text-2xl pl-[4%] md:pl-10 lg:pr-[10rem]">
-                  Wuling mendapat tiga penghargaan lewat Wuling Air EV dan
-                  Wuling Binguo EV
-                </p>
-              </motion.div>
-            </div>
-          </div>
-          <div className="max-w-4xl mx-auto w-full ">
-            <div className="flex flex-col md:flex-row">
-              <div className="relative flex items-center justify-center py-2">
-                <motion.img viewport={{ once: true }} initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} transition={{ delay: 0.5, duration: .4 }}
-                  src={`${baseUrl}/assets/2.8.png`} alt="Car 4" />
-                <motion.img viewport={{ once: true }} initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} transition={{ delay: 0.3, duration: .4 }}
-                  src={`${baseUrl}/assets/2.9.png`}
-                  alt="Car 5"
-                  className="absolute"
-                />
-              </div>
-              <motion.div viewport={{ once: true }} className="bg-white md:rounded-ee-3xl ml-[-4%] p-4 flex items-center justify-center w-fit" initial={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: .2, duration: .2 }}>
-                <p className="text-lg font-medium md:text-2xl pl-[4%] md:pl-10 lg:pr-[10rem]">
-                  Dua mobil Chery, yakni Chery Omoda 5 GT dan Chery Omoda E5
-                  meraih total tiga penghargaan
-                </p>
-              </motion.div>
-            </div>
-          </div>
-          <div className="max-w-4xl mx-auto w-full ">
-            <div className="flex flex-col md:flex-row">
-              <div className="relative flex items-center justify-center py-2">
-                <motion.img viewport={{ once: true }} initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} transition={{ delay: 0.8, duration: .4 }} src={`${baseUrl}/assets/2.10.png`} alt="Car 4" />
-                <motion.img viewport={{ once: true }} initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} transition={{ delay: 0.6, duration: .4 }}
-                  src={`${baseUrl}/assets/2.11.png`}
-                  alt="Car 5"
-                  className="absolute"
-                />
-              </div>
-              <motion.div viewport={{ once: true }} className="bg-white md:rounded-ee-3xl ml-[-4%] p-4 flex items-center justify-center w-fit" initial={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: .4, duration: .2 }}>
-                <p className="text-lg font-medium md:text-2xl pl-[4%] md:pl-10 lg:pr-[10rem]">
-                  BYD meraih empat penghargaan. Atto3 dan Seal jadi dua produk
-                  penymbang penghargaan itu
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-        <div className="bottom-0 w-full h-full bg-gradient-to-t from-[#a20624] to-[#a20624]/0 from-[80%] absolute z-10" />
+      <div className="bg-gradient-to-t from-black/20 absolute bottom-0 left-0 right-0 h-[50rem] z-0" />
+      <div className=" bg-[#911e2d] w-full">
+        <img src={`${baseUrl}/assets/footer.png`} alt="Footer" className="h-[3rem]  w-full sm:h-[5rem] object-cover object-bottom max-w-4xl mx-auto " />
       </div>
     </div>
   );

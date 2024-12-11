@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-import { screens as defaultScreens } from 'tailwindcss/defaultTheme'
+import { screens as defaultScreens, fontFamily } from 'tailwindcss/defaultTheme'
 const config: Config = {
   darkMode: ['class'],
   content: [
@@ -22,6 +22,7 @@ const config: Config = {
       },
       fontFamily: {
         apple: ["var(--font-apple)"],
+        sora: ['"Sora"', ...fontFamily.sans],
       },
     },
     screens: {
