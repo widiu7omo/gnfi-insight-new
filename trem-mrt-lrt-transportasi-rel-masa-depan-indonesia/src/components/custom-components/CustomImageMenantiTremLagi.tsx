@@ -84,6 +84,7 @@ export function CustomImageMenantiTremLagi() {
           </div>
         </div>
       </div>
+      <div className="absolute h-[10%] bg-gradient-to-t from-[#a59477] left-0 right-0 bottom-0 z-10" />
     </section>
   );
 }
