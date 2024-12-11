@@ -78,11 +78,11 @@ export function CustomImageSerupaTapi() {
             className="bg-white p-4 sm:p-8 flex h-fit overflow-clip relative w-full flex-1 -mt-20 sm:-mt-32 md:-ml-24  max-w-xl">
             <div className="flex flex-col space-y-2 absolute">
               {/* biome-ignore lint/suspicious/noArrayIndexKey: <explanation> */}
-              {new Array(20).fill(0).map((i, inx) => (<div className="bg-[#8c162b] size-4" key={inx} />))}
+              {new Array(20).fill(0).map((i, inx) => (<div className="bg-[#8e1d2c] size-4" key={inx} />))}
             </div>
             <div className="flex flex-col space-y-2">
               <div className="space-x-2 pl-12 pt-4 flex items-start">
-                <div className="w-0 h-0 border-t-[1rem] border-t-[#8c162b] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
+                <div className="w-0 h-0 border-t-[1rem] border-t-[#8e1d2c] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
                 <p className="text-base sm:text-xl font-sora font-medium flex-1">
                   Trem, sekalipun sudah tidak ada lagi di Indonesia, bisa
                   diketahui ciri khasnya dengan beroperasi di tengah jalan-jalan
@@ -90,7 +90,7 @@ export function CustomImageSerupaTapi() {
                 </p>
               </div>
               <div className="space-x-2 pl-12 pt-4 flex items-start">
-                <div className="w-0 h-0 border-t-[1rem] border-t-[#8c162b] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
+                <div className="w-0 h-0 border-t-[1rem] border-t-[#8e1d2c] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
                 <p className="text-base sm:text-xl font-sora font-medium flex-1">
                   Sementara, MRT dan LRT  yang bisa dilihat di Jakarta berbeda.
                 </p>
@@ -124,11 +124,11 @@ export function CustomImageSerupaTapi() {
             className="bg-white pl-4 pt-4 p-4 sm:p-8 flex h-fit relative overflow-clip w-full -rotate-1 max-w-sm mt-[-5rem] ml-[-5rem] sm:mt-[-3rem]">
             <div className="flex flex-col space-y-2 absolute">
               {/* biome-ignore lint/suspicious/noArrayIndexKey: <explanation> */}
-              {new Array(20).fill(0).map((i, inx) => (<div className="bg-[#8c162b] size-4" key={inx} />))}
+              {new Array(20).fill(0).map((i, inx) => (<div className="bg-[#8e1d2c] size-4" key={inx} />))}
             </div>
             <div className="flex flex-col space-y-2">
               <div className="space-x-2 pl-12 pt-4 flex items-start">
-                <div className="w-0 h-0 border-t-[1rem] border-t-[#8c162b] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
+                <div className="w-0 h-0 border-t-[1rem] border-t-[#8e1d2c] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
                 <p className="text-base sm:text-xl font-sora font-medium flex-1">
                   MRT mengoperasikan armadanya di jalur layang dan bawah tanah, sementara LRT di jalur layang saja.
                 </p>
@@ -137,7 +137,7 @@ export function CustomImageSerupaTapi() {
           </motion.div>
         </div>
       </div>
-      <div className="relative z-10 bg-[#911e2d] w-full hidden lg:block">
+      <div className="relative z-10 bg-[#8e1d2c] w-full hidden lg:block">
         <div className="mx-auto max-w-4xl flex items-center -mt-20">
           <motion.img
             initial={{ opacity: 0, y: -20, scale: 0.8 }}
@@ -154,11 +154,11 @@ export function CustomImageSerupaTapi() {
             className="bg-white pl-4 pt-4 p-8 flex h-fit overflow-clip relative w-full flex-1 -ml-24 rotate-1">
             <div className="flex flex-col space-y-2 absolute">
               {/* biome-ignore lint/suspicious/noArrayIndexKey: <explanation> */}
-              {new Array(20).fill(0).map((i, inx) => (<div className="bg-[#8c162b] size-4" key={inx} />))}
+              {new Array(20).fill(0).map((i, inx) => (<div className="bg-[#8e1d2c] size-4" key={inx} />))}
             </div>
             <div className="flex flex-col space-y-2">
               <div className="space-x-2 pl-12 pt-4 flex items-start">
-                <div className="w-0 h-0 border-t-[1rem] border-t-[#8c162b] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
+                <div className="w-0 h-0 border-t-[1rem] border-t-[#8e1d2c] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
                 <p className="text-xl font-sora font-medium flex-1">
                   Trem, sekalipun sudah tidak ada lagi di Indonesia, bisa
                   diketahui ciri khasnya dengan beroperasi di tengah jalan-jalan
@@ -166,7 +166,7 @@ export function CustomImageSerupaTapi() {
                 </p>
               </div>
               <div className="space-x-2 pl-12 pt-4 flex items-start">
-                <div className="w-0 h-0 border-t-[1rem] border-t-[#8c162b] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
+                <div className="w-0 h-0 border-t-[1rem] border-t-[#8e1d2c] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
                 <p className="text-xl font-sora font-medium flex-1">
                   Sementara, MRT dan LRT  yang bisa dilihat di Jakarta berbeda.
                 </p>
@@ -190,11 +190,11 @@ export function CustomImageSerupaTapi() {
             className="bg-white pl-4 pt-4 p-8 flex h-fit overflow-clip w-full -rotate-1 max-w-sm absolute left-[30%]">
             <div className="flex flex-col space-y-2 absolute">
               {/* biome-ignore lint/suspicious/noArrayIndexKey: <explanation> */}
-              {new Array(20).fill(0).map((i, inx) => (<div className="bg-[#8c162b] size-4" key={inx} />))}
+              {new Array(20).fill(0).map((i, inx) => (<div className="bg-[#8e1d2c] size-4" key={inx} />))}
             </div>
             <div className="flex flex-col space-y-2">
               <div className="space-x-2 pl-12 pt-4 flex items-start">
-                <div className="w-0 h-0 border-t-[1rem] border-t-[#8c162b] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
+                <div className="w-0 h-0 border-t-[1rem] border-t-[#8e1d2c] border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent rotate-[270deg] pt-4" />
                 <p className="text-xl font-sora font-medium flex-1">
                   MRT mengoperasikan armadanya di jalur layang dan bawah tanah, sementara LRT di jalur layang saja.
                 </p>
@@ -211,10 +211,8 @@ export function CustomImageSerupaTapi() {
           />
         </div>
       </div>
-      <div className="bg-gradient-to-t from-black/20 absolute bottom-0 left-0 right-0 h-[50rem] z-0" />
-      <div className=" bg-[#911e2d] w-full">
-        <img src={`${baseUrl}/assets/footer.png`} alt="Footer" className="h-[3rem]  w-full sm:h-[5rem] object-cover object-bottom max-w-4xl mx-auto " />
-      </div>
+      <div className="bg-gradient-to-t from-black/20 absolute bottom-0 left-0 right-0 h-full z-10" />
+      <img src={`${baseUrl}/assets/footer.png`} alt="Footer" className="lg:block hidden h-[3rem] absolute bottom-0 z-10 w-full sm:h-[5rem] object-cover object-bottom max-w-4xl mx-auto" />
     </div>
   );
 }
