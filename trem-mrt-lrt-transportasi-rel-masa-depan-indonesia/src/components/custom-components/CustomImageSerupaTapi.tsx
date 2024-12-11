@@ -11,14 +11,14 @@ export function CustomImageSerupaTapi() {
       ref={ref}
     >
       <div className="max-w-4xl mx-auto relative z-10 py-12 space-y-6 px-4 md:px-0">
-        <motion.h3
+        <motion.h3 viewport={{ once: true }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0, duration: .6 }}
           className="text-3xl md:text-6xl text-center font-sora font-bold text-red-800">
           Serupa, tapi Tak Sama
         </motion.h3>
-        <motion.p
+        <motion.p viewport={{ once: true }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: .4 }}
@@ -30,13 +30,13 @@ export function CustomImageSerupaTapi() {
       <div className="relative flex items-end justify-center max-w-4xl w-full mx-auto pt-28">
         <div
           className="absolute w-full h-full bottom-0 mx-auto object-center flex justify-center" >
-          <motion.div
+          <motion.div viewport={{ once: true }}
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: .4, duration: .4 }}
             className="rounded-full bg-[#8e1d2c] object-center size-[50rem] md:size-[60rem] mt-[20%] md:mt-0 w-full" />
         </div>
-        <motion.img
+        <motion.img viewport={{ once: true }}
           initial={{ opacity: 0, y: -20, scale: 0.8 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ delay: 0, duration: .3 }}
@@ -44,7 +44,7 @@ export function CustomImageSerupaTapi() {
           alt="Train Center"
           className="relative z-[3] w-[50%] md:w-auto"
         />
-        <motion.img
+        <motion.img viewport={{ once: true }}
           initial={{ opacity: 0, x: -40, scale: 0.9 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ delay: 0.2, duration: .3 }}
@@ -52,7 +52,7 @@ export function CustomImageSerupaTapi() {
           alt="Train Right"
           className="absolute z-[2] right-[-3%] md:right-[-8rem] w-[70%] md:w-auto"
         />
-        <motion.img
+        <motion.img viewport={{ once: true }}
           initial={{ opacity: 0, x: 40, scale: 0.9 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ delay: 0.4, duration: .3 }}
@@ -63,7 +63,7 @@ export function CustomImageSerupaTapi() {
       </div>
       <div className="block lg:hidden bg-[#8e1d2c] w-full">
         <div className="md:flex-row flex-col flex items-center">
-          <motion.img
+          <motion.img viewport={{ once: true }}
             initial={{ opacity: 0, y: -20, scale: 0.8 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0, duration: .5 }}
@@ -71,7 +71,7 @@ export function CustomImageSerupaTapi() {
             alt="Serupa, tapi Tak Sama"
             className="flex-1 relative z-10 h-full w-full object-contain max-h-[50rem] -mt-[6rem]"
           />
-          <motion.div
+          <motion.div viewport={{ once: true }}
             initial={{ opacity: 0, y: -20, scale: 0.8 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.2, duration: .3 }}
@@ -100,7 +100,7 @@ export function CustomImageSerupaTapi() {
         </div>
         <div className="max-w-5xl flex flex-col mx-auto relative h-fit items-center">
           <div className="flex flex-row-reverse items-start justify-center">
-            <motion.img
+            <motion.img viewport={{ once: true }}
               initial={{ opacity: 0, y: -20, scale: 0.8 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ delay: 0, duration: .5 }}
@@ -108,7 +108,7 @@ export function CustomImageSerupaTapi() {
               alt="Serupa, tapi Tak Sama"
               className="relative z-10 max-w-full sm:max-w-[80%] top-0 sm:top-[-2rem]"
             />
-            <motion.img
+            <motion.img viewport={{ once: true }}
               initial={{ opacity: 0, y: -20, scale: 0.8 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ delay: 0.3, duration: .2 }}
@@ -117,7 +117,7 @@ export function CustomImageSerupaTapi() {
               className="absolute z-10 max-w-[50%] right-0"
             />
           </div>
-          <motion.div
+          <motion.div viewport={{ once: true }}
             initial={{ opacity: 0, y: -20, scale: 0.8 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.2, duration: .3 }}
@@ -139,7 +139,7 @@ export function CustomImageSerupaTapi() {
       </div>
       <div className="relative z-10 bg-[#8e1d2c] w-full hidden lg:block">
         <div className="mx-auto max-w-4xl flex items-center -mt-20">
-          <motion.img
+          <motion.img viewport={{ once: true }}
             initial={{ opacity: 0, y: -20, scale: 0.8 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0, duration: .5 }}
@@ -147,7 +147,7 @@ export function CustomImageSerupaTapi() {
             alt="Serupa, tapi Tak Sama"
             className="flex-1 relative z-10"
           />
-          <motion.div
+          <motion.div viewport={{ once: true }}
             initial={{ opacity: 0, y: -20, scale: 0.8 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.2, duration: .3 }}
@@ -175,7 +175,7 @@ export function CustomImageSerupaTapi() {
           </motion.div>
         </div>
         <div className="max-w-5xl flex mx-auto justify-between relative">
-          <motion.img
+          <motion.img viewport={{ once: true }}
             initial={{ opacity: 0, y: -20, scale: 0.8 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0, duration: .5 }}
@@ -183,7 +183,7 @@ export function CustomImageSerupaTapi() {
             alt="Serupa, tapi Tak Sama"
             className="relative z-10 max-w-[80%] top-[-5rem]"
           />
-          <motion.div
+          <motion.div viewport={{ once: true }}
             initial={{ opacity: 0, y: -20, scale: 0.8 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.2, duration: .3 }}
@@ -201,7 +201,7 @@ export function CustomImageSerupaTapi() {
               </div>
             </div>
           </motion.div>
-          <motion.img
+          <motion.img viewport={{ once: true }}
             initial={{ opacity: 0, y: -20, scale: 0.8 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.3, duration: .2 }}

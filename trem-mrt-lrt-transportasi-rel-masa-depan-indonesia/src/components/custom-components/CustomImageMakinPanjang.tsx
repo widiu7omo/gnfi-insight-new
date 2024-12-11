@@ -10,10 +10,12 @@ export function CustomImageMakinPanjang() {
 
   return (
     <section className="relative flex flex-col items-center overflow-hidden bg-cover">
+      <div className="bg-gradient-to-b from-black absolute left-0 right-0 top-0 bottom-0" />
       <div
         className="relative flex h-screen w-full justify-center bg-cover bg-center text-center"
         style={{ backgroundImage: `url(${baseUrl}/assets/4.1.png)` }}
       >
+        <div className="bg-gradient-to-b from-[#abd4f7] absolute left-0 right-0 top-0 h-[50%]" />
         <div className="relative z-20 mx-auto my-auto max-w-4xl text-white lg:mt-[10%]">
           <motion.p
             viewport={{ once: true, amount: 0.5 }}
