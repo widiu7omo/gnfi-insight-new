@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@next/third-parties": "^14.2.5",
+    "@number-flow/react": "^0.5.5",
+    "@pyncz/tailwind-mask-image": "^2.0.0",
     "@tiptap/pm": "^2.6.4",
     "@tiptap/react": "^2.6.4",
     "@tiptap/starter-kit": "^2.6.4",
