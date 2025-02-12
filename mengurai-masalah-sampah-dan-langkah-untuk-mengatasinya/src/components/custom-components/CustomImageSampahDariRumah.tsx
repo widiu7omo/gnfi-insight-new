@@ -3,124 +3,204 @@ import { baseUrl } from "@/constants/meta";
 import { motion } from "framer-motion";
 
 export function CustomImageSampahDariRumah() {
-  const simpleFadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-  };
-
   return (
-    <section className="relative flex flex-col items-center overflow-hidden bg-cover">
-      <div className="bg-gradient-to-b from-black absolute left-0 right-0 top-0 bottom-0" />
+    <div className="relative flex flex-col items-center">
       <div
-        className="relative flex h-screen w-full justify-center bg-cover bg-center text-center"
-        style={{ backgroundImage: `url(${baseUrl}/assets/4.1.png)` }}
+        className="relative flex h-full w-full flex-col justify-center bg-cover bg-center text-center"
+        style={{ backgroundImage: `url(${baseUrl}/assets/3.2.png)` }}
       >
-        <div className="bg-gradient-to-b from-[#abd4f7] absolute left-0 right-0 top-0 h-[50%]" />
-        <div className="relative z-20 mx-auto my-auto max-w-4xl text-white lg:mt-[10%]">
-          <motion.p
-            viewport={{ once: true, amount: 0.5 }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-3xl font-extrabold text-black md:text-6xl"
-          >
-            Makin <span className="text-[#2e469f]">Panjang</span>
-            <br />
-            Makin <span className="text-[#d62e31]">Berkembang</span>
-          </motion.p>
-
-          <motion.p
-            viewport={{ once: true, amount: 0.5 }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-4 text-xl font-bold text-black md:text-4xl"
-          >
-            Di Kota Jakarta, MRT & LRT
-            <br /> tengah diperpanjang rutenya
-          </motion.p>
-        </div>
-      </div>
-      <div className="flex h-full w-full items-center justify-center bg-[#2e469f] px-2 py-16 md:px-0 md:py-20">
-        <div className="relative z-20 flex w-full max-w-4xl items-center justify-center space-x-2 px-0 md:px-8">
-          <div className="flex w-1/2 justify-center">
-            <motion.img
-              initial={{ opacity: 0, x: -30 }}
-              viewport={{ once: true }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              src={`${baseUrl}/assets/4.2.png`}
-              alt="Title"
-              className="h-auto w-full max-w-sm"
-            />
-          </div>
-          <div className="flex w-1/2 flex-col items-start">
-            <motion.img
-              initial={{ opacity: 0, x: 30 }}
-              viewport={{ once: true }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              src={`${baseUrl}/assets/4.3.png`}
-              alt="Title"
-              className="mb-4 h-12 w-auto max-w-sm md:h-24"
-            />
+        <div className="relative w-full">
+          <img
+            src={`${baseUrl}/assets/3.1.png`}
+            alt="Header"
+            className="top-0 z-10 max-h-[20rem] min-h-[9.375rem] w-full object-cover"
+          />
+          <div className="absolute left-1/2 top-[10%] z-20 w-full max-w-4xl -translate-x-1/2 lg:top-[20%]">
+            <div className="flex items-center justify-between px-4 lg:px-0">
+              <div className="text-left md:space-y-4">
+                <motion.h3
+                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0, duration: 0.6 }}
+                  className="text-left font-sora text-lg font-bold text-white md:text-4xl md:font-extrabold lg:text-5xl"
+                >
+                  Mengolah Sampah <br />
+                  dari Rumah
+                </motion.h3>
+                <motion.p
+                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.4 }}
+                  className="inline-block whitespace-nowrap rounded-xl bg-[#D6D63A] px-1 py-1 text-left font-sora text-[14px] font-semibold text-[#104A34] md:px-2 md:py-2 md:text-3xl"
+                >
+                  Bagaimana Caranya?
+                </motion.p>
+              </div>
+              <motion.img
+                viewport={{ once: true }}
+                initial={{ opacity: 0, scale: 0.3 }}
+                whileInView={{ opacity: 1, scale: 1.1 }}
+                transition={{ duration: 0.8, ease: "backOut" }}
+                src={`${baseUrl}/assets/3.3.png`}
+                alt="Sampah"
+                className="lg:w-[40%] h-auto w-[30%] md:w-[35%]"
+              />
+            </div>
             <motion.p
-              initial={{ opacity: 0, y: 10 }}
               viewport={{ once: true }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-base text-white md:text-3xl"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.4 }}
+              className="mb-2 mt-[3%] px-4 py-2 text-center font-sora text-base font-semibold text-[#123524] md:text-4xl lg:mt-[5%]"
             >
-              Untuk MRT nantinya <br /> penumpang bisa menikmati <br />
-              layanan hingga wilayah
-              <br />
-              <span className="rounded-3xl border border-white px-2">
-                Glodok dan Kota Tua
-              </span>
+              Masyarakat dapat mengolah sampah <br /> di rumah berdasarkan
+              kategorinya:
             </motion.p>
           </div>
         </div>
-      </div>
-      <div className="flex h-full w-full items-center justify-center bg-[#d62e31] px-2 py-16 md:px-0 md:py-20">
-        <div className="relative z-20 flex w-full max-w-4xl items-center justify-center space-x-2 px-0 md:px-8">
-          <div className="flex w-1/2 justify-center">
+        <div className="relative z-20 mx-auto mt-[10%] w-full max-w-4xl">
+          <div className="flex flex-row items-center justify-center gap-x-4 px-4 md:gap-x-6 lg:px-0">
             <motion.img
-              initial={{ opacity: 0, x: -30 }}
               viewport={{ once: true }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              src={`${baseUrl}/assets/4.5.png`}
-              alt="Title"
-              className="h-auto w-[90%] max-w-sm"
+              initial={{ opacity: 0, x: -20, scale: 0.8 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
+              src={`${baseUrl}/assets/3.4.png`}
+              alt="Sampah organik"
+              className="my-2 h-auto w-[23%] object-contain md:my-4"
+            />
+            <div className="space-y-1 md:space-y-6">
+              <motion.p
+                viewport={{ once: true }}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
+                className="text-left font-sora text-lg font-semibold text-[#123524] md:text-[2.4rem] lg:text-5xl"
+              >
+                Sampah organik
+              </motion.p>
+              <motion.p
+                viewport={{ once: true }}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
+                className="text-left font-sora text-base font-medium text-[#3E7B27] md:text-3xl md:font-semibold"
+              >
+                Contohnya daun kering dan sisa makanan
+              </motion.p>
+              <motion.p
+                viewport={{ once: true }}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
+                className="text-left font-sora text-base md:text-3xl"
+              >
+                Tidak perlu pengolahan khusus, namun juga dapat dijadikan kompos
+              </motion.p>
+            </div>
+          </div>
+          <div className="flex flex-row items-center justify-center gap-x-4 px-4 md:gap-x-6 lg:px-0">
+            <div className="space-y-1 md:space-y-6">
+              <motion.p
+                viewport={{ once: true }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
+                className="text-left font-sora text-lg font-semibold text-[#123524] md:text-[2.4rem] lg:text-5xl"
+              >
+                Sampah plastik dan kardus
+              </motion.p>
+              <motion.p
+                viewport={{ once: true }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
+                className="text-left font-sora text-base md:text-3xl"
+              >
+                Sampah jenis ini dapat dikumpulkan sesuai jenisnya, lalu dijual
+              </motion.p>
+            </div>
+            <motion.img
+              viewport={{ once: true }}
+              initial={{ opacity: 0, x: 20, scale: 0.8 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
+              src={`${baseUrl}/assets/3.5.png`}
+              alt=" Sampah plastik dan kardus"
+              className="my-2 h-auto w-[23%] object-contain md:my-4"
             />
           </div>
-          <div className="flex w-1/2 flex-col items-start">
+          <div className="flex flex-row items-center justify-center space-x-4 px-4 md:space-x-6 lg:px-0">
             <motion.img
-              initial={{ opacity: 0, x: 30 }}
               viewport={{ once: true }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              src={`${baseUrl}/assets/4.4.png`}
-              alt="Title"
-              className="mb-4 h-12 w-auto max-w-sm md:h-24"
+              initial={{ opacity: 0, x: -20, scale: 0.8 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ delay: 0, duration: 0.5 }}
+              src={`${baseUrl}/assets/3.6.png`}
+              alt="Sampah lainnya"
+              className="my-2 h-auto w-[23%] object-contain md:my-4"
             />
+            <div className="space-y-1 md:space-y-6">
+              <motion.p
+                viewport={{ once: true }}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
+                className="text-left font-sora text-lg font-semibold text-[#123524] md:text-[2.4rem] lg:text-5xl"
+              >
+                Sampah lainnya
+              </motion.p>
+              <motion.p
+                viewport={{ once: true }}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
+                className="text-left font-sora text-base md:text-3xl"
+              >
+                Sampah seperti minyak jelantah juga bisa dikumpulkan, lalu
+                dijual atau diolah. Salah satu tempat yang bisa menampung minyak
+                jelantah adalah SPBU Pertamina{" "}
+              </motion.p>
+            </div>
+          </div>
+        </div>
+        <div className="relative bottom-0">
+          <motion.img
+            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            src={`${baseUrl}/assets/3.7.png`}
+            alt="footer"
+            className="top-0 z-10 min-h-[28rem] w-full object-cover md:min-h-[32rem] lg:max-h-[10%]"
+          />
+          <div className="absolute inset-0 z-20 mx-auto flex max-w-4xl flex-row items-end justify-between px-4">
             <motion.p
-              initial={{ opacity: 0, y: 10 }}
               viewport={{ once: true }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-base text-white md:text-3xl"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.4 }}
+              className="md: mb-[10%] mb-[6%] w-[60%] text-left font-sora text-base font-normal text-[#D6D63A] md:text-3xl md:font-semibold lg:mb-[12%]"
             >
-              Sementara LRT rute, <br /> barunya akan mencapai
-              <br />
-              daerah{" "}
-              <span className="rounded-3xl border border-white px-2">
-                Manggarai
-              </span>
+              Pengelolaan sampah dari tingkat rumah tangga akan mencegah
+              kerusakan lingkungan. Pengelolaan sampah yang baik ini akan
+              mengurangi kemungkinan adanya kerusakan lingkungan yang lebih
+              lanjut, khususnya laut
             </motion.p>
+            <motion.img
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              src={`${baseUrl}/assets/3.8.png`}
+              alt="Sampah"
+              className="mr-0 h-auto w-[50%] object-contain lg:mr-[-10%]"
+            />
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
