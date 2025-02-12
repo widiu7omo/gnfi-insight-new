@@ -9,7 +9,8 @@ export function CustomImageMengelolaSampah() {
 
   const TrashGreen = () => {
     return <motion.svg initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0, duration: .4 }} viewport={{ once: true }}
-      width="197" viewBox="0 0 197 423" fill="none" xmlns="http://www.w3.org/2000/svg">
+      className="w-full lg:w-[197px]" viewBox="0 0 197 423" fill="none" xmlns="http://www.w3.org/2000/svg">
+
       <path d="M28.3 385.3H34.4V383.7H28.3V385.3Z" fill="#2B201F" />
       <path d="M28.3 422.3H34.4V420.7H28.3V422.3Z" fill="#2B201F" />
       <path d="M22 403C22 413.7 27.4 422.3 34 422.3C40.6 422.3 46 413.7 46 403C46 392.4 40.6 383.8 34 383.8C27.4 383.8 22 392.4 22 403Z" fill="#2B201F" />
@@ -41,7 +42,7 @@ export function CustomImageMengelolaSampah() {
   }
   const TrashYellow = () => {
     return <motion.svg initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.1, duration: .4 }} viewport={{ once: true }}
-      width="197" viewBox="0 0 197 348" fill="none" xmlns="http://www.w3.org/2000/svg">
+      className="w-full lg:w-[197px]" viewBox="0 0 197 348" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M28.4 310.3H34.4V308.7H28.4V310.3Z" fill="#2B201F" />
       <path d="M28.4 347.3H34.4V345.7H28.4V347.3Z" fill="#2B201F" />
       <path d="M22.1 328C22.1 338.7 27.4 347.3 34 347.3C40.7 347.3 46 338.7 46 328C46 317.4 40.7 308.8 34 308.8C27.4 308.8 22.1 317.4 22.1 328Z" fill="#2B201F" />
@@ -73,7 +74,7 @@ export function CustomImageMengelolaSampah() {
   }
   const TrashOrange = () => {
     return <motion.svg initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.2, duration: .4 }} viewport={{ once: true }}
-      width="197" viewBox="0 0 197 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+      className="w-full lg:w-[197px]" viewBox="0 0 197 118" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M28.5 80.3H34.5V78.7H28.5V80.3Z" fill="#2B201F" />
       <path d="M28.5 117.3H34.5V115.7H28.5V117.3Z" fill="#2B201F" />
       <path d="M22.2 98C22.2 108.7 27.5 117.3 34.1 117.3C40.7 117.3 46.1 108.7 46.1 98C46.1 87.4 40.7 78.8 34.1 78.8C27.5 78.8 22.2 87.4 22.2 98Z" fill="#2B201F" />
@@ -158,7 +159,7 @@ export function CustomImageMengelolaSampah() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: .6 }}
-          className={`text-center text-7xl py-2 font-extrabold flex flex-col space-y-2 bg-no-repeat text-transparent bg-clip-text`} style={{ backgroundImage: `url('${baseUrl}/assets/1.2.png')` }}>
+          className={`text-center text-4xl md:text-6xl xl:text-7xl py-2 font-extrabold flex flex-col space-y-2 bg-no-repeat text-transparent bg-clip-text`} style={{ backgroundImage: `url('${baseUrl}/assets/1.2.png')` }}>
           <div>Mengelola Sampah</div>
           <div>Orang Indonesia</div>
         </motion.div>
@@ -166,34 +167,34 @@ export function CustomImageMengelolaSampah() {
           initial={{ opacity: 0, y: -20, scale: 1.2, rotate: 0 }}
           whileInView={{ opacity: 1, y: 0, scale: 1, rotate: -6 }}
           transition={{ duration: .4, delay: .2 }}
-          className="absolute bg-[#d7d539] mt-2 px-2 py-1 text-3xl -rotate-6 font-extrabold shadow-lg border border-[#d7d439d7]">Ala</motion.div>
+          className="absolute bg-[#d7d539] mt-2 px-1 md:px-2 py-0.5 md:py-1 text-xl md:text-2xl xl:text-3xl -rotate-6 font-extrabold shadow-lg border border-[#d7d439d7]">Ala</motion.div>
       </div>
-      <div className="relative flex items-center flex-col justify-center w-full space-y-24 max-w-5xl mx-auto z-10">
+      <div className="relative flex items-center flex-col justify-center w-full space-y-12 md:space-y-24 max-w-5xl mx-auto z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: .4, delay: .2 }}
-          className="w-fit px-5 py-1 text-center text-4xl font-semibold text-white bg-[#3c6b5a] rounded-lg">
+          className="w-fit px-5 py-1 text-center text-2xl md:text-3xl xl:text-4xl font-semibold text-white bg-[#3c6b5a] rounded-lg">
           Sudahkah Caranya Tepat?
         </motion.div>
-        <div className="rounded-2xl bg-[#ffefdb] pt-12 p-10 relative flex flex-col items-center w-full">
+        <div className="rounded-2xl bg-[#ffefdb] pt-8 lg:pt-12 p-6 lg:p-10 relative flex flex-col items-center w-full">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: .4, delay: .2 }}
             className="absolute bg-[#d5d639] py-1 px-5 rounded-lg -top-[5%]">
             <div
-              className="text-3xl text-center font-medium font-sora">
+              className="text-xl md:text-2xl xl:text-3xl text-center font-medium font-sora">
               Survei GoodStats:
             </div>
           </motion.div>
-          <div className="flex space-x-6">
+          <div className="flex space-y-7 lg:space-x-6 flex-col lg:flex-row">
             <MotionConfig
               transition={{
                 layout: canAnimate ? { duration: 0.9, bounce: 0, type: 'spring' } : { duration: 0 }
               }}
             >
-              <div className="w-1/2 flex items-end space-x-3 relative">
+              <div className="w-full lg:w-1/2 flex items-end space-x-3 relative">
                 <div className="relative flex flex-col items-center space-y-3">
                   <TrashGreen />
                   <MotionNumberFlow willChange
@@ -239,7 +240,7 @@ export function CustomImageMengelolaSampah() {
               </div>
             </MotionConfig>
             <div className="flex-1">
-              <ul className="space-y-4 text-2xl">
+              <ul className="space-y-4 text-lg md:text-xl lg:text-2xl">
                 <motion.li
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .5, delay: 0 }}
@@ -265,30 +266,30 @@ export function CustomImageMengelolaSampah() {
             </div>
           </div>
         </div>
-        <div className="rounded-2xl bg-[#ffefdb] py-16 pb-20 p-10 relative flex flex-col items-center w-full">
+        <div className="rounded-2xl bg-[#ffefdb] py-12 lg:py-16 pb-12 lg:pb-20 p-6 lg:p-10 relative flex flex-col items-center w-full">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: .4, delay: .2 }}
             className="absolute bg-[#3c6b5a] py-1 px-5 rounded-lg -top-[3.5%]">
-            <div className="text-3xl text-center text-white font-medium font-sora">
+            <div className="text-xl md:text-2xl xl:text-3xl text-center text-white font-medium font-sora">
               Survei Kementerian Kesehatan RI:
             </div>
           </motion.div>
-          <div className="flex space-x-6 w-full">
+          <div className="w-full">
             <MotionConfig
               transition={{
                 layout: canAnimate ? { duration: 0.9, bounce: 0, type: 'spring' } : { duration: 0 }
               }}
             >
-              <div className="w-full flex flex-col items-center justify-center relative space-y-6">
+              <div className="w-full flex flex-col items-center justify-start lg:justify-center relative space-y-6">
                 {Object.keys(menkes).map((key, index) => (
-                  <div key={index} className="flex w-full items-center space-x-6">
-                    <div className="w-1/2 relative flex items-center justify-center space-x-3">
-                      <div className="size-[4rem] -mr-10 z-10">
+                  <div key={index} className="flex lg:flex-row flex-col w-full items-start lg:items-center space-x-0 lg:space-x-6 space-y-2 lg:space-y-0">
+                    <div className="w-full lg:w-1/2 relative flex items-center justify-center lg:space-x-3 space-x-0 ">
+                      <div className="size-[6rem] lg:size-[4rem] -mr-10 z-10">
                         <img src={`${baseUrl}/assets/1.4.${index}.png`} alt="" className="h-full w-full object-contain" />
                       </div>
-                      <div className="h-[2rem] w-full">
+                      <div className="h-[3rem] lg:h-[2rem] w-full">
                         <motion.div initial={{ width: 0 }} viewport={{ once: true }} transition={{ duration: .5 }} whileInView={{ width: `calc(${menkes[key]}% + 40px)` }} className="h-full bg-[#3c6b5a] rounded-lg" />
                       </div>
                       <MotionNumberFlow willChange
@@ -303,7 +304,7 @@ export function CustomImageMengelolaSampah() {
                         layoutRoot
                       />
                     </div>
-                    <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .4, delay: index * .1 }} className="text-2xl w-1/2">{labels[key]}</motion.div>
+                    <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .4, delay: index * .1 }} className="text-lg md:text-xl xl:text-2xl w-full lg:w-1/2">{labels[key]}</motion.div>
                   </div>
                 ))}
               </div>
@@ -313,8 +314,8 @@ export function CustomImageMengelolaSampah() {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: .4, delay: .2 }}
-            className="absolute bg-[#3c6b5a] py-3 px-10 w-fit rounded-lg -bottom-[10%] max-w-3xl mx-auto">
-            <div className="text-3xl text-center text-white font-medium font-sora">
+            className="absolute bg-[#3c6b5a] py-3 px-10 w-fit md:rounded-lg -bottom-[12%] md:-bottom-[10%] xl:-bottom-[10%] max-w-3xl mx-auto">
+            <div className="text-xl md:text-2xl xl:text-3xl text-center text-white font-medium font-sora">
               Temuan ini menunjukkan bahwa kesadaran masyarakat Indonesia masih rendah
             </div>
           </motion.div>
@@ -323,11 +324,11 @@ export function CustomImageMengelolaSampah() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: .3, delay: .3 }}
-          className="relative bg-black/50 py-6 px-10 w-fit rounded-lg max-w-3xl mx-auto pb-12 flex items-center justify-center">
-          <div className="text-2xl text-center text-white font-medium font-sora">
+          className="relative bg-black/50 !mt-[5.5rem] md:mt-auto py-6 px-10 w-fit md:rounded-lg max-w-3xl mx-auto pb-12 flex items-center justify-center">
+          <div className="text-lg md:text-xl xl:text-2xl text-center text-white font-medium font-sora">
             Pengelolaan sampah di Indonesia masih menggunakan paradigma lama. Pengomposan dan daur ulang baru menyentuh sebagian kecil masyarakat dan masih jauh dari kata berkelanjutan.
           </div>
-          <div className="bg-white rounded-lg px-3 py-2 text-gray-800 text-center text-xl w-fit mx-auto absolute bottom-[-18%]">
+          <div className="bg-white rounded-lg px-3 py-2 text-gray-800 text-center text-base md:text-lg xl:text-xl w-fit mx-auto absolute bottom-[-18%]">
             ujar Guru Besar Institut Teknologi Bandung <br /> dan ahli sampah Indonesia, Prof. Enri Damanhuri
           </div>
         </motion.div>
