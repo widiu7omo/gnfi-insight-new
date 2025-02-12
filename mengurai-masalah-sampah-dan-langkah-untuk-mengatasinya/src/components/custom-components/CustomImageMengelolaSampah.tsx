@@ -154,22 +154,39 @@ export function CustomImageMengelolaSampah() {
   return (
     <div ref={ref} className="relative overflow-clip font-sora py-14 space-y-6 bg-no-repeat bg-cover" style={{ backgroundImage: `url(${baseUrl}/assets/1.0.png)`, backgroundColor: "#d0d1c3" }}>
       <div className="relative flex items-center justify-center z-10">
-        <div className={`text-center text-7xl py-2 font-extrabold flex flex-col space-y-2 bg-no-repeat text-transparent bg-clip-text`} style={{ backgroundImage: `url('${baseUrl}/assets/1.2.png')` }}>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: .6 }}
+          className={`text-center text-7xl py-2 font-extrabold flex flex-col space-y-2 bg-no-repeat text-transparent bg-clip-text`} style={{ backgroundImage: `url('${baseUrl}/assets/1.2.png')` }}>
           <div>Mengelola Sampah</div>
           <div>Orang Indonesia</div>
-        </div>
-        <div className="absolute bg-[#d7d539] mt-2 px-2 py-1 text-3xl -rotate-6 font-extrabold shadow-lg border border-[#d7d439d7]">Ala</div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -20, scale: 1.2, rotate: 0 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1, rotate: -6 }}
+          transition={{ duration: .4, delay: .2 }}
+          className="absolute bg-[#d7d539] mt-2 px-2 py-1 text-3xl -rotate-6 font-extrabold shadow-lg border border-[#d7d439d7]">Ala</motion.div>
       </div>
       <div className="relative flex items-center flex-col justify-center w-full space-y-24 max-w-5xl mx-auto z-10">
-        <div className="w-fit px-5 py-1 text-center text-4xl font-semibold text-white bg-[#3c6b5a] rounded-lg">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: .4, delay: .2 }}
+          className="w-fit px-5 py-1 text-center text-4xl font-semibold text-white bg-[#3c6b5a] rounded-lg">
           Sudahkah Caranya Tepat?
-        </div>
+        </motion.div>
         <div className="rounded-2xl bg-[#ffefdb] pt-12 p-10 relative flex flex-col items-center w-full">
-          <div className="absolute bg-[#d5d639] py-1 px-5 rounded-lg -top-[5%]">
-            <div className="text-3xl text-center font-medium font-sora">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: .4, delay: .2 }}
+            className="absolute bg-[#d5d639] py-1 px-5 rounded-lg -top-[5%]">
+            <div
+              className="text-3xl text-center font-medium font-sora">
               Survei GoodStats:
             </div>
-          </div>
+          </motion.div>
           <div className="flex space-x-6">
             <MotionConfig
               transition={{
@@ -223,28 +240,41 @@ export function CustomImageMengelolaSampah() {
             </MotionConfig>
             <div className="flex-1">
               <ul className="space-y-4 text-2xl">
-                <li className="flex items-start">
+                <motion.li
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .5, delay: 0 }}
+                  className="flex items-start">
                   <div className="bg-[#5d9b7b] rounded-full size-6 m-2 mr-4" />
                   <div className="flex-1">Mengaku selalu membuang sampah di tempatnya</div>
-                </li>
-                <li className="flex items-start">
+                </motion.li>
+                <motion.li
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .5, delay: 0.1 }}
+                  className="flex items-start">
                   <div className="bg-[#b7b334] rounded-full size-6 m-2 mr-4" />
                   <div className="flex-1">Tidak selalu membuang sampah pada tempatnya</div>
-                </li>
-                <li className="flex items-start">
+                </motion.li>
+                <motion.li
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .5, delay: 0.2 }}
+                  className="flex items-start">
                   <div className="bg-[#fca438] rounded-full size-6 m-2 mr-4" />
                   <div className="flex-1">Tidak pernah membuang sampah di tempatnya</div>
-                </li>
+                </motion.li>
               </ul>
             </div>
           </div>
         </div>
         <div className="rounded-2xl bg-[#ffefdb] py-16 pb-20 p-10 relative flex flex-col items-center w-full">
-          <div className="absolute bg-[#3c6b5a] py-1 px-5 rounded-lg -top-[3.5%]">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: .4, delay: .2 }}
+            className="absolute bg-[#3c6b5a] py-1 px-5 rounded-lg -top-[3.5%]">
             <div className="text-3xl text-center text-white font-medium font-sora">
               Survei Kementerian Kesehatan RI:
             </div>
-          </div>
+          </motion.div>
           <div className="flex space-x-6 w-full">
             <MotionConfig
               transition={{
@@ -259,7 +289,7 @@ export function CustomImageMengelolaSampah() {
                         <img src={`${baseUrl}/assets/1.4.${index}.png`} alt="" className="h-full w-full object-contain" />
                       </div>
                       <div className="h-[2rem] w-full">
-                        <motion.div initial={{ width: 0 }} viewport={{ once: true }} transition={{ duration: .5 }} whileInView={{ width: `calc(${menkes[key]}% + 40px)` }} className="h-full bg-[#3c6b5a]" />
+                        <motion.div initial={{ width: 0 }} viewport={{ once: true }} transition={{ duration: .5 }} whileInView={{ width: `calc(${menkes[key]}% + 40px)` }} className="h-full bg-[#3c6b5a] rounded-lg" />
                       </div>
                       <MotionNumberFlow willChange
                         value={menkes[key] as number}
@@ -279,20 +309,28 @@ export function CustomImageMengelolaSampah() {
               </div>
             </MotionConfig>
           </div>
-          <div className="absolute bg-[#3c6b5a] py-3 px-10 w-fit rounded-lg -bottom-[10%] max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: .4, delay: .2 }}
+            className="absolute bg-[#3c6b5a] py-3 px-10 w-fit rounded-lg -bottom-[10%] max-w-3xl mx-auto">
             <div className="text-3xl text-center text-white font-medium font-sora">
               Temuan ini menunjukkan bahwa kesadaran masyarakat Indonesia masih rendah
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div className="relative bg-black/50 py-6 px-10 w-fit rounded-lg max-w-3xl mx-auto pb-12 flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: .3, delay: .3 }}
+          className="relative bg-black/50 py-6 px-10 w-fit rounded-lg max-w-3xl mx-auto pb-12 flex items-center justify-center">
           <div className="text-2xl text-center text-white font-medium font-sora">
             Pengelolaan sampah di Indonesia masih menggunakan paradigma lama. Pengomposan dan daur ulang baru menyentuh sebagian kecil masyarakat dan masih jauh dari kata berkelanjutan.
           </div>
           <div className="bg-white rounded-lg px-3 py-2 text-gray-800 text-center text-xl w-fit mx-auto absolute bottom-[-18%]">
             ujar Guru Besar Institut Teknologi Bandung <br /> dan ahli sampah Indonesia, Prof. Enri Damanhuri
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="absolute h-[50%] !-mt-6 bg-gradient-to-b from-[#efeff0] w-full top-0 z-[1]" />
       <div className="absolute h-[30%] !-mt-6 bg-gradient-to-t from-black/80 w-full bottom-0 z-[1]" />
