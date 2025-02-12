@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function CustomImageBangSampah() {
   return (
-    <div className="relative flex flex-col items-center">
+    <div className="relative flex flex-col items-center overflow-hidden">
       <div
         className="relative flex h-full w-full flex-col justify-center bg-cover bg-center pt-12 text-center md:pt-24"
         style={{ backgroundImage: `url(${baseUrl}/assets/3.2.png)` }}

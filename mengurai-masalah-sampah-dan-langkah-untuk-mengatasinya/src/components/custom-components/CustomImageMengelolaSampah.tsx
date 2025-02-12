@@ -158,12 +158,12 @@ export function CustomImageMengelolaSampah() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: .6 }}
+          transition={{ duration: .6 }} viewport={{ once: true }}
           className={`text-center text-4xl md:text-6xl xl:text-7xl py-2 font-extrabold flex flex-col space-y-2 bg-no-repeat text-transparent bg-clip-text`} style={{ backgroundImage: `url('${baseUrl}/assets/1.2.png')` }}>
           <div>Mengelola Sampah</div>
           <div>Orang Indonesia</div>
         </motion.div>
-        <motion.div
+        <motion.div viewport={{ once: true }}
           initial={{ opacity: 0, y: -20, scale: 1.2, rotate: 0 }}
           whileInView={{ opacity: 1, y: 0, scale: 1, rotate: -6 }}
           transition={{ duration: .4, delay: .2 }}
@@ -173,7 +173,7 @@ export function CustomImageMengelolaSampah() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: .4, delay: .2 }}
+          transition={{ duration: .4, delay: .2 }} viewport={{ once: true }}
           className="w-fit px-5 py-1 text-center text-2xl md:text-3xl xl:text-4xl font-semibold text-white bg-[#3c6b5a] rounded-lg">
           Sudahkah Caranya Tepat?
         </motion.div>
@@ -181,7 +181,7 @@ export function CustomImageMengelolaSampah() {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: .4, delay: .2 }}
+            transition={{ duration: .4, delay: .2 }} viewport={{ once: true }}
             className="absolute bg-[#d5d639] py-1 px-5 rounded-lg -top-[5%]">
             <div
               className="text-xl md:text-2xl xl:text-3xl text-center font-medium font-sora">
@@ -242,21 +242,21 @@ export function CustomImageMengelolaSampah() {
             <div className="flex-1">
               <ul className="space-y-4 text-lg md:text-xl lg:text-2xl">
                 <motion.li
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 20 }} viewport={{ once: true }}
                   whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .5, delay: 0 }}
                   className="flex items-start">
                   <div className="bg-[#5d9b7b] rounded-full size-6 m-2 mr-4" />
                   <div className="flex-1">Mengaku selalu membuang sampah di tempatnya</div>
                 </motion.li>
                 <motion.li
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 20 }} viewport={{ once: true }}
                   whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .5, delay: 0.1 }}
                   className="flex items-start">
                   <div className="bg-[#b7b334] rounded-full size-6 m-2 mr-4" />
                   <div className="flex-1">Tidak selalu membuang sampah pada tempatnya</div>
                 </motion.li>
                 <motion.li
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 20 }} viewport={{ once: true }}
                   whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .5, delay: 0.2 }}
                   className="flex items-start">
                   <div className="bg-[#fca438] rounded-full size-6 m-2 mr-4" />
@@ -268,7 +268,7 @@ export function CustomImageMengelolaSampah() {
         </div>
         <div className="rounded-2xl bg-[#ffefdb] py-12 lg:py-16 pb-12 lg:pb-20 p-6 lg:p-10 relative flex flex-col items-center w-full">
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -20 }} viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: .4, delay: .2 }}
             className="absolute bg-[#3c6b5a] py-1 px-5 rounded-lg -top-[3.5%]">
@@ -304,7 +304,7 @@ export function CustomImageMengelolaSampah() {
                         layoutRoot
                       />
                     </div>
-                    <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .4, delay: index * .1 }} className="text-lg md:text-xl xl:text-2xl w-full lg:w-1/2">{labels[key]}</motion.div>
+                    <motion.div viewport={{ once: true }} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .4, delay: index * .1 }} className="text-lg md:text-xl xl:text-2xl w-full lg:w-1/2">{labels[key]}</motion.div>
                   </div>
                 ))}
               </div>
@@ -312,7 +312,7 @@ export function CustomImageMengelolaSampah() {
           </div>
           <motion.div
             initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ duration: .4, delay: .2 }}
             className="absolute bg-[#3c6b5a] py-3 px-10 w-fit md:rounded-lg -bottom-[12%] md:-bottom-[10%] xl:-bottom-[10%] max-w-3xl mx-auto">
             <div className="text-xl md:text-2xl xl:text-3xl text-center text-white font-medium font-sora">
@@ -322,7 +322,7 @@ export function CustomImageMengelolaSampah() {
         </div>
         <motion.div
           initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           transition={{ duration: .3, delay: .3 }}
           className="relative bg-black/50 !mt-[5.5rem] md:mt-auto py-6 px-10 w-fit md:rounded-lg max-w-3xl mx-auto pb-12 flex items-center justify-center">
           <div className="text-lg md:text-xl xl:text-2xl text-center text-white font-medium font-sora">
