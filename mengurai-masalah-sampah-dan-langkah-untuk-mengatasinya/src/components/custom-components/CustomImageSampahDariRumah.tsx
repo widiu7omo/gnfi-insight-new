@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 export function CustomImageSampahDariRumah() {
   return (
     <div className="relative flex flex-col items-center">
+      <div className="absolute bg-gradient-to-b from-[#0E4029] top-0 w-full h-[10%] z-10" />
       <div
         className="relative flex h-full w-full flex-col justify-center bg-cover bg-center text-center"
         style={{ backgroundImage: `url(${baseUrl}/assets/3.2.png)` }}

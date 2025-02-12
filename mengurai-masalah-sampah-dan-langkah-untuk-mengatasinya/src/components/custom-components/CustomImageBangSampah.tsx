@@ -181,13 +181,14 @@ export function CustomImageBangSampah() {
           </div>
         </div>
         <div
-          className="h-full w-full bg-cover bg-center py-4 md:py-12"
+          className="h-full w-full bg-cover bg-center py-4 md:py-12 relative"
           style={{ backgroundImage: `url(${baseUrl}/assets/4.8.png)` }}
         >
-          <div className="z-30 mx-auto flex w-full max-w-full flex-col px-4 md:max-w-4xl md:flex-row md:px-0">
+          <div className="absolute z-0 w-full h-[50%] bg-gradient-to-t from-[#001c0f] bottom-0" />
+          <div className="z-30 relative mx-auto flex w-full max-w-full flex-col px-4 md:max-w-4xl md:flex-row md:px-0">
             <motion.p
               viewport={{ once: true }}
-              initial={{ opacity: 0, x: -20 }} 
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
               className="flex flex-col justify-center w-full bg-[#D6D63A] px-4 py-2 text-left font-sora text-lg font-semibold text-[#104A34] md:w-1/2 md:text-2xl"

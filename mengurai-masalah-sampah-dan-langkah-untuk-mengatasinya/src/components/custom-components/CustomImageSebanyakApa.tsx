@@ -9,6 +9,7 @@ export function CustomImageSebanyakApa() {
         className="relative flex h-full w-full justify-center bg-cover bg-center text-center py-12 md:py-32"
         style={{ backgroundImage: `url(${baseUrl}/assets/2.1.png)` }}
       >
+        <div className="absolute w-full h-[50%] bg-gradient-to-b from-[#D98452] top-0" />
         <div className="z-10 mx-auto">
           <motion.h3
             viewport={{ once: true }}
@@ -105,8 +106,8 @@ export function CustomImageSebanyakApa() {
             Sampah jenis apa <br /> yang paling banyak?
           </motion.p>
         </div>
-        <div className="mx-auto flex w-full max-w-xl flex-row flex-col items-center justify-center space-y-4 md:flex-row md:space-x-8 md:space-y-0">
-          <div className="relative h-40 w-40 overflow-visible rounded-xl border border-white bg-[#A33F11]">
+        <div className="mx-auto flex w-full max-w-xl flex-col items-center justify-center space-y-4 xs:flex-row xs:space-x-8 xs:space-y-0">
+          <div className="relative size-40 overflow-visible rounded-xl border border-white bg-[#A33F11]">
             <div className="absolute bottom-0 h-1/2 w-full rounded-b-xl bg-[#8A3108]"></div>
             <motion.img
               viewport={{ once: true }}
@@ -138,7 +139,7 @@ export function CustomImageSebanyakApa() {
               </motion.p>
             </div>
           </div>
-          <div className="relative h-40 w-40 overflow-visible rounded-xl border border-white bg-[#A33F11]">
+          <div className="relative size-40 overflow-visible rounded-xl border border-white bg-[#A33F11]">
             <div className="absolute bottom-0 h-1/2 w-full rounded-b-xl bg-[#8A3108]"></div>
             <motion.img
               viewport={{ once: true }}
@@ -170,7 +171,7 @@ export function CustomImageSebanyakApa() {
               </motion.p>
             </div>
           </div>
-          <div className="relative h-40 w-40 overflow-visible rounded-xl border border-white bg-[#A33F11]">
+          <div className="relative size-40 overflow-visible rounded-xl border border-white bg-[#A33F11]">
             <div className="absolute bottom-0 h-1/2 w-full rounded-b-xl bg-[#8A3108]"></div>
             <motion.img
               viewport={{ once: true }}
