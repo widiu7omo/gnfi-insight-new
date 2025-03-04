@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Mengurai Masalah Sampah dan Langkah untuk Mengatasinya
+              Derap Tren Olahraga Lari Masa Kini
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Potret Masalah Sampah di Indonesia
+              Manfaat Lari bagi Kesehatan
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Seberapa Banyak Sampah di Indonesia?
+              Semakin Ramai, Segini Banyaknya Pelari di Indonesia
             </a>
           </li>
           <li
@@ -73,7 +73,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              Mengelola Sampah, Bisa Dilakukan dari Rumah
+              Tips dan Panduan Berlari yang Aman untuk Pemula
             </a>
           </li>
           <li
@@ -81,7 +81,15 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-5">
-              Belajar Mengelola Sampah dari Bank Sampah Mandiri Cilacap
+              Daftar Merek Sepatu Lari Lokal: Bagus Tak Perlu Mahal!
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-6')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-6">
+              Kiat Mengikuti Event Lari, Jangan Asal Ikut!
             </a>
           </li>
         </ul>
