@@ -300,6 +300,7 @@ export function CustomImageE() {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-[#232a38] h-[20%]"></div>
     </div>
   );
 }

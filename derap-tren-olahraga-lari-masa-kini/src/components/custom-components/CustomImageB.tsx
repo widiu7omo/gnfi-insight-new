@@ -169,7 +169,7 @@ export function CustomImageB() {
             transition={{ delay: 0, duration: .5 }}
             className="relative z-10 mt-[16rem] xl:mt-[10rem] px-8 xl:px-0 space-y-4 xl:space-y-8">
             <img src={baseUrl + "/assets/2.5.png"} alt="Quote 2" className="size-8 md:size-12 xl:size-fit object-contain absolute top-[-0.7rem] xl:top-[-1.5rem] left-2 xl:left-[-4rem]" />
-            <p className="text-white text-lg sm:text-3xl xl:text-4xl font-semibold text-center tracking-wide max-w-full xl:max-w-full sm:max-w-[80%] mx-auto leading-tight">Lari dan bulutangkis lebih populer bagi Gen Z,
+            <p className="text-white text-lg sm:text-3xl xl:text-4xl font-semibold text-center tracking-wide max-w-full xl:max-w-full sm:max-w-[80%] mx-auto leading-tight"><span className="bg-[#2643a3] px-4 py-1 rounded-full">Lari dan bulutangkis</span> lebih populer bagi Gen Z,
               sementara berjalan kaki dan bersepeda lebih
               populernya di kalangan generasi yang lebih tua.</p>
             <motion.p

@@ -10,7 +10,8 @@ export function CustomImageA() {
 
   const canAnimate = useCanAnimate()
   return (
-    <div ref={ref} className="relative overflow-clip font-sora py-14 space-y-6 bg-no-repeat bg-cover bg-top" style={{ backgroundImage: `url(${baseUrl}/assets/1.0.jpg)`, backgroundColor: "#d0d1c3" }}>
+    <div ref={ref} className="relative overflow-clip font-sora py-14 bg-no-repeat bg-cover bg-top" style={{ backgroundImage: `url(${baseUrl}/assets/1.0.jpg)`, backgroundColor: "#d0d1c3" }}>
+      <div className="absolute left-0 w-full bottom-0 h-[30%] bg-gradient-to-t from-[#ea7f82] z-0"></div>
       <div className="absolute left-0 w-full top-0 h-full bg-black/30 z-0"></div>
       <div className="max-w-4xl mx-auto relative z-10 pt-0 lg:pt-[30rem]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 relative">
