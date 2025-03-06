@@ -220,7 +220,7 @@ export function CustomImageE() {
                     transition: { duration: 0.6, ease: "easeOut" },
                   },
                 }}
-                className="text-left font-sora text-2xl font-bold text-white md:text-4xl"
+                className="text-left mb-16 sm:mb-0 font-sora text-2xl font-bold text-white md:text-4xl"
               >
                 Ala Rully Eko
               </motion.p>
@@ -234,7 +234,7 @@ export function CustomImageE() {
                     transition: { duration: 0.6, ease: "easeOut", delay: 0.2 },
                   },
                 }}
-                className="text-left font-sora text-lg text-white md:text-xl"
+                className="text-left absolute left-4 top-[6.5rem] sm:static font-sora text-lg text-white md:text-xl"
               >
                 (Ranger Indorunners Surabaya)
               </motion.p>
