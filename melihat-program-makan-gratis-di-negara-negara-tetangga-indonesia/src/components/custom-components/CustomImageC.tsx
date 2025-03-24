@@ -10,7 +10,8 @@ export function CustomImageC() {
         className="relative w-full justify-center bg-cover bg-center pb-12 pt-16 md:pb-20 md:pt-20"
         style={{ backgroundImage: `url(${baseUrl}/assets/3.6.png)` }}
       >
-        <div className="mx-auto mb-12 max-w-4xl items-center px-4 md:mb-20 lg:px-0">
+        <div className="absolute bg-gradient-to-b from-[#008882] top-0 left-0 h-[30%] w-full" />
+        <div className="mx-auto mb-12 max-w-4xl items-center px-4 md:mb-20 lg:px-0 relative z-1">
           <motion.h3
             initial={{ opacity: 0, scale: 0.9, y: 10 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}

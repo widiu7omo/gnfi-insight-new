@@ -15,14 +15,15 @@ export function CustomImageD() {
         className="relative w-full justify-center bg-cover bg-center pt-16 md:pt-20 lg:pb-4"
         style={{ backgroundImage: `url(${baseUrl}/assets/3.6.png)` }}
       >
-        <div className="mx-auto flex w-full flex-col items-center px-4 md:max-w-4xl md:flex-row md:items-start lg:px-0">
+        <div className="absolute bg-gradient-to-b from-[#028d85] top-0 left-0 h-[30%] w-full" />
+        <div className="mx-auto flex w-full flex-col items-center px-4 md:max-w-4xl md:flex-row md:items-start lg:px-0 relative z-10">
           <div className="w-full lg:w-2/3">
             <motion.h3
               initial={{ opacity: 0, scale: 0.9, y: 10 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="mb-12 pb-8 text-left font-sora text-[1.75rem] font-bold leading-normal text-white md:text-[48px] lg:text-[70px]"
+              className="mb-12 pb-8 text-left font-sora text-[1.75rem] font-bold leading-[1.2] text-white md:text-[48px] lg:text-[70px]"
             >
               Makan Gratis <br />
               di Thailand yang Ternoda oleh Skandal
@@ -109,7 +110,7 @@ export function CustomImageD() {
         className="relative w-full justify-center bg-cover bg-center pb-0 pt-16 md:pt-20"
         style={{ backgroundImage: `url(${baseUrl}/assets/4.5.png)` }}
       >
-        <div className="mx-auto px-4 md:max-w-4xl lg:px-0">
+        <div className="mx-auto px-4 md:max-w-4xl lg:px-0 relative z-10">
           <div className="flex w-full flex-col items-center space-x-0 md:flex-row md:space-x-4 lg:space-x-8">
             <div className="flex h-full w-full flex-grow flex-col pb-20 md:pb-0 lg:w-4/5">
               <motion.h3
@@ -117,7 +118,7 @@ export function CustomImageD() {
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="mb-8 text-left font-sora text-[1.75rem] font-bold leading-normal text-[#009990] md:mb-12 md:text-[48px] lg:text-[70px]"
+                className="mb-8 text-left font-sora text-[1.75rem] font-bold leading-[1.2] text-[#009990] md:mb-12 md:text-[48px] lg:text-[70px]"
               >
                 Skandal yang <br />
                 menodai Thai SLP pada 2019:
@@ -171,9 +172,10 @@ export function CustomImageD() {
           </div>
           <img
             src={`${baseUrl}/assets/footer.png`}
-            className="mx-auto hidden w-full sm:block"
+            className="mx-auto hidden w-full sm:block invert"
           />
         </div>
+        <div className="absolute bg-gradient-to-t from-white bottom-0 left-0 h-[30%] w-full z-0" />
       </div>
     </div>
   );

@@ -23,6 +23,8 @@ export function CustomImageE() {
         className="relative flex h-full w-full flex-col justify-center bg-cover bg-no-repeat pb-[80px] pt-[64px] text-center md:pb-0 md:pt-20"
         style={{ backgroundImage: `url(${baseUrl}/assets/5.1.png)` }}
       >
+        <div className="absolute bg-gradient-to-b from-[#eaeaec] top-0 left-0 h-[30%] w-full" />
+
         <div className="relative mx-auto w-full px-4 md:max-w-4xl lg:px-0">
           <motion.h3
             initial={{ opacity: 0, scale: 0.9, y: 10 }}
@@ -197,7 +199,9 @@ export function CustomImageE() {
             src={`${baseUrl}/assets/footer.png`}
             className="relative z-50 mx-auto hidden w-full sm:block bottom-0"
           />
+
         </div>
+        <div className="absolute bg-gradient-to-t from-[#eaeaec] bottom-0 left-0 h-[30%] w-full" />
       </div>
     </div>
   );
