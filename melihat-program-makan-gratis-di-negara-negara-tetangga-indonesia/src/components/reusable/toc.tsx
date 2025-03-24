@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Derap Tren Olahraga Lari Masa Kini
+              Melihat Program Makan Gratis di Negara-negara Tetangga Indonesia
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Manfaat Lari bagi Kesehatan
+              Makan Bergizi Gratis, Program Andalan Prabowo Gibran
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Semakin Ramai, Segini Banyaknya Pelari di Indonesia
+              Makan Gratis di Malaysia: Sudah Ada sejak 1979
             </a>
           </li>
           <li
@@ -73,7 +73,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              Tips dan Panduan Berlari yang Aman untuk Pemula
+              MGB ala Filipina: Malusog na Simula, Yaman ng Bansa
             </a>
           </li>
           <li
@@ -81,7 +81,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-5">
-              Daftar Merek Sepatu Lari Lokal: Bagus Tak Perlu Mahal!
+              Program Makan Gratis di Thailand dan Skandalnya
             </a>
           </li>
           <li
@@ -89,7 +89,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-6">
-              Kiat Mengikuti Event Lari, Jangan Asal Ikut!
+              Semangat Kemandirian dari Makan Gratis di Laos dan Kamboja
             </a>
           </li>
         </ul>
