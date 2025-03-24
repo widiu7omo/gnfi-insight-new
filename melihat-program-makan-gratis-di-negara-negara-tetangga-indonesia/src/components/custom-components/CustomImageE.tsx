@@ -21,7 +21,7 @@ export function CustomImageE() {
     <div className="relative flex flex-col items-center overflow-hidden">
       <div
         className="relative flex h-full w-full flex-col justify-center bg-cover bg-no-repeat pb-[80px] pt-[64px] text-center md:pb-0 md:pt-20"
-        style={{ backgroundImage: `url(${baseUrl}/assets/5.1.png)` }}
+        style={{ backgroundImage: `url(${baseUrl}/assets/5.1.jpg)` }}
       >
         <div className="absolute bg-gradient-to-b from-[#eaeaec] top-0 left-0 h-[30%] w-full" />
 

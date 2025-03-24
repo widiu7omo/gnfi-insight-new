@@ -108,7 +108,7 @@ export function CustomImageD() {
       </div>
       <div
         className="relative w-full justify-center bg-cover bg-center pb-0 pt-16 md:pt-20"
-        style={{ backgroundImage: `url(${baseUrl}/assets/4.5.png)` }}
+        style={{ backgroundImage: `url(${baseUrl}/assets/4.5.jpg)` }}
       >
         <div className="mx-auto px-4 md:max-w-4xl lg:px-0 relative z-10">
           <div className="flex w-full flex-col items-center space-x-0 md:flex-row md:space-x-4 lg:space-x-8">
