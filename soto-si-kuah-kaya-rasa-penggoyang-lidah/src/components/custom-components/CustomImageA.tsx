@@ -17,7 +17,7 @@ export function CustomImageA() {
     'Wacana penggunaan susu ikan',
   ]
   return (
-    <div ref={ref} className="relative overflow-clip font-sora py-14 bg-no-repeat bg-cover bg-top" style={{ backgroundImage: `url(${baseUrl}/assets/1.0.1.png)`, backgroundColor: "#d0d1c3" }}>
+    <div ref={ref} className="relative overflow-clip font-sora py-14 bg-no-repeat bg-cover bg-top" style={{ backgroundImage: `url(${baseUrl}/assets/1.0.1.png)`, backgroundColor: "black" }}>
       <div className="absolute left-0 w-full bottom-0 h-[20%] bg-[#4f2911] z-0"></div>
       <div className="absolute left-0 w-full top-0 h-full bg-black/30 z-0"></div>
       <div className="max-w-4xl mx-auto relative z-10 pt-0 lg:pt-[6rem] pb-20">
