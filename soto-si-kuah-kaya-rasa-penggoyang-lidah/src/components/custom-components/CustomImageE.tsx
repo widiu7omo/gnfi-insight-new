@@ -3,205 +3,252 @@
 import { baseUrl } from "@/constants/meta";
 import { motion } from "framer-motion";
 
-const KAMBOJA = [
-  "Program makan gratis di Kamboja mulai dijalankan pada 1999 oleh World Food Programme (WFP)",
-  "Sejak 2019, Pemerintah Kamboja mulai mengambil alih program secara bertahap, namun WFP tetap memberikan dukungan",
-  "Kamboja berkomitmen untuk menggunakan bahan pangan lokal dalam penyediaan makanan gratis guna mendorong produktivitas pertanian, menyerap tenaga kerja, dan menaikkan pendapatan masyarakat",
-  "Pemerintah Kamboja klaim 280 ribu siswa telah merasakan manfaat program pada 2022",
+const DATA = [
+  {
+    img: `${baseUrl}/assets/5.2.png`,
+    desc: "Disajikan di Konferensi Asia Afrika (KAA) 1995",
+  },
+  {
+    img: `${baseUrl}/assets/5.3.png`,
+    desc: "Dipromosikan lewat program Indonesia Spice Up the World (ISUTW)",
+  },
+  {
+    img: `${baseUrl}/assets/5.4.png`,
+    desc: "Penjualnya ada di sejumlah kota besar dunia, mulai dari London hingga Amsterdam",
+  },
+  {
+    img: `${baseUrl}/assets/5.5.png`,
+    desc: 'Soto Betawi masuk "10 Makanan Berkuah Terbaik di Dunia" versi TasteAtlas',
+  },
+  {
+    img: `${baseUrl}/assets/5.6.png`,
+    desc: 'Soto Ayam masuk "20 Sup Terbaik di Dunia" versi CNN Travel',
+  },
 ];
 
-const LAOS = [
-  "Makan gratis di Laos dimulai pada 2002 oleh WFP. Pada 2010, pemerintah meluncurkan Laos National School Meals Program (LNMP) yang didanai World Bank",
-  "Pemerintah semakin berperan. Pada 2020, anggaran dalam negeri mulai dialokasikan untuk kelangsungan program",
-  "Per September 2024, LNMP disebut telah menjangkau 250 ribu anak, 25 persen dari seluruh siswa sekolah dasar di Laos",
-];
+const cardVariant = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: i * 0.2,
+      ease: "easeOut",
+    },
+  }),
+};
 
 export function CustomImageE() {
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
       <div
-        className="relative flex h-full w-full flex-col justify-center bg-cover bg-no-repeat pb-[80px] pt-[64px] text-center md:pb-0 md:pt-20"
-        style={{ backgroundImage: `url(${baseUrl}/assets/5.1.jpg)` }}
+        className="relative w-full justify-center bg-cover bg-center pt-6 md:pt-12 lg:pb-0"
+        style={{ backgroundImage: `url(${baseUrl}/assets/4.5.png)` }}
       >
-        <div className="absolute bg-gradient-to-b from-[#eaeaec] top-0 left-0 h-[30%] w-full" />
-
-        <div className="relative mx-auto w-full px-4 md:max-w-4xl lg:px-0">
+        <div className="absolute left-0 right-0 top-0 z-10 flex justify-center">
+          <motion.img
+            viewport={{ once: true }}
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            src={`${baseUrl}/assets/5.1.png`}
+            alt="Soto Background"
+            className="min-h-[20rem] w-full object-cover md:h-full lg:max-h-[80%] lg:w-auto"
+          />
+        </div>
+        <div className="relative z-20 mx-auto w-full justify-center px-4 md:max-w-4xl lg:px-0">
           <motion.h3
             initial={{ opacity: 0, scale: 0.9, y: 10 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="mb-6 text-center font-sora text-[1.75rem] font-bold leading-none text-[#008E86] md:mb-8 md:text-[48px] lg:text-[70px]"
+            className="mb-2 text-center font-sora text-3xl font-bold text-white md:text-5xl lg:mb-4 lg:text-6xl"
           >
-            Semangat Kemandirian <br />
-            dalam Makan Gratis di Laos dan Kamboja
+            Soto di Mata Dunia
           </motion.h3>
-          <div className="flex flex-col gap-y-8 md:flex-row md:gap-x-8">
-            <div className="w-full md:w-1/2">
-              <div className="flex w-1/2 items-center pl-[5%]">
-                <div className="relative">
-                  <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border-4 border-white bg-white md:h-28 md:w-28">
-                    <motion.img
-                      viewport={{ once: true }}
-                      initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                      whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
-                      transition={{ duration: 0.8, ease: "backOut" }}
-                      src={`${baseUrl}/assets/5.2.png`}
-                      alt="Bendera Kamboja"
-                      className="z-20 h-full w-full rounded-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                <div className="z-10 -ml-12 flex min-w-[13.75rem] justify-center rounded-full bg-[#003092] py-2 md:min-w-[15.625rem] md:py-4">
-                  <motion.p
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+          <motion.h4
+            initial={{ opacity: 0, scale: 0.9, y: 10 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="mb-6 text-center font-sora text-xl font-semibold text-white md:text-2xl lg:mb-4 lg:text-3xl"
+          >
+            Bukan Cuma Orang Indonesia yang Suka Soto Ayam!
+          </motion.h4>
+          <motion.p
+            initial={{ opacity: 0, scale: 0.9, y: 10 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="mb-2 mt-10 text-center font-sora text-xl text-white md:text-2xl lg:mb-4 lg:text-3xl"
+          >
+            Beberapa Jejak Soto di Kancah Dunia
+          </motion.p>
+          <div className="flex flex-col">
+            <div className="flex flex-row">
+              <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-3">
+                {DATA.slice(0, 3).map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex h-full flex-col bg-[#8F4C1F] p-2 pb-4"
+                    initial="hidden"
+                    whileInView="visible"
                     viewport={{ once: true }}
-                    className="font-sora text-[1.375rem] font-bold text-white md:text-2xl"
+                    variants={cardVariant}
+                    custom={index}
                   >
-                    Kamboja
-                  </motion.p>
-                </div>
-              </div>
-              <div className="relative -mt-10 h-[63.75rem] w-full rounded-3xl bg-[#B8CFFE] px-4 pt-16 md:-mt-14 md:h-[75rem] md:px-6 md:pt-20">
-                <motion.div
-                  className="space-y-8"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={{
-                    visible: {
-                      transition: {
-                        staggerChildren: 0.55,
-                      },
-                    },
-                  }}
-                >
-                  {KAMBOJA.map((item, index) => (
-                    <motion.div
-                      key={index}
-                      variants={{
-                        hidden: { opacity: 0, x: -40, scale: 0.9 },
-                        visible: {
-                          opacity: 1,
-                          x: 0,
-                          scale: 1,
-                          transition: { duration: 0.8, ease: "backOut" },
-                        },
-                      }}
-                      className="flex space-x-2"
-                    >
-                      <div className="mt-2 h-3 w-3 flex-shrink-0 rounded-full bg-[#003092] align-baseline" />
-                      <p className="text-left font-sora text-xl text-[#2A3335] md:text-2xl">
-                        {item}
-                      </p>
-                    </motion.div>
-                  ))}
-                </motion.div>
-                <motion.img
-                  viewport={{ once: true }}
-                  initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
-                  transition={{ duration: 0.8, ease: "backOut" }}
-                  src={`${baseUrl}/assets/5.5.png`}
-                  alt="Anak Makan"
-                  className="absolute bottom-0 right-0 z-10 w-full md:left-10 md:hidden"
-                />
+                    <div className="aspect-square w-full overflow-hidden">
+                      <img
+                        src={item.img}
+                        alt={`Gambar ${index + 1}`}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <p className="font-sera mt-4 px-0 text-center text-lg font-medium leading-relaxed text-white md:px-6 md:text-2xl">
+                      {item.desc}
+                    </p>
+                  </motion.div>
+                ))}
               </div>
             </div>
-            <div className="w-full md:w-1/2">
-              <div className="flex w-1/2 items-center pl-[5%]">
-                <div className="relative">
-                  <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border-4 border-white bg-white md:h-28 md:w-28">
-                    <motion.img
-                      viewport={{ once: true }}
-                      initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                      whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
-                      transition={{ duration: 0.8, ease: "backOut" }}
-                      src={`${baseUrl}/assets/5.3.png`}
-                      alt="Bendera Laos"
-                      className="z-20 h-full w-full rounded-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                <div className="z-10 -ml-12 flex min-w-[13.75rem] justify-center rounded-full bg-[#008E86] py-2 md:min-w-[15.625rem] md:py-4">
-                  <motion.p
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+            <div className="mt-4 flex flex-row md:mt-2">
+              <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
+                {DATA.slice(3, 5).map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex h-full flex-col bg-[#8F4C1F] p-2 pb-4"
+                    initial="hidden"
+                    whileInView="visible"
                     viewport={{ once: true }}
-                    className="font-sora text-[1.375rem] font-bold text-white md:text-2xl"
+                    variants={cardVariant}
+                    custom={index}
                   >
-                    Laos
-                  </motion.p>
-                </div>
+                    <div className="aspect-square w-full overflow-hidden">
+                      <img
+                        src={item.img}
+                        alt={`Gambar ${index + 1}`}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <p className="font-sera mt-4 px-0 text-center text-lg font-medium leading-relaxed text-white md:px-10 md:text-2xl">
+                      {item.desc}
+                    </p>
+                  </motion.div>
+                ))}
               </div>
-              <div className="relative -mt-10 h-[56.25rem] w-full rounded-3xl bg-[#8EDFE4] px-4 pb-20 pt-16 md:-mt-14 md:h-[75rem] md:px-6 md:pt-20">
-                <motion.div
-                  className="space-y-8"
-                  initial="hidden"
-                  whileInView="visible"
+            </div>
+          </div>
+          <motion.p
+            initial={{ opacity: 0, scale: 0.9, y: 10 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="my-8 text-center font-sora text-xl font-bold text-[#2F2F2F] md:my-16 md:text-2xl lg:mb-4 lg:text-4xl"
+          >
+            Kata figur publik internasional tentang Soto:
+          </motion.p>
+          <div className="mb-4 space-y-4 md:mb-8 lg:mt-28">
+            <div className="relative flex w-full rounded-xl bg-[#2F2F2F] py-4 md:pr-[10%]">
+              <motion.img
+                viewport={{ once: true }}
+                initial={{ opacity: 0, x: 50, scale: 0.8 }}
+                whileInView={{ opacity: 1, x: 0, scale: 1.1 }}
+                transition={{ duration: 0.8, ease: "backOut" }}
+                src={`${baseUrl}/assets/5.7.png`}
+                alt="Sarah Carter"
+                className="absolute bottom-1 left-[1%] z-30 max-h-[50%] w-auto object-contain sm:bottom-[5%] sm:max-h-[90%] md:bottom-3 md:bottom-[7%] md:left-1 md:left-3 md:h-auto md:max-h-none md:w-[24%]"
+              />
+              <div className="relative ml-[30%] flex h-full flex-col justify-center lg:ml-[40%]">
+                <motion.p
+                  initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
                   viewport={{ once: true }}
-                  variants={{
-                    visible: {
-                      transition: {
-                        staggerChildren: 0.55,
-                      },
-                    },
-                  }}
+                  className="mb-2 ml-2 text-left font-sora text-lg font-semibold text-white md:text-xl md:font-bold lg:text-2xl"
                 >
-                  {LAOS.map((item, index) => (
-                    <motion.div
-                      key={index}
-                      variants={{
-                        hidden: { opacity: 0, x: -40, scale: 0.9 },
-                        visible: {
-                          opacity: 1,
-                          x: 0,
-                          scale: 1,
-                          transition: { duration: 0.8, ease: "backOut" },
-                        },
-                      }}
-                      className="flex space-x-2"
-                    >
-                      <div className="mt-2 h-3 w-3 flex-shrink-0 rounded-full bg-[#008E86] align-baseline" />
-                      <p className="text-left font-sora text-xl text-[#2A3335] md:text-2xl">
-                        {item}
-                      </p>
-                    </motion.div>
-                  ))}
-                </motion.div>
+                  Saya sangat suka soto ayam, rasanya enak sekali. I do really
+                  love this food,
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  className="mb-2 mt-8 text-left font-sora text-base text-white md:text-lg lg:text-xl"
+                >
+                  Selebriti Hollywood, <br />
+                  <span className="text-[#FF521F]">
+                    Sarah Carter<span className="text-white">, via Antara</span>
+                  </span>
+                </motion.p>
                 <motion.img
                   viewport={{ once: true }}
-                  initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
+                  initial={{ opacity: 0, x: 50, scale: 0.8 }}
+                  whileInView={{ opacity: 1, x: 0, scale: 1.1 }}
                   transition={{ duration: 0.8, ease: "backOut" }}
-                  src={`${baseUrl}/assets/5.4.png`}
-                  alt="Anak Makan"
-                  className="absolute bottom-0 right-0 z-10 w-full md:left-10"
+                  src={`${baseUrl}/assets/5.8.png`}
+                  alt="Tanda Petik"
+                  className="absolute -left-[20%] -top-[20%] z-20 w-[20%] object-contain sm:-left-[20%] sm:-top-[25%] sm:w-[16%] md:-top-[30%] md:h-auto lg:-left-[25%] lg:-top-[40%] lg:w-[25%]"
                 />
               </div>
             </div>
           </div>
-          <motion.img
-            viewport={{ once: true }}
-            initial={{ opacity: 0, y: 50, scale: 0.8 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
-            transition={{ duration: 0.8, ease: "backOut" }}
-            src={`${baseUrl}/assets/5.5.png`}
-            alt="Anak Makan"
-            className="absolute left-0 z-10 z-20 hidden max-w-4xl bottom-0 md:block md:max-h-[18.75rem] md:w-auto lg:max-h-[21.875rem]"
-          />
-          <img
-            src={`${baseUrl}/assets/footer.png`}
-            className="relative z-50 mx-auto hidden w-full sm:block bottom-0"
-          />
-
+          <div className="mb-4 space-y-4 md:mb-8 lg:mt-16">
+            <div className="relative flex w-full rounded-xl bg-[#2F2F2F] py-4 md:pr-[10%]">
+              <div className="relative mr-[30%] flex h-full flex-col justify-center lg:mr-[40%]">
+                <motion.p
+                  initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  className="mb-2 ml-4 mr-1 text-left font-sora text-lg font-semibold text-white md:text-xl md:font-bold lg:text-2xl"
+                >
+                  Saya paling suka soto ayam. Selain itu mungkin nasi goreng.
+                  Menurut saya soto ayam dan nasi goreng sangat enak,
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  className="mb-2 ml-4 mr-1 mt-8 text-left font-sora text-base text-white md:text-lg lg:text-xl"
+                >
+                  Pemain asing Persija, <br />
+                  <span className="text-[#FF521F]">
+                    Ryo Matsumara
+                    <span className="text-white">, via persija.id</span>
+                  </span>
+                </motion.p>
+                <motion.img
+                  viewport={{ once: true }}
+                  initial={{ opacity: 0, x: 50, scale: 0.8, rotate: 180 }}
+                  whileInView={{ opacity: 1, x: 0, scale: 1.1, rotate: 180 }}
+                  transition={{ duration: 0.8, ease: "backOut" }}
+                  src={`${baseUrl}/assets/5.8.png`}
+                  alt="Tanda Petik"
+                  className="absolute -right-[20%] -top-[12%] z-20 h-auto w-[20%] object-contain sm:-right-[15%] sm:-top-[20%] sm:w-[16%] md:-right-[15%] md:-top-[20%] lg:-right-[30%] lg:w-[25%]"
+                />
+              </div>
+              <motion.img
+                viewport={{ once: true }}
+                initial={{ opacity: 0, x: 50, scale: 0.8 }}
+                whileInView={{ opacity: 1, x: 0, scale: 1.1 }}
+                transition={{ duration: 0.8, ease: "backOut" }}
+                src={`${baseUrl}/assets/5.9.png`}
+                alt="Ryo Matsumara"
+                className="absolute bottom-1 right-[1%] z-30 max-h-[40%] w-auto object-contain sm:bottom-[5%] sm:max-h-[90%] md:bottom-3 md:bottom-[4%] md:right-3 md:h-auto md:max-h-none md:w-[24%]"
+              />
+            </div>
+          </div>
         </div>
-        <div className="absolute bg-gradient-to-t from-[#eaeaec] bottom-0 left-0 h-[30%] w-full" />
+      </div>
+      <div className="relative -mt-20 w-full justify-center bg-[#741425] bg-cover bg-center pb-28 md:pb-40" />
+      <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
+        <img
+          src={`${baseUrl}/assets/footer.png`}
+          className="z-50 mx-auto hidden w-full sm:block"
+        />
       </div>
     </div>
   );
