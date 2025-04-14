@@ -257,6 +257,7 @@ export function CustomImageD() {
           className="z-50 mx-auto hidden w-full invert sm:block"
         />
       </div>
+      <div className="absolute left-0 h-[50%] w-full bottom-0 bg-gradient-to-t from-[#d8d8d9]" />
     </div>
   );
 }
