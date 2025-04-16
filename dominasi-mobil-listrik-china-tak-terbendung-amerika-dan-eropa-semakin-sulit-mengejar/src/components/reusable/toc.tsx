@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Melihat Program Makan Gratis di Negara-negara Tetangga Indonesia
+              Dominasi Mobil Listrik China Tak Terbendung: Amerika dan Eropa Semakin Sulit Mengejar
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Makan Bergizi Gratis, Program Andalan Prabowo Gibran
+              Pertumbuhan Industri Kendaraan Listrik China Kian Tak Terbendung
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Makan Gratis di Malaysia: Sudah Ada sejak 1979
+              Tantangan Eropa yang Semakin Berat
             </a>
           </li>
           <li
@@ -73,7 +73,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              MGB ala Filipina: Malusog na Simula, Yaman ng Bansa
+              Perjuangan Berat Amerika Serikat di Pasar Kendaraan Listrik
             </a>
           </li>
           <li
@@ -81,7 +81,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-5">
-              Program Makan Gratis di Thailand dan Skandalnya
+              Faktor Penentu Kenggulaan Industri EV China
             </a>
           </li>
           <li
@@ -89,7 +89,23 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-6">
-              Semangat Kemandirian dari Makan Gratis di Laos dan Kamboja
+              Implikasi Geopolitik Dominasi EV China
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-7')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-7">
+              Lanskap Mobilitas Global di Masa Depan
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-8')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-8">
+              Kesenjangan yang Melebar dan Jalan ke Depan
             </a>
           </li>
         </ul>
