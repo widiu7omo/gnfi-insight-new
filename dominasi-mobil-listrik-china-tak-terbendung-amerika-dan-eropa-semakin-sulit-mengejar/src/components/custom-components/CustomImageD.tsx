@@ -2,180 +2,184 @@
 import { baseUrl } from "@/constants/meta";
 import { motion } from "framer-motion";
 
-const SKANDAL = [
-  "Beberapa sekolah di Nakhon Ratchasima terdeteksi National Anti-Corruption Commission (NACC) menyajikan menu tak sesuai standar",
-  "Pimpinan sekolah di Chon Buri dilaporkan memanipulasi angka jumlah siswa penerima program",
-  "Sekolah Ban Tha Mai di Surat Thani menyajikan makanan minim gizi. Pimpinan sekolah lalu dicopot dari jabatannya",
-];
-
 export function CustomImageD() {
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
+      <div className="h-[5rem] w-full bg-[#0D0F12] md:h-[10rem] lg:h-[20rem]" />
       <div
-        className="relative w-full justify-center bg-cover bg-center pt-16 md:pt-20 lg:pb-4"
-        style={{ backgroundImage: `url(${baseUrl}/assets/3.6.png)` }}
+        className="relative w-full justify-center bg-cover bg-center pb-20 pt-16 md:pt-20 lg:pb-[16rem]"
+        style={{ backgroundImage: `url(${baseUrl}/assets/4.1.png)` }}
       >
-        <div className="absolute bg-gradient-to-b from-[#028d85] top-0 left-0 h-[30%] w-full" />
-        <div className="mx-auto flex w-full flex-col items-center px-4 md:max-w-4xl md:flex-row md:items-start lg:px-0 relative z-10">
-          <div className="w-full lg:w-2/3">
-            <motion.h3
-              initial={{ opacity: 0, scale: 0.9, y: 10 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className="mb-12 pb-8 text-left font-sora text-[1.75rem] font-bold leading-[1.2] text-white md:text-[48px] lg:text-[70px]"
-            >
-              Makan Gratis <br />
-              di Thailand yang Ternoda oleh Skandal
-            </motion.h3>
+        <div className="absolute left-0 top-0 h-[30%] w-full bg-gradient-to-b from-[#0D0F12]" />
+        <div className="z-1 relative mx-auto mb-12 max-w-4xl items-center px-4 md:mb-20 lg:px-0">
+          <motion.h3
+            initial={{ opacity: 0, scale: 0.9, y: 10 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="-mt-[20%] mb-6 text-center font-sora text-[1.75rem] font-bold text-white md:mb-8 md:text-[48px] md:leading-none lg:-mt-[35%] lg:mb-12 lg:text-[70px]"
+          >
+            Tantangan Eropa <br />
+            yang Semakin Berat
+          </motion.h3>
+        </div>
+        <div className="relative mx-auto w-full px-4 md:max-w-4xl lg:px-0">
+          <motion.img
+            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
+            transition={{ duration: 0.8, ease: "backOut" }}
+            src={`${baseUrl}/assets/4.2.png`}
+            alt="Mobil Biru"
+            className="absolute right-0 top-[15%] z-10 hidden h-auto w-full object-contain md:block md:w-[70%]"
+          />
+          <motion.img
+            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
+            transition={{ duration: 0.8, ease: "backOut" }}
+            src={`${baseUrl}/assets/4.2.png`}
+            alt="Mobil Biru"
+            className="z-10 h-auto w-full object-contain md:hidden"
+          />
+
+          <div className="relative z-20 flex w-full items-start gap-4 md:w-[40%]">
             <motion.img
               viewport={{ once: true }}
               initial={{ opacity: 0, y: 50, scale: 0.8 }}
               whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
               transition={{ duration: 0.8, ease: "backOut" }}
-              src={`${baseUrl}/assets/4.1.png`}
-              alt="Makan gratis"
-              className="relative z-30 -mt-12 h-auto w-full self-end md:-ml-4 md:ml-8"
+              src={`${baseUrl}/assets/4.6.png`}
+              alt="Arrow"
+              className="h-auto w-[2rem] object-contain md:w-[4rem]"
             />
-          </div>
-          <div className="z-40 w-full space-y-4 lg:w-1/3 lg:space-y-12">
-            <div className="z-20 w-full rounded-xl bg-white p-4 shadow-2xl md:w-[80%] md:p-6">
+            <div className="flex flex-col">
               <motion.p
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="text-sm text-gray-700 md:text-xl"
+                className="mb-4 text-xl font-semibold text-white md:text-2xl lg:mb-8 lg:text-3xl"
               >
-                Pada 1992, Pemerintah Thailand meluncurkan pendanaan untuk Thai
-                School Lunch Program (Thai SLP)
+                Penjualan yang Menurun dan Perubahan Sentimen Konsumen
               </motion.p>
-            </div>
-            <div className="z-20 w-full rounded-xl bg-white p-4 shadow-2xl md:w-[80%] md:p-6">
               <motion.p
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="text-sm text-gray-700 md:text-xl"
+                className="text-base text-white md:text-xl"
               >
-                Awalnya, setiap siswa menerima subsidi makanan 5 baht perhari
-                selama 200 hari dalam setahun, lalu pada 2021 dinaikkan menjadi
-                21 baht
+                Pasar mobil listrik Eropa, setelah beberapa tahun pertumbuhan
+                yang menjanjikan, mengalami sedikit guncangan, di tahun 2024
               </motion.p>
             </div>
           </div>
         </div>
       </div>
       <div
-        className="relative w-full justify-center bg-cover bg-center"
-        style={{ backgroundImage: `url(${baseUrl}/assets/4.2.png)` }}
+        className="relative w-full justify-center bg-cover bg-center pb-10 md:pb-20"
+        style={{ backgroundImage: `url(${baseUrl}/assets/4.7.png)` }}
       >
-        <div className="mx-auto flex max-w-4xl flex-col items-center justify-center space-x-0 px-4 md:flex-row md:space-x-12 md:px-0">
-          <div className="relative flex h-[200px] w-full self-start md:h-[250px] md:w-1/2">
-            <motion.img
-              viewport={{ once: true }}
-              initial={{ opacity: 0, y: 50, scale: 0.8 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
-              transition={{ duration: 0.8, ease: "backOut" }}
-              src={`${baseUrl}/assets/4.3.png`}
-              alt="Makan gratis"
-              className="z-30 ml-0 mt-2 h-[70%] w-auto md:-ml-12 md:mt-0 md:h-full md:w-auto"
-            />
-            <motion.img
-              viewport={{ once: true }}
-              initial={{ opacity: 0, y: 50, scale: 0.8 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
-              transition={{ duration: 0.8, ease: "backOut" }}
-              src={`${baseUrl}/assets/4.4.png`}
-              alt="Makan gratis"
-              className="absolute left-[50%] top-2 z-30 h-auto w-1/2 md:top-4"
-            />
-          </div>
-          <div className="flex w-full py-6 md:w-1/2 md:py-0">
-            <motion.p
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className="text-lg leading-normal text-[#FFB433] md:text-[28px]"
-            >
-              Sekolah bertanggungjawab atas pelaksanaan Thai SLP untuk siswa
-              taman kanak-kanak hingga kelas 6
-            </motion.p>
-          </div>
-        </div>
-      </div>
-      <div
-        className="relative w-full justify-center bg-cover bg-center pb-0 pt-16 md:pt-20"
-        style={{ backgroundImage: `url(${baseUrl}/assets/4.5.jpg)` }}
-      >
-        <div className="mx-auto px-4 md:max-w-4xl lg:px-0 relative z-10">
-          <div className="flex w-full flex-col items-center space-x-0 md:flex-row md:space-x-4 lg:space-x-8">
-            <div className="flex h-full w-full flex-grow flex-col pb-20 md:pb-0 lg:w-4/5">
-              <motion.h3
-                initial={{ opacity: 0, scale: 0.9, y: 10 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                viewport={{ once: true }}
-                className="mb-8 text-left font-sora text-[1.75rem] font-bold leading-[1.2] text-[#009990] md:mb-12 md:text-[48px] lg:text-[70px]"
-              >
-                Skandal yang <br />
-                menodai Thai SLP pada 2019:
-              </motion.h3>
-              <motion.div
-                className="space-y-8"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={{
-                  visible: {
-                    transition: {
-                      staggerChildren: 0.55,
-                    },
-                  },
-                }}
-              >
-                {SKANDAL.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    variants={{
-                      hidden: { opacity: 0, x: -40, scale: 0.9 },
-                      visible: {
-                        opacity: 1,
-                        x: 0,
-                        scale: 1,
-                        transition: { duration: 0.8, ease: "backOut" },
-                      },
-                    }}
-                    className="flex space-x-2"
-                  >
-                    <div className="mt-2 h-3 w-3 flex-shrink-0 rounded-full bg-[#009990] align-baseline" />
-                    <p className="text-left font-sora text-lg text-[#2A3335] md:text-2xl">
-                      {item}
-                    </p>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </div>
-            <div className="h-full w-full md:w-2/5">
+        <div className="relative mx-auto max-w-4xl items-center justify-center space-x-0 md:flex-row md:space-x-12 md:px-0">
+          <div className="flex flex-col gap-x-0 md:flex-row md:gap-x-0 lg:gap-x-0">
+            <div className="flex w-full flex-col px-4 md:px-0">
               <motion.img
                 viewport={{ once: true }}
                 initial={{ opacity: 0, y: 50, scale: 0.8 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
                 transition={{ duration: 0.8, ease: "backOut" }}
-                src={`${baseUrl}/assets/4.6.png`}
-                alt="Makan gratis"
-                className="z-50 h-full w-full object-cover"
+                src={`${baseUrl}/assets/4.3.png`}
+                alt="Mobil"
+                className="z-30 -mt-[10%] ml-0 h-auto w-full object-contain md:-ml-0 lg:-mt-[20%]"
+              />
+              <motion.img
+                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 50, scale: 0.8 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
+                transition={{ duration: 0.8, ease: "backOut" }}
+                src={`${baseUrl}/assets/4.5.png`}
+                alt="orang"
+                className="z-30 mb-8 ml-0 mt-[10%] h-auto w-[45%] object-contain md:mb-0 md:ml-12 md:mt-[20%] md:w-[60%] lg:ml-12 lg:mt-[10%] lg:pl-0"
               />
             </div>
+            <div className="ld:pr-0 flex w-full flex-col px-4 md:w-full md:items-end lg:pr-4">
+              <div className="relative z-40 ml-0 w-full rounded-2xl bg-[#10122B] px-6 py-4 font-bold text-white lg:px-8">
+                <motion.img
+                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 50, scale: 0.8 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
+                  transition={{ duration: 0.8, ease: "backOut" }}
+                  src={`${baseUrl}/assets/4.4.png`}
+                  alt="Orang"
+                  className="absolute bottom-full right-0 right-10 z-0 h-auto w-[40%] translate-y-[-20rem] object-contain md:w-[60%]"
+                />
+                <motion.p
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  className="text-lg font-semibold md:text-2xl lg:text-3xl"
+                >
+                  Penjualan secara keseluruhan turun sekitar
+                </motion.p>
+                <motion.div
+                  className="flex justify-center md:justify-start"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <motion.p
+                    className="text-[4rem] text-[#B83049] md:text-[6rem]"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.6, ease: "backOut" }}
+                    viewport={{ once: true }}
+                  >
+                    3%
+                  </motion.p>
+                  <img
+                    src={`${baseUrl}/assets/4.6.png`}
+                    alt="Arrow"
+                    style={{ transform: "scaleX(-1)" }}
+                    className="-mt-[14%] h-auto w-[2rem] object-contain md:w-[3rem]"
+                  />
+                </motion.div>
+                <motion.p
+                  className="text-base font-normal md:text-xl"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  dengan jumlah total registrasi sekitar EV sedikit di atas 2,96
+                  juta unit - <strong>penurunan 1,8%</strong> dibandingkan tahun
+                  2023
+                </motion.p>
+              </div>
+              <motion.div
+                className="z-40 ml-0 mt-4 w-full rounded-2xl bg-[#08091B] px-6 py-4 font-bold text-white"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <p className="text-base font-normal md:text-xl">
+                  Angka ini menunjukkan potensi{" "}
+                  <strong>perlambatan pertumbuhan</strong>, bahkan stagnasi, di
+                  pasar yang sebelumnya menunjukkan perkembangan positif
+                </p>
+              </motion.div>
+            </div>
           </div>
-          <img
-            src={`${baseUrl}/assets/footer.png`}
-            className="mx-auto hidden w-full sm:block invert"
-          />
         </div>
-        <div className="absolute bg-gradient-to-t from-white bottom-0 left-0 h-[30%] w-full z-0" />
+      </div>
+      <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
+        <img
+          src={`${baseUrl}/assets/footer.png`}
+          className="z-50 mx-auto hidden w-full sm:block"
+        />
       </div>
     </div>
   );
