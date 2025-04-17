@@ -24,6 +24,19 @@ const config: Config = {
         apple: ["var(--font-apple)"],
         sora: ['"Sora"', ...fontFamily.sans],
       },
+      // @ts-ignore
+      typography: ({ theme }) => ({
+        "dark-bg": {
+          css: {
+            // Example override for ol > li::marker
+            'ol > li::marker': {
+              color: theme('colors.neutral.100'),
+              fontWeight: 'bold',
+            },
+            // Add more customizations here
+          },
+        },
+      }),
     },
     screens: {
       ...defaultScreens,

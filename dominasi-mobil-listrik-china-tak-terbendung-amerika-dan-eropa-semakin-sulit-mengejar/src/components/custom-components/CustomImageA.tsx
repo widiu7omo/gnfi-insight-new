@@ -51,9 +51,9 @@ export function CustomImageA() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0, duration: 0.6 }}
-              className="absolute bg-[#0f36d5] rounded-tl-[4rem] md:rounded-tl-[5rem] rounded-bl-md md:right-[10%] left-0 top-[25%] p-7 md:p-12">
+              className="absolute bg-[#0f36d5] rounded-tl-[4rem] md:rounded-tl-[5rem] rounded-bl-md md:right-[10%] left-0 xs:top-[25%] p-7 md:p-12">
               <div className="absolute block md:hidden bg-gradient-to-r from-[#0f0fd5] z-40 w-full left-0 rounded-tl-[4rem] md:rounded-tl-[5rem] top-0 h-full"></div>
-              <div className="w-[80%] xs:w-[50%] sm:w-[40%] font-sora text-white text-xl font-semibold space-y-2 z-40 relative">
+              <div className="w-[90%] xs:w-[60%] md:w-[40%] font-sora text-white text-xl font-semibold space-y-2 z-40 relative">
                 <motion.div
                   viewport={{ once: true }}
                   initial={{ opacity: 0 }}

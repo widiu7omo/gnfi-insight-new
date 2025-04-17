@@ -8,7 +8,7 @@ export function CustomImageD() {
       <div className="h-[5rem] w-full bg-[#0D0F12] md:h-[10rem] lg:h-[20rem]" />
       <div
         className="relative w-full justify-center bg-cover bg-center pb-20 pt-16 md:pt-20 lg:pb-[16rem]"
-        style={{ backgroundImage: `url(${baseUrl}/assets/4.1.png)` }}
+        style={{ backgroundImage: `url(${baseUrl}/assets/4.1.jpg)` }}
       >
         <div className="absolute left-0 top-0 h-[30%] w-full bg-gradient-to-b from-[#0D0F12]" />
         <div className="z-1 relative mx-auto mb-12 max-w-4xl items-center px-4 md:mb-20 lg:px-0">

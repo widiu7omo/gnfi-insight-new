@@ -1,7 +1,9 @@
 "use client";
 
 import { baseUrl } from "@/constants/meta";
-import { motion } from "framer-motion";
+import NumberFlow from "@number-flow/react";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 const fadeInUp = (delay = 0) => ({
   initial: { opacity: 0, y: 40 },
@@ -9,8 +11,20 @@ const fadeInUp = (delay = 0) => ({
   transition: { duration: 0.6, ease: "easeOut", delay },
   viewport: { once: true },
 });
+const MotionNumberFlow = motion(NumberFlow)
 
 export function CustomImageC() {
+  const ref = useRef(null)
+
+  const [number, setNumber] = useState(0)
+  const inView = useInView(ref)
+  useEffect(() => {
+    if (inView) {
+      setNumber(164)
+    } else {
+      setNumber(0)
+    }
+  }, [inView])
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
       <div
@@ -188,7 +202,7 @@ export function CustomImageC() {
           />
           <div className="absolute bottom-0 left-0 h-[30%] w-full bg-gradient-to-t from-[#C8C4C2] md:hidden" />
         </div>
-        <div className="relative -mt-[3.75%] flex w-full flex-col justify-center px-4 pb-14 md:w-1/2 md:px-0 md:pb-0">
+        <div ref={ref} className="relative -mt-[3.75%] flex w-full flex-col justify-center px-4 pb-14 md:w-1/2 md:px-0 md:pb-0 z-20">
           <motion.div
             viewport={{ once: true }}
             initial={{ opacity: 0, y: 30 }}
@@ -196,8 +210,8 @@ export function CustomImageC() {
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
             className="text-left md:max-w-[400px]"
           >
-            <motion.p className="font-sera text-lg text-black drop-shadow-lg md:text-xl lg:text-3xl">
-              <span className="font-semibold text-black lg:font-bold">
+            <motion.p className="font-sera text-lg text-neutral-800 drop-shadow-lg md:text-xl lg:text-3xl">
+              <span className="font-semibold text-neutral-800 lg:font-bold">
                 Indonesia
               </span>{" "}
               juga mengalami peningkatan penjualan EV China yang signifikan
@@ -205,7 +219,7 @@ export function CustomImageC() {
           </motion.div>
 
           <motion.div
-            className="mt-4 flex w-fit items-center gap-2 rounded-full border border-black px-6 text-black lg:px-10 xl:px-14"
+            className="mt-4 flex w-fit items-center gap-2 rounded-full border border-black px-6 text-neutral-800 lg:px-10 xl:px-14"
             whileInView={{ opacity: 1, scale: 1 }}
             initial={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 1 }}
@@ -218,27 +232,45 @@ export function CustomImageC() {
               transition={{ delay: 0.3, duration: 1 }}
               viewport={{ once: true }}
             >
-              164%
+              <MotionNumberFlow willChange
+                value={number}
+                format={{ style: 'decimal' }}
+                //@ts-ignore
+                style={{ '--number-flow-char-height': '0.85em', '--number-flow-mask-height': '0.3em' }}
+                // Important, see note below:
+                layout
+                layoutRoot
+              />%
             </motion.p>
-            <motion.p
-              className="text-left text-base font-semibold lg:text-[1.5rem] xl:text-[2rem]"
-              whileInView={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ delay: 0.5, duration: 1 }}
-              viewport={{ once: true }}
-            >
-              di
-              <br /> 2024
-            </motion.p>
+            <div className="space-y-0 xl:space-y-2">
+              <motion.p
+                className="text-left text-base font-semibold lg:text-[1.5rem] xl:text-[2rem] leading-3 xl:leading-tight"
+                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ delay: 0.5, duration: 1 }}
+                viewport={{ once: true }}
+              >
+                di
+
+              </motion.p>
+              <motion.p className="text-left text-base font-semibold lg:text-[1.5rem] xl:text-[2rem]"
+                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ delay: 0.5, duration: 1 }}
+                viewport={{ once: true }}>
+                2024
+              </motion.p>
+            </div>
           </motion.div>
         </div>
       </div>
       <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
         <img
           src={`${baseUrl}/assets/footer.png`}
-          className="z-50 mx-auto hidden w-full sm:block"
+          className="z-50 mx-auto hidden w-full invert sm:block"
         />
       </div>
+      <div className="absolute left-0 bottom-0 h-[10%] w-full bg-gradient-to-t from-[#c9c4c2] z-0" />
     </div>
   );
 }
