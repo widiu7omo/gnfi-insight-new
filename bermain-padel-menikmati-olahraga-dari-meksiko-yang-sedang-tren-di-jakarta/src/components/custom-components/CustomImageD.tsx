@@ -6,258 +6,184 @@ export function CustomImageD() {
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
       <div
-        className="relative w-full justify-center bg-cover bg-center pt-6 md:pt-12 lg:pb-4"
-        style={{ backgroundImage: `url(${baseUrl}/assets/4.5.png)` }}
+        className="relative w-full justify-center bg-cover bg-center pt-6 md:pt-20 lg:py-32 lg:pb-4"
+        style={{ backgroundImage: `url(${baseUrl}/assets/4.1.png)` }}
       >
-        <div className="absolute left-0 right-0 top-0 z-10 flex justify-center">
+        <div className="mx-auto flex flex-col justify-center">
+          <div className="z-10 mx-auto mb-12 max-w-4xl md:mb-0">
+            <motion.h3
+              initial={{ opacity: 0, scale: 0.9, y: 10 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="text-center font-sora text-[1.75rem] font-bold leading-normal text-white md:pb-10 md:pl-[30%] md:text-left md:text-[48px] lg:text-[64px]"
+            >
+              Main Padel, <br /> Nggak Pake Ribet!
+            </motion.h3>
+            <motion.p
+              initial={{ opacity: 0, scale: 0.9, y: 10 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="mb-14 mt-4 text-center font-sora text-lg font-bold text-white md:mb-0 md:mt-0 md:pb-0 md:pl-[30%] md:text-left md:text-xl lg:pb-10 lg:text-3xl"
+            >
+              Main Padel tidak membutuhkan banyak peralatan. Hanya butuh 3 benda
+              ini:
+            </motion.p>
+          </div>
+
           <motion.img
             viewport={{ once: true }}
             initial={{ opacity: 0, y: -20, scale: 0.95 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            src={`${baseUrl}/assets/4.1.png`}
+            src={`${baseUrl}/assets/4.2.png`}
             alt="Yellow Background"
-            className="min-h-[20rem] w-full object-cover md:h-full lg:max-h-[80%] lg:w-auto"
+            className="z-20 mx-auto min-h-[20rem] w-full max-w-4xl object-cover md:h-full lg:max-h-[80%]"
           />
+          <div className="relative z-30 flex flex-col items-center">
+            <div className="-ml-[62%] -mt-[88%] h-[10rem] border-l-4 border-dashed border-white md:-ml-[60%] md:-mt-[90%] md:h-[18rem] lg:-ml-[38rem] lg:-mt-[50rem] lg:h-[22rem]" />
+            <motion.div
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="-ml-[50%] rounded-full bg-white px-2 md:-ml-[45%] md:-mt-4 md:px-4 lg:-ml-[30rem]"
+            >
+              <p className="font-sora text-base font-semibold text-[#01343B] md:text-4xl">
+                Raket
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="relative mx-auto flex items-center">
+            <motion.img
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              src={`${baseUrl}/assets/3.6.png`}
+              alt="Bola"
+              className="z-20 -mt-[53rem] h-8 w-8 md:-mt-[90rem] md:h-16 md:w-16 lg:-mt-[98rem]"
+            />
+            <div className="z-0 -mt-[53rem] h-1 w-[7rem] border-t-4 border-dashed border-white md:-mt-[90rem] md:w-[14rem] lg:-mt-[98rem]" />
+            <motion.div
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="-mt-[53rem] rounded-full bg-white px-2 py-2 md:-mt-[90rem] md:px-4 lg:-mt-[98rem]"
+            >
+              <p className="font-sora text-base font-semibold text-[#01343B] md:text-4xl">
+                Bola
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="relative z-30 flex flex-col items-center">
+            <div className="-mt-[8rem] h-[4rem] border-l-4 border-dashed border-white md:-mt-[16rem]" />
+            <motion.div
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="-mt-2 ml-[6rem] rounded-full bg-white px-2 md:ml-[12rem] md:px-4"
+            >
+              <p className="font-sora text-base font-semibold text-[#01343B] md:text-4xl">
+                Lapangan
+              </p>
+            </motion.div>
+          </div>
         </div>
 
-        <div className="relative z-20 mx-auto w-full px-4 md:max-w-4xl lg:px-0">
-          <motion.h4
-            initial={{ opacity: 0, scale: 0.9, y: 10 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="mb-2 text-left font-sora text-xl font-bold text-[#2F2F2F] md:text-3xl lg:mb-4 lg:text-4xl"
-          >
-            Kecintaan Orang Indonesia
-          </motion.h4>
-          <div className="flex flex-row">
-            <div className="z-30 w-1/2">
-              <motion.h3
-                initial={{ opacity: 0, scale: 0.9, y: 10 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                viewport={{ once: true }}
-                className="mb-2 text-left font-sora text-5xl font-extrabold text-white md:text-6xl lg:mb-4 lg:text-8xl"
-                style={{ textShadow: "2px 2px 6px rgba(0, 0, 0, 0.6)" }}
-              >
-                Terhadap <br />
-                Soto
-              </motion.h3>
-              <motion.p
-                initial={{ opacity: 0, scale: 0.9, y: 10 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                viewport={{ once: true }}
-                className="inline bg-white decoration-clone box-decoration-clone px-2 text-left font-sora text-lg text-[#2F2F2F] md:text-2xl md:leading-[2.5rem] lg:text-3xl lg:leading-[3rem]"
-              >
-                Penggemarnya soto berasal dari beragam kalangan, dari masyarakat
-                umum hingga selebritas ternama.
-              </motion.p>
-            </div>
+        <div className="relative mt-20 flex w-full flex-col-reverse justify-center bg-[#0F2A26] bg-cover bg-center px-0 text-center md:mt-0 md:flex-row">
+          <div className="relative w-full md:w-1/2">
+            <motion.img
+              viewport={{ once: true }}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "backOut" }}
+              src={`${baseUrl}/assets/4.6.png`}
+              alt="bg"
+              className="h-[15rem] w-full object-cover md:h-[14rem] lg:h-[20rem]"
+            />
+
+            <motion.div
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+              className="absolute right-0 top-0 flex h-full w-full items-center justify-end px-4 lg:px-0"
+            >
+              <div className="max-w-[500px] space-y-4 text-left">
+                <motion.p className="font-sera text-xl text-white drop-shadow-lg md:text-2xl lg:text-3xl">
+                  Tidak harus punya sendiri, ketiganya tinggal disewa
+                </motion.p>
+                <motion.p className="font-sera text-xl text-white drop-shadow-lg md:text-2xl lg:text-3xl">
+                  <i>Outfit-nya?</i> Pakaian dan sepatu olahraga sudah cukup
+                </motion.p>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="relative w-full md:w-1/2">
+            <motion.img
+              viewport={{ once: true }}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "backOut" }}
+              src={`${baseUrl}/assets/4.3.png`}
+              alt="Lapangan"
+              className="h-[10rem] w-full object-cover md:h-[14rem] lg:h-[20rem]"
+            />
             <motion.img
               viewport={{ once: true }}
               initial={{ opacity: 0, y: 50, scale: 0.8 }}
               whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
               transition={{ duration: 0.8, ease: "backOut" }}
-              src={`${baseUrl}/assets/4.2.png`}
-              alt="Soto"
-              className="z-20 -ml-[10%] mt-[25%] w-auto md:mt-0 md:h-auto md:w-[60%] lg:-ml-12 lg:h-[70%] lg:w-auto xl:h-full"
+              src={`${baseUrl}/assets/4.4.png`}
+              alt="Orang"
+              className="absolute bottom-4 left-0 z-20 w-full max-w-[324px] object-cover md:bottom-4 md:max-w-[600px] xl:bottom-4 xl:max-w-[420px]"
             />
+            <div className="absolute bottom-0 left-0 h-[30%] w-full bg-gradient-to-t from-[#0F2A26] md:hidden" />
+            <div className="absolute right-0 top-0 hidden h-full w-[30%] bg-gradient-to-l from-[#0F2A26] to-transparent md:block" />{" "}
           </div>
-          <div className="md:hidden">
-            <div className="flex items-end justify-center">
-              <motion.img
-                viewport={{ once: true }}
-                initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                src={`${baseUrl}/assets/4.3.png`}
-                alt="Yusril Fahriza"
-                className="z-30 h-auto w-[40%]"
-              />
-              <motion.div
-                viewport={{ once: true }}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2, duration: 0.4 }}
-                className="ml-[5%]"
-              >
-                <p className="font-sera text-lg font-semibold text-[#2F2F2F] md:text-4xl">
-                  Komika Yogyakarta
-                </p>
-                <p className="font-sera text-2xl font-semibold text-[#FF521F] md:text-6xl">
-                  Yusril Fahriza
-                </p>
-              </motion.div>
-            </div>
-            <div className="rounded-2xl bg-[#2F2F2F] px-4 py-4">
-              <motion.p
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                viewport={{ once: true }}
-                className="font-sera text-base text-white"
-              >
-                Menunjukkan rasa cintanya terhadap soto lewat akun instagram{" "}
-                <span className="text-[#FF521F]">@demisotoimpian</span>. Rajin
-                menyambangi warung soto demi mendokumentasikan dirinya sedang
-                menyantap soto. Bukan di-review seperti akun "kode-kodean" ya!
-              </motion.p>
-            </div>
-          </div>
-          <div className="hidden md:block">
-            <div className="mx-auto flex flex-row items-end">
-              <div className="w-[70%]">
-                <motion.img
-                  viewport={{ once: true }}
-                  initial={{ opacity: 0, x: -50, scale: 0.8 }}
-                  whileInView={{ opacity: 1, x: 0, scale: 1.1 }}
-                  transition={{ duration: 0.8, ease: "backOut" }}
-                  src={`${baseUrl}/assets/4.3.png`}
-                  alt="Yusril Fahriza"
-                  className="z-30 h-auto max-h-[600px] w-auto object-contain"
-                />
-              </div>
-              <div className="flex w-[80%] flex-col">
-                <motion.div
-                  viewport={{ once: true }}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2, duration: 0.4 }}
-                  className="mb-2 space-y-1 md:mb-4 md:space-y-2"
-                >
-                  <p className="font-sera text-lg font-semibold text-[#2F2F2F] md:text-4xl">
-                    Komika Yogyakarta
-                  </p>
-                  <p className="font-sera text-2xl font-semibold text-[#FF521F] md:text-6xl">
-                    Yusril Fahriza
-                  </p>
-                </motion.div>
-                <div className="-mb-5 -ml-[15%] flex items-center rounded-[2rem] bg-[#2F2F2F] py-2 pl-[18%] pr-2 md:py-4 md:pl-[20%] md:pr-8">
-                  <motion.p
-                    initial={{ opacity: 0, scale: 0.9, x: 30 }}
-                    whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                    transition={{ duration: 0.4, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                    className="font-sera text-base text-white md:text-xl md:leading-[2rem] lg:text-2xl lg:leading-[2.5rem]"
-                  >
-                    Menunjukkan rasa cintanya terhadap soto lewat akun instagram{" "}
-                    <span className="text-[#FF521F]">@demisotoimpian</span>.
-                    Rajin menyambangi warung soto demi mendokumentasikan dirinya
-                    sedang menyantap soto. Bukan di-review seperti akun
-                    "kode-kodean" ya!
-                  </motion.p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mb-14 mt-8 md:hidden">
-            <div className="flex items-end justify-center">
-              <motion.div
-                viewport={{ once: true }}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2, duration: 0.4 }}
-                className="mr-[5%]"
-              >
-                <p className="font-sera text-right text-lg font-semibold text-[#2F2F2F]">
-                  Pemain naturalisasi Timnas Indonesia
-                </p>
-                <p className="font-sera text-right text-2xl font-semibold text-[#FF521F]">
-                  Mees Hilgers
-                </p>
-              </motion.div>
-              <motion.img
-                viewport={{ once: true }}
-                initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
-                transition={{ duration: 0.8, ease: "backOut" }}
-                src={`${baseUrl}/assets/4.4.png`}
-                alt="Mees Hilgers"
-                className="z-30 h-auto w-[40%]"
-              />
-            </div>
-            <div className="rounded-2xl bg-[#2F2F2F] px-4 py-4">
-              <motion.p
-                initial={{ opacity: 0, scale: 0.9, y: 10 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                viewport={{ once: true }}
-                className="font-sera text-base text-white"
-              >
-                Menyukai soto dan malahan bisa meraciknya sendiri sesuai selera.
-                <br />
-                {""}
-                <br />
-                "Soto ayam adalah favorit saya. Itu adalah sup khas dari
-                Indonesia yang sangat lezat, terutama jika ibu saya yang
-                membuatnya. Saya juga bisa membuatnya sendiri. Biasanya, ibu
-                saya membangunkan saya untuk makan soto ayam yang telah dia
-                buat," kata Hilgers{" "}
-              </motion.p>
-            </div>
-          </div>
-          <div className="mb-32 mt-48 hidden md:block">
-            <div className="mx-auto -mt-32 flex flex-row items-end">
-              <div className="-mr-[15%] flex w-[90%] flex-col">
-                <motion.div
-                  viewport={{ once: true }}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2, duration: 0.4 }}
-                  className="mb-6 space-y-2"
-                >
-                  <p className="font-sera text-end text-lg font-semibold text-[#2F2F2F] md:text-4xl">
-                    Pemain naturalisasi Timnas Indonesia
-                  </p>
-                  <p className="font-sera text-end text-2xl font-semibold text-[#FF521F] md:text-6xl">
-                    Mees Hilgers
-                  </p>
-                </motion.div>
-                <div className="-mb-[4.5%] flex items-center rounded-[2rem] bg-[#2F2F2F] py-2 pl-2 pr-[18%] md:py-4 md:pl-8 md:pr-[18%] lg:pr-[16%]">
-                  <motion.p
-                    initial={{ opacity: 0, scale: 0.9, x: -30 }}
-                    whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                    transition={{ duration: 0.4, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                    className="font-sera text-base text-white md:text-xl md:leading-[2rem] lg:text-2xl lg:leading-[2.5rem]"
-                  >
-                    Menyukai soto dan malahan bisa meraciknya sendiri sesuai
-                    selera.
-                    <br />
-                    {""}
-                    <br />
-                    "Soto ayam adalah favorit saya. Itu adalah sup khas dari
-                    Indonesia yang sangat lezat, terutama jika ibu saya yang
-                    membuatnya. Saya juga bisa membuatnya sendiri. Biasanya, ibu
-                    saya membangunkan saya untuk makan soto ayam yang telah dia
-                    buat," kata Hilgers{" "}
-                  </motion.p>
-                </div>
-              </div>
-              <div className="-mr-[20%] w-[80%]">
-                <motion.img
-                  viewport={{ once: true }}
-                  initial={{ opacity: 0, x: 50, scale: 0.8 }}
-                  whileInView={{ opacity: 1, x: 0, scale: 1.1 }}
-                  transition={{ duration: 0.8, ease: "backOut" }}
-                  src={`${baseUrl}/assets/4.4.png`}
-                  alt="Mees Hilgers"
-                  className="z-30 h-auto max-h-[600px] w-auto object-contain"
-                />
-              </div>
-            </div>
+        </div>
+
+        <div className="z-10 mx-auto max-w-2xl px-4 py-10 md:pb-32 md:pt-20 lg:px-0">
+          <div className="flex items-center rounded-[4rem] bg-[#01343B] px-6 py-4 md:px-8">
+            <motion.img
+              viewport={{ once: true }}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "backOut" }}
+              src={`${baseUrl}/assets/3.5.png`}
+              alt="bg"
+              className="h-24 w-24 object-cover md:h-32 md:w-32"
+            />
+
+            <motion.div
+              viewport={{ once: true }}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "backOut" }}
+              className="ml-4 flex-1 md:ml-8"
+            >
+              <p className="font-sora text-lg font-semibold leading-[2rem] text-white md:text-[1.4rem] md:font-bold">
+                "Dari orang yang mau tampil stylish sampai yang nggak mikir
+                outfit bisa main."
+                <span className="font-normal"> Erik Fatono</span>
+              </p>
+            </motion.div>
           </div>
         </div>
       </div>
       <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
         <img
           src={`${baseUrl}/assets/footer.png`}
-          className="z-50 mx-auto hidden w-full invert sm:block"
+          className="z-50 mx-auto hidden w-full sm:block"
         />
       </div>
-      <div className="absolute left-0 h-[50%] w-full bottom-0 bg-gradient-to-t from-[#d8d8d9]" />
     </div>
   );
 }

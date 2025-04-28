@@ -1,89 +1,245 @@
 "use client";
 import { baseUrl } from "@/constants/meta";
-import { useCanAnimate } from "@number-flow/react";
 import { motion, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+
 export function CustomImageB() {
-  const ref = useRef(null)
-  const inView = useInView(ref)
+  const ref1969 = useRef<HTMLDivElement>(null);
+  const ref2024 = useRef<HTMLDivElement>(null);
+  const ref1969mobile = useRef<HTMLDivElement>(null);
+  const ref2024mobile = useRef<HTMLDivElement>(null);
+  const [distance, setDistance] = useState<number | null>(null);
+  const [distanceMobile, setDistanceMobile] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (
+      ref1969.current &&
+      ref2024.current &&
+      ref1969mobile.current &&
+      ref2024mobile.current
+    ) {
+      const pos1 = ref1969.current.getBoundingClientRect().top;
+      const pos2 = ref2024.current.getBoundingClientRect().top;
+      const pos3 = ref1969mobile.current.getBoundingClientRect().top;
+      const pos4 = ref2024mobile.current.getBoundingClientRect().top;
+      const d = Math.abs(pos2 - pos1);
+      const dMobile = Math.abs(pos4 - pos3);
+      setDistance(d);
+      setDistanceMobile(dMobile);
+      console.log("Jarak antar titik:", d, "px");
+
+      setIsMobile(window.innerWidth < 768);
+    }
+  }, []);
 
   return (
-    <div className="relative flex flex-col items-center overflow-hidden ">
+    <div className="relative flex flex-col items-center overflow-hidden">
       <div
-        className="relative flex h-full w-full justify-center bg-cover bg-no-repeat text-center pt-10 xl:pt-32 bg-[center_top_-5rem] xl:bg-[center_top_-20rem]"
-        style={{ backgroundImage: `url(${baseUrl}/assets/2.0.1.png)` }}
+        className="relative flex h-full w-full justify-center bg-cover bg-[center_top_-5rem] bg-no-repeat py-10 text-center xl:bg-[center_top_-20rem] xl:py-32"
+        style={{ backgroundImage: `url(${baseUrl}/assets/2.1.png)` }}
       >
-        <div className="absolute w-full h-[50%] bg-gradient-to-b from-[#f0eff0] top-0" />
-        <div className="z-10 w-full">
-          <div className="max-w-4xl mx-auto relative space-y-6 inset-x-0 z-10 mb-4 text-center font-sora text-neutral-950 flex flex-col justify-center items-center">
+        <div className="z-10 w-full pb-10 lg:pb-6">
+          <div className="relative inset-x-0 z-10 mx-auto mb-4 flex max-w-4xl flex-col items-center justify-center space-y-6 px-4 text-center font-sora text-neutral-950 md:space-y-0 lg:px-0">
             <motion.h3
+              initial={{ opacity: 0, scale: 0.9, y: 10 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               viewport={{ once: true }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0, duration: 0.6 }}
-              className="px-4 py-2 rounded-xl break-words w-fit text-3xl md:text-7xl font-bold">
-              Bukan Sekadar Kuliner Kuah-kuahan Biasa
+              className="pb-2 text-left font-sora text-[1.75rem] font-bold leading-normal text-[#332B00] md:pb-10 md:text-[48px] lg:text-[64px]"
+            >
+              Sejarah Padel
             </motion.h3>
-            <motion.p className="text-xl xl:text-3xl xl:px-3 px-2">
-              Soto sendiri pada dasarnya menggunakan bumbu utama sederhana. Akan tetapi, ketika memasuki wilayah-wilayah Indonesia, soto menjadi kaya dengan bumbu seperti:
-            </motion.p>
-          </div>
-          <div className="h-[50rem] xl:h-[70rem] relative flex flex-col items-center justify-center max-w-4xl mx-auto">
-            <motion.img
-              initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, ease: [0, 0.71, 0.2, 1.01], delay: 0 }}
-              viewport={{ once: true }}
-              src={`${baseUrl}/assets/2.1.png`} alt="Daun Jeruk" className="absolute w-[20%] sm:w-[15%] xl:w-auto top-[1%] xl:top-0" />
-            <motion.img
-              initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01], delay: .2 }}
-              viewport={{ once: true }}
-              src={`${baseUrl}/assets/2.2.png`} alt="Kunyit" className="absolute w-[40%] sm:w-[30%] xl:w-auto top-[12%] xl:top-[20%] left-4 sm:left-[10%] xl:left-[-4rem]" />
-            <motion.img
-              initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: .8, ease: [0, 0.71, 0.2, 1.01], delay: .4 }}
-              viewport={{ once: true }}
-              src={`${baseUrl}/assets/2.3.png`} alt="Lengkuas" className="absolute w-[40%] sm:w-[30%] xl:w-auto top-[18%] xl:top-[30%] right-[10%] sm:right-[20%] xl:right-5" />
-            <motion.img
-              initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: .6, ease: [0, 0.71, 0.2, 1.01], delay: .6 }}
-              viewport={{ once: true }}
-              src={`${baseUrl}/assets/2.4.png`} alt="Kencur" className="absolute w-[40%] sm:w-[30%] xl:w-auto xl:bottom-[20%] xl:top-auto sm:top-[30%] top-[25%] left-4 sm:left-[15%] xl:left-0" />
-            <motion.img
-              initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: .4, ease: [0, 0.71, 0.2, 1.01], delay: .8 }}
-              viewport={{ once: true }}
-              src={`${baseUrl}/assets/2.5.png`} alt="Rempah Lain" className="absolute w-[40%] sm:w-[30%] xl:w-auto xl:bottom-[25%] xl:top-auto sm:top-[40%] top-[32%] sm:right-[10%] xl:right-0 right-4" />
-          </div>
-          <div className="flex flex-col max-w-7xl mx-auto z-10 relative">
-            <div className="xl:h-[20rem]" />
-            <div className="relative flex flex-col-reverse md:items-center justify-center">
-              <motion.img
-                viewport={{ once: true }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0, duration: 0.6 }}
-                src={`${baseUrl}/assets/2.6.png`} className="w-full" alt="Chef" />
-              <motion.div
-                viewport={{ once: true }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="md:absolute top-[23%] max-w-sm px-4 xl:px-0">
-                <div className="absolute top-1 max-w-sm left-[-20px] w-0 h-0 border-t-8 border-b-8 border-l-8 border-t-transparent border-b-transparent border-l-orange-500" />
-                <p
 
-                  className="text-left font-sora text-black md:text-white font-medium text-lg xl:text-2xl relative">Pakar kuliner nusantara, <br />
-                  <b>William Wongso</b> mengatakan jika
-                  menyebut soto wajib menambahkan
-                  asal daerahnya, misalnya: soto Kudus,
-                  soto Banjar, soto Betawi, dan masih
-                  banyak lagi</p>
-              </motion.div>
-            </div>
-            <img src={`${baseUrl}/assets/footer.png`} className="z-50 absolute hidden sm:block bottom-0 h-fit w-fit mx-auto" alt="Footer" />
+            <motion.div
+              className="absolute left-1/2 -translate-x-1/2 transform border-l-4 border-black md:translate-y-[3%] lg:mt-0 lg:translate-y-[5%]"
+              initial={{ height: 0 }}
+              animate={{
+                height: isMobile ? (distanceMobile ?? 0) : (distance ?? 0),
+              }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            />
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className="flex flex-col items-center md:flex-row md:items-start">
+                <div className="z-20 w-full text-left md:w-1/2 md:pr-8">
+                  <div
+                    ref={ref1969mobile}
+                    className="z-20 rounded-t-lg bg-black px-3 py-1 text-lg font-bold text-[#FFD800] md:text-2xl"
+                  >
+                    1969
+                  </div>
+                  <div className="z-20 rounded-b-lg bg-white px-4 py-2 shadow-md">
+                    Pertama kali ditemukan di Acapulco oleh Viviana dan Enrique.
+                    Setelahnya, Enrique membangun sebuah lapangan padel
+                    berukuran 20 meter x 10 meter untuk Viviana.
+                  </div>
+                </div>
+                <div className="relative mt-5 hidden md:block">
+                  <div
+                    ref={ref1969}
+                    className="absolute left-1/2 top-1/2 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-black"
+                  />
+                  <div className="absolute left-1/2 top-1/2 z-0 -ml-8 h-[4px] w-16 -translate-x-1/2 -translate-y-1/2 transform bg-black" />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="mt-0 flex w-full flex-col items-center md:-mt-2 md:flex-row md:items-start md:justify-end"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className="relative mt-5 hidden md:block">
+                <div className="absolute left-1/2 top-1/2 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-black" />
+                <div className="-translate-x-1/5 absolute left-1/2 top-1/2 z-0 h-[4px] w-16 -translate-y-1/2 transform bg-black" />
+              </div>
+              <div className="z-20 w-full text-left md:w-1/2 md:pl-8">
+                <div className="relative z-20 flex justify-between rounded-t-lg bg-black px-3 py-1 text-lg font-bold text-[#FFD800] md:text-2xl">
+                  <p>1974</p>
+                  <motion.img
+                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 50, scale: 0.8 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
+                    transition={{ duration: 0.8, ease: "backOut" }}
+                    src={`${baseUrl}/assets/2.2.png`}
+                    alt="Bendera"
+                    className="absolute bottom-4 right-4 z-30 h-auto w-20 md:right-6 md:w-28"
+                  />
+                </div>
+                <div className="z-20 rounded-b-lg bg-white px-4 py-2 shadow-md">
+                  Lapangan padel dibangun di Spanyol
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className="mb-0 flex flex-col items-center md:mb-12 md:flex-row md:items-start">
+                <div className="z-20 w-full text-left md:w-1/2 md:pr-8">
+                  <div className="z-20 rounded-t-lg bg-black px-3 py-1 text-lg font-bold text-[#FFD800] md:text-2xl">
+                    1991
+                  </div>
+                  <div className="z-20 rounded-b-lg bg-white px-4 py-2 shadow-md">
+                    Pertama kali ditemukan di Acapulco oleh Viviana dan Enrique.
+                    Setelahnya, Enrique membangun sebuah lapangan padel
+                    berukuran 20 meter x 10 meter untuk Viviana.
+                  </div>
+                </div>
+                <div className="relative mt-5 hidden md:block">
+                  <div className="absolute left-1/2 top-1/2 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-black" />
+                  <div className="absolute left-1/2 top-1/2 z-0 -ml-8 h-[4px] w-16 -translate-x-1/2 -translate-y-1/2 transform bg-black" />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="-mt-2 flex w-full flex-col items-center md:flex-row md:items-start md:justify-end"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className="relative mt-5 hidden md:block">
+                <div className="absolute left-1/2 top-1/2 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-black" />
+                <div className="-translate-x-1/5 absolute left-1/2 top-1/2 z-0 h-[4px] w-16 -translate-y-1/2 transform bg-black" />
+              </div>
+              <div className="z-20 w-full text-left md:w-1/2 md:pl-8">
+                <div className="z-20 rounded-t-lg bg-black px-3 py-1 text-lg font-bold text-[#FFD800] md:text-2xl">
+                  1992
+                </div>
+                <div className="z-20 rounded-b-lg bg-white px-4 py-2 shadow-md">
+                  Kejuaraan Dunia Padel pertama digelar di Spanyol
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="w-full"
+            >
+              <div className="mb-0 flex w-full flex-col items-center md:mb-12 md:flex-row md:items-start">
+                <div className="z-20 w-full text-left md:w-1/2 md:pr-8">
+                  <div className="z-20 rounded-t-lg bg-black px-3 py-1 text-lg font-bold text-[#FFD800] md:text-2xl">
+                    2020-2021
+                  </div>
+                  <div className="z-20 rounded-b-lg bg-white px-4 py-2 shadow-md">
+                    Padel mulai eksis di Asia Tenggara
+                  </div>
+                </div>
+                <div className="relative mt-5 hidden md:block">
+                  <div className="absolute left-1/2 top-1/2 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-black" />
+                  <div className="absolute left-1/2 top-1/2 z-0 -ml-8 h-[4px] w-16 -translate-x-1/2 -translate-y-1/2 transform bg-black" />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="mt-0 flex w-full flex-col items-center md:-mt-2 md:flex-row md:items-start md:justify-end"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className="relative mt-5 hidden md:block">
+                <div className="absolute left-1/2 top-1/2 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-black" />
+                <div className="-translate-x-1/5 absolute left-1/2 top-1/2 z-0 h-[4px] w-16 -translate-y-1/2 transform bg-black" />
+              </div>
+              <div className="z-20 w-full text-left md:w-1/2 md:pl-8">
+                <div className="z-20 rounded-t-lg bg-black px-3 py-1 text-lg font-bold text-[#FFD800] md:text-2xl">
+                  2023
+                </div>
+                <div className="z-20 rounded-b-lg bg-white px-4 py-2 shadow-md">
+                  PBPI diakui KONI Pusat sebagai induk asosiasi cabang olahraga
+                  padel di Indonesia
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="mb-0 flex w-full flex-col items-center md:mb-12 md:flex-row md:items-start"
+            >
+              <div className="z-20 w-full text-left md:w-1/2 md:pr-8">
+                <div
+                  ref={ref2024mobile}
+                  className="z-20 rounded-t-lg bg-black px-3 py-1 text-lg font-bold text-[#FFD800] md:text-2xl"
+                >
+                  2024
+                </div>
+                <div className="z-20 rounded-b-lg bg-white px-4 py-2 shadow-md">
+                  Padel jadi cabor eksibisi di PON PON XXI Aceh-Sumut 2024
+                </div>
+              </div>
+              <div className="relative mt-5 hidden md:block">
+                <div
+                  ref={ref2024}
+                  className="absolute left-1/2 top-1/2 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-black"
+                />
+                <div className="absolute left-1/2 top-1/2 z-0 -ml-8 h-[4px] w-16 -translate-x-1/2 -translate-y-1/2 transform bg-black" />
+              </div>
+            </motion.div>
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
+        <img
+          src={`${baseUrl}/assets/footer.png`}
+          className="z-50 mx-auto hidden w-full invert sm:block"
+        />
       </div>
     </div>
   );
