@@ -8,7 +8,7 @@ export function CustomImageC() {
     <div className="relative flex flex-col items-center overflow-hidden">
       <div
         className="relative w-full justify-center bg-cover bg-center pb-24 pt-16 md:pb-[14rem] md:pt-24 xl:pb-[30rem]"
-        style={{ backgroundImage: `url(${baseUrl}/assets/3.0.png)` }}
+        style={{ backgroundImage: `url(${baseUrl}/assets/3.0.jpg)` }}
       >
         <div className="absolute left-0 top-0 h-[30%] w-full bg-gradient-to-b from-[#000000]" />
         <div className="z-1 relative mx-auto max-w-4xl items-center px-4 lg:px-0">
@@ -104,10 +104,10 @@ export function CustomImageC() {
 
       <div
         className="relative w-full justify-center bg-cover bg-center pb-10 pt-12 md:pb-[10rem] md:pt-28"
-        style={{ backgroundImage: `url(${baseUrl}/assets/3.4.png)` }}
+        style={{ backgroundImage: `url(${baseUrl}/assets/3.4.jpg)` }}
       >
         {" "}
-        <div className="z-1 relative mx-auto max-w-4xl items-center px-4 lg:px-10">
+        <div className="z-1 relative z-10 mx-auto max-w-4xl items-center px-4 lg:px-10">
           <div className="mt-20 flex flex-col space-y-20 md:flex-row md:space-x-12 md:space-y-0">
             <div className="relative w-full rounded-[1rem] bg-[#053134] px-4 py-12 md:w-1/2 md:rounded-[2rem] md:px-8 md:py-14">
               <div className="text-white">
@@ -184,6 +184,8 @@ export function CustomImageC() {
           </div>
         </div>
       </div>
+      <div className="absolute left-0 bottom-0 h-[20%] w-full bg-gradient-to-t from-[#125788]" />
+
       <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
         <img
           src={`${baseUrl}/assets/footer.png`}

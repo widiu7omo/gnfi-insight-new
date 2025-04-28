@@ -9,6 +9,7 @@ export function CustomImageD() {
         className="relative w-full justify-center bg-cover bg-center pt-6 md:pt-20 lg:py-32 lg:pb-4"
         style={{ backgroundImage: `url(${baseUrl}/assets/4.1.png)` }}
       >
+        <div className="absolute top-0 h-[20%] w-full bg-gradient-to-b from-[#001c38]" />
         <div className="mx-auto flex flex-col justify-center">
           <div className="z-10 mx-auto mb-12 max-w-4xl md:mb-0">
             <motion.h3
@@ -150,7 +151,7 @@ export function CustomImageD() {
           </div>
         </div>
 
-        <div className="z-10 mx-auto max-w-2xl px-4 py-10 md:pb-32 md:pt-20 lg:px-0">
+        <div className="z-10 relative mx-auto max-w-2xl px-4 py-10 md:pb-32 md:pt-20 lg:px-0">
           <div className="flex items-center rounded-[4rem] bg-[#01343B] px-6 py-4 md:px-8">
             <motion.img
               viewport={{ once: true }}
@@ -178,6 +179,8 @@ export function CustomImageD() {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-0 h-[20%] w-full bg-gradient-to-t from-[#125788]" />
+
       <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
         <img
           src={`${baseUrl}/assets/footer.png`}

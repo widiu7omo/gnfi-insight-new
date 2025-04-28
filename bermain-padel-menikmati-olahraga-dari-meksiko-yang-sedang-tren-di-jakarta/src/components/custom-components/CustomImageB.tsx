@@ -27,7 +27,6 @@ export function CustomImageB() {
       const dMobile = Math.abs(pos4 - pos3);
       setDistance(d);
       setDistanceMobile(dMobile);
-      console.log("Jarak antar titik:", d, "px");
 
       setIsMobile(window.innerWidth < 768);
     }
