@@ -31,7 +31,7 @@ export function SectionFiveCustomImage() {
 
   return (
     <motion.section
-      className="relative max-w-4xl h-screen sm:h-[175vh] mx-auto flex justify-center items-center"
+      className="relative max-w-4xl h-screen mx-auto flex justify-center items-center"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -57,14 +57,14 @@ export function SectionFiveCustomImage() {
           variants={itemVariants}
           src={`${baseUrl}/assets/Can.png`}
           alt="Can"
-          className="absolute z-10 top-0 right-0 inset-0 mx-auto w-3/4 sm:w-2/3 md:w-1/2"
+          className="relative z-10 top-0 right-0 inset-0 mx-auto w-3/4 sm:w-2/3 md:w-1/2"
         />
         {/* Layer 2 */}
         <motion.img
           variants={itemVariants}
           src={`${baseUrl}/assets/Layer 12.png`}
           alt="Layer 12"
-          className="absolute z-20 w-1/5 sm:w-1/4 md:w-1/5 bottom-[15%] "
+          className="relative z-20 pt-12 w-1/3 sm:w-1/4 md:w-1/5 bottom-[15%] "
         />
         {/* Layer 3 */}
         <motion.img

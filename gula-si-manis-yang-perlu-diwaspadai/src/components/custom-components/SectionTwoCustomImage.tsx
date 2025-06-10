@@ -38,7 +38,7 @@ export function SectionTwoCustomImage() {
                 componentProps: {
                     className: "",
                     children: (<>
-                        <p>Seperti dicatat M. Sumarto dalam Manisnya Dunia Sejarah dan Budaya Gula, berikut di antaranya:</p>
+                        <p>Seperti dicatat M. Sumarto dalam <i>Manisnya Dunia Sejarah dan Budaya Gula</i>, berikut di antaranya:</p>
                     </>)
                 }
             }} />
@@ -75,7 +75,7 @@ export function SectionTwoCustomImage() {
                 desc: <>
                     <p>Gula aren kerap kali disamakan dengan gula merah. Padahal, keduanya berbeda, meskipun sama-sama berasal dari nira pohon aren.</p>
                     <p>Bedanya, gula aren hanya dibuat dari nira pohon aren atau enau. Hal ini berbeda dengan gula merah yang dapat dibuat dari nira pohon lainnya.</p>
-                    <p>Perbedaan utamanya antara gula merah dan gula aren terletak pada rasanya. Gula aren memiliki rasa yang khas, legit, gurih, smokey, ringan, dan ada sedikit aroma kelapa. Hal ini disebabkan proses pencetakan gula aren menggunakan batok kelapa.</p>
+                    <p>Perbedaan utamanya antara gula merah dan gula aren terletak pada rasanya. Gula aren memiliki rasa yang khas, legit, gurih, <i>smokey</i>, ringan, dan ada sedikit aroma kelapa. Hal ini disebabkan proses pencetakan gula aren menggunakan batok kelapa.</p>
                     <p>Gula aren berwarna cokelat muda dan biasanya dijadikan sebagai bahan pemanis minuman khas Indonesia, seperti cendol, es kelapa muda, hingga es kopi.</p>
                 </>,
                 slug: "gula-aren"
@@ -109,7 +109,7 @@ export function SectionTwoCustomImage() {
                 name: "Gula Jagung",
                 image: `${baseUrl}/assets/jagung.png`,
                 desc: <>
-                    <p>Selain gula bit, gula jagung juga menjadi opsi untuk konsumsi gula. Gula jagung biasanya dibuat dengan cara menggiling jagung untuk mendapatkan tepung jagung. Tepung jagung ini nantinya diubah menjadi sirop dan ditambah dengan senyawa tertentu agar mendapat rasa gula seperti pada umumnya. Gula ini juga bisa diproses lagi hingga berbentuk gula pasir. </p>
+                    <p>Selain gula bit, gula jagung juga menjadi opsi untuk konsumsi gula. Gula jagung biasanya dibuat dengan cara menggiling jagung untuk mendapatkan tepung jagung. Tepung jagung ini nantinya diubah menjadi sirup dan ditambah dengan senyawa tertentu agar mendapat rasa gula seperti pada umumnya. Gula ini juga bisa diproses lagi hingga berbentuk gula pasir. </p>
                 </>,
                 slug: "gula-jawa"
             },

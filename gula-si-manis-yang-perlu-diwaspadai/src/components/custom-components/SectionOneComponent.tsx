@@ -35,7 +35,7 @@ export function SectionOneComponent() {
                         children: (
                             <>
                                 <p>Gula bisa dibuat dari berbagai macam bahan, tetapi tebu adalah yang paling lazim digunakan. Ternyata, gula tebu memiliki sejarah panjang yang mengiringi perkembangan peradaban manusia. Asal mula manusia mengonsumsi gula pun dapat ditelusuri ribuan tahun lalu, dari kebudayaan kuno hingga menjadi komoditas penting dalam perdagangan global.</p>
-                                <p>Asal-usul gula ternyata bermula di Papua Nugini. Bila mengacu dari The Origins of Sugar Cane karya H. Bakker, di sana adalah tempat dilakukannya domestikasi tebu pertama, di mana tebu yang didomestikasi ini adalah dari spesies liar Saccharum robustum. Dari sana, penduduk Kepulauan Pasifik Selatan membawa tebu dalam perjalanan laut mereka hingga dikenal di India dan Asia Tenggara. </p>
+                                <p>Asal-usul gula ternyata bermula di Papua Nugini. Bila mengacu dari <i>The Origins of Sugar Cane</i> karya H. Bakker, di sana adalah tempat dilakukannya domestikasi tebu pertama, di mana tebu yang didomestikasi ini adalah dari spesies liar <i>Saccharum robustum</i>. Dari sana, penduduk Kepulauan Pasifik Selatan membawa tebu dalam perjalanan laut mereka hingga dikenal di India dan Asia Tenggara. </p>
                                 <p>Di India, gula sangat diterima oleh masyarakat setempat. Bahkan sekitar 2000 tahun lalu, India menjadi tempat produksi pertama gula dalam bentuk kasar. Teknik produksi gula dari tebu ini kemudian menyebar ke Persia, Mesir, dan negara-negara di sekitar Laut Mediterania.</p>
                                 <p>Seiring waktu, gula dari tebu mulai menjadi komoditas yang sangat dicari, menggantikan madu sebagai pemanis utama. Penaklukan Muslim di Afrika Utara kemudian membawa tebu lebih jauh ke barat hingga mencapai Spanyol dan Portugal. Pada era ini teknik produksi gula berkembang pesat. Pasca Perang Salib, gula pun menyebar ke seluruh Eropa hingga menjadi bagian penting dari kuliner di sana.</p>
                             </>)
@@ -195,10 +195,10 @@ export function SectionOneComponent() {
                                         <p>Proses pembuatan gula tradisional menggunakan alat sederhana seperti silinder batu atau kayu untuk menggiling tebu dan menghasilkan nira. Perdagangan gula oleh komunitas Tionghoa menarik perhatian VOC (Vereenigde Oost-Indische Compagnie), yang memindahkan pusat perdagangan dari Banten ke Batavia pada 1596 demi alasan strategis.</p>
                                         <p>Batavia berkembang menjadi pusat perdagangan gula yang menarik migrasi besar-besaran warga Tionghoa, yang tidak hanya memperluas bisnis gula tetapi juga menginspirasi pendatang baru untuk terlibat dalam industri ini.</p>
                                         <p>Secara ilmiah, Carl Linnaeus memberikan nama Saccharum untuk varietas tebu pada tahun 1753. Nama ini berasal dari kata Sanskerta "Karkara" atau "Carkara", yang berarti kerikil.  Perkembangan kata gula dari tebu juga menunjukkan jejak sejarah dan budaya yang beragam sesuai dengan garis waktunya:</p>
-                                        <p>Bahasa Prakrit: Sakkara</p>
-                                        <p>Bahasa Arab: Sakkar atau Sukkar</p>
-                                        <p>Yunani Kuno: Sakchar atau Sakcharon</p>
-                                        <p>Romawi: Saccharum</p>
+                                        <p>Bahasa Prakrit: <i>Sakkara</i></p>
+                                        <p>Bahasa Arab: <i>Sakkar</i> atau <i>Sukkar</i></p>
+                                        <p>Yunani Kuno: <i>Sakchar</i> atau <i>Sakcharon</i></p>
+                                        <p>Romawi: <i>Saccharum</i></p>
                                         <p>Penyerapan bahasa ini tak ketinggalan diterapkan dalam bahasa Inggris hingga menjadi sugar. Evolusi kata ini menunjukkan bagaimana tebu dan gula telah menjadi bagian dari berbagai budaya di seluruh dunia.</p>
                                     </>)
                                 }

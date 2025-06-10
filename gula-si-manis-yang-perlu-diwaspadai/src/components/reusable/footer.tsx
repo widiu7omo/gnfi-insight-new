@@ -11,6 +11,26 @@ export default function Footer() {
             <div className="">
                 <img src={`${baseUrl}/assets/gnfi.svg`} alt="Logo GNFI" className="h-[80px]" />
             </div>
+            <footer
+                className="relative flex justify-center items-end"
+            >
+                <div className="lg:w-1/2 p-6 lg:px-0 lg:py-12 mx-auto relative z-10">
+                    <p className="text-center font-bold">Editor</p>
+                    <p className="text-center mb-6">Aulli Atmam</p>
+                    <p className="text-center font-bold">Penulis</p>
+                    <p className="text-center mb-6">Aslamatur Rizqiyah, Aulli Atmam, Muhammad Fazer Mileneo, Rizky Kusumo & Firdarainy Nuril Izzah</p>
+                    <p className="text-center font-bold">Desain & Visual</p>
+                    <p className="text-center mb-6">Arco Pradipta & Ario Priagung Nugroho</p>
+                    <p className="text-center font-bold">Web Developer</p>
+                    <p className="text-center mb-6">Danar Widi Utomo & Fika Nur Aini</p>
+                </div>
+            </footer>
+            <div className="flex flex-col">
+                <span className="text-lg">Diterbitkan pada</span>
+                <span className="font-bold">26 Agustus 2024</span>
+            </div>
+            {/* @ts-ignore */}
+            <div className="donation-container" program="gnfi-insight-bangun-wawasan-lewat-data-dan-cerita"></div>
         </div>
     );
 }
