@@ -25,6 +25,12 @@ export default function Footer() {
                     <p className="text-center mb-6">Danar Widi Utomo & Fika Nur Aini</p>
                 </div>
             </footer>
+            <div className="flex flex-col">
+                <span className="text-lg">Diterbitkan pada</span>
+                <span className="font-bold">11 Desember 2024</span>
+            </div>
+            {/* @ts-ignore */}
+            <div className="donation-container" program="gnfi-insight-bangun-wawasan-lewat-data-dan-cerita"></div>
         </div>
     );
 }

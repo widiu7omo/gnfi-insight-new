@@ -11,6 +11,12 @@ export default function Footer() {
             <div className="">
                 <img src={`${baseUrl}/assets/gnfi.svg`} alt="Logo GNFI" className="h-[80px]" />
             </div>
+            <div className="flex flex-col">
+                <span className="text-lg">Diterbitkan pada</span>
+                <span className="font-bold">10 Juli 2024</span>
+            </div>
+            {/* @ts-ignore */}
+            <div className="donation-container" program="gnfi-insight-bangun-wawasan-lewat-data-dan-cerita"></div>
         </div>
     );
 }

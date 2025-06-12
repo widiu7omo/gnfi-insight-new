@@ -27,6 +27,7 @@ export default function RootLayout({
         />
         <link rel="icon" href={`${baseUrl}/favicon.ico`} type="image/x-icon" />
       </head>
+      <Script defer id="foundation-widget" type="module" src="https://gnfifoundation.org/assets/widget/widget.js?v=10" crossOrigin="anonymous" widget-container="donation-container" />
       <Script
         src="https://platform-api.sharethis.com/js/sharethis.js#property=65d7025dafa82e0019c9e3e8&product=sop"
         async

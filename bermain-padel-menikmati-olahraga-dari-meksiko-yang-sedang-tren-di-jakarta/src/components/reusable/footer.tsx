@@ -3,8 +3,7 @@ import { baseUrl } from "@/constants/meta";
 export default function Footer() {
     return (
         <div className="text-red-500 bg-white w-full text-center py-8 text-base xl:text-2xl relative overflow-clip flex flex-col items-center space-y-8">
-            {/* @ts-ignore */}
-            <div className="donation-container" program="gnfi-insight-bangun-wawasan-lewat-data-dan-cerita"></div>
+
             <div className="sharethis-inline-share-buttons" />
             <div>
                 <span className="text-lg">Dibuat oleh </span>
@@ -27,7 +26,12 @@ export default function Footer() {
                     <p className="text-center mb-6">Danar Widi Utomo & Fika Nur Aini</p>
                 </div>
             </footer>
-
+            <div className="flex flex-col">
+                <span className="text-lg">Diterbitkan pada</span>
+                <span className="font-bold">28 April 2025</span>
+            </div>
+            {/* @ts-ignore */}
+            <div className="donation-container" program="gnfi-insight-bangun-wawasan-lewat-data-dan-cerita"></div>
         </div>
     );
 }
