@@ -66,6 +66,7 @@ export function CustomImageD() {
             </motion.div>
           </motion.div>
         </motion.div>
+        <div className="absolute bottom-0 w-full bg-gradient-to-t from-[#bda686] h-[60%] hidden lg:block 2xl:hidden"></div>
       </div>
       <motion.div
         ref={competitionRef}
@@ -78,7 +79,7 @@ export function CustomImageD() {
           <motion.img
             src={baseUrl + '/assets/4.2.png'}
             alt="Gowes"
-            className="h-fit bottom-0 lg:bottom-auto lg:-top-[7.4rem] absolute object-bottom mt-auto w-full"
+            className="bottom-0 lg:-top-[7.4rem] h-auto sm:h-[20rem] left-0 sm:left-[18rem] lg:left-0 lg:h-fit absolute object-bottom mt-auto w-full sm:w-fit lg:w-full"
             initial={{ opacity: 0, x: -100 }}
             animate={competitionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
             transition={{ duration: 1, delay: 0.2 }}
