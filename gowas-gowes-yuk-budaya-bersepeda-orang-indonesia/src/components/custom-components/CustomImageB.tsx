@@ -17,7 +17,7 @@ export function CustomImageB() {
             </p>
           </div>
         </div>
-        <div className="bg-[#0f4a8c] rounded-lg p-8 max-w-4xl mx-auto absolute -bottom-28 z-10">
+        <div className="bg-[#0f4a8c] rounded-xl p-8 max-w-4xl mx-auto absolute -bottom-28 z-10">
           <p className="text-3xl text-center leading-snug tracking-wide text-white">Tak hanya soal desain, tapi beberapa jenama antara lain seperti Polygon, Element, Pacific memiliki kualitas komponen berstandar internasional. </p>
         </div>
       </div>
