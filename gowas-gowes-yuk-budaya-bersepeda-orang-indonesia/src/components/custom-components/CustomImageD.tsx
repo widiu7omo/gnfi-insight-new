@@ -29,18 +29,19 @@ export function CustomImageD() {
         className="relative w-full justify-center bg-cover bg-top pt-6 md:pt-20 lg:py-32 lg:pb-4"
         style={{ backgroundImage: `url(${baseUrl}/assets/4.1.jpg)` }}
       >
+        <div className="absolute bottom-[-2px] w-full h-full block lg:hidden bg-gradient-to-t from-white"></div>
         <motion.div
           ref={heroRef}
           className="max-w-4xl mx-auto pb-28 relative z-10"
         >
           <motion.div
-            className="w-[70%] space-y-8"
+            className="w-full lg:w-[70%] space-y-8 px-4 lg:px-0"
             initial={{ opacity: 0, x: -50 }}
             animate={heroInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8 }}
           >
             <motion.div
-              className="text-6xl font-extrabold pr-20"
+              className="text-2xl sm:text-4xl xl:text-6xl font-extrabold pr-20"
               initial={{ opacity: 0, y: 30 }}
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -48,7 +49,7 @@ export function CustomImageD() {
               Lebih dari sekadar hobi
             </motion.div>
             <motion.div
-              className="text-3xl font-semibold pr-[8rem]"
+              className="text-xl lg:text-3xl font-semibold pr-[8rem]"
               initial={{ opacity: 0, y: 20 }}
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -56,7 +57,7 @@ export function CustomImageD() {
               Yang mulanya dari hobi pribadi, bersepeda bisa mengarah ke ajang silaturahmi.
             </motion.div>
             <motion.div
-              className="text-xl font-medium pr-[8rem]"
+              className="text-base lg:text-xl font-medium pr-[8rem]"
               initial={{ opacity: 0, y: 15 }}
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -71,24 +72,25 @@ export function CustomImageD() {
         className="relative w-full h-[30rem] bg-cover bg-right"
         style={{ backgroundImage: `url(${baseUrl}/assets/4.3.png)` }}
       >
-        <div className="h-full absolute w-full bg-gradient-to-l from-[20%] from-[#12150c]" />
+        <div className="h-full absolute w-full bg-gradient-to-b from-[20%] block lg:hidden from-white" />
+        <div className="h-full absolute w-full bg-gradient-to-l from-[20%] hidden lg:block from-[#12150c]" />
         <div className="max-w-7xl h-full mx-auto relative flex flex-col">
           <motion.img
             src={baseUrl + '/assets/4.2.png'}
             alt="Gowes"
-            className="h-fit -top-[7.4rem] absolute object-bottom mt-auto w-full"
+            className="h-fit bottom-0 lg:bottom-auto lg:-top-[7.4rem] absolute object-bottom mt-auto w-full"
             initial={{ opacity: 0, x: -100 }}
             animate={competitionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
             transition={{ duration: 1, delay: 0.2 }}
           />
           <motion.div
-            className="ml-auto w-[55%] my-auto space-y-8"
+            className="ml-auto w-full lg:w-[55%] mb-auto p-4 lg:p-0 lg:my-auto space-y-8"
             initial={{ opacity: 0, x: 50 }}
             animate={competitionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <motion.div
-              className="text-xl text-white"
+              className="text-sm lg:text-xl text-black lg:text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={competitionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -96,7 +98,7 @@ export function CustomImageD() {
               Kompetisi sering pula digelar antarsesama penghobi. Sekalipun bukan atlet dan terkadang tak ada hadiah dijanjikan, pesepeda kerap dipancing beradu gengsi.
             </motion.div>
             <motion.div
-              className="text-xl text-white"
+              className="text-sm lg:text-xl text-black lg:text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={competitionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.8 }}
@@ -106,11 +108,11 @@ export function CustomImageD() {
           </motion.div>
         </div>
       </motion.div>
-      <div className="relative w-full pt-20 pb-20 bg-cover bg-bottom" style={{ backgroundImage: `url(${baseUrl}/assets/4.4.jpg)` }}>
+      <div className="relative w-full py-8 lg:py-20 bg-cover bg-bottom" style={{ backgroundImage: `url(${baseUrl}/assets/4.4.jpg)` }}>
         <div className="max-w-4xl mx-auto">
           <motion.div
             ref={businessRef}
-            className="text-4xl text-white font-bold px-6"
+            className="text-xl lg:text-4xl text-white font-bold px-4 lg:px-6"
             initial={{ opacity: 0, y: 30 }}
             animate={businessInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8 }}
@@ -125,7 +127,7 @@ export function CustomImageD() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <motion.div
-              className="bg-[#ffbc25] shadow-lg rounded-[3rem] flex items-start p-6 space-x-8"
+              className="bg-[#ffbc25] shadow-lg lg:rounded-[3rem] flex lg:flex-row flex-col items-start p-4 lg:p-6 lg:space-x-8"
               initial={{ opacity: 0, y: 50 }}
               animate={cardsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -139,10 +141,10 @@ export function CustomImageD() {
                 animate={cardsInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               />
-              <div className="text-xl tracking-wide mt-4 leading-normal">Bisa dilihat di Tanjung Priok, Jakarta Utara, <b>ojek sepeda</b> tetap eksis meski harus bersaing dengan transportasi bermotor.</div>
+              <div className="text-base lg:text-xl tracking-wide mt-4 leading-normal">Bisa dilihat di Tanjung Priok, Jakarta Utara, <b>ojek sepeda</b> tetap eksis meski harus bersaing dengan transportasi bermotor.</div>
             </motion.div>
             <motion.div
-              className="bg-[#ffbc25] shadow-lg rounded-[3rem] flex items-start p-6 space-x-8"
+              className="bg-[#ffbc25] shadow-lg lg:rounded-[3rem] flex lg:flex-row flex-col items-start p-4 lg:p-6 lg:space-x-8"
               initial={{ opacity: 0, y: 50 }}
               animate={cardsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -156,7 +158,7 @@ export function CustomImageD() {
                 animate={cardsInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               />
-              <div className="text-xl tracking-wide mt-4 leading-normal">Lalu di lingkup kepariwisataan sepeda suka dihadirkan sebagai hiburan memanjakan turis yang ingin merasakan sensasi <b>bersepeda di alam</b> pedesaan Indonesia.</div>
+              <div className="text-base lg:text-xl tracking-wide mt-4 leading-normal">Lalu di lingkup kepariwisataan sepeda suka dihadirkan sebagai hiburan memanjakan turis yang ingin merasakan sensasi <b>bersepeda di alam</b> pedesaan Indonesia.</div>
             </motion.div>
           </motion.div>
         </div>

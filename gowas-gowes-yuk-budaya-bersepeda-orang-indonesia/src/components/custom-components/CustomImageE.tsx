@@ -46,7 +46,7 @@ export function CustomImageE() {
           className="max-w-4xl mx-auto relative z-10 space-y-8"
         >
           <motion.div
-            className="text-6xl font-bold text-center leading-tight"
+            className="text-2xl px-4 lg:px-0 lg:text-4xl xl:text-6xl font-bold text-center leading-tight"
             initial={{ opacity: 0, y: 50 }}
             animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8 }}
@@ -68,7 +68,7 @@ export function CustomImageE() {
             </motion.span>
           </motion.div>
           <motion.div
-            className="text-2xl text-left max-w-[85%] mx-auto leading-relaxed"
+            className="text-base lg:text-2xl text-center lg:text-left px-4 lg:px-0 lg:max-w-[85%] mx-auto leading-relaxed"
             initial={{ opacity: 0, x: -50 }}
             animate={heroInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -85,7 +85,7 @@ export function CustomImageE() {
           >
             <div className="max-w-[85%] mx-auto">
               <motion.p
-                className="bg-yellow-400 inline text-black font-bold text-4xl text-center leading-relaxed px-1 box-decoration-clone"
+                className="bg-yellow-400 inline text-black font-bold text-xl lg:text-4xl text-center leading-relaxed px-1 box-decoration-clone"
                 initial={{ scale: 0.9 }}
                 animate={questionInView ? { scale: 1 } : { scale: 0.9 }}
                 transition={{ duration: 0.6, delay: 0.5 }}

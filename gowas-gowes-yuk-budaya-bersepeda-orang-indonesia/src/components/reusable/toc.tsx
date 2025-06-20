@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Bermain Padel, Menikmati Olahraga dari Meksiko yang Sedang Tren di Jakarta
+              Gowas-Gowes, Yuk! Budaya Bersepeda Orang Indonesia
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Mengenal padel, olahraga dengan unsur tenis dan squash
+              Masuk Hindia Belanda
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Sejarah Padel: Dari Meksiko hingga Dikenal di Indonesia
+              Simbol Kemapanan
             </a>
           </li>
           <li
@@ -73,7 +73,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              Padel yang terus tumbuh di Jakarta
+              Tokoh yang Gemar Bersepeda
             </a>
           </li>
           <li
@@ -81,7 +81,39 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-5">
-              Alat untuk bermain padel ternyata tidak ribet!
+              Geliat Industri Sepeda Indonesia
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-6')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-6">
+              Setor Muka Sepeda Indonesia di Ajang Dunia
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-7')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-7">
+              Boom Sepeda saat Pandemi
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-8')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-8">
+              Demi Hobi, Kompetisi, Profesi, Lingkungan, dan Kepariwisataan
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-9')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-9">
+              Perhatian Pemerintah terhadap Pesepeda, Sudah Cukup?
             </a>
           </li>
         </ul>

@@ -32,19 +32,19 @@ export function CustomImageB() {
         >
           <motion.img
             src={baseUrl + '/assets/2.2.png'}
-            alt="Girl on bike"
+            alt="Girl on bike" className="pt-20 lg:pt-0"
             initial={{ opacity: 0, x: -50 }}
             animate={heroInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           />
           <motion.div
-            className="absolute lg:w-[60%] right-0 top-[20%]"
+            className="absolute lg:w-[60%] right-0 top-6 px-4 lg:px-0 lg:top-[20%]"
             initial={{ opacity: 0, x: 50 }}
             animate={heroInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <motion.h6
-              className="text-[3.6rem] leading-[4rem] text-white font-bold"
+              className="text-2xl lg:text-[3.6rem] lg:leading-[4rem] text-white font-bold"
               initial={{ opacity: 0, y: 30 }}
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -52,7 +52,7 @@ export function CustomImageB() {
               Geliat industri sepeda Indonesia
             </motion.h6>
             <motion.p
-              className="text-white text-2xl font-medium mt-4 leading-normal tracking-wide"
+              className="text-white text-base xl:text-2xl font-medium mt-4 leading-normal tracking-wide"
               initial={{ opacity: 0, y: 20 }}
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -63,17 +63,17 @@ export function CustomImageB() {
         </motion.div>
         <motion.div
           ref={cardRef}
-          className="bg-[#0f4a8c] rounded-xl p-8 max-w-4xl mx-auto absolute -bottom-28 z-10"
+          className="bg-[#0f4a8c] rounded-xl p-4 lg:p-8 max-w-4xl mx-auto absolute -bottom-28 z-10"
           initial={{ opacity: 0, y: 80, scale: 0.9 }}
           animate={cardInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 80, scale: 0.9 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <p className="text-3xl text-center leading-snug tracking-wide text-white">Tak hanya soal desain, tapi beberapa jenama antara lain seperti Polygon, Element, Pacific memiliki kualitas komponen berstandar internasional. </p>
+          <p className="text-base lg:text-3xl text-center leading-snug tracking-wide text-white">Tak hanya soal desain, tapi beberapa jenama antara lain seperti Polygon, Element, Pacific memiliki kualitas komponen berstandar internasional. </p>
         </motion.div>
       </div>
       <motion.div
         ref={brandsRef}
-        className="bg-white noise2 w-full flex flex-col items-center justify-center py-32 relative z-0 space-y-10"
+        className="bg-white noise2 w-full flex flex-col items-center justify-center pb-0 pt-32 lg:py-32 relative z-0 space-y-10"
         initial={{ opacity: 0 }}
         animate={brandsInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.8 }}
@@ -116,7 +116,7 @@ export function CustomImageB() {
           animate={questionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-4xl font-bold text-[#0f4a8c]">Mana favorit kalian?</p>
+          <p className="text-lg lg:text-4xl font-bold text-[#0f4a8c]">Mana favorit kalian?</p>
         </motion.div>
       </motion.div>
       <motion.div

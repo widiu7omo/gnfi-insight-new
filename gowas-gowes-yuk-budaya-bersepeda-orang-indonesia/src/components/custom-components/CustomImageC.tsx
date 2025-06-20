@@ -46,10 +46,10 @@ export function CustomImageC() {
     >
       <motion.div
         ref={heroRef}
-        className="max-w-4xl mx-auto pt-[20rem] pb-[5rem] z-10"
+        className="max-w-4xl mx-auto pt-0 lg:pt-[20rem] pb-[2rem] z-10"
       >
         <motion.div
-          className="flex flex-col lg:max-w-[80%] py-20"
+          className="flex flex-col lg:max-w-[80%] px-4 lg:px-0 py-8 pb-0 lg:pb-20 lg:py-20"
           initial={{ opacity: 0, y: 50 }}
           animate={
             heroInView
@@ -59,7 +59,7 @@ export function CustomImageC() {
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="text-6xl font-bold leading-snug"
+            className="text-3xl sm:text-4xl xl:text-6xl font-bold leading-snug"
             initial={{ opacity: 0, y: 30 }}
             animate={
               heroInView
@@ -71,7 +71,7 @@ export function CustomImageC() {
             Pandemi mendera dunia, boom bike tercipta!
           </motion.div>
           <motion.p
-            className="text-2xl pt-10 lg:max-w-[80%]"
+            className="text-lg lg:text-2xl pt-4 lg:pt-10 lg:max-w-[80%]"
             initial={{ opacity: 0, y: 20 }}
             animate={
               heroInView

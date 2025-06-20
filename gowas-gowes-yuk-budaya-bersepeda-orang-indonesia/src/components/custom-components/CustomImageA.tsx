@@ -15,13 +15,13 @@ export function CustomImageA() {
       {/* <div className="absolute left-0 w-full top-0 h-full bg-black/30 z-0"></div> */}
       <div className="max-w-4xl mx-auto relative">
         <motion.div
-          className="top-0 absolute left-0 space-y-6"
+          className="top-0 absolute left-0 space-y-6 px-4 lg:px-0"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <motion.div
-            className="text-5xl font-bold leading-tight lg:max-w-[60%]"
+            className="text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold leading-tight lg:max-w-[60%]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -29,7 +29,7 @@ export function CustomImageA() {
             Orang Indonesia suka bersepeda sejak dulu, beneran nih?
           </motion.div>
           <motion.p
-            className="lg:max-w-[60%] font-medium leading-normal tracking-wide"
+            className="lg:max-w-[60%] font-medium leading-normal text-sm lg:text-base tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -42,7 +42,7 @@ export function CustomImageA() {
         <motion.img
           src={baseUrl + "/assets/1.0.1.png"}
           alt="Couple on bike"
-          className="pt-20"
+          className="pt-[15rem] lg:pt-20"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
@@ -63,7 +63,7 @@ export function CustomImageA() {
             whileHover={{ y: -5, transition: { duration: 0.3 } }}
           >
             <img src={baseUrl + "/assets/1.2.png"} alt="Card 1" />
-            <p className="mt-6 text-lg leading-normal">
+            <p className="mt-6 text-base lg:text-lg leading-normal">
               Aktivitas bersepeda mulanya terlihat dari pegawai pemerintahan, tapi
               setelahnya rakyat biasa juga melakukannya. Firman Lubis dalam memoar
               Jakarta 1950-an bahkan menyebut budaya bersepeda begitu kentara di
@@ -78,7 +78,7 @@ export function CustomImageA() {
             whileHover={{ y: -5, transition: { duration: 0.3 } }}
           >
             <img src={baseUrl + "/assets/1.1.png"} alt="Card 1" />
-            <p className="mt-6 text-lg leading-normal">
+            <p className="mt-6 text-base lg:text-lg leading-normal">
               Aktivitas bersepeda mulanya terlihat dari pegawai pemerintahan, tapi
               setelahnya rakyat biasa juga melakukannya. Firman Lubis dalam memoar
               Jakarta 1950-an bahkan menyebut budaya bersepeda begitu kentara di
