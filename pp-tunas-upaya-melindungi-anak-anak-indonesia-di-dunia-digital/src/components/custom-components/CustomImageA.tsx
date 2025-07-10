@@ -4,96 +4,56 @@ import { baseUrl } from "@/constants/meta";
 import { motion } from "framer-motion";
 
 export function CustomImageA() {
-  return (
-    <motion.div
-      className="relative overflow-clip font-sora py-14 bg-no-repeat bg-cover bg-neutral-100 noise2"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-    >
-      {/* <div className="absolute left-0 w-full bottom-0 h-[20%] z-0 bg-gradient-to-t from-black"></div> */}
-      {/* <div className="absolute left-0 w-full top-0 h-full bg-black/30 z-0"></div> */}
-      <div className="max-w-4xl mx-auto relative">
-        <motion.div
-          className="top-0 absolute left-0 space-y-6 px-4 lg:px-0"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <motion.div
-            className="text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold leading-tight lg:max-w-[60%]"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Orang Indonesia suka bersepeda sejak dulu, beneran nih?
-          </motion.div>
-          <motion.p
-            className="lg:max-w-[60%] font-medium leading-normal text-sm lg:text-base tracking-wide"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            Setelah diproduksi massal di Eropa pada 1863, sepeda lalu masuk ke
-            Indonesia yang dulu masih disebut Hindia Belanda. Walau masih samar,
-            awal mula masuknya sepeda diperkirakan pada abad ke-20.
-          </motion.p>
-        </motion.div>
-        <motion.img
-          src={baseUrl + "/assets/1.0.1.png"}
-          alt="Couple on bike"
-          className="pt-[15rem] lg:pt-20"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-        />
-      </div>
-      <motion.div
-        className="max-w-4xl mx-auto relative z-10 -mt-10"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1 }}
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <motion.div
-            className="flex flex-col p-4 bg-white rounded-xl shadow-lg"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            whileHover={{ y: -5, transition: { duration: 0.3 } }}
-          >
-            <img src={baseUrl + "/assets/1.2.png"} alt="Card 1" />
-            <p className="mt-6 text-base lg:text-lg leading-normal">
-              Aktivitas bersepeda mulanya terlihat dari pegawai pemerintahan, tapi
-              setelahnya rakyat biasa juga melakukannya. Firman Lubis dalam memoar
-              Jakarta 1950-an bahkan menyebut budaya bersepeda begitu kentara di
-              ibu kota pada awal-awal masa kemerdekaan.
-            </p>
-          </motion.div>
-          <motion.div
-            className="flex flex-col p-4 bg-white rounded-xl shadow-lg"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.4 }}
-            whileHover={{ y: -5, transition: { duration: 0.3 } }}
-          >
-            <img src={baseUrl + "/assets/1.1.png"} alt="Card 1" />
-            <p className="mt-6 text-base lg:text-lg leading-normal">
-              Aktivitas bersepeda mulanya terlihat dari pegawai pemerintahan, tapi
-              setelahnya rakyat biasa juga melakukannya. Firman Lubis dalam memoar
-              Jakarta 1950-an bahkan menyebut budaya bersepeda begitu kentara di
-              ibu kota pada awal-awal masa kemerdekaan.
-            </p>
-          </motion.div>
+  return (<div className="relative overflow-clip">
+    <div className="rounded-l-[20rem] h-[50rem] w-[50vw] absolute top-0 right-[-0%] bottom-0 bg-gradient-to-br to-[80%] from-yellow-500 to-red-500"></div>
+    <div className="rounded-l-[20rem] h-[50rem] w-[70vw] absolute top-[40%] blur-2xl right-[-10%] bottom-0 bg-gradient-to-br from-red-500 to-pink-500"></div>
+    <motion.div className="noise2 backdrop-blur-2xl relative py-20">
+      <div className="max-w-4xl mx-auto font-sora">
+        <div className="flex gap-2 flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex-1 space-y-2">
+            <div className="text-[#0149a5] text-7xl font-bold">PP Tunas</div>
+            <div className="bg-[#2d8ee1] p-1 text-white font-bold text-4xl w-fit">Apa itu?</div>
+            <div className="text-2xl text-neutral-700 pb-2 pt-4">Jumat, 28 Maret 2025</div>
+            <div className="text-2xl font-medium">Pemerintah meluncurkan Peraturan Pemerintah (PP) Nomor 17 Tahun 2025 tentang Tata Kelola Penyelenggaraan Sistem Elektronik dalam Perlindungan Anak
+              (PP Tunas)</div>
+          </div>
+          <div className="flex-1 w-full h-full">
+            <img className="object-cover" src={baseUrl + '/assets/1.1.png'} alt="Prabowo" />
+          </div>
         </div>
-      </motion.div>
-      <motion.img
-        src={`${baseUrl}/assets/footer.png`}
-        className="z-50 -mt-10 hidden invert sm:block relative bottom-0 h-full w-fit mx-auto"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.6 }}
-      />
+        <div className="relative w-full overflow-hidden p-10">
+          <div className="absolute left-11 top-11 bottom-11 right-11 bg-gradient-to-r from-blue-800 to-blue-600 transform -skew-y-1 scale-110"></div>
+          <div className="absolute left-12 top-12 bottom-12 right-12 bg-gradient-to-r from-blue-600 to-blue-400 transform skew-y-1 scale-110"></div>
+          <div className="relative text-3xl text-center text-white py-6 px-4 font-bold">
+            Bertujuan melindungi anak-anak dari ancaman <br />
+            dan risiko bahaya di ruang digital
+          </div>
+        </div>
+        <div className="space-y-8">
+          <div className="text-center text-4xl font-bold pt-12">Hal-hal utama dalam PP Tunas:</div>
+          <div className="flex flex-col md:flex-row gap-5">
+            <div className="flex-1">
+              <div className="bg-white rounded-2xl shadow-lg px-12 py-8">
+                <ul className="list-disc text-xl font-medium space-y-2">
+                  <li>Klasifikasi tingkat risiko platform digital</li>
+                  <li>Pembatasan akses terhadap konten dan platform digital berdasarkan usia</li>
+                  <li>Kewajiban platform digital untuk memverifikasi pengguna dan mengedukasi anak serta orang tua untuk berinternet secara aman</li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex-1">
+              <div className="bg-white rounded-2xl shadow-lg px-12 py-8">
+                <ul className="list-disc text-xl font-medium space-y-2">
+                  <li>Pelibatan orang tua dalam memberi persetujuan terhadap penggunaan platform digital oleh anak</li>
+                  <li>Larangan profiling anak untuk tujuan komersial</li>
+                  <li>Sanksi bagi platform digital yang melanggar, mulai dari teguran hingga denda</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </motion.div>
+  </div>
   );
 }
