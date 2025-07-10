@@ -7,7 +7,7 @@ export function CustomImageA() {
   return (<div className="relative overflow-clip">
     <div className="rounded-l-[20rem] h-[50rem] w-[50vw] absolute top-0 right-[-0%] bottom-0 bg-gradient-to-br to-[80%] from-yellow-500 to-red-500"></div>
     <div className="rounded-l-[20rem] h-[50rem] w-[70vw] absolute top-[40%] blur-2xl right-[-10%] bottom-0 bg-gradient-to-br from-red-500 to-pink-500"></div>
-    <motion.div className="noise2 backdrop-blur-2xl relative py-20">
+    <motion.div className="noise2 backdrop-blur-2xl relative pt-20">
       <div className="max-w-4xl mx-auto font-sora">
         <div className="flex gap-2 flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex-1 space-y-2">
@@ -51,6 +51,9 @@ export function CustomImageA() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="-mt-10">
+          <img src={baseUrl + "/assets/1.2.png"} alt="3d Childs" />
         </div>
       </div>
     </motion.div>
