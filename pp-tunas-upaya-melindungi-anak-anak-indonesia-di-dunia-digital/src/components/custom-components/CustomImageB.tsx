@@ -17,117 +17,145 @@ export function CustomImageB() {
   return (
     <motion.div
       className="relative flex flex-col font-sora items-center overflow-hidden bg-cover"
-      style={{ backgroundImage: `url(${baseUrl}/assets/2.1.png)` }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
     >
-      <div className="w-full max-w-4xl mx-auto h-fit relative">
-        <motion.div
-          ref={heroRef}
-          className="pt-20 flex relative"
-          initial={{ opacity: 0, y: 50 }}
-          animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.img
-            src={baseUrl + '/assets/2.2.png'}
-            alt="Girl on bike" className="pt-20 lg:pt-0"
-            initial={{ opacity: 0, x: -50 }}
-            animate={heroInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          />
-          <motion.div
-            className="absolute lg:w-[60%] right-0 top-6 px-4 lg:px-0 lg:top-[20%]"
-            initial={{ opacity: 0, x: 50 }}
-            animate={heroInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <motion.h6
-              className="text-2xl lg:text-[3.6rem] lg:leading-[4rem] text-white font-bold"
-              initial={{ opacity: 0, y: 30 }}
-              animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              Geliat industri sepeda Indonesia
-            </motion.h6>
-            <motion.p
-              className="text-white text-base xl:text-2xl font-medium mt-4 leading-normal tracking-wide"
-              initial={{ opacity: 0, y: 20 }}
-              animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
-              Sepeda buatan Indonesia memikat hati penghobi gowes dalam maupun luar negeri.
-            </motion.p>
-          </motion.div>
-        </motion.div>
-        <motion.div
-          ref={cardRef}
-          className="bg-[#0f4a8c] rounded-xl p-4 lg:p-8 max-w-4xl mx-auto absolute -bottom-28 z-10"
-          initial={{ opacity: 0, y: 80, scale: 0.9 }}
-          animate={cardInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 80, scale: 0.9 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <p className="text-base lg:text-3xl text-center leading-snug tracking-wide text-white">Tak hanya soal desain, tapi beberapa jenama antara lain seperti Polygon, Element, Pacific memiliki kualitas komponen berstandar internasional. </p>
-        </motion.div>
+      <div className="absolute left-0 right-0 top-0 bottom-0 bg-[#070419]" />
+      <div className="absolute size-[60rem] blur-[10rem] bottom-[20rem] bg-gradient-to-b to-[40%] from-purple-600 to-pink-600 rounded-full right-20" />
+      <div className="absolute size-[50rem] blur-[8rem] bottom-[20rem] bg-red-600 rounded-full right-20" />
+      <div className="absolute size-[40rem] blur-[4rem] bottom-[20rem]  bg-gradient-to-b from-red-600 to-yellow-600 rounded-full right-[20rem]" />
+      <div className="relative noise2 w-full">
+        <div className="max-w-4xl mx-auto">
+          <div className="w-full flex items-center justify-end relative">
+            <img src={baseUrl + '/assets/2.1.png'} alt="Child with Phone" className="" />
+            <div className="absolute w-3/4 lg:w-1/2 left-0 top-4 sm:top-20 px-4 lg:px-0">
+              <div className="text-3xl sm:text-5xl lg:text-6xl font-bold text-[#ffc600]">
+                Beragam Bahaya
+                Mengintai Anak
+                di Ruang Digital
+              </div>
+              <div className="text-lg sm:text-xl lg:text-2xl text-white font-medium mt-10">
+                Anak-anak harus dilindungi di ruang digital. Sebab, ada banyak bahaya yang mengintai
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto -mt-[6rem] relative mb-28">
+          <div className="lg:hidden flex flex-col items-center justify-center mt-10 gap-12">
+            <div className="flex flex-col md:flex-row w-full">
+              <div className="space-y-4 flex flex-col p-8 bg-black/20 backdrop-blur-xl relative w-full">
+                <div className="absolute right-0 bottom-0 z-10 w-[15rem] md:w-[16rem]">
+                  <img src={baseUrl + '/assets/2.2.png'} alt="" className="w-full " />
+                </div>
+                <div>
+                  <div className="text-3xl w-[50%] md:w-auto font-bold text-[#ffc600] mt-4 relative z-10">
+                    Pornografi anak
+                  </div>
+                  <div className="text-white w-[60%] md:w-[70%] text-base md:text-2xl font-medium relative z-10">
+                    Lebih dari
+                    5,5 juta kasus di Indonesia dalam 4 tahun terakhir
+                  </div>
+                  <div className="text-white">(data NCMEC)</div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row w-full">
+              <div className="space-y-4 p-8 bg-black/20 backdrop-blur-xl relative w-full">
+                <div className="absolute right-0 bottom-0 z-10 w-[15rem] md:w-[16rem]">
+                  <img src={baseUrl + '/assets/2.3.png'} alt="" className="w-full " />
+                  <div className="bg-gradient-to-t to-[50%] from-black absolute left-0 right-0 bottom-0 top-0"></div>
+                </div>
+                <div className="text-3xl w-[50%] md:w-auto font-bold text-[#ffc600] mt-4 relative z-10">
+                  Perundungan daring
+                </div>
+                <div className="text-white w-[60%] md:w-[70%] text-base md:text-2xl font-medium relative z-10">
+                  anak-anak di Indonesia pernah mengalami
+                </div>
+                <div className="text-white">(data NCMEC)</div>
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row w-full">
+              <div className="space-y-4 p-8 bg-black/20 backdrop-blur-xl relative w-full">
+                <div className="absolute right-0 bottom-0 z-10 w-[15rem] md:w-[16rem]">
+                  <img src={baseUrl + '/assets/2.4.png'} alt="" className="w-full " />
+                  {/* <div className="bg-gradient-to-t to-[50%] from-black absolute left-0 right-0 bottom-0 top-0"></div> */}
+                </div>
+                <div className="text-3xl w-[50%] md:w-auto font-bold text-[#ffc600] mt-4 relative z-10">
+                  Judi online
+                </div>
+                <div className="text-white w-[60%] md:w-[70%] text-base md:text-2xl font-medium relative z-10">
+                  anak usia di bawah 10 tahun terpapar judi online
+                </div>
+                <div className="text-white">(data NCMEC)</div>
+              </div>
+            </div>
+          </div>
+          <div className="lg:flex hidden items-start gap-6">
+            <div className="flex-1 flex flex-col items-start relative">
+              <div className="absolute z-10 left-0 w-full top-[-7rem]">
+                <img src={baseUrl + '/assets/2.2.png'} alt="" className="h-full" />
+                <div className="w-full h-full absolute bottom-4 flex items-end justify-center">
+                  <div className="text-4xl font-bold text-white text-center">5.5jt +</div>
+                </div>
+              </div>
+              <div className="space-y-4 px-10 bg-black/20 backdrop-blur-xl h-[38rem]">
+                <div className="h-[17rem]"></div>
+                <div className="text-3xl font-bold text-[#ffc600] mt-4">
+                  Pornografi anak
+                </div>
+                <div className="text-white text-2xl font-medium">
+                  Lebih dari
+                  5,5 juta kasus di Indonesia dalam 4 tahun terakhir
+                </div>
+                <div className="text-white absolute bottom-6">(data NCMEC)</div>
+              </div>
+            </div>
+            <div className="flex-1 flex flex-col items-start relative">
+              <div className="absolute z-10 left-0 w-full top-[-7rem]">
+                <img src={baseUrl + '/assets/2.3.png'} alt="" className="h-full" />
+                <div className="w-full h-full absolute bottom-4 flex items-end justify-center">
+                  <div className="text-4xl font-bold text-white text-center">48%</div>
+                </div>
+              </div>
+              <div className="space-y-4 px-10 bg-black/20 backdrop-blur-xl h-[38rem]">
+                <div className="h-[17rem]"></div>
+                <div className="text-3xl font-bold text-[#ffc600] mt-4">
+                  Perundungan daring
+                </div>
+                <div className="text-white text-2xl font-medium">
+                  anak-anak di Indonesia pernah mengalami
+                </div>
+                <div className="text-white absolute bottom-6">(data NCMEC)</div>
+              </div>
+            </div>
+            <div className="flex-1 flex flex-col items-start relative">
+              <div className="absolute z-10 left-0 w-full top-[-7rem]">
+                <img src={baseUrl + '/assets/2.4.png'} alt="" className="h-full" />
+                <div className="w-full h-full absolute bottom-4 flex items-end justify-center">
+                  <div className="text-4xl font-bold text-white text-center">80rb</div>
+                </div>
+              </div>
+              <div className="space-y-4 px-10 bg-black/20 backdrop-blur-xl h-[38rem]">
+                <div className="h-[17rem]"></div>
+                <div className="text-3xl font-bold text-[#ffc600] mt-4">
+                  Judi online
+                </div>
+                <div className="text-white text-2xl font-medium pt-8">
+                  anak usia di bawah 10 tahun terpapar judi online
+                </div>
+                <div className="text-white absolute bottom-6">(data Kemkomdigi)</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <motion.div
-        ref={brandsRef}
-        className="bg-white noise2 w-full flex flex-col items-center justify-center pb-0 pt-32 lg:py-32 relative z-0 space-y-10"
-        initial={{ opacity: 0 }}
-        animate={brandsInView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <motion.div
-          className="z-50 relative"
-          initial={{ opacity: 0, y: 50 }}
-          animate={brandsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <img src={baseUrl + '/assets/2.3.png'} alt="Polygon" />
-        </motion.div>
-        <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-          initial={{ opacity: 0, y: 50 }}
-          animate={brandsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={brandsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-          >
-            <img src={baseUrl + '/assets/2.4.png'} alt="Element" />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={brandsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-          >
-            <img src={baseUrl + '/assets/2.5.png'} alt="Pacific" />
-          </motion.div>
-        </motion.div>
-        <motion.div
-          ref={questionRef}
-          className="text-center py-10 pb-6"
-          initial={{ opacity: 0, y: 30 }}
-          animate={questionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <p className="text-lg lg:text-4xl font-bold text-[#0f4a8c]">Mana favorit kalian?</p>
-        </motion.div>
-      </motion.div>
-      <motion.div
-        className="absolute bottom-0 z-50 mx-auto max-w-4xl"
+        className="absolute bottom-0 pt-10 z-50 mx-auto max-w-4xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
       >
         <img
           src={`${baseUrl}/assets/footer.png`}
-          className="z-50 mx-auto hidden w-full invert sm:block"
+          className="z-50 mx-auto hidden w-full sm:block"
         />
       </motion.div>
     </motion.div>
