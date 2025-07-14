@@ -1,6 +1,8 @@
 "use client";
 
 import { baseUrl } from "@/constants/meta";
+import { COMPONENT_PARAGRAPH } from "@/data/component-front";
+import { Paragraph } from "@/stories/Paragraph";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
@@ -35,215 +37,67 @@ export function CustomImageC() {
       return () => clearInterval(timer);
     }
   }, [statsInView]);
-
+  const flags: { flag: string; name: string, desc: string }[] = [
+    { flag: baseUrl + '/assets/3.1.png', name: 'Amerika Serikat', desc: 'Di bawah 13 tahun membutuhkan persetujuan orang tua' },
+    { flag: baseUrl + '/assets/3.2.png', name: 'Prancis', desc: 'Terlarang bagi usia di bawah 15 tahun (masih rencana)' },
+    { flag: baseUrl + '/assets/3.3.png', name: 'United Kingdom', desc: 'Terlarang bagi usia di bawah 16 tahun  (masih rencana)' },
+    { flag: baseUrl + '/assets/3.4.png', name: 'Jerman', desc: 'Usia 13-16 tahun membutuhkan persetujuan orang tua' },
+    { flag: baseUrl + '/assets/3.5.png', name: 'Australia', desc: 'Terlarang bagi usia di bawah 16 tahun' },
+    { flag: baseUrl + '/assets/3.6.png', name: 'Italia', desc: 'Usia di bawah 14 tahun membutuhkan persetujuan orang tua' },
+    { flag: baseUrl + '/assets/3.7.png', name: 'Norwegia', desc: 'Terlarang bagi usia di bawah 16 tahun (masih rencana)' },
+    { flag: baseUrl + '/assets/3.8.png', name: 'Yunani', desc: 'Usia di bawah 15 tahun harus disertai verifikasi dan kontrol orang tua (masih rencana)' },
+  ]
   return (
     <motion.div
-      className="relative flex font-sora flex-col items-center overflow-hidden bg-cover bg-no-repeat"
-      style={{ backgroundImage: `url(${baseUrl}/assets/3.1.png)` }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      className="relative flex font-sora flex-col items-center overflow-hidden bg-gradient-to-b from-black to-[80%] to-[#070419] bg-no-repeat"
+
     >
-      <motion.div
-        ref={heroRef}
-        className="max-w-4xl mx-auto pt-0 lg:pt-[20rem] pb-[2rem] z-10"
-      >
-        <motion.div
-          className="flex flex-col lg:max-w-[80%] px-4 lg:px-0 py-8 pb-0 lg:pb-20 lg:py-20"
-          initial={{ opacity: 0, y: 50 }}
-          animate={
-            heroInView
-              ? { opacity: 1, y: 0 }
-              : { opacity: 0, y: 50 }
-          }
-          transition={{ duration: 0.8 }}
-        >
-          <motion.div
-            className="text-3xl sm:text-4xl xl:text-6xl font-bold leading-snug"
-            initial={{ opacity: 0, y: 30 }}
-            animate={
-              heroInView
-                ? { opacity: 1, y: 0 }
-                : { opacity: 0, y: 30 }
-            }
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Pandemi mendera dunia, boom bike tercipta!
-          </motion.div>
-          <motion.p
-            className="text-lg lg:text-2xl pt-4 lg:pt-10 lg:max-w-[80%]"
-            initial={{ opacity: 0, y: 20 }}
-            animate={
-              heroInView
-                ? { opacity: 1, y: 0 }
-                : { opacity: 0, y: 20 }
-            }
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Sepeda buatan Indonesia memikat hati penghobi gowes dalam maupun luar
-            negeri.
-          </motion.p>
-        </motion.div>
-      </motion.div>
-      <motion.div
-        ref={cardsRef}
-        className="max-w-4xl mx-auto pb-[10rem] z-10"
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <motion.div
-            className="bg-white rounded-xl shadow-lg p-6 space-y-6"
-            initial={{ opacity: 0, x: -50 }}
-            animate={
-              cardsInView
-                ? { opacity: 1, x: 0 }
-                : { opacity: 0, x: -50 }
-            }
-            transition={{ duration: 0.8, delay: 0.2 }}
-            whileHover={{ y: -5, transition: { duration: 0.3 } }}
-          >
-            <motion.img
-              src={baseUrl + "/assets/3.2.jpg"}
-              alt="Bike Garage"
-              className="rounded-lg"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={
-                cardsInView
-                  ? { opacity: 1, scale: 1 }
-                  : { opacity: 0, scale: 0.9 }
-              }
-              transition={{ duration: 0.6, delay: 0.4 }}
-            />
-            <motion.h6
-              className="text-2xl font-bold"
-              initial={{ opacity: 0, y: 20 }}
-              animate={
-                cardsInView
-                  ? { opacity: 1, y: 0 }
-                  : { opacity: 0, y: 20 }
-              }
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              Pandemi covid-19 yang terjadi pada 2020-2021 lalu rupanya justru
-              menyadarkan gaya hidup sehat.
-            </motion.h6>
-            <motion.p
-              className="font-neutral-800 text-lg"
-              initial={{ opacity: 0, y: 15 }}
-              animate={
-                cardsInView
-                  ? { opacity: 1, y: 0 }
-                  : { opacity: 0, y: 15 }
-              }
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
-              Kegiatan bersepeda pun booming, tak terkecuali di Indonesia. Toko
-              sepeda daring maupun laring ketiban untung imbas ke-fomo-an publik
-              yang ingin menjajal aktivitas gowes di jalan-jalan lengang karena
-              pembatasan sosial.
-            </motion.p>
-          </motion.div>
-          <motion.div
-            className="bg-white rounded-xl shadow-lg p-6 space-y-6"
-            initial={{ opacity: 0, x: 50 }}
-            animate={
-              cardsInView
-                ? { opacity: 1, x: 0 }
-                : { opacity: 0, x: 50 }
-            }
-            transition={{ duration: 0.8, delay: 0.4 }}
-            whileHover={{ y: -5, transition: { duration: 0.3 } }}
-          >
-            <motion.p
-              className="font-neutral-800 text-lg"
-              initial={{ opacity: 0, y: 15 }}
-              animate={
-                cardsInView
-                  ? { opacity: 1, y: 0 }
-                  : { opacity: 0, y: 15 }
-              }
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              Contohnya pada periode Maret hingga Juni 2020. Kompas Data menyebut
-              Bukalapak mencatatkan peningkatan transaksi
-            </motion.p>
-            <motion.img
-              src={baseUrl + "/assets/3.3.png"}
-              alt="Stats"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={
-                cardsInView
-                  ? { opacity: 1, scale: 1 }
-                  : { opacity: 0, scale: 0.9 }
-              }
-              transition={{ duration: 0.6, delay: 0.8 }}
-            />
+      {/* <div className="absolute left-0 right-0 top-0 bottom-0 bg-[#070419]" /> */}
+      <div className="absolute w-[40rem] h-[80rem] blur-[10rem] bottom-[-40rem] bg-gradient-to-b to-[40%] from-purple-600 to-pink-600 rounded-full" />
+      <div className="absolute size-[40rem] blur-[8rem] bottom-[0rem] left-[30%] bg-red-600 rounded-full" />
+      <div className="absolute size-[40rem] blur-[4rem] bottom-[-40rem]  bg-gradient-to-b from-red-600 to-yellow-600 rounded-full" />
+      <div className="relative noise2 w-full pt-10">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <div className="flex flex-col items-center justify-center space-y-6">
+            <div className="text-[#ffc600] text-6xl text-center font-bold">Aturan Mirip PP Tunas di Negara Lain</div>
+            <div className="text-white font-medium text-3xl text-center">Di berbagai negara, penggunaan akun <br /> media sosial anak juga punya batasan usia</div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {flags.map(flag => (<div className="flex space-x-2" key={flag.name}>
+              <img src={flag.flag} alt={flag.name} className="" />
+              <div className="flex flex-col text-white justify-center">
+                <div className="text-2xl font-bold mb-3">{flag.name}</div>
+                <div className="text-xl">{flag.desc}</div>
+              </div>
+            </div>))}
+          </div>
+          <div className="italic text-xl text-white float-right">Sumber: tech.co</div>
+          <div className="relative">
+            <img src={baseUrl + '/assets/3.9.png'} alt="Parent with children" />
             <motion.div
-              ref={statsRef}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={
-                cardsInView
-                  ? { opacity: 1, scale: 1 }
-                  : { opacity: 0, scale: 0.8 }
-              }
-              transition={{ duration: 0.8, delay: 1 }}
+              className="absolute bottom-0 z-50 mx-auto max-w-4xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.6 }}
             >
-              <motion.div
-                className="text-center text-8xl font-extrabold text-[#0058be]"
-                initial={{ scale: 0.5 }}
-                animate={
-                  statsInView
-                    ? { scale: 1 }
-                    : { scale: 0.5 }
-                }
-                transition={{
-                  duration: 0.8,
-                  delay: 0.2,
-                  type: "spring",
-                  stiffness: 200,
-                }}
-              >
-                {counter}%
-              </motion.div>
-              <motion.div
-                className="text-center font-neutral-800 font-bold text-2xl"
-                initial={{ opacity: 0, y: 20 }}
-                animate={
-                  statsInView
-                    ? { opacity: 1, y: 0 }
-                    : { opacity: 0, y: 20 }
-                }
-                transition={{ duration: 0.6, delay: 1.2 }}
-              >
-                penjualan sepeda
-              </motion.div>
+              <img
+                src={`${baseUrl}/assets/footer.png`}
+                className="z-50 mx-auto hidden w-full sm:block"
+              />
             </motion.div>
-            <motion.p
-              className="font-neutral-800 text-lg"
-              initial={{ opacity: 0, y: 15 }}
-              animate={
-                cardsInView
-                  ? { opacity: 1, y: 0 }
-                  : { opacity: 0, y: 15 }
-              }
-              transition={{ duration: 0.6, delay: 1.4 }}
-            >
-              Kawan GNFI ikut beli juga enggak tuh?
-            </motion.p>
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
-      <div className="absolute bottom-0 h-full w-full bg-gradient-to-t from-black z-0 to-[60%]" />
-      <motion.div
-        className="absolute bottom-0 z-50 mx-auto max-w-4xl"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.6 }}
-      >
-        <img
-          src={`${baseUrl}/assets/footer.png`}
-          className="z-50 mx-auto hidden w-full sm:block"
-        />
-      </motion.div>
+        <Paragraph block={{
+          component: COMPONENT_PARAGRAPH,
+          componentProps: {
+            className: 'text-white max-w-[65ch] font-sans',
+            children: (<>
+              <p>Tak hanya Australia, beberapa negara Eropa juga memiliki regulasi soal penggunan media sosial dan platform digital untuk anak-anak. Meski tiap negara memiliki pendekatan yang berbeda, tujuannya tetap sama, yaitu melindungi anak-anak dari risiko dunia digital dan memastikan media sosial digunakan secara bijak sesuai usia pengguna.</p>
+            </>)
+          }
+        }} />
+      </div>
+
     </motion.div>
   );
 }
