@@ -10,7 +10,7 @@ export function CustomImageA() {
     <motion.div className="noise2 backdrop-blur-2xl relative pt-8 md:pt-20">
       <div className="max-w-4xl mx-auto font-sora">
         <div className="flex gap-2 flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex-1 space-y-2 px-4 md:px-0">
+          <div className="flex-1 space-y-2 px-4 lg:px-0">
             <div className="text-[#0149a5] text-4xl sm:text-5xl md:text-7xl font-bold">PP Tunas</div>
             <div className="bg-[#2d8ee1] p-1 text-white font-bold text-xl sm:text-3xl md:text-4xl w-fit">Apa itu?</div>
             <div className="text-lg sm:text-xl md:text-2xl text-neutral-700 pb-0 md:pb-2 pt-2 md:pt-4">Jumat, 28 Maret 2025</div>
@@ -55,7 +55,7 @@ export function CustomImageA() {
         <div className="-mt-10">
           <img src={baseUrl + "/assets/1.2.png"} alt="3d Childs" />
         </div>
-        <div className="-mt-20">
+        <div className="-mt-10 lg:-mt-20">
           <img src={baseUrl + "/assets/footer.png"} alt="Footer" className="invert" />
         </div>
       </div>

@@ -35,7 +35,7 @@ export function CustomImageE() {
       <div className="absolute top-0 h-[10rem] w-full bg-gradient-to-b from-[#efefe8]"></div>
 
       <div className="mx-auto max-w-4xl py-12 relative">
-        <div className="space-y-4 px-4 md:px-0">
+        <div className="space-y-4 px-4 lg:px-0">
           <div className="font-bold text-2xl sm:text-3xl lg:text-4xl">Pada dasarnya, internet bermanfaat untuk anak</div>
           <div className="font-bold text-4xl sm:text-5xl lg:text-7xl">Namun, harus ada pendampingan orang tua</div>
           <div className="h-[60rem] md:h-[70rem] lg:h-[80rem]" />

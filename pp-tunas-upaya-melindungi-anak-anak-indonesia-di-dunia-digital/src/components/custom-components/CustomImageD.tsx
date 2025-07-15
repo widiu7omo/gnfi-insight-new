@@ -20,7 +20,7 @@ export function CustomImageD() {
         <div className="absolute bottom-[-2px] w-full h-full block lg:hidden bg-gradient-to-t from-white"></div>
         <motion.div
           ref={heroRef}
-          className="max-w-4xl mx-auto pb-28 relative z-10"
+          className="max-w-4xl mx-auto lg:pb-28 relative z-10"
         >
           <motion.div
             className="w-full space-y-8 px-4 lg:px-0"
