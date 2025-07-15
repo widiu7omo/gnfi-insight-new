@@ -59,19 +59,19 @@ export function CustomImageC() {
       <div className="relative noise2 w-full pt-10">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="flex flex-col items-center justify-center space-y-6">
-            <div className="text-[#ffc600] text-6xl text-center font-bold">Aturan Mirip PP Tunas di Negara Lain</div>
-            <div className="text-white font-medium text-3xl text-center">Di berbagai negara, penggunaan akun <br /> media sosial anak juga punya batasan usia</div>
+            <div className="text-[#ffc600] text-3xl md:text-4xl lg:text-6xl text-center font-bold px-4 lg:px-0">Aturan Mirip PP Tunas di Negara Lain</div>
+            <div className="text-white font-medium text-lg md:text-2xl lg:text-3xl text-center px-4 lg:px-0">Di berbagai negara, penggunaan akun <br /> media sosial anak juga punya batasan usia</div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {flags.map(flag => (<div className="flex space-x-2" key={flag.name}>
-              <img src={flag.flag} alt={flag.name} className="" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 lg:gap-6 px-2 md:px-0">
+            {flags.map(flag => (<div className="flex" key={flag.name}>
+              <img src={flag.flag} alt={flag.name} className="size-[8rem] md:size-auto" />
               <div className="flex flex-col text-white justify-center">
-                <div className="text-2xl font-bold mb-3">{flag.name}</div>
-                <div className="text-xl">{flag.desc}</div>
+                <div className="text-xl lg:text-2xl font-bold mb-3">{flag.name}</div>
+                <div className="text-base lg:text-xl">{flag.desc}</div>
               </div>
             </div>))}
           </div>
-          <div className="italic text-xl text-white float-right">Sumber: tech.co</div>
+          <div className="italic text-xl text-white float-right mr-4">Sumber: tech.co</div>
           <div className="relative">
             <img src={baseUrl + '/assets/3.9.png'} alt="Parent with children" />
             <motion.div

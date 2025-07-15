@@ -38,7 +38,7 @@ export function CustomImageB() {
             </div>
           </div>
         </div>
-        <div className="max-w-4xl mx-auto -mt-[6rem] relative mb-28">
+        <div className="max-w-4xl mx-auto -mt-[6rem] relative mb-0 md:mb-20 lg:mb-28">
           <div className="lg:hidden flex flex-col items-center justify-center mt-10 gap-12">
             <div className="flex flex-col md:flex-row w-full">
               <div className="space-y-4 flex flex-col p-8 bg-black/20 backdrop-blur-xl relative w-full">
