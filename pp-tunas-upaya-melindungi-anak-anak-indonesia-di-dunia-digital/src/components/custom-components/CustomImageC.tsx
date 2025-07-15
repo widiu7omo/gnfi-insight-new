@@ -10,10 +10,14 @@ export function CustomImageC() {
   const heroRef = useRef(null);
   const cardsRef = useRef(null);
   const statsRef = useRef(null);
+  const titleRef = useRef(null);
+  const imageRef = useRef(null);
 
   const heroInView = useInView(heroRef, { once: true });
   const cardsInView = useInView(cardsRef, { once: true });
   const statsInView = useInView(statsRef, { once: true });
+  const titleInView = useInView(titleRef, { once: true });
+  const imageInView = useInView(imageRef, { once: true });
 
   const [counter, setCounter] = useState(0);
 
@@ -58,44 +62,140 @@ export function CustomImageC() {
       <div className="absolute size-[40rem] blur-[4rem] bottom-[-40rem]  bg-gradient-to-b from-red-600 to-yellow-600 rounded-full" />
       <div className="relative noise2 w-full pt-10">
         <div className="max-w-4xl mx-auto space-y-8">
-          <div className="flex flex-col items-center justify-center space-y-6">
-            <div className="text-[#ffc600] text-3xl md:text-4xl lg:text-6xl text-center font-bold px-4 lg:px-0">Aturan Mirip PP Tunas di Negara Lain</div>
-            <div className="text-white font-medium text-lg md:text-2xl lg:text-3xl text-center px-4 lg:px-0">Di berbagai negara, penggunaan akun <br /> media sosial anak juga punya batasan usia</div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 lg:gap-6 px-2 md:px-0">
-            {flags.map(flag => (<div className="flex" key={flag.name}>
-              <img src={flag.flag} alt={flag.name} className="size-[8rem] md:size-auto" />
-              <div className="flex flex-col text-white justify-center">
-                <div className="text-xl lg:text-2xl font-bold mb-3">{flag.name}</div>
-                <div className="text-base lg:text-xl">{flag.desc}</div>
-              </div>
-            </div>))}
-          </div>
-          <div className="italic text-xl text-white float-right mr-4">Sumber: tech.co</div>
-          <div className="relative">
-            <img src={baseUrl + '/assets/3.9.png'} alt="Parent with children" />
+          <motion.div 
+            ref={titleRef}
+            className="flex flex-col items-center justify-center space-y-6"
+            initial={{ opacity: 0, y: 50 }}
+            animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.div 
+              className="text-[#ffc600] text-3xl md:text-4xl lg:text-6xl text-center font-bold px-4 lg:px-0"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={titleInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            >
+              Aturan Mirip PP Tunas di Negara Lain
+            </motion.div>
+            <motion.div 
+              className="text-white font-medium text-lg md:text-2xl lg:text-3xl text-center px-4 lg:px-0"
+              initial={{ opacity: 0, y: 30 }}
+              animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+            >
+              Di berbagai negara, penggunaan akun <br /> media sosial anak juga punya batasan usia
+            </motion.div>
+          </motion.div>
+          <motion.div 
+            ref={cardsRef}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 lg:gap-6 px-2 md:px-0"
+          >
+            {flags.map((flag, index) => (
+              <motion.div 
+                className="flex group cursor-pointer"
+                key={flag.name}
+                initial={{ opacity: 0, x: -50, scale: 0.9 }}
+                animate={cardsInView ? { opacity: 1, x: 0, scale: 1 } : { opacity: 0, x: -50, scale: 0.9 }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: index * 0.1, 
+                  ease: "easeOut" 
+                }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  transition: { duration: 0.2 } 
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <motion.img 
+                  src={flag.flag} 
+                  alt={flag.name} 
+                  className="size-[8rem] md:size-auto transition-transform duration-300 group-hover:scale-110" 
+                  initial={{ rotate: -10, opacity: 0 }}
+                  animate={cardsInView ? { rotate: 0, opacity: 1 } : { rotate: -10, opacity: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
+                />
+                <motion.div 
+                  className="flex flex-col text-white justify-center ml-4"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={cardsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+                >
+                  <motion.div 
+                    className="text-xl lg:text-2xl font-bold mb-3 transition-colors duration-300 group-hover:text-[#ffc600]"
+                    initial={{ y: 10, opacity: 0 }}
+                    animate={cardsInView ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 + 0.4 }}
+                  >
+                    {flag.name}
+                  </motion.div>
+                  <motion.div 
+                    className="text-base lg:text-xl transition-colors duration-300 group-hover:text-gray-200"
+                    initial={{ y: 10, opacity: 0 }}
+                    animate={cardsInView ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 + 0.5 }}
+                  >
+                    {flag.desc}
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.div 
+            className="italic text-xl text-white float-right mr-4"
+            initial={{ opacity: 0, x: 20 }}
+            animate={cardsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            Sumber: tech.co
+          </motion.div>
+          <motion.div 
+            ref={imageRef}
+            className="relative"
+            initial={{ opacity: 0, y: 50 }}
+            animate={imageInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.img 
+              src={baseUrl + '/assets/3.9.png'} 
+              alt="Parent with children"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={imageInView ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+              className="transition-transform duration-500 hover:scale-105"
+            />
             <motion.div
               className="absolute bottom-0 z-50 mx-auto max-w-4xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.6 }}
+              initial={{ opacity: 0, y: 20, scale: 0.9 }}
+              animate={imageInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 20, scale: 0.9 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
             >
-              <img
+              <motion.img
                 src={`${baseUrl}/assets/footer.png`}
                 className="z-50 mx-auto hidden w-full sm:block"
+                initial={{ opacity: 0 }}
+                animate={imageInView ? { opacity: 1 } : { opacity: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
               />
             </motion.div>
-          </div>
+          </motion.div>
         </div>
-        <Paragraph block={{
-          component: COMPONENT_PARAGRAPH,
-          componentProps: {
-            className: 'text-white max-w-[65ch] font-sans',
-            children: (<>
-              <p>Tak hanya Australia, beberapa negara Eropa juga memiliki regulasi soal penggunan media sosial dan platform digital untuk anak-anak. Meski tiap negara memiliki pendekatan yang berbeda, tujuannya tetap sama, yaitu melindungi anak-anak dari risiko dunia digital dan memastikan media sosial digunakan secara bijak sesuai usia pengguna.</p>
-            </>)
-          }
-        }} />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={imageInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+        >
+          <Paragraph block={{
+            component: COMPONENT_PARAGRAPH,
+            componentProps: {
+              className: 'text-white max-w-[65ch] font-sans transition-all duration-500 hover:text-gray-200',
+              children: (<>
+                <p>Tak hanya Australia, beberapa negara Eropa juga memiliki regulasi soal penggunan media sosial dan platform digital untuk anak-anak. Meski tiap negara memiliki pendekatan yang berbeda, tujuannya tetap sama, yaitu melindungi anak-anak dari risiko dunia digital dan memastikan media sosial digunakan secara bijak sesuai usia pengguna.</p>
+              </>)
+            }
+          }} />
+        </motion.div>
       </div>
 
     </motion.div>
