@@ -110,6 +110,7 @@ export function CustomImageB() {
           </motion.div>
         </div>
         <div className="max-w-4xl mx-auto -mt-[6rem] relative mb-0 md:mb-20 lg:mb-28">
+          {/* Mobile */}
           <motion.div
             ref={cardRef}
             className="lg:hidden flex flex-col items-center justify-center mt-10 gap-12"
@@ -128,11 +129,12 @@ export function CustomImageB() {
                 whileHover={{ y: -3, transition: { duration: 0.2, ease: "easeOut" } }}
               >
                 <motion.div
-                  className="absolute right-0 bottom-0 z-10 w-[15rem] md:w-[16rem]"
+                  className="absolute right-0 bottom-0 flex items-center justify-center z-10 w-[15rem] md:w-[16rem]"
                   variants={scaleIn}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
                   <img src={baseUrl + '/assets/2.2.png'} alt="" className="w-full " />
+                  <div className="text-4xl font-bold absolute text-white text-center">5.5jt +</div>
                 </motion.div>
                 <motion.div variants={fadeInLeft} transition={{ duration: 0.5, delay: 0.3 }}>
                   <div className="text-3xl w-[50%] md:w-auto font-bold text-[#ffc600] mt-4 relative z-10">
@@ -157,11 +159,12 @@ export function CustomImageB() {
                 whileHover={{ y: -3, transition: { duration: 0.2, ease: "easeOut" } }}
               >
                 <motion.div
-                  className="absolute right-0 bottom-0 z-10 w-[15rem] md:w-[16rem]"
+                  className="absolute right-0 bottom-0 flex items-center justify-center z-10 w-[15rem] md:w-[16rem]"
                   variants={scaleIn}
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
                   <img src={baseUrl + '/assets/2.3.png'} alt="" className="w-full " />
+                  <div className="text-4xl font-bold absolute text-white text-center">48%</div>
                   <div className="bg-gradient-to-t to-[50%] from-black absolute left-0 right-0 bottom-0 top-0"></div>
                 </motion.div>
                 <motion.div variants={fadeInLeft} transition={{ duration: 0.5, delay: 0.5 }}>
@@ -186,12 +189,13 @@ export function CustomImageB() {
                 whileHover={{ y: -3, transition: { duration: 0.2, ease: "easeOut" } }}
               >
                 <motion.div
-                  className="absolute right-0 bottom-0 z-10 w-[15rem] md:w-[16rem]"
+                  className="absolute right-0 bottom-0 flex items-center justify-center z-10 w-[15rem] md:w-[16rem]"
                   variants={scaleIn}
                   transition={{ duration: 0.5, delay: 0.6 }}
                 >
                   <img src={baseUrl + '/assets/2.4.png'} alt="" className="w-full " />
-                  {/* <div className="bg-gradient-to-t to-[50%] from-black absolute left-0 right-0 bottom-0 top-0"></div> */}
+                  <div className="bg-gradient-to-t to-[80%] from-black/50 absolute left-0 right-0 bottom-0 top-0"></div>
+                  <div className="text-4xl font-bold absolute text-white text-center pt-20">80rb</div>
                 </motion.div>
                 <motion.div variants={fadeInLeft} transition={{ duration: 0.5, delay: 0.7 }}>
                   <div className="text-3xl w-[50%] md:w-auto font-bold text-[#ffc600] mt-4 relative z-10">
@@ -205,162 +209,167 @@ export function CustomImageB() {
               </motion.div>
             </motion.div>
           </motion.div>
+          {/* Desktop */}
           <motion.div
             ref={brandsRef}
-            className="lg:flex hidden items-start gap-6"
+            className="lg:grid hidden grid-cols-3 gap-6 h-full"
             initial="hidden"
             animate={brandsInView ? "visible" : "hidden"}
             variants={staggerContainer}
           >
             <motion.div
-              className="flex-1 flex flex-col items-start relative"
+              className="flex flex-col relative bg-black/20 backdrop-blur-xl hover:bg-black/30 transition-all duration-300"
               variants={fadeInUp}
               transition={{ duration: 0.8 }}
               whileHover={{ y: -6, transition: { duration: 0.2, ease: "easeOut" } }}
             >
               <motion.div
-                className="absolute z-10 left-0 w-full top-[-7rem]"
-                variants={scaleIn}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <img src={baseUrl + '/assets/2.2.png'} alt="" className="h-full" />
-                <motion.div
-                  className="w-full h-full absolute bottom-4 flex items-end justify-center"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                >
-                  <div className="text-4xl font-bold text-white text-center">5.5jt +</div>
-                </motion.div>
-              </motion.div>
-              <motion.div
-                className="space-y-4 px-10 bg-black/20 backdrop-blur-xl h-[38rem] hover:bg-black/30 transition-all duration-300"
+                className="space-y-4 h-full "
                 variants={fadeInUp}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <div className="h-[17rem]"></div>
                 <motion.div
-                  className="text-3xl font-bold text-[#ffc600] mt-4"
-                  variants={fadeInLeft}
-                  transition={{ duration: 0.5, delay: 0.6 }}
+                  className="w-full mt-[-7rem] relative"
+                  variants={scaleIn}
+                  transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  Pornografi anak
+                  <img src={baseUrl + '/assets/2.2.png'} alt="" className="object-fit" />
+                  <motion.div
+                    className="w-full h-full absolute bottom-4 flex items-end justify-center"
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                  >
+                    <div className="text-4xl font-bold text-white text-center">5.5jt +</div>
+                  </motion.div>
                 </motion.div>
-                <motion.div
-                  className="text-white text-2xl font-medium"
-                  variants={fadeInLeft}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                >
-                  Lebih dari
-                  5,5 juta kasus di Indonesia dalam 4 tahun terakhir
-                </motion.div>
-                <motion.div
-                  className="text-white absolute bottom-6"
-                  variants={fadeInUp}
-                  transition={{ duration: 0.5, delay: 1.0 }}
-                >
-                  (data NCMEC)
-                </motion.div>
+                <div className="px-10">
+                  <motion.div
+                    className="text-3xl font-bold text-[#ffc600] mt-4"
+                    variants={fadeInLeft}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                  >
+                    Pornografi anak
+                  </motion.div>
+                  <motion.div
+                    className="text-white text-2xl font-medium pt-2"
+                    variants={fadeInLeft}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                  >
+                    Lebih dari
+                    5,5 juta kasus di Indonesia dalam 4 tahun terakhir
+                  </motion.div>
+                  <motion.div
+                    className="text-white pt-20 pb-6"
+                    variants={fadeInUp}
+                    transition={{ duration: 0.5, delay: 1.0 }}
+                  >
+                    (data NCMEC)
+                  </motion.div>
+                </div>
               </motion.div>
             </motion.div>
             <motion.div
-              className="flex-1 flex flex-col items-start relative"
+              className="flex h-full flex-col relative bg-black/20 backdrop-blur-xl hover:bg-black/30 transition-all duration-300"
               variants={fadeInUp}
               transition={{ duration: 0.8, delay: 0.2 }}
               whileHover={{ y: -6, transition: { duration: 0.2, ease: "easeOut" } }}
             >
               <motion.div
-                className="absolute z-10 left-0 w-full top-[-7rem]"
-                variants={scaleIn}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                <img src={baseUrl + '/assets/2.3.png'} alt="" className="h-full" />
-                <motion.div
-                  className="w-full h-full absolute bottom-4 flex items-end justify-center"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 1.0 }}
-                >
-                  <div className="text-4xl font-bold text-white text-center">48%</div>
-                </motion.div>
-              </motion.div>
-              <motion.div
-                className="space-y-4 px-10 bg-black/20 backdrop-blur-xl h-[38rem] hover:bg-black/30 transition-all duration-300"
+                className="space-y-4 h-full "
                 variants={fadeInUp}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <div className="h-[17rem]"></div>
                 <motion.div
-                  className="text-3xl font-bold text-[#ffc600] mt-4"
-                  variants={fadeInLeft}
-                  transition={{ duration: 0.5, delay: 0.8 }}
+                  className="w-full mt-[-7rem] relative"
+                  variants={scaleIn}
+                  transition={{ duration: 0.6, delay: 0.4 }}
                 >
-                  Perundungan daring
+                  <img src={baseUrl + '/assets/2.3.png'} alt="" className="object-fit" />
+                  <motion.div
+                    className="w-full h-full absolute bottom-4 flex items-end justify-center"
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 1.0 }}
+                  >
+                    <div className="text-4xl font-bold text-white text-center">48%</div>
+                  </motion.div>
                 </motion.div>
-                <motion.div
-                  className="text-white text-2xl font-medium"
-                  variants={fadeInLeft}
-                  transition={{ duration: 0.5, delay: 1.0 }}
-                >
-                  anak-anak di Indonesia pernah mengalami
-                </motion.div>
-                <motion.div
-                  className="text-white absolute bottom-6"
-                  variants={fadeInUp}
-                  transition={{ duration: 0.5, delay: 1.2 }}
-                >
-                  (data NCMEC)
-                </motion.div>
+                <div className="px-10">
+                  <motion.div
+                    className="text-3xl font-bold text-[#ffc600] mt-4"
+                    variants={fadeInLeft}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                  >
+                    Perundungan daring
+                  </motion.div>
+                  <motion.div
+                    className="text-white text-2xl font-medium pt-2"
+                    variants={fadeInLeft}
+                    transition={{ duration: 0.5, delay: 1.0 }}
+                  >
+                    anak-anak di Indonesia pernah mengalami
+                  </motion.div>
+                  <motion.div
+                    className="text-white pt-20 pb-6"
+                    variants={fadeInUp}
+                    transition={{ duration: 0.5, delay: 1.2 }}
+                  >
+                    (data NCMEC)
+                  </motion.div>
+                </div>
               </motion.div>
             </motion.div>
             <motion.div
-              className="flex-1 flex flex-col items-start relative"
+              className="flex flex-col relative bg-black/20 backdrop-blur-xl hover:bg-black/30 transition-all duration-300"
               variants={fadeInUp}
               transition={{ duration: 0.8, delay: 0.4 }}
               whileHover={{ y: -6, transition: { duration: 0.2, ease: "easeOut" } }}
             >
+
               <motion.div
-                className="absolute z-10 left-0 w-full top-[-7rem]"
-                variants={scaleIn}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
-                <img src={baseUrl + '/assets/2.4.png'} alt="" className="h-full" />
-                <motion.div
-                  className="w-full h-full absolute bottom-4 flex items-end justify-center"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 1.2 }}
-                >
-                  <div className="text-4xl font-bold text-white text-center">80rb</div>
-                </motion.div>
-              </motion.div>
-              <motion.div
-                className="space-y-4 px-10 bg-black/20 backdrop-blur-xl h-[38rem] hover:bg-black/30 transition-all duration-300"
+                className="space-y-4 h-full"
                 variants={fadeInUp}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                <div className="h-[17rem]"></div>
                 <motion.div
-                  className="text-3xl font-bold text-[#ffc600] mt-4"
-                  variants={fadeInLeft}
-                  transition={{ duration: 0.5, delay: 1.0 }}
+                  className="w-full mt-[-7rem] relative"
+                  variants={scaleIn}
+                  transition={{ duration: 0.6, delay: 0.6 }}
                 >
-                  Judi online
+                  <img src={baseUrl + '/assets/2.4.png'} alt="" className="object-fit" />
+                  <motion.div
+                    className="w-full h-full absolute bottom-4 flex items-end justify-center"
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 1.2 }}
+                  >
+                    <div className="text-4xl font-bold text-white text-center">80rb</div>
+                  </motion.div>
                 </motion.div>
-                <motion.div
-                  className="text-white text-2xl font-medium pt-8"
-                  variants={fadeInLeft}
-                  transition={{ duration: 0.5, delay: 1.2 }}
-                >
-                  anak usia di bawah 10 tahun terpapar judi online
-                </motion.div>
-                <motion.div
-                  className="text-white absolute bottom-6"
-                  variants={fadeInUp}
-                  transition={{ duration: 0.5, delay: 1.4 }}
-                >
-                  (data Kemkomdigi)
-                </motion.div>
+                <div className="px-10">
+                  <motion.div
+                    className="text-3xl font-bold text-[#ffc600] mt-4"
+                    variants={fadeInLeft}
+                    transition={{ duration: 0.5, delay: 1.0 }}
+                  >
+                    Judi online
+                  </motion.div>
+                  <motion.div
+                    className="text-white text-2xl font-medium pt-10"
+                    variants={fadeInLeft}
+                    transition={{ duration: 0.5, delay: 1.2 }}
+                  >
+                    anak usia di bawah 10 tahun terpapar judi online
+                  </motion.div>
+                  <motion.div
+                    className="text-white pt-20 pb-6"
+                    variants={fadeInUp}
+                    transition={{ duration: 0.5, delay: 1.4 }}
+                  >
+                    (data Kemkomdigi)
+                  </motion.div>
+                </div>
               </motion.div>
             </motion.div>
           </motion.div>
