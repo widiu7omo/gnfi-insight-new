@@ -7,19 +7,11 @@ export function CustomImageE() {
   const heroRef = useRef(null);
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
-  const rolesRef = useRef(null);
-  const cardsRef = useRef(null);
-  const imageRef = useRef(null);
-  const quoteRef = useRef(null);
   const questionRef = useRef(null);
 
   const heroInView = useInView(heroRef, { once: true });
   const titleInView = useInView(titleRef, { once: true });
   const subtitleInView = useInView(subtitleRef, { once: true });
-  const rolesInView = useInView(rolesRef, { once: true });
-  const cardsInView = useInView(cardsRef, { once: true });
-  const imageInView = useInView(imageRef, { once: true });
-  const quoteInView = useInView(quoteRef, { once: true });
   const questionInView = useInView(questionRef, { once: true });
 
   const [displayedText, setDisplayedText] = useState("");
@@ -72,40 +64,40 @@ export function CustomImageE() {
           >
             Mimpi Indonesia sejak Lama
           </motion.div>
-          <div className="h-[20rem]" />
+          <div className="md:h-[20rem]" />
           <div className="w-full">
-            <div className="flex items-end bg-[#93010d] w-full rounded-t-[2.5rem]">
-              <img src={baseUrl + '/assets/4.2.png'} alt="SBY" className="w-1/2 left-0 absolute" />
-              <div className="w-1/2" />
-              <div className="text-white text-2xl font-bold flex-1 pt-10 pb-20">Mulai direncanakan pada era Presiden SBY</div>
+            <div className="flex flex-col md:flex-row md:items-end bg-[#93010d] w-full rounded-t-md md:rounded-t-[2.5rem] relative">
+              <img src={baseUrl + '/assets/4.2.png'} alt="SBY" className="w-auto h-[7rem] md:h-auto md:w-1/2 right-0 md:right-auto left-auto md:left-0 bottom-0 absolute" />
+              <div className="w-full md:w-1/2" />
+              <div className="md:px-0 px-4 text-white text-xl md:text-2xl font-bold flex-1 pt-4 md:pt-10 xs:pb-20 pb-28">Mulai direncanakan pada era Presiden SBY</div>
             </div>
-            <div className="flex items-end bg-[#202020] px-8">
-              <div className="text-white text-2xl flex-1 py-8 pb-20">
-                <div className="font-bold">Mulai direncanakan pada era Presiden SBY</div>
-                <div className="mt-2 font-base">tetapi Jepang mundur dari proyek</div>
+            <div className="flex flex-col md:flex-row md:items-end bg-[#202020] px-4 md:px-8 relative">
+              <div className="text-white text-xl md:text-2xl flex-1 py-4 md:py-8 !pb-16">
+                <div className="font-bold">Perencanaan berlanjut hingga era Presiden Jokowi,</div>
+                <div className="mt-2 font-base md:text-2xl text-base sm:pr-0 pr-20">tetapi Jepang mundur dari proyek</div>
               </div>
-              <img src={baseUrl + '/assets/4.3.png'} alt="Jokowi" className="w-[30%] right-0 absolute" />
-              <div className="w-[30%]" />
+              <img src={baseUrl + '/assets/4.3.png'} alt="Jokowi" className="w-auto h-[7rem] md:h-auto md:w-[30%] right-0 absolute bottom-0" />
+              <div className="w-[35%] md:w-[30%]" />
             </div>
-            <div className="flex items-end bg-[#dfdfdf] px-8 rounded-b-[2.5rem] overflow-clip">
-              <img src={baseUrl + '/assets/4.4.png'} alt="Prabowo" className="w-[50%] left-0 absolute rounded-bl-[2.5rem]" />
+            <div className="flex flex-col md:flex-row md:items-end bg-[#dfdfdf] px-4 md:px-8 rounded-b-md md:rounded-b-[2.5rem] overflow-clip md:overflow-visible relative">
+              <img src={baseUrl + '/assets/4.4.png'} alt="Prabowo" className="xs:w-[35%] sm:w-[50%] hidden xs:block sm:top-20 md:top-auto bottom-0 sm:bottom-auto md:bottom-0 left-0 absolute md:rounded-bl-[2.5rem]" />
               <div className="w-[50%]" />
-              <div className="text-[#202020] text-2xl flex-1 py-8 pb-20">
+              <div className="text-[#202020] text-xl md:text-2xl flex-1 py-4 md:py-8 sm:pb-20">
                 <div className="font-bold">Diminta oleh Presiden Prabowo agar diwujudkan</div>
-                <div className="mt-8 flex space-x-4">
+                <div className="mt-8 flex space-x-4 sm:pt-[3rem] md:ml-0 xs:ml-[35%] ml-0">
                   <div className="font-sora text-[#d70011] text-8xl font-bold">&ldquo;</div>
                   <div>
-                    <div className="text-3xl font-base">Presiden Prabowo Subianto telah memberikan instruksi yang tegas untuk memperluas jalur kereta cepat Jakarta, Bandung hingga Surabaya,</div>
-                    <div className="pt-4 relative">
+                    <div className="text-xl md:text-3xl font-base">Presiden Prabowo Subianto telah memberikan instruksi yang tegas untuk memperluas jalur kereta cepat Jakarta, Bandung hingga Surabaya,</div>
+                    <div className="py-[2rem] relative">
                       <div>
-                        <div className="font-bold">
+                        <div className="text-sm sm:text-base font-bold">
                           Agus Harimurti Yudhoyono (AHY)
                         </div>
-                        <div className="font-normal text-base pt-2">Menteri Koordinator Bidang Infrastruktur
+                        <div className="font-normal text-xs sm:text-base pt-2">Menteri Koordinator Bidang Infrastruktur
                           dan Pembangunan Kewilayahan
                         </div>
                       </div>
-                      <img src={baseUrl + '/assets/4.5.png'} alt="AHY" className="absolute left-[-9rem] top-[-2rem] w-[40%]" />
+                      <img src={baseUrl + '/assets/4.5.png'} alt="AHY" className="absolute left-[-4.5rem] top-[0.5rem] sm:left-[-5rem] md:left-[-9rem] sm:top-[1rem] md:top-[-1.5rem] w-[25%] sm:w-[20%] md:w-[40%]" />
                     </div>
                   </div>
                 </div>

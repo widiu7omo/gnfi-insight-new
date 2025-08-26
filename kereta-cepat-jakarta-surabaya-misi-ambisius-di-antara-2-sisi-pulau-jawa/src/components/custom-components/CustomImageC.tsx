@@ -10,43 +10,42 @@ export function CustomImageC() {
 
   return (
     <motion.div
-      className="relative flex font-sora flex-col items-center overflow-hidden bg-[center_top_-65rem] bg-gradient-to-b from-black to-[80%] to-[#070419] bg-no-repeat pb-20 pt-[5rem]"
+      className="relative flex font-sora flex-col items-center overflow-hidden bg-[center_top_-75rem] md:bg-[center_top_-65rem] bg-gradient-to-b from-black to-[80%] to-[#070419] bg-no-repeat md:pb-20 pt-4 md:pt-[5rem]"
       style={{ backgroundImage: `url("${baseUrl}/assets/3.1.jpg")` }}
     >
       <div className="absolute h-[10rem] w-full top-0 bg-gradient-to-b from-[#f6fafe]"></div>
       <div className="absolute h-[30rem] z-0 w-full bottom-0 bg-gradient-to-t from-[#353748]"></div>
-      <div className="max-w-4xl mx-auto pb-12">
-        <div className="text-6xl font-bold text-center pb-20 leading-[1.25]">Kereta Cepat Jakarta-Surabaya Calon Moda Transportasi <span className="px-1 bg-[#fcd3d8] rounded-xl">Andalan Baru?</span>
-        </div>
-        <div className="h-[40rem]"></div>
-        <div className="bg-[#f9e2e1] rounded-t-[2rem] p-16 pb-20">
-          <div className="flex relative">
-            <div className="flex-1 flex absolute left-0 w-1/2">
-              <div className="text-2xl text-gray-900 font-medium">Jawa Timur adalah pasar potensial  bagi kereta cepat Jakarta-Surabaya. Tingginya arus mudik
+      <div className="max-w-4xl mx-auto pb-0 sm:pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-center pb-10 sm:pb-16 lg:pb-20 !leading-[1.25] relative z-10">Kereta Cepat Jakarta-Surabaya Calon Moda Transportasi <span className="px-1 bg-[#fcd3d8] rounded-xl">Andalan Baru?</span></div>
+        <div className="h-[20rem] sm:h-[30rem] lg:h-[40rem]"></div>
+        <div className="bg-[#f9e2e1] rounded-t-[2rem] p-4 sm:p-8 lg:p-16 pb-8 sm:pb-12 lg:pb-20">
+          <div className="flex flex-col lg:flex-row relative">
+            <div className="flex-1 lg:absolute lg:left-0 lg:w-1/2 mb-6 lg:mb-0">
+              <div className="text-lg sm:text-xl lg:text-2xl text-gray-900 font-medium">Jawa Timur adalah pasar potensial  bagi kereta cepat Jakarta-Surabaya. Tingginya arus mudik
                 ke sana adalah salah satu buktinya</div>
             </div>
-            <div className="absolute left-0 bottom-0 text-lg font-bold text-gray-700">Sumber: Kemenhub</div>
-            <div className="pl-28">
-              <img src={baseUrl + '/assets/3.2.png'} className="" alt="Bar Chart" />
+            <div className="text-sm sm:text-base lg:text-lg font-bold text-gray-700 mb-4 lg:absolute lg:left-0 lg:bottom-0">Sumber: Kemenhub</div>
+            <div className="lg:pl-28">
+              <img src={baseUrl + '/assets/3.2.png'} className="w-full max-w-md mx-auto lg:max-w-none" alt="Bar Chart" />
             </div>
           </div>
         </div>
-        <div className="bg-[#ffb1b6] rounded-[2rem] p-16 -mt-8 relative z-10">
-          <div className="flex relative">
-            <div className="flex-1 flex absolute left-0 w-1/2">
-              <div className="text-2xl text-gray-900 font-medium">Tak hanya mudik,
+        <div className="bg-[#ffb1b6] rounded-[2rem] p-4 sm:p-8 lg:p-16 -mt-4 sm:-mt-6 lg:-mt-8 relative z-10">
+          <div className="flex flex-col lg:flex-row relative">
+            <div className="flex-1 lg:absolute lg:left-0 lg:w-1/2 mb-6 lg:mb-0">
+              <div className="text-lg sm:text-xl lg:text-2xl text-gray-900 font-medium">Tak hanya mudik,
                 masyarakat bisa pula menggunakan kereta cepat untuk keperluan bisnis dan wisata
                 seperti halnya Whoosh</div>
             </div>
-            <div className="absolute left-0 bottom-20 text-lg font-bold text-gray-700">Sumber: Populix</div>
-            <div className="pl-28">
-              <img src={baseUrl + '/assets/3.3.png'} className="pt-20" alt="Bar Chart" />
+            <div className="text-sm sm:text-base lg:text-lg font-bold text-gray-700 mb-4 lg:absolute lg:left-0 lg:bottom-20">Sumber: Populix</div>
+            <div className="lg:pl-28">
+              <img src={baseUrl + '/assets/3.3.png'} className="pt-4 sm:pt-8 lg:pt-20 w-full max-w-md mx-auto lg:max-w-none" alt="Bar Chart" />
             </div>
           </div>
         </div>
       </div>
       <div
-        className="absolute bottom-0 pt-10 z-50 mx-auto max-w-4xl"
+        className="absolute bottom-0 hidden md:block pt-10 z-50 mx-auto max-w-4xl"
       >
         <motion.img
           src={`${baseUrl}/assets/footer.png`}
