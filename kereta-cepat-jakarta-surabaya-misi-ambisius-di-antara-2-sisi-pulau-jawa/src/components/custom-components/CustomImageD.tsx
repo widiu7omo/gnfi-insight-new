@@ -17,11 +17,8 @@ export function CustomImageD() {
   const imageInView = useInView(imageRef, { once: true });
 
   return (
-    <motion.div
+    <div
       className="relative flex flex-col items-center overflow-hidden font-sora bg-black"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
     >
       <div
         className="relative w-full justify-center bg-cover bg-top pt-6 md:pt-20 "
@@ -49,44 +46,147 @@ export function CustomImageD() {
               Jakarta-Surabaya,<br />
               Awas Malah Rugi!
             </motion.div>
-            <div className="flex flex-col md:flex-row lg:space-x-4 space-y-4 lg:space-y-0 pt-12 -mb-12 lg:-mb-24">
-              <div className="flex-1 order-2 lg:order-1">
+            <motion.div
+              ref={quotesRef}
+              className="flex flex-col md:flex-row lg:space-x-4 space-y-4 lg:space-y-0 pt-12 -mb-12 lg:-mb-24"
+              initial={{ opacity: 0, y: 30 }}
+              animate={quotesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+            >
+              <motion.div
+                className="flex-1 order-2 lg:order-1"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={quotesInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.7, delay: 0.9 }}
+              >
                 <img src={baseUrl + '/assets/5.2.png'} alt="People" className="w-full h-auto" />
-              </div>
-              <div className="flex-1 text-white order-1 lg:order-2">
+              </motion.div>
+              <motion.div
+                className="flex-1 text-white order-1 lg:order-2"
+                initial={{ opacity: 0, x: -20 }}
+                animate={quotesInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+              >
                 <div className="text-lg sm:text-xl lg:text-2xl">Pengamat transportasi sekaligus Wakil Ketua Pemberdayaan dan Pengembangan Wilayah Masyarakat Transportasi Indonesia (MTI) Pusat, Djoko Setijowarno,</div>
                 <div className="text-lg sm:text-xl lg:text-2xl font-bold mt-4">mengingatkan 2 potensi kerugian akibat kereta cepat Jakarta-Surabaya.</div>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 z-10 bg-no-repeat bg-cover relative p-4 sm:p-8 md:p-20 rounded-[2rem] md:rounded-[4rem]" style={{ backgroundImage: `url(${baseUrl}/assets/5.3.png)` }}>
-              <div className="flex-1 bg-[#5dd6f1] overflow-visible h-auto rounded-[1.5rem] lg:rounded-[2.5rem]">
-                <div className="p-4 sm:p-6 lg:p-8 pb-4 bg-[#88e6fb] rounded-t-[1.5rem] lg:rounded-t-[2.5rem]">
-                  <img src={baseUrl + '/assets/5.5.png'} alt="Plane" className="-mt-8 lg:-mt-16 h-[150px] sm:h-[200px] lg:h-[265px] object-cover overflow-visible mx-auto" />
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold">1.</div>
-                  <div className="text-base sm:text-lg lg:text-xl font-medium">
+              </motion.div>
+            </motion.div>
+            <motion.div
+              ref={bottomSectionRef}
+              className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 z-10 bg-no-repeat bg-cover relative p-4 sm:p-8 md:p-20 rounded-[2rem] md:rounded-[4rem]"
+              style={{ backgroundImage: `url(${baseUrl}/assets/5.3.png)` }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={bottomSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, delay: .7, ease: [0.25, 0.46, 0.45, 0.94] }}
+            >
+              <motion.div
+                className="flex-1 bg-[#5dd6f1] overflow-visible h-auto rounded-[1.5rem] lg:rounded-[2.5rem]"
+                initial={{ opacity: 0, x: -30, rotateY: -15 }}
+                animate={bottomSectionInView ? { opacity: 1, x: 0, rotateY: 0 } : { opacity: 0, x: -30, rotateY: -15 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+              >
+                <motion.div
+                  className="p-4 sm:p-6 lg:p-8 pb-4 bg-[#88e6fb] rounded-t-[1.5rem] lg:rounded-t-[2.5rem]"
+                  initial={{ backgroundColor: "#5dd6f1" }}
+                  animate={bottomSectionInView ? { backgroundColor: "#88e6fb" } : { backgroundColor: "#5dd6f1" }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                >
+                  <motion.img
+                    src={baseUrl + '/assets/5.5.png'}
+                    alt="Plane"
+                    className="-mt-8 lg:-mt-16 h-[150px] sm:h-[200px] lg:h-[265px] object-cover overflow-visible mx-auto"
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={bottomSectionInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
+                    transition={{ duration: 0.6, delay: 0.7, type: "spring", stiffness: 100 }}
+                  />
+                  <motion.div
+                    className="text-2xl sm:text-3xl lg:text-4xl font-bold"
+                    initial={{ opacity: 0 }}
+                    animate={bottomSectionInView ? { opacity: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 0.9 }}
+                  >1.</motion.div>
+                  <motion.div
+                    className="text-base sm:text-lg lg:text-xl font-medium"
+                    initial={{ opacity: 0 }}
+                    animate={bottomSectionInView ? { opacity: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 1 }}
+                  >
                     Investasi di sektor transportasi udara sia-sia karena pasarnya direbut kereta cepat
-                  </div>
-                </div>
-                <div className="p-4 sm:p-6 lg:p-8 pt-4 text-base sm:text-lg lg:text-xl rounded-b-[1.5rem] lg:rounded-b-[2.5rem] h-auto">
-                  "Kira-kira apa sudah BEP? Coba dipikirkan. Tapi kalau belum BEP perlu dipikirkan siapa yang menanggung kerugian"</div>
-              </div>
-              <div className="flex-1 bg-[#5dd6f1] rounded-[1.5rem] lg:rounded-[2.5rem]">
-                <div className="p-4 sm:p-6 lg:p-8 pb-4 bg-[#88e6fb] rounded-t-[1.5rem] lg:rounded-t-[2.5rem]">
-                  <img src={baseUrl + '/assets/5.4.png'} alt="Wallet" className="-mt-8 lg:-mt-16 h-[150px] sm:h-[200px] lg:h-[265px] w-[100px] sm:w-[150px] lg:w-[200px] mx-auto" />
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold">2.</div>
-                  <div className="text-base sm:text-lg lg:text-xl font-medium">
+                  </motion.div>
+                </motion.div>
+                <motion.div
+                  className="p-4 sm:p-6 lg:p-8 pt-4 text-base sm:text-lg lg:text-xl rounded-b-[1.5rem] lg:rounded-b-[2.5rem] h-auto"
+                  initial={{ opacity: 0 }}
+                  animate={bottomSectionInView ? { opacity: 1 } : { opacity: 0 }}
+                  transition={{ duration: 0.5, delay: 1.1 }}
+                >
+                  "Kira-kira apa sudah BEP? Coba dipikirkan. Tapi kalau belum BEP perlu dipikirkan siapa yang menanggung kerugian"
+                </motion.div>
+              </motion.div>
+              <motion.div
+                className="flex-1 bg-[#5dd6f1] rounded-[1.5rem] lg:rounded-[2.5rem]"
+                initial={{ opacity: 0, x: 30, rotateY: 15 }}
+                animate={bottomSectionInView ? { opacity: 1, x: 0, rotateY: 0 } : { opacity: 0, x: 30, rotateY: 15 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+              >
+                <motion.div
+                  className="p-4 sm:p-6 lg:p-8 pb-4 bg-[#88e6fb] rounded-t-[1.5rem] lg:rounded-t-[2.5rem]"
+                  initial={{ backgroundColor: "#5dd6f1" }}
+                  animate={bottomSectionInView ? { backgroundColor: "#88e6fb" } : { backgroundColor: "#5dd6f1" }}
+                  transition={{ duration: 0.5, delay: 0.9 }}
+                >
+                  <motion.img
+                    src={baseUrl + '/assets/5.4.png'}
+                    alt="Wallet"
+                    className="-mt-8 lg:-mt-16 h-[150px] sm:h-[200px] lg:h-[265px] w-[100px] sm:w-[150px] lg:w-[200px] mx-auto"
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={bottomSectionInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
+                    transition={{ duration: 0.6, delay: 0.8, type: "spring", stiffness: 100 }}
+                  />
+                  <motion.div
+                    className="text-2xl sm:text-3xl lg:text-4xl font-bold"
+                    initial={{ opacity: 0 }}
+                    animate={bottomSectionInView ? { opacity: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 1 }}
+                  >2.</motion.div>
+                  <motion.div
+                    className="text-base sm:text-lg lg:text-xl font-medium"
+                    initial={{ opacity: 0 }}
+                    animate={bottomSectionInView ? { opacity: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 1.1 }}
+                  >
                     Penggunaan uang negara seperti di proyek kereta cepat Jakarta - Bandung terulang
-                  </div>
-                </div>
-                <div className="p-4 sm:p-6 lg:p-8 pt-4 text-base sm:text-lg lg:text-xl rounded-b-[1.5rem] lg:rounded-b-[2.5rem]">
+                  </motion.div>
+                </motion.div>
+                <motion.div
+                  className="p-4 sm:p-6 lg:p-8 pt-4 text-base sm:text-lg lg:text-xl rounded-b-[1.5rem] lg:rounded-b-[2.5rem]"
+                  initial={{ opacity: 0 }}
+                  animate={bottomSectionInView ? { opacity: 1 } : { opacity: 0 }}
+                  transition={{ duration: 0.5, delay: 1.2 }}
+                >
                   Jangan menggunakan APBN, jangan gunakan PMN. Ada perusahaan yang sampai kolaps
-                  (Wijaya Karya). Sebentar lagi mau di-<i>merger</i> karena kereta cepat.</div>
-              </div>
-              <img src={baseUrl + '/assets/5.7.png'} alt="Train" className="absolute object-cover top-0 left-0 right-0 !m-0 hidden lg:block" />
-            </div>
+                  (Wijaya Karya). Sebentar lagi mau di-<i>merger</i> karena kereta cepat.
+                </motion.div>
+              </motion.div>
+              <motion.img
+                ref={imageRef}
+                src={baseUrl + '/assets/5.7.png'}
+                alt="Train"
+                className="absolute object-cover top-0 left-0 right-0 !m-0 hidden lg:block"
+                initial={{ opacity: 0, x: 100, y: 100, scale: 0.7 }}
+                animate={imageInView ? { opacity: 1, x: 0, y: 0, scale: 1 } : { opacity: 0, x: 100, y: 100, scale: 0.7 }}
+                transition={{
+                  duration: 1.2,
+                  delay: 0.2,
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 15
+                }}
+              />
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 }
