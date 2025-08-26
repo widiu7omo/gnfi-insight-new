@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              PP Tunas, Upaya Melindungi Anak-anak Indonesia di Dunia Digital
+              Kereta Cepat Jakarta-Surabaya, Misi Ambisius di antara 2 Sisi Pulau Jawa
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Mengenal PP Tunas: Mengapa dan Untuk Apa Dibuat?
+              Kereta Cepat Jakarta-Surabaya, Bukan Wacana Baru
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Seberapa Berbahaya Ruang Digital untuk Anak-anak?
+              Potret Jalur Jakarta-Surabaya Kini
             </a>
           </li>
           <li
@@ -73,7 +73,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              PP Tunas Bukan Hal Baru, Negara Lain Sudah Duluan
+              Kereta Karya Anak Bangsa
             </a>
           </li>
           <li
@@ -81,7 +81,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-5">
-              Usia Ideal Anak untuk Bermedia Sosial, Apakah PP Tunas Sudah Pas?
+              Seberapa Digemari Kereta Cepat yang Ada Saat Ini?
             </a>
           </li>
           <li
@@ -89,7 +89,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-6">
-              Ada PP Tunas, Orang Tua Tetap Berperan Penting
+              Kereta Cepat Jakarta-Surabaya: Prestisius, tapi Awas Rugi
             </a>
           </li>
         </ul>
