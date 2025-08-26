@@ -13,6 +13,8 @@ export function CustomImageC() {
       className="relative flex font-sora flex-col items-center overflow-hidden bg-[center_top_-65rem] bg-gradient-to-b from-black to-[80%] to-[#070419] bg-no-repeat pb-20 pt-[5rem]"
       style={{ backgroundImage: `url("${baseUrl}/assets/3.1.jpg")` }}
     >
+      <div className="absolute h-[10rem] w-full top-0 bg-gradient-to-b from-[#f6fafe]"></div>
+      <div className="absolute h-[30rem] z-0 w-full bottom-0 bg-gradient-to-t from-[#353748]"></div>
       <div className="max-w-4xl mx-auto pb-12">
         <div className="text-6xl font-bold text-center pb-20 leading-[1.25]">Kereta Cepat Jakarta-Surabaya Calon Moda Transportasi <span className="px-1 bg-[#fcd3d8] rounded-xl">Andalan Baru?</span>
         </div>
@@ -29,7 +31,7 @@ export function CustomImageC() {
             </div>
           </div>
         </div>
-        <div className="bg-[#ffb1b6] rounded-[2rem] p-16 -mt-8">
+        <div className="bg-[#ffb1b6] rounded-[2rem] p-16 -mt-8 relative z-10">
           <div className="flex relative">
             <div className="flex-1 flex absolute left-0 w-1/2">
               <div className="text-2xl text-gray-900 font-medium">Tak hanya mudik,
