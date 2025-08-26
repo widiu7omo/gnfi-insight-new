@@ -10,7 +10,7 @@ export function CustomImageB() {
   const landRef = useRef(null);
   const airRef = useRef(null);
   const seaRef = useRef(null);
-  
+
   // InView states for animations
   const titleInView = useInView(titleRef, { once: true });
   const mapInView = useInView(mapRef, { once: true });
@@ -19,39 +19,6 @@ export function CustomImageB() {
   const seaInView = useInView(seaRef, { once: true });
 
   // Component for displaying vehicle transportation options with responsive design
-  function VehicleItem({ name, time, price, image }: { name: string, time: string, price: string, image: string }): ReactNode {
-    return <motion.div 
-      className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-    >
-      <motion.img 
-        src={baseUrl + '/assets/' + image} 
-        alt={name} 
-        className="w-full sm:w-[30%] lg:w-[25%] object-contain" 
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-      />
-      <motion.div 
-        className="flex flex-col items-start space-y-2"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-      >
-        <div className="text-lg sm:text-xl lg:text-2xl font-semibold">{name}</div>
-        <div className="flex items-center space-x-2">
-          <img src={baseUrl + '/assets/clock.svg'} alt="Clock Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-          <div className="text-sm sm:text-lg lg:text-xl font-medium">{time}</div>
-        </div>
-        <div className="flex items-center space-x-2">
-          <img src={baseUrl + '/assets/wallet.svg'} alt="Wallet Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-          <div className="text-sm sm:text-lg lg:text-xl font-medium">{price}</div>
-        </div>
-      </motion.div>
-    </motion.div>
-  }
 
   return (
     <motion.div
@@ -62,7 +29,7 @@ export function CustomImageB() {
     >
       <div className="absolute rounded-full top-[50%] h-full w-full bg-[#7b090a]"></div>
       <div className="max-w-4xl mx-auto md:pb-12 px-4">
-        <motion.div 
+        <motion.div
           ref={titleRef}
           className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-[#ad1618] pb-12 sm:pb-16 lg:pb-20"
           initial={{ opacity: 0, y: -20 }}
@@ -71,29 +38,29 @@ export function CustomImageB() {
         >
           Jakarta-Surabaya, Bisa Ditempuh Pakai Apa?
         </motion.div>
-        <motion.img 
+        <motion.img
           ref={mapRef}
-          src={`${baseUrl}/assets/2.1.png`} 
-          alt="Java" 
-          className="relative z-10 w-full" 
+          src={`${baseUrl}/assets/2.1.png`}
+          alt="Java"
+          className="relative z-10 w-full"
           initial={{ opacity: 0, y: 20 }}
           animate={mapInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         />
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mx-0 sm:mx-8 lg:mx-16 -mt-12 sm:-mt-16 lg:-mt-20"
           initial={{ opacity: 0 }}
           animate={mapInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         >
-          <motion.div 
+          <motion.div
             ref={landRef}
             className="md:col-span-2 bg-white shadow-xl shadow-black/5 rounded-2xl p-4 sm:p-6 lg:p-8 space-y-4 sm:space-y-6 pt-8 sm:pt-10 relative"
             initial={{ opacity: 0, y: 30 }}
             animate={landInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
           >
-            <motion.div 
+            <motion.div
               className="absolute top-[-1.5rem] left-[0] px-4 sm:px-6 tracking-wide py-2 text-lg sm:text-xl font-bold text-white bg-red-600 rounded-2xl border-4 border-white"
               initial={{ opacity: 0, x: -20 }}
               animate={landInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
@@ -101,18 +68,111 @@ export function CustomImageB() {
             >
               Via Darat
             </motion.div>
-            <VehicleItem name="Kendaraan Pribadi" image='2.2.png' time="10-12 jam" price="Rp 1,2-1,3 juta (estimasi)" />
-            <VehicleItem name="Bus" image="2.3.png" time="10-12 jam" price="Rp 280 ribu - Rp 625 ribu" />
-            <VehicleItem name="Kereta" image="2.4.png" time="7 jam 45 menit - 12 jam 8 menit" price="Rp 104 ribu - Rp 2 jutaan" />
+            { /* Kendaraan Pribadi */}
+            <motion.div
+              className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <motion.img
+                src={`${baseUrl}/assets/2.2.png`}
+                alt="Kendaraan Pribadi"
+                className="w-full sm:w-[30%] lg:w-[25%] object-contain"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              />
+              <motion.div
+                className="flex flex-col items-start space-y-2"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+              >
+                <div className="text-lg sm:text-xl lg:text-2xl font-semibold">Kendaraan Pribadi</div>
+                <div className="flex items-center space-x-2">
+                  <img src={baseUrl + '/assets/clock.svg'} alt="Clock Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <div className="text-sm sm:text-lg lg:text-xl font-medium">10-12 jam</div>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <img src={baseUrl + '/assets/wallet.svg'} alt="Wallet Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <div className="text-sm sm:text-lg lg:text-xl font-medium">Rp 1,2-1,3 juta (estimasi)</div>
+                </div>
+              </motion.div>
+            </motion.div>
+            {/* Bus */}
+            <motion.div
+              className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <motion.img
+                src={`${baseUrl}/assets/2.3.png`}
+                alt="Bus"
+                className="w-full sm:w-[30%] lg:w-[25%] object-contain"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              />
+              <motion.div
+                className="flex flex-col items-start space-y-2"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+              >
+                <div className="text-lg sm:text-xl lg:text-2xl font-semibold">Bus</div>
+                <div className="flex items-center space-x-2">
+                  <img src={baseUrl + '/assets/clock.svg'} alt="Clock Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <div className="text-sm sm:text-lg lg:text-xl font-medium">10-12 jam</div>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <img src={baseUrl + '/assets/wallet.svg'} alt="Wallet Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <div className="text-sm sm:text-lg lg:text-xl font-medium">Rp 280 ribu - Rp 625 ribu</div>
+                </div>
+              </motion.div>
+            </motion.div>
+            {/* Kereta */}
+            <motion.div
+              className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <motion.img
+                src={`${baseUrl}/assets/2.4.png`}
+                alt="Kereta"
+                className="w-full sm:w-[30%] lg:w-[25%] object-contain"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              />
+              <motion.div
+                className="flex flex-col items-start space-y-2"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+              >
+                <div className="text-lg sm:text-xl lg:text-2xl font-semibold">Kereta</div>
+                <div className="flex items-center space-x-2">
+                  <img src={baseUrl + '/assets/clock.svg'} alt="Clock Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <div className="text-sm sm:text-lg lg:text-xl font-medium">7 jam 45 menit - 12 jam 8 menit</div>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <img src={baseUrl + '/assets/wallet.svg'} alt="Wallet Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <div className="text-sm sm:text-lg lg:text-xl font-medium">Rp 104 ribu - Rp 2 jutaan</div>
+                </div>
+              </motion.div>
+            </motion.div>
           </motion.div>
-          <motion.div 
+          <motion.div
             ref={airRef}
             className="bg-white mt-4 sm:mt-6 shadow-xl shadow-black/5 rounded-2xl space-y-4 sm:space-y-6 pt-8 sm:pt-10 relative"
             initial={{ opacity: 0, y: 30 }}
             animate={airInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
           >
-            <motion.div 
+            <motion.div
               className="absolute top-[-1.5rem] left-[0] px-4 sm:px-6 tracking-wide py-2 text-lg sm:text-xl font-bold text-white bg-[#102e50] rounded-2xl border-4 border-white"
               initial={{ opacity: 0, x: -20 }}
               animate={airInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
@@ -120,15 +180,15 @@ export function CustomImageB() {
             >
               Via Udara
             </motion.div>
-            <motion.img 
-              src={`${baseUrl}/assets/2.5.png`} 
-              alt="Plane" 
-              className="scale-90 sm:scale-100 lg:scale-110 w-full object-contain" 
+            <motion.img
+              src={`${baseUrl}/assets/2.5.png`}
+              alt="Plane"
+              className="scale-90 sm:scale-100 lg:scale-110 w-full object-contain"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={airInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
             />
-            <motion.div 
+            <motion.div
               className="p-4 sm:p-6 lg:p-8"
               initial={{ opacity: 0, y: 20 }}
               animate={airInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -146,14 +206,14 @@ export function CustomImageB() {
               </div>
             </motion.div>
           </motion.div>
-          <motion.div 
+          <motion.div
             ref={seaRef}
             className="bg-white mt-4 sm:mt-6 shadow-xl shadow-black/5 rounded-2xl pt-[0.5rem] relative"
             initial={{ opacity: 0, y: 30 }}
             animate={seaInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
           >
-            <motion.div 
+            <motion.div
               className="absolute z-10 top-[-1.5rem] left-[0] px-4 sm:px-6 tracking-wide py-2 text-lg sm:text-xl font-bold text-white bg-[#56b4ba] rounded-2xl border-4 border-white"
               initial={{ opacity: 0, x: -20 }}
               animate={seaInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
@@ -161,15 +221,15 @@ export function CustomImageB() {
             >
               Via Laut
             </motion.div>
-            <motion.img 
-              src={`${baseUrl}/assets/2.6.png`} 
-              alt="Ship" 
-              className="scale-90 sm:scale-100 lg:scale-110 w-full object-contain" 
+            <motion.img
+              src={`${baseUrl}/assets/2.6.png`}
+              alt="Ship"
+              className="scale-90 sm:scale-100 lg:scale-110 w-full object-contain"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={seaInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.8, delay: 1.1, ease: "easeOut" }}
             />
-            <motion.div 
+            <motion.div
               className="p-4 sm:p-6 lg:p-8"
               initial={{ opacity: 0, y: 20 }}
               animate={seaInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
