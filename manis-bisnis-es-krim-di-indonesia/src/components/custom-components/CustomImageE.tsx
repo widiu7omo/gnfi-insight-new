@@ -1,168 +1,118 @@
 "use client";
 import { baseUrl } from "@/constants/meta";
 import { motion, useInView } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
 
 export function CustomImageE() {
-  const heroRef = useRef(null);
-  const titleRef = useRef(null);
-  const subtitleRef = useRef(null);
-  const questionRef = useRef(null);
-
-  const heroInView = useInView(heroRef, { once: true });
-  const titleInView = useInView(titleRef, { once: true });
-  const subtitleInView = useInView(subtitleRef, { once: true });
-
   return (
-    <motion.div
-      className="relative flex flex-col noise2 items-center overflow-hidden font-sora bg-no-repeat bg-[center_top_0%] bg-cover"
-      style={{ backgroundImage: `url(${baseUrl + '/assets/4.1.png'})` }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-    >
-      <motion.div
-        ref={heroRef}
-        className="mx-auto max-w-4xl w-full py-12 relative mb-12"
-        initial={{ opacity: 0, y: 20 }}
-        animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+    <div className="relative flex flex-col items-center overflow-hidden">
+      <div
+        className="relative w-full justify-center bg-cover bg-[#8C2327] bg-center pt-16 md:pt-24"
       >
-        <div className="space-y-4 px-4 lg:px-0 w-full">
-          <motion.div
-            ref={titleRef}
-            className="font-bold text-white text-4xl sm:text-5xl lg:text-7xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          >
-            Kereta Cepat <br />
-            Jakarta-Surabaya,
-          </motion.div>
-          <motion.div
-            ref={subtitleRef}
-            className="font-bold px-3 py-1 bg-white w-fit text-2xl sm:text-3xl lg:text-4xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={subtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          >
-            Mimpi Indonesia sejak Lama
-          </motion.div>
-          <div className="md:h-[20rem]" />
-          <motion.div
-            className="w-full"
-            initial={{ opacity: 0, y: 30 }}
-            animate={subtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-          >
-            <div className="flex flex-col md:flex-row md:items-end bg-[#93010d] w-full rounded-t-md md:rounded-t-[2.5rem] relative">
-              <motion.img
-                src={baseUrl + '/assets/4.2.png'}
-                alt="SBY"
-                className="w-auto h-[7rem] md:h-auto md:w-1/2 right-0 md:right-auto left-auto md:left-0 bottom-0 absolute"
-                initial={{ opacity: 0, x: -20 }}
-                animate={subtitleInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
-              />
-              <div className="w-full md:w-1/2" />
-              <motion.div
-                className="md:px-0 px-4 text-white text-xl md:text-2xl font-bold flex-1 pt-4 md:pt-10 xs:pb-20 pb-28"
-                initial={{ opacity: 0, y: 10 }}
-                animate={subtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
-              >
-                Mulai direncanakan pada era Presiden SBY
-              </motion.div>
-            </div>
-            <div className="flex flex-col md:flex-row md:items-end bg-[#202020] px-4 md:px-8 relative">
-              <motion.div
-                className="text-white text-xl md:text-2xl flex-1 py-4 md:py-8 !pb-16"
-                initial={{ opacity: 0, y: 10 }}
-                animate={subtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-              >
-                <div className="font-bold">Perencanaan berlanjut hingga era Presiden Jokowi,</div>
-                <div className="mt-2 font-base md:text-2xl text-base sm:pr-0 pr-20">tetapi Jepang mundur dari proyek</div>
-              </motion.div>
-              <motion.img
-                src={baseUrl + '/assets/4.3.png'}
-                alt="Jokowi"
-                className="w-auto h-[7rem] md:h-auto md:w-[30%] right-0 absolute bottom-0"
-                initial={{ opacity: 0, x: 20 }}
-                animate={subtitleInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-                transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-              />
-              <div className="w-[35%] md:w-[30%]" />
-            </div>
-            <div className="flex flex-col md:flex-row md:items-end bg-[#dfdfdf] px-4 md:px-8 rounded-b-md md:rounded-b-[2.5rem] overflow-clip md:overflow-visible relative">
-              <motion.img
-                src={baseUrl + '/assets/4.4.png'}
-                alt="Prabowo"
-                className="xs:w-[35%] sm:w-[50%] hidden xs:block sm:top-20 md:top-auto bottom-0 sm:bottom-auto md:bottom-0 left-0 absolute md:rounded-bl-[2.5rem]"
-                initial={{ opacity: 0, y: 20 }}
-                animate={subtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
-              />
-              <div className="w-[50%]" />
-              <motion.div
-                className="text-[#202020] text-xl md:text-2xl flex-1 py-4 md:py-8 sm:pb-20"
-                initial={{ opacity: 0, y: 10 }}
-                animate={subtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
-              >
-                <div className="font-bold">Diminta oleh Presiden Prabowo agar diwujudkan</div>
-                <motion.div
-                  className="mt-8 flex space-x-4 sm:pt-[3rem] md:ml-0 xs:ml-[35%] ml-0"
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={subtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                  transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-                >
-                  <div className="font-sora text-[#d70011] text-8xl font-bold">&ldquo;</div>
-                  <div>
-                    <div className="text-xl md:text-3xl font-base">Presiden Prabowo Subianto telah memberikan instruksi yang tegas untuk memperluas jalur kereta cepat Jakarta, Bandung hingga Surabaya,</div>
-                    <div className="py-[2rem] relative">
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={subtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                        transition={{ duration: 0.8, delay: 1.1, ease: "easeOut" }}
-                      >
-                        <div className="text-sm sm:text-base font-bold">
-                          Agus Harimurti Yudhoyono (AHY)
-                        </div>
-                        <div className="font-normal text-xs sm:text-base pt-2">Menteri Koordinator Bidang Infrastruktur
-                          dan Pembangunan Kewilayahan
-                        </div>
-                      </motion.div>
-                      <motion.img
-                        src={baseUrl + '/assets/4.5.png'}
-                        alt="AHY"
-                        className="absolute left-[-4.5rem] top-[0.5rem] sm:left-[-5rem] md:left-[-9rem] sm:top-[1rem] md:top-[-1.5rem] w-[25%] sm:w-[20%] md:w-[40%]"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={subtitleInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                        transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-                      />
-                    </div>
-                  </div>
-                </motion.div>
-              </motion.div>
-            </div>
-          </motion.div>
+        <div className="flex justify-center">
+          <img
+            src={`${baseUrl}/assets/5.1.png`}
+            alt="Hero Image"
+            className="z-0 absolute max-w-4xl w-full object-contain"
+          />
         </div>
-      </motion.div>
-      <motion.div
-        className="absolute bottom-0 z-50 mx-auto max-w-4xl"
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-      >
-        <motion.img
-          src={`${baseUrl}/assets/footer.png`}
-          className="z-50 mx-auto hidden w-full sm:block"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        />
-      </motion.div>
-    </motion.div>
+        <div className="z-10 relative mx-auto max-w-4xl items-center px-4 lg:px-0">
+          <motion.h3
+            initial={{ opacity: 0, scale: 0.9, y: 10 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="w-2/3 text-left font-sora text-[2rem] font-bold leading-normal text-white md:w-2/3 md:text-[3rem] lg:text-[5rem]"
+          >
+            Proyeksi <br />Es Krim di<br /> Indonesia
+          </motion.h3>
+          <motion.p
+            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0, duration: 0.6 }}
+            className="mb-2 mt-4 w-1/2 max-w-2xl text-left font-sora text-base text-white md:mt-32 lg:mt-48 md:w-2/5 md:text-3xl"
+          >
+            Menurut laporan Research and Markets (2025), nilai pasar es krim Indonesia pada tahun 2024 diperkirakan mencapai
+          </motion.p>
+          <motion.h4
+            initial={{ opacity: 0, scale: 0.9, y: 10 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="w-2/3 text-left font-sora text-[1.5rem] font-semibold text-white md:w-2/3 md:text-[48px] lg:text-[64px]"
+          >
+            US$1,015 <br />miliar
+          </motion.h4>
+          <motion.p
+            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0, duration: 0.6 }}
+            className="mb-8 w-full max-w-3xl text-left font-sora text-base font-semibold text-white md:mb-32 lg:mb-12 md:w-1/2 md:text-3xl"
+          >
+            (sekitar Rp16 triliun).
+          </motion.p>
+          <motion.div
+            className="ml-auto items-center bg-[#C50007] py-2 lg:py-4 md:w-[50%] rounded-[2rem] lg:rounded-[3rem]"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, ease: "backOut" }}
+          >
+            <p className="text-base text-white lg:text-3xl p-4 lg:p-8 pb-[5rem] lg:pb-[9.5rem]">
+              Angka itu diproyeksikan melonjak menjadi US$1,628 miliar pada 2033,
+              dengan laju pertumbuhan rata-rata (CAGR) sekitar
+            </p>
+          </motion.div>
+
+          <div className="ml-auto items-center md:w-[50%]">
+            <motion.div
+              className="bg-white p-4 lg:p-8 text-black rounded-[1.5rem] lg:rounded-[3rem] -top-14 relative text-[1.5rem] lg:text-6xl font-extrabold text-[#C50007] lg:-top-32 lg:p-12 lg:text-[5rem] lg:text-[4rem] font-bold"
+              initial={{ opacity: 0, scale: 0.8, y: 50 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, ease: "backOut" }}
+            >
+              <p>
+                5,4%
+                <span className="inline lg:hidden"> per tahun.</span>
+                <span className="hidden lg:inline">
+                  <br />
+                  per tahun.
+                </span>
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+      <div className="relative -mt-24 lg:-mt-44 w-full bg-[#F0E4E8] rounded-t-[7rem] px-4 pt-12 md:pt-10 lg:pt-24">
+        <div className="mx-auto max-w-4xl flex text-black text-left font-sora text-lg md:text-2xl space-y-6 md:space-y-12">
+          <motion.img
+            viewport={{ once: true }}
+            initial={{ opacity: 0, x: -50, scale: 0.8 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1.1 }}
+            transition={{ duration: 0.8, ease: "backOut" }}
+            src={`${baseUrl}/assets/5.2.png`}
+            alt="Es Krim"
+            className="relative z-10 h-full object-cover lg:h-auto w-1/3 md:w-2/5 pr-8 -ml-4 lg:-ml-8 mt-0 md:-mt-[10rem] lg:-mt-[20rem]"
+          />
+          <motion.p className="relative -top-[2rem] md:-top-[4rem] lg:-top-[8rem] md:ml-10 pt-4 md:pt-10 text-base md:text-xl md:text-2xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}>
+            Artinya, dalam waktu kurang dari 10 tahun, pasar es krim Indonesia bisa
+            membesar hampir dua kali lipat.
+          </motion.p>
+        </div>
+
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl">
+          <img
+            src={`${baseUrl}/assets/footer.png`}
+            className="mx-auto hidden w-full invert sm:block"
+            alt="Footer"
+          />
+        </div>
+      </div>
+    </div>
   );
 }
