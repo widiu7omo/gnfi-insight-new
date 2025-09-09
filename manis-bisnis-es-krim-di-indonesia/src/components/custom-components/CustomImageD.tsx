@@ -12,24 +12,25 @@ export function CustomImageD() {
       >
         <div className="space-y-10 md:space-y-24 pb-10 md:pb-10">
           <div className="space-y-6">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: 30 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
+            <motion.h3
+              initial={{ opacity: 0, scale: 0.9, y: 10 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              viewport={{ once: true }}
               className="text-center text-5xl md:text-9xl font-black text-white px-4 md:px-0"
             >
               Ice Cream <br /> War!
-            </motion.div>
-
+            </motion.h3>
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0, duration: 0.6 }}
               className="text-center"
             >
               <p className="bg-[#0006FF] text-white text-lg md:text-3xl mx-auto font-bold inline-block px-4 py-2">
                 Persaingan Produk Lokal Vs Impor
-              </p>
+              </p>          
             </motion.div>
           </div>
           <div className="z-1 relative mx-auto max-w-4xl md:px-12 px-4 space-y-16 md:space-y-32 pt-1 md:pt-12">

@@ -81,7 +81,6 @@ export function CustomImageB() {
           </div>
           <div className="z-1 relative mx-auto max-w-4xl md:px-12 px-4">
             <div className="flex w-full flex-col md:flex-row-reverse text-center items-stretch">
-              {/* Image kanan (karena row-reverse) */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -96,7 +95,6 @@ export function CustomImageB() {
                 />
               </motion.div>
 
-              {/* Konten kiri */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -136,8 +134,6 @@ export function CustomImageB() {
                   Avocadocano menjadi salah satu menu andalan di kedai es krim
                   kebanggan kota pahlawan tersebut.
                 </motion.p>
-
-                {/* Overlay image */}
                 <motion.img
                   src={`/assets/2.8.png`}
                   alt="Overlay"
@@ -203,7 +199,6 @@ export function CustomImageB() {
               viewport={{ once: true }}
               className="flex w-full flex-col md:flex-row-reverse text-center items-stretch"
             >
-              {/* Gambar */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -217,8 +212,6 @@ export function CustomImageB() {
                   className="h-96 w-full rounded-3xl md:w-full md:h-full object-cover"
                 />
               </motion.div>
-
-              {/* Konten */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -251,7 +244,6 @@ export function CustomImageB() {
             viewport={{ once: true }}
             className="flex w-full flex-col md:flex-row text-center items-stretch"
           >
-            {/* Gambar */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -265,8 +257,6 @@ export function CustomImageB() {
                 className="h-96 w-full rounded-3xl md:w-full md:h-full object-cover"
               />
             </motion.div>
-
-            {/* Konten */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}

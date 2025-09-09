@@ -85,8 +85,8 @@ export function CustomImageE() {
           </div>
         </div>
       </div>
-      <div className="relative -mt-24 lg:-mt-44 w-full bg-[#F0E4E8] rounded-t-[7rem] px-4 pt-12 md:pt-10 lg:pt-24">
-        <div className="mx-auto max-w-4xl flex text-black text-left font-sora text-lg md:text-2xl space-y-6 md:space-y-12">
+      <div className="relative -mt-20 lg:-mt-44 w-full bg-[#F0E4E8] rounded-t-[7rem] px-4 pt-12 md:pt-10 lg:pt-24">
+        <div className="mx-auto max-w-4xl flex text-black text-left font-sora text-lg md:text-2xl space-y-0 md:space-y-12">
           <motion.img
             viewport={{ once: true }}
             initial={{ opacity: 0, x: -50, scale: 0.8 }}
@@ -94,9 +94,9 @@ export function CustomImageE() {
             transition={{ duration: 0.8, ease: "backOut" }}
             src={`${baseUrl}/assets/5.2.png`}
             alt="Es Krim"
-            className="relative z-10 h-full object-cover lg:h-auto w-1/3 md:w-2/5 pr-8 -ml-4 lg:-ml-8 mt-0 md:-mt-[10rem] lg:-mt-[20rem]"
+            className="relative z-10 object-contain lg:h-auto w-1/3 md:w-2/5 pr-8 -ml-4 lg:-ml-8 mt-0 md:-mt-[10rem] lg:-mt-[20rem]"
           />
-          <motion.p className="relative -top-[2rem] md:-top-[4rem] lg:-top-[8rem] md:ml-10 pt-4 md:pt-10 text-base md:text-xl md:text-2xl"
+          <motion.p className="relative -top-[5%] md:-top-[4rem] lg:-top-[6rem] md:ml-10 pt-4 md:pt-10 text-base md:text-xl md:text-2xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}>
