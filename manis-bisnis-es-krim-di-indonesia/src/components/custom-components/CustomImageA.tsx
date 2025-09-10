@@ -1,6 +1,6 @@
 "use client";
 import { baseUrl } from "@/constants/meta";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 /**
@@ -9,18 +9,20 @@ import { useRef } from "react";
  */
 export function CustomImageA() {
   // Refs for scroll animations
-  const heroRef = useRef(null);
+  const heroRef = useRef<HTMLDivElement | null>(null);
   const titleRef = useRef(null);
-  const infoBoxRef = useRef(null);
-  const roadmapRef = useRef(null);
+  const infoBoxRef = useRef<HTMLDivElement | null>(null);
 
   // InView states for animations
   const heroInView = useInView(heroRef, { once: true });
   const titleInView = useInView(titleRef, { once: true });
   const infoBoxInView = useInView(infoBoxRef, { once: true });
-  const roadmapInView = useInView(roadmapRef, { once: true });
+
+  // Parallax for the large background image section
+  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
 
   return (<motion.div
+    ref={heroRef}
     className="relative overflow-clip font-sora bg-[#ffffff] pt-6 sm:pt-10 md:pt-20"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
@@ -53,21 +55,53 @@ export function CustomImageA() {
         </motion.p>
       </motion.div>
     </div>
-    <div className="relative max-w-4xl mx-auto">
-      <img src={baseUrl + '/assets/1.1.png'} alt="People with ice cream" className="h-full" />
-    </div>
-    <div className="relative">
-      <img src={baseUrl + '/assets/1.2.png'} alt="Background pink" className="w-full -mt-[35%] sm:-mt-[26%] md:-mt-[20%] xl:-mt-[12%] relative z-0 md:h-[50rem] xl:h-[70rem] object-cover object-top" />
+    <motion.div
+      className="relative max-w-4xl mx-auto"
+      initial={{ opacity: 0, y: 30, scale: 0.98 }}
+      animate={heroInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <motion.img
+        src={baseUrl + '/assets/1.1.png'}
+        alt="People with ice cream"
+        className="h-full"
+        initial={{ filter: "blur(6px)" }}
+        animate={{ filter: "blur(0px)" }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+      />
+    </motion.div>
+    <div className="relative" ref={infoBoxRef}>
+      <motion.img
+        src={baseUrl + '/assets/1.2.png'}
+        alt="Background pink"
+        className="w-full -mt-[35%] sm:-mt-[26%] md:-mt-[20%] xl:-mt-[12%] relative z-0 md:h-[50rem] xl:h-[70rem] object-cover object-top"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      />
       <div className="absolute inset-0 flex items-end justify-end md:justify-center">
         <div className="max-w-full sm:max-w-4xl md:mx-auto xl:w-auto w-full px-4 sm:px-6 md:px-8 lg:px-0 relative">
-          <div className="bg-[#1410ff] w-[280px] md:w-[350px] pr-4 md:pr-8 py-6 md:py-10 pl-12 xl:pl-20 text-white absolute bottom-0 xl:bottom-[10rem] right-0 xl:-right-[4rem] h-fit z-0">
+          <motion.div
+            className="bg-[#1410ff] w-[280px] md:w-[350px] pr-4 md:pr-8 py-6 md:py-10 pl-12 xl:pl-20 text-white absolute bottom-0 xl:bottom-[10rem] right-0 xl:-right-[4rem] h-fit z-0"
+            initial={{ opacity: 0, x: 40 }}
+            animate={infoBoxInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+          >
             <p className="text-sm xs:text-sm sm:text-lg xl:text-xl font-medium">
               Dibukanya peternakan sapi perah di beberapa daerah sejuk
               di Indonesia contohnya Bogor, Bandung, dan Malang turut berperan menghadirkan si dingin nan manis ini
               di meja penikmatnya.
             </p>
-          </div>
-          <img src={baseUrl + '/assets/1.3.png'} alt="Ice Cream" className="bottom-0 -left-20 md:left-0 h-[20rem] xs:h-[28rem] sm:h-[32rem] md:h-[50rem] xl:h-auto relative z-10" />
+          </motion.div>
+          <motion.img
+            src={baseUrl + '/assets/1.3.png'}
+            alt="Ice Cream"
+            className="bottom-0 -left-20 md:left-0 h-[20rem] xs:h-[28rem] sm:h-[32rem] md:h-[50rem] xl:h-auto relative z-10"
+            initial={{ opacity: 0, x: -40, rotate: -2 }}
+            animate={infoBoxInView ? { opacity: 1, x: 0, rotate: 0 } : {}}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            whileHover={{ y: -6, rotate: -1 }}
+          />
         </div>
       </div>
     </div>
