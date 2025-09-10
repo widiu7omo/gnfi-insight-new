@@ -1,271 +1,287 @@
 "use client";
+
 import { baseUrl } from "@/constants/meta";
-import { motion, useInView } from "framer-motion";
-import { useState, useEffect, useRef, ReactNode } from "react";
+import { motion } from "framer-motion";
 
 export function CustomImageB() {
-  // Refs for scroll animations
-  const titleRef = useRef(null);
-  const mapRef = useRef(null);
-  const landRef = useRef(null);
-  const airRef = useRef(null);
-  const seaRef = useRef(null);
-
-  // InView states for animations
-  const titleInView = useInView(titleRef, { once: true });
-  const mapInView = useInView(mapRef, { once: true });
-  const landInView = useInView(landRef, { once: true });
-  const airInView = useInView(airRef, { once: true });
-  const seaInView = useInView(seaRef, { once: true });
-
-  // Component for displaying vehicle transportation options with responsive design
-
   return (
-    <motion.div
-      className="relative flex flex-col font-sora items-center overflow-hidden bg-cover bg-[#f0eada] pb-0 py-10 md:py-20"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-    >
-      <div className="absolute rounded-full top-[50%] h-full w-full bg-[#7b090a]"></div>
-      <div className="max-w-4xl mx-auto md:pb-12 px-4">
-        <motion.div
-          ref={titleRef}
-          className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-[#ad1618] pb-12 sm:pb-16 lg:pb-20"
-          initial={{ opacity: 0, y: -20 }}
-          animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          Jakarta-Surabaya, Bisa Ditempuh Pakai Apa?
-        </motion.div>
-        <motion.img
-          ref={mapRef}
-          src={`${baseUrl}/assets/2.1.png`}
-          alt="Java"
-          className="relative z-10 w-full"
-          initial={{ opacity: 0, y: 20 }}
-          animate={mapInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        />
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mx-0 sm:mx-8 lg:mx-16 -mt-12 sm:-mt-16 lg:-mt-20"
-          initial={{ opacity: 0 }}
-          animate={mapInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-        >
-          <motion.div
-            ref={landRef}
-            className="md:col-span-2 bg-white shadow-xl shadow-black/5 rounded-2xl p-4 sm:p-6 lg:p-8 space-y-4 sm:space-y-6 pt-8 sm:pt-10 relative"
-            initial={{ opacity: 0, y: 30 }}
-            animate={landInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          >
-            <motion.div
-              className="absolute top-[-1.5rem] left-[0] px-4 sm:px-6 tracking-wide py-2 text-lg sm:text-xl font-bold text-white bg-red-600 rounded-2xl border-4 border-white"
-              initial={{ opacity: 0, x: -20 }}
-              animate={landInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            >
-              Via Darat
-            </motion.div>
-            { /* Kendaraan Pribadi */}
-            <motion.div
-              className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <motion.img
-                src={`${baseUrl}/assets/2.2.png`}
-                alt="Kendaraan Pribadi"
-                className="w-full sm:w-[30%] lg:w-[25%] object-contain"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              />
-              <motion.div
-                className="flex flex-col items-start space-y-2"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              >
-                <div className="text-lg sm:text-xl lg:text-2xl font-semibold">Kendaraan Pribadi</div>
-                <div className="flex items-center space-x-2">
-                  <img src={baseUrl + '/assets/clock.svg'} alt="Clock Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <div className="text-sm sm:text-lg lg:text-xl font-medium">10-12 jam</div>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <img src={baseUrl + '/assets/wallet.svg'} alt="Wallet Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <div className="text-sm sm:text-lg lg:text-xl font-medium">Rp 1,2-1,3 juta (estimasi)</div>
-                </div>
-              </motion.div>
-            </motion.div>
-            {/* Bus */}
-            <motion.div
-              className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <motion.img
-                src={`${baseUrl}/assets/2.3.png`}
-                alt="Bus"
-                className="w-full sm:w-[30%] lg:w-[25%] object-contain"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              />
-              <motion.div
-                className="flex flex-col items-start space-y-2"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              >
-                <div className="text-lg sm:text-xl lg:text-2xl font-semibold">Bus</div>
-                <div className="flex items-center space-x-2">
-                  <img src={baseUrl + '/assets/clock.svg'} alt="Clock Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <div className="text-sm sm:text-lg lg:text-xl font-medium">10-12 jam</div>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <img src={baseUrl + '/assets/wallet.svg'} alt="Wallet Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <div className="text-sm sm:text-lg lg:text-xl font-medium">Rp 280 ribu - Rp 625 ribu</div>
-                </div>
-              </motion.div>
-            </motion.div>
-            {/* Kereta */}
-            <motion.div
-              className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <motion.img
-                src={`${baseUrl}/assets/2.4.png`}
-                alt="Kereta"
-                className="w-full sm:w-[30%] lg:w-[25%] object-contain"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              />
-              <motion.div
-                className="flex flex-col items-start space-y-2"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              >
-                <div className="text-lg sm:text-xl lg:text-2xl font-semibold">Kereta</div>
-                <div className="flex items-center space-x-2">
-                  <img src={baseUrl + '/assets/clock.svg'} alt="Clock Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <div className="text-sm sm:text-lg lg:text-xl font-medium">7 jam 45 menit - 12 jam 8 menit</div>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <img src={baseUrl + '/assets/wallet.svg'} alt="Wallet Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <div className="text-sm sm:text-lg lg:text-xl font-medium">Rp 104 ribu - Rp 2 jutaan</div>
-                </div>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-          <motion.div
-            ref={airRef}
-            className="bg-white mt-4 sm:mt-6 shadow-xl shadow-black/5 rounded-2xl space-y-4 sm:space-y-6 pt-8 sm:pt-10 relative"
-            initial={{ opacity: 0, y: 30 }}
-            animate={airInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
-          >
-            <motion.div
-              className="absolute top-[-1.5rem] left-[0] px-4 sm:px-6 tracking-wide py-2 text-lg sm:text-xl font-bold text-white bg-[#102e50] rounded-2xl border-4 border-white"
-              initial={{ opacity: 0, x: -20 }}
-              animate={airInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-              transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-            >
-              Via Udara
-            </motion.div>
-            <motion.img
-              src={`${baseUrl}/assets/2.5.png`}
-              alt="Plane"
-              className="scale-90 sm:scale-100 lg:scale-110 w-full object-contain"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={airInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
-            />
-            <motion.div
-              className="p-4 sm:p-6 lg:p-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={airInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-            >
-              <div className="flex flex-col items-start space-y-2">
-                <div className="flex items-center space-x-2">
-                  <img src={baseUrl + '/assets/clock.svg'} alt="Clock Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <div className="text-sm sm:text-lg lg:text-xl font-medium">1.5 jam</div>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <img src={baseUrl + '/assets/wallet.svg'} alt="Wallet Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <div className="text-sm sm:text-lg lg:text-xl font-medium">Mulai Rp967 ribu</div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-          <motion.div
-            ref={seaRef}
-            className="bg-white mt-4 sm:mt-6 shadow-xl shadow-black/5 rounded-2xl pt-[0.5rem] relative"
-            initial={{ opacity: 0, y: 30 }}
-            animate={seaInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
-          >
-            <motion.div
-              className="absolute z-10 top-[-1.5rem] left-[0] px-4 sm:px-6 tracking-wide py-2 text-lg sm:text-xl font-bold text-white bg-[#56b4ba] rounded-2xl border-4 border-white"
-              initial={{ opacity: 0, x: -20 }}
-              animate={seaInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-              transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-            >
-              Via Laut
-            </motion.div>
-            <motion.img
-              src={`${baseUrl}/assets/2.6.png`}
-              alt="Ship"
-              className="scale-90 sm:scale-100 lg:scale-110 w-full object-contain"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={seaInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.8, delay: 1.1, ease: "easeOut" }}
-            />
-            <motion.div
-              className="p-4 sm:p-6 lg:p-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={seaInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
-            >
-              <div className="flex flex-col items-start space-y-2">
-                <div className="flex items-center space-x-2">
-                  <img src={baseUrl + '/assets/clock.svg'} alt="Clock Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <div className="text-sm sm:text-lg lg:text-xl font-medium">1 hari</div>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <img src={baseUrl + '/assets/wallet.svg'} alt="Wallet Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <div className="text-sm sm:text-lg lg:text-xl font-medium">
-                    Rp 300 ribuan <br />
-                    <small className="text-xs sm:text-sm lg:text-base font-normal">(kapal Pelni kelas ekonomi)</small>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        </motion.div>
-      </div>
-      <motion.div
-        className="absolute bottom-0 hidden md:block pt-10 z-50 mx-auto max-w-4xl"
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+    <div className="relative flex flex-col items-center overflow-hidden">
+      <div
+        className="relative w-full justify-center bg-cover bg-center pb-12 pt-16 md:pb-[8rem] md:pt-24 xl:pb-24"
+        style={{ backgroundImage: `url(${baseUrl}/assets/2.1.png)` }}
       >
-        <motion.img
+        <div className="absolute left-0 top-0 h-[30%] w-full bg-gradient-to-b from-[#B52874]" />
+        <div className="space-y-14 md:space-y-24">
+          <div className="z-1 relative mx-auto max-w-4xl md:px-12 px-4">
+            <div className="flex w-full flex-col md:flex-row text-center items-stretch">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="w-full md:w-[45%]"
+              >
+                <img
+                  src={`/assets/2.3.png`}
+                  alt="Ragusa"
+                  className="rounded-tl-3xl rounded-tr-3xl md:rounded-tr-none md:rounded-bl-3xl object-cover md:rounded-tr-none md:rounded-br-none h-96 w-full md:w-full md:h-full"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative w-full md:w-[55%] flex flex-col justify-center text-left text-white bg-[#FE98D9] rounded-tl-none md:rounded-bl-none rounded-bl-3xl md:rounded-tr-3xl rounded-br-3xl px-6 md:px-14 py-8 md:py-12"
+              >
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="text-[36px] md:text-[42px] font-black mb-4 text-[#000BFF]"
+                >
+                  Ragusa
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="mb-4 text-[#2A2A2A] text-lg md:text-xl font-semibold"
+                >
+                  Terletak di bilangan Gambir, Jakarta Pusat. Kedai es krim Ragusa
+                  dikenal sebagai salah satu es krim tertua di Jakarta karena sudah
+                  berdiri sejak 1932.
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="text-[#2A2A2A] text-lg md:text-xl font-semibold"
+                >
+                  Menu andalannya ialah Es Krim Spageti yang pernah masuk dalam jajaran{" "}
+                  <span className="text-[#000BFF]">"100 Most Iconic Ice Creams"</span>{" "}
+                  TasteAtlas.
+                </motion.p>
+                <motion.img
+                  src={`/assets/2.2.png`}
+                  alt="Overlay"
+                  initial={{ scale: 0, rotate: -15, opacity: 0 }}
+                  whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, ease: "backOut", delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="absolute -top-16 md:-top-24 -right-6 w-40 h-40 md:h-[14rem] md:w-[14rem] object-contain"
+                />
+              </motion.div>
+            </div>
+          </div>
+          <div className="z-1 relative mx-auto max-w-4xl md:px-12 px-4">
+            <div className="flex w-full flex-col md:flex-row-reverse text-center items-stretch">
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="w-full md:w-[45%]"
+              >
+                <img
+                  src={`/assets/2.4.png`}
+                  alt="Zangrandi"
+                  className="h-96 w-full rounded-tr-3xl rounded-tl-3xl md:rounded-tl-none md:rounded-br-3xl object-cover md:rounded-tl-none md:rounded-bl-none md:w-full md:h-full"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative w-full md:w-[55%] flex flex-col justify-center text-left text-white bg-[#FE98D9] rounded-tr-none md:rounded-br-none rounded-br-3xl md:rounded-tl-3xl rounded-bl-3xl px-6 md:px-14 py-8 md:py-12"
+              >
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="text-[36px] md:text-[42px] font-black mb-4 text-[#000BFF]"
+                >
+                  Zangrandi
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="mb-4 text-[#2A2A2A] text-lg md:text-xl font-semibold"
+                >
+                  Kedai es krim Zangrandi terletak di Surabaya dan telah eksis sejak
+                  1930. Sudah berusia lebih dari satu abad, Zangrandi tetap
+                  mempertahankan rasa otentik es krimnya.
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="text-[#2A2A2A] text-lg md:text-xl font-semibold"
+                >
+                  Avocadocano menjadi salah satu menu andalan di kedai es krim
+                  kebanggan kota pahlawan tersebut.
+                </motion.p>
+                <motion.img
+                  src={`/assets/2.8.png`}
+                  alt="Overlay"
+                  initial={{ scale: 0, rotate: 10, opacity: 0 }}
+                  whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, ease: "backOut", delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="absolute -top-16 md:-top-24 -right-12 w-40 h-40 md:h-[14rem] md:w-[14rem] object-contain"
+                />
+              </motion.div>
+            </div>
+          </div>
+          <div className="z-1 relative mx-auto max-w-4xl md:px-12 px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="flex w-full flex-col md:flex-row text-center items-stretch"
+            >
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="w-full md:w-[45%]"
+              >
+                <img
+                  src={`${baseUrl}/assets/2.5.png`}
+                  alt="Baltic"
+                  className="h-96 w-full rounded-3xl
+                     md:w-full md:h-full object-cover"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative w-full md:w-[55%] flex flex-col justify-center text-left text-white 
+                   rounded-3xl 
+                   md:rounded-tl-none md:rounded-bl-none 
+                   md:rounded-r-3xl 
+                   px-6 md:px-14 py-4"
+              >
+                <p className="text-[36px] md:text-[42px] font-black mb-4 text-[#000BFF]">Baltic</p>
+                <p className="mb-4 text-[#2A2A2A] text-lg md:text-xl font-semibold">
+                  Tidak jauh dari Ragusa, ada kedai es krim Baltic di Jakarta tepatnya dekat Simpang Senen, Kwitang. <br />
+                  Es krim bikinan Baltic menyesuaikan zaman karena banyak varian rasa favorit gen Z seperti green tea dan peppermint tea.
+                </p>
+                <p className="text-[#2A2A2A] text-lg md:text-xl font-semibold">
+                  Menariknya, Baltic juga mendistribusikan es krimnya di Depok, Tangerang, Bekasi, hingga sebagian wilayah Bogor.
+                </p>
+              </motion.div>
+            </motion.div>
+          </div>
+          <div className="z-1 relative mx-auto max-w-4xl md:px-12 px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="flex w-full flex-col md:flex-row-reverse text-center items-stretch"
+            >
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="w-full md:w-[45%]"
+              >
+                <img
+                  src={`${baseUrl}/assets/2.6.png`}
+                  alt="Tjanang"
+                  className="h-96 w-full rounded-3xl md:w-full md:h-full object-cover"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative w-full md:w-[55%] flex flex-col justify-center text-left text-white 
+                   rounded-tr-none md:rounded-br-none 
+                   rounded-br-3xl md:rounded-tl-3xl 
+                   rounded-bl-3xl px-6 md:px-14 py-4"
+              >
+                <p className="text-[36px] md:text-[42px] font-black mb-4 text-[#000BFF]">Tjanang</p>
+                <p className="mb-4 text-[#2A2A2A] text-lg md:text-xl font-semibold">
+                  Gerai es krim Tjanang berdiri sejak 1950-an di Jakarta. Dulu, Tjanang menjadi salah satu lokasi langganan Presiden Sukarno untuk menikmati hidangan ringan.
+                </p>
+                <p className="text-[#2A2A2A] text-lg md:text-xl font-semibold">
+                  Es krim Tjanang pernah tersaji di meja tamu-tamu negara karena pemerintah pernah memesannya untuk hajatan istimewa, salah satunya GANEFO 1963.
+                </p>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-[#0013FF] w-full pt-20 pb-6 md:py-24 relative">
+        <div className="z-1 relative mx-auto max-w-4xl md:px-12 px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="flex w-full flex-col md:flex-row text-center items-stretch"
+          >
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="w-full md:w-[45%]"
+            >
+              <img
+                src={`${baseUrl}/assets/2.7.png`}
+                alt="Oen"
+                className="h-96 w-full rounded-3xl md:w-full md:h-full object-cover"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative w-full md:w-[55%] flex flex-col justify-center text-left text-white 
+                   rounded-tr-none md:rounded-br-none 
+                   rounded-br-3xl md:rounded-tl-3xl 
+                   rounded-bl-3xl px-6 md:px-14 py-4"
+            >
+              <p className="text-[36px] md:text-[42px] font-black mb-4 text-[#00FF3C]">Oen</p>
+              <p className="mb-4 text-white text-lg md:text-xl font-semibold">
+                Toko Oen adalah restoran keluarga terkemuka di zamannya yang menyajikan hidangan khas Eropa dan Indonesia. Tempat legend ini didirikan oleh Liem Gien Nio-Oma Oen. Oen memiliki empat cabang, yakni Semarang, Malang, Jakarta, dan Surabaya. Namun, yang masih bertahan hingga saat ini adalah Semarang dan Malang. Selain kue-kuean, mereka juga menyajikan es krim sundae yang khas.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
+        <img
           src={`${baseUrl}/assets/footer.png`}
           className="z-50 mx-auto hidden w-full sm:block"
-          initial={{ filter: "blur(4px)" }}
-          animate={{ filter: "blur(0px)" }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        ></motion.img>
-      </motion.div>
-    </motion.div>
+        />
+      </div>
+    </div>
   );
 }

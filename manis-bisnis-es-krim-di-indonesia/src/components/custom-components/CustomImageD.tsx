@@ -1,191 +1,103 @@
 "use client";
+
 import { baseUrl } from "@/constants/meta";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 export function CustomImageD() {
-  const heroRef = useRef(null);
-  const titleRef = useRef(null);
-  const quotesRef = useRef(null);
-  const bottomSectionRef = useRef(null);
-  const imageRef = useRef(null);
-
-  const heroInView = useInView(heroRef, { once: true });
-  const titleInView = useInView(titleRef, { once: true });
-  const quotesInView = useInView(quotesRef, { once: true });
-  const bottomSectionInView = useInView(bottomSectionRef, { once: true });
-  const imageInView = useInView(imageRef, { once: true });
-
   return (
-    <div
-      className="relative flex flex-col items-center overflow-hidden font-sora bg-black"
-    >
+    <div className="relative flex flex-col items-center overflow-hidden">
       <div
-        className="relative w-full justify-center bg-cover bg-top pt-6 md:pt-20 "
-        style={{ backgroundImage: `url(${baseUrl}/assets/5.1.png)` }}
+        className="relative w-full justify-center bg-cover bg-center pb-12 pt-16 md:pb-[8rem] md:pt-24 xl:pb-24"
+        style={{ backgroundImage: `url(${baseUrl}/assets/4.1.png)` }}
       >
-        <div className="absolute bottom-[-2px] w-full h-[30rem] bg-gradient-to-t from-[#01162d]"></div>
-        <motion.div
-          ref={heroRef}
-          className="max-w-4xl mx-auto lg:pb-28 relative z-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-        >
-          <motion.div
-            className="w-full px-4 lg:px-0"
-          >
+        <div className="space-y-10 md:space-y-24 pb-10 md:pb-10">
+          <div className="space-y-6">
+            <motion.h3
+              initial={{ opacity: 0, scale: 0.9, y: 10 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="text-center text-5xl md:text-9xl font-black text-white px-4 md:px-0"
+            >
+              Ice Cream <br /> War!
+            </motion.h3>
             <motion.div
-              ref={titleRef}
-              className="text-4xl sm:text-5xl xl:text-6xl font-extrabold !leading-[1.2] text-center text-white"
+              viewport={{ once: true }}
               initial={{ opacity: 0, y: 20 }}
-              animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0, duration: 0.6 }}
+              className="text-center"
             >
-              Bikin Kereta Cepat <br />
-              Jakarta-Surabaya,<br />
-              Awas Malah Rugi!
+              <p className="bg-[#0006FF] text-white text-lg md:text-3xl mx-auto font-bold inline-block px-4 py-2">
+                Persaingan Produk Lokal Vs Impor
+              </p>          
             </motion.div>
-            <motion.div
-              ref={quotesRef}
-              className="flex flex-col md:flex-row lg:space-x-4 space-y-4 lg:space-y-0 pt-12 -mb-12 lg:-mb-24"
-              initial={{ opacity: 0, y: 30 }}
-              animate={quotesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-            >
+          </div>
+          <div className="z-1 relative mx-auto max-w-4xl md:px-12 px-4 space-y-16 md:space-y-32 pt-1 md:pt-12">
+            <div className="flex w-full flex-row text-center">
               <motion.div
-                className="flex-1 order-2 lg:order-1"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={quotesInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.7, delay: 0.9 }}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+                className="ml-20 relative w-full flex flex-col justify-center text-left text-white bg-[#E35AA7] rounded-3xl pl-14 md:pl-[22rem] pr-6 md:pr-14 py-8 md:py-12"
               >
-                <img src={baseUrl + '/assets/5.2.png'} alt="People" className="w-full h-auto" />
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="mb-4 text-white text-lg md:text-2xl"
+                >
+                  Produk es krim lokal ternyata belum mampu menggoyahkan posisi es krim keluaran perusahaan dari luar negeri yang sudah begitu kuat menancap bisnisnya di Indonesia sejak lama.
+                </motion.p>
+                <motion.img
+                  src={`/assets/4.2.png`}
+                  alt="Overlay"
+                  initial={{ scale: 0, rotate: -15, opacity: 0 }}
+                  whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, ease: "backOut", delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="absolute -bottom-12 -left-24 md:-left-40 w-48 h-48 md:h-[34rem] md:w-[34rem] object-contain"
+                />
               </motion.div>
+            </div>
+            <div className="flex w-full flex-row text-center">
               <motion.div
-                className="flex-1 text-white order-1 lg:order-2"
-                initial={{ opacity: 0, x: -20 }}
-                animate={quotesInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                transition={{ duration: 0.7, delay: 0.5 }}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+                className="mr-20 relative w-full flex flex-col justify-center text-left text-white bg-[#E35AA7] rounded-3xl pr-12 md:pr-[22rem] pl-6 md:pl-14 py-8 md:py-12"
               >
-                <div className="text-lg sm:text-xl lg:text-2xl">Pengamat transportasi sekaligus Wakil Ketua Pemberdayaan dan Pengembangan Wilayah Masyarakat Transportasi Indonesia (MTI) Pusat, Djoko Setijowarno,</div>
-                <div className="text-lg sm:text-xl lg:text-2xl font-bold mt-4">mengingatkan 2 potensi kerugian akibat kereta cepat Jakarta-Surabaya.</div>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="mb-4 text-white text-lg md:text-2xl"
+                >
+                  Meskipun begitu, sejumlah jenama lokal tetap bertahan di panasnya berebut pelanggan lewat makanan dingin ini, di antaranya ialah Campina, Diamond, dan sang legenda Woody.
+                </motion.p>
+                <motion.img
+                  src={`/assets/4.3.png`}
+                  alt="Overlay"
+                  initial={{ scale: 0, rotate: -15, opacity: 0 }}
+                  whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, ease: "backOut", delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="absolute -bottom-12 -right-24 md:-right-40 w-48 h-48 md:h-[34rem] md:w-[34rem] object-contain"
+                />
               </motion.div>
-            </motion.div>
-            <motion.div
-              ref={bottomSectionRef}
-              className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 z-10 bg-no-repeat bg-cover relative p-4 sm:p-8 md:p-20 rounded-[2rem] md:rounded-[4rem]"
-              style={{ backgroundImage: `url(${baseUrl}/assets/5.3.png)` }}
-              initial={{ opacity: 0, y: 50 }}
-              animate={bottomSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, delay: .7, ease: [0.25, 0.46, 0.45, 0.94] }}
-            >
-              <motion.div
-                className="flex-1 bg-[#5dd6f1] overflow-visible h-auto rounded-[1.5rem] lg:rounded-[2.5rem]"
-                initial={{ opacity: 0, x: -30, rotateY: -15 }}
-                animate={bottomSectionInView ? { opacity: 1, x: 0, rotateY: 0 } : { opacity: 0, x: -30, rotateY: -15 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-              >
-                <motion.div
-                  className="p-4 sm:p-6 lg:p-8 pb-4 bg-[#88e6fb] rounded-t-[1.5rem] lg:rounded-t-[2.5rem]"
-                  initial={{ backgroundColor: "#5dd6f1" }}
-                  animate={bottomSectionInView ? { backgroundColor: "#88e6fb" } : { backgroundColor: "#5dd6f1" }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                >
-                  <motion.img
-                    src={baseUrl + '/assets/5.5.png'}
-                    alt="Plane"
-                    className="-mt-8 lg:-mt-16 h-[150px] sm:h-[200px] lg:h-[265px] object-cover overflow-visible mx-auto"
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={bottomSectionInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
-                    transition={{ duration: 0.6, delay: 0.7, type: "spring", stiffness: 100 }}
-                  />
-                  <motion.div
-                    className="text-2xl sm:text-3xl lg:text-4xl font-bold"
-                    initial={{ opacity: 0 }}
-                    animate={bottomSectionInView ? { opacity: 1 } : { opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 0.9 }}
-                  >1.</motion.div>
-                  <motion.div
-                    className="text-base sm:text-lg lg:text-xl font-medium"
-                    initial={{ opacity: 0 }}
-                    animate={bottomSectionInView ? { opacity: 1 } : { opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 1 }}
-                  >
-                    Investasi di sektor transportasi udara sia-sia karena pasarnya direbut kereta cepat
-                  </motion.div>
-                </motion.div>
-                <motion.div
-                  className="p-4 sm:p-6 lg:p-8 pt-4 text-base sm:text-lg lg:text-xl rounded-b-[1.5rem] lg:rounded-b-[2.5rem] h-auto"
-                  initial={{ opacity: 0 }}
-                  animate={bottomSectionInView ? { opacity: 1 } : { opacity: 0 }}
-                  transition={{ duration: 0.5, delay: 1.1 }}
-                >
-                  "Kira-kira apa sudah BEP? Coba dipikirkan. Tapi kalau belum BEP perlu dipikirkan siapa yang menanggung kerugian"
-                </motion.div>
-              </motion.div>
-              <motion.div
-                className="flex-1 bg-[#5dd6f1] rounded-[1.5rem] lg:rounded-[2.5rem]"
-                initial={{ opacity: 0, x: 30, rotateY: 15 }}
-                animate={bottomSectionInView ? { opacity: 1, x: 0, rotateY: 0 } : { opacity: 0, x: 30, rotateY: 15 }}
-                transition={{ duration: 0.7, delay: 0.1 }}
-              >
-                <motion.div
-                  className="p-4 sm:p-6 lg:p-8 pb-4 bg-[#88e6fb] rounded-t-[1.5rem] lg:rounded-t-[2.5rem]"
-                  initial={{ backgroundColor: "#5dd6f1" }}
-                  animate={bottomSectionInView ? { backgroundColor: "#88e6fb" } : { backgroundColor: "#5dd6f1" }}
-                  transition={{ duration: 0.5, delay: 0.9 }}
-                >
-                  <motion.img
-                    src={baseUrl + '/assets/5.4.png'}
-                    alt="Wallet"
-                    className="-mt-8 lg:-mt-16 h-[150px] sm:h-[200px] lg:h-[265px] w-[100px] sm:w-[150px] lg:w-[200px] mx-auto"
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={bottomSectionInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8, type: "spring", stiffness: 100 }}
-                  />
-                  <motion.div
-                    className="text-2xl sm:text-3xl lg:text-4xl font-bold"
-                    initial={{ opacity: 0 }}
-                    animate={bottomSectionInView ? { opacity: 1 } : { opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 1 }}
-                  >2.</motion.div>
-                  <motion.div
-                    className="text-base sm:text-lg lg:text-xl font-medium"
-                    initial={{ opacity: 0 }}
-                    animate={bottomSectionInView ? { opacity: 1 } : { opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 1.1 }}
-                  >
-                    Penggunaan uang negara seperti di proyek kereta cepat Jakarta - Bandung terulang
-                  </motion.div>
-                </motion.div>
-                <motion.div
-                  className="p-4 sm:p-6 lg:p-8 pt-4 text-base sm:text-lg lg:text-xl rounded-b-[1.5rem] lg:rounded-b-[2.5rem]"
-                  initial={{ opacity: 0 }}
-                  animate={bottomSectionInView ? { opacity: 1 } : { opacity: 0 }}
-                  transition={{ duration: 0.5, delay: 1.2 }}
-                >
-                  Jangan menggunakan APBN, jangan gunakan PMN. Ada perusahaan yang sampai kolaps
-                  (Wijaya Karya). Sebentar lagi mau di-<i>merger</i> karena kereta cepat.
-                </motion.div>
-              </motion.div>
-              <motion.img
-                ref={imageRef}
-                src={baseUrl + '/assets/5.7.png'}
-                alt="Train"
-                className="absolute object-cover top-0 left-0 right-0 !m-0 hidden lg:block"
-                initial={{ opacity: 0, x: 100, y: 100, scale: 0.7 }}
-                animate={imageInView ? { opacity: 1, x: 0, y: 0, scale: 1 } : { opacity: 0, x: 100, y: 100, scale: 0.7 }}
-                transition={{
-                  duration: 1.2,
-                  delay: 0.2,
-                  type: "spring",
-                  stiffness: 50,
-                  damping: 15
-                }}
-              />
-            </motion.div>
-          </motion.div>
-        </motion.div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
+        <img
+          src={`${baseUrl}/assets/footer.png`}
+          className="z-50 mx-auto hidden w-full sm:block"
+        />
       </div>
     </div>
   );
