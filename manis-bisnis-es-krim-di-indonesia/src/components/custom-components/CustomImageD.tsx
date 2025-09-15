@@ -52,7 +52,7 @@ export function CustomImageD() {
                   Produk es krim lokal ternyata belum mampu menggoyahkan posisi es krim keluaran perusahaan dari luar negeri yang sudah begitu kuat menancap bisnisnya di Indonesia sejak lama.
                 </motion.p>
                 <motion.img
-                  src={`/assets/4.2.png`}
+                  src={`${baseUrl}/assets/4.2.png`}
                   alt="Overlay"
                   initial={{ scale: 0, rotate: -15, opacity: 0 }}
                   whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
@@ -80,7 +80,7 @@ export function CustomImageD() {
                   Meskipun begitu, sejumlah jenama lokal tetap bertahan di panasnya berebut pelanggan lewat makanan dingin ini, di antaranya ialah Campina, Diamond, dan sang legenda Woody.
                 </motion.p>
                 <motion.img
-                  src={`/assets/4.3.png`}
+                  src={`${baseUrl}/assets/4.3.png`}
                   alt="Overlay"
                   initial={{ scale: 0, rotate: -15, opacity: 0 }}
                   whileInView={{ scale: 1, rotate: 0, opacity: 1 }}

@@ -23,7 +23,7 @@ export function CustomImageB() {
                 className="w-full md:w-[45%]"
               >
                 <img
-                  src={`/assets/2.3.png`}
+                  src={`${baseUrl}/assets/2.3.png`}
                   alt="Ragusa"
                   className="rounded-3xl object-cover h-96 w-full md:w-full md:h-full"
                 />
@@ -69,7 +69,7 @@ export function CustomImageB() {
                   TasteAtlas.
                 </motion.p>
                 <motion.img
-                  src={`/assets/2.2.png`}
+                  src={`${baseUrl}/assets/2.2.png`}
                   alt="Overlay"
                   initial={{ scale: 0, rotate: -15, opacity: 0 }}
                   whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
@@ -110,7 +110,7 @@ export function CustomImageB() {
                 className="w-full md:w-[45%]"
               >
                 <img
-                  src={`/assets/2.4.png`}
+                  src={`${baseUrl}/assets/2.4.png`}
                   alt="Zangrandi"
                   className="h-96 w-full rounded-tr-3xl rounded-tl-3xl md:rounded-tl-none md:rounded-br-3xl object-cover md:rounded-tl-none md:rounded-bl-none md:w-full md:h-full"
                 />
@@ -156,7 +156,7 @@ export function CustomImageB() {
                   kebanggan kota pahlawan tersebut.
                 </motion.p>
                 <motion.img
-                  src={`/assets/2.8.png`}
+                  src={`${baseUrl}/assets/2.8.png`}
                   alt="Overlay"
                   initial={{ scale: 0, rotate: 10, opacity: 0 }}
                   whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
