@@ -29,7 +29,8 @@ export function CustomImageA() {
     transition={{ duration: 0.8, ease: "easeOut" }}
   >
     <div className="absolute inset-0 bg-no-repeat z-40 opacity-15 bg-cover" style={{ backgroundImage: `url(${baseUrl + '/assets/1.0.png'})` }}></div>
-    <div className="max-w-4xl mx-auto w-full relative px-4 sm:px-6 md:px-8 lg:px-0">
+    <div className="absolute h-[20rem] z-40 bg-gradient-to-b from-neutral-50 top-0 w-full"></div>
+    <div className="max-w-4xl mx-auto w-full relative px-4 sm:px-6 md:px-8 lg:px-0 z-40">
       <motion.div
         ref={titleRef}
         className="max-w-xl mx-auto w-full space-y-3 sm:space-y-4 md:space-y-5 py-6 sm:py-10 md:py-20 relative z-30"

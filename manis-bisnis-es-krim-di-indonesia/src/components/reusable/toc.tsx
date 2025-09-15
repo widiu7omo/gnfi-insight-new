@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Kereta Cepat Jakarta-Surabaya, Misi Ambisius di antara 2 Sisi Pulau Jawa
+              Manis Bisnis Es Krim di Indonesia
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Kereta Cepat Jakarta-Surabaya, Bukan Wacana Baru
+              Kedai Es Krim Jadul
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Potret Jalur Jakarta-Surabaya Kini
+              Es Krim ala Indonesia, Kelezatan dalam Keterbatasan
             </a>
           </li>
           <li
@@ -73,7 +73,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              Kereta Karya Anak Bangsa
+              Ice Cream War! Persaingan Produk Lokal Vs Impor
             </a>
           </li>
           <li
@@ -81,7 +81,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-5">
-              Seberapa Digemari Kereta Cepat yang Ada Saat Ini?
+              Merek itu adalah Wall's
             </a>
           </li>
           <li
@@ -89,7 +89,23 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-6">
-              Kereta Cepat Jakarta-Surabaya: Prestisius, tapi Awas Rugi
+              Manis Bisnis Es Krim Terkini
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-7')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-7">
+              Minat Es Krim di Indonesia
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-8')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-8">
+              Proyeksi Es Krim di Indonesia
             </a>
           </li>
         </ul>
