@@ -7,439 +7,207 @@ export function CustomImageC() {
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
       <div
-        className="relative w-full justify-center bg-cover bg-center pb-12 pt-16 md:pb-[8rem] md:pt-24 xl:pb-24"
-        style={{ backgroundImage: `url(${baseUrl}/assets/3.1.png)` }}
+        className="relative w-full justify-center bg-[#F5FAE1] pb-0 pt-16 md:pt-24 xl:pt-24"
       >
-        <div className="z-1 relative mx-auto max-w-4xl space-y-16 md:space-y-32 hidden lg:block">
-          <div className="flex flex-col md:flex-row w-full z-10 space-x-0 md:space-x-10 px-4 md:px-0">
-            <div className="flex flex-col md:w-1/2">
-              <motion.h2
-                className="font-sora text-[#102837] font-bold text-3xl md:text-7xl mb-5 md:mb-10"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
-              >
-                Es Krim Tradisional
-              </motion.h2>
-              <motion.p
-                className="font-sora text-[#102837] mb-10 md:mb-20"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                Ketika susu mahal, santan atau bahan lainnya pun jadi. Dari situ maka jadilah es krim tradisional yang tak kalah nikmatnya memanjakan lidah dan badan kala hawa panas menyerang.
-              </motion.p>
-              <div className="w-full relative mb-32">
-                <motion.div
-                  className="flex items-center justify-center bg-[#E1A0B1] rounded-[3rem] 
-          shadow-[0_-12px_24px_rgba(0,0,0,0.25)] relative z-0 pb-16 md:pb-32"
-                  initial={{ opacity: 0, scale: 0.8, y: 40 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                >
-                  <motion.img
-                    src={`${baseUrl}/assets/3.3.png`}
-                    alt="Ice Cream"
-                    className="w-24 h-24 md:w-[20rem] md:h-[20rem] object-contain mx-2 md:mx-4 
-   relative z-10 -mt-6 md:-mt-20"
-                    initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
-                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut", type: "spring" }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.p
-                    className="font-sora text-white font-black text-3xl md:text-[8rem] font-bold pr-2 md:pr-6 -ml-4 relative z-10"
-                    initial={{ opacity: 0, x: 100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                  >
-                    2.
-                  </motion.p>
-                </motion.div>
-                <motion.div
-                  className="-mt-10 md:-mt-40 py-4 md:py-8 px-2 md:px-6 bg-[#E3EEEA] 
-          rounded-[3rem] shadow-lg relative z-0 space-y-2 md:space-y-4"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <p className="font-sora text-3xl font-bold text-[#102837]">Es Kado</p>
-                  <p className="font-sora">
-                    Sesuai namanya, es ini dibalut kertas kado plastik tipis dengan motif khas.
-                    Rasa esnya bisa dibilang sama dengan es tradisional pada umumnya, tapi
-                    tampilan kadonya yang menarik adalah senjata utama menarik perhatian
-                    anak-anak.
-                  </p>
-                </motion.div>
-              </div>
-              <div className="w-full relative">
-                <motion.div
-                  className="flex items-center justify-center bg-[#C4E9B6] rounded-[3rem] 
-          shadow-[0_-12px_24px_rgba(0,0,0,0.25)] relative z-0 pb-16 md:pb-32"
-                  initial={{ opacity: 0, scale: 0.8, y: 40 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                >
-                  <motion.p
-                    className="font-sora text-white font-black text-3xl md:text-[8rem] font-bold pl-2 md:pl-6 -mr-4 relative z-10"
-                    initial={{ opacity: 0, x: -100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                  >
-                    4.
-                  </motion.p>
-                  <motion.img
-                    src={`${baseUrl}/assets/3.5.png`}
-                    alt="Ice Cream"
-                    className="w-24 h-24 md:w-[20rem] md:h-[20rem] object-contain mx-2 md:mx-4 
-        relative z-10 -mt-6 md:-mt-20"
-                    initial={{ opacity: 0, x: 100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                  />
-                </motion.div>
-                <motion.div
-                  className="-mt-10 md:-mt-40 py-4 md:py-8 px-2 md:px-6 bg-[#F3F0E0]
-      rounded-[3rem] shadow-lg relative z-0 space-y-2 md:space-y-4"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <p className="font-sora text-3xl font-bold text-[#102837]">Es Goyang</p>
-                  <p className="font-sora">
-                    Es goyang biasanya dibuat ditempat dengan gerobak yang digoyang-goyangkan
-                    penjualnya. Berbahan dasar tepung kacang hijau dan tepung jagung, es ini
-                    memiliki banyak varian rasa dan topping yang bisa dirikues sendiri oleh
-                    penikmatnya.
-                  </p>
-                </motion.div>
-              </div>
-            </div>
-            <div className="flex flex-col md:w-1/2 space-y-10 md:space-y-32 mt-10 md:mt-0">
-              <div className="w-full relative">
-                <motion.div
-                  className="flex items-center justify-center bg-[#B39C96] rounded-[3rem] 
-      shadow-[-12px_-12px_24px_rgba(0,0,0,0.25)] relative z-0 pb-16 md:pb-32"
-                  initial={{ opacity: 0, scale: 0.8, y: 40 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                >
-                  <motion.p
-                    className="font-sora text-white font-black text-3xl md:text-[8rem] font-bold pl-2 md:pl-6 -mr-4 relative z-10"
-                    initial={{ opacity: 0, x: -100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                  >
-                    1.
-                  </motion.p>
-                  <motion.img
-                    src={`${baseUrl}/assets/3.2.png`}
-                    alt="Ice Cream"
-                    className="w-24 h-24 md:w-[20rem] md:h-[20rem] object-contain mx-2 md:mx-4 
-        relative z-10 -mt-6 md:-mt-20"
-                    initial={{ opacity: 0, scale: 0.5, rotate: 10 }}
-                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut", type: "spring" }}
-                    viewport={{ once: true }}
-                  />
-                </motion.div>
-                <motion.div
-                  className="-mt-10 md:-mt-40 py-4 md:py-8 px-2 md:px-6 bg-[#EEE6E1] 
-      rounded-[3rem] shadow-lg relative z-0 space-y-2 md:space-y-4"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <p className="font-sora text-3xl font-bold text-[#102837]">
-                    Es Tung-tung atau Es Puter
-                  </p>
-                  <p className="font-sora">
-                    Es berbahan dasar santan ini penamaannya diambil dari gong mini yang dibawa si penjual.
-                    Biasanya potongan buah nangka dimasukkan ke dalamnya dan disajikan dengan kerucut (cone)
-                    renyah atau roti tawar.
-                  </p>
-                </motion.div>
-              </div>
-              <div className="w-full relative mb-32">
-                <motion.div
-                  className="flex items-center justify-between bg-[#E6A3E8] rounded-[3rem] 
-      shadow-[-12px_-12px_24px_rgba(0,0,0,0.25)] relative z-0 pb-16 md:pb-32"
-                  initial={{ opacity: 0, scale: 0.8, y: 40 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: 'easeOut' }}
-                  viewport={{ once: true }}
-                >
-                  <motion.p
-                    className="font-sora text-white font-black text-3xl md:text-[8rem] font-bold pl-[10%] md:pl-[20%] relative z-10"
-                    initial={{ opacity: 0, x: -100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: 'easeOut' }}
-                    viewport={{ once: true }}
-                  >
-                    3.
-                  </motion.p>
-
-                  <motion.img
-                    src={`${baseUrl}/assets/3.4.png`}
-                    alt="Ice Cream"
-                    className="w-24 h-24 md:w-auto md:h-[20rem] object-contain -ml-10
-        relative z-10 -mt-6 md:-mt-20"
-                    initial={{ opacity: 0, scale: 0.5, rotate: 10 }}
-                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                    transition={{ duration: 0.8, ease: 'easeOut', type: 'spring' }}
-                    viewport={{ once: true }}
-                  />
-                </motion.div>
-                <motion.div
-                  className="-mt-10 md:-mt-40 py-4 md:py-8 px-2 md:px-6 bg-[#F1D2FE] 
-      rounded-[3rem] shadow-lg relative z-0 space-y-2 md:space-y-4"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <p className="font-sora text-3xl font-bold text-[#102837]">
-                    Es Gabus
-                  </p>
-                  <p className="font-sora">
-                    Anak-anak generasi 90-an biasanya mengenal es unik satu ini.
-                    Biasanya, es gabus berbentuk persegi dan berwarna seperti pelangi.
-                    Bahan utama pembuatannya ialah tepung kunhue dan terkadang disajikan
-                    dengan topping kental manis cair.
-                  </p>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="lg:hidden px-4">
+        <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4">
           <motion.h2
-            className="font-sora text-[#102837] font-bold text-3xl md:text-7xl mb-5 md:mb-10"
+            className="w-[75%] lg:w-full font-sora text-[#8C1007] font-bold text-3xl md:text-7xl mb-24 lg:mb-10 pr-0 lg:pr-[30%]"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            Es Krim Tradisional
+            Jamu <br />Paling Populer di Indonesia
           </motion.h2>
-          <motion.p
-            className="font-sora text-[#102837] mb-10 md:mb-20"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            Ketika susu mahal, santan atau bahan lainnya pun jadi. Dari situ maka jadilah es krim tradisional yang tak kalah nikmatnya memanjakan lidah dan badan kala hawa panas menyerang.
-          </motion.p>
-          <div className="w-full relative mt-12 mb-12">
+        </div>
+        <div className="relative w-full justify-center bg-[#3E0703] pt-16 md:pt-24 pb-12 md:pb-[8rem] xl:pb-24 mt-[20%] rounded-t-full">
+          <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4 pt-14 md:pt-16 lg:pt-20">
+            <motion.img
+              src={`${baseUrl}/assets/3.2.png`}
+              alt="Galian Singset"
+              className="mx-auto w-[60%] -mt-[50%] md:-mt-[40%]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, type: "spring", stiffness: 60 }}
+              viewport={{ once: true }}
+            />
             <motion.div
-              className="flex items-center justify-center bg-[#B39C96] rounded-[3rem] 
-      shadow-[-12px_-12px_24px_rgba(0,0,0,0.25)] relative z-0 pb-16 md:pb-32"
-              initial={{ opacity: 0, scale: 0.8, y: 40 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="absolute z-40 bg-[#FE8F00] px-4 md:px-0 md:w-52 py-1 rounded-full inline-block ml-[20%] md:ml-[28%] -mt-[65%] md:-mt-[70%]"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 10,
+                mass: 0.7,
+              }}
               viewport={{ once: true }}
             >
-              <motion.p
-                className="font-sora text-white font-black text-[6rem] md:text-[8rem] font-bold pl-2 md:pl-6 -mr-4 relative z-10"
-                initial={{ opacity: 0, x: -100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
-              >
-                1.
-              </motion.p>
-              <motion.img
-                src={`${baseUrl}/assets/3.2.png`}
-                alt="Ice Cream"
-                className="w-48 h-48 md:w-[20rem] md:h-[20rem] object-contain mx-2 md:mx-4 
-        relative z-10 -mt-6 md:-mt-20"
-                initial={{ opacity: 0, scale: 0.5, rotate: 10 }}
-                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", type: "spring" }}
-                viewport={{ once: true }}
-              />
-            </motion.div>
-            <motion.div
-              className="-mt-20 md:-mt-40 py-6 md:py-8 px-6 bg-[#EEE6E1] 
-      rounded-[3rem] shadow-lg relative z-0 space-y-2 md:space-y-4"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <p className="font-sora text-xl font-bold text-[#102837]">
-                Es Tung-tung atau Es Puter
-              </p>
-              <p className="font-sora">
-                Es berbahan dasar santan ini penamaannya diambil dari gong mini yang dibawa si penjual.
-                Biasanya potongan buah nangka dimasukkan ke dalamnya dan disajikan dengan kerucut (cone)
-                renyah atau roti tawar.
+              <p className="text-[#3E0703] font-sora font-semibold text-base md:text-2xl text-center">
+                Galian Singset
               </p>
             </motion.div>
-          </div>
-          <div className="w-full relative mb-12">
-            <motion.div
-              className="flex items-center justify-center bg-[#E1A0B1] rounded-[3rem] 
-          shadow-[0_-12px_24px_rgba(0,0,0,0.25)] relative z-0 pb-16 md:pb-32"
-              initial={{ opacity: 0, scale: 0.8, y: 40 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              <motion.img
-                src={`${baseUrl}/assets/3.3.png`}
-                alt="Ice Cream"
-                className="w-48 h-48 md:w-[20rem] md:h-[20rem] object-contain mx-2 md:mx-4 
-   relative z-10 -mt-6 md:-mt-20"
-                initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
-                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", type: "spring" }}
-                viewport={{ once: true }}
-              />
-              <motion.p
-                className="font-sora text-white font-black text-[6rem] md:text-[8rem] font-bold pr-2 md:pr-6 -ml-4 relative z-10"
-                initial={{ opacity: 0, x: 100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
-              >
-                2.
-              </motion.p>
-            </motion.div>
-            <motion.div
-              className="-mt-20 md:-mt-40 py-6 md:py-8 px-2 px-6 bg-[#E3EEEA] 
-          rounded-[3rem] shadow-lg relative z-0 space-y-2 md:space-y-4"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <p className="font-sora text-xl font-bold text-[#102837]">Es Kado</p>
-              <p className="font-sora">
-                Sesuai namanya, es ini dibalut kertas kado plastik tipis dengan motif khas.
-                Rasa esnya bisa dibilang sama dengan es tradisional pada umumnya, tapi
-                tampilan kadonya yang menarik adalah senjata utama menarik perhatian
-                anak-anak.
-              </p>
-            </motion.div>
-          </div>
-          <div className="w-full relative mb-12">
-            <motion.div
-              className="flex items-center justify-between bg-[#E6A3E8] rounded-[3rem] 
-      shadow-[-12px_-12px_24px_rgba(0,0,0,0.25)] relative z-0 pb-16 md:pb-32"
-              initial={{ opacity: 0, scale: 0.8, y: 40 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              viewport={{ once: true }}
-            >
-              <motion.p
-                className="font-sora text-white font-black text-[6rem] md:text-[8rem] font-bold pl-[20%] relative z-10"
-                initial={{ opacity: 0, x: -100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-                viewport={{ once: true }}
-              >
-                3.
-              </motion.p>
 
-              <motion.img
-                src={`${baseUrl}/assets/3.4.png`}
-                alt="Ice Cream"
-                className="w-auto h-52 md:w-auto md:h-[20rem] object-contain -ml-10
-        relative z-10 -mt-6 md:-mt-20"
-                initial={{ opacity: 0, scale: 0.5, rotate: 10 }}
-                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut', type: 'spring' }}
-                viewport={{ once: true }}
-              />
-            </motion.div>
-            <motion.div
-              className="-mt-20 md:-mt-40 py-6 md:py-8 px-2 px-6 bg-[#F1D2FE] 
-      rounded-[3rem] shadow-lg relative z-0 space-y-2 md:space-y-4"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+            <motion.img
+              src={`${baseUrl}/assets/3.1.png`}
+              alt="Beras Kencur"
+              className="mx-auto w-[30%] z-10 mr-0 -mt-[110%]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, type: "spring", stiffness: 60 }}
               viewport={{ once: true }}
-            >
-              <p className="font-sora text-xl font-bold text-[#102837]">
-                Es Gabus
-              </p>
-              <p className="font-sora">
-                Anak-anak generasi 90-an biasanya mengenal es unik satu ini.
-                Biasanya, es gabus berbentuk persegi dan berwarna seperti pelangi.
-                Bahan utama pembuatannya ialah tepung kunhue dan terkadang disajikan
-                dengan topping kental manis cair.
-              </p>
+            />
+            <motion.div className="absolute z-40 bg-[#FE8F00] px-4 md:px-0 md:w-52 py-1 rounded-full inline-block ml-[66%] -mt-[65%]"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 10,
+                mass: 0.7,
+              }}
+              viewport={{ once: true }}>
+              <p className="text-[#3E0703] font-sora font-semibold text-base md:text-2xl text-center">Beras Kencur</p>
+            </motion.div>
+            <motion.img
+              src={`${baseUrl}/assets/3.3.png`}
+              alt="Kunci Sirih"
+              className="mx-auto w-[30%] z-10 ml-[7%] -mt-[40%]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1.5 }}
+              transition={{ duration: 0.8, type: "spring", stiffness: 60 }}
+              viewport={{ once: true }}
+            />
+            <motion.div className="absolute z-40 bg-[#FE8F00] px-4 md:px-0 md:w-52 py-1 rounded-full inline-block ml-[10%] -mt-[42%]"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 10,
+                mass: 0.7,
+              }}
+              viewport={{ once: true }}>
+
+              <p className="text-[#3E0703] font-sora font-semibold text-base md:text-2xl text-center">Kunci Sirih</p>
+            </motion.div>
+            <motion.img
+              src={`${baseUrl}/assets/3.4.png`}
+              alt="Kunyit Asam"
+              className="mx-auto w-[30%] z-10 mr-[15%] -mt-[5%]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1.5 }}
+              transition={{ duration: 0.8, type: "spring", stiffness: 60 }}
+              viewport={{ once: true }}
+            />
+            <motion.div className="absolute z-40 bg-[#FE8F00] px-4 md:px-0 md:w-52 py-1 rounded-full inline-block mr-[15%] -mt-[17%]"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 10,
+                mass: 0.7,
+              }}
+              viewport={{ once: true }}>
+              <p className="text-[#3E0703] font-sora font-semibold text-base md:text-2xl text-center">Kunyit Asam</p>
+            </motion.div>
+            <motion.img
+              src={`${baseUrl}/assets/3.5.png`}
+              alt="Kudu Laos"
+              className="mx-auto w-[30%] z-20 ml-[10%] -mt-[25%]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1.8 }}
+              transition={{ duration: 0.8, type: "spring", stiffness: 60 }}
+              viewport={{ once: true }}
+            />
+            <motion.div className="absolute z-40 bg-[#FE8F00] px-4 md:px-0 md:w-52 py-1 rounded-full inline-block ml-[72%] -mt-[30%]"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 10,
+                mass: 0.7,
+              }}
+              viewport={{ once: true }}>
+              <p className="text-[#3E0703] font-sora font-semibold text-base md:text-2xl text-center">Kudu Laos</p>
+            </motion.div>
+            <motion.img
+              src={`${baseUrl}/assets/3.8.png`}
+              alt="Pahitan"
+              className="mx-auto w-[30%] mt-[5%] z-10 mr-[15%]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1.5 }}
+              transition={{ duration: 0.8, type: "spring", stiffness: 60 }}
+              viewport={{ once: true }}
+            />
+            <motion.div className="absolute z-40 bg-[#FE8F00] px-4 md:px-0 md:w-52 py-1 rounded-full inline-block -mt-[2%] ml-[66%]"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 10,
+                mass: 0.7,
+              }}
+              viewport={{ once: true }}>
+              <p className="text-[#3E0703] font-sora font-semibold text-base md:text-2xl text-center">Pahitan</p>
+            </motion.div>
+            <motion.img
+              src={`${baseUrl}/assets/3.7.png`}
+              alt="Jamu Cekok"
+              className="mx-auto w-[30%] z-30 ml-[30%] -mt-[25%]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1.1 }}
+              transition={{ duration: 0.8, type: "spring", stiffness: 60 }}
+              viewport={{ once: true }}
+            />
+            <motion.div className="absolute z-40 bg-[#FE8F00] px-4 md:px-0 md:w-52 py-1 rounded-full inline-block -mt-[2%] ml-[35%]"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 10,
+                mass: 0.7,
+              }}
+              viewport={{ once: true }}>
+              <p className="text-[#3E0703] font-sora font-semibold text-base md:text-2xl text-center">Jamu Cekok</p>
+            </motion.div>
+            <motion.img
+              src={`${baseUrl}/assets/3.6.png`}
+              alt="Sinom"
+              className="mx-auto w-[30%] z-40 ml-[2%] -mt-[30%]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1.1 }}
+              transition={{ duration: 0.8, type: "spring", stiffness: 60 }}
+              viewport={{ once: true }}
+            />
+            <motion.div className="absolute z-40 bg-[#FE8F00] px-4 md:px-0 md:w-52 py-1 rounded-full inline-block -mt-[6%] ml-[12%]"
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 10,
+                mass: 0.7,
+              }}
+              viewport={{ once: true }}>
+              <p className="text-[#3E0703] font-sora font-semibold text-base md:text-2xl text-center">Sinom</p>
             </motion.div>
           </div>
-          <div className="w-full relative">
-            <motion.div
-              className="flex items-center justify-center bg-[#C4E9B6] rounded-[3rem] 
-          shadow-[0_-12px_24px_rgba(0,0,0,0.25)] relative z-0 pb-16 md:pb-32"
-              initial={{ opacity: 0, scale: 0.8, y: 40 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              <motion.p
-                className="font-sora text-white font-black text-[6rem] md:text-[8rem] font-bold pl-2 md:pl-6 -mr-4 relative z-10"
-                initial={{ opacity: 0, x: -100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
-              >
-                4.
-              </motion.p>
-              <motion.img
-                src={`${baseUrl}/assets/3.5.png`}
-                alt="Ice Cream"
-                className="w-48 h-48 md:w-[20rem] md:h-[20rem] object-contain mx-2 md:mx-4 
-        relative z-10 -mt-6 md:-mt-20"
-                initial={{ opacity: 0, x: 100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
-              />
-            </motion.div>
-            <motion.div
-              className="-mt-20 md:-mt-40 py-6 md:py-8 px-2 px-6 bg-[#F3F0E0]
-      rounded-[3rem] shadow-lg relative z-0 space-y-2 md:space-y-4"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <p className="font-sora text-xl font-bold text-[#102837]">Es Goyang</p>
-              <p className="font-sora">
-                Es goyang biasanya dibuat ditempat dengan gerobak yang digoyang-goyangkan
-                penjualnya. Berbahan dasar tepung kacang hijau dan tepung jagung, es ini
-                memiliki banyak varian rasa dan topping yang bisa dirikues sendiri oleh
-                penikmatnya.
-              </p>
-            </motion.div>
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl">
+            <img
+              src={`${baseUrl}/assets/footer.png`}
+              className="mx-auto hidden w-full sm:block"
+              alt="Footer"
+            />
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl">
-        <img
-          src={`${baseUrl}/assets/footer.png`}
-          className="mx-auto hidden w-full invert sm:block"
-          alt="Footer"
-        />
-      </div>
+
+
     </div >
   );
 }

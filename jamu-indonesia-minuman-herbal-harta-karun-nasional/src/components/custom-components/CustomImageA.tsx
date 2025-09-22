@@ -1,127 +1,228 @@
 "use client";
+
 import { baseUrl } from "@/constants/meta";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
-/**
- * CustomImageA component - Responsive hero section for Jakarta-Surabaya high-speed train article
- * Features responsive design with mobile-first approach and optimized layouts for different screen sizes
- */
+const cardVariants = {
+  hidden: { opacity: 0, y: 40, scale: 0.9 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      delay: i * 0.3,
+      type: "spring",
+      stiffness: 120,
+      damping: 12,
+    },
+  }),
+};
+
+const items = [
+  {
+    img: `${baseUrl}/assets/1.4.png`,
+    alt: "Artefak",
+    text: "Artefak yang diyakini sebagai alat tumpu jamu seperti cobek dan ulekan di situs arkeologi Liyangan",
+    imgClass: "w-36",
+  },
+  {
+    img: `${baseUrl}/assets/1.5.png`,
+    alt: "Relief",
+    text: "Relief di candi seperti Candi Rimbi dan Candi Surowono yang merekam pemanfaatan jamu",
+    imgClass: "w-24",
+  },
+];
+
+
 export function CustomImageA() {
-  // Refs for scroll animations
-  const heroRef = useRef<HTMLDivElement | null>(null);
-  const titleRef = useRef(null);
-  const infoBoxRef = useRef<HTMLDivElement | null>(null);
+  return (
+    <div className="relative flex flex-col items-center overflow-hidden">
+      <div className="bg-[#F5FAE1] w-full pt-20 pb-6 md:pt-24 md:pb-32 relative">
+        <div className="relative flex md:flex-row flex-col mx-auto max-w-4xl lg:px-0 md:px-8 px-4 ">
+          <div className="z-0 w-full md:w-1/2">
+            <motion.h2
+              className="font-sora text-[#8C1007] font-bold text-[32px] md:text-[46px] mb-5 md:mb-10 md:leading-[3.5rem]"
+              initial={{ opacity: 0, y: 60, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                type: "spring",
+                stiffness: 60,
+                damping: 10,
+                delay: 0.1
+              }}
+              viewport={{ once: true }}
+            >
+              Jamu di Indonesia, <br /> Ada Sejak Kapan?
+            </motion.h2>
+            <motion.img
+              src={`${baseUrl}/assets/1.2.png`}
+              alt="Jamu"
+              className="h-auto w-full rounded-t-3xl"
+              initial={{ scale: 1.05, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            />
+            <div className="bg-[#4F200D] rounded-b-3xl text-white p-5 md:p-6">
+              <motion.p
+                className="text-2xl md:text-[34px] font-semibold text-white font-sora leading-[1.2] md:leading-[2.5rem] mb-6"
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                Ada catatan <br className="hidden md:block" />
+                mengenai keberadaan jamu pada abad ke-13
+              </motion.p>
 
-  // InView states for animations
-  const heroInView = useInView(heroRef, { once: true });
-  const titleInView = useInView(titleRef, { once: true });
-  const infoBoxInView = useInView(infoBoxRef, { once: true });
+              <motion.p
+                className="text-2xl lg:text-3xl font-normal text-[#E6CFA9] font-sora"
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                Dalam Prasasti Madhawapura, terkuak juga ada profesi peracik jamu
+                pada era Majapahit yang disebut "Acaraki"
+              </motion.p>
 
-  // Parallax for the large background image section
-  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-
-  return (<motion.div
-    ref={heroRef}
-    className="relative overflow-clip font-sora bg-[#ffffff] pt-6 sm:pt-10 md:pt-20"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-  >
-    <div className="absolute inset-0 bg-no-repeat z-40 opacity-15 bg-cover" style={{ backgroundImage: `url(${baseUrl + '/assets/1.0.png'})` }}></div>
-    <div className="absolute h-[20rem] z-40 bg-gradient-to-b from-neutral-50 top-0 w-full"></div>
-    <div className="max-w-4xl mx-auto w-full relative px-4 sm:px-6 md:px-8 lg:px-0 z-40">
-      <motion.div
-        ref={titleRef}
-        className="max-w-xl mx-auto w-full space-y-3 sm:space-y-4 md:space-y-5 py-6 sm:py-10 md:py-20 relative z-30"
-        initial={{ opacity: 0, y: -20 }}
-        animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <motion.h1
-          className="text-2xl sm:text-3xl text-[#f25a91] text-center md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight sm:leading-tight md:leading-snug"
-          initial={{ opacity: 0, y: -15 }}
-          animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -15 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        >
-          Es Krim Masuk ke Indonesia
-        </motion.h1>
-        <motion.p
-          className="text-sm sm:text-base text-[#1410ff] text-center md:text-lg !leading-relaxed md:!leading-loose"
-          initial={{ opacity: 0, y: 15 }}
-          animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-        >
-          Panganan es krim sendiri dibawa pendatang Eropa pada zaman kolonialisme Belanda sekitar abad awal abad ke-20. 
-        </motion.p>
-      </motion.div>
-    </div>
-    <motion.div
-      className="relative max-w-4xl mx-auto"
-      initial={{ opacity: 0, y: 30, scale: 0.98 }}
-      animate={heroInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-    >
-      <motion.img
-        src={baseUrl + '/assets/1.1.png'}
-        alt="People with ice cream"
-        className="h-full"
-        initial={{ filter: "blur(6px)" }}
-        animate={{ filter: "blur(0px)" }}
-        transition={{ duration: 0.8, delay: 0.1 }}
-      />
-    </motion.div>
-    <div className="relative" ref={infoBoxRef}>
-      <motion.img
-        src={baseUrl + '/assets/1.2.png'}
-        alt="Background pink"
-        className="w-full -mt-[35%] sm:-mt-[26%] md:-mt-[20%] xl:-mt-[12%] relative z-0 md:h-[50rem] xl:h-[70rem] object-cover object-top"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      />
-      <div className="absolute inset-0 flex items-end justify-end md:justify-center">
-        <div className="max-w-full sm:max-w-4xl md:mx-auto xl:w-auto w-full px-4 sm:px-6 md:px-8 lg:px-0 relative">
-          <motion.div
-            className="bg-[#1410ff] w-[280px] md:w-[350px] pr-4 md:pr-8 py-6 md:py-10 pl-12 xl:pl-20 text-white absolute bottom-0 xl:bottom-[10rem] right-0 xl:-right-[4rem] h-fit z-0"
-            initial={{ opacity: 0, x: 40 }}
-            animate={infoBoxInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-          >
-            <p className="text-sm xs:text-sm sm:text-lg xl:text-xl font-medium">
-              Dibukanya peternakan sapi perah di beberapa daerah sejuk
-              di Indonesia contohnya Bogor, Bandung, dan Malang turut berperan menghadirkan si dingin nan manis ini
-              di meja penikmatnya.
-            </p>
-          </motion.div>
-          <motion.img
-            src={baseUrl + '/assets/1.3.png'}
-            alt="Ice Cream"
-            className="bottom-0 -left-20 md:left-0 h-[20rem] xs:h-[28rem] sm:h-[32rem] md:h-[50rem] xl:h-auto relative z-10"
-            initial={{ opacity: 0, x: -40, rotate: -2 }}
-            animate={infoBoxInView ? { opacity: 1, x: 0, rotate: 0 } : {}}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            whileHover={{ y: -6, rotate: -1 }}
-          />
+            </div>
+          </div>
+          <div className="z-10 w-full md:w-1/2">
+            <motion.img
+              src={`${baseUrl}/assets/1.1.png`}
+              alt="Jamu"
+              className="md:hidden h-auto w-full rounded-3xl md:w-full md:h-full object-contain -mt-4"
+              style={{ scaleX: -1 }}
+              initial={{ scale: 0, rotate: -15, opacity: 0 }}
+              whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "backOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            />
+            <motion.img
+              src={`${baseUrl}/assets/1.1.png`}
+              alt="Jamu"
+              className="
+      hidden md:block h-auto rounded-3xl object-contain
+      md:absolute lg:-right-4 mt-0 md:mt-[10%] md:-right-12
+    "
+              style={{ scaleX: -1, scale: 0.8 }}
+              initial={{ scale: 0, rotate: -15, opacity: 0 }}
+              whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "backOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            />
+          </div>
         </div>
       </div>
-    </div>
+      <div className="bg-[#8C1007] w-full pb-6 md:pb-24 pt-0 relative">
+        <div className="mx-auto max-w-4xl lg:px-0 md:px-8 px-4">
+          <div className="z-20 relative bg-[#E6CFA9] rounded-3xl p-6 md:pl-10 md:pt-8 pr-[8rem] md:pr-[20rem] mb-10 -mt-20">
+            <motion.p
+              className="text-[#4F200D] font-sora text-lg md:text-3xl"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              Eksistensi jamu juga tercatat dalam Serat Centhini yang ditulis oleh
+              Kanjeng Gusti Pangeran Adipati Anom pada 1814
+            </motion.p>
 
-    <motion.div
-      className="absolute bottom-0 pt-3 sm:pt-5 md:pt-8 lg:pt-10 z-50 left-0 right-0 mx-auto max-w-4xl px-3 sm:px-4 md:px-6 lg:px-0"
-      initial={{ opacity: 0, y: 15 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-    >
-      <motion.img
-        src={`${baseUrl}/assets/footer.png`}
-        className="z-50 mx-auto hidden w-full sm:block [filter:brightness(0)_saturate(100%)_invert(15%)_sepia(89%)_saturate(6127%)_hue-rotate(357deg)_brightness(86%)_contrast(112%)]"
-        alt="Footer decoration"
-        initial={{ filter: "blur(4px)" }}
-        animate={{ filter: "blur(0px)" }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-      ></motion.img>
-    </motion.div>
-  </motion.div>
+            <motion.img
+              src={`${baseUrl}/assets/1.3.png`}
+              alt="Serat Centhini"
+              className="z-30 h-auto w-48 md:w-[28rem] rounded-3xl absolute bottom-0 md:-bottom-20 -right-8 md:-right-24"
+              initial={{ opacity: 0, scale: 0.7, rotate: -5, y: 60 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 0, y: 0 }}
+              transition={{
+                duration: 1,
+                ease: [0.68, -0.55, 0.27, 1.55],
+                delay: 0.2
+              }}
+              viewport={{ once: true }}
+            />
+          </div>
+          <motion.p
+            className="text-white md:text-xl text-lg px-4 md:px-12 mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Selain itu, dalam kitab kuno Serat Centhini yang ditulis pada awal abad ke-19,
+            terdapat berbagai resep jamu tradisional yang mencerminkan pengetahuan mendalam
+            tentang tanaman obat dan cara penggunaannya untuk menjaga kesehatan.
+          </motion.p>
+
+          <motion.p
+            className="text-white md:text-xl text-lg px-4 md:px-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            Sementara itu, Serat Kawruh yang ditulis pada 1858 membahas resep obat-obatan
+            tradisional pada masa lalu
+          </motion.p> </div>
+      </div>
+
+      <div className="bg-[#4F200D] w-full py-20 md:py-24 relative">
+        <div className="mx-auto max-w-4xl lg:px-12 md:px-8 px-4">
+          <motion.h3
+            className="font-semibold text-3xl text-[#FCC61D] text-center"
+            initial={{ opacity: 0, scale: 0.8, y: 40 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              type: "spring",
+              stiffness: 120,
+              damping: 10,
+            }}
+            viewport={{ once: true }}
+          >
+            Peninggalan keberadaan jamu pada masa lalu:
+          </motion.h3>
+
+          <div className="flex flex-col md:flex-row mt-10 gap-8 md:gap-4">
+            {items.map((item, i) => (
+              <motion.div
+                key={i}
+                className="w-full md:w-1/2 text-center px-4 md:px-14"
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i}
+              >
+                <motion.img
+                  src={item.img}
+                  alt={item.alt}
+                  className={`h-auto ${item.imgClass} rounded-3xl mb-4 mx-auto`}
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{
+                    duration: 0.6,
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 15,
+                    delay: i * 0.3,
+                  }}
+                  viewport={{ once: true }}
+                />
+                <p className="text-white font-sora text-lg md:text-xl">{item.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
+        <img
+          src={`${baseUrl}/assets/footer.png`}
+          className="z-50 mx-auto hidden w-full sm:block"
+        />
+      </div>
+    </div>
   );
 }
