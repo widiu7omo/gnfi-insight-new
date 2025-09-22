@@ -54,6 +54,7 @@ const items = [
 export function CustomImageD() {
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
+      <div className="absolute w-full z-10 h-[10rem] inset-0 bg-gradient-to-b from-[#2b0503]"></div>
       <div
         className="relative w-full justify-center bg-cover bg-center pt-16 md:pt-24"
         style={{ backgroundImage: `url(${baseUrl}/assets/4.1.png)` }}
@@ -61,7 +62,7 @@ export function CustomImageD() {
         <motion.img
           src={`${baseUrl}/assets/4.10.png`}
           alt="Jamu"
-          className="absolute -left-[10%] top-[4%] md:left-0 md:top-4 w-[40%] md:w-1/3"
+          className="absolute -left-[10%] top-[4%] md:left-0 md:top-4 w-[40%] md:w-1/3 z-10"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, type: "spring", stiffness: 60 }}
@@ -87,7 +88,7 @@ export function CustomImageD() {
             Diakui UNESCO sebagai Warisan Budaya Takbenda (WBTb) Dunia
           </motion.h3>
         </div>
-        <div className="relative w-full justify-center bg-[#E4DAC1] pt-16 md:pt-24 pb-12 md:pb-[8rem] xl:pb-24 rounded-t-full mt-[20%]">
+        <div className="relative w-full z-20 justify-center bg-[#E4DAC1] pt-16 md:pt-24 pb-12 md:pb-[8rem] xl:pb-24 rounded-t-full mt-[20%]">
           <div className="z-20 space-y-10 md:space-y-24 pb-10 md:pb-10 -mt-[20%]">
             <div className="z-1 flex md:flex-row flex-col relative mx-auto max-w-4xl md:px-6 px-4 space-x-0 space-y-8 md:space-y-0 md:space-x-4 pt-1 md:pt-12">
               <div className="w-full md:w-1/2 flex flex-col md:flex-row relative">
