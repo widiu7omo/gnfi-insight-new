@@ -1,6 +1,6 @@
 "use client";
 import { baseUrl } from "@/constants/meta";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 export function CustomImageE() {
   const jamu = [
@@ -61,13 +61,26 @@ export function CustomImageE() {
         <div className="max-w-4xl mx-auto my-20 lg:pb-44 px-4 lg:px-0">
           <div className="grid lg:grid-cols-3 grid-cols-2 gap-x-12 gap-y-4">
             {jamu.map((item, index) => (
-              <motion.div key={index} className="flex flex-col items-center p-4 relative">
+              <motion.div
+                key={index}
+                className="flex flex-col items-center p-4 relative"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.4 }}
+              >
                 <div className="">
-                  <img src={item.image} alt={item.title} className="z-10 relative scale-125" />
+                  <motion.img
+                    src={item.image}
+                    alt={item.title}
+                    className="z-10 relative scale-125"
+
+                    transition={{ type: "spring", stiffness: 260, damping: 18 }}
+                  />
                   <div className="rounded-xl inset-0 top-[30%] absolute bg-[#314516]"></div>
                   <p className="text-center text-lg lg:text-2xl font-semibold pt-10 text-white relative">{item.title}</p>
                 </div>
-            </motion.div>
+              </motion.div>
             ))}
           </div>
         </div>

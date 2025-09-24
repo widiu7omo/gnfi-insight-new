@@ -28,7 +28,7 @@ export default function Footer() {
             </footer>
             <div className="flex flex-col">
                 <span className="text-lg">Diterbitkan pada</span>
-                <span className="font-bold">15 September 2025</span>
+                <span className="font-bold">24 September 2025</span>
             </div>
             {/* @ts-ignore */}
             <div className="donation-container" program="gnfi-insight-bangun-wawasan-lewat-data-dan-cerita" button-style="background:#ff0000 !important;"></div>
