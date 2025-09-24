@@ -19,9 +19,7 @@ export default function Footer() {
                     <p className="text-center font-bold">Editor</p>
                     <p className="text-center mb-6">Dimas Wahyu Indrajaya</p>
                     <p className="text-center font-bold">Penulis</p>
-                    <p className="text-center mb-6">
-                        Aulli Reza Atmam, Dimas Wahyu Indrajaya, Firdarainy Nuril Izzah, Irfan Jumadil Aslam, Muhammad Fazer Mileneo
-                    </p>
+                    <p className="text-center mb-6">Aulli Reza Atmam, Firdarainy Nuril Izzah, Aslamatur Rizqiyah, Rizky Kusumo</p>
                     <p className="text-center font-bold">Desain & Visual</p>
                     <p className="text-center mb-6">Arco Pradipta & Ario Priagung Nugroho</p>
                     <p className="text-center font-bold">Web Developer</p>
