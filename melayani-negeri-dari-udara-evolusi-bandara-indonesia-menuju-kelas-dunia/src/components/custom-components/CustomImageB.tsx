@@ -1,8 +1,7 @@
 "use client";
 
 import { baseUrl } from "@/constants/meta";
-import { motion, useMotionValue, useTransform, useInView, animate } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const textVariant = {
   hidden: { opacity: 0, y: 60, scale: 0.95 },
@@ -20,52 +19,16 @@ const textVariant = {
   }),
 };
 
-type CounterProps = {
-  target: number;
-  duration?: number;
-  className?: string;
-};
-
-function Counter({ target, duration = 1.2, className }: CounterProps) {
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, (latest) => Math.floor(latest));
-  const [display, setDisplay] = useState(0);
-
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (!isInView) return;
-
-    // animasi counter dari 0 -> target
-    const controls = animate(count, target, {
-      duration,
-      ease: "easeOut",
-    });
-    const unsubscribe = rounded.on("change", (v) => {
-      setDisplay(v);
-    });
-    return () => {
-      controls.stop();
-      unsubscribe();
-    };
-  }, [isInView, target, duration]);
-  return (
-    <motion.span ref={ref} className={className}>
-      {display}
-    </motion.span>
-  );
-}
-
 export function CustomImageB() {
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
       <div
-        className="relative w-full justify-center bg-[#ECECEC] pb-12 pt-16 md:pb-[8rem] md:pt-24 xl:pb-24"
+        className="relative w-full justify-center bg-cover bg-bottom pt-16 pb-0 md:pt-24"
+        style={{ backgroundImage: `url(${baseUrl}/assets/2.0.png)` }}
       >
         <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4">
           <motion.h2
-            className="font-sora text-[#1276DE] font-bold text-[32px] md:text-[46px] mb-5 md:mb-10 md:leading-[3.5rem] pr-0 lg:pr-[30%]"
+            className="font-sora text-[#151516] font-bold text-[32px] md:text-[46px] md:leading-[3.5rem] pr-0 lg:pr-[50%]"
             initial={{ opacity: 0, y: 60, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{
@@ -77,115 +40,160 @@ export function CustomImageB() {
             }}
             viewport={{ once: true }}
           >
-            Gen X Masih Suka Jamu, bagaimana dengan Milenial dan Gen Z?
+            Bandara Indonesia di Mata Dunia
           </motion.h2>
           <motion.p
-            className="mt-10 md:mt-32 font-sora font-semibold text-[#3B4F64] text-xl md:text-3xl lg:pr-[50%]"
+            className="mt-2 md:mt-6 font-sora text-[#151516] text-xl md:text-[28px] md:leading-[2.5rem] lg:pr-[40%]"
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             custom={1}
           >
-            Penggunaan Obat Herbal dan Jamu Menurut Generasi
+            Transformasi bandara Indonesia makin diakui global. Soekarno-Hatta naik peringkat di Skytrax World Airports Awards:
           </motion.p>
-          <motion.p
-            className="mb-28 md:mb-64 font-sora font-semibold text-[#666666] text-lg md:text-2xl"
-            variants={textVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            custom={2}
-          >
-            Tahun 2025
-          </motion.p>
-          <motion.img
-            src={`${baseUrl}/assets/2.3.png`}
-            alt="Jamu"
-            className="absolute right-0 bottom-8 md:bottom-14 w-1/4 z-40"
-            initial={{ opacity: 0, x: 100 }} 
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{
-              duration: 0.8,
-              ease: "easeOut"
-            }}
-            viewport={{ once: true }}
-          />
-          <div className="relative w-full">
+          <div className="relative w-full md:mt-0 mt-8">
             <motion.img
               src={`${baseUrl}/assets/2.1.png`}
-              alt="Infografik"
-              className="mx-auto w-full pr-[16%] pl-[8%]"
-              initial={{ opacity: 0, scale: 0.7 }}
+              alt="Bandara"
+              className="mx-auto w-full md:mt-8 lg:mt-0 md:mb-8 lg:mb-0"
+              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, type: "spring", stiffness: 60 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
               viewport={{ once: true }}
             />
-
-            <div className="absolute z-10 left-[15%] bottom-[58%] md:bottom-[55%] flex flex-col items-center">
-              <div className="absolute z-10 left-[15%] bottom-[58%] md:bottom-[55%] flex flex-col items-center">
-                <div className="w-16 md:w-32 h-[2px] bg-[#1276DE] rotate-45 relative -bottom-1"></div>
-                <div className="absolute -left-[60%] -top-[18px] md:-top-[40px]">
-                  <div className="w-12 md:w-24 h-[2px] bg-[#1276DE]"></div>
-                  <Counter
-                    target={35}
-                    className="absolute font-sora -top-10 md:-top-20 left-1/2 -translate-x-1/2 text-[#1276DE] font-bold text-3xl md:text-7xl"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="absolute z-30 left-[34%] md:left-[38%] top-[20%] flex flex-col items-center">
-              <div className="w-16 md:w-32 h-[2px] bg-[#1276DE] rotate-45 relative bottom-2 lg:-bottom-1"></div>
-              <div className="absolute -left-[58%] md:-left-[60%] -top-[30px] md:-top-[54px] lg:-top-[40px]">
-                <div className="w-12 md:w-24 h-[2px] bg-[#1276DE]"></div>
-                <Counter
-                  target={56}
-                  className="absolute font-sora -top-10 md:-top-20 left-1/2 -translate-x-1/2 text-[#1276DE] font-bold text-3xl md:text-7xl"
+            <motion.img
+              src={`${baseUrl}/assets/2.5.png`}
+              alt="Chart 2023"
+              className="absolute top-[20%] left-[30%] w-1/5"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+              viewport={{ once: true }}
+            />
+            <motion.img
+              src={`${baseUrl}/assets/2.6.png`}
+              alt="Chart 2024"
+              className="absolute top-[5%] left-[45%] w-[22%]"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            />
+            <motion.img
+              src={`${baseUrl}/assets/2.7.png`}
+              alt="Chart 2025"
+              className="absolute -top-[10%] right-[14%] w-1/4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
+              viewport={{ once: true }}
+            />
+            <div className="hidden md:block absolute z-10 bottom-[10%] left-1/2 -translate-x-1/2 w-full md:w-[40%] md:left-auto md:right-0 md:translate-x-0">
+              <div className="relative rounded-xl shadow-lg">
+                <motion.img
+                  src={`${baseUrl}/assets/2.2.png`}
+                  alt="Bandara"
+                  className="w-full rounded-t-xl"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  viewport={{ once: true }}
                 />
-              </div>
-            </div>
-
-            <div className="absolute z-10 right-[28%] -top-6 md:-top-10 items-center">
-              <div className="w-16 md:w-32 h-[2px] bg-[#1276DE] rotate-45 relative -bottom-1"></div>
-              <div className="absolute -left-[60%] -top-[18px] md:-top-[40px]">
-                <div className="w-12 md:w-24 h-[2px] bg-[#1276DE]"></div>
-                <Counter
-                  target={68}
-                  className="absolute font-sora -top-10 md:-top-20 left-1/2 -translate-x-1/2 text-[#1276DE] font-bold text-3xl md:text-7xl"
+                <motion.img
+                  src={`${baseUrl}/assets/2.3.png`}
+                  alt="Badge"
+                  className="absolute z-20 md:bottom-[45%] lg:bottom-[35%] -left-[12%] -translate-x-[30%] translate-y-1/2 w-1/3 md:w-1/4"
+                  initial={{ opacity: 0, scale: 0.7 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1, type: "spring", delay: 0.1, stiffness: 60 }} viewport={{ once: true }}
                 />
+                <motion.div
+                  className="bg-[#C2DAFF] py-8 px-6 rounded-b-xl"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                >
+                  <p className="text-[#151515] font-sora text-base md:text-lg lg:text-xl">
+                    Kini Soekarno-Hatta berstatus 4-Star Airport, sejajar dengan Changi & Incheon
+                  </p>
+                </motion.div>
               </div>
             </div>
           </div>
-          <motion.img
-            src={`${baseUrl}/assets/2.2.png`}
-            alt="Jamu"
-            className="absolute -bottom-8 left-0 w-1/4 z-40"
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{
-              duration: 1,
-              ease: "easeOut"
-            }}
-            viewport={{ once: true }}
-          />
+          <div className="md:hidden relative rounded-xl shadow-lg mx-[10%] my-8">
+            <motion.img
+              src={`${baseUrl}/assets/2.2.png`}
+              alt="Overlay"
+              className="w-full rounded-t-xl"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            />
+            <motion.img
+              src={`${baseUrl}/assets/2.3.png`}
+              alt="Badge"
+              className="absolute z-20 bottom-[40%] -left-[10%] -translate-x-[30%] translate-y-1/2 w-1/5 md:w-1/4"
+              initial={{ opacity: 0, scale: 0.7 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1, type: "spring", delay: 0.2, stiffness: 60 }} viewport={{ once: true }}
+            />
+            <motion.div className="bg-[#C2DAFF] px-6 py-4 lg:p-6 rounded-b-xl" initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+              viewport={{ once: true }}>
+              <p className="text-[#151515] font-sora text-lg lg:text-xl">
+                Kini Soekarno-Hatta berstatus 4-Star Airport, sejajar dengan Changi & Incheon
+              </p>
+            </motion.div>
+          </div>
         </div>
-        <motion.p
-          className="text-[#666666] text-base md:text-xl mt-[8%] md:mt-16 max-w-4xl mx-auto lg:px-0 md:px-8 px-4 md:mb-24"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          Sumber: <br />
-          Survei Local Product Shopping Behavior in Indonesia
-        </motion.p>
+        <div className="bg-[#0D4485] w-full py-10 md:py-20 md:pb-44 rounded-t-[3rem] md:rounded-t-[5rem]">
+          <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4 flex flex-col justify-center">
+            <motion.p
+              className="font-sora self-center bg-[#D1A42F] px-8 py-2 text-base md:text-xl rounded-full text-[#151516] mb-4 md:mb-0"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 12 }}
+              viewport={{ once: true }}
+            >
+              Target berikutnya:
+            </motion.p>
+            <div className="flex space-x-4 md:space-x-8 items-center md:border-2 md:border-[#D1A42F] md:rounded-full pl-0 py-0 pr-4 md:pr-8">
+              <motion.img
+                src={`${baseUrl}/assets/2.4.png`}
+                alt="Badge"
+                className="basis-1/3 max-w-[100px] md:max-w-[180px] flex-shrink-0"
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 1,
+                  ease: "easeOut"
+                }}
+                viewport={{ once: true }}
+              />
+              <div className="flex flex-col md:flex-row md:items-center">
+                <motion.p className="font-sora font-semibold md:w-[50%] text-white text-xl md:text-3xl" initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  viewport={{ once: true }}>5-Star <span className="hidden md:inline"><br /></span>
+                  <span className="inline md:hidden"> </span>Airport 2026</motion.p>
+                <motion.p
+                  className="text-white text-lg md:text-2xl md:w-[68%]"
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  Soekarno-Hatta berambisi berdiri sejajar dengan hub global seperti Changi, Hamad, dan Icheon
+                </motion.p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
       <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
         <img
           src={`${baseUrl}/assets/footer.png`}
-          className="z-50 mx-auto hidden w-full sm:block invert"
+          className="z-50 mx-auto hidden w-full sm:block"
         />
       </div>
     </div>
