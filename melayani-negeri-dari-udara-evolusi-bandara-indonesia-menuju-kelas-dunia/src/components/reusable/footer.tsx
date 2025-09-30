@@ -17,9 +17,9 @@ export default function Footer() {
             >
                 <div className="lg:w-1/2 p-6 lg:px-0 lg:py-12 mx-auto relative z-10">
                     <p className="text-center font-bold">Editor</p>
-                    <p className="text-center mb-6">Dimas Wahyu Indrajaya</p>
+                    <p className="text-center mb-6">Akhyari Hananto</p>
                     <p className="text-center font-bold">Penulis</p>
-                    <p className="text-center mb-6">Aulli Reza Atmam, Firdarainy Nuril Izzah, Aslamatur Rizqiyah, Rizky Kusumo</p>
+                    <p className="text-center mb-6">Akhyari Hananto</p>
                     <p className="text-center font-bold">Desain & Visual</p>
                     <p className="text-center mb-6">Arco Pradipta & Ario Priagung Nugroho</p>
                     <p className="text-center font-bold">Web Developer</p>
@@ -28,7 +28,7 @@ export default function Footer() {
             </footer>
             <div className="flex flex-col">
                 <span className="text-lg">Diterbitkan pada</span>
-                <span className="font-bold">24 September 2025</span>
+                <span className="font-bold">30 September 2025</span>
             </div>
             {/* @ts-ignore */}
             <div className="donation-container" program="gnfi-insight-bangun-wawasan-lewat-data-dan-cerita" button-style="background:#ff0000 !important;"></div>

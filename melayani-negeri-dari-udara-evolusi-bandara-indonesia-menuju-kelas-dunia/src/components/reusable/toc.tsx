@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Jamu Indonesia: Minuman Herbal, Harta Karun Nasional
+              Melayani Negeri dari Udara: Evolusi Bandara Indonesia Menuju Kelas Dunia
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Sejarah Jamu: Sudah Ada dari Era Hindu Budha
+              Masa Awal dan Perkembangan Jumlah Bandara
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Sajian Jamu di Tengah Masyarakat Kecil hingga Gedongan
+              Modernisasi Infrastruktur: Dari Terminal ke Ekosistem
             </a>
           </li>
           <li
@@ -73,7 +73,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              Aneka Rasa, Rupa, dan Khasiat Jamu
+              InJourney dan Revolusi Pengalaman Penumpang
             </a>
           </li>
           <li
@@ -81,7 +81,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-5">
-              Jamu di Mata Internasional
+              Bandara Indonesia di Mata Dunia
             </a>
           </li>
           <li
@@ -89,7 +89,40 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-6">
-              Merek Jamu Indonesia dan Popularitasnya di Tengah Masyarakat
+              Pertumbuhan Penumpang dan Dampak Ekonomi
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-7')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-7">
+              Paradoks Bandara Internasional
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-8')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-8">
+              Daya Beli dan Harga Tiket Pesawat
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-9')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-9">
+              Tantangan, dan Pembelajaran
+
+            </a>
+          </li>
+          <li
+            data-active={isSelected('#section-10')}
+            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
+          >
+            <a href="#section-10">
+              Masa Depan Kebandaraan Indonesia
             </a>
           </li>
         </ul>

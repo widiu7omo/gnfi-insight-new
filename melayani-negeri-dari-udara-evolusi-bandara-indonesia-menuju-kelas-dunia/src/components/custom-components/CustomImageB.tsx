@@ -22,11 +22,12 @@ const textVariant = {
 export function CustomImageB() {
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
+      <div className="absolute inset-0 h-[20rem] bg-gradient-to-b from-[#98cae6] z-10"></div>
       <div
         className="relative w-full justify-center bg-cover bg-bottom pt-16 pb-0 md:pt-24"
         style={{ backgroundImage: `url(${baseUrl}/assets/2.0.png)` }}
       >
-        <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4">
+        <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4 z-20">
           <motion.h2
             className="font-sora text-[#151516] font-bold text-[32px] md:text-[46px] md:leading-[3.5rem] pr-0 lg:pr-[50%]"
             initial={{ opacity: 0, y: 60, scale: 0.9 }}
