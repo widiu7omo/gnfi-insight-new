@@ -21,7 +21,7 @@ export default function Footer() {
                     <p className="text-center font-bold">Penulis</p>
                     <p className="text-center mb-6">Akhyari Hananto</p>
                     <p className="text-center font-bold">Desain & Visual</p>
-                    <p className="text-center mb-6">Arco Pradipta & Ario Priagung Nugroho</p>
+                    <p className="text-center mb-6">Tim Kreatif GNFI</p>
                     <p className="text-center font-bold">Web Developer</p>
                     <p className="text-center mb-6">Danar Widi Utomo & Fika Nur Aini</p>
                 </div>
