@@ -17,7 +17,7 @@ export function CustomImageE() {
           >
             <img
               src={`${baseUrl}/assets/5.1.png`}
-              alt="Airport"
+              alt="Background"
               className="w-[50%] h-auto rounded-full mx-auto bg-[#640D5E] mt-10 md:mt-0"
             />
           </motion.div>
@@ -151,7 +151,7 @@ export function CustomImageE() {
           <motion.div className="w-full md:w-[60%] relative">
             <motion.img
               src={`${baseUrl}/assets/5.3.png`}
-              alt="Airport"
+              alt="Direktur Utama InJourney"
               className="md:absolute ml-auto md:ml-0 mt-12 md:mt-0 bottom-0 md:-bottom-1 md:right-0 xl:h-full md:w-[80%] xl:w-auto w-[65%] h-auto z-0 md:z-20"
               initial={{ opacity: 0, y: 50, scale: 1 }}
               whileInView={{ opacity: 0.8, y: 0, scale: 1 }}
