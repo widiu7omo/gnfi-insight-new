@@ -49,7 +49,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-1">
-              Melayani Negeri dari Udara: Evolusi Bandara Indonesia Menuju Kelas Dunia
+              Wajah Mandalika Masa Kini: Jadi Primadona Wisata Olahraga, Ekonomi Semakin Menyala
             </a>
           </li>
           <li
@@ -57,7 +57,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-2">
-              Masa Awal dan Perkembangan Jumlah Bandara
+              Mandalika dan Pariwisatanya yang Semakin Bergairah
             </a>
           </li>
           <li
@@ -65,7 +65,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-3">
-              Modernisasi Infrastruktur: Dari Terminal ke Ekosistem
+              Sirkuit dan MotoGP yang Mengubah Wajah Mandalika
             </a>
           </li>
           <li
@@ -73,7 +73,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-4">
-              InJourney dan Revolusi Pengalaman Penumpang
+              Mandalika Jadi Primadona, Lombok Ditata
             </a>
           </li>
           <li
@@ -81,7 +81,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-5">
-              Bandara Indonesia di Mata Dunia
+              Buah Perubahan di Mandalika: Ekonomi Bergerak, Masyarakat Berdaya
             </a>
           </li>
           <li
@@ -89,40 +89,7 @@ export default function Toc() {
             className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
           >
             <a href="#section-6">
-              Pertumbuhan Penumpang dan Dampak Ekonomi
-            </a>
-          </li>
-          <li
-            data-active={isSelected('#section-7')}
-            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
-          >
-            <a href="#section-7">
-              Paradoks Bandara Internasional
-            </a>
-          </li>
-          <li
-            data-active={isSelected('#section-8')}
-            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
-          >
-            <a href="#section-8">
-              Daya Beli dan Harga Tiket Pesawat
-            </a>
-          </li>
-          <li
-            data-active={isSelected('#section-9')}
-            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
-          >
-            <a href="#section-9">
-              Tantangan, dan Pembelajaran
-
-            </a>
-          </li>
-          <li
-            data-active={isSelected('#section-10')}
-            className="data-[active=true]:font-bold hover:font-medium hover:cursor-pointer hover:translate-x-2 transition-transform hover:underline underline-offset-4"
-          >
-            <a href="#section-10">
-              Masa Depan Kebandaraan Indonesia
+              Mandalika Menatap Masa Depan
             </a>
           </li>
         </ul>
