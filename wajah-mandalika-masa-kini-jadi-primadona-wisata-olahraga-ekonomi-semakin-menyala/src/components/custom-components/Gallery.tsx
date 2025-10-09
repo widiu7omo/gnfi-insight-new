@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { baseUrl } from "@/constants/meta";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
@@ -23,59 +24,74 @@ const GALLERY_FILES = [
     "14.jpeg",
 ];
 
-type SlideImage = string | null;
-
 const formatLabel = (index: number) =>
   `Galeri Mandalika ${String(index + 1).padStart(2, "0")}`;
 
+const slideVariants = {
+  initial: (direction: "next" | "prev") => ({
+    x: direction === "next" ? "100%" : "-100%",
+  }),
+  animate: {
+    x: "0%",
+  },
+  exit: (direction: "next" | "prev") => ({
+    x: direction === "next" ? "-100%" : "100%",
+  }),
+};
+
 export function Gallery() {
-    const gallerySources = useMemo(
-        () =>
-            GALLERY_FILES.map((file) => `${baseUrl}/assets/gallery/${file}`),
-        [baseUrl],
-    );
+  const gallerySources = useMemo(
+    () =>
+      GALLERY_FILES.map((file) => `${baseUrl}/assets/gallery/${file}`),
+    [baseUrl],
+  );
 
-    const slides = useMemo<SlideImage[][]>(() => {
-        const chunked: SlideImage[][] = [];
-
-        for (let i = 0; i < gallerySources.length; i += ITEMS_PER_SLIDE) {
-            const chunk: SlideImage[] = gallerySources.slice(
-                i,
-                i + ITEMS_PER_SLIDE,
-            );
-
-            while (chunk.length < ITEMS_PER_SLIDE) {
-                chunk.push(null);
-            }
-
-            chunked.push(chunk);
-        }
-
-        return chunked;
-    }, [gallerySources]);
-
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-    const slideCount = slides.length;
   const totalImages = gallerySources.length;
-  const isNavigationDisabled = slideCount <= 1;
+  const maxVisible =
+    totalImages >= ITEMS_PER_SLIDE ? ITEMS_PER_SLIDE : totalImages;
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [direction, setDirection] = useState<"next" | "prev">("next");
+
+  const isNavigationDisabled = totalImages <= maxVisible;
   const isModalNavigationDisabled = totalImages <= 1;
   const selectedImageSrc =
     selectedIndex !== null ? gallerySources[selectedIndex] : null;
   const selectedImageLabel =
     selectedIndex !== null ? formatLabel(selectedIndex) : "";
 
-    const goToPrevious = () => {
-        setCurrentSlide((prev) =>
-            prev === 0 ? slideCount - 1 : Math.max(prev - 1, 0),
-        );
-    };
+  const visibleImages = useMemo(() => {
+    if (totalImages === 0) {
+      return [];
+    }
 
-    const goToNext = () => {
-        setCurrentSlide((prev) =>
-            prev === slideCount - 1 ? 0 : Math.min(prev + 1, slideCount - 1),
-        );
-    };
+    const images: string[] = [];
+
+    for (let offset = 0; offset < maxVisible; offset += 1) {
+      images.push(gallerySources[(currentIndex + offset) % totalImages]);
+    }
+
+    return images;
+  }, [currentIndex, gallerySources, maxVisible, totalImages]);
+
+  const goToPrevious = () => {
+    if (isNavigationDisabled) {
+      return;
+    }
+
+    setDirection("prev");
+    setCurrentIndex((prev) => (prev - 1 + totalImages) % totalImages);
+  };
+
+  const goToNext = () => {
+    if (isNavigationDisabled) {
+      return;
+    }
+
+    setDirection("next");
+    setCurrentIndex((prev) => (prev + 1) % totalImages);
+  };
 
   const openModal = (index: number) => {
     setSelectedIndex(index);
@@ -139,82 +155,89 @@ export function Gallery() {
         };
   }, [closeModal, goToModalNext, goToModalPrevious, selectedIndex]);
 
-    if (slideCount === 0) {
+    if (totalImages === 0) {
         return null;
     }
 
-    return (
-        <section className="bg-[#182121]">
-            <div className="relative mx-auto flex w-full max-w-4xl flex-col gap-6 px-4 py-12 sm:px-6 lg:px-0 ">
-                <button
-                    type="button"
-                    aria-label="Slide sebelumnya"
-                    onClick={goToPrevious}
-                    disabled={isNavigationDisabled}
-                    className="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white transition hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:bg-white/10 disabled:text-white/40 sm:h-12 sm:w-12"
-                >
-                    <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
-                </button>
+  const currentLabel = String((currentIndex % totalImages) + 1).padStart(2, "0");
+  const totalLabel = String(totalImages).padStart(2, "0");
 
-                <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur">
-                    <div
-                        className="flex transition-transform duration-500 ease-out"
-                        style={{
-                            transform: `translateX(-${currentSlide * 100}%)`,
-                        }}
-                    >
-                        {slides.map((slideImages, slideIndex) => (
-                            <div
-                                key={`slide-${slideIndex}`}
-                                className="grid min-w-full grid-cols-2 gap-4 p-4 sm:gap-5 sm:p-5 md:grid-cols-3 lg:grid-cols-4 md:gap-6 md:p-6"
-                            >
-                                {slideImages.map((imageSrc, imageIndex) => {
-                  const imageOrderIndex =
-                    slideIndex * ITEMS_PER_SLIDE + imageIndex;
-                  const previewLabel = formatLabel(imageOrderIndex);
+  return (
+      <section className="relative bg-[#182121]">
+          <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-12 sm:px-6 lg:px-0">
+        <button
+          type="button"
+          aria-label="Foto sebelumnya"
+          onClick={goToPrevious}
+          disabled={isNavigationDisabled}
+          className="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white transition hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:bg-white/10 disabled:text-white/40 sm:h-12 sm:w-12"
+        >
+          <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+        </button>
 
-                                    if (!imageSrc) {
-                    return (
-                      <div
-                        key={`slide-${slideIndex}-image-${imageIndex}`}
-                        className="aspect-[4/3] w-full rounded-2xl border border-white/5 bg-black/40"
-                      />
-                    );
-                                    }
-
-                                    return (
-                                        <button
-                                            key={`slide-${slideIndex}-image-${imageIndex}`}
-                                            type="button"
-                                            onClick={() => openModal(imageOrderIndex)}
-                                            className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/5 bg-black/30 focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-black"
-                                            aria-label={`Lihat pratinjau ${previewLabel}`}
-                                        >
-                                            <span className="sr-only">Lihat pratinjau {previewLabel}</span>
-                                            <img
-                                                src={imageSrc}
-                                                alt={previewLabel}
-                                                className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                                                loading={slideIndex === 0 ? "eager" : "lazy"}
-                                            />
-                                        </button>
-                                    );
-                                })}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                <button
-                    type="button"
-                    aria-label="Slide selanjutnya"
-                    onClick={goToNext}
-                    disabled={isNavigationDisabled}
-                    className="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white transition hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:bg-white/10 disabled:text-white/40 sm:h-12 sm:w-12"
-                >
-                    <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
-                </button>
+        <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur">
+          <div className="relative">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none opacity-0"
+            >
+              <div className="grid min-w-full grid-cols-2 gap-4 p-4 sm:gap-5 sm:p-5 md:grid-cols-3 lg:grid-cols-4 md:gap-6 md:p-6">
+                {visibleImages.map((_, index) => (
+                  <div
+                    key={`placeholder-${index}`}
+                    className="aspect-[4/3] rounded-2xl"
+                  />
+                ))}
+              </div>
             </div>
+            <AnimatePresence initial={false} custom={direction}>
+              <motion.div
+                key={`slide-${currentIndex}`}
+                className="absolute inset-0 grid min-w-full grid-cols-2 gap-4 p-4 sm:gap-5 sm:p-5 md:grid-cols-3 lg:grid-cols-4 md:gap-6 md:p-6"
+                variants={slideVariants}
+                custom={direction}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+              >
+                {visibleImages.map((imageSrc, imageIndex) => {
+                  const actualIndex = (currentIndex + imageIndex) % totalImages;
+                  const previewLabel = formatLabel(actualIndex);
+
+                  return (
+                    <button
+                      key={`image-${actualIndex}`}
+                      type="button"
+                      onClick={() => openModal(actualIndex)}
+                      className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/5 bg-black/30 focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-black"
+                      aria-label={`Lihat pratinjau ${previewLabel}`}
+                    >
+                      <span className="sr-only">Lihat pratinjau {previewLabel}</span>
+                      <img
+                        src={imageSrc}
+                        alt={previewLabel}
+                        className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                        loading={imageIndex === 0 ? "eager" : "lazy"}
+                      />
+                    </button>
+                  );
+                })}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          aria-label="Foto selanjutnya"
+          onClick={goToNext}
+          disabled={isNavigationDisabled}
+          className="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white transition hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:bg-white/10 disabled:text-white/40 sm:h-12 sm:w-12"
+        >
+          <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+        </button>
+      </div>
 
             {selectedImageSrc ? (
                 <div
