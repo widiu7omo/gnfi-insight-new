@@ -71,7 +71,7 @@ export function CustomImageC() {
                 }}
                 viewport={{ once: true }}
               >
-                Sircuit Mandalika Dibangun, Wisatawan Datang Berduyun-duyun
+                Sirkuit Mandalika Dibangun, Wisatawan Datang Berduyun-duyun
               </motion.h2>
               <motion.p
                 className="mt-8 md:mt-12 font-sora text-white text-xl md:text-[32px] md:leading-[2.5rem] lg:leading-[3rem]"
@@ -347,7 +347,7 @@ export function CustomImageC() {
       <div className="absolute bottom-16 z-40 mx-auto max-w-4xl">
         <img
           src={`${baseUrl}/assets/footer.png`}
-          className="z-50 mx-auto hidden w-full sm:block"
+          className="z-50 mx-auto max-w-xl w-full hidden sm:block"
         />
       </div>
     </div>

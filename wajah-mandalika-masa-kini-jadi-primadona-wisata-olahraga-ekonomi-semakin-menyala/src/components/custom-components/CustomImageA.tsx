@@ -178,7 +178,7 @@ export function CustomImageA() {
           <img
             src={`${baseUrl}/assets/1.3.png`}
             alt="Sun"
-              className="scale-[.3] xs:scale-[.35] sm:scale-[.5] md:scale-[.7] lg:mr-[4rem] lg:scale-[1] xl:scale-125"
+              className="scale-[.3] xs:scale-[.35] sm:scale-[.5] md:scale-[.7] lg:mr-[4rem] lg:scale-[1] xl:scale-125 opacity-30 sm:opacity-100"
             />
           </motion.div>
           <motion.img
@@ -264,7 +264,7 @@ export function CustomImageA() {
         >
           <motion.img
             src={`${baseUrl}/assets/footer.png`}
-            className="z-40 mx-auto w-full max-w-xl"
+            className="z-40 mx-auto w-full max-w-xl hidden sm:block"
             variants={subtleScale}
           />
         </motion.div>

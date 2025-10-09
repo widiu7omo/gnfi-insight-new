@@ -164,7 +164,7 @@ export function CustomImageE() {
       <div className="absolute bottom-20 z-50 mx-auto max-w-4xl">
         <img
           src={`${baseUrl}/assets/footer.png`}
-          className="z-50 mx-auto hidden w-full sm:block"
+          className="z-50 mx-auto max-w-xl w-full hidden sm:block"
         />
       </div>
     </div>
