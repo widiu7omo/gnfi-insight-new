@@ -65,7 +65,7 @@ export function CustomImageD() {
       <div className="absolute bottom-0 inset-x-0 h-[20rem] bg-gradient-to-t from-[#f67384] z-10"></div>
       <div
         className="relative w-full justify-center bg-cover bg-center pb-12 pt-16 md:pb-[8rem] md:pt-24 xl:pb-[10rem]"
-        style={{ backgroundImage: `url(${baseUrl}/assets/4.1.png)` }}
+        style={{ backgroundImage: `url(${baseUrl}/assets/4.1.jpg)` }}
       >
         <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4">
           <div className="w-full relative z-10">
