@@ -1,7 +1,7 @@
 "use client";
-
 import { baseUrl } from "@/constants/meta";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const textVariant = {
   hidden: { opacity: 0, y: 60, scale: 0.95 },
@@ -19,15 +19,47 @@ const textVariant = {
   }),
 };
 
+const DATA = [
+  { label: "Lombok Tengah 2024", value: 338.29, color: "#F38989" },
+  { label: "NTB 2025", value: 1490, color: "#45D80B" },
+  { label: "Lombok Tengah 2024", value: 3138, color: "#F38989" },
+  { label: "NTB 2025", value: 13769, color: "#45D80B" },
+];
+const MAX = 20000;
+
+const DATAHOTEL = [
+  { label: "Lombok Tengah 2024", value: 24651, valueBar: 64000, color: "#2B293F" },
+  { label: "NTB 2025", value: 74071, valueBar: 78071, color: "#C2272F" },
+  { label: "Lombok Tengah 2024", value: 24799, valueBar: 64200, color: "#2B293F" },
+  { label: "NTB 2025", value: 66869, valueBar: 71869, color: "#C2272F" },
+];
+const MAXHOTEL = 74000;
+
 export function CustomImageC() {
+  const [barHeight, setBarHeight] = useState(550);
+  useEffect(() => {
+  const handleResize = () => {
+    setBarHeight(window.innerWidth < 768 ? 350 : 550);
+  };
+
+  handleResize();
+  window.addEventListener("resize", handleResize);
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
-      <div className="bg-[#FBFBFB] w-full pt-20 pb-6 md:pt-24 md:pb-8 relative">
+      <div className="absolute inset-0 h-[20rem] bg-gradient-to-b from-[#31124B] z-10"></div>
+      <div
+        className="relative w-full justify-center bg-cover bg-center pb-12 pt-16 md:pb-[8rem] md:pt-24 xl:pb-24"
+        style={{ backgroundImage: `url(${baseUrl}/assets/3.4.png)` }}
+      >
         <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4">
           <div className="relative flex flex-col md:flex-row">
-            <div className="w-full md:w-[58%] relative z-10">
+            <div className="relative z-10">
               <motion.h2
-                className="font-sora text-[#3B3A3C] font-bold text-[32px] md:text-[46px] md:leading-[3.5rem]"
+                className="w-full md:w-[90%] font-sora text-[#45D80B] font-bold text-[32px] md:text-[46px] lg:text-6xl md:leading-[3.5rem] lg:leading-[4.5rem]"
                 initial={{ opacity: 0, y: 60, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{
@@ -39,225 +71,274 @@ export function CustomImageC() {
                 }}
                 viewport={{ once: true }}
               >
-                Pertumbuhan Penumpang & Dampak Ekonomi
+                Sircuit Mandalika Dibangun, Wisatawan Datang Berduyun-duyun
               </motion.h2>
               <motion.p
-                className="mt-2 md:mt-6 font-sora text-[#5F6F94] text-xl md:text-[28px] md:leading-[2.5rem]"
+                className="mt-8 md:mt-12 font-sora text-white text-xl md:text-[32px] md:leading-[2.5rem] lg:leading-[3rem]"
                 variants={textVariant}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={1}
               >
-                Jumlah penumpang udara melonjak drastis dalam dua dekade terakhir
-              </motion.p>
+                Data membuktikan, hadirnya Sirkuit Mandalika diikuti oleh naiknya perjalanan wisatawan ke Lombok Tengah dan NTB, begitu pula dengan tingkat okupansi hotelnya.           </motion.p>
             </div>
-            <motion.img
-              src={`${baseUrl}/assets/3.1.png`}
-              alt="Pesawat"
-              className="absolute -top-[30%] hidden md:block md:top-0 right-0 w-[150px] md:w-[360px] lg:w-[460px] z-20"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-              viewport={{ once: true }}
-            />
           </div>
-          <div className="flex md:flex-row flex-col md:mt-24 md:space-x-8">
-            <div className="relative inline-block w-full md:w-[70%] mt-[26%] md:mt-4 lg:mt-0">
-              <motion.img
-                src={`${baseUrl}/assets/3.2.png`}
-                alt="Bar chart"
-                className="w-full h-auto"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
-              />
-              <motion.div className="absolute bottom-[32%] md:bottom-[30%] -left-2 md:left-0 lg:left-[2%]"
-                initial={{ opacity: 0, y: 40, scale: 0.8 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.8, type: "spring", stiffness: 80, delay: 0.2 }}
-                viewport={{ once: true }}>
-                <div className="bg-[#124B94] font-sora text-white text-center rounded-lg px-4 py-2 md:px-5 md:py-4 text-sm md:text-lg shadow-lg">
-                  <span className="text-lg md:text-2xl lg:text-3xl font-bold">8</span> <span className="font-bold">Juta</span>
-                </div>
-                <div className="absolute left-1/2 -bottom-6 -translate-x-1/2 w-0 h-0
-  border-l-[8px] border-r-[8px] border-t-[30px] 
-  border-l-transparent border-r-transparent border-t-[#124B94]">
-                </div>
-              </motion.div>
-              <motion.div className="absolute -top-2 md:top-[4%] lg:top-[6%] left-[20%] md:left-[18%] lg:left-[20%]" initial={{ opacity: 0, y: 40, scale: 0.8 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.8, type: "spring", stiffness: 80, delay: 0.2 }}
-                viewport={{ once: true }}>
-                <div className="bg-[#124B94] font-sora text-white text-center font-bold rounded-lg px-4 md:px-7 py-1 text-sm md:text-lg shadow-lg">
-                  <span className="text-lg md:text-2xl lg:text-3xl">94,5</span> <br /> Juta
-                </div>
-                <div className="absolute left-1/2 -bottom-6 -translate-x-1/2 w-0 h-0
-  border-l-[8px] border-r-[8px] border-t-[30px] 
-  border-l-transparent border-r-transparent border-t-[#124B94]">
-                </div>
-              </motion.div>
-              <motion.div className="absolute -top-[20%] md:-top-[14%] left-[38%] md:left-[40%]" initial={{ opacity: 0, y: 40, scale: 0.8 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.8, type: "spring", stiffness: 80, delay: 0.2 }}
-                viewport={{ once: true }}>
-                <div className="bg-[#124B94] font-sora text-white text-center font-bold rounded-lg px-7 py-1 text-sm md:text-lg shadow-lg">
-                  <span className="text-lg md:text-2xl lg:text-3xl">110</span> <br /> Juta
-                </div>
-                <div className="absolute left-1/2 -bottom-6 -translate-x-1/2 w-0 h-0
-  border-l-[8px] border-r-[8px] border-t-[30px] 
-  border-l-transparent border-r-transparent border-t-[#124B94]">
-                </div>
-              </motion.div>
-              <motion.div className="absolute top-[28%] lg:top-[32%] left-[56%] lg:left-[59%]" initial={{ opacity: 0, y: 40, scale: 0.8 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.8, type: "spring", stiffness: 80, delay: 0.2 }}
-                viewport={{ once: true }}>
-                <div className="bg-[#124B94] font-sora text-white text-center rounded-lg px-2 md:px-5 py-1 text-sm md:text-lg shadow-lg">
-                  <span className="text-lg md:text-2xl lg:text-3xl font-bold">36</span> <span className="font-bold">Juta</span><br /> (Pandemi)
-                </div>
-                <div className="absolute left-1/2 -bottom-6 -translate-x-1/2 w-0 h-0
-  border-l-[8px] border-r-[8px] border-t-[30px] 
-  border-l-transparent border-r-transparent border-t-[#124B94]">
-                </div>
-              </motion.div>
-              <motion.div className="absolute top-[6%] md:top-9 lg:top-14 right-0 md:left-[80%]" initial={{ opacity: 0, y: 40, scale: 0.8 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.8, type: "spring", stiffness: 80, delay: 0.2 }}
-                viewport={{ once: true }}>
-                <div className="bg-[#124B94] font-sora text-white text-center rounded-lg px-[6px] md:px-4 py-1 text-sm md:text-lg shadow-lg">
-                  Pulih ke<br /> <span className="text-lg md:text-2xl lg:text-3xl font-bold">77</span> <span className="font-bold text-sm md:text-lg">Juta</span>
-                </div>
-                <div className="absolute left-1/2 -bottom-6 -translate-x-1/2 w-0 h-0
-  border-l-[8px] border-r-[8px] border-t-[30px] 
-  border-l-transparent border-r-transparent border-t-[#124B94]">
-                </div>
-              </motion.div>
-            </div>
-            <div className="w-full md:w-[30%] text-center">
-              {/* Card atas */}
-              <motion.div
-                className="bg-[#33D4FE] rounded-t-3xl p-4 pb-10 md:pt-8 lg:pb-14 lg:px-6 lg:pt-8"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.8,
-                  type: "spring",
-                  stiffness: 70,
-                }}
-                viewport={{ once: true }}
-              >
-                <p className="text-[#5F6F94] text-xl lg:text-[28px]">Proyeksi IATA:</p>
-                <p className="text-[#001123] font-bold text-4xl lg:text-5xl mt-2 md:mt-3">270 Juta</p>
-              </motion.div>
 
-              {/* Card bawah */}
-              <motion.div
-                className="bg-[#036ADB] rounded-3xl -mt-8 p-4 md:py-8 md:px-2 lg:py-14"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.9,
-                  type: "spring",
-                  stiffness: 60,
-                  delay: 0.2,
-                }}
-                viewport={{ once: true }}
-              >
-                <p className="text-white text-xl lg:text-[28px] leading-[2.5rem]">
-                  penumpang /tahun pada 2034
-                </p>
-                <p className="text-[#FFD800] font-bold text-xl md:text-2xl lg:text-3xl">posisi</p>
-                <p className="text-[#FFD800] font-bold text-4xl lg:text-5xl">6 dunia</p>
-              </motion.div>
-            </div>
+          <div className="bg-[#31124B] rounded-3xl py-4 px-4 md:py-8 md:px-8 space-y-4 md:space-y-8 my-10">
+            <div className="flex flex-row items-center">
+              <div className="flex flex-row items-center w-1/3 md:space-x-4">
+                <motion.img
+                  src={`${baseUrl}/assets/3.1.png`}
+                  alt="Lombok tengah"
+                  className="w-10 md:w-20 h-auto"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1.2, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                />
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="text-white font-sora font-semibold ml-1 md:ml-0 text-sm md:text-2xl lg:text-3xl w-[40%]"
+                >
+                  Lombok <br /> Tengah
+                </motion.p>
+              </div>
+              <div className="flex flex-col w-2/3 ml-3 md:ml-0">
+                {DATA.slice(0, 2).map((d, i, arr) => (
+                  <div key={i} className={`flex items-center ${i !== arr.length - 1 ? 'mb-1 md:mb-3' : ''}`}>
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${(d.value / MAX) * 100}%` }}
+                      transition={{ duration: 0.8, delay: i * 0.2 }}
+                      style={{ backgroundColor: d.color }}
+                      className="h-5 md:h-10"
+                      viewport={{ once: true, amount: 0.5 }}
+                    />
+                    <motion.span
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: i * 0.3 }}
+                      viewport={{ once: true, amount: 0.5 }}
+                      className="ml-1 md:ml-4 text-base md:text-3xl font-sora font-bold"
+                      style={{ color: d.color }}
+                    >
+                      {d.value.toLocaleString('id-ID')}
+                    </motion.span>
 
+                    {i === 0 && (
+                      <motion.span
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: i * 0.4 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                        className="ml-2 md:ml-4 text-[8px] md:text-xl font-sora font-normal text-white"
+                      >
+                        Jumlah perjalanan (Ribu)
+                      </motion.span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="flex flex-row items-center">
+              <div className="flex flex-row items-center w-1/3 md:space-x-4">
+                <motion.img
+                  src={`${baseUrl}/assets/3.2.png`}
+                  alt="NTB"
+                  className="w-10 md:w-20 h-auto"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1.2, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                />
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="text-white font-sora font-semibold ml-1 md:ml-0 text-sm md:text-2xl lg:text-3xl w-[40%]"
+                >
+                  NTB
+                </motion.p>              </div>
+              <div className="flex flex-col w-2/3 ml-2 md:ml-0">
+                {DATA.slice(2, 4).map((d, i, arr) => (
+                  <div key={i} className={`flex items-center ${i !== arr.length - 1 ? 'mb-1 md:mb-3' : ''}`}>
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${(d.value / MAX) * 100}%` }}
+                      transition={{ duration: 0.8, delay: i * 0.2 }}
+                      style={{ backgroundColor: d.color }}
+                      className="h-5 md:h-10"
+                      viewport={{ once: true, amount: 0.5 }}
+                    />
+                    <motion.span
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: i * 0.3 }}
+                      viewport={{ once: true, amount: 0.5 }}
+                      className="ml-1 md:ml-4 text-base md:text-3xl font-sora font-bold"
+                      style={{ color: d.color }}
+                    >
+                      {d.value.toLocaleString('id-ID')}
+                    </motion.span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.8 }}
+              className="text-white font-sora text-[9px] md:text-lg"
+            >
+              2021 (Sebelum Sirkuit Mandalika)
+              <span className="inline-block w-4 h-2 md:w-6 md:h-4 bg-[#F38989] mx-2 align-middle"></span>
+              2024 (Sesudah Sirkuit Mandalika)
+              <span className="inline-block w-4 h-2 md:w-6 md:h-4 bg-[#45D80B] mx-2 align-middle"></span>
+              <br />
+              Sumber: BPS
+            </motion.p>
           </div>
-        </div>
-      </div>
-      <div
-        className="z-20 relative w-full justify-center bg-no-repeat bg-top bg-cover min-h-[800px] pt-16 pb-0 md:pt-24"
-        style={{ backgroundImage: `url(${baseUrl}/assets/3.0.png)` }}
-      >
-        <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4 justify-center">
-          <motion.p
-            className="text-center text-white font-black text-3xl md:text-3xl md:text-5xl mt-8"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              type: "spring",
-              stiffness: 70,
-              delay: 0.2
-            }}
-            viewport={{ once: true }}
-          >
-            Dampak ekonomi:
-          </motion.p>
-          <div className="flex flex-col md:flex-row space-y-12 md:space-y-0 md:space-x-8 mt-24 md:pb-20 pb-0 mb-20">
-            <div className="bg-[#073B7D] px-4 py-6 w-full md:w-1/3 rounded-3xl text-center md:text-left">
+
+          <div className="relative w-full mx-auto bg-[#C44E5E] rounded-3xl">
+            <motion.table
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="w-full border-collapse overflow-hidden rounded-3xl shadow-lg"
+            >
+              <thead className="bg-[#452C53] text-white">
+                <tr>
+                  <th className="py-1 px-2 md:py-3 md:px-4 text-left text-[#45D80B] text-base md:text-xl md:pl-24 border-r text-center md:text-left">
+                    Tahun
+                  </th>
+                  <th className="py-1 px-2 md:py-3 md:px-4 text-left text-[#45D80B] text-base md:text-xl border-r text-center">
+                    Hotel Berbintang (%)
+                  </th>
+                  <th className="py-1 px-2 md:py-3 md:px-4 text-left text-[#45D80B] text-base md:text-xl md:pr-24 text-center md:text-left">
+                    Hotel Non Berbintang (%)
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-[#C44E5E]">
+                <tr>
+                  <td className="py-1 px-2 md:py-3 md:px-4 border-t font-sora font-bold md:pl-24 border-r text-white text-center text-sm md:text-base">
+                    2021
+                  </td>
+                  <td className="py-1 px-2 md:py-3 md:px-4 border-t font-sora font-bold border-r text-white text-center text-sm md:text-base">
+                    33,51
+                  </td>
+                  <td className="py-1 px-2 md:py-3 md:px-4 border-t font-sora font-bold md:pr-24 text-white text-center text-sm md:text-base">
+                    14,61
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-1 px-2 md:py-3 md:px-4 border-t font-sora font-bold md:pl-24 border-r text-white text-center text-sm md:text-base">
+                    2024
+                  </td>
+                  <td className="py-1 px-2 md:py-3 md:px-4 border-t font-sora font-bold border-r text-white text-center text-sm md:text-base">
+                    40,39
+                  </td>
+                  <td className="py-1 px-2 md:py-3 md:px-4 border-t font-sora font-bold md:pr-24 text-white text-center text-sm md:text-base">
+                    28,16
+                  </td>
+                </tr>
+              </tbody>
+            </motion.table>
+            <div className="relative px-2 md:px-24 mt-4 md:mt-12 flex flex-row justify-center">
+              <div className="w-1/2 ">
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, ease: "easeOut" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="font-sora font-bold text-[#45D80B] text-base md:text-xl text-center"
+                >
+                  Tamu yang Menginap <br />di Hotel Bintang (2024)
+                </motion.p>
+                <div className="flex space-x-2 md:space-x-6 items-end justify-center h-[25rem] md:h-[40rem] mt-4">
+                  {DATAHOTEL.slice(0, 2).map((d, i) => {
+                    const heightPx = (d.valueBar / MAXHOTEL) * barHeight;
+                    return (
+                      <div key={i} className="flex flex-col items-center">
+                        <motion.span
+                          initial={{ opacity: 0, y: 10 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.6, delay: i * 0.2 }}
+                          viewport={{ once: true, amount: 0.4 }}
+                          className="mb-2 text-base md:text-2xl font-bold font-sora text-white"
+                        >
+                          {d.value.toLocaleString('id-ID')}
+                        </motion.span>
+
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          whileInView={{ height: heightPx, opacity: 1 }}
+                          transition={{ duration: 0.8, delay: i * 0.2, ease: 'easeOut' }}
+                          viewport={{ once: true, amount: 0.4 }}
+                          style={{ backgroundColor: d.color }}
+                          className="w-8 md:w-16"
+                        />
+                      </div>
+                    );
+                  })}
+
+                </div>
+              </div>
+              <div className="w-1/2">
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, ease: "easeOut" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="font-sora font-bold text-[#45D80B] text-base md:text-xl text-center"
+                >
+                  Tamu yang Menginap <br />di Hotel Non Bintang (2024)
+                </motion.p>
+                <div className="flex space-x-2 md:space-x-6 items-end justify-center h-[25rem] md:h-[40rem] mt-4">
+                  {DATAHOTEL.slice(2, 4).map((d, i) => {
+                    const heightPx = (d.valueBar / MAXHOTEL) * barHeight;
+                    return (
+                      <div key={i} className="flex flex-col items-center">
+                        <motion.span
+                          initial={{ opacity: 0, y: 10 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.6, delay: i * 0.2 }}
+                          viewport={{ once: true, amount: 0.4 }}
+                          className="mb-2 text-base md:text-2xl font-bold font-sora text-white"
+                        >
+                          {d.value.toLocaleString('id-ID')}
+                        </motion.span>
+
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          whileInView={{ height: heightPx, opacity: 1 }}
+                          transition={{ duration: 0.8, delay: i * 0.2, ease: "easeOut" }}
+                          viewport={{ once: true, amount: 0.4 }}
+                          style={{ backgroundColor: d.color }}
+                          className="w-8 md:w-16"
+                        />
+                      </div>
+                    );
+                  })}
+
+                </div>
+              </div>
               <motion.img
                 src={`${baseUrl}/assets/3.3.png`}
-                alt="Bar chart"
-                className="w-[60%] md:w-full h-auto -mt-12 mx-auto"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1.3 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                alt="People"
+                className="absolute bottom-0 w-[90%] h-auto"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
                 viewport={{ once: true }}
               />
-              <motion.p className="text-white font-bold text-2xl md:text-3xl px-4 mt-8 font-sora" variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={1}>Pariwisata Tumbuh </motion.p>
-              <motion.p className="text-[#FFD800] text-5xl md:text-7xl font-bold font-sora px-4" variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={1}>80%</motion.p>
-              <motion.p className="text-white text-lg md:text-2xl px-4 font-sora" variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={1}>turis asing via Bali & Jakarta</motion.p>
-            </div>
-            <div className="bg-[#073B7D] px-4 py-6 w-full md:w-1/3 rounded-3xl">
-              <motion.img
-                src={`${baseUrl}/assets/3.4.png`}
-                alt="Bar chart"
-                className="w-[60%] md:w-full h-auto -mt-8 mx-auto"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1.25 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
-              />
-              <motion.p className="text-white text-2xl md:text-3xl font-sora mt-10" variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={1}>UMKM lokal hidup lewat kios di terminal</motion.p>
-            </div>
-            <div className="bg-[#073B7D] px-4 py-6 w-full md:w-1/3 rounded-3xl">
-              <motion.img
-                src={`${baseUrl}/assets/3.5.png`}
-                alt="Bar chart"
-                className="w-[60%] md:w-full h-auto -mt-8 mx-auto"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1.3 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
-              />
-              <motion.p className="text-white font-semibold text-2xl md:text-4xl mt-8 px-4" variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={1}>Logistik lebih cepat:</motion.p>
-              <motion.p className="text-white text-xl md:text-[22px] px-4" variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={1}>Harga semen Papua turun, akses medis Maluku lebih mudah</motion.p>
             </div>
           </div>
         </div>
