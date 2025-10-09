@@ -52,7 +52,7 @@ export function CustomImageC() {
     <div className="relative flex flex-col items-center overflow-hidden">
       <div className="absolute inset-0 h-[20rem] bg-gradient-to-b from-[#31124B] z-10"></div>
       <div
-        className="relative w-full justify-center bg-cover bg-center pb-12 pt-16 md:pb-[8rem] md:pt-24 xl:pb-24"
+        className="relative w-full justify-center bg-cover bg-center pb-12 pt-16 md:pb-[8rem] md:pt-24 xl:pb-[12rem]"
         style={{ backgroundImage: `url(${baseUrl}/assets/3.4.png)` }}
       >
         <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4">
@@ -205,7 +205,7 @@ export function CustomImageC() {
             </motion.p>
           </div>
 
-          <div className="relative w-full mx-auto bg-[#C44E5E] rounded-3xl">
+          <div className="relative w-full mx-auto bg-[#C44E5E] rounded-3xl z-20">
             <motion.table
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -343,7 +343,8 @@ export function CustomImageC() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
+      <div className="absolute bottom-0 h-[20rem] w-full bg-gradient-to-t from-[#964666] z-10"></div>
+      <div className="absolute bottom-16 z-40 mx-auto max-w-4xl">
         <img
           src={`${baseUrl}/assets/footer.png`}
           className="z-50 mx-auto hidden w-full sm:block"

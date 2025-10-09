@@ -84,12 +84,12 @@ export function CustomImageE() {
         </div>
       </div>
       <div
-        className="z-20 relative w-full justify-center bg-no-repeat bg-top bg-cover"
+        className="z-20 relative w-full justify-center bg-no-repeat bg-top bg-cover xl:pb-[6rem]"
         style={{ backgroundImage: `url(${baseUrl}/assets/5.2.png)` }}
       >
-        <div className="relative mx-auto lg:px-0 md:px-8 pl-4 justify-center flex md:flex-row flex-col pt-12 md:pt-24">
+        <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 pl-4 justify-center flex md:flex-row flex-col pt-12 md:pt-24">
           <motion.div
-            className="w-full md:w-[60%] lg:pl-[20%] mb-4 md:mb-24 flex flex-col"
+            className="w-full mb-4 md:mb-24 flex flex-col"
             initial={{ opacity: 0, y: 60, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{
@@ -148,7 +148,7 @@ export function CustomImageE() {
               Direktur Utama InJourney
             </motion.p>
           </motion.div>
-          <motion.div className="w-full md:w-[60%] relative">
+          <motion.div className="w-full relative">
             <motion.img
               src={`${baseUrl}/assets/5.3.png`}
               alt="Direktur Utama InJourney"
@@ -161,7 +161,7 @@ export function CustomImageE() {
           </motion.div>
         </div>
       </div>
-      <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
+      <div className="absolute bottom-20 z-50 mx-auto max-w-4xl">
         <img
           src={`${baseUrl}/assets/footer.png`}
           className="z-50 mx-auto hidden w-full sm:block"

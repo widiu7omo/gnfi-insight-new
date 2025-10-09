@@ -61,8 +61,10 @@ const MAXINVESTASI = 675;
 export function CustomImageD() {
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
+      <div className="absolute inset-0 h-[20rem] bg-gradient-to-b from-[#964666] z-10"></div>
+      <div className="absolute bottom-0 inset-x-0 h-[20rem] bg-gradient-to-t from-[#f67384] z-10"></div>
       <div
-        className="relative w-full justify-center bg-cover bg-center pb-12 pt-16 md:pb-[8rem] md:pt-24 xl:pb-24"
+        className="relative w-full justify-center bg-cover bg-center pb-12 pt-16 md:pb-[8rem] md:pt-24 xl:pb-[10rem]"
         style={{ backgroundImage: `url(${baseUrl}/assets/4.1.png)` }}
       >
         <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4">
@@ -312,7 +314,7 @@ export function CustomImageD() {
               2023<span className="inline-block w-4 h-2 md:w-10 md:h-4 bg-[#45D80B] mx-2 align-middle"></span>
             </motion.p>
           </div>
-          <div className="bg-[#2B293F] rounded-3xl py-4 px-4 md:py-6 md:px-8 space-y-4 md:space-y-8 mb-3 md:mb-10">
+          <div className="bg-[#2B293F] rounded-3xl py-4 px-4 md:py-6 md:px-8 space-y-4 md:space-y-8 mb-3 md:mb-10 relative z-10">
             <motion.p
               className="text-[#FBD690] text-center font-bold text-xl md:text-[28px] font-sora py-6"
               initial={{ opacity: 0, y: 30 }}
@@ -429,7 +431,7 @@ export function CustomImageD() {
           </div>
         </div>
         <motion.p
-          className="text-center text-white md:text-xl text-base"
+          className="text-center text-white md:text-xl text-base relative z-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -438,7 +440,7 @@ export function CustomImageD() {
           Sumber: BPS
         </motion.p>
       </div>
-      <div className="absolute bottom-0 z-50 mx-auto max-w-4xl">
+      <div className="absolute bottom-20 z-40 mx-auto max-w-4xl">
         <img
           src={`${baseUrl}/assets/footer.png`}
           className="z-50 mx-auto hidden w-full sm:block"

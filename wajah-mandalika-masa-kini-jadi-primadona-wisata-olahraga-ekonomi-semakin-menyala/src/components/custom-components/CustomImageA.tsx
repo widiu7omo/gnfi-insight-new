@@ -74,7 +74,7 @@ const slideFromBottom = {
 
 export function CustomImageA() {
   return (
-    <div className="relative flex flex-col items-center overflow-hidden bg-gradient-to-b from-[#8d182c] to-black">
+    <div className="relative flex flex-col items-center overflow-hidden bg-gradient-to-b from-[#8d182c] to-[90%] to-black pt-12">
       <div className="relative w-full">
         <div className="mx-auto max-w-4xl px-6 md:px-8 lg:px-0">
           <motion.h2
@@ -100,7 +100,7 @@ export function CustomImageA() {
             variants={slideFromLeft}
           >
             <motion.p
-              className="block relative z-50 p-6 font-sora text-base font-semibold leading-[1.6] text-[#3b3a3c] sm:p-8 sm:text-lg md:hidden md:text-2xl md:leading-[2.5rem]"
+              className="block relative z-40 p-6 font-sora text-base font-semibold leading-[1.6] text-[#3b3a3c] sm:p-8 sm:text-lg md:hidden md:text-2xl md:leading-[2.5rem]"
               variants={fadeUp}
             >
               Sejak era kolonial Belanda, Pulau Lombok tempat Mandalika berada
@@ -112,7 +112,7 @@ export function CustomImageA() {
             variants={slideFromLeft}
           >
             <motion.p
-              className="font-sora relative z-50 text-base font-semibold leading-[1.6] text-[#3b3a3c] sm:text-lg md:text-xl md:leading-[2.5rem] lg:text-2xl"
+              className="font-sora relative z-40 text-base font-semibold leading-[1.6] text-[#3b3a3c] sm:text-lg md:text-xl md:leading-[2.5rem] lg:text-2xl"
               variants={fadeUp}
             >
               Sejak era kolonial Belanda, Pulau Lombok tempat Mandalika berada
@@ -256,7 +256,7 @@ export function CustomImageA() {
           </motion.div>
         </motion.div>
         <motion.div
-          className="relative flex items-start justify-center p-8 pb-6 sm:p-12 sm:pb-8 md:p-16 md:pb-10 "
+          className="relative bottom-12 flex items-start justify-center p-8 pb-6 sm:p-12 sm:pb-8 md:p-16 md:pb-10"
           variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { ...fadeUp.visible.transition, delay: 0.7 } } }}
           initial="hidden"
           whileInView="visible"
