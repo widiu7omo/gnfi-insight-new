@@ -69,7 +69,7 @@ export function CustomImageC() {
           <div className="relative flex flex-col md:flex-row">
             <div className="relative z-10">
               <motion.h2
-                className="w-full font-sora text-[32px] font-bold text-[#45D80B] md:text-[43px] md:leading-[3.5rem] lg:text-[3.3rem] lg:leading-[4.5rem]"
+                className="w-full font-sora text-[32px] font-bold text-[#45D80B] md:text-[43px] md:leading-[3.5rem] lg:text-[3.2rem] lg:leading-[4.5rem]"
                 initial={{ opacity: 0, y: 60, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{
@@ -84,7 +84,7 @@ export function CustomImageC() {
                 Sirkuit Mandalika Dibangun, Wisatawan Datang Berduyun-duyun
               </motion.h2>
               <motion.p
-                className="mt-8 font-sora text-xl text-white md:mt-12 md:text-3xl md:leading-[2.5rem] lg:leading-[3rem]"
+                className="mt-8 font-sora text-xl text-white md:mt-12 md:text-[1.7rem] md:leading-[2.5rem] lg:leading-[2.5rem]"
                 variants={textVariant}
                 initial="hidden"
                 whileInView="visible"

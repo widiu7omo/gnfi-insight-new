@@ -70,7 +70,7 @@ export function CustomImageD() {
         <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4">
           <div className="w-full relative z-10">
             <motion.h2
-              className="font-sora text-[#FBD690] font-bold w-full text-center text-[32px] md:text-[43px] lg:text-[3.1rem] md:leading-[3.5rem]"
+              className="font-sora text-[#FBD690] font-bold w-full text-center text-[32px] md:text-[43px] lg:text-[3.2rem] md:leading-[3.5rem]"
               initial={{ opacity: 0, y: 60, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{
@@ -85,7 +85,7 @@ export function CustomImageD() {
               Bukan Cuma Pebalap <br />Ekonomi NTB Juga Ikut "Ngacir" <br />di Sirkuit Mandalika!
             </motion.h2>
             <motion.p
-              className="mt-4 md:mt-6 font-sora text-center mx-auto text-white w-full w-[78%] text-xl md:text-3xl md:leading-[2.5rem]"
+              className="mt-4 md:mt-6 font-sora text-center mx-auto text-white w-full w-[78%] text-xl md:text-[1.7rem] md:leading-[2.5rem]"
               variants={textVariant}
               initial="hidden"
               whileInView="visible"
