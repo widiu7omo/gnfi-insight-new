@@ -1,7 +1,7 @@
 "use client";
 import { baseUrl } from "@/constants/meta";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { animate, motion, useInView } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 
 const textVariant = {
   hidden: { opacity: 0, y: 60, scale: 0.95 },
@@ -44,6 +44,50 @@ const DATAHOTEL = [
   { label: "NTB 2025", value: 66869, valueBar: 71869, color: "#C2272F" },
 ];
 const MAXHOTEL = 74000;
+
+const AnimatedNumber = ({
+  value,
+  suffix = "",
+  decimals = 0,
+  className,
+}: {
+  value: number;
+  suffix?: string;
+  decimals?: number;
+  className?: string;
+}) => {
+  const ref = useRef<HTMLSpanElement | null>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.6 });
+  const initialText = (0).toLocaleString("id-ID", {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
+
+  useEffect(() => {
+    if (!isInView || !ref.current) return;
+
+    const controls = animate(0, value, {
+      duration: 1.1,
+      ease: "easeOut",
+      onUpdate: (latest) => {
+        if (ref.current) {
+          ref.current.textContent = `${latest.toLocaleString("id-ID", {
+            minimumFractionDigits: decimals,
+            maximumFractionDigits: decimals,
+          })}${suffix}`;
+        }
+      },
+    });
+
+    return () => controls.stop();
+  }, [value, suffix, decimals, isInView]);
+
+  return (
+    <span ref={ref} className={className}>
+      {`${initialText}${suffix}`}
+    </span>
+  );
+};
 
 export function CustomImageC() {
   const [barHeight, setBarHeight] = useState(550);
@@ -211,9 +255,17 @@ export function CustomImageC() {
           </div>
 
           <div className="relative z-20 mx-auto w-full rounded-3xl bg-[#C44E5E]">
-            <section className="mx-auto max-w-7xl p-4 lg:p-6">
+            <section
+              className="mx-auto max-w-7xl p-4 lg:p-6"
+              id="stats"
+            >
               <div className="grid gap-6 md:grid-cols-2">
-                <article className="rounded-2xl bg-[#31124b]/80 p-7 text-white shadow-lg md:p-9">
+                <motion.article
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="rounded-2xl bg-[#31124b]/80 p-7 text-white shadow-lg md:p-9">
                   <header className="mb-4">
                     <p className="text-sm font-semibold uppercase tracking-wider text-neutral-100/70">
                       Tahun
@@ -227,32 +279,53 @@ export function CustomImageC() {
                     <div>
                       <div className="flex items-center justify-between">
                         <p className="font-semibold">Hotel Berbintang</p>
-                        <span className="text-lg font-bold">33,51%</span>
+                        <AnimatedNumber
+                          value={33.51}
+                          suffix="%"
+                          decimals={2}
+                          className="text-lg font-bold"
+                        />
                       </div>
                       <div className="mt-2 h-3 w-full bg-white/20">
-                        <div
+                        <motion.div
                           className="h-3 bg-[#44d90c]"
-                          style={{ width: "33.51%" }}
-                        ></div>
+                          initial={{ width: 0 }}
+                          whileInView={{ width: "33.51%" }}
+                          transition={{ duration: 0.8, ease: "easeOut" }}
+                          viewport={{ once: true, amount: 0.4 }}
+                        />
                       </div>
                     </div>
 
                     <div>
                       <div className="flex items-center justify-between">
                         <p className="font-semibold">Hotel Non Berbintang</p>
-                        <span className="text-lg font-bold">14,61%</span>
+                        <AnimatedNumber
+                          value={14.61}
+                          suffix="%"
+                          decimals={2}
+                          className="text-lg font-bold"
+                        />
                       </div>
                       <div className="mt-2 h-3 w-full bg-white/20">
-                        <div
+                        <motion.div
                           className="h-3 bg-[#f38989]"
-                          style={{ width: "14.61%" }}
-                        ></div>
+                          initial={{ width: 0 }}
+                          whileInView={{ width: "14.61%" }}
+                          transition={{ duration: 0.8, ease: "easeOut" }}
+                          viewport={{ once: true, amount: 0.4 }}
+                        />
                       </div>
                     </div>
                   </div>
-                </article>
+                </motion.article>
 
-                <article className="rounded-2xl bg-[#31124b]/80 p-7 text-white shadow-lg md:p-9">
+                <motion.article
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="rounded-2xl bg-[#31124b]/80 p-7 text-white shadow-lg md:p-9">
                   <header className="mb-4">
                     <p className="text-sm font-semibold uppercase tracking-wider text-neutral-100/70">
                       Tahun
@@ -266,32 +339,53 @@ export function CustomImageC() {
                     <div>
                       <div className="flex items-center justify-between">
                         <p className="font-semibold">Hotel Berbintang</p>
-                        <span className="text-lg font-bold">40,39%</span>
+                        <AnimatedNumber
+                          value={40.39}
+                          suffix="%"
+                          decimals={2}
+                          className="text-lg font-bold"
+                        />
                       </div>
                       <div className="mt-2 h-3 w-full bg-white/20">
-                        <div
+                        <motion.div
                           className="h-3 bg-[#44d90c]"
-                          style={{ width: "40.39%" }}
-                        ></div>
+                          initial={{ width: 0 }}
+                          whileInView={{ width: "40.39%" }}
+                          transition={{ duration: 0.8, ease: "easeOut" }}
+                          viewport={{ once: true, amount: 0.4 }}
+                        />
                       </div>
                     </div>
 
                     <div>
                       <div className="flex items-center justify-between">
                         <p className="font-semibold">Hotel Non Berbintang</p>
-                        <span className="text-lg font-bold">28,16%</span>
+                        <AnimatedNumber
+                          value={28.16}
+                          suffix="%"
+                          decimals={2}
+                          className="text-lg font-bold"
+                        />
                       </div>
                       <div className="mt-2 h-3 w-full bg-white/20">
-                        <div
+                        <motion.div
                           className="h-3 bg-[#f38989]"
-                          style={{ width: "28.16%" }}
-                        ></div>
+                          initial={{ width: 0 }}
+                          whileInView={{ width: "28.16%" }}
+                          transition={{ duration: 0.8, ease: "easeOut" }}
+                          viewport={{ once: true, amount: 0.4 }}
+                        />
                       </div>
                     </div>
                   </div>
-                </article>
+                </motion.article>
 
-                <article className="rounded-2xl bg-[#31124b]/80 p-7 text-white shadow-lg md:col-span-2 md:p-9">
+                <motion.article
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, ease: "easeOut", delay: 0.4 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="rounded-2xl bg-[#31124b]/80 p-7 text-white shadow-lg md:col-span-2 md:p-9">
                   <header className="mb-4">
                     <p className="text-sm font-semibold uppercase tracking-wider text-neutral-100/70">
                       Ringkasan
@@ -325,7 +419,7 @@ export function CustomImageC() {
                       </div>
                     </li>
                   </ul>
-                </article>
+                </motion.article>
               </div>
             </section>
 
