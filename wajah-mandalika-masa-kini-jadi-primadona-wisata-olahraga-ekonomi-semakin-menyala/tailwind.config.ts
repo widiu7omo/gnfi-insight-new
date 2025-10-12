@@ -23,6 +23,7 @@ const config: Config = {
       fontFamily: {
         apple: ["var(--font-apple)"],
         sora: ['"Sora"', ...fontFamily.sans],
+        anton: ['"Anton"', ...fontFamily.sans],
       },
     },
     screens: {

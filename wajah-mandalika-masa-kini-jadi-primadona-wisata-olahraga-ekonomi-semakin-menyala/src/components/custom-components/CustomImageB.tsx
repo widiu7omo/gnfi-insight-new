@@ -33,14 +33,13 @@ const containerVariants = {
   },
 };
 
-
 export function CustomImageB() {
   return (
-    <div className="relative flex flex-col items-center overflow-hidden bg-[#E5034B] pt-16 pb-0 md:pt-24">
-      <div className="absolute inset-0 h-[20rem] bg-gradient-to-b from-[#E5034B] z-10"></div>
-      <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4 z-20">
+    <div className="relative flex flex-col items-center overflow-hidden bg-[#E5034B] pb-0 pt-16 md:pt-24">
+      <div className="absolute inset-0 z-10 h-[20rem] bg-gradient-to-b from-[#E5034B]"></div>
+      <div className="relative z-20 mx-auto max-w-4xl px-4 md:px-8 lg:px-0">
         <motion.h2
-          className="font-sora text-[#FAD592] font-bold text-[32px] md:text-[46px] lg:text-6xl md:leading-[3.5rem] lg:leading-[4.5rem]"
+          className="font-sora text-[32px] text-center font-bold text-[#FAD592] md:text-[43px] md:leading-[3.5rem] lg:text-[3.1rem] lg:leading-[4rem]"
           initial={{ opacity: 0, y: 60, scale: 0.9 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{
@@ -48,39 +47,104 @@ export function CustomImageB() {
             type: "spring",
             stiffness: 60,
             damping: 10,
-            delay: 0.1
+            delay: 0.1,
           }}
           viewport={{ once: true }}
         >
-          Pertamina Mandalika International Street Circuit
+          Pertamina Mandalika <br />
+          International Circuit
         </motion.h2>
         <motion.p
-          className="mt-8 md:mt-12 font-sora text-white text-xl md:text-4xl md:leading-[2.5rem] lg:leading-[3rem] lg:pr-[34%]"
+          className="mt-4 font-sora text-xl text-center text-white md:mt-8 md:text-3xl md:leading-[2.5rem] lg:leading-[2.5rem]"
           variants={textVariant}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           custom={1}
         >
-          Arena balap berkelas dunia yang mengubah wajah Mandalika secara drastis          </motion.p>
-        <div className="relative w-full justify-center items-center relative md:mt-20 mt-4">
+          Arena balap berkelas dunia yang mengubah wajah Mandalika secara
+          drastis
+        </motion.p>
+        <div className="relative mt-4 w-full items-center justify-center md:mt-20  z-40">
+          <div className="w-full mx-auto max-w-4xl flex flex-row space-x-8 items-start justify-center">
+            <div className="flex flex-1 transform flex-col items-center justify-center text-center">
+              <div className="rounded-full bg-[#640c5f] p-3">
+                <motion.img
+                  src={`${baseUrl}/assets/flag.svg`}
+                  alt="Flag"
+                  initial={{ opacity: 0, y: 40, scale: 0.8, rotate: -5 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 12,
+                    delay: 0.3,
+                  }}
+                  viewport={{ once: true }}
+                  className="mx-auto block size-20"
+                />
+              </div>
+              <motion.p
+                className="mt-2 text-center font-sora text-xs font-semibold text-[#FAD592] md:text-2xl"
+                initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 80,
+                  damping: 14,
+                  delay: 0.5,
+                }}
+                viewport={{ once: true }}
+              >
+                12 November 2021
+              </motion.p>
+            </div>
+            <div className="flex flex-1 transform flex-col items-center justify-center text-center">
+              <div className="rounded-full bg-[#640c5f] p-3">
+                <motion.img
+                  src={`${baseUrl}/assets/location.svg`}
+                  alt="Map"
+                  initial={{ opacity: 0, y: 40, scale: 0.8, rotate: -5 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 12,
+                    delay: 0.3,
+                  }}
+                  viewport={{ once: true }}
+                  className="mx-auto block size-20"
+                />
+              </div>
+              <motion.p
+                className="mt-2 text-center font-sora text-xs font-semibold text-[#FAD592] md:text-2xl"
+                initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 80,
+                  damping: 14,
+                  delay: 0.5,
+                }}
+                viewport={{ once: true }}
+              >
+                Desa Kuta, Lombok Tengah, Nusa Tenggara Barat
+              </motion.p>
+            </div>
+          </div>
           <motion.img
             src={`${baseUrl}/assets/2.1.png`}
             alt="Sircuit"
-            className="mx-auto w-[80%] md:w-[55%] lg:w-[65%] md:mt-8 lg:mt-0 md:mb-8 lg:mb-0 filter 
-            drop-shadow-[0_0_80px_rgba(250,213,146,0.4)]
-             drop-shadow-[0_0_140px_rgba(250,213,146,0.3)]
-             drop-shadow-[0_0_200px_rgba(250,213,146,0.25)]
-             drop-shadow-[0_0_300px_rgba(250,213,146,0.15)]"
+            className="mx-auto max-w-[80%]"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             viewport={{ once: true }}
           />
           <motion.img
-            src={`${baseUrl}/assets/2.2.png`}
+            src={`${baseUrl}/assets/0.1.png`}
             alt="Motor"
-            className="absolute w-[50%] md:w-[40%] lg:w-[50%] bottom-2 md:bottom-4 z-10 left-[20%]"
+            className="absolute bottom-2 left-[20%] z-10 w-[50%] md:bottom-4 md:w-[40%] lg:w-[50%]"
             initial={{ opacity: 0, y: 60, scale: 0.8 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -89,114 +153,111 @@ export function CustomImageB() {
           <motion.img
             src={`${baseUrl}/assets/2.3.png`}
             alt="Bayangan"
-            className="mx-auto w-[85%] md:w-[75%] lg:w-[80%] mt-4 md:mt-6"
+            className="mx-auto mt-4 w-[85%] md:mt-6 md:w-[75%] lg:w-[80%]"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           />
-          <div className="absolute top-[25%] md:top-[20%] w-[20%] left-[8%] lg:left-[5%] flex flex-col items-center justify-center text-center transform -translate-x-1/2">
-            <motion.img
-              src={`${baseUrl}/assets/2.4.png`}
-              alt="Gunting"
-              initial={{ opacity: 0, y: 40, scale: 0.8, rotate: -5 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
-              transition={{ type: "spring", stiffness: 100, damping: 12, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="block mx-auto w-[50%]"
-            />
-            <motion.p
-              className="mt-2 text-center text-[#FAD592] font-semibold text-xs md:text-2xl font-sora"
-              initial={{ opacity: 0, y: 10, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ type: "spring", stiffness: 80, damping: 14, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              12 November 2021
-            </motion.p>
-          </div>
-
-          <div className="absolute bottom-[10%] md:bottom-[30%] w-[25%] -right-[15%] lg:-right-[20%] flex flex-col items-center justify-center text-center transform -translate-x-1/2">
-            <motion.img
-              src={`${baseUrl}/assets/2.5.png`}
-              alt="Map"
-              initial={{ opacity: 0, y: 40, scale: 0.8, rotate: -5 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
-              transition={{ type: "spring", stiffness: 100, damping: 12, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="block mx-auto w-[25%]"
-            />
-            <motion.p
-              className="mt-2 text-center text-[#FAD592] font-semibold text-xs md:text-2xl font-sora"
-              initial={{ opacity: 0, y: 10, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ type: "spring", stiffness: 80, damping: 14, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              Desa Kuta, Lombok Tengah, Nusa Tenggara Barat
-            </motion.p>
-          </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 mt-10 mb-8">
+        <div className=" relative z-40">
+          <div className="mb-20 mt-10 gap-6 md:gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           <motion.div
-            className="w-1/2 md:flex-1 bg-[#640D5E] py-4 rounded-xl text-center"
+              className="rounded-xl bg-[#640D5E] py-4 text-center md:flex-1 p-2 flex flex-col items-center justify-center"
             variants={boxVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 120, damping: 15 }}
           >
-            <p className="text-[#FAD592] font-bold text-2xl md:text-[44px] font-sora">4,31 km</p>
-            <p className="text-white font-semibold text-base md:text-xl font-sora">Panjang lintasan</p>
+              <div className="flex-1 flex items-center justify-center">
+                <img src={`${baseUrl}/assets/2.0.1.png`} alt="Mandalika Track" className="object-center" />
+              </div>
+              <p className="text-center font-sora text-2xl font-bold text-[#FAD592] md:text-3xl mt-2">
+                4,31 km
+              </p>
+              <p className="font-sora text-base font-semibold text-white md:text-xl">
+                Panjang lintasan
+              </p>
           </motion.div>
 
           <motion.div
-            className="w-1/2 md:flex-1 bg-[#640D5E] py-4 rounded-xl text-center"
+              className="rounded-xl bg-[#640D5E] py-4 text-center md:flex-1 p-2 flex flex-col items-center justify-center"
             variants={boxVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 120, damping: 15, delay: 0.2 }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 15,
+                delay: 0.2,
+              }}
           >
-            <p className="text-[#FAD592] font-bold text-2xl md:text-[44px] font-sora">723 m</p>
-            <p className="text-white font-semibold text-base md:text-xl font-sora">Panjang trek lurus</p>
+              <div className="flex-1 flex items-center justify-center">
+                <img src={`${baseUrl}/assets/2.0.2.png`} alt="Straight Mandalika Track" className="object-center" />
+              </div>
+              <p className="text-center font-sora text-2xl font-bold text-[#FAD592] md:text-3xl mt-2">
+                723 m
+              </p>
+              <p className="font-sora text-base font-semibold text-white md:text-xl">
+                Panjang trek lurus
+              </p>
           </motion.div>
 
           <motion.div
-            className="w-1/2 md:flex-1 bg-[#640D5E] py-4 rounded-xl text-center"
+              className="rounded-xl bg-[#640D5E] py-4 text-center md:flex-1 p-2 flex flex-col items-center justify-center"
             variants={boxVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 120, damping: 15, delay: 0.4 }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 15,
+                delay: 0.4,
+              }}
           >
-            <p className="text-[#FAD592] font-bold text-2xl md:text-[44px] font-sora">15 m</p>
-            <p className="text-white font-semibold text-base md:text-xl font-sora">Lebar sirkuit</p>
+              <div className="flex-1 flex items-center justify-center">
+                <img src={`${baseUrl}/assets/2.0.3.png`} alt="Straight Mandalika Track" className="object-center" />
+              </div>
+              <p className="text-center font-sora text-2xl font-bold text-[#FAD592] md:text-3xl mt-2">
+                15 m
+              </p>
+              <p className="font-sora text-base font-semibold text-white md:text-xl">
+                Lebar sirkuit
+              </p>
           </motion.div>
+            <motion.div
+              className="rounded-xl bg-[#640D5E] py-4 text-center md:flex-1 p-2 flex flex-col items-center justify-center"
+              variants={boxVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 15,
+                delay: 0.6,
+              }}
+            >
+              <div className="flex-1 flex items-center justify-center">
+                <img src={`${baseUrl}/assets/2.0.4.png`} alt="Straight Mandalika Track" className="object-center" />
+              </div>
+              <p className="text-center font-sora text-2xl font-bold text-[#FAD592] md:text-3xl mt-2">
+                17 tikungan
+              </p>
+              <p className="font-sora text-base font-semibold text-white md:text-xl">
+                11 ke kanan & 6 ke kiri
+              </p>
+            </motion.div>
+          </div>
         </div>
-        <motion.p
-          className="text-center text-2xl md:text-3xl lg:text-5xl font-bold font-sora mb-2 text-[#FAD592]"
-          initial={{ opacity: 0, y: 30, scale: 0.95 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ type: "spring", stiffness: 120, damping: 15, duration: 1 }}
-          viewport={{ once: true }}
-        >
-          17 Jumlah tikungan
-        </motion.p>
-
-        <motion.p
-          className="text-center text-white font-bold font-sora mb-16 md:mb-48 text-base md:text-xl"
-          initial={{ opacity: 0, y: 20, scale: 0.95 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ type: "spring", stiffness: 100, damping: 16, duration: 1, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          (11 ke kanan & 6 ke kiri)
-        </motion.p>      </div>
-      <div className="absolute bottom-20 z-40 mx-auto max-w-4xl">
+      </div>
+      <div className="absolute bottom-0 z-40 mx-auto max-w-4xl">
         <img
           src={`${baseUrl}/assets/footer.png`}
-          className="z-50 mx-auto w-full max-w-xl hidden sm:block"
+          className="z-50 mx-auto hidden w-full max-w-xl sm:block"
         />
       </div>
     </div>
