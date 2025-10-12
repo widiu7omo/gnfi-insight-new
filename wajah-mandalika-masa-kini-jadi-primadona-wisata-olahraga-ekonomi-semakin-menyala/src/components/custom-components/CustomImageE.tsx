@@ -9,7 +9,7 @@ export function CustomImageE() {
       <div
         className="z-20 relative w-full justify-center bg-no-repeat bg-top bg-cover bg-[#FF9C24]"
       >
-        <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 pl-4 justify-center flex md:flex-row-reverse flex-col-reverse pt-12 md:pt-24">
+        <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 pl-4 justify-center flex md:flex-row-reverse flex-col pt-12 md:pt-24">
           <motion.div
             className="w-full mb-4 md:mb-8 mt-0 md:mt-16 flex flex-col"
             initial={{ opacity: 0, y: 60, scale: 0.9 }}
@@ -74,7 +74,7 @@ export function CustomImageE() {
             <motion.img
               src={`${baseUrl}/assets/5.1.1.png`}
               alt="Erick Thohir"
-              className="md:absolute mr-auto md:mr-0 mt-12 md:mt-0 bottom-0 md:-bottom-1 md:left-6 xl:h-full md:w-[80%] xl:w-auto w-[65%] h-auto z-0 md:z-20"
+              className="md:absolute ml-auto lg:mr-auto md:mr-0 mt-12 md:mt-0 bottom-0 md:-bottom-1 md:left-6 xl:h-full md:w-[80%] xl:w-auto w-[65%] h-auto z-0 md:z-20"
               initial={{ opacity: 0, y: 50, scale: 1 }}
               whileInView={{ opacity: 0.8, y: 0, scale: 1 }}
               transition={{ type: "spring", stiffness: 120, damping: 15, duration: 1 }}

@@ -2,7 +2,7 @@ import { baseUrl } from "@/constants/meta";
 import { ArrowRight } from "lucide-react";
 
 export function CTA() {
-    return <div className="bg-[#ff9e24] py-12 ">
+    return <div className="bg-[#ff9e24] py-12 px-4 lg:px-0">
         <div className="relative overflow-hidden rounded-2xl bg-gray-100 shadow-md max-w-4xl mx-auto px-4 md:px-0">
             {/* Background image */}
             <img

@@ -78,11 +78,11 @@ export function CustomImageB() {
                     delay: 0.3,
                   }}
                   viewport={{ once: true }}
-                className="rounded-full bg-[#640c5f] p-3">
+                className="rounded-full bg-[#640c5f] p-2 lg:p-3">
                 <img
                   src={`${baseUrl}/assets/flag.svg`}
                   alt="Flag"
-                  className="mx-auto block size-20"
+                  className="mx-auto block size-12 lg:size-20"
                 />
               </motion.div>
               <motion.p
@@ -111,12 +111,12 @@ export function CustomImageB() {
                     delay: 0.3,
                   }}
                   viewport={{ once: true }}
-                className="rounded-full bg-[#640c5f] p-3">
+                className="rounded-full bg-[#640c5f] p-2 lg:p-3">
                 <img
                   src={`${baseUrl}/assets/location.svg`}
                   alt="Map"
 
-                  className="mx-auto block size-20"
+                  className="mx-auto block size-12 lg:size-20"
                 />
               </motion.div>
               <motion.p

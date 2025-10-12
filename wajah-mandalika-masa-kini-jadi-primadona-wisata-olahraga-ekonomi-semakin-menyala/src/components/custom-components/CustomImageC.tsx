@@ -211,9 +211,9 @@ export function CustomImageC() {
           </div>
 
           <div className="relative z-20 mx-auto w-full rounded-3xl bg-[#C44E5E]">
-            <section className="mx-auto max-w-7xl px-6 py-6">
+            <section className="mx-auto max-w-7xl p-4 lg:p-6">
               <div className="grid gap-6 md:grid-cols-2">
-                <article className="rounded-3xl bg-[#31124b]/80 p-7 text-white shadow-lg md:p-9">
+                <article className="rounded-2xl bg-[#31124b]/80 p-7 text-white shadow-lg md:p-9">
                   <header className="mb-4">
                     <p className="text-sm font-semibold uppercase tracking-wider text-neutral-100/70">
                       Tahun
@@ -252,7 +252,7 @@ export function CustomImageC() {
                   </div>
                 </article>
 
-                <article className="rounded-3xl bg-[#31124b]/80 p-7 text-white shadow-lg md:p-9">
+                <article className="rounded-2xl bg-[#31124b]/80 p-7 text-white shadow-lg md:p-9">
                   <header className="mb-4">
                     <p className="text-sm font-semibold uppercase tracking-wider text-neutral-100/70">
                       Tahun
@@ -291,7 +291,7 @@ export function CustomImageC() {
                   </div>
                 </article>
 
-                <article className="rounded-3xl bg-[#31124b]/80 p-7 text-white shadow-lg md:col-span-2 md:p-9">
+                <article className="rounded-2xl bg-[#31124b]/80 p-7 text-white shadow-lg md:col-span-2 md:p-9">
                   <header className="mb-4">
                     <p className="text-sm font-semibold uppercase tracking-wider text-neutral-100/70">
                       Ringkasan
