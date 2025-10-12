@@ -70,7 +70,7 @@ export function CustomImageD() {
         <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4">
           <div className="w-full relative z-10">
             <motion.h2
-              className="font-sora text-[#FBD690] font-bold w-full text-[32px] text-center md:text-[46px] lg:text-6xl md:leading-[3.5rem]"
+              className="font-sora text-[#FBD690] font-bold w-full text-center text-[32px] md:text-[43px] lg:text-[3.1rem] md:leading-[3.5rem]"
               initial={{ opacity: 0, y: 60, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{
@@ -85,7 +85,7 @@ export function CustomImageD() {
               Bukan Cuma Pebalap <br />Ekonomi NTB Juga Ikut "Ngacir" <br />di Sirkuit Mandalika!
             </motion.h2>
             <motion.p
-              className="mt-4 md:mt-6 font-sora text-center mx-auto text-white w-full w-[78%] text-xl md:text-[28px] md:leading-[2.5rem]"
+              className="mt-4 md:mt-6 font-sora text-center mx-auto text-white w-full w-[78%] text-xl md:text-3xl md:leading-[2.5rem]"
               variants={textVariant}
               initial="hidden"
               whileInView="visible"
@@ -116,17 +116,8 @@ export function CustomImageD() {
                   viewport={{ once: true, amount: 0.5 }}
                   className="text-white flex-grow font-sora font-semibold text-xs md:text-2xl lg:text-3xl w-[40%]"
                 >
-                  PDRB NTB
+                  PDRB Prov. NTB
                 </motion.p>
-                <motion.img
-                  src={`${baseUrl}/assets/3.2.png`}
-                  alt="Lombok tengah"
-                  className="w-8 md:w-20 h-auto"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1.2, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                />
               </div>
               <div className="flex flex-col w-3/5 md:w-2/3">
                 {DATA.slice(0, 2).map((d, i, arr) => (
@@ -162,17 +153,8 @@ export function CustomImageD() {
                   viewport={{ once: true, amount: 0.5 }}
                   className="text-white flex-grow font-sora font-semibold text-xs md:text-2xl lg:text-3xl w-[40%]"
                 >
-                  PDRB Kab.Lombok Tengah
+                  PDRB Kab. Lombok Tengah
                 </motion.p>
-                <motion.img
-                  src={`${baseUrl}/assets/3.1.png`}
-                  alt="NTB"
-                  className="w-8 md:w-20 h-auto"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1.2, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                />
               </div>
               <div className="flex flex-col w-3/5 md:w-2/3">
                 {DATA.slice(2, 4).map((d, i, arr) => (
@@ -206,10 +188,10 @@ export function CustomImageD() {
               viewport={{ once: true, amount: 0.8 }}
               className="text-white font-sora text-[9px] md:text-lg"
             >
-              2020 (Sebelum Sirkuit Mandalika)
               <span className="inline-block w-4 h-2 md:w-6 md:h-4 bg-[#F38989] mx-2 align-middle"></span>
+              2020 (Sebelum Sirkuit Mandalika)
+              <span className="inline-block w-4 h-2 md:w-6 md:h-4 bg-[#45D80B] ml-4 mx-2 align-middle"></span>
               2023 (Sesudah Sirkuit Mandalika)
-              <span className="inline-block w-4 h-2 md:w-6 md:h-4 bg-[#45D80B] mx-2 align-middle"></span>
             </motion.p>
           </div>
           <div className="bg-[#FBD690] rounded-t-3xl mt-10">
@@ -307,11 +289,12 @@ export function CustomImageD() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.8 }}
-              className="text-white font-sora text-[9px] md:text-lg text-center items-center"
+              className="text-white font-sora text-[9px] md:text-lg text-center items-center flex justify-center"
             >
-              2020
               <span className="inline-block w-4 h-2 md:w-10 md:h-4 bg-[#F38989] mx-2 align-middle"></span>
-              2023<span className="inline-block w-4 h-2 md:w-10 md:h-4 bg-[#45D80B] mx-2 align-middle"></span>
+              2020
+              <span className="inline-block w-4 h-2 md:w-10 md:h-4 bg-[#45D80B] ml-4 mx-2 align-middle"></span>
+              2023
             </motion.p>
           </div>
           <div className="bg-[#2B293F] rounded-3xl py-4 px-4 md:py-6 md:px-8 space-y-4 md:space-y-8 mb-3 md:mb-10 relative z-10">
@@ -333,17 +316,8 @@ export function CustomImageD() {
                   viewport={{ once: true, amount: 0.5 }}
                   className="text-white flex-grow font-sora font-semibold ml-1 md:ml-0 text-sm md:text-2xl lg:text-3xl w-[40%]"
                 >
-                  NTB
+                  Prov. NTB
                 </motion.p>
-                <motion.img
-                  src={`${baseUrl}/assets/3.2.png`}
-                  alt="Lombok tengah"
-                  className="w-10 md:w-20 h-auto"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1.2, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                />
               </div>
               <div className="flex flex-col w-2/3">
                 {DATAMISKIN.slice(0, 2).map((d, i, arr) => (
@@ -379,17 +353,8 @@ export function CustomImageD() {
                   viewport={{ once: true, amount: 0.5 }}
                   className="text-white flex-grow font-sora font-semibold ml-1 md:ml-0 text-sm md:text-2xl lg:text-3xl w-[40%]"
                 >
-                  Lombok Tengah
+                  Kab. Lombok Tengah
                 </motion.p>
-                <motion.img
-                  src={`${baseUrl}/assets/3.1.png`}
-                  alt="NTB"
-                  className="w-10 md:w-20 h-auto"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1.2, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                />
               </div>
               <div className="flex flex-col w-2/3">
                 {DATAMISKIN.slice(2, 4).map((d, i, arr) => (
@@ -423,10 +388,10 @@ export function CustomImageD() {
               viewport={{ once: true, amount: 0.8 }}
               className="text-white font-sora text-[9px] md:text-lg"
             >
-              2020 (Sebelum Sirkuit Mandalika)
               <span className="inline-block w-4 h-2 md:w-6 md:h-4 bg-[#F38989] mx-2 align-middle"></span>
+              2020 (Sebelum Sirkuit Mandalika)
+              <span className="inline-block w-4 h-2 md:w-6 md:h-4 bg-[#45D80B] ml-4 mx-2 align-middle"></span>
               2023 (Sesudah Sirkuit Mandalika)
-              <span className="inline-block w-4 h-2 md:w-6 md:h-4 bg-[#45D80B] mx-2 align-middle"></span>
             </motion.p>
           </div>
         </div>
@@ -437,7 +402,7 @@ export function CustomImageD() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          Sumber: BPS
+          Sumber: BPS (Badan Pusat Statistik) NTB & Lombok Tengah
         </motion.p>
       </div>
       <div className="absolute bottom-20 z-40 mx-auto max-w-4xl">

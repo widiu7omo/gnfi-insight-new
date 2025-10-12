@@ -39,7 +39,7 @@ export function CustomImageB() {
       <div className="absolute inset-0 z-10 h-[20rem] bg-gradient-to-b from-[#E5034B]"></div>
       <div className="relative z-20 mx-auto max-w-4xl px-4 md:px-8 lg:px-0">
         <motion.h2
-          className="font-sora text-[32px] text-center font-bold text-[#FAD592] md:text-[43px] md:leading-[3.5rem] lg:text-[3.1rem] lg:leading-[4rem]"
+          className="font-sora text-[32px] md:text-[43px] lg:text-[3.1rem] text-center font-bold text-[#FAD592]  md:leading-[3.5rem]  lg:leading-[4rem]"
           initial={{ opacity: 0, y: 60, scale: 0.9 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{
@@ -55,7 +55,7 @@ export function CustomImageB() {
           International Circuit
         </motion.h2>
         <motion.p
-          className="mt-4 font-sora text-xl text-center text-white md:mt-8 md:text-3xl md:leading-[2.5rem] lg:leading-[2.5rem]"
+          className="mt-4 font-sora text-center text-white md:mt-8 text-xl md:text-3xl md:leading-[2.5rem] lg:leading-[2.5rem]"
           variants={textVariant}
           initial="hidden"
           whileInView="visible"
@@ -68,11 +68,8 @@ export function CustomImageB() {
         <div className="relative mt-4 w-full items-center justify-center md:mt-20  z-40">
           <div className="w-full mx-auto max-w-4xl flex flex-row space-x-8 items-start justify-center">
             <div className="flex flex-1 transform flex-col items-center justify-center text-center">
-              <div className="rounded-full bg-[#640c5f] p-3">
-                <motion.img
-                  src={`${baseUrl}/assets/flag.svg`}
-                  alt="Flag"
-                  initial={{ opacity: 0, y: 40, scale: 0.8, rotate: -5 }}
+              <motion.div
+                initial={{ opacity: 0, y: 40, scale: 0.8, rotate: -5 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
                   transition={{
                     type: "spring",
@@ -81,9 +78,13 @@ export function CustomImageB() {
                     delay: 0.3,
                   }}
                   viewport={{ once: true }}
+                className="rounded-full bg-[#640c5f] p-3">
+                <img
+                  src={`${baseUrl}/assets/flag.svg`}
+                  alt="Flag"
                   className="mx-auto block size-20"
                 />
-              </div>
+              </motion.div>
               <motion.p
                 className="mt-2 text-center font-sora text-xs font-semibold text-[#FAD592] md:text-2xl"
                 initial={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -100,11 +101,8 @@ export function CustomImageB() {
               </motion.p>
             </div>
             <div className="flex flex-1 transform flex-col items-center justify-center text-center">
-              <div className="rounded-full bg-[#640c5f] p-3">
-                <motion.img
-                  src={`${baseUrl}/assets/location.svg`}
-                  alt="Map"
-                  initial={{ opacity: 0, y: 40, scale: 0.8, rotate: -5 }}
+              <motion.div
+                initial={{ opacity: 0, y: 40, scale: 0.8, rotate: -5 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
                   transition={{
                     type: "spring",
@@ -113,9 +111,14 @@ export function CustomImageB() {
                     delay: 0.3,
                   }}
                   viewport={{ once: true }}
+                className="rounded-full bg-[#640c5f] p-3">
+                <img
+                  src={`${baseUrl}/assets/location.svg`}
+                  alt="Map"
+
                   className="mx-auto block size-20"
                 />
-              </div>
+              </motion.div>
               <motion.p
                 className="mt-2 text-center font-sora text-xs font-semibold text-[#FAD592] md:text-2xl"
                 initial={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -156,7 +159,7 @@ export function CustomImageB() {
             className="mx-auto mt-4 w-[85%] md:mt-6 md:w-[75%] lg:w-[80%]"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           />
         </div>
@@ -176,7 +179,7 @@ export function CustomImageB() {
               <p className="text-center font-sora text-2xl font-bold text-[#FAD592] md:text-3xl mt-2">
                 4,31 km
               </p>
-              <p className="font-sora text-base font-semibold text-white md:text-xl">
+              <p className="font-sora text-base font-semibold text-white md:text-base">
                 Panjang lintasan
               </p>
           </motion.div>
@@ -200,7 +203,7 @@ export function CustomImageB() {
               <p className="text-center font-sora text-2xl font-bold text-[#FAD592] md:text-3xl mt-2">
                 723 m
               </p>
-              <p className="font-sora text-base font-semibold text-white md:text-xl">
+              <p className="font-sora text-base font-semibold text-white md:text-base">
                 Panjang trek lurus
               </p>
           </motion.div>
@@ -224,7 +227,7 @@ export function CustomImageB() {
               <p className="text-center font-sora text-2xl font-bold text-[#FAD592] md:text-3xl mt-2">
                 15 m
               </p>
-              <p className="font-sora text-base font-semibold text-white md:text-xl">
+              <p className="font-sora text-base font-semibold text-white md:text-base">
                 Lebar sirkuit
               </p>
           </motion.div>
@@ -247,13 +250,14 @@ export function CustomImageB() {
               <p className="text-center font-sora text-2xl font-bold text-[#FAD592] md:text-3xl mt-2">
                 17 tikungan
               </p>
-              <p className="font-sora text-base font-semibold text-white md:text-xl">
+              <p className="font-sora text-base font-semibold text-white md:text-base">
                 11 ke kanan & 6 ke kiri
               </p>
             </motion.div>
           </div>
         </div>
       </div>
+      {/* <img src={`${baseUrl}/assets/track2.png`} alt="Track Bg" className="rotate-[180deg] bottom-[-50rem] left-[-80dvh] z-0 absolute" /> */}
       <div className="absolute bottom-0 z-40 mx-auto max-w-4xl">
         <img
           src={`${baseUrl}/assets/footer.png`}

@@ -175,7 +175,7 @@ export function Gallery() {
           <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
         </button>
 
-        <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur">
+        <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/90 backdrop-blur">
           <div className="relative">
             <div
               aria-hidden="true"
