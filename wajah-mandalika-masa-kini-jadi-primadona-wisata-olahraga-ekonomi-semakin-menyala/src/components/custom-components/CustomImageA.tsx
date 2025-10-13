@@ -142,12 +142,6 @@ export function CustomImageA() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <motion.img
-              src={`${baseUrl}/assets/1.2.png`}
-              alt="Logo Lombok Tengah"
-              className="relative z-30 w-[130px] sm:w-[180px] md:w-[200px]"
-              variants={subtleScale}
-            />
             <motion.p
               className="flex-1 text-center font-sora text-sm leading-relaxed text-white sm:text-base md:text-left md:text-lg lg:text-xl xl:text-2xl"
               variants={fadeUp}
