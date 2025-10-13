@@ -2,9 +2,10 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { baseUrl } from "@/constants/meta";
+
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
+const baseUrl = 'https://insight.goodnewsfromindonesia.id/wajah-mandalika-masa-kini-jadi-primadona-wisata-olahraga-ekonomi-semakin-menyala';
 const ITEMS_PER_SLIDE = 4;
 
 const GALLERY_FILES = [
@@ -42,7 +43,7 @@ const slideVariants = {
 export function Gallery() {
   const gallerySources = useMemo(
     () =>
-      GALLERY_FILES.map((file) => `${baseUrl}/assets/gallery/${file}`),
+      GALLERY_FILES.map((file) => `/assets/gallery/${file}`),
     [baseUrl],
   );
 
@@ -215,7 +216,7 @@ export function Gallery() {
                     >
                       <span className="sr-only">Lihat pratinjau {previewLabel}</span>
                       <img
-                        src={imageSrc}
+                        src={`${baseUrl}${imageSrc}`}
                         alt={previewLabel}
                         className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                         loading={imageIndex === 0 ? "eager" : "lazy"}
@@ -273,8 +274,7 @@ export function Gallery() {
                                 <X className="h-5 w-5" />
                             </button>
 
-                            <img
-                                src={selectedImageSrc}
+              <img src={`${baseUrl}${selectedImageSrc}`}
                                 alt={selectedImageLabel}
                                 className="h-full w-full max-h-[80vh] object-contain"
                             />

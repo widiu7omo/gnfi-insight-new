@@ -52,7 +52,7 @@ export function CustomImageB() {
           viewport={{ once: true }}
         >
           Pertamina Mandalika <br />
-          International Circuit
+          <i>International Circuit</i>
         </motion.h2>
         <motion.p
           className="mt-4 font-sora text-center text-white md:mt-8 text-xl md:text-3xl md:leading-[2.5rem] lg:leading-[2.5rem]"
