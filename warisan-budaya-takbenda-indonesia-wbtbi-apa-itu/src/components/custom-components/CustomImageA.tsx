@@ -3,258 +3,139 @@
 import { baseUrl } from "@/constants/meta";
 import { motion } from "framer-motion";
 
-// Animation variants for smooth transitions
-const containerVariants = {
-  hidden: { opacity: 1 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      staggerChildren: 0.2
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
+const container = {
+  hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut"
-    }
-  }
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, scale: 0.9, y: 20 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut"
-    }
+      ease: "easeOut",
+      staggerChildren: 0.2,
+    },
   },
-  hover: {
-    scale: 1.02,
-    y: -5,
-    transition: {
-      duration: 0.3,
-      ease: "easeInOut"
-    }
-  }
 };
 
-const imageVariants = {
-  hidden: { opacity: 0, scale: 1.1 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut"
-    }
-  }
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 export function CustomImageA() {
-  return (<div className="relative overflow-clip">
-    {/* Animated background gradients */}
-    <motion.div
-      className="rounded-l-[20rem] h-[50rem] w-[50vw] absolute top-0 right-[-0%] bottom-0 bg-gradient-to-br to-[80%] from-yellow-500 to-red-500"
-      initial={{ opacity: 0, x: 100 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1.2, ease: "easeOut" }}
-    ></motion.div>
-    <motion.div
-      className="rounded-l-[20rem] h-[50rem] w-[70vw] absolute top-[40%] blur-2xl right-[-10%] bottom-0 bg-gradient-to-br from-red-500 to-pink-500"
-      initial={{ opacity: 0, x: 150 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1.4, ease: "easeOut", delay: 0.2 }}
-    ></motion.div>
-    <motion.div
-      className="noise2 backdrop-blur-2xl relative pt-8 md:pt-20"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <div className="max-w-4xl mx-auto font-sora">
-        <div className="flex gap-2 flex-col md:flex-row items-center justify-between gap-4">
-          <motion.div className="flex-1 space-y-2 px-4 lg:px-0" variants={itemVariants}>
-            <motion.div
-              className="text-[#0149a5] text-4xl sm:text-5xl md:text-7xl font-bold"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            >
-              PP Tunas
-            </motion.div>
-            <motion.div
-              className="bg-[#2d8ee1] p-1 text-white font-bold text-xl sm:text-3xl md:text-4xl w-fit transition-all duration-300 hover:bg-[#1e6bb8] hover:scale-105"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-              whileHover={{ scale: 1.05 }}
-            >
-              Apa itu?
-            </motion.div>
-            <motion.div
-              className="text-lg sm:text-xl md:text-2xl text-neutral-700 pb-0 md:pb-2 pt-2 md:pt-4"
-              variants={itemVariants}
-            >
-              Jumat, 28 Maret 2025
-            </motion.div>
-            <motion.div
-              className="text-lg sm:text-xl md:text-2xl font-medium"
-              variants={itemVariants}
-            >
-              Pemerintah meluncurkan Peraturan Pemerintah (PP) Nomor 17 Tahun 2025 tentang Tata Kelola Penyelenggaraan Sistem Elektronik dalam Perlindungan Anak
-              (PP Tunas)
-            </motion.div>
-          </motion.div>
-          <motion.div
-            className="flex-1 w-full h-full"
-            variants={imageVariants}
+  return (
+    <div className="relative flex flex-col items-center overflow-hidden">
+      <div
+        className="relative w-full justify-center bg-cover bg-center pt-16 md:pt-24"
+        style={{ backgroundImage: `url(${baseUrl}/assets/1.1.png)` }}
+      >
+        <div className="relative mx-auto max-w-4xl lg:px-0 lg:px-0 px-4">
+          <motion.h2
+            className="w-full font-sora text-[#08F3E8] font-bold text-3xl md:text-6xl mb-8 lg:mb-10 md:leading-snug leading-snug"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
           >
-            <motion.img
-              className="object-cover transition-transform duration-500 hover:scale-105"
-              src={baseUrl + '/assets/1.1.png'}
-              alt="Prabowo"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            />
-          </motion.div>
+            Warisan Budaya Takbenda Indonesia (WBTbI), Apa Itu?
+          </motion.h2>
+          <motion.p className="font-sora text-white text-base md:text-2xl mb-8 md:mb-12 lg:mb-16 leading-relaxed"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}>
+            Berbagai hasil praktik, perwujudan, ekspresi pengetahuan dan keterampilan, yang terkait dengan lingkup budaya, yang diwariskan dari generasi ke generasi secara terus menerus melalui pelestarian dan/atau penciptaan kembali serta merupakan hasil kebudayaan yang berwujud budaya takbenda setelah melalui proses penetapan Budaya Takbenda (Permendikbud) Nomor 106 Tahun 2013
+          </motion.p>
         </div>
-        <motion.div
-          className="relative w-full overflow-hidden p-10"
-          variants={itemVariants}
-        >
-          <motion.div
-            className="absolute left-11 top-11 bottom-11 right-11 bg-gradient-to-r from-blue-800 to-blue-600 transform -skew-y-1 scale-110"
-            initial={{ opacity: 0, scale: 0.8, rotate: -2 }}
-            animate={{ opacity: 1, scale: 1.1, rotate: -1 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          ></motion.div>
-          <motion.div
-            className="absolute left-12 top-12 bottom-12 right-12 bg-gradient-to-r from-blue-600 to-blue-400 transform skew-y-1 scale-110"
-            initial={{ opacity: 0, scale: 0.8, rotate: 2 }}
-            animate={{ opacity: 1, scale: 1.1, rotate: 1 }}
-            transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-          ></motion.div>
-          <motion.div
-            className="relative text-xl md:text-3xl text-center text-white py-6 px-4 font-bold"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1, ease: "easeOut" }}
-          >
-            Bertujuan melindungi anak-anak dari ancaman <br />
-            dan risiko bahaya di ruang digital
-          </motion.div>
-        </motion.div>
-        <motion.div className="space-y-8" variants={itemVariants}>
-          <motion.div
-            className="text-center text-2xl md:text-4xl font-bold pt-6 md:pt-12"
-            variants={itemVariants}
-          >
-            Hal-hal utama dalam PP Tunas:
-          </motion.div>
-          <motion.div
-            className="flex flex-col md:flex-row gap-2 md:gap-5"
-            variants={containerVariants}
-          >
-            <motion.div className="flex-1" variants={cardVariants}>
-              <motion.div
-                className="bg-white rounded-2xl shadow-lg px-10 md:px-12 py-8 m-4 md:m-0 transition-all duration-300 hover:shadow-xl"
-                variants={cardVariants}
-                whileHover="hover"
-              >
-                <ul className="list-disc text-lg md:text-xl font-medium space-y-2">
-                  <motion.li
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 1.2 }}
-                  >
-                    Klasifikasi tingkat risiko platform digital
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 1.4 }}
-                  >
-                    Pembatasan akses terhadap konten dan platform digital berdasarkan usia
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 1.6 }}
-                  >
-                    Kewajiban platform digital untuk memverifikasi pengguna dan mengedukasi anak serta orang tua untuk berinternet secara aman
-                  </motion.li>
-                </ul>
-              </motion.div>
-            </motion.div>
-            <motion.div className="flex-1" variants={cardVariants}>
-              <motion.div
-                className="bg-white rounded-2xl shadow-lg px-10 md:px-12 py-8 m-4 md:m-0 transition-all duration-300 hover:shadow-xl"
-                variants={cardVariants}
-                whileHover="hover"
-              >
-                <ul className="list-disc text-lg md:text-xl font-medium space-y-2">
-                  <motion.li
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 1.8 }}
-                  >
-                    Pelibatan orang tua dalam memberi persetujuan terhadap penggunaan platform digital oleh anak
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 2.0 }}
-                  >
-                    Larangan profiling anak untuk tujuan komersial
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 2.2 }}
-                  >
-                    Sanksi bagi platform digital yang melanggar, mulai dari teguran hingga denda
-                  </motion.li>
-                </ul>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        </motion.div>
-        <motion.div
-          className="-mt-10"
-          variants={imageVariants}
-        >
-          <motion.img
-            src={baseUrl + "/assets/1.2.png"}
-            alt="3d Childs"
-            className="transition-transform duration-500 hover:scale-105"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          />
-        </motion.div>
-        <motion.div
-          className="-mt-10 lg:-mt-20"
-          variants={imageVariants}
-        >
-          <motion.img
-            src={baseUrl + "/assets/footer.png"}
-            alt="Footer"
-            className="invert transition-transform duration-500 hover:scale-105"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
-          />
+        <motion.div variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="relative mx-auto -mb-14 md:-mb-32 z-10 w-full max-w-4xl bg-[#EACD86] px-6 md:px-12 py-6 md:py-10 rounded-[1.5rem]">
+          <motion.p variants={item} className="text-xl md:text-5xl font-bold text-[#2A2828] mb-4 md:mb-8">Domain/ranah:</motion.p>
+          <div className="flex flex-col md:flex-row md:space-x-12 space-y-6 md:space-y-0">
+            <motion.ul className="w-full md:w-1/2 list-none space-y-4 md:space-y-8" variants={container}>
+              <motion.li className="text-base md:text-2xl font-bold text-[#2A2828] relative pl-6 md:pl-8 
+                 before:content-[''] before:absolute before:left-0 
+                 before:top-[0.15em] before:translate-y-0
+                 md:before:border-t-[12px] md:before:border-b-[12px] md:before:border-l-[20px]
+                 before:border-t-[9px] before:border-b-[9px] before:border-l-[15px]
+                 before:border-t-transparent before:border-b-transparent before:border-l-[#EE756D]" variants={item}>
+                Tradisi lisan dan ekspresi
+              </motion.li>
+              <motion.li className="text-base md:text-2xl font-bold text-[#2A2828] relative pl-6 md:pl-8 
+                 before:content-[''] before:absolute before:left-0 
+                 before:top-[0.15em] before:translate-y-0
+                 md:before:border-t-[12px] md:before:border-b-[12px] md:before:border-l-[20px]
+                 before:border-t-[9px] before:border-b-[9px] before:border-l-[15px]
+                 before:border-t-transparent before:border-b-transparent before:border-l-[#EE756D]" variants={item}>
+                Praktik sosial, ritus, dan festival Pengetahuan dan kebiasaan Perilaku mengenai alam dan semesta
+              </motion.li>
+            </motion.ul>
+            <motion.ul className="w-full md:w-1/2 list-none space-y-4 md:space-y-8" variants={container}>
+              <motion.li className="text-base md:text-2xl font-bold text-[#2A2828] relative pl-6 md:pl-8 
+                 before:content-[''] before:absolute before:left-0 
+                 before:top-[0.15em] before:translate-y-0
+                 md:before:border-t-[12px] md:before:border-b-[12px] md:before:border-l-[20px]
+                 before:border-t-[9px] before:border-b-[9px] before:border-l-[15px]                 
+                 before:border-t-transparent before:border-b-transparent before:border-l-[#EE756D]" variants={item}>                Seni Pertunjukan
+              </motion.li>
+              <motion.li className="text-base md:text-2xl font-bold text-[#2A2828] relative pl-6 md:pl-8 
+                 before:content-[''] before:absolute before:left-0 
+                 before:top-[0.15em] before:translate-y-0
+                 md:before:border-t-[12px] md:before:border-b-[12px] md:before:border-l-[20px]
+                 before:border-t-[9px] before:border-b-[9px] before:border-l-[15px]                 
+                 before:border-t-transparent before:border-b-transparent before:border-l-[#EE756D]" variants={item}>                Kemahiran dan kerajinan tradisional
+              </motion.li>
+            </motion.ul>
+          </div>
         </motion.div>
       </div>
-    </motion.div>
-  </div>
+      <div
+        className="relative w-full justify-center bg-[#E2DFDF] pb-0 pt-10 md:pt-20"
+      >
+        <motion.p className="mt-[10%] font-semibold relative mx-auto text-center text-[#CD4947] w-full lg:w-[55%] lg:px-0 md:px-8 px-4 text-center font-sora text-[#3E0703] text-base md:text-3xl leading-relaxed"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}>
+          Untuk ditetapkan sebagai WBTbI,<br /> suatu budaya takbenda harus memenuhi syarat dan mengikuti prosedur penetapan
+        </motion.p>
+        <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4 pt-14 md:pt-16 lg:pt-20">
+          {[
+            { src: `${baseUrl}/assets/1.2.png`, className: "ml-auto w-[80%]" },
+            { src: `${baseUrl}/assets/1.3.png`, className: "left-10 w-[50%] -mt-[55%]" },
+            { src: `${baseUrl}/assets/1.4.png`, className: "ml-auto w-[50%] -mt-[55%]" },
+            { src: `${baseUrl}/assets/1.6.png`, className: "w-[70%] -mt-[80%]" },
+            { src: `${baseUrl}/assets/1.7.png`, className: "w-[100%] -mt-[30%]" },
+            { src: `${baseUrl}/assets/1.5.png`, className: "ml-auto w-[80%] -mt-[70%]" },
+          ].map((img, i) => (
+            <motion.img
+              key={i}
+              src={img.src}
+              alt="Silat"
+              className={img.className}
+              initial={{ opacity: 0, scale: 0.8, y: 40, rotate: i % 2 === 0 ? -3 : 3 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0, rotate: 0 }}
+              transition={{
+                duration: 0.8,
+                type: "spring",
+                stiffness: 120,
+                damping: 12,
+                delay: i * 0.15,
+              }}
+              viewport={{ once: true, amount: 0.2 }}
+            />
+          ))}
+        </div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl">
+          <img
+            src={`${baseUrl}/assets/footer.png`}
+            className="mx-auto hidden w-full sm:block"
+            alt="Footer"
+          />
+        </div>
+      </div>
+
+    </div >
   );
 }

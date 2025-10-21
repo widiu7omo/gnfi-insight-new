@@ -1,203 +1,236 @@
 "use client";
 
 import { baseUrl } from "@/constants/meta";
-import { COMPONENT_PARAGRAPH } from "@/data/component-front";
-import { Paragraph } from "@/stories/Paragraph";
-import { motion, useInView } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export function CustomImageC() {
-  const heroRef = useRef(null);
-  const cardsRef = useRef(null);
-  const statsRef = useRef(null);
-  const titleRef = useRef(null);
-  const imageRef = useRef(null);
-
-  const heroInView = useInView(heroRef, { once: true });
-  const cardsInView = useInView(cardsRef, { once: true });
-  const statsInView = useInView(statsRef, { once: true });
-  const titleInView = useInView(titleRef, { once: true });
-  const imageInView = useInView(imageRef, { once: true });
-
-  const [counter, setCounter] = useState(0);
-
-  useEffect(() => {
-    if (statsInView) {
-      let start = 0;
-      const end = 156;
-      const duration = 2000;
-      const increment = end / (duration / 16);
-
-      const timer = setInterval(() => {
-        start += increment;
-        if (start >= end) {
-          setCounter(end);
-          clearInterval(timer);
-        } else {
-          setCounter(Math.floor(start));
-        }
-      }, 16);
-
-      return () => clearInterval(timer);
-    }
-  }, [statsInView]);
-  const flags: { flag: string; name: string, desc: string }[] = [
-    { flag: baseUrl + '/assets/3.1.png', name: 'Amerika Serikat', desc: 'Di bawah 13 tahun membutuhkan persetujuan orang tua' },
-    { flag: baseUrl + '/assets/3.2.png', name: 'Prancis', desc: 'Terlarang bagi usia di bawah 15 tahun (masih rencana)' },
-    { flag: baseUrl + '/assets/3.3.png', name: 'United Kingdom', desc: 'Terlarang bagi usia di bawah 16 tahun  (masih rencana)' },
-    { flag: baseUrl + '/assets/3.4.png', name: 'Jerman', desc: 'Usia 13-16 tahun membutuhkan persetujuan orang tua' },
-    { flag: baseUrl + '/assets/3.5.png', name: 'Australia', desc: 'Terlarang bagi usia di bawah 16 tahun' },
-    { flag: baseUrl + '/assets/3.6.png', name: 'Italia', desc: 'Usia di bawah 14 tahun membutuhkan persetujuan orang tua' },
-    { flag: baseUrl + '/assets/3.7.png', name: 'Norwegia', desc: 'Terlarang bagi usia di bawah 16 tahun (masih rencana)' },
-    { flag: baseUrl + '/assets/3.8.png', name: 'Yunani', desc: 'Usia di bawah 15 tahun harus disertai verifikasi dan kontrol orang tua (masih rencana)' },
-  ]
   return (
-    <motion.div
-      className="relative flex font-sora flex-col items-center overflow-hidden bg-gradient-to-b from-black to-[80%] to-[#070419] bg-no-repeat"
-
-    >
-      {/* <div className="absolute left-0 right-0 top-0 bottom-0 bg-[#070419]" /> */}
-      <div className="absolute w-[40rem] h-[80rem] blur-[10rem] bottom-[-40rem] bg-gradient-to-b to-[40%] from-purple-600 to-pink-600 rounded-full" />
-      <div className="absolute size-[40rem] blur-[8rem] bottom-[0rem] left-[30%] bg-red-600 rounded-full" />
-      <div className="absolute size-[40rem] blur-[4rem] bottom-[-40rem]  bg-gradient-to-b from-red-600 to-yellow-600 rounded-full" />
-      <div className="relative noise2 w-full pt-10">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <motion.div 
-            ref={titleRef}
-            className="flex flex-col items-center justify-center space-y-6"
-            initial={{ opacity: 0, y: 50 }}
-            animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+    <div className="relative flex flex-col items-center overflow-hidden">
+      <div
+        className="relative w-full justify-center bg-cover bg-center pt-16 md:pt-24"
+        style={{ backgroundImage: `url(${baseUrl}/assets/3.8.png)` }}
+      >
+        <div className="relative mx-auto max-w-4xl lg:px-0 lg:px-0 px-4">
+          <motion.div
+            className="md:hidden bg-white px-4 md:px-8 py-4 md:py-6 w-[88%]"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
           >
-            <motion.div 
-              className="text-[#ffc600] text-3xl md:text-4xl lg:text-6xl text-center font-bold px-4 lg:px-0"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={titleInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            >
-              Aturan Mirip PP Tunas di Negara Lain
-            </motion.div>
-            <motion.div 
-              className="text-white font-medium text-lg md:text-2xl lg:text-3xl text-center px-4 lg:px-0"
-              initial={{ opacity: 0, y: 30 }}
-              animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            >
-              Di berbagai negara, penggunaan akun <br /> media sosial anak juga punya batasan usia
-            </motion.div>
+            <motion.h2 className="font-sora text-[#C02220] font-bold text-3xl md:text-[52px] mb-2 lg:mb-6 md:leading-snug leading-snug">
+              Warisan Budaya Takbenda Indonesia Mendunia!
+            </motion.h2>
+            <motion.p className="font-sora text-[#2A2828] text-base md:text-2xl leading-relaxed w-full md:w-[76%]">
+              Ada sejumlah WBTbI yang telah diakui sebagai Intangible Cultural Heritage (IHC) oleh Organisasi Pendidikan, Keilmuan, dan Kebudayaan PBB (UNESCO)            </motion.p>
           </motion.div>
-          <motion.div 
-            ref={cardsRef}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 lg:gap-6 px-2 md:px-0"
-          >
-            {flags.map((flag, index) => (
-              <motion.div 
-                className="flex group cursor-pointer"
-                key={flag.name}
-                initial={{ opacity: 0, x: -50, scale: 0.9 }}
-                animate={cardsInView ? { opacity: 1, x: 0, scale: 1 } : { opacity: 0, x: -50, scale: 0.9 }}
-                transition={{ 
-                  duration: 0.6, 
-                  delay: index * 0.1, 
-                  ease: "easeOut" 
-                }}
-                whileHover={{ 
-                  scale: 1.05, 
-                  transition: { duration: 0.2 } 
-                }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <motion.img 
-                  src={flag.flag} 
-                  alt={flag.name} 
-                  className="size-[8rem] md:size-auto transition-transform duration-300 group-hover:scale-110" 
-                  initial={{ rotate: -10, opacity: 0 }}
-                  animate={cardsInView ? { rotate: 0, opacity: 1 } : { rotate: -10, opacity: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                />
-                <motion.div 
-                  className="flex flex-col text-white justify-center ml-4"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={cardsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-                >
-                  <motion.div 
-                    className="text-xl lg:text-2xl font-bold mb-3 transition-colors duration-300 group-hover:text-[#ffc600]"
-                    initial={{ y: 10, opacity: 0 }}
-                    animate={cardsInView ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 + 0.4 }}
-                  >
-                    {flag.name}
-                  </motion.div>
-                  <motion.div 
-                    className="text-base lg:text-xl transition-colors duration-300 group-hover:text-gray-200"
-                    initial={{ y: 10, opacity: 0 }}
-                    animate={cardsInView ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 + 0.5 }}
-                  >
-                    {flag.desc}
-                  </motion.div>
-                </motion.div>
-              </motion.div>
-            ))}
-          </motion.div>
-          <motion.div 
-            className="italic text-xl text-white float-right mr-4"
-            initial={{ opacity: 0, x: 20 }}
-            animate={cardsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-          >
-            Sumber: tech.co
-          </motion.div>
-          <motion.div 
-            ref={imageRef}
-            className="relative"
-            initial={{ opacity: 0, y: 50 }}
-            animate={imageInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          <motion.img
+            src={`${baseUrl}/assets/3.1.png`}
+            alt="reog ponorogo"
+            className="relative md:static mx-auto w-[80%] lg:mt-0 md:mt-20 md:pb-20 lg:pb-0 z-20"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          />
+          <motion.div
+            className="hidden md:block absolute md:-top-24 lg:top-8 left-0 bg-white px-4 md:px-8 py-4 md:py-6 w-[88%]"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
           >
-            <motion.img 
-              src={baseUrl + '/assets/3.9.png'} 
-              alt="Parent with children"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={imageInView ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
-              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-              className="transition-transform duration-500 hover:scale-105"
-            />
+            <motion.h2 className="font-sora text-[#C02220] font-bold text-3xl md:text-[52px] mb-2 lg:mb-6 md:leading-snug leading-snug">
+              Warisan Budaya Takbenda Indonesia Mendunia!
+            </motion.h2>
+            <motion.p className="font-sora text-[#2A2828] text-base md:text-2xl leading-relaxed w-[76%]">
+              Ada sejumlah WBTbI yang telah diakui sebagai Intangible Cultural Heritage (IHC) oleh Organisasi Pendidikan, Keilmuan, dan Kebudayaan PBB (UNESCO)            </motion.p>
+          </motion.div>
+          <motion.img
+            src={`${baseUrl}/assets/3.2.png`}
+            alt="penari"
+            className="hidden md:block absolute top-[20%] right-0 w-[38%]"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+          />
+          <div className="flex absolute bottom-0 items-end">
             <motion.div
-              className="absolute bottom-0 z-50 mx-auto max-w-4xl"
-              initial={{ opacity: 0, y: 20, scale: 0.9 }}
-              animate={imageInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 20, scale: 0.9 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-              whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+              className="hidden md:block bottom-0 left-0 w-[40%] bg-[#EACD86] px-4 md:px-6 py-4 md:py-6"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
             >
-              <motion.img
-                src={`${baseUrl}/assets/footer.png`}
-                className="z-50 mx-auto hidden w-full sm:block"
-                initial={{ opacity: 0 }}
-                animate={imageInView ? { opacity: 1 } : { opacity: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-              />
+              <motion.p
+                className="font-sora text-[#2A2828] text-base md:text-2xl leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                Setidaknya terdapat 16 WBTbI yang diakui sebagai IHC UNESCO
+              </motion.p>
+              <motion.p
+                className="font-sora mt-6 text-[#2A2828] text-base md:text-2xl leading-relaxed md:mb-10"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                Terbaru, Reog Ponorogo, Kebaya, dan Kolintang, mendapat pengakuan pada Desember 2024 lalu
+              </motion.p>
             </motion.div>
-          </motion.div>
+            <motion.img
+              src={`${baseUrl}/assets/3.2.png`}
+              alt="penari"
+              className="md:hidden absolute bottom-0 z-40 left-0 w-[30%]"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            />
+            <motion.img
+              src={`${baseUrl}/assets/3.3.png`}
+              alt="reog ponorogo"
+              className="w-[60%] ml-auto md:ml-0 z-30"
+              initial={{ opacity: 0, y: 80, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                duration: 1.1,
+                ease: [0.22, 1, 0.36, 1],
+                delay: 0.2,
+              }}
+              viewport={{ once: true }}
+            />
+          </div>
         </div>
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={imageInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+          className="md:hidden bottom-0 left-0 w-full bg-[#EACD86] px-4 md:px-6 py-4 md:py-6"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
-          <Paragraph block={{
-            component: COMPONENT_PARAGRAPH,
-            componentProps: {
-              className: 'text-white max-w-[65ch] font-sans transition-all duration-500 hover:text-gray-200',
-              children: (<>
-                <p>Tak hanya Australia, beberapa negara Eropa juga memiliki regulasi soal penggunan media sosial dan platform digital untuk anak-anak. Meski tiap negara memiliki pendekatan yang berbeda, tujuannya tetap sama, yaitu melindungi anak-anak dari risiko dunia digital dan memastikan media sosial digunakan secara bijak sesuai usia pengguna.</p>
-              </>)
-            }
-          }} />
+          <motion.p
+            className="font-sora text-[#2A2828] text-base md:text-2xl leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Setidaknya terdapat 16 WBTbI yang diakui sebagai IHC UNESCO
+          </motion.p>
+          <motion.p
+            className="font-sora mt-6 text-[#2A2828] text-base md:text-2xl leading-relaxed md:mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            Terbaru, Reog Ponorogo, Kebaya, dan Kolintang, mendapat pengakuan pada Desember 2024 lalu
+          </motion.p>
         </motion.div>
+        <div className="relative pt-10 md:py-8 max-w-4xl mx-auto px-4 lg:px-0">
+          <div className="flex flex-col-reverse md:flex-row">
+            <div className="relative w-full md:w-1/2">
+              <motion.img
+                src={`${baseUrl}/assets/3.4.png`}
+                alt="Silat"
+                className="w-[50%] mb-8 md:-mt-20"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+              />
+              <motion.img
+                src={`${baseUrl}/assets/3.5.png`}
+                alt="Penari"
+                className="hidden md:block absolute top-32 lg:top-20 -right-4"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, scale: 1.25, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+              />
+              <motion.img
+                src={`${baseUrl}/assets/3.5.png`}
+                alt="Penari"
+                className="md:hidden absolute top-32 lg:top-20 -right-4"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
+              />
+              <motion.img
+                src={`${baseUrl}/assets/3.6.png`}
+                alt="Orang"
+                className="hidden md:block absolute md:top-[46%] lg:top-[38%] md:left-0 lg:-left-6"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, scale: 1.6, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                viewport={{ once: true }}
+              />
+              <motion.img
+                src={`${baseUrl}/assets/3.6.png`}
+                alt="Orang"
+                className="md:hidden absolute bottom-0"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                viewport={{ once: true }}
+              />
+            </div>
+            <div className="w-full mb-4 md:mb-20 pl-0 md:pl-[4rem] z-40">
+              <motion.h3 className="font-sora text-[#C02220] font-bold text-2xl md:text-4xl lg:text-5xl mb-6 md:mb-8 md:leading-snug leading-snug w-full"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}>
+                Mengapa pengakuan internasional atas WBTbI penting?
+              </motion.h3>
+              <motion.p className="lg:pr-[9rem] font-sora text-[#2A2828] text-base md:text-2xl mb-6 md:mb-8 leading-relaxed w-full"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}>
+                Menegaskan identitas bangsa dan membentuk citra Indonesia sebagai bangsa kaya akan keberagaman budaya
+              </motion.p>
+              <motion.p className="font-sora text-[#2A2828] text-base md:text-2xl mb-6 md:mb-8 leading-relaxed w-full"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}>
+                Medium diplomasi lunak <span className="italic"><br />(soft power diplomacy)  </span>   </motion.p>
+              <motion.p className="lg:pr-[26%] font-sora text-[#2A2828] text-base md:text-2xl mb-6 md:mb-8 leading-relaxed w-full"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}>
+                Mendorong perekonomian dengan mengemas budaya sebagai daya tarik wisata dan ekonomi kreatif</motion.p>
+            </div>
+          </div>
+          <div className="relative pt-10 md:py-8 max-w-4xl mx-auto px-4 lg:px-0">
+            <motion.img
+              src={`${baseUrl}/assets/3.7.png`}
+              alt="Silat"
+              className="absolute bottom-3 md:bottom-0 z-20 w-full max-w-4xl"
+              initial={{ opacity: 0, scale: 1, y: 40 }}
+              whileInView={{ opacity: 1, scale: 1.25, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
+              viewport={{ once: true }}
+            />
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl">
+          <img
+            src={`${baseUrl}/assets/footer.png`}
+            className="mx-auto hidden w-full sm:block"
+            alt="Footer"
+          />
+        </div>
       </div>
 
-    </motion.div>
+    </div >
   );
 }
