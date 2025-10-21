@@ -1,270 +1,370 @@
 "use client";
+
 import { baseUrl } from "@/constants/meta";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 export function CustomImageD() {
-  const heroRef = useRef(null);
-  const titleRef = useRef(null);
-  const quotesRef = useRef(null);
-  const bottomSectionRef = useRef(null);
-  const imageRef = useRef(null);
-
-  const heroInView = useInView(heroRef, { once: true });
-  const titleInView = useInView(titleRef, { once: true });
-  const quotesInView = useInView(quotesRef, { once: true });
-  const bottomSectionInView = useInView(bottomSectionRef, { once: true });
-  const imageInView = useInView(imageRef, { once: true });
-
   return (
-    <motion.div
-      className="relative flex flex-col items-center overflow-hidden font-sora"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
+    <div className="relative flex flex-col items-center overflow-hidden bg-[#E6E6E6]">
       <div
-        className="relative w-full justify-center bg-cover bg-top pt-6 md:pt-20 "
-        style={{ backgroundImage: `url(${baseUrl}/assets/4.1.png)` }}
+        className="relative w-full justify-center bg-[#E6E6E6] pb-0 pt-10 md:pt-20"
       >
-        <div className="absolute bottom-[-2px] w-full h-full block lg:hidden bg-gradient-to-t from-white"></div>
-        <motion.div
-          ref={heroRef}
-          className="max-w-4xl mx-auto lg:pb-28 relative z-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-        >
-          <motion.div
-            className="w-full space-y-8 px-4 lg:px-0"
-          >
-            <motion.div
-              ref={titleRef}
-              className="text-4xl sm:text-5xl xl:text-6xl font-extrabold pr-20 !leading-[1.2]"
-              initial={{ opacity: 0, y: 20 }}
-              animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+        <div className="flex mx-auto max-w-4xl lg:px-0 lg:px-0 px-4 items-center mb-20 md:mb-28">
+          <div className="w-[60%]">
+            <motion.h2
+              className="w-full font-sora text-[#151515] font-bold text-3xl md:text-6xl mb-8 lg:mb-10 md:leading-snug leading-snug"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
             >
-              Berapa Usia Ideal Anak untuk Mengakses <br />Media Sosial?
-            </motion.div>
-            <motion.div
-              ref={quotesRef}
-              className="py-16 space-y-16"
-              initial={{ opacity: 0 }}
-              animate={quotesInView ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <motion.div
-                className="bg-[#00213b] rounded-2xl p-6 text-white font-medium relative w-full sm:w-3/4 lg:w-1/2 relative group cursor-pointer"
-                initial={{ opacity: 0, y: 30 }}
-                animate={quotesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-                whileHover={{
-                  y: -4,
-                  boxShadow: "0 12px 24px rgba(0, 33, 59, 0.15)",
-                  transition: { duration: 0.2, ease: "easeOut" }
-                }}
-              >
-                <motion.img
-                  src={baseUrl + '/assets/4.3.png'}
-                  alt="Person 1"
-                  style={{ shapeOutside: 'circle()' }}
-                  className="rounded-full float-left -mt-[10%] -ml-[15%] size-[8rem] p-3"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={quotesInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-                />
-                <motion.div
-                  className="text-base leading-relaxed"
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={quotesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                  transition={{ duration: 0.5, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  "Akses tanpa pengawasan, tanpa screen control atau pantauan orang tua, mungkin harus ditunda selama mungkin, tentunya sampai setidaknya (anak sudah berusia 9 tahun)."
-                </motion.div>
-                <motion.div
-                  className="mt-4"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={quotesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                  transition={{ duration: 0.4, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  Psikolog klinis & Chief Science Officer American Psychological Association (APA), Dr. Mitch Prinstein,
-                  via CNBC Make It
-                </motion.div>
-              </motion.div>
-              <motion.div
-                className="bg-[#00213b] rounded-2xl p-6 text-white font-medium relative w-full sm:w-3/4 lg:w-1/2 relative group cursor-pointer"
-                initial={{ opacity: 0, y: 30 }}
-                animate={quotesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                whileHover={{
-                  y: -4,
-                  boxShadow: "0 12px 24px rgba(0, 33, 59, 0.15)",
-                  transition: { duration: 0.2, ease: "easeOut" }
-                }}
-              >
-                <motion.img
-                  src={baseUrl + '/assets/4.4.png'}
-                  alt="Person 1"
-                  style={{ shapeOutside: 'circle()' }}
-                  className="rounded-full float-left -mt-[10%] -ml-[15%] size-[8rem] p-3"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={quotesInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.5, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-                />
-                <motion.div
-                  className="text-base leading-relaxed"
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={quotesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                  transition={{ duration: 0.5, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  "Penelitian menunjukkan bahwa anak perempuan 10-14 tahun terdampak paling besar oleh algoritma media sosial. Saya akan menunggu hingga berusia 15 atau 16, tetapi itu juga tampak kurang realistis bagi banyak kehidupan orang tua dan sang anak."
-                </motion.div>
-                <motion.div
-                  className="mt-4"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={quotesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                  transition={{ duration: 0.4, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  Pendiri dan CEO Social Awakening, organisasi yang gencar mengampanyekan penggunaan media sosial secara sehat, Max Stossel
-                </motion.div>
-              </motion.div>
-              <motion.div
-                className="bg-[#00213b] rounded-2xl p-6 text-white font-medium w-full sm:w-3/4 lg:w-1/2 mt-[20%] md:hidden block group cursor-pointer"
-                initial={{ opacity: 0, y: 30 }}
-                animate={quotesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-                whileHover={{
-                  y: -4,
-                  boxShadow: "0 12px 24px rgba(0, 33, 59, 0.15)",
-                  transition: { duration: 0.2, ease: "easeOut" }
-                }}
-              >
-                <motion.img
-                  src={baseUrl + '/assets/4.5.png'}
-                  alt="Person 1"
-                  style={{ shapeOutside: 'circle()' }}
-                  className="rounded-full float-left -mt-[10%] -ml-[15%] size-[8rem] p-3"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={quotesInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.5, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-                />
-                <motion.div
-                  className="text-base leading-relaxed"
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={quotesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                  transition={{ duration: 0.5, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  "Saya bisa memperkenalkan Anda kepada seorang anak berusia 13 tahun yang sangat dewasa dan seorang anak berusia 17 tahun yang sangat belum dewasa."
-                </motion.div>
-                <motion.div
-                  className="mt-4"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={quotesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                  transition={{ duration: 0.4, delay: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  Psikolog klinis Child Mind Institute, Jerry Bubrick, PhD.,
-                </motion.div>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        </motion.div>
-        <motion.div
-          ref={bottomSectionRef}
-          className="bg-white"
-          initial={{ opacity: 0, y: 20 }}
-          animate={bottomSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-        >
-          <div className="max-w-4xl mx-auto relative">
-            <motion.div
-              className="flex flex-row items-start py-12 px-4 lg:px-0"
-              initial={{ opacity: 0, y: 15 }}
-              animate={bottomSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-              transition={{ duration: 0.5, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-            >
-              <motion.img
-                src={baseUrl + '/assets/4.6.png'}
-                alt="Symbol"
-                className="size-[3rem] mr-4"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={bottomSectionInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.5, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              />
-              <motion.div
-                className="text-xl md:text-2xl lg:text-3xl font-medium"
-                initial={{ opacity: 0, y: 15 }}
-                animate={bottomSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-              >
-                Pembatasan usia minimal kini sudah lazim dilakukan. Namun perlu diketahui, usia tidak selalu mutlak mencerminkan kedewasaan.
-              </motion.div>
-            </motion.div>
-            <motion.div
-              className="bg-[#00213b] rounded-2xl p-6 absolute z-10 top-0 left-4 text-white font-medium w-1/2 mt-[20%] hidden md:block group cursor-pointer"
-              initial={{ opacity: 0, x: -30 }}
-              animate={bottomSectionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-              transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-              whileHover={{
-                y: -4,
-                boxShadow: "0 12px 24px rgba(0, 33, 59, 0.15)",
-                transition: { duration: 0.2, ease: "easeOut" }
-              }}
-            >
-              <motion.img
-                src={baseUrl + '/assets/4.5.png'}
-                alt="Person 1"
-                style={{ shapeOutside: 'circle()' }}
-                className="rounded-full float-left -mt-[10%] -ml-[15%] size-[8rem] p-3 transition-transform duration-300 group-hover:scale-110"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={bottomSectionInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.5, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-              />
-              <motion.div
-                className="text-base leading-relaxed"
-                initial={{ opacity: 0, y: 15 }}
-                animate={bottomSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                transition={{ duration: 0.5, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-              >
-                "Saya bisa memperkenalkan Anda kepada seorang anak berusia 13 tahun yang sangat dewasa dan seorang anak berusia 17 tahun yang sangat belum dewasa."
-              </motion.div>
-              <motion.div
-                className="mt-4"
-                initial={{ opacity: 0, y: 10 }}
-                animate={bottomSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                transition={{ duration: 0.4, delay: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
-              >
-                Psikolog klinis Child Mind Institute, Jerry Bubrick, PhD.,
-              </motion.div>
-            </motion.div>
-            <motion.img
-              ref={imageRef}
-              src={baseUrl + '/assets/4.2.png'}
-              alt="Child with Laptop"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={imageInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="transition-all duration-500"
-            />
+              Melestarikan WBTbI <br />Tak Mudah, <br />tapi Ada Jalan!          </motion.h2>
+            <motion.p className="font-sora text-[#151515] text-base md:text-2xl leading-relaxed"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}>
+              Upaya melestarikan WBTbI dihadapkan tantangan. Kendati demikian, ada pula strategi yang ditempuh pemerintah untuk mengatasinya          </motion.p>
           </div>
-        </motion.div>
-      </div>
-      <div className="absolute top-0 h-[10%] w-full bg-gradient-to-b from-[#d4d6de]" />
+          <div className="w-[60%] md:w-1/2">
+            <motion.img
+              src={`${baseUrl}/assets/4.1.png`}
+              alt="Melestarikan WBTbI Tak Mudah, tapi Ada Jalan!"
+              className="w-[80%] md:w-[50%] mx-auto object-left"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              viewport={{ once: true }}
+            />
+            <motion.img
+              src={`${baseUrl}/assets/4.3.png`}
+              alt="Melestarikan WBTbI Tak Mudah, tapi Ada Jalan!"
+              className="w-[200%] md:w-[120%]"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              viewport={{ once: true }}
+            />
+            <motion.img
+              src={`${baseUrl}/assets/4.2.png`}
+              alt="Melestarikan WBTbI Tak Mudah, tapi Ada Jalan!"
+              className="w-[90%] md:w-[75%] mx-auto -mt-[70%] md:-mt-[60%] lg:-mt-72"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              viewport={{ once: true }}
+            />
 
-      <motion.div
-        className="absolute bottom-0 z-50 mx-auto max-w-4xl"
-        initial={{ opacity: 0, y: 15 }}
-        animate={imageInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-        transition={{ duration: 0.6, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+          </div>
+        </div>
+      </div>
+      <div
+        className="relative w-full justify-center bg-[#534A45] rounded-t-[5%]"
       >
-        <motion.img
-          src={`${baseUrl}/assets/footer.png`}
-          className="z-50 mx-auto hidden w-full sm:block"
-          initial={{ opacity: 0 }}
-          animate={imageInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.5, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-        />
-      </motion.div>
-    </motion.div>
+        <div className="max-w-4xl mx-auto lg:px-0 lg:px-0 px-4 items-center pt-16 md:pt-14 pb-20 md:pb-32">
+          <motion.img
+            src={baseUrl + '/assets/4.4.png'}
+            alt="tahu"
+            className="z-10 -mt-[22%] md:-mt-[14%] lg:-mt-[10%] ml-[8%] md:ml-[4%] lg:ml-[8%] w-[20%] md:w-[20%]"
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+            viewport={{ once: true }}
+          />
+          <motion.p className="font-semibold -mt-[10%] relative mx-auto text-center text-white w-full lg:w-[55%] lg:px-0 md:px-8 px-4 text-center font-sora text-2xl md:text-5xl lg:text-6xl leading-relaxed"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}>
+            Tantangan
+          </motion.p>
+          <div className="space-y-2 px-4 md:px-28 mt-4 md:mt-10 lg:mt-16">
+            <motion.div
+              className="flex items-start border-2 border-white rounded-full px-4 md:px-8 py-1 md:py-1"
+              initial={{ opacity: 0, y: 60, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                duration: 0.7,
+                type: "spring",
+                stiffness: 80,
+                damping: 15,
+                delay: 0.2,
+              }}
+              viewport={{ once: true }}
+            >
+              <img
+                src={`${baseUrl}/assets/4.5.png`}
+                alt="Tantangan 1"
+                className="w-5 md:w-6 inline-block mr-2 md:mr-4 flex-shrink-0"
+              />
+              <p className="font-sora text-white text-sm md:text-xl leading-relaxed">
+                Terbatasnya dokumentasi yang komprehensif
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="flex items-start border-2 border-white rounded-full px-4 md:px-8 py-1 md:py-1"
+              initial={{ opacity: 0, y: 60, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                duration: 0.7,
+                type: "spring",
+                stiffness: 80,
+                damping: 15,
+                delay: 0.3,
+              }}
+              viewport={{ once: true }}
+            >
+              <motion.img
+                src={`${baseUrl}/assets/4.6.png`}
+                alt="Tantangan 2"
+                className="w-4 md:w-6 inline-block mr-2 md:mr-4 flex-shrink-0"
+              />
+              <p className="font-sora text-white text-sm md:text-xl leading-relaxed">
+                Menurunnya minat generasi muda
+              </p>
+            </motion.div>
+            <motion.div
+              className="flex items-start border-2 border-white rounded-full px-4 md:px-8 py-1 md:py-1"
+              initial={{ opacity: 0, y: 60, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                duration: 0.7,
+                type: "spring",
+                stiffness: 80,
+                damping: 15,
+                delay: 0.4,
+              }}
+              viewport={{ once: true }}
+            >
+              <motion.img
+                src={`${baseUrl}/assets/4.7.png`}
+                alt="Tantangan 3"
+                className="w-5 md:w-7 inline-block mr-2 md:mr-4 flex-shrink-0"
+              />
+              <p className="font-sora text-white text-sm md:text-xl leading-relaxed">
+                Komodifikasi budaya yang tidak terkontrol
+              </p>
+            </motion.div>
+            <motion.div
+              className="flex items-start border-2 border-white rounded-full px-4 md:px-8 py-1 md:py-1"
+              initial={{ opacity: 0, y: 60, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                duration: 0.7,
+                type: "spring",
+                stiffness: 80,
+                damping: 15,
+                delay: 0.5,
+              }}
+              viewport={{ once: true }}
+            >
+              <motion.img
+                src={`${baseUrl}/assets/4.8.png`}
+                alt="Tantangan 4"
+                className="w-3 md:w-4 inline-block mr-2 md:mr-4"
+              />
+              <p className="font-sora text-white text-sm md:text-xl leading-relaxed">
+                Keterbatasan sumber daya
+              </p>
+            </motion.div>
+            <motion.div
+              className="flex items-start border-2 border-white rounded-full px-4 md:px-8 py-1 md:py-1"
+              initial={{ opacity: 0, y: 60, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                duration: 0.7,
+                type: "spring",
+                stiffness: 80,
+                damping: 15,
+                delay: 0.6,
+              }}
+              viewport={{ once: true }}
+            >
+              <motion.img
+                src={`${baseUrl}/assets/4.9.png`}
+                alt="Tantangan 5"
+                className="w-4 md:w-6 inline-block mr-2 md:mr-4 flex-shrink-0"
+              />
+              <p className="font-sora text-white text-sm md:text-xl leading-relaxed">
+                Perubahan iklim yang mengubah pola alam tempat lahirnya tradisi
+              </p>
+            </motion.div>
+            <motion.div
+              className="flex items-start border-2 border-white rounded-full px-4 md:px-8 py-1 md:py-1"
+              initial={{ opacity: 0, y: 60, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                duration: 0.7,
+                type: "spring",
+                stiffness: 80,
+                damping: 15,
+                delay: 0.7,
+              }}
+              viewport={{ once: true }}
+            >
+              <motion.img
+                src={`${baseUrl}/assets/4.10.png`}
+                alt="Tantangan 6"
+                className="w-4 md:w-6 inline-block mr-2 md:mr-4"
+              />
+              <p className="font-sora text-white text-sm md:text-xl leading-relaxed">
+                Urbanisasi
+              </p>
+            </motion.div>
+            <motion.div
+              className="flex items-start border-2 border-white rounded-full px-4 md:px-8 py-1 md:py-1"
+              initial={{ opacity: 0, y: 60, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                duration: 0.7,
+                type: "spring",
+                stiffness: 80,
+                damping: 15,
+                delay: 0.8,
+              }}
+              viewport={{ once: true }}
+            >
+              <motion.img
+                src={`${baseUrl}/assets/4.11.png`}
+                alt="Tantangan 6"
+                className="w-4 md:w-6 inline-block mr-2 md:mr-4 flex-shrink-0"
+              />
+              <p className="font-sora text-white text-sm md:text-xl leading-relaxed">
+                Klaim sepihak atas hak kekayaan intelektual komunal
+              </p>
+            </motion.div>
+          </div>
+        </div>
+        <div
+          className="relative w-full justify-center bg-black rounded-t-[5%]"
+        >
+          <div className="max-w-4xl mx-auto lg:px-0 lg:px-0 px-4 items-center pt-16 md:pt-14 pb-20 md:pb-32">
+            <motion.p className="z-0 font-semibold relative mx-auto text-center md:text-center lg:text-left text-white w-full font-sora text-2xl md:text-5xl lg:text-6xl leading-relaxed -mt-[10%] md:mt-0"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}>
+              Strategi Pemerintah
+            </motion.p>
+            <motion.img
+              src={baseUrl + '/assets/4.12.png'}
+              alt="panah"
+              className="z-30 -mt-[28%] md:-mt-[22%] lg:-mt-[28%] ml-auto w-[25%] md:w-[20%] lg:w-[30%]"
+              initial={{ opacity: 0, x: 80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.8,
+                ease: [0.25, 0.46, 0.45, 0.94],
+              }}
+              viewport={{ once: true }}
+            />
+            <div className="space-y-2 px-4 md:px-28 mt-8 md:mt-10 lg:mt-8">
+              <motion.div className="flex items-start border-2 border-white rounded-full px-4 md:px-8 py-1 md:py-1"
+                initial={{ opacity: 0, y: 60, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  duration: 0.2,
+                  type: "spring",
+                  stiffness: 80,
+                  damping: 15,
+                  delay: 0.2,
+                }}
+                viewport={{ once: true }}>
+                <motion.img
+                  src={`${baseUrl}/assets/4.13.png`}
+                  alt="Strategi 1"
+                  className="w-5 md:w-6 inline-block mr-2 md:mr-4 flex-shrink-0"
+                />
+                <p className="font-sora text-white text-sm md:text-xl leading-relaxed">
+                  Memperkuat basis data nasional WBTbI secara digital
+                </p>
+              </motion.div>
+              <motion.div className="flex items-start border-2 border-white rounded-full px-4 md:px-8 py-1 md:py-1"
+                initial={{ opacity: 0, y: 60, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  duration: 0.7,
+                  type: "spring",
+                  stiffness: 80,
+                  damping: 15,
+                  delay: 0.3,
+                }}
+                viewport={{ once: true }}>                <motion.img
+                  src={`${baseUrl}/assets/4.14.png`}
+                  alt="Strategi 2"
+                  className="w-5 md:w-7 inline-block mr-2 md:mr-4 flex-shrink-0 mt-[2px]"
+                />
+                <p className="font-sora text-white text-sm md:text-xl leading-relaxed">
+                  Regenerasi berbasis komunitas dan pendidikan budaya                </p>
+              </motion.div>
+              <motion.div className="flex items-start border-2 border-white rounded-full px-4 md:px-8 py-1 md:py-1"
+                initial={{ opacity: 0, y: 60, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  duration: 0.7,
+                  type: "spring",
+                  stiffness: 80,
+                  damping: 15,
+                  delay: 0.4,
+                }}
+                viewport={{ once: true }}>                <motion.img
+                  src={`${baseUrl}/assets/4.15.png`}
+                  alt="Strategi 3"
+                  className="w-5 md:w-7 inline-block mr-2 md:mr-4 flex-shrink-0 mt-[2px]"
+                />
+                <p className="font-sora text-white text-sm md:text-xl leading-relaxed">
+                  Sinergi dengan sektor pariwisata dan ekonomi kreatif                </p>
+              </motion.div>
+              <motion.div className="flex items-start border-2 border-white rounded-full px-4 md:px-8 py-1 md:py-1"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+                viewport={{ once: true }}>                <motion.img
+                  src={`${baseUrl}/assets/4.16.png`}
+                  alt="Strategi 4"
+                  className="w-5 md:w-7 inline-block mr-2 md:mr-4 flex-shrink-0 mt-1"
+                />
+                <p className="font-sora text-white text-sm md:text-xl leading-relaxed"
+                >
+                  Menempatkan komunitas sebagai aktor utama                </p>
+              </motion.div>
+              <motion.div className="flex items-start border-2 border-white rounded-full px-4 md:px-8 py-1 md:py-1"
+                initial={{ opacity: 0, y: 60, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  duration: 0.7,
+                  type: "spring",
+                  stiffness: 80,
+                  damping: 15,
+                  delay: 0.6,
+                }}
+                viewport={{ once: true }}>
+                <motion.img
+                  src={`${baseUrl}/assets/4.17.png`}
+                  alt="Strategi 5"
+                  className="w-4 md:w-6 inline-block mr-2 md:mr-4 flex-shrink-0 mt-[2px]"
+                />
+                <p className="font-sora text-white text-sm md:text-xl leading-relaxed">
+                  Memperluas pengakuan internasional bagi WBTbI
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl">
+          <img
+            src={`${baseUrl}/assets/footer.png`}
+            className="mx-auto hidden w-full sm:block"
+            alt="Footer"
+          />
+        </div>
+      </div>
+
+    </div >
   );
 }
