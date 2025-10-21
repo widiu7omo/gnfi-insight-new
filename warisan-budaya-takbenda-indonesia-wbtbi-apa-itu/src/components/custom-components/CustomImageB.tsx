@@ -52,7 +52,7 @@ export function CustomImageB() {
       className="relative flex flex-col font-sora items-center overflow-hidden bg-cover"
     >
       <div className="absolute left-0 right-0 top-0 bottom-0 bg-[#dfcdb9]" />
-      <div className="relative w-full pb-20">
+      <div className="relative w-full lg:pb-20">
         <div className="max-w-4xl mx-auto">
           <motion.div
             ref={heroRef}
@@ -62,7 +62,7 @@ export function CustomImageB() {
             variants={staggerContainer}
           >
             <motion.div
-              className="text-3xl sm:text-5xl pt-20 pb-10 lg:text-[52px] font-bold text-[#151515] !leading-tight"
+              className="text-3xl sm:text-5xl pt-8 lg:pt-20 pb-4 lg:pb-10 lg:text-[52px] font-bold text-[#151515] !leading-tight px-4 lg:px-0"
                 variants={fadeInUp}
                 transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               >
@@ -72,24 +72,24 @@ export function CustomImageB() {
               Indonesia
               </motion.div>
             <div
-              className="px-4 lg:px-0 flex flex-col pb-20"
+              className="flex flex-col lg:pb-20"
             >
               <div className="flex">
                 <motion.div
-                  className="text-lg sm:text-xl lg:text-2xl text-[#151515] font-medium mt-10 flex-grow"
+                  className="text-lg px-4 lg:px-0 sm:text-xl lg:text-2xl text-[#151515] font-medium lg:mt-10 flex-grow"
                   variants={fadeInUp}
                   transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
                   Sidang penetapan Warisan Budaya Takbenda Indonesia Tahun 2025
                   di Jakarta, Jumat (10/10/2025) Menorehkan sejarah baru.
                 </motion.div>
-                <div className="relative z-10 mr-6 w-full flex items-end justify-center">
+                <div className="relative z-10 lg:mr-6 w-full lg:flex items-end justify-center hidden">
                   <motion.img
                     variants={fadeInRight}
                     transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                     src={baseUrl + '/assets/2.1.png'} alt="People Dancing" className="w-full" />
                   <div className="absolute">
-                    <p className="text-5xl pt-20 font-bold font-sora text-center text-white">514 <br />
+                    <p className="text-5xl lg:pt-20 font-bold font-sora text-center text-white">514 <br />
                       Objek</p>
                     <p className="block text-xl text-left text-white p-8">
                       Pemajuan Kebudayaan yang direkomendasikan untuk ditetapkan.
@@ -101,16 +101,16 @@ export function CustomImageB() {
               <motion.img
                 variants={fadeInUp}
                 transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-                src={baseUrl + '/assets/2.2.png'} alt="Sidang" className="absolute" />
+                src={baseUrl + '/assets/2.2.png'} alt="Sidang" className="lg:absolute" />
             </div>
           </motion.div>
         </div>
-        <div className="bg-[#24130e] rounded-t-[8rem] relative z-20">
+        <div className="bg-[#24130e] lg:rounded-t-[8rem] relative z-20">
           <div className="max-w-4xl mx-auto relative">
-            <img src={baseUrl + '/assets/2.3.png'} alt="Tofu" className="w-1/2 absolute left-[-2rem] top-[-6rem] z-20" />
+            <img src={baseUrl + '/assets/2.3.png'} alt="Tofu" className="w-1/2 absolute left-[-2rem] -top-8 lg:top-[-6rem] z-20" />
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="pt-20">
+            <div className="lg:pt-20">
               <ChartWBTBI />
             </div>
           </div>

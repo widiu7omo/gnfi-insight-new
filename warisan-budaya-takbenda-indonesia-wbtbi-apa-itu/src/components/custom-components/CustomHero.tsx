@@ -122,7 +122,7 @@ export function CustomHero() {
                                 src={`${baseUrl}/assets/0.2.png`}
                                 alt="Women drawing Batik"
                                 aria-hidden="true"
-                                className="h-[40rem] absolute bottom-0 z-10 w-auto"
+                                className="lg:h-[40rem] absolute bottom-0 z-10 w-auto"
                             />
 
                         </div>

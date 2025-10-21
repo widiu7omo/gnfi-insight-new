@@ -49,10 +49,10 @@ export function CustomImageE() {
       {/* <div className="z-30 absolute inset-0 flex items-center justify-center">
         <img src={baseUrl + '/assets/5.1.png'} alt="Traditional Activity" className="object-cover " />
       </div> */}
-      <div className="py-20 bg-gradient-to-b from-white to-white/70 backdrop-blur-3xl w-full rounded-br-[8rem] z-20">
+      <div className="py-8 lg:py-20 bg-gradient-to-b from-white to-white/70 backdrop-blur-3xl w-full rounded-br-[8rem] z-20">
         <motion.div
           ref={heroRef}
-          className="mx-auto max-w-4xl py-12 relative"
+          className="mx-auto max-w-4xl py-4 lg:py-12 relative"
           initial={{ opacity: 0, y: 20 }}
           animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -69,7 +69,7 @@ export function CustomImageE() {
               Takbenda Indonesia (WBTbI)
               Tanggung Jawab Siapa?
             </motion.div>
-            <p className="text-2xl w-[80%]">
+            <p className="text-lg lg:text-2xl w-[80%]">
               Negara bertanggungjawab atas pelestarian WBTbI. Namun, masyarakat turut punya peran aktif
             </p>
           </div>
@@ -84,13 +84,13 @@ export function CustomImageE() {
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <img src={baseUrl + '/assets/5.2.png'} alt="Family" className="object-cover w-full absolute inset-0 z-10 -mt-[20%]" />
-          <div className="max-w-4xl mx-auto relative h-fit pt-[10rem] pb-[15rem] z-20">
-            <div>
-              <p className="text-2xl text-white w-1/2 font-medium">Negara bertugas merumuskan kebijakan, memberikan fasilitas, serta memastikan perlindungan secara hukum dan administratif.
+          <div className="max-w-4xl mx-auto flex flex-col-reverse lg:flex-row relative h-fit -mt-[6rem] lg:mt-0 lg:pt-[10rem] pb-[4rem] lg:pb-[15rem] z-20">
+            <div className="px-4 lg:px-0">
+              <p className="text-lg lg:text-2xl text-white lg:w-1/2 font-medium">Negara bertugas merumuskan kebijakan, memberikan fasilitas, serta memastikan perlindungan secara hukum dan administratif.
               </p>
-              <p className="text-2xl mt-12 text-white w-[40%] font-medium">Di sisi lain, warisan budaya itu lahir, tumbuh, dan hidup di tengah masyarakat.</p>
+              <p className="text-lg lg:text-2xl mt-4 lg:mt-12 text-white lg:w-[40%] font-medium">Di sisi lain, warisan budaya itu lahir, tumbuh, dan hidup di tengah masyarakat.</p>
             </div>
-            <img src={baseUrl + '/assets/5.6.png'} alt="Traditional" className="absolute right-[-15rem] top-[-15rem] scale-[.8]" />
+            <img src={baseUrl + '/assets/5.6.png'} alt="Traditional" className="lg:absolute right-0 lg:right-[-15rem] top-[-5rem] lg:top-[-15rem] scale-[.8]" />
           </div>
         </motion.div>
         <div className="">
@@ -101,16 +101,16 @@ export function CustomImageE() {
             animate={quoteInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            <div className="max-w-4xl px-0 pt-10 pb-6 sm:pb-24 mx-auto text-white text-base sm:text-lg lg:text-2xl leading-relaxed relative flex items-end">
-              <div className="-mt-[50%] w-auto h-[28rem] relative">
+            <div className="max-w-4xl px-0 pt-10 pb-6 sm:pb-24 mx-auto text-white text-base sm:text-lg lg:text-2xl leading-relaxed relative flex flex-col lg:flex-row lg:items-end">
+              <div className="lg:-mt-[50%] w-auto lg:h-[28rem] relative">
                 <img src={baseUrl + '/assets/5.4.png'} alt="I Made Dharma Suteja" className="object-cover" />
-                <div className="absolute inset-x-0 w-fit bottom-0 px-6 py-1.5 ml-6 h-fit bg-[#450693] rounded-tr-[2rem] rounded-bl-[2rem]">
+                <div className="absolute inset-x-0 w-fit bottom-0 px-6 py-1.5 ml-4 mr-4 lg:mr-0 lg:ml-6 h-fit bg-[#450693] rounded-tr-[2rem] rounded-bl-[2rem]">
                   <p className="text-[#ffc402] font-medium text-xl">I Made Dharma Suteja</p>
                   <p className="text-sm">Direktur Warisan Budaya, Kementerian Kebudayaan</p>
                 </div>
               </div>
               <motion.div
-                className="px-4 lg:px-0 w-[60%] ml-auto font-semibold text-3xl"
+                className="px-4 lg:px-0 lg:w-[60%] ml-auto font-semibold text-xl lg:text-3xl pt-4 lg:pt-0"
                 initial={{ opacity: 0, y: 15 }}
                 animate={quoteInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
                 transition={{ duration: 0.5, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}

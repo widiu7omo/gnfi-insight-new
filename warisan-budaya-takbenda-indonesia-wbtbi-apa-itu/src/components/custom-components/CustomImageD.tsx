@@ -59,7 +59,7 @@ export function CustomImageD() {
         </div>
       </div>
       <div
-        className="relative w-full justify-center bg-[#534A45] rounded-t-[8rem]"
+        className="relative w-full justify-center bg-[#534A45] rounded-t-[2rem] lg:rounded-t-[8rem]"
       >
         <div className="max-w-4xl mx-auto lg:px-0 px-4 items-center pt-16 md:pt-14 pb-20 md:pb-32">
           <motion.img
@@ -240,7 +240,7 @@ export function CustomImageD() {
           </div>
         </div>
         <div
-          className="relative w-full justify-center bg-black rounded-t-[8rem]"
+          className="relative w-full justify-center bg-black rounded-t-[2rem] lg:rounded-t-[8rem]"
         >
           <div className="max-w-4xl mx-auto lg:px-0 px-4 items-center pt-16 md:pt-14 pb-20 md:pb-32">
             <motion.p className="z-0 font-semibold relative mx-auto text-center md:text-center lg:text-left text-white w-full font-sora text-2xl md:text-5xl lg:text-[52px] leading-relaxed -mt-[10%] md:mt-0"
