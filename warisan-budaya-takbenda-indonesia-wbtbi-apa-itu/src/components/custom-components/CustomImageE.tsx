@@ -43,149 +43,74 @@ export function CustomImageE() {
 
   return (
     <motion.div
-      className="relative flex flex-col items-center overflow-hidden font-sora bg-no-repeat bg-[center_top_20%] bg-cover" style={{ backgroundImage: `url(${baseUrl + '/assets/5.1.jpg'})` }}
+      className="relative flex flex-col items-center overflow-hidden font-sora bg-no-repeat bg-[center_top_20%] bg-cover" style={{ backgroundImage: `url(${baseUrl + '/assets/5.3.png'})` }}
     >
       <div className="absolute top-0 h-[10rem] w-full bg-gradient-to-b from-[#efefe8]"></div>
-
-      <motion.div
-        ref={heroRef}
-        className="mx-auto max-w-4xl py-12 relative"
-        initial={{ opacity: 0, y: 20 }}
-        animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-      >
-        <div className="space-y-4 px-4 lg:px-0">
-          <motion.div
-            ref={titleRef}
-            className="font-bold text-2xl sm:text-3xl lg:text-4xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          >
-            Pada dasarnya, internet bermanfaat untuk anak
-          </motion.div>
-          <motion.div
-            ref={subtitleRef}
-            className="font-bold text-4xl sm:text-5xl lg:text-7xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={subtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-          >
-            Namun, harus ada pendampingan orang tua
-          </motion.div>
-          <div className="h-[60rem] md:h-[70rem] lg:h-[80rem]" />
-        </div>
-        <div className="space-y-20 px-4 lg:px-0">
-          <motion.div
-            ref={rolesRef}
-            className="text-center font-bold text-2xl lg:text-3xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={rolesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          >
-            Peran orang tua saat anak berinternet:
-          </motion.div>
-          <motion.div
-            ref={cardsRef}
-            className="grid grid-cols-2 sm:grid-cols-3 gap-y-12 gap-x-6 lg:gap-6"
-            initial={{ opacity: 0 }}
-            animate={cardsInView ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+      {/* <div className="z-30 absolute inset-0 flex items-center justify-center">
+        <img src={baseUrl + '/assets/5.1.png'} alt="Traditional Activity" className="object-cover " />
+      </div> */}
+      <div className="py-20 bg-gradient-to-b from-white to-white/50 backdrop-blur-3xl w-full rounded-br-[8rem] z-20">
+        <motion.div
+          ref={heroRef}
+          className="mx-auto max-w-4xl py-12 relative"
+          initial={{ opacity: 0, y: 20 }}
+          animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+        >
+          <div className="space-y-4 px-4 lg:px-0 ">
             <motion.div
-              className="bg-[#eae9e7] p-6 rounded-xl shadow-xl flex flex-col justify-start items-center relative"
-              initial={{ opacity: 0, y: 30 }}
-              animate={cardsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              whileHover={{
-                y: -4,
-                boxShadow: "0 12px 24px rgba(0, 0, 0, 0.1)",
-                transition: { duration: 0.2, ease: "easeOut" }
-              }}
+              ref={subtitleRef}
+              className="font-bold text-3xl sm:text-4xl lg:text-5xl !leading-[1.2] text-[#450693]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={subtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
-              <motion.img
-                src={baseUrl + '/assets/5.2.png'}
-                alt=""
-                className="max-h-[10rem] w-fit absolute top-[-4rem]"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={cardsInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.5, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              />
-              <div className="text-base sm:text-xl lg:text-2xl font-medium sm:font-bold text-center text-neutral-700 pt-[5rem]">Pembatasan waktu, durasi dan konten</div>
+              Pelestarian Warisan Budaya
+              Takbenda Indonesia (WBTbI)
+              Tanggung Jawab Siapa?
             </motion.div>
-            <motion.div
-              className="bg-[#eae9e7] p-6 rounded-xl shadow-xl flex flex-col justify-start items-center relative"
-              initial={{ opacity: 0, y: 30 }}
-              animate={cardsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              whileHover={{
-                y: -4,
-                boxShadow: "0 12px 24px rgba(0, 0, 0, 0.1)",
-                transition: { duration: 0.2, ease: "easeOut" }
-              }}
-            >
-              <motion.img
-                src={baseUrl + '/assets/5.3.png'}
-                alt=""
-                className="max-h-[10rem] w-fit absolute top-[-4rem]"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={cardsInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-              />
-              <div className="text-sm sm:text-lg lg:text-xl font-medium sm:font-bold text-center text-neutral-700 pt-[5rem]">Mengikutsertakan anak dalam menyusun aturan dan batasan</div>
-            </motion.div>
-            <motion.div
-              className="bg-[#eae9e7] p-6 rounded-xl shadow-xl flex flex-col justify-start items-center relative"
-              initial={{ opacity: 0, y: 30 }}
-              animate={cardsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-              whileHover={{
-                y: -4,
-                boxShadow: "0 12px 24px rgba(0, 0, 0, 0.1)",
-                transition: { duration: 0.2, ease: "easeOut" }
-              }}
-            >
-              <motion.img
-                src={baseUrl + '/assets/5.4.png'}
-                alt=""
-                className="max-h-[10rem] w-fit absolute top-[-4rem]"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={cardsInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.5, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-              />
-              <div className="text-base sm:text-xl lg:text-2xl font-medium sm:font-bold text-center text-neutral-700 pt-[5rem]">Konsisten menerapkan aturan</div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </motion.div>
+            <p className="text-2xl w-[80%]">
+              Negara bertanggungjawab atas pelestarian WBTbI. Namun, masyarakat turut punya peran aktif
+            </p>
+          </div>
+        </motion.div>
+      </div>
       <div className="w-full">
         <motion.div
           ref={imageRef}
-          className="max-w-4xl mx-auto"
+          className="w-full relative"
           initial={{ opacity: 0, y: 30 }}
           animate={imageInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <img src={baseUrl + '/assets/5.5.png'} alt="Family" className="" />
-        </motion.div>
-        <motion.div
-          ref={quoteRef}
-          className="bg-[#776a62] relative z-10 -mt-[5%] w-full"
-          initial={{ opacity: 0, y: 20 }}
-          animate={quoteInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-        >
-          <div className="max-w-4xl px-0 pt-10 pb-6 sm:pb-24 mx-auto text-white text-base sm:text-lg lg:text-2xl leading-relaxed">
-            <motion.div
-              className="px-4 lg:px-0"
-              initial={{ opacity: 0, y: 15 }}
-              animate={quoteInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-              transition={{ duration: 0.5, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-            >
-              "Memang tidak mudah menerapkan aturan-aturan tersebut, tetapi yang jelas apabila orang tua juga aware dengan dampak negatif dari penyalahgunaan internet pada anak, menyebabkan implementasinya akan jauh lebih mudah. Karena orang tua aware, anak lambat laun juga muncul kesadaran dalam dirinya. Tidak pure rasa takut, tetapi lebih ke arah kesadaran."
-            </motion.div>
+          <img src={baseUrl + '/assets/5.2.png'} alt="Family" className="object-cover w-full absolute inset-0 z-10 -mt-[20%]" />
+          <div className="max-w-4xl mx-auto relative h-fit pt-[10rem] pb-[15rem] z-20">
+            <p className="text-2xl text-white w-1/2 font-medium">Negara bertugas merumuskan kebijakan, memberikan fasilitas, serta memastikan perlindungan secara hukum dan administratif. Di sisi lain, warisan budaya itu llahir, tumbuh, dan hidup di tengah masyarakat.
+            </p>
+            <img src={baseUrl + '/assets/5.6.png'} alt="Traditional" className="absolute right-[-15rem] top-[-15rem] scale-[.8]" />
           </div>
         </motion.div>
+        <div className="">
+          <motion.div
+            ref={quoteRef}
+            className="relative z-30 w-full bg-gradient-to-br from-[#fe3e7f] to-[#ff71d6] rounded-tl-[8rem]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={quoteInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+          >
+            <div className="max-w-4xl px-0 pt-10 pb-6 sm:pb-24 mx-auto text-white text-base sm:text-lg lg:text-2xl leading-relaxed relative flex items-end">
+              <img src={baseUrl + '/assets/5.4.png'} alt="I Made Dharma Suteja" className="-mt-[50%] w-auto h-[25rem] object-cover" />
+              <motion.div
+                className="px-4 lg:px-0 w-[60%] ml-auto text-3xl"
+                initial={{ opacity: 0, y: 15 }}
+                animate={quoteInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+                transition={{ duration: 0.5, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+              >
+                "Pada akhirnya, pelestarian WBTbI akan lebih kuat jika menjadi bagian dari gaya hidup sehari-hari, bukan hanya seremoni."
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
       </div>
       <motion.div
         className="absolute bottom-0 z-50 mx-auto max-w-4xl"
