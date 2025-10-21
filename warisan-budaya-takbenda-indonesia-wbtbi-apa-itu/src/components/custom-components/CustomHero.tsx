@@ -52,7 +52,7 @@ export function CustomHero() {
             }}
         >
             <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-radial from-[#000] z-10" />
-            <div className="absolute inset-x-0 bottom-0 h-[20rem] bg-gradient-to-t from-[#000] z-20" />
+            <div className="absolute inset-x-0 bottom-0 h-[30rem] bg-gradient-to-t from-[#000] z-20" />
             <div className={cn("absolute h-full w-full bg-black/0")}>
                 <div className="mx-auto flex h-full max-w-7xl flex-col justify-between px-4 py-10 sm:px-6 sm:py-14 md:px-8 lg:px-10 xl:px-0">
                     <div className="relative flex flex-1 flex-col-reverse items-center justify-center gap-10 md:flex-row md:items-center md:justify-between">
