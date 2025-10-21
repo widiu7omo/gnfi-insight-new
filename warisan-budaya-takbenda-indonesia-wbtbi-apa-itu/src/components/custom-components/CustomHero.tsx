@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 
 import { baseUrl } from "@/constants/meta";
 import { cn } from "@/lib/utils";
-import { delay, motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const titleVariants = {
@@ -17,6 +17,19 @@ const titleVariants = {
             ease: [0.22, 1, 0.36, 1],
         },
     },
+};
+
+const imageVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (index: number) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.4 + index * 0.18,
+            duration: 1,
+            ease: [0.22, 1, 0.36, 1],
+        },
+    }),
 };
 
 export function CustomHero() {
@@ -39,28 +52,33 @@ export function CustomHero() {
             }}
         >
             <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-radial from-[#000] z-10" />
-            <div className="absolute inset-x-0 bottom-0 h-[10rem] bg-gradient-to-t from-[#000] z-20" />
+            <div className="absolute inset-x-0 bottom-0 h-[20rem] bg-gradient-to-t from-[#000] z-20" />
             <div className={cn("absolute h-full w-full bg-black/0")}>
                 <div className="mx-auto flex h-full max-w-7xl flex-col justify-between px-4 py-10 sm:px-6 sm:py-14 md:px-8 lg:px-10 xl:px-0">
                     <div className="relative flex flex-1 flex-col-reverse items-center justify-center gap-10 md:flex-row md:items-center md:justify-between">
-                        <motion.h1
+                        <h1 className="w-full max-w-2xl text-center font-sora md:max-w-[90%] md:text-left relative z-20">
+                            <motion.span
                             initial="hidden"
                             animate={heroControls}
                             variants={titleVariants}
-                            className="w-full max-w-2xl text-center font-sora md:max-w-[90%] md:text-left relative z-20"
-                        >
-                            <span className="text-[#fceb11] text-[3.5rem] font-anton leading-[1.08] tracking-tight uppercase sm:text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] xl:text-[8rem]">
+                                className="text-[#fceb11] block text-[3.5rem] font-anton leading-[1.08] tracking-tight uppercase sm:text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] xl:text-[8rem]">
                                 Menjaga <br />Warisan Budaya <br />Takbenda,
-                            </span>
+                            </motion.span>
                             <br />
-                            <span className="mt-4 block text-xl font-sora text-white sm:text-2xl md:text-3xl lg:text-5xl font-semibold">
+                            <motion.span
+                                initial="hidden"
+                                animate={heroControls}
+                                variants={{ ...titleVariants, visible: { ...titleVariants.visible, transition: { ...titleVariants.visible.transition, delay: 0.3 } } }}
+                                className="mt-4 block text-xl font-sora text-white sm:text-2xl md:text-3xl lg:text-5xl font-semibold">
                                 Melestarikan Kekayaan <br />Indonesia
-                            </span>
-                        </motion.h1>
+                            </motion.span>
+                        </h1>
                         <div className="absolute flex w-full flex-col items-end justify-start bottom-[-6rem] right-[-8rem]">
                             <motion.img
                                 initial="hidden"
                                 animate={heroControls}
+                                variants={imageVariants}
+                                custom={4}
                                 src={`${baseUrl}/assets/0.6.png`}
                                 alt="Women do traditional aceh dance"
                                 aria-hidden="true"
@@ -69,6 +87,8 @@ export function CustomHero() {
                             <motion.img
                                 initial="hidden"
                                 animate={heroControls}
+                                variants={imageVariants}
+                                custom={3}
                                 src={`${baseUrl}/assets/0.5.png`}
                                 alt="Women do play angklung"
                                 aria-hidden="true"
@@ -77,6 +97,8 @@ export function CustomHero() {
                             <motion.img
                                 initial="hidden"
                                 animate={heroControls}
+                                variants={imageVariants}
+                                custom={2}
                                 src={`${baseUrl}/assets/0.4.png`}
                                 alt="Women do traditional bali dance"
                                 aria-hidden="true"
@@ -85,6 +107,8 @@ export function CustomHero() {
                             <motion.img
                                 initial="hidden"
                                 animate={heroControls}
+                                variants={imageVariants}
+                                custom={1}
                                 src={`${baseUrl}/assets/0.3.png`}
                                 alt="Women do traditional java dance"
                                 aria-hidden="true"
@@ -93,6 +117,8 @@ export function CustomHero() {
                             <motion.img
                                 initial="hidden"
                                 animate={heroControls}
+                                variants={imageVariants}
+                                custom={0}
                                 src={`${baseUrl}/assets/0.2.png`}
                                 alt="Women drawing Batik"
                                 aria-hidden="true"
