@@ -9,10 +9,10 @@ export function CustomImageD() {
       <div
         className="relative w-full justify-center bg-[#E6E6E6] pb-0 pt-10 md:pt-20"
       >
-        <div className="flex mx-auto max-w-4xl lg:px-0 lg:px-0 px-4 items-center mb-20 md:mb-28">
+        <div className="flex mx-auto max-w-4xl lg:px-0 px-4 items-center mb-20 md:mb-28">
           <div className="w-[60%]">
             <motion.h2
-              className="w-full font-sora text-[#151515] font-bold text-3xl md:text-6xl mb-8 lg:mb-10 md:leading-snug leading-snug"
+              className="w-full font-sora text-[#151515] font-bold text-3xl md:text-[52px] mb-8 lg:mb-10 md:!leading-snug leading-snug"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -59,9 +59,9 @@ export function CustomImageD() {
         </div>
       </div>
       <div
-        className="relative w-full justify-center bg-[#534A45] rounded-t-[5%]"
+        className="relative w-full justify-center bg-[#534A45] rounded-t-[8rem]"
       >
-        <div className="max-w-4xl mx-auto lg:px-0 lg:px-0 px-4 items-center pt-16 md:pt-14 pb-20 md:pb-32">
+        <div className="max-w-4xl mx-auto lg:px-0 px-4 items-center pt-16 md:pt-14 pb-20 md:pb-32">
           <motion.img
             src={baseUrl + '/assets/4.4.png'}
             alt="tahu"
@@ -74,7 +74,7 @@ export function CustomImageD() {
             }}
             viewport={{ once: true }}
           />
-          <motion.p className="font-semibold -mt-[10%] relative mx-auto text-center text-white w-full lg:w-[55%] lg:px-0 md:px-8 px-4 text-center font-sora text-2xl md:text-5xl lg:text-6xl leading-relaxed"
+          <motion.p className="font-semibold -mt-[10%] relative mx-auto text-white w-full lg:w-[55%] lg:px-0 md:px-8 px-4 text-center font-sora text-2xl md:text-5xl lg:text-[52px] leading-relaxed"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -240,10 +240,10 @@ export function CustomImageD() {
           </div>
         </div>
         <div
-          className="relative w-full justify-center bg-black rounded-t-[5%]"
+          className="relative w-full justify-center bg-black rounded-t-[8rem]"
         >
-          <div className="max-w-4xl mx-auto lg:px-0 lg:px-0 px-4 items-center pt-16 md:pt-14 pb-20 md:pb-32">
-            <motion.p className="z-0 font-semibold relative mx-auto text-center md:text-center lg:text-left text-white w-full font-sora text-2xl md:text-5xl lg:text-6xl leading-relaxed -mt-[10%] md:mt-0"
+          <div className="max-w-4xl mx-auto lg:px-0 px-4 items-center pt-16 md:pt-14 pb-20 md:pb-32">
+            <motion.p className="z-0 font-semibold relative mx-auto text-center md:text-center lg:text-left text-white w-full font-sora text-2xl md:text-5xl lg:text-[52px] leading-relaxed -mt-[10%] md:mt-0"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}

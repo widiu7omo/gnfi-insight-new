@@ -62,7 +62,7 @@ export function CustomImageB() {
             variants={staggerContainer}
           >
             <motion.div
-              className="text-3xl sm:text-5xl pt-20 pb-10 lg:text-6xl font-bold text-[#151515]"
+              className="text-3xl sm:text-5xl pt-20 pb-10 lg:text-[52px] font-bold text-[#151515] !leading-tight"
                 variants={fadeInUp}
                 transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               >

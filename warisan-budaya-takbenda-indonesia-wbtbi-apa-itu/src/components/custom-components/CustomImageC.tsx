@@ -6,11 +6,13 @@ import { motion } from "framer-motion";
 export function CustomImageC() {
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
+      <div className="absolute h-[10rem] bg-gradient-to-b from-[#f6f0fa] z-20 w-full inset-x-0 top-0"></div>
+      <div className="absolute h-[10rem] bg-gradient-to-t from-[#d9dcf2] z-20 w-full inset-x-0 bottom-0"></div>
       <div
         className="relative w-full justify-center bg-cover bg-center pt-16 md:pt-24"
         style={{ backgroundImage: `url(${baseUrl}/assets/3.8.png)` }}
       >
-        <div className="relative mx-auto max-w-4xl lg:px-0 lg:px-0 px-4">
+        <div className="relative mx-auto max-w-4xl lg:px-0 px-4">
           <motion.div
             className="md:hidden bg-white px-4 md:px-8 py-4 md:py-6 w-[88%]"
             initial={{ opacity: 0, y: 40 }}
@@ -18,10 +20,10 @@ export function CustomImageC() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <motion.h2 className="font-sora text-[#C02220] font-bold text-3xl md:text-[52px] mb-2 lg:mb-6 md:leading-snug leading-snug">
+            <motion.h2 className="font-sora text-[#C02220] font-bold text-3xl md:text-[52px] mb-2 lg:mb-6 md:!leading-tight leading-snug">
               Warisan Budaya Takbenda Indonesia Mendunia!
             </motion.h2>
-            <motion.p className="font-sora text-[#2A2828] text-base md:text-2xl leading-relaxed w-full md:w-[76%]">
+            <motion.p className="font-sora text-[#2A2828] text-base md:text-2xl !leading-relaxed w-full md:w-[76%]">
               Ada sejumlah WBTbI yang telah diakui sebagai Intangible Cultural Heritage (IHC) oleh Organisasi Pendidikan, Keilmuan, dan Kebudayaan PBB (UNESCO)            </motion.p>
           </motion.div>
           <motion.img
@@ -40,7 +42,7 @@ export function CustomImageC() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <motion.h2 className="font-sora text-[#C02220] font-bold text-3xl md:text-[52px] mb-2 lg:mb-6 md:leading-snug leading-snug">
+            <motion.h2 className="font-sora text-[#C02220] font-bold text-3xl md:text-[52px] mb-2 lg:mb-6 md:!leading-snug leading-snug">
               Warisan Budaya Takbenda Indonesia Mendunia!
             </motion.h2>
             <motion.p className="font-sora text-[#2A2828] text-base md:text-2xl leading-relaxed w-[76%]">
@@ -182,7 +184,7 @@ export function CustomImageC() {
               />
             </div>
             <div className="w-full mb-4 md:mb-20 pl-0 md:pl-[4rem] z-40">
-              <motion.h3 className="font-sora text-[#C02220] font-bold text-2xl md:text-4xl lg:text-5xl mb-6 md:mb-8 md:leading-snug leading-snug w-full"
+              <motion.h3 className="font-sora text-[#C02220] font-bold text-2xl md:text-4xl lg:text-5xl mb-6 md:mb-8 md:!leading-[1.2] leading-snug w-full"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
