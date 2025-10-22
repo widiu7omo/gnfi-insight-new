@@ -135,7 +135,7 @@ export function CustomImageA() {
                 type: "spring",
                 stiffness: 120,
                 damping: 12,
-                delay: i * 0.15,
+                delay: (7 - i) * 0.15,
               }}
               viewport={{ once: true, amount: 0.2 }}
             />
