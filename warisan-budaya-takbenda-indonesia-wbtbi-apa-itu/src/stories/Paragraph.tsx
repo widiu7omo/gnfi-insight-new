@@ -59,22 +59,22 @@ export function Paragraph({ block }: { block: BlockType }) {
 			>
 				{ornamentTopRight && (
 					<Ornament className={cn("top-[-3rem] right-[-2rem]", classOrnamentTopRight)}>
-						<motion.img initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} src={`${baseUrl}/${ornamentTopRight}`} alt={ornamentTopRight} />
+						<img src={`${baseUrl}/${ornamentTopRight}`} alt={ornamentTopRight} />
 					</Ornament>
 				)}
 				{ornamentTopLeft && (
 					<Ornament className={cn("top-[-2rem] left-[-5rem]", classOrnamentTopLeft)}>
-						<motion.img initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} src={`${baseUrl}/${ornamentTopLeft}`} alt={ornamentTopLeft} />
+						<img src={`${baseUrl}/${ornamentTopLeft}`} alt={ornamentTopLeft} />
 					</Ornament>
 				)}
 				{ornamentBottomLeft && (
 					<Ornament className={cn("bottom-[-5rem] left-[-4rem]", classOrnamentBottomLeft)}>
-						<motion.img initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }} src={`${baseUrl}/${ornamentBottomLeft}`} alt={ornamentBottomLeft} />
+						<img src={`${baseUrl}/${ornamentBottomLeft}`} alt={ornamentBottomLeft} />
 					</Ornament>
 				)}
 				{ornamentBottomRight && (
 					<Ornament className={cn("bottom-[-5rem] right-[-4rem]", classOrnamentBottomRight)}>
-						<motion.img initial={{ opacity: 0, x: 10, y: -10 }} whileInView={{ opacity: 1, x: 0, y: 0 }}
+						<img
 							src={`${baseUrl}/${ornamentBottomRight}`}
 							alt={ornamentBottomRight}
 						/>
