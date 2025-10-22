@@ -89,12 +89,18 @@ export function CustomImageB() {
                     transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                     src={baseUrl + '/assets/2.1.png'} alt="People Dancing" className="w-full" />
                   <div className="absolute">
-                    <p className="text-5xl lg:pt-20 font-bold font-sora text-center text-white">514 <br />
-                      Objek</p>
-                    <p className="block text-xl text-left text-white p-8">
+                    <motion.p
+                      variants={fadeInUp}
+                      transition={{ duration: 0.6, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                      className="text-5xl lg:pt-20 font-bold font-sora text-center text-white">514 <br />
+                      Objek</motion.p>
+                    <motion.p
+                      variants={fadeInUp}
+                      transition={{ duration: 0.6, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                      className="block text-xl text-left text-white p-8">
                       Pemajuan Kebudayaan yang direkomendasikan untuk ditetapkan.
                       Terbanyak sejak 2013!
-                    </p>
+                    </motion.p>
                   </div>
                 </div>
               </div>
@@ -107,7 +113,10 @@ export function CustomImageB() {
         </div>
         <div className="bg-[#24130e] lg:rounded-t-[8rem] relative z-20">
           <div className="max-w-4xl mx-auto relative">
-            <img src={baseUrl + '/assets/2.3.png'} alt="Tofu" className="w-1/2 absolute left-[-2rem] -top-8 lg:top-[-6rem] z-20" />
+            <motion.img
+              variants={fadeInLeft}
+              transition={{ duration: 0.6, delay: 0, ease: [0.25, 0.46, 0.45, 0.94] }}
+              src={baseUrl + '/assets/2.3.png'} alt="Tofu" className="w-1/2 absolute block left-[-2rem] -top-8 lg:top-[-6rem] z-20" />
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="lg:pt-20">

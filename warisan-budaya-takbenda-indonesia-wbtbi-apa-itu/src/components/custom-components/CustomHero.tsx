@@ -48,7 +48,7 @@ export function CustomHero() {
             ref={heroRef}
             className="relative -top-[150px] -mb-[150px] h-screen w-full !bg-cover !bg-[50%_35%] md:bg-center overflow-hidden"
             style={{
-                background: `url('${baseUrl}/assets/0.0.png')`,
+                background: `url('${baseUrl}/assets/0.0.jpg')`,
             }}
         >
             <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-radial from-[#000] z-10" />
