@@ -207,10 +207,10 @@ export function CustomImageC() {
             />
           </div>
         </div>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-40 w-full max-w-4xl">
           <img
             src={`${baseUrl}/assets/footer.png`}
-            className="mx-auto hidden w-full sm:block"
+            className="mx-auto hidden w-full sm:block invert"
             alt="Footer"
           />
         </div>

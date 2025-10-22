@@ -24,6 +24,7 @@ const item = {
 export function CustomImageA() {
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
+      <div className="absolute h-[10rem] inset-x-0 bg-gradient-to-t z-20 from-[#e3dfdf] bottom-0"></div>
       <div
         className="relative w-full justify-center bg-cover bg-[center_top_15%] pt-16 md:pt-24"
         style={{ backgroundImage: `url(${baseUrl}/assets/1.1.png)` }}
@@ -109,16 +110,16 @@ export function CustomImageA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}>
-          Untuk ditetapkan sebagai WBTbI,<br /> suatu budaya takbenda harus memenuhi syarat dan mengikuti prosedur penetapan
+          Untuk ditetapkan sebagai WBTbI,<br /> suatu budaya takbenda harus memenuhi <br /> syarat dan mengikuti prosedur penetapan
         </motion.p>
         <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4 pt-14 md:pt-16 lg:pt-20">
           {[
-            { src: `${baseUrl}/assets/1.2.png`, className: "ml-auto w-[80%]" },
-            { src: `${baseUrl}/assets/1.3.png`, className: "left-10 w-[50%] -mt-[55%]" },
-            { src: `${baseUrl}/assets/1.4.png`, className: "ml-auto w-[50%] -mt-[55%]" },
-            { src: `${baseUrl}/assets/1.6.png`, className: "w-[70%] -mt-[80%]" },
-            { src: `${baseUrl}/assets/1.7.png`, className: "w-[100%] -mt-[30%]" },
-            { src: `${baseUrl}/assets/1.5.png`, className: "ml-auto w-[80%] -mt-[70%]" },
+            { src: `${baseUrl}/assets/1.2.png`, className: "relative ml-auto w-[80%]" },
+            { src: `${baseUrl}/assets/1.3.png`, className: "relative left-10 w-[50%] -mt-[55%]" },
+            { src: `${baseUrl}/assets/1.4.png`, className: "relative ml-auto w-[50%] -mt-[55%]" },
+            { src: `${baseUrl}/assets/1.6.png`, className: "relative w-[70%] -mt-[80%]" },
+            { src: `${baseUrl}/assets/1.7.png`, className: "relative w-[100%] -mt-[30%]" },
+            { src: `${baseUrl}/assets/1.5.png`, className: "relative ml-auto w-[80%] -mt-[70%]" },
           ].map((img, i) => (
             <motion.img
               key={i}
@@ -126,7 +127,7 @@ export function CustomImageA() {
               alt="Silat"
               className={img.className}
               initial={{ opacity: 0, scale: 0.8, y: 40, rotate: i % 2 === 0 ? -3 : 3 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0, rotate: 0 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0, rotate: 0, zIndex: i }}
               transition={{
                 duration: 0.8,
                 type: "spring",
@@ -138,10 +139,10 @@ export function CustomImageA() {
             />
           ))}
         </div>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-40 w-full max-w-4xl">
           <img
             src={`${baseUrl}/assets/footer.png`}
-            className="mx-auto hidden w-full sm:block"
+            className="mx-auto hidden w-full sm:block invert"
             alt="Footer"
           />
         </div>

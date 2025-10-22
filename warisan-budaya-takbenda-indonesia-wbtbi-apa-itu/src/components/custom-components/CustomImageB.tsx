@@ -139,7 +139,7 @@ export function CustomImageB() {
       >
         <motion.img
           src={`${baseUrl}/assets/footer.png`}
-          className="z-50 mx-auto hidden w-full sm:block"
+            className="z-40 mx-auto hidden w-full sm:block"
           initial={{ filter: "blur(4px)" }}
           animate={{ filter: "blur(0px)" }}
           transition={{ duration: 0.8, delay: 0.8 }}
