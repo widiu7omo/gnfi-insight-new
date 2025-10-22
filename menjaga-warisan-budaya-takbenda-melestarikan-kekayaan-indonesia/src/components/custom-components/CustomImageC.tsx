@@ -43,7 +43,7 @@ export function CustomImageC() {
               Warisan Budaya Takbenda Indonesia Mendunia!
             </motion.h2>
             <motion.p className="font-sora text-[#2A2828] text-base md:text-2xl !leading-relaxed w-full md:w-[76%]">
-              Ada sejumlah WBTbI yang telah diakui sebagai Intangible Cultural Heritage (IHC) oleh Organisasi Pendidikan, Keilmuan, dan Kebudayaan PBB (UNESCO)            </motion.p>
+              ada sejumlah WBTbI yang telah diinskripsi sebagai Intangible Cultural Heritage (ICH) oleh Organisasi Pendidikan, Keilmuan, dan Kebudayaan PBB (UNESCO)            </motion.p>
           </motion.div>
         </div>
         <div className="relative mx-auto max-w-4xl">
