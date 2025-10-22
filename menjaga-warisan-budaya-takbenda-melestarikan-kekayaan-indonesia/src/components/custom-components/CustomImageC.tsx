@@ -31,9 +31,9 @@ export function CustomImageC() {
         className="relative w-full justify-center bg-cover bg-center pt-16 md:pt-24"
         style={{ backgroundImage: `url(${baseUrl}/assets/3.8.png)` }}
       >
-        <div className="relative mx-auto max-w-4xl lg:px-0 px-4 z-10">
+        <div className="relative mx-auto max-w-4xl z-20">
           <motion.div
-            className="bg-white px-4 md:px-8 py-4 md:py-6 w-[88%]"
+            className="bg-white px-4 md:px-8 py-4 md:py-6 lg:w-[88%]"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -51,6 +51,7 @@ export function CustomImageC() {
             <motion.div
               className="w-full md:w-[40%] px-4 md:px-6 py-4 md:py-12 bg-[#862625]"
               initial="hidden"
+              variants={fadeUp}
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut" }}
