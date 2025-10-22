@@ -105,6 +105,7 @@ export function CustomImageA() {
       <div
         className="relative w-full justify-center bg-[#E2DFDF] pb-0 pt-10 md:pt-20"
       >
+        <img src={baseUrl + '/assets/1.0.png'} alt="Ocean" className="absolute bottom-0 inset-x-0 object-cover w-full" />
         <motion.p className="mt-[10%] font-semibold relative mx-auto text-center text-[#CD4947] w-full lg:w-[55%] lg:px-0 md:px-8 px-4 text-center font-sora text-[#3E0703] text-base md:text-3xl leading-relaxed"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -114,17 +115,18 @@ export function CustomImageA() {
         </motion.p>
         <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4 pt-14 md:pt-16 lg:pt-20">
           {[
-            { src: `${baseUrl}/assets/1.2.png`, className: "relative ml-auto w-[80%]" },
-            { src: `${baseUrl}/assets/1.3.png`, className: "relative left-10 w-[50%] -mt-[55%]" },
-            { src: `${baseUrl}/assets/1.4.png`, className: "relative ml-auto w-[50%] -mt-[55%]" },
-            { src: `${baseUrl}/assets/1.6.png`, className: "relative w-[70%] -mt-[80%]" },
-            { src: `${baseUrl}/assets/1.7.png`, className: "relative w-[100%] -mt-[30%]" },
-            { src: `${baseUrl}/assets/1.5.png`, className: "relative ml-auto w-[80%] -mt-[70%]" },
+            { src: `${baseUrl}/assets/1.2.png`, alt: 'Silat', className: "relative bottom-0 right-[-5rem] lg:right-[-29rem] w-[80%]" },
+            { src: `${baseUrl}/assets/1.7.png`, alt: 'Dance Kids', className: "absolute lg:bottom-[16rem] w-[70%]" },
+            { src: `${baseUrl}/assets/1.3.png`, alt: 'Play Angklung', className: "relative bottom-0 lg:left-[-10rem] w-[50%] -mt-[55%]" },
+            { src: `${baseUrl}/assets/1.8.png`, alt: 'Gunungan', className: "absolute bottom-0 lg:right-[-3rem] w-[45%]" },
+            { src: `${baseUrl}/assets/1.4.png`, alt: 'Jaipong', className: "absolute bottom-[-16rem] w-[50%] lg:left-[16rem]" },
+            { src: `${baseUrl}/assets/1.6.png`, alt: 'Jamu', className: "absolute lg:left-[10rem] bottom-0 w-[55%]" },
+            { src: `${baseUrl}/assets/1.5.png`, alt: 'Drawing Batik', className: "absolute right-[-5rem] lg:right-[-30rem] bottom-0 ml-auto w-[80%] -mt-[70%]" },
           ].map((img, i) => (
             <motion.img
               key={i}
               src={img.src}
-              alt="Silat"
+              alt={img.alt}
               className={img.className}
               initial={{ opacity: 0, scale: 0.8, y: 40, rotate: i % 2 === 0 ? -3 : 3 }}
               whileInView={{ opacity: 1, scale: 1, y: 0, rotate: 0, zIndex: i }}
