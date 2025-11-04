@@ -77,7 +77,7 @@ export function CustomImageA() {
                  md:before:border-t-[12px] md:before:border-b-[12px] md:before:border-l-[20px]
                  before:border-t-[9px] before:border-b-[9px] before:border-l-[15px]                 
                  before:border-t-transparent before:border-b-transparent before:border-l-[#EE756D]" variants={item}>
-                <i>Social practices, rituals and festive events;</i> (praktik sosial, ritual, dan perayaan - perayaan)
+                Praktik sosial, ritual, dan perayaan - perayaan
               </motion.li>
             </motion.ul>
             <motion.ul className="w-full md:w-1/2 list-none space-y-4 md:space-y-8" variants={container}>
