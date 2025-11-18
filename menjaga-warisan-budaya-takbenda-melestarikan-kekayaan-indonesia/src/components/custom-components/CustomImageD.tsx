@@ -9,7 +9,7 @@ export function CustomImageD() {
       <div
         className="relative w-full justify-center bg-[#E6E6E6] pb-0 pt-10 md:pt-20"
       >
-        <div className="flex mx-auto max-w-4xl lg:px-0 px-4 items-center mb-20 md:mb-28">
+        <div className="flex mx-auto max-w-4xl lg:px-0 px-4 items-center mb-20 md:mb-28 relative">
           <div className="w-[60%]">
             <motion.h2
               className="w-full font-sora text-[#151515] font-bold text-3xl md:text-[52px] mb-8 lg:mb-10 md:!leading-snug leading-snug"
@@ -29,8 +29,8 @@ export function CustomImageD() {
           <div className="w-[60%] md:w-1/2">
             <motion.img
               src={`${baseUrl}/assets/4.1.png`}
-              alt="Melestarikan WBTbI Tak Mudah, tapi Ada Jalan!"
-              className="w-[80%] md:w-[50%] mx-auto object-left"
+              alt="Nari"
+              className="w-[80%] lg:w-[40%] xl:w-[40%] mx-auto object-left lg:absolute right-12 top-0"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
@@ -38,20 +38,20 @@ export function CustomImageD() {
             />
             <motion.img
               src={`${baseUrl}/assets/4.3.png`}
-              alt="Melestarikan WBTbI Tak Mudah, tapi Ada Jalan!"
-              className="w-[200%] md:w-[120%]"
+              alt="Tangan"
+              className="w-[80%] md:w-[70%] absolute z-0 right-0 bottom-[-5rem] lg:bottom-[-7rem]"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
               viewport={{ once: true }}
             />
             <motion.img
-              src={`${baseUrl}/assets/4.2.png`}
-              alt="Melestarikan WBTbI Tak Mudah, tapi Ada Jalan!"
-              className="w-[90%] md:w-[75%] mx-auto -mt-[70%] md:-mt-[60%] lg:-mt-72"
+              src={`${baseUrl}/assets/4.1.1.png`}
+              alt="Kue"
+              className="w-[90%] lg:w-[40%] xl:w-[35%] mx-auto -mt-0 md:-mt-[60%] lg:-mt-72 relative lg:absolute z-10 bottom-0 right-0"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
               viewport={{ once: true }}
             />
 
@@ -242,8 +242,8 @@ export function CustomImageD() {
         <div
           className="relative w-full justify-center bg-black rounded-t-[2rem] lg:rounded-t-[8rem]"
         >
-          <div className="max-w-4xl mx-auto lg:px-0 px-4 items-center pt-16 md:pt-14 pb-20 md:pb-32">
-            <motion.p className="z-0 font-semibold relative mx-auto text-center md:text-center lg:text-left text-white w-full font-sora text-2xl md:text-5xl lg:text-[52px] leading-relaxed -mt-[10%] md:mt-0"
+          <div className="max-w-4xl mx-auto lg:px-0 px-4 items-center pt-16 md:pt-14 pb-20 md:pb-32 relative">
+            <motion.p className="z-0 font-semibold -ml-8 md:-ml-12 lg:ml-0 sm:-ml-0 lg:pl-20 relative mx-auto text-center md:text-center lg:text-left text-white w-full font-sora text-2xl md:text-5xl lg:text-[52px] leading-relaxed -mt-[10%] md:mt-0"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -251,9 +251,9 @@ export function CustomImageD() {
               Strategi Pemerintah
             </motion.p>
             <motion.img
-              src={baseUrl + '/assets/4.12.png'}
+              src={baseUrl + '/assets/4.1.2.png'}
               alt="panah"
-              className="z-30 -mt-[28%] md:-mt-[22%] lg:-mt-[28%] ml-auto w-[25%] md:w-[20%] lg:w-[30%]"
+              className="z-30 -mt-[28%] absolute w-[25%] right-0"
               initial={{ opacity: 0, x: 80 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{

@@ -56,13 +56,13 @@ export function CustomImageB() {
         <div className="max-w-4xl mx-auto">
           <motion.div
             ref={heroRef}
-            className="w-full flex flex-col items-center justify-end relative"
+            className="w-full flex flex-col items-start justify-end relative"
             initial="hidden"
             animate={heroInView ? "visible" : "hidden"}
             variants={staggerContainer}
           >
             <motion.div
-              className="text-3xl sm:text-5xl pt-8 lg:pt-20 pb-4 lg:pb-10 lg:text-[52px] font-bold text-[#151515] !leading-tight px-4 lg:px-0"
+              className="text-3xl lg:max-w-2xl sm:text-5xl pt-8 lg:pt-20 pb-4 lg:pb-0 lg:text-[52px] font-bold text-[#151515] !leading-tight px-4 lg:px-0"
                 variants={fadeInUp}
                 transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               >

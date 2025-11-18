@@ -140,32 +140,35 @@ export function CustomImageC() {
                 />
               </div>
               <div className="w-full mb-4 md:mb-20 z-40 pl-4 md:pl-10 pt-6 md:pt-14">
-                <motion.h3 className="font-sora text-[#C02220] md:mt-0 mt-[10%] font-bold text-2xl md:text-4xl lg:text-[36px] mb-6 md:mb-8 md:!leading-[1.2] leading-snug w-full"
+                <motion.h3 className="font-sora text-[#C02220] pb-6 md:pb-8 md:mt-0 mt-[10%] font-bold text-2xl md:text-4xl lg:text-[36px] md:!leading-[1.2] leading-snug w-full"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   viewport={{ once: true }}>
                   Mengapa pengakuan internasional atas WBTbI penting?
                 </motion.h3>
-                <motion.p className="font-sora text-[#2A2828] text-base md:text-2xl mb-6 md:mb-8 leading-relaxed w-full"
+                <motion.div className="font-sora relative pb-6 md:pb-8 border-l-4 border-[#c39d9b] pl-4 text-[#2A2828] text-base md:text-2xl leading-relaxed w-full"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                   viewport={{ once: true }}>
                   Menegaskan identitas bangsa dan membentuk citra Indonesia sebagai bangsa kaya akan keberagaman budaya
-                </motion.p>
-                <motion.p className="font-sora text-[#2A2828] text-base md:text-2xl mb-6 md:mb-8 leading-relaxed w-full"
+                  <div className="absolute size-4 rounded-full border-4 border-[#872726] ring-4 ring-[#ebeaf6] bg-red-50 left-[-10px] top-[10px]"></div>
+                </motion.div>
+                <motion.div className="font-sora relative pb-6 md:pb-8 border-l-4 border-[#c39d9b] pl-4 text-[#2A2828] text-base md:text-2xl leading-relaxed w-full"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
                   viewport={{ once: true }}>
-                  Medium diplomasi lunak <span className="italic"><br />(soft power diplomacy)  </span>   </motion.p>
-                <motion.p className="font-sora text-[#2A2828] text-base md:text-2xl mb-6 md:mb-8 leading-relaxed w-full"
+                  <div className="absolute size-4 rounded-full border-4 border-[#872726] ring-4 ring-[#ebeaf6] bg-red-50 left-[-10px] top-[10px]"></div>
+                  Medium diplomasi lunak <span className="italic"><br />(soft power diplomacy)  </span>   </motion.div>
+                <motion.div className="font-sora relative pb-6 md:pb-8 border-l-4 border-transparent pl-4 text-[#2A2828] text-base md:text-2xl mb-6 md:mb-8 leading-relaxed w-full -mt-2"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
                   viewport={{ once: true }}>
-                  Mendorong perekonomian dengan mengemas budaya sebagai daya tarik wisata dan ekonomi kreatif</motion.p>
+                  <div className="absolute size-4 rounded-full border-4 border-[#872726] ring-4 ring-[#ebeaf6] bg-red-50 left-[-10px] top-[8px]"></div>
+                  Mendorong perekonomian dengan mengemas budaya sebagai daya tarik wisata dan ekonomi kreatif</motion.div>
               </div>
             </div>
           </div>

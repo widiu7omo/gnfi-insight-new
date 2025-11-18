@@ -74,7 +74,7 @@ export function CustomImageE() {
               animate={subtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-lg lg:text-2xl w-[80%]">
-              Negara bertanggungjawab atas pelestarian WBTbI. Namun, masyarakat turut punya peran aktif
+              Pelestarian Warisan Budaya Takbenda adalah tanggungjawab bersama!
             </motion.p>
           </div>
         </motion.div>
@@ -117,8 +117,9 @@ export function CustomImageE() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: .3, ease: [0.25, 0.46, 0.45, 0.94] }}
                 className="lg:-mt-[50%] w-auto lg:h-[28rem] relative">
-                <img src={baseUrl + '/assets/5.4.png'} alt="I Made Dharma Suteja" className="object-cover" />
-                <div className="absolute inset-x-0 w-fit bottom-0 px-6 py-1.5 ml-4 mr-4 lg:mr-0 lg:ml-6 h-fit bg-[#450693] rounded-tr-[2rem] rounded-bl-[2rem]">
+                <img src={baseUrl + '/assets/5.4.png'} alt="I Made Dharma Suteja" className="object-cover relative z-10" />
+                <img src={baseUrl + '/assets/5.7.png'} alt="Quote" className="absolute right-0 top-32 lg:top-auto bottom-auto lg:bottom-28 z-0" />
+                <div className="absolute inset-x-0 w-fit bottom-0 z-20 px-6 py-1.5 ml-4 mr-4 lg:mr-0 lg:ml-6 h-fit bg-[#450693] rounded-tr-[2rem] rounded-bl-[2rem]">
                   <p className="text-[#ffc402] font-medium text-xl">I Made Dharma Suteja</p>
                   <p className="text-sm">Direktur Warisan Budaya, Kementerian Kebudayaan</p>
                 </div>
