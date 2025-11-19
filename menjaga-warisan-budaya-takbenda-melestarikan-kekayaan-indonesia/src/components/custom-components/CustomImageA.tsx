@@ -52,11 +52,11 @@ export function CustomImageA() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           className="relative mx-auto -mb-14 md:-mb-32 z-10 w-full max-w-4xl flex flex-col items-center px-6 md:px-12 py-6 md:py-10 rounded-[1.5rem]">
-          <motion.p variants={item} className="text-xl md:text-4xl font-bold z-10  bg-[#EACD86] top-0 rounded-full px-8 py-4 absolute text-[#2f1731] mb-4 md:mb-8">Domain</motion.p>
+          <motion.p variants={item} className="text-xl md:text-4xl font-bold z-10  bg-[#EACD86] top-[-1rem] md:top-0 rounded-full px-8 py-4 absolute text-[#2f1731] mb-4 md:mb-8">Domain</motion.p>
           <div className="flex flex-col md:flex-row md:space-x-12 space-y-6 md:space-y-0">
             <motion.ul className="w-full list-none space-y-4 md:space-y-[-2rem]" variants={container}>
               <motion.li className="relative z-[3] text-base md:text-2xl h-fit font-normal font-sora text-white rounded-3xl overflow-clip bg-[#cb7928]" variants={item}>
-                <div className="w-full flex items-stretch">
+                <div className="w-full flex flex-col md:flex-row items-stretch">
                   <div className="flex-1 relative m-8">
                     <div className="before:content-[''] before:absolute before:left-0
                                     before:top-[0.15em] before:translate-y-0
@@ -64,17 +64,17 @@ export function CustomImageA() {
                                     before:border-t-[9px] before:border-b-[9px] before:border-l-[15px]
                                     before:border-t-transparent before:border-b-transparent before:border-l-[#ffebba] pl-6 md:pl-8">Tradisi lisan dan ekspresinya, termasuk bahasa sebagai wahana Warisan Budaya Takbenda;</div>
                   </div>
-                  <div className={`w-1/2 bg-cover min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.1.png'})` }}>
+                  <div className={`md:w-1/2 w-full h-[200px] md:h-auto bg-[center_bottom_30%] md:bg-center bg-cover min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.1.jpg'})` }}>
                   </div>
                 </div>
               </motion.li>
               <motion.li className="relative z-[2] text-base md:text-2xl h-fit font-normal font-sora text-white rounded-3xl overflow-clip bg-[#8c3633]" variants={item}>
                 <div className="w-full flex items-stretch relative">
-                  <div className="absolute inset-0 bg-gradient-to-l z-[1] from-50% to-80% from-[#8c3633]" />
-                  <div className={`absolute left-0 h-full w-[50%] bg-cover bg-center min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.2.png'})` }} />
-                  <div className="flex-1 relative z-[2] m-8 space-y-10 pl-[50%] pb-10 pt-[4.5rem]">
-                    <div className="before:content-[''] before:absolute before:left-[54%]
-                                    before:top-auto before:translate-y-0
+                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l z-[1] from-10% md:from-50% to-80% from-[#8c3633]" />
+                  <div className={`absolute left-0 h-[200px] md:h-full w-full md:w-[50%] bg-cover bg-center min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.2.jpg'})` }} />
+                  <div className="flex-1 relative z-[2] m-8 md:space-y-10 pl-[0%] md:pl-[50%] pb-0 md:pb-10 md:pt-[4.5rem] pt-[8rem]">
+                    <div className="before:content-[''] before:absolute before:left-[0%] md:before:left-[54%]
+                                    before:top-[86%] md:before:top-auto before:translate-y-0
                                     md:before:border-t-[12px] md:before:border-b-[12px] md:before:border-l-[20px]
                                     before:border-t-[9px] before:border-b-[9px] before:border-l-[15px]
                                     before:border-t-transparent before:border-b-transparent before:border-l-[#ffebba] pl-6 md:pl-8">
@@ -85,17 +85,17 @@ export function CustomImageA() {
               </motion.li>
               <motion.li className="relative z-[1] text-base md:text-2xl h-fit font-normal font-sora text-white rounded-3xl overflow-clip bg-[#573310]" variants={item}>
                 <div className="w-full flex items-stretch relative">
-                  <div className="absolute inset-0 bg-gradient-to-l z-[1] from-40% from-[#573310]" />
-                  <div className={`absolute left-0 h-full w-[60%] bg-cover bg-center min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.3.png'})` }} />
-                  <div className="flex-1 relative z-[2] m-8 space-y-10 pl-[40%] pt-8">
-                    <div className="before:content-[''] before:absolute before:left-[44%]
+                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l z-[1] from-40% from-[#573310]" />
+                  <div className={`absolute left-0 h-full w-full md:w-[60%] bg-cover bg-center min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.3.png'})` }} />
+                  <div className="flex-1 relative z-[2] m-8 space-y-2 md:space-y-10 pl-0 md:pl-[40%] pt-[10rem] md:pt-8">
+                    <div className="before:content-[''] before:absolute before:left-[0%] md:before:left-[44%]
                                     before:top-auto before:translate-y-0
                                     md:before:border-t-[12px] md:before:border-b-[12px] md:before:border-l-[20px]
                                     before:border-t-[9px] before:border-b-[9px] before:border-l-[15px]
                                     before:border-t-transparent before:border-b-transparent before:border-l-[#cb7a28] pl-6 md:pl-8">
                       Praktik sosial, ritual, dan perayaan - perayaan
                     </div>
-                    <div className="before:content-[''] before:absolute before:left-[44%]
+                    <div className="before:content-[''] before:absolute before:left-[0%] md:before:left-[44%]
                                     before:top-auto before:translate-y-0
                                     md:before:border-t-[12px] md:before:border-b-[12px] md:before:border-l-[20px]
                                     before:border-t-[9px] before:border-b-[9px] before:border-l-[15px]
@@ -108,7 +108,7 @@ export function CustomImageA() {
               <motion.li className="relative z-[0] text-base md:text-2xl h-fit font-normal font-sora text-white rounded-3xl overflow-clip bg-[#241b15]" variants={item}>
                 <div className="w-full flex items-stretch relative">
                   <div className="absolute inset-0 bg-gradient-to-r z-[1] from-50% to-80% from-[#241b15]" />
-                  <div className={`absolute right-0 h-full w-[50%] bg-cover bg-[center_top_25%] min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.4.png'})` }} />
+                  <div className={`absolute right-0 h-full w-[50%] bg-cover bg-[center_top_25%] min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.4.jpg'})` }} />
                   <div className="flex-1 relative z-[2] m-8 space-y-10 pr-[50%] pb-10 pt-[4.5rem]">
                     <div className="before:content-[''] before:absolute before:left-0
                                     before:top-auto before:translate-y-0
@@ -128,14 +128,14 @@ export function CustomImageA() {
         className="relative w-full justify-center bg-[#E2DFDF] pb-0 pt-10 md:pt-20"
       >
         <img src={baseUrl + '/assets/1.0.png'} alt="Ocean" className="absolute bottom-0 inset-x-0 object-cover w-full" />
-        <div className="flex max-w-4xl mx-auto pt-8 px-12">
+        <div className="flex max-w-4xl flex-col md:flex-row mx-auto pt-8 px-12">
           <div className="mt-8 lg:w-[55%]">
-            <motion.p className=" font-semibold relative w-full lg:px-0 md:px-8 px-4 text-left font-sora text-[#3E0703] text-base md:text-3xl leading-relaxed"
+            <motion.p className=" font-semibold relative w-full lg:px-0 md:px-8 px-4 text-left font-sora text-[#3E0703] text-xl sm:text-2xl xl:text-3xl leading-relaxed"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true }}>
-              Untuk ditetapkan sebagai WBTbI, suatu OPK harus <br /> memenuhi syarat dan  <br /> mengikuti prosedur<br /> penetapan
+              Untuk ditetapkan sebagai WBTbI, suatu OPK harus <br className="hidden md:block" /> memenuhi syarat dan  <br className="hidden md:block" /> mengikuti prosedur<br className="hidden md:block" /> penetapan
             </motion.p>
             <img src={baseUrl + '/assets/1.1.5.png'} alt="Diagram Venn" className="mt-12 pr-8" />
           </div>
