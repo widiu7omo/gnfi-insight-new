@@ -52,28 +52,27 @@ export function CustomImageA() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           className="relative mx-auto -mb-14 md:-mb-32 z-10 w-full max-w-4xl flex flex-col items-center px-6 md:px-12 py-6 md:py-10 rounded-[1.5rem]">
-          <motion.p variants={item} className="text-xl md:text-4xl font-bold z-10  bg-[#EACD86] top-[-1rem] md:top-0 rounded-full px-8 py-4 absolute text-[#2f1731] mb-4 md:mb-8">Domain</motion.p>
           <div className="flex flex-col md:flex-row md:space-x-12 space-y-6 md:space-y-0">
             <motion.ul className="w-full list-none space-y-4 md:space-y-[-2rem]" variants={container}>
-              <motion.li className="relative z-[3] text-base md:text-2xl h-fit font-normal font-sora text-white rounded-3xl overflow-clip bg-[#cb7928]" variants={item}>
+              <motion.li className="relative z-[3] text-base md:text-xl h-fit font-normal font-sora text-white overflow-clip rounded-b-3xl md:rounded-b-none rounded-t-3xl bg-[#805d3b]" variants={item}>
+                <motion.p variants={item} className="text-xl md:text-3xl text-center font-bold z-10 w-full bg-[#ffebbc] md:top-0 py-2 text-[#2f1731]">Domain</motion.p>
                 <div className="w-full flex flex-col md:flex-row items-stretch">
-                  <div className="flex-1 relative m-8">
+                  <div className="flex-1 relative m-6 md:m-8 md:mb-0">
                     <div className="before:content-[''] before:absolute before:left-0
                                     before:top-[0.15em] before:translate-y-0
                                     md:before:border-t-[12px] md:before:border-b-[12px] md:before:border-l-[20px]
                                     before:border-t-[9px] before:border-b-[9px] before:border-l-[15px]
-                                    before:border-t-transparent before:border-b-transparent before:border-l-[#ffebba] pl-6 md:pl-8">Tradisi lisan dan ekspresinya, termasuk bahasa sebagai wahana Warisan Budaya Takbenda;</div>
+                                    before:border-t-transparent before:border-b-transparent before:border-l-[#ffebba] pl-6 md:pl-8">Tradisi lisan dan ekspresinya, termasuk bahasa sebagai wahana Warisan Budaya Takbenda</div>
                   </div>
-                  <div className={`md:w-1/2 w-full h-[200px] md:h-auto bg-[center_bottom_30%] md:bg-center bg-cover min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.1.jpg'})` }}>
-                  </div>
+                  <div className={`md:w-1/2 w-full h-[200px] md:h-auto bg-center md:bg-[center_bottom_30%] md:bg-center bg-cover min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.1.jpg'})` }} />
                 </div>
               </motion.li>
-              <motion.li className="relative z-[2] text-base md:text-2xl h-fit font-normal font-sora text-white rounded-3xl overflow-clip bg-[#8c3633]" variants={item}>
+              <motion.li className="relative z-[2] text-base md:text-xl h-fit font-normal font-sora text-white rounded-t-3xl md:rounded-t-none rounded-b-3xl overflow-clip bg-[#805d3b]" variants={item}>
                 <div className="w-full flex items-stretch relative">
-                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l z-[1] from-10% md:from-50% to-80% from-[#8c3633]" />
-                  <div className={`absolute left-0 h-[200px] md:h-full w-full md:w-[50%] bg-cover bg-center min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.2.jpg'})` }} />
-                  <div className="flex-1 relative z-[2] m-8 md:space-y-10 pl-[0%] md:pl-[50%] pb-0 md:pb-10 md:pt-[4.5rem] pt-[8rem]">
-                    <div className="before:content-[''] before:absolute before:left-[0%] md:before:left-[54%]
+                  <div className="absolute block md:hidden inset-0 bg-gradient-to-t md:bg-gradient-to-l z-[1] from-10% to-80% from-[#944046]" />
+                  <div className={`absolute right-0 h-[200px] md:h-full w-full md:w-[50%] bg-cover bg-[center_top_55%] md:bg-[center_top_40%] min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.2.jpg'})` }} />
+                  <div className="flex-1 relative z-[2] m-8 mb-6 md:mb-8 md:space-y-10 pr-[0%] md:pr-[50%] pt-28 md:pt-10 md:pb-2">
+                    <div className="before:content-[''] before:absolute before:left-[0%]
                                     before:top-[86%] md:before:top-auto before:translate-y-0
                                     md:before:border-t-[12px] md:before:border-b-[12px] md:before:border-l-[20px]
                                     before:border-t-[9px] before:border-b-[9px] before:border-l-[15px]
@@ -85,21 +84,21 @@ export function CustomImageA() {
               </motion.li>
               <motion.li className="relative z-[1] text-base md:text-2xl h-fit font-normal font-sora text-white rounded-3xl overflow-clip bg-[#573310]" variants={item}>
                 <div className="w-full flex items-stretch relative">
-                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l z-[1] from-40% from-[#573310]" />
+                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l z-[1] from-40% to-80% from-[#573310]" />
                   <div className={`absolute left-0 h-full w-full md:w-[60%] bg-cover bg-center min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.3.png'})` }} />
                   <div className="flex-1 relative z-[2] m-8 space-y-2 md:space-y-10 pl-0 md:pl-[40%] pt-[10rem] md:pt-8">
                     <div className="before:content-[''] before:absolute before:left-[0%] md:before:left-[44%]
                                     before:top-auto before:translate-y-0
                                     md:before:border-t-[12px] md:before:border-b-[12px] md:before:border-l-[20px]
                                     before:border-t-[9px] before:border-b-[9px] before:border-l-[15px]
-                                    before:border-t-transparent before:border-b-transparent before:border-l-[#cb7a28] pl-6 md:pl-8">
+                                    before:border-t-transparent before:border-b-transparent before:border-l-[#cf4b49] pl-6 md:pl-8">
                       Praktik sosial, ritual, dan perayaan - perayaan
                     </div>
                     <div className="before:content-[''] before:absolute before:left-[0%] md:before:left-[44%]
                                     before:top-auto before:translate-y-0
                                     md:before:border-t-[12px] md:before:border-b-[12px] md:before:border-l-[20px]
                                     before:border-t-[9px] before:border-b-[9px] before:border-l-[15px]
-                                    before:border-t-transparent before:border-b-transparent before:border-l-[#cb7a28] pl-6 md:pl-8">
+                                    before:border-t-transparent before:border-b-transparent before:border-l-[#cf4b49] pl-6 md:pl-8">
                       Pengetahuan dan kebiasaan perilaku mengenai alam dan semesta;
                     </div>
                   </div>
@@ -109,7 +108,7 @@ export function CustomImageA() {
                 <div className="w-full flex items-stretch relative">
                   <div className="absolute inset-0 bg-gradient-to-r z-[1] from-50% to-80% from-[#241b15]" />
                   <div className={`absolute right-0 h-full w-[50%] bg-cover bg-[center_top_25%] min-h-0`} style={{ backgroundImage: `url(${baseUrl + '/assets/1.1.4.jpg'})` }} />
-                  <div className="flex-1 relative z-[2] m-8 space-y-10 pr-[50%] pb-10 pt-[4.5rem]">
+                  <div className="flex-1 relative z-[2] m-8 space-y-10 pr-[50%] py-0 sm:py-6 md:pb-10 md:pt-[4.5rem]">
                     <div className="before:content-[''] before:absolute before:left-0
                                     before:top-auto before:translate-y-0
                                     md:before:border-t-[12px] md:before:border-b-[12px] md:before:border-l-[20px]
@@ -127,93 +126,105 @@ export function CustomImageA() {
       <div
         className="relative w-full justify-center bg-[#E2DFDF] pb-0 pt-10 md:pt-20"
       >
-        <img src={baseUrl + '/assets/1.0.png'} alt="Ocean" className="absolute bottom-0 inset-x-0 object-cover w-full" />
+        <motion.img
+          initial={{ opacity: 0, scale: 0.8, y: 40 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            type: "spring",
+            stiffness: 120,
+            damping: 12,
+            delay: 0,
+          }}
+          viewport={{ once: true, amount: 0.2 }}
+          src={baseUrl + '/assets/1.1.6.1.png'} alt="Ocean" className="absolute bottom-0 z-40 inset-x-0 object-cover w-full" />
         <div className="flex max-w-4xl flex-col md:flex-row mx-auto pt-8 px-12">
-          <div className="mt-8 lg:w-[55%]">
-            <motion.p className=" font-semibold relative w-full lg:px-0 md:px-8 px-4 text-left font-sora text-[#3E0703] text-xl sm:text-2xl xl:text-3xl leading-relaxed"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-              viewport={{ once: true }}>
-              Untuk ditetapkan sebagai WBTbI, suatu OPK harus <br className="hidden md:block" /> memenuhi syarat dan  <br className="hidden md:block" /> mengikuti prosedur<br className="hidden md:block" /> penetapan
-            </motion.p>
-            <img src={baseUrl + '/assets/1.1.5.png'} alt="Diagram Venn" className="mt-12 pr-8" />
-          </div>
-          <div className="bg-[#cd4947] text-white rounded-2xl p-6 text-xl flex-1">
+
+          {/* <div className="bg-[#cd4947] text-white rounded-2xl p-6 text-xl flex-1">
             <div>OPK Terdiri dari:</div>
             <ul className="ml-0.5 font-semibold space-y-3 mt-4 font-sora">
               <li className="flex items-center">
                 <svg className="size-4 inline mr-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" stroke-width="40" />
+                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" strokeWidth="40" />
                 </svg>
                 <span>Tradisi lisan</span>
               </li>
               <li className="flex items-center">
                 <svg className="size-4 inline mr-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" stroke-width="40" />
+                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" strokeWidth="40" />
                 </svg>
                 <span>Manuskrip</span>
               </li>
               <li className="flex items-center">
                 <svg className="size-4 inline mr-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" stroke-width="40" />
+                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" strokeWidth="40" />
                 </svg>
                 <span>Adat istiadat</span>
               </li>
               <li className="flex items-center">
                 <svg className="size-4 inline mr-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" stroke-width="40" />
+                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" strokeWidth="40" />
                 </svg>
                 <span>Ritus</span>
               </li>
               <li className="flex items-center">
                 <svg className="size-4 inline mr-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" stroke-width="40" />
+                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" strokeWidth="40" />
                 </svg>
                 <span>Pengetahuan tradisional</span>
               </li>
               <li className="flex items-center">
                 <svg className="size-4 inline mr-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" stroke-width="40" />
+                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" strokeWidth="40" />
                 </svg>
                 <span>Teknologi tradisional</span>
               </li>
               <li className="flex items-center">
                 <svg className="size-4 inline mr-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" stroke-width="40" />
+                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" strokeWidth="40" />
                 </svg>
                 <span>Seni</span>
               </li>
               <li className="flex items-center">
                 <svg className="size-4 inline mr-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" stroke-width="40" />
+                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" strokeWidth="40" />
                 </svg>
                 <span>Bahasa</span>
               </li>
               <li className="flex items-center">
                 <svg className="size-4 inline mr-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" stroke-width="40" />
+                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" strokeWidth="40" />
                 </svg>
                 <span>Permainan rakyat</span>
               </li>
               <li className="flex items-center">
                 <svg className="size-4 inline mr-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" stroke-width="40" />
+                  <circle cx="100" cy="100" r="60" fill="none" stroke="#FFD300" strokeWidth="40" />
                 </svg>
                 <span>Olahraga tradisional</span>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
-        <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4 pt-14 md:pt-16 lg:pt-20">
+        <div className="relative mx-auto max-w-4xl lg:px-0 md:px-8 px-4 pt-0 md:pt-16 lg:pt-20 z-20">
+          <div className="top-4 lg:w-[55%] pb-[10rem] lg:pb-0 lg:absolute right-[-10rem]">
+            <motion.p className=" font-semibold relative w-full lg:-mr-[20rem] lg:px-0 md:px-8 px-4 text-left font-sora text-[#3E0703] text-xl sm:text-2xl lg:text-3xl leading-relaxed"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}>
+              Untuk ditetapkan sebagai WBTbI, suatu OPK harus memenuhi syarat <br className="hidden lg:block" /> dan mengikuti prosedur penetapan
+            </motion.p>
+            {/* <img src={baseUrl + '/assets/1.1.5.png'} alt="Diagram Venn" className="mt-12 pr-8" /> */}
+          </div>
           {[
-            { src: `${baseUrl}/assets/1.2.png`, alt: 'Silat', className: "relative bottom-0 right-[-5rem] lg:right-[-29rem] w-[80%]" },
-            { src: `${baseUrl}/assets/1.7.png`, alt: 'Dance Kids', className: "absolute lg:bottom-[16rem] w-[70%]" },
-            { src: `${baseUrl}/assets/1.3.png`, alt: 'Play Angklung', className: "relative bottom-0 lg:left-[-10rem] w-[50%] -mt-[55%]" },
-            { src: `${baseUrl}/assets/1.8.png`, alt: 'Gunungan', className: "absolute bottom-0 lg:right-[-3rem] w-[45%]" },
-            { src: `${baseUrl}/assets/1.4.png`, alt: 'Jaipong', className: "absolute bottom-[-16rem] w-[50%] lg:left-[16rem]" },
-            { src: `${baseUrl}/assets/1.6.png`, alt: 'Jamu', className: "absolute lg:left-[10rem] bottom-0 w-[55%]" },
-            { src: `${baseUrl}/assets/1.5.png`, alt: 'Drawing Batik', className: "absolute right-[-5rem] lg:right-[-30rem] bottom-0 ml-auto w-[80%] -mt-[70%]" },
+            { src: `${baseUrl}/assets/1.2.png`, alt: 'Silat', className: "relative top-[-8rem] z-40 left-[0rem] lg:left-[-8rem] w-[80%]" },
+            { src: `${baseUrl}/assets/1.8.png`, alt: 'Gunungan', className: "absolute bottom-0 right-0 lg:right-[0rem] w-[50%]" },
+            { src: `${baseUrl}/assets/1.7.png`, alt: 'Dance Kids', className: "absolute bottom-[10rem] lg:bottom-[16rem] left-[4rem] w-[60%]" },
+            { src: `${baseUrl}/assets/1.3.png`, alt: 'Play Angklung', className: "relative bottom-12 left-[-4rem] lg:left-[-8rem] w-[50%] -mt-[55%]" },
+            { src: `${baseUrl}/assets/1.5.png`, alt: 'Drawing Batik', className: "absolute right-[-10rem] sm:right-[-15rem] xl:right-[-30rem] bottom-0 xl:bottom-12 ml-auto w-[60%] md:w-[60%] xl:w-[80%] -mt-[70%]" },
+            { src: `${baseUrl}/assets/1.4.png`, alt: 'Jaipong', className: "absolute bottom-[-7rem] md:bottom-[-8rem] lg:bottom-[-13rem] w-[40%] md:w-[35%] lg:w-[45%] left-[15rem] sm:left-[20rem] md:left-[25rem] lg:left-[20rem]" },
+            { src: `${baseUrl}/assets/1.6.png`, alt: 'Jamu', className: "absolute left-[8rem] bottom-0 w-[55%]" },
           ].map((img, i) => (
             <motion.img
               key={i}
@@ -236,7 +247,7 @@ export function CustomImageA() {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-40 w-full max-w-4xl">
           <img
             src={`${baseUrl}/assets/footer.png`}
-            className="mx-auto hidden w-full sm:block invert"
+            className="mx-auto hidden w-full sm:block"
             alt="Footer"
           />
         </div>
