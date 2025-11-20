@@ -124,16 +124,6 @@ export function CustomHero() {
                                 aria-hidden="true"
                                 className="lg:h-[40rem] absolute bottom-0 z-10 w-auto"
                             />
-                            <motion.img
-                                initial="hidden"
-                                animate={heroControls}
-                                variants={imageVariants}
-                                custom={-1}
-                                src={`${baseUrl}/assets/0.1.png`}
-                                alt="Tofu"
-                                aria-hidden="true"
-                                className="block bottom-0 h-40 sm:hidden xl:block lg:h-[17rem] absolute lg:bottom-[24rem] left-[20%] z-10 w-auto"
-                            />
                         </div>
                     </div>
                     <div className="flex items-center justify-center pb-4 md:pb-8">
