@@ -55,7 +55,7 @@ export function CustomImageA1() {
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-5xl text-center text-inherit text-3xl pb-20 md:text-4xl lg:text-5xl xl:text-6xl font-bold !leading-snug text-[#39ff14] h-[15rem] -mb-[2rem] lg:h-[20rem] relative z-10">
+            className="max-w-5xl text-center text-3xl pb-20 md:text-4xl lg:text-5xl xl:text-6xl font-bold !leading-snug text-[#39ff14] h-[15rem] -mb-[2rem] lg:h-[20rem] relative z-10">
             Mengenal Warisan Budaya Tak Benda, Kekayaan Indonesia Lintas Generasi
           </motion.h2>
           <motion.h1
