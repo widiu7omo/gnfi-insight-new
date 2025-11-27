@@ -1,0 +1,82 @@
+[
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-1",
+    "groupClassName": "",
+    "order": 0,
+    "componentCustomName": "IntroductionHero",
+    "groupTitle": "Kucing, Sahabat Manusia"
+  },
+  {
+    "index": 1,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-1",
+    "groupClassName": "",
+    "order": 1,
+    "componentCustomName": "SectionOne",
+    "groupTitle": "Kucing, Sahabat Manusia"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-2",
+    "groupClassName": "",
+    "order": 2,
+    "componentCustomName": "SectionTwo",
+    "groupTitle": "Data Membuktikan, Orang Indonesia Suka Kucing"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-3",
+    "groupClassName": "",
+    "order": 3,
+    "componentCustomName": "SectionThree",
+    "groupTitle": "Dipelihara sejak Ribuan Tahun Lalu"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-4",
+    "groupClassName": "",
+    "order": 4,
+    "componentCustomName": "SectionFour",
+    "groupTitle": "Hewan Penuh Mitos"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-5",
+    "groupClassName": "",
+    "order": 5,
+    "componentCustomName": "SectionFive",
+    "groupTitle": "Kucing dan Agama Islam"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-6",
+    "groupClassName": "",
+    "order": 6,
+    "componentCustomName": "SectionSix",
+    "groupTitle": "Ragam Jenis Kucing Asli Indonesia"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-7",
+    "groupClassName": "",
+    "order": 7,
+    "componentCustomName": "SectionSeven",
+    "groupTitle": "Tertarik Memelihara Kucing? Perhatikan Hal Ini!"
+  }
+]

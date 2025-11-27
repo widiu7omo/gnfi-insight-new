@@ -1,0 +1,286 @@
+[
+  {
+    "index": 0,
+    "component": 1,
+    "componentProps": {
+      "title": "Kereta Cepat Jakarta-Surabaya, Misi Ambisius di antara 2 Sisi Pulau Jawa",
+      "coverUrl": "/assets/kereta-cepat-jakarta-surabaya-misi-ambisius-di-antara-2-sisi-pulau-jawa/kereta-cover.jpg",
+      "gradientColor": "bg-gradient-to-b from-transparent to-[#0b0d19] noise2 from-[80%]",
+      "swipeUpIcon": "chevrons-down"
+    },
+    "group": "section-1",
+    "groupClassName": "",
+    "order": 0,
+    "groupTitle": "Kereta Cepat Jakarta-Surabaya, Misi Ambisius di antara 2 Sisi Pulau Jawa"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Selama puluhan tahun, masyarakat Indonesia mendengar cerita tentang betapa canggihnya kereta cepat. Sesuatu yang tidak ada di negara mereka.<br></p><p>Di film-film kartun Jepang misalnya, kereta peluru Shinkansen kerap ditampilkan. Dari sana, masyarakat Indonesia tahu bahwa kereta tersebut punya kemampuannya untuk mengangkut penumpang dari satu tempat ke tempat lain dengan kecepatan yang luar biasa tinggi, sementara sebagian kecil masyarakat yang lebih beruntung bisa merasakan menaikinya langsung di Negeri Matahari Terbit.<br></p><p>Sejak 2023, situasi berubah. Masyarakat Indonesia juga punya kesempatan untuk menikmati langsung ngebutnya kereta cepat. Tidak perlu ke Jepang atau negara maju lainnya, kereta cepat bisa dinikmati dari Jakarta atau Bandung lewat layanan Whoosh yang menghubungkan kedua kota tersebut.</p><p></p><p>Nantinya, bisa jadi akan lebih banyak orang yang dapat menikmati kereta cepat. Ini karena Indonesia punya rencana memperpanjang jangkauan kereta cepat hingga ke Surabaya.<br></p><p>Berkaca dari pendahulunya yang mondar-mandir Jakarta-Bandung, rencana menghadirkan kereta cepat Jakarta-Surabaya menjadi sorotan. Ada suara yang menekankan besarnya manfaat kereta cepat, dan di sisi lain ada pula yang mengingatkan tentang potensi efek merugikan di baliknya.</p>",
+      "containerClassName": "bg-gradient-to-b from-[#0b0d19] to-black noise2",
+      "className": "relative z-10 text-white",
+      "ornamentBottomLeft": "",
+      "classOrnamentBottomLeft": "",
+      "ornamentTopLeft": "",
+      "classOrnamentTopLeft": "",
+      "ornamentBottomRight": "",
+      "classOrnamentBottomRight": "",
+      "ornamentTopRight": "",
+      "classOrnamentTopRight": ""
+    },
+    "group": "section-1",
+    "groupClassName": "",
+    "order": 1,
+    "groupTitle": "Kereta Cepat Jakarta-Surabaya, Misi Ambisius di antara 2 Sisi Pulau Jawa"
+  },
+  {
+    "index": 0,
+    "component": 5,
+    "componentProps": {
+      "content": "<h3 class=\"heading\"><strong>Kereta Cepat Jakarta-Surabaya, Bukan Wacana Baru!</strong></h3>",
+      "className": "!text-white",
+      "containerClassName": "bg-black noise2"
+    },
+    "group": "section-2",
+    "groupClassName": "",
+    "order": 2,
+    "groupTitle": "Kereta Cepat Jakarta-Surabaya, Bukan Wacana Baru!"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Wacana menghadirkan Kereta Cepat Jakarta-Surabaya sesungguhnya bukan hal baru. Bahkan, jauh sebelum Kereta Cepat Whoosh Jakarta-Bandung beroperasi, pemerintah sudah bicara soal rencana proyek yang menghubungkan dua titik di barat dan timur Pulau Jawa itu.</p><p></p><p>Pada 2008, pemerintah di bawah pimpinan Presiden Susilo Bambang Yudhoyono (SBY) mulai punya ide membangun kereta cepat Jakarta-Surabaya lewat kerja sama dengan Badan Kerja Sama Internasional Jepang (JICA). Dengan panjang jalur 685 km, proyek raksasa ini rencananya didanai oleh Jepang dengan pinjaman selama 40 tahun.</p><p></p><p>Perencanaan dan studi kelayakan proyek kereta cepat Jakarta-Surabaya era Presiden SBY sempat dilakukan, namun eksekusinya nihil hingga SBY lengser dan Joko Widodo alias Jokowi naik ke pucuk pemerintahan.</p><p></p><p>Pada awal era kepresidenan Joko Widodo, wacana membangun kereta cepat JKT-Surabaya muncul lagi masih dengan menggandeng Jepang. Kereta cepat Shinkansen rute Jakarta-Surabaya direncanakan punya jalur sepanjang 700 kilometer dengan perkiraan nilai investasi Rp100 triliun.</p><p></p><p>Hanya saja, pada Januari 2015, Jepang mengumumkan mundur dari proyek tersebut meski sudah keluar uang 3,5 juta dollar AS untuk studi kelayakan. Alasannya, Jepang memiliki skala prioritas pembangunan proyek infrastruktur berdasarkan urgensinya.</p><p></p>",
+      "containerClassName": "bg-gradient-to-b from-black to-black noise2",
+      "className": "text-white"
+    },
+    "group": "section-2",
+    "groupClassName": "overflow-clip",
+    "order": 3,
+    "groupTitle": "Kereta Cepat Jakarta-Surabaya, Bukan Wacana Baru!"
+  },
+  {
+    "index": 2,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-2",
+    "groupClassName": "",
+    "order": 4,
+    "componentCustomName": "CustomImageE",
+    "groupTitle": "Kereta Cepat Jakarta-Surabaya, Bukan Wacana Baru!"
+  },
+  {
+    "index": 3,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Indonesia sendiri kemudian mantap bermitra dengan China. Investasi yang lebih murah, tidak memakai APBN, dan keterbukaan soal transfer teknologi adalah iming-iming China yang bikin pemerintah Indonesia kepincut. Pada 2016, didirikanlah PT Kereta Cepat Indonesia China (KCIC) sebagai perusahaan patungan antara kedua negara.</p><p></p><p>Singkat cerita, Indonesia dan China mulai menggarap kereta cepat Jakarta-Bandung. Kendati pada pelaksanaannya terdapat masalah ketidaksesuaian dengan rencana awal, terutama soal keuangan di mana adanya pembengkakan biaya hingga digunakannya APBN sebagai penambal modal, Kereta Cepat&nbsp; Jakarta-Bandung akhirnya benar-benar terwujud pada 2023.</p><p></p><p>Setelah Kereta Cepat&nbsp; Jakarta-Bandung atau yang juga dikenal dengan nama Whoosh hadir, wacana memperpanjang rutenya sampai ke Surabaya semakin terdengar kencang. Apalagi dalam beberapa momen, pemerintah menunjukkan keseriusannya untuk mewujudkan proyek tersebut. Misalnya, saat Jokowi menerima kunjungan Menteri Luar Negeri China, Wang Yi, di Istana Kepresidenan Jakarta pada Kamis (18/4/2024). Salah satu poin pertemuan tersebut adalah percepatan studi kelayakan trayek kereta cepat hingga Surabaya.</p><p></p><p>Presiden berganti, wacana kereta cepat Jakarta-Surabaya tak terhenti. Seperti Jokowi, Presiden Prabowo Subianto dalam beberapa kesempatan juga menegaskan keinginannya untuk mewujudkan proyek tersebut. Terkini, pemerintah disebut sedang menyiapkan kerangka regulasi baru terkait perpanjangan jalur kereta cepat hingga ke Surabaya.</p><p></p><p>\"Presiden Prabowo Subianto telah memberikan instruksi yang tegas untuk memperluas jalur kereta cepat Jakarta-Bandung hingga Surabaya,\" ujar Menteri Koordinator Bidang Infrastruktur dan Pembangunan Kewilayahan, Agus Harimurti Yudhoyono (AHY), dalam acara Indonesia Railway Conference 2025 di Jakarta, Selasa (29/7/2025), dikutip dari <em>Antara</em>.</p><p></p><p>AHY menjelaskan, ekspansi kereta cepat hingga ke Surabaya adalah cerminan visi untuk menghubungkan Pulau Jawa melalui mobilitas yang lebih cepat, bersih, dan lebih terintegrasi. Diyakini, apabila proyek itu terwujud, akan memberi efek positif bagi banyak aspek, terutama ekonomi.</p><p>\"Tentu saja menghasilkan manfaat ekonomi dengan menghubungkan kota-kota, industri, dan pelabuhan di seluruh Pulau Jawa,\" lanjut AHY.</p>",
+      "containerClassName": "bg-[#dfdfdf]"
+    },
+    "group": "section-2",
+    "groupClassName": "",
+    "order": 5,
+    "groupTitle": "Kereta Cepat Jakarta-Surabaya, Bukan Wacana Baru!"
+  },
+  {
+    "index": 0,
+    "component": 4,
+    "componentProps": {
+      "title": "Potret Jalur Jakarta-Surabaya Kini",
+      "className": "text-white py-8 bg-[center_top_0%] noise2",
+      "coverImage": "/assets/kereta-cepat-jakarta-surabaya-misi-ambisius-di-antara-2-sisi-pulau-jawa/pexels-val-kilmer-donadillo-181572755-11579619.jpg"
+    },
+    "group": "section-3",
+    "groupClassName": "overflow-clip",
+    "order": 6,
+    "groupTitle": "Potret Jalur Jakarta-Surabaya Kini"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Jakarta dan Surabaya, dua kota metropolitan terbesar di Indonesia terpisah ini dengan kisaran jarak 700 kilometer. Jaraknya yang jauh membuat moda transportasi dan infrastrukturnya dibutuhkan untuk mempercepat tempo perjalanan.</p><p></p><p>Menariknya, gagasan untuk menghadirkan transportasi cepat dan efisien antara Jakarta dan Surabaya sebenarnya sudah ada sejak era kolonial Hindia Belanda. Ini diungkap oleh sejarawan Universitas Negeri Medan, Omar Mohtar.</p><p></p><p>Saat berbincang dengan GNFI, Omar menjelaskan bahwa pada era Hindia Belanda, orang-orang tidak bisa langsung naik kereta dari Batavia dan baru turun di Surabaya. Penumpang yang naik kereta dari Batavia harusmelintasi jalur selatan untuk lebih dulu ke Buitenzorg (Bogor), lalu lanjut berganti kereta ke Bandung untuk kemudian transit lagi di Maos, Yogyakarta, Madiun, hingga akhirnya sampai di Surabaya.</p><p></p><p>Hingga akhir era 1800-an, jalur rel yang menghubungkan Batavia dengan Surabaya memang hanya melewati selatan Jawa. Setelah jalur kereta api pertama di Indonesia yang menghubungkan Kemijen-Tanggung dioperasikan, perusahaan kereta api swasta <em>Staatsspoorwegen </em>(SS) dan <em>Nederlandsch Indische Spoorweg Maatschappij </em>(NISM) aktif memperluas jangkauan relnya ke berbagai penjuru Jawa. Inilah yang kemudian membuat Batavia dan Surabaya terhubung lewat selatan.&nbsp;</p><p>\"Sampai akhirnya pada November 1894, antara Batavia sampai Surabaya itu terhubung dengan kereta api. Tetapi yang perlu digarisbawahi di sini adalah jalur pertama atau jalur yang menghubungkan antara Batavia dengan Surabaya itu bukan jalur pantai utara yang sekarang,\" ujar Omar.</p><p></p><p>Jangan bayangkan perjalanan kereta api Batavia-Surabaya melalui selatan Jawa pada masa itu bisa ditempuh dalam waktu seharian. Penumpang harus menyediakan waktu setidaknya dua hari karena kereta tidak beroperasi pada malam hari. Akibatnya, penumpang harus menginap dulu satu malam di Bandung sebelum kembali melanjutkan perjalanan ke Maos pada keesokan harinya.</p><p></p><p>Bukan tanpa alasan kereta api stop beroperasi pada malam hari. “Satu, memang sarana dan prasarana kereta api di Hindia Belanda saat itu belum mumpuni,\" terang Omar.</p><p></p><p>Sementara alasan pertama bersifat teknis, alasan kedua justru berbau mistis. Menurut Omar, ini sebagaimana pernah diceritakan penjelajah H. W. Ponder dalam buku <em>Javanese Panorama: More Impressions of the 1930s</em>.</p><p></p><p>\"Malam hari transportasi kereta api tidak bisa dijalankan, kenapa? Karena terkait kepercayaan roh nenek moyang yang akan terganggu kalau kereta api jalan pada malam hari,\" lanjut Omar.</p><p></p><p>Pemerintah Hindia Belanda memandang perjalanan seperti demikian sungguh tak efisien. Pada awal 1900-an, dibangunlah jalur rel Batavia-Bandung melewati Purwakarta, lalu pemerintah membangun lagi lagi jalur Batavia langsung ke Cirebon yang berlanjut Purwokerto.</p><p></p><p>Pada 1926-an pemerintah mengoperasikan kereta bernama Eendagsche Express yang dapat diartikan sebagai “Kereta Ekspres Satu Hari”. Sesuai namanya, kereta itu bisa melibas rute Batavia-Surabaya dalam waktu sehari saja.</p><p></p><p>Eendagsche Express dioperasikan dengan lokomotif baru yang didatangkan khusus. Waktu itu, kereta tersebut sudah bisa dikategorikan sebagai kereta cepat dan sekaligus menjadi terobosan luar biasa di sektor transportasi darat.</p><p></p><p>\"Dengan lokomotif ini kereta bisa dipacu cepat. Jadi Jakarta-Surabaya yang sebelumnya ditempuh dalam 2 hari, ini bisa sekitar hanya belasan jam,” pungkas Eko.</p><p>Pada masa kini, sebagai dua kota terbesar di Indonesia, infrastruktur transportasi yang menghubungkan Jakarta dan Surabaya sebenarnya termasuk sudah memadai. Dari jalur darat, laut, maupun udara, tersedia beragam pilihan bagi masyarakat yang akan berpergian dari Jakarta ke Surabaya maupun sebaliknya, tentu dengan biaya dan waktu perjalanan yang juga berbeda-beda.</p><p></p><p>Jalur darat biasa dipakai banyak orang yang ingin menyambangi Jakarta atau Surabaya. Sebelum adanya Jalan Tol Trans-Jawa seperti sekarang ini, jalur Pantai Utara (Pantura) adalah pilihan utamanya.</p><p></p><p>Jarak Jakarta – Surabaya via Pantura kurang lebih 788 kilometer. Jalur non-tol ini melewati sejumlah kota besar antara lain Cirebon, Tegal, Pekalongan, Semarang, Rembang, Gresik, dan sampai akhirnya tiba di Surabaya. Pengguna transportasi seperti mobil, sepeda motor, truk, atau bahkan ada juga yang nekat menggunakan sepeda, biasa memakai jalur yang tidak pernah sepi ini.</p><p></p><p>Pada masanya, Pantura adalah primadona bagi mereka yang hendak menyambangi Surabaya atau Jakarta terutama saat musim mudik. Namun, pengguna jalur Pantura harus ekstra sabar karena tantangan demi tantangan senantiasa akan hadir. Semisal kemacetan karena jalur bersinggungan dengan pasar, banyaknya jalan rusak dan minim penerangan, serta ancaman banjir rob di beberapa titik di Jawa Tengah dan Timur.</p><p></p><p>Dalam kondisi normal, perjalanan menggunakan mobil pribadi bisa memakan waktu 10 hingga 12 jam atau bisa lebih lama daripada itu saat mudik Lebaran. Estimasi biaya bensin Pertamax yang keluar jika dihitung secara kasar kira-kira satu jutaan rupiah. Akan tetapi, bakal lain lagi jika menggunakan bus trayek Jakarta – Surabaya yang kisaran tiketnya dijual seharga Rp280 ribu – Rp625 ribu.</p><p></p><p>Jika tidak ingin menggunakan jalur Pantura menggunakan transportasi pribadi ataupun bus, kereta api bisa menjadi opsi lainnya. Lebih cepat, bebas hambatan, dan pilihan kelasnya pun banyak. Panjang jalurnya pun lebih pendek yakni 720 kilometer saja sehingga tempo perjalanan bisa dipangkas.</p>",
+      "containerClassName": "bg-[#f0eada]",
+      "className": "",
+      "classOrnamentBottomRight": ""
+    },
+    "group": "section-3",
+    "groupClassName": "overflow-clip",
+    "order": 7,
+    "groupWithBackground": false,
+    "groupTitle": "Potret Jalur Jakarta-Surabaya Kini"
+  },
+  {
+    "index": 2,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-3",
+    "groupClassName": "",
+    "order": 8,
+    "componentCustomName": "CustomImageB",
+    "groupTitle": "Potret Jalur Jakarta-Surabaya Kini"
+  },
+  {
+    "index": 3,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Untuk harga tiket kereta api Jakarta – Surabaya, GNFI telah mengecek via website KAI.id. Per Agustus 2025, kereta kelas ekonomi Airlangga bisa disebut yang termurah dengan harga tiket Rp104 ribu. Sementara itu, layanan termahal ialah kereta eksekutif Argo Semeru seri Compartment yang dipatok Rp2 jutaan. Waktu tempuh bervariasi sesuai kelas di mana Argo Bromo Anggrek menjadi tercepat dengan 7 jam 45 menit pada Maret 2025 lalu.</p><p></p><p>Tidak tertarik melewati Pantura dan menggunakan kereta api, pilihan jalur darat lain ialah Jalan Tol Trans-Jawa yang mulai menghubungkan Jakarta – Surabaya pada 2018. Jaringan Jalan Tol Trans-Jawa membentang lebih dari 1.000 kilometer dari Merak, Banten hingga Probolinggo, Jawa Timur. Untuk rute populer dari Jakarta ke Surabaya, jaraknya diperkirakan mencapai sekitar 760 km.</p><p></p><p>Tempo perjalanan tentu lebih cepat dan ekonomis jika menggunakan Tol Trans-Jawa. Astra pada 2024 mengestimasi jika menggunakan mobil low cost green car (LCGC) dengan bensin Pertamax plus bayar tol, biaya yang dikeluarkan ialah Rp1,3 juta. Menjadi lebih murah lagi bila memakai Pertalite, kira-kira yang dikeluarkan ialah Rp1,2 juta.</p><p></p><p>Dibukanya Tol Trans-Jawa membuat pengusaha bus antarkota antarprovinsi (AKAP) berlomba-lomba mengoperasikan armadanya di jalur ini. Tarifnya pun bersaing dan lebih murah dibandingkan memakai mobil pribadi yakni di kisaran Rp200 ribuan sampai Rp500 ribuan.</p><p></p><p>Ingin lebih cepat sampai? Naik pesawat tentu jawabannya. Waktu tempuhnya kira-kira hanya 1,5 jam. Akan tetapi, jelas biaya yang dikeluarkan akan lebih mahal. Menurut Traveloka, maskapai Citilink menjadi termurah dengan harga tiket Rp967 ribu.</p><p></p><p>Kalau tidak mau buru-buru sampai dan tidak dikejar waktu kapal laut bisa menjadi pilihan lainnya. Tempo perjalanannya lebih lama karena besoknya baru sampai tujuan, entah itu Tanjung Priok atau Tanjung Perak. Lebih lama, tetapi bukan berarti harganya lebih murah dibandingkan naik kereta api atau bus yang lebih cepat. Berdasarkan situs Pelni, rata-rata untuk kelas ekonomi rata-rata harganya Rp300 ribuan.</p>",
+      "containerClassName": "bg-[#7b0909]",
+      "className": "text-white"
+    },
+    "group": "section-3",
+    "groupClassName": "",
+    "order": 9,
+    "groupTitle": "Potret Jalur Jakarta-Surabaya Kini"
+  },
+  {
+    "index": 0,
+    "component": 4,
+    "componentProps": {
+      "title": "Kereta Karya Anak Bangsa",
+      "className": "bg-[#ffffff] max-h-[15rem] text-black",
+      "coverImage": ""
+    },
+    "group": "section-4",
+    "groupClassName": "",
+    "order": 10,
+    "groupTitle": "Kereta Karya Anak Bangsa"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Sejak 2019, tim riset kereta berlabel made in Indonesia ini mengelompokkan pekerjaan di proyek ini dalam empat klaster, yaitu <em>carbody </em>dan <em>bogie</em>, interior dan eksterior, propulsi dan sistem rem, serta prasarana dan operasi. Setiap klaster proyek digarap oleh perguruan tinggi yang berbeda-beda.&nbsp; Sementara itu, pengujian struktur <em>carbody </em>dilakukan oleh Badan Riset dan Inovasi Nasional (BRIN) dan <em>crashworthiness test</em> dilakukan oleh ITB.&nbsp;</p><p></p><p>“Jadi dengan kereta cepat ini akan terjadi akselerasi penguasaan teknologi ya. Baik di pihak perguruan tinggi, sebagai peneliti, dan juga ada BRIN (Badan Riset Inovasi Nasional) di sini yang juga bertindak sebagai mitra peneliti, lembaga riset dan pengujian, dan juga PT INKA sebagai manufaktur,” ujar Kepala Riset, Dr. Agus Windharto, DEA, dalam keterangan tertulis yang pernah dipublikasikan LPDP pada 2023 lalu.</p><p></p><p>Menariknya, proyek ini juga membuka peluang bagi pelaku Usaha Mikro, Kecil&nbsp; dan Menengah (UMKM) dan berbagai industri untuk turut menyediakan komponen lokal. Hal ini bertujuan untuk meningkatkan Tingkat Komponen Dalam Negeri (TKDN). Di sisi lain, PT INKA selaku perusahaan manufaktur kereta api nasional yang ditunjuk untuk pengembangan manufaktur dan sarana KCMP menyatakan, Indonesia sebenarnya memang sudah siap dan memiliki kemampuan manufaktur untuk kereta cepat.</p>",
+      "containerClassName": "bg-[#ffffff]",
+      "className": "",
+      "ornamentBottomLeft": "",
+      "classOrnamentBottomLeft": "",
+      "ornamentBottomRight": "",
+      "classOrnamentBottomRight": ""
+    },
+    "group": "section-4",
+    "groupClassName": "bg-[#D5D5D5] overflow-clip",
+    "order": 11,
+    "groupTitle": "Kereta Karya Anak Bangsa"
+  },
+  {
+    "index": 2,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-4",
+    "groupClassName": "",
+    "order": 12,
+    "componentCustomName": "CustomImageA",
+    "groupTitle": "Kereta Karya Anak Bangsa"
+  },
+  {
+    "index": 3,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Nantinya, PT INKA bukan hanya berperan sebagai perakit akhir, tetapi juga sebagai sistem integrator penuh, mulai dari desain teknis, pengujian, sampai tahap sertifikasi. Tak heran jika proyek ini layak untuk dicap sebagai karya besar anak bangsa.</p><p></p><p>Lalu, bagaimana progress dari pengembangan KCMP ini?</p><p></p><p>Direktur Pengembangan PT INKA, Roppiq Luthfi Azhar, masih dalam forum CoP “Kereta Cepat Merah Putih” juga sempat menjelaskan jika pihaknya sudah rampung menggarap beberapa aspek penting, di antaranya desain dan uji <em>carbody</em>. Hanya saja, ia tak menampik jika ada sederet kendala yang juga perlu diperhatikan, mulai dari perlunya sinergi antartim riset hingga revisi regulasi UU No. 23/2007 dan PM 296/2020 yang dianggap belum benar-benar mendukung hadirnya kereta cepat mutakhir.</p><p></p><p>Akankah KCMP benar-benar hadir sesuai seperti yang diharapkan dan lada waktu yang tepat? Kita nantikan saja.</p>",
+      "containerClassName": "bg-[#ffffff]"
+    },
+    "group": "section-4",
+    "groupClassName": "",
+    "order": 13,
+    "groupTitle": "Kereta Karya Anak Bangsa"
+  },
+  {
+    "index": 0,
+    "component": 4,
+    "componentProps": {
+      "title": "Seberapa Digemari Kereta Cepat yang Ada Saat Ini?",
+      "coverImage": "/assets/kereta-cepat-jakarta-surabaya-misi-ambisius-di-antara-2-sisi-pulau-jawa/pexels-jeshoots-253647.jpg",
+      "className": "bg-[#24367b] text-white bg-[center_bottom_30%]"
+    },
+    "group": "section-5",
+    "groupClassName": "overflow-clip",
+    "order": 14,
+    "groupTitle": "Seberapa Digemari Kereta Cepat yang Ada Saat Ini?"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Sudah hampir 2 tahun kereta cepat hadir di Indonesia. Oleh karena itu, Kawan dan masyarakat luas mungkin bertanya-tanya, seberapa digemari kereta cepat Whoosh yang sudah lebih dulu eksis di tengah wacana ekspansinya hingga ke Surabaya?</p><p></p><p>Untuk menjawab pertanyaan tersebut, mari kita lihat data penumpang Whoosh yang tercatat selama ini. Sejak peresmiannya pada Oktober 2023 hingga akhir Juni 2025, lebih dari 10 juta penumpang telah menggunakan &nbsp; Whoosh. Pada periode awal peluncuran, tepatnya selama tiga bulan pertama (Oktober−Desember 2023) saja, penumpangnya lebih dari 1 juta.</p><p></p><p>Memasuki tahun 2024, jumlah penumpang Whoosh semakin menggeliat. Dengan 6,06 juta penumpang yang tercatat sepanjang 2024, kereta cepat ini menunjukkan pertumbuhan yang sangat signifikan. Bahkan, pada paruh pertama 2025 (hingga Juni), jumlah pengguna mencapai 2,94 juta penumpang. Angka ini mengalami kenaikan 10% dibandingkan dengan periode yang sama di tahun sebelumnya.</p><p></p><p>Rerata jumlah penumpang Whoosh per hari juga menunjukkan tren kenaikan. Mulanya kereta ini menampung hanya sekitar 9.000 penumpang per hari saat weekdays pada 2023, kemudian melonjak dua kali lipat menjadi 18.000 penumpang per hari pada 2024. Pada akhir pekan dan hari libur, angka ini bisa melonjak hingga 24.000 penumpang pada 2025.&nbsp;</p><p></p><p>Seperti moda transportasi umum antarkota lainnya, momen liburan seperti libur Natal dan Tahun Baru (Nataru) jadi kesempatan Whoosh untuk panen penumpang. Faktanya, selama periode ini jumlah penumpang memang mengalami lonjakan signifikan, dengan rata-rata mencapai 20.000 hingga 22.000 penumpang per hari. Dibandingkan dengan dengan hari biasa, sudah tentu angka ini sangat tinggi.</p><p></p><p>Merujuk data di atas, rencana pengembangan kereta cepat Jakarta−Surabaya yang tengah digodog, jelas potensial. Jika ditilik data Indonesia Baik, Provinsi Jawa Timur menjadi daerah yang paling banyak dikunjungi saat Nataru. Jatim menjadi daerah tujuan mudik terbanyak kedua setelah Jawa Tengah di mana 27,4 juta orang mudik ke Jawa Timur.</p>",
+      "containerClassName": "bg-gradient-to-b from-[#fcebf7] to-[#f6fafe]",
+      "className": ""
+    },
+    "group": "section-5",
+    "groupClassName": "overflow-clip",
+    "order": 15,
+    "groupTitle": "Seberapa Digemari Kereta Cepat yang Ada Saat Ini?"
+  },
+  {
+    "index": 3,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-5",
+    "groupClassName": "",
+    "order": 16,
+    "componentCustomName": "CustomImageC",
+    "groupTitle": "Seberapa Digemari Kereta Cepat yang Ada Saat Ini?"
+  },
+  {
+    "index": 2,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Bukan hanya warga lokal saja yang mengandalkan Whoosh untuk berpergian antara Jakarta dan Bandung. Wisatawan mancanegara pun demikiqn. Berdasarkan data dari KCIC, pada kuartal I 2025, tercatat ada 87.077 wisatawan asing yang menggunakan kereta cepat ini. Wisatawan dari negara-negara tetangga seperti Malaysia, Singapura, dan China mendominasi, menjadikan Whoosh sebagai bagian dari pengalaman wisata di Indonesia.</p><p></p><p>Total, lebih dari 200.000 warga negara asing dari 154 negara sudah merasakan perjalanan Whoosh sejak pertama kali beroperasi.</p>",
+      "className": "text-white",
+      "containerClassName": "bg-gradient-to-b from-[#353748] to-[#353748]"
+    },
+    "group": "section-5",
+    "groupClassName": "",
+    "order": 17,
+    "groupTitle": "Seberapa Digemari Kereta Cepat yang Ada Saat Ini?"
+  },
+  {
+    "index": 0,
+    "component": 4,
+    "componentProps": {
+      "title": "Kereta Cepat Jakarta-Surabaya: Prestisius, tapi Awas Rugi!",
+      "className": "h-[15rem] bg-[#101010] !text-white",
+      "customTitle": ""
+    },
+    "group": "section-6",
+    "groupClassName": "",
+    "order": 18,
+    "groupTitle": "Kereta Cepat Jakarta-Surabaya: Prestisius, tapi Awas Rugi!"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Membangun kereta cepat-Jakarta Surabaya memang terdengar sangat prestisius dan mentereng dengan berbagai iming-iming keunggulannya. Akan tetapi bagi pengamat transportasi Djoko Setijowarno, rencana pemerintah untuk melanjutkan rute kereta cepat ke Surabaya perlu dipertimbangkan secara matang. Sebab, menurutnya akan ada transportasi lain yang berpotensi merugi ketika kereta cepat ini beroperasi, salah satunya adalah pesawat terbang.</p><p></p><p>Djoko menyinggung investasi besar yang telah dikeluarkan pemerintah untuk merenovasi sejumlah bandara di Indonesia, di antaranya Bandara Ahmad Yani dengan nilai investasi sebesar Rp2,2 triliun dan Yogyakarta International Airport (YIA) dengan investasi Rp10,8 triliun. Nah, uang investasi itulah yang terancam tak balik modal gara-gara kereta cepat.</p><p></p><p>“Melihat filosofinya kan, kereta cepat itu di banyak negara ketika beroperasi, produktivitas pesawatnya hilang. Sementara kondisi Indonesia itu baru membangun bandara Ahmad Yani dan membangun bandara di Yogyakarta,” jelasnya saat dihubungi GNFI, Rabu (30/7/2025).</p><p></p><p>“Nah itu menjadi bahan pertimbangan kalau itu tutup, investasinya siapa yang menanggung?” lanjutnya.</p>",
+      "containerClassName": "bg-gradient-to-b from-[#101010] to-[#000101]",
+      "className": "text-white"
+    },
+    "group": "section-6",
+    "groupClassName": "",
+    "order": 19,
+    "groupTitle": "Kereta Cepat Jakarta-Surabaya: Prestisius, tapi Awas Rugi!"
+  },
+  {
+    "index": 2,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-6",
+    "groupClassName": "",
+    "order": 20,
+    "componentCustomName": "CustomImageD",
+    "groupTitle": "Kereta Cepat Jakarta-Surabaya: Prestisius, tapi Awas Rugi!"
+  },
+  {
+    "index": 3,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Djoko mengakui adanya kereta cepat akan mempermudah mobilitas masyarakat. Apalagi, stasiun kereta biasanya berada di tengah kota, berbeda dengan lokasi bandara yang lazimnya berada di daerah pinggiran.</p><p></p><p>Menurut Djoko, sudah ada bukti nyata bahwa kereta cepat mengancam eksistensi perawat terbang. I mencontohkan hadirnya kereta cepat yang menghubungkan Paris, Prancis dengan Brussel, Belgia sejak 1997. Alat transportasi ini menjadi favorit masyarakat sekitar karena hanya memerlukan waktu 1 jam 22.</p><p></p><p>“Contoh di Eropa itu menghubungkan Paris dengan Brussel. Ada layanan pesawat terbang dalam kurun tiga bulan hilang. Sampai sekarang tidak ada lagi,” paparnya.</p><p>Secara pribadi, Djoko&nbsp; mengaku lebih menyukai menggunakan kereta api untuk mobilitasnya dari tempat tinggalnya di Semarang. Baginya menggunakan kereta jauh lebih efisien baik dari biaya hingga waktu. Walau begitu, dirinya berharap pemerintah mempertimbangkan investasi yang telah dikeluarkan di bandara. Hal ini supaya investasi tersebut tidak terbuang secara percuma.</p><p></p><p>“Kira-kira apa sudah BEP? Coba dipikirkan. Tapi kalau belum BEP perlu dipikirkan siapa yang menanggung kerugian,” tegasnya.</p><p></p><p>Selain menyoroti potensi meruginya moda transportasi tertentu, Djoko juga berharap upaya pemerintah membangun kereta cepat tidak membebani APBN. Baginya pengalaman pembangunan kereta cepat Jakarta-Bandung harus menjadi pelajaran yang tidak boleh terulang.</p><p></p><p>Diketahui dalam laporan Badan Pemeriksaan Keuangan (BPK) pada 2022 menemukan adanya potensi kerugian dan pelanggaran aturan dalam proyek yang dilaksanakan oleh PT Kereta Cepat Indonesia China (KCIC) itu.&nbsp;</p><p></p><p>Pada dokumen lembaga auditor negara tersebut, Indonesia dan Cina disebut menyepakati nilai <em>cost overrun</em> proyek KCJB sebesar US$ 1,205 miliar. Tetapi Indonesia harus menanggung pembengkakan biaya senilai US$ 723,58 miliar, atau setara dengan Rp 10,8 triliun.</p><p></p><p>China Development Bank (CDB) dengan porsi 75 persen senilai US$ 542,68, juta diketahui siap menalangi pembengkakan biaya. Sedangkan sisanya, sebesar US$ 180,89 juta atau 25 persen bersumber dari ekuitas atau modal yang harus disetor BUMN anggota konsorsium proyek dan penyertaan modal negara (PMN) kepada PT KAI pada tahun 2022 senilai Rp 3,2 triliun. Bahkan karena beban biaya ini pula utang PT Wijaya Karya (Persero) Tbk menembus Rp50,72 triliun. WIKA sendiri jadi salah satu BUMN yang terlibat dalam proyek Kereta Cepat Whoosh dalam konsorsium PT Kereta Cepat Indonesia China (KCIC).</p><p></p><p>“Dan jangan menggunakan APBN jangan gunakan PMS. Ada perusahaan yang sampai kolaps (Wijaya Karya). Bentar lagi mau di-<em>merger</em> karena kereta cepat,” lanjut Joko.</p><p></p><p>Karena itu, dirinya juga meminta pembangunan kereta cepat Jakarta-Surabaya seratus persen melibatkan pihak swasta. Sehingga tidak membebani APBN. Dia juga berharap APBN yang ada diarahkan untuk membangun fasilitas hingga di luar Pulau Jawa. Apalagi selama ini kekayaan dari luar Pulau Jawa banyak yang dikeruk, tetapi masyarakat daerah tidak pernah merasakan.</p><p></p><p>“Indonesia itu bukan hanya pulau Jawa. Di luar Jawa itu perlu banyak pembangunan jangan diperas hasil mineral nya tapi hanya Jawa yang menikmati. Kasihan kan,” pungkasnya.</p>",
+      "containerClassName": "bg-gradient-to-b from-[#01162d] to-[#101010]",
+      "className": "text-white"
+    },
+    "group": "section-6",
+    "groupClassName": "",
+    "order": 21,
+    "groupTitle": "Kereta Cepat Jakarta-Surabaya: Prestisius, tapi Awas Rugi!"
+  }
+]

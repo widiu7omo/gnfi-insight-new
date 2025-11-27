@@ -1,0 +1,109 @@
+import { motion } from "motion/react";
+
+export function CustomImageJadiWarisanDunia() {
+  return (
+    <section id="section-1" className="relative overflow-clip">
+      <div className="relative">
+        <div className="relative">
+          <img src={`/assets/gemilang-dendang-dangdut/7.0.png`} alt="people festival" className="w-full h-full relative inset-0 object-cover" />
+          <div className="absolute inset-0 bg-linear-to-b from-transparent to-black" />
+          <div className="absolute inset-0 bg-linear-to-b from-[#e6a8a4] h-40" />
+        </div>
+        <div className="bg-black w-full h-24 sm:h-80" />
+        <div className="absolute m-auto top-0 bottom-0 left-0 right-0 flex items-center justify-center gap-5 sm:gap-20 md:gap-32 lg:gap-60">
+          <motion.div
+            initial={{ opacity: 0, y: 0, x: -5 }}
+            whileInView={{ opacity: 1, y: 0, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.3 }}
+            className="flex flex-col text-3xl gap-2 md:text-8xl md:gap-4 lg:gap-5 lg:text-9xl font-bold text-yellow-500"
+          >
+            <h2>Jadi</h2>
+            <h2>Warisan</h2>
+            <h2>Dunia</h2>
+          </motion.div>
+          <div className="flex flex-col text-sm sm:text-xl font-bold md:gap-8 gap-2 lg:gap-10 max-w-md text-white leading-4 md:leading-5 lg:leading-9">
+            <motion.p initial={{ opacity: 0, y: 0, x: 5 }} whileInView={{ opacity: 1, y: 0, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.5, duration: 1 }}>
+              Kuatnya pengaruh <br />
+              dangdut di Indonesia, <br /> membuat beberapa <br /> orang menjadikannya <br /> sebuah brand untuk <br /> menarik konsumen.
+            </motion.p>
+            <motion.p initial={{ opacity: 0, y: 0, x: 5 }} whileInView={{ opacity: 1, y: 0, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.8, duration: 1.3 }}>
+              Tidak hanya di Indonesia, <br /> hal ini dilakukan <br /> beberapa orang <br /> ke pasar luar negeri.
+            </motion.p>
+          </div>
+        </div>
+      </div>
+      <div className="relative">
+        <img src={`/assets/gemilang-dendang-dangdut/7.1.png`} alt="background cafe dangdut" className="w-full" />
+        <motion.img
+          initial={{ opacity: 0, y: 5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          src={`/assets/gemilang-dendang-dangdut/7.2.png`}
+          alt="pedangdut Fitri Carlina"
+          className="absolute bottom-0 z-10 w-full"
+        />
+        <div className="absolute bottom-0 w-full">
+          <div className="relative flex items-center justify-end sm:justify-center">
+            <motion.img initial={{ opacity: 0, x: 5 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} src={`/assets/gemilang-dendang-dangdut/7.3.png`} alt="background hitam" className="relative w-full" />
+            <motion.p
+              initial={{ opacity: 0, x: 5 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="text-white absolute text-xs md:max-w-sm md:w-full md:pl-10 lg:pl-0 lg:max-w-xl w-4/6 md:text-lg lg:font-semibold lg:tracking-widest z-10 md:leading-10 tracking-tight"
+            >
+              Hal ini dilihat dari bisnis Cafe Dangdut yang dibuka oleh penyanyi dangdut Fitri Carlina. Cafe yang menyajikan kopi asal Indonesia ini dibuka olehnya di New York Amerika Serikat.
+            </motion.p>
+          </div>
+        </div>
+      </div>
+      <div className="relative flex flex-col bg-cover bg-top bg-no-repeat" style={{ backgroundImage: `url(/assets/gemilang-dendang-dangdut/7.4.png)` }}>
+        <img src={`/assets/gemilang-dendang-dangdut/7.5.png`} alt="yellow background" className="w-full absolute bottom-0" />
+        <motion.img
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6, duration: 1 }}
+          src={`/assets/gemilang-dendang-dangdut/7.6.png`}
+          alt="rhoma irama"
+          className="w-full absolute bottom-0"
+        />
+        <motion.img
+          initial={{ opacity: 0, x: -15 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          src={`/assets/gemilang-dendang-dangdut/7.7.png`}
+          alt="sandiaga uno"
+          className="w-full relative bottom-0"
+        />
+        <div className="absolute inset-x-0 h-30 bg-linear-to-t z-0 bottom-0 from-black w-full"></div>
+        <motion.img initial={{ opacity: 0, y: 5 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} src={`/assets/gemilang-dendang-dangdut/7.8.png`} alt="footer" className="w-full left-[25%] absolute bottom-0 max-w-4xl" />
+        <div className="absolute top-0 bottom-0 lg:w-2/3 flex items-center justify-center">
+          <div className="max-w-6xl flex flex-col gap-4 sm:gap-24 lg:gap-56">
+            <motion.p
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="text-white  text-xs sm:text-xl md:text-2xl font-bold leading-4 md:leading-5 md:tracking-wider lg:leading-9 lg:tracking-widest pl-8 md:pl-12 lg:pl-4"
+            >
+              Dangdut memang <br /> sekarang bukan <br /> hanya milik <br /> Indonesia, tetapi <br /> juga sudah menjadi <br /> warisan dunia.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.9 }}
+              className="text-xs  sm:text-xl text-black md:text-2xl font-medium lg:font-bold md:leading-10 lg:tracking-widest pl-8 md:pl-12 md:pt-4 lg:pl-4 pt-1"
+            >
+              Hal ini terlihat dari upaya <br /> pemerintah mengusulkan <br /> dangdut sebagai warisan <br /> budaya tak benda Indonesia <br /> kepada UNESCO <br /> pada 2022 lalu.
+            </motion.p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
