@@ -80,7 +80,10 @@ export function CustomImageA2() {
 
         {/* Image 1b.1: Dancers Left - Background for Title and List */}
         <div className="absolute top-0 left-[-4rem] w-[80%] md:w-[60%] lg:w-[50%] z-0 pointer-events-none">
-          <img
+          <motion.img
+            initial={{ scale: 0.8, opacity: 0, x: 20 }}
+            whileInView={{ scale: 1, opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
             src={`${baseUrl}/assets/1b.1.png`}
             alt="Dancers Left"
             className="w-full object-contain object-top opacity-100"
@@ -89,7 +92,10 @@ export function CustomImageA2() {
 
         {/* Image 1b.2: Bowl Right - Overlay on List */}
         <div className="absolute top-[40%] right-0 xl:right-[10rem] w-[30%] md:w-[25%] z-20 pointer-events-none translate-x-1/4">
-          <img
+          <motion.img
+            initial={{ scale: 0.8, opacity: 0, x: 20 }}
+            whileInView={{ scale: 1, opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
             src={`${baseUrl}/assets/1b.2.png`}
             alt="Bowl Decoration"
             className="w-full object-contain"
@@ -153,21 +159,28 @@ export function CustomImageA2() {
       </div>
 
       {/* Bottom Section: Requirements */}
-      <div className="relative w-full mt-10">
+      <div className="relative w-full mt-10 pb-6">
 
         {/* Title with Background Image 1b.4 */}
         <div className="relative w-full flex items-center justify-center overflow-hidden">
-          <img
+          <motion.img
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6 }}
             src={`${baseUrl}/assets/1b.4.png`}
             alt="Dancers Bottom Background"
             className=" inset-0 w-full h-full object-cover object-top brightness-75 max-w-7xl mx-auto"
           />
           <div className="absolute z-10 max-w-4xl px-6 text-center bottom-[10rem]">
-            <div className="bg-[#b6661e] rounded-full py-3 px-8 inline-block mb-4 shadow-lg">
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className="bg-[#b6661e] rounded-full py-3 px-8 inline-block mb-4 shadow-lg">
               <h3 className="text-sm md:text-xl font-bold text-white uppercase tracking-wide">
                 OPK Harus Memenuhi Syarat-syarat Ini<br className="hidden md:block" /> agar Bisa Ditetapkan Menjadi WBTbI:
               </h3>
-            </div>
+            </motion.div>
           </div>
         </div>
 
@@ -196,7 +209,14 @@ export function CustomImageA2() {
             ))}
           </motion.div>
         </div>
-
+      </div>
+      {/* Footer Logo */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-40 w-full max-w-4xl">
+        <img
+          src={`${baseUrl}/assets/footer.png`}
+          className="mx-auto hidden w-full sm:block"
+          alt="Footer"
+        />
       </div>
     </div>
   );

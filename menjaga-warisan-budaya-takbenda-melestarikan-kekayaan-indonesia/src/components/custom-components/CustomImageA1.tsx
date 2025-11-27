@@ -53,8 +53,9 @@ export function CustomImageA1() {
 
         <div className="relative z-10 flex h-full flex-col items-center justify-center pt-10 text-center">
           <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ scale: 0.8, opacity: 0, y: 20 }}
+            whileInView={{ scale: 1, opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="max-w-5xl text-center text-3xl pb-20 md:text-4xl lg:text-5xl xl:text-6xl font-bold !leading-snug text-[#39ff14] h-[15rem] -mb-[2rem] lg:h-[20rem] relative z-10">
             Mengenal Warisan Budaya Tak Benda, Kekayaan Indonesia Lintas Generasi
           </motion.h2>
