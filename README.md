@@ -291,6 +291,24 @@ Comprehensive documentation is available:
 - **[CLAUDE.md](./CLAUDE.md)** - AI Assistant guide (for working with LLMs)
 - **[CODEBASE_GUIDE.md](./CODEBASE_GUIDE.md)** - Detailed technical documentation (845 lines)
 - **[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)** - Quick lookup guide (432 lines)
+- **[MCP Server](./mcp-gnfi-insight/README.md)** - Create articles from markdown using Claude Desktop
+
+### 🤖 MCP Server - AI-Powered Article Creation
+
+We provide an MCP (Model Context Protocol) server that allows Claude Desktop to automatically create articles from markdown:
+
+```bash
+cd mcp-gnfi-insight
+npm install
+```
+
+Configure in Claude Desktop and simply paste markdown content - Claude will automatically:
+- Parse markdown to GNFI Insight blocks
+- Generate all necessary files
+- Create custom components if needed
+- Validate article structure
+
+See [MCP Quick Start Guide](./mcp-gnfi-insight/QUICKSTART.md) for setup instructions.
 
 ### Key Concepts
 

@@ -1,0 +1,12 @@
+{
+	"servers": {
+		"gnfi-insight-mcp": {
+			"type": "stdio",
+			"command": "node",
+			"args": [
+				"/Users/dio/playground/gnfi/gnfi-insight/mcp-gnfi-insight/dist/index.js"
+			]
+		}
+	},
+	"inputs": []
+}
