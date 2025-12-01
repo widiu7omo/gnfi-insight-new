@@ -1,3 +1,4 @@
+import { Credits } from '@/store/useTitle'
 import { createFileRoute } from '@tanstack/react-router'
 import { json } from '@tanstack/react-start'
 
@@ -9,7 +10,8 @@ export const Route = createFileRoute('/api/generate-content')({
           const body = await request.json() as {
             title?: string
             content?: Record<string, unknown>
-            seo?: Record<string, unknown>
+            seo?: Record<string, unknown>,
+            credits?:Record<string, unknown>
           }
           if (!body.title || !body.content) {
             return json(
@@ -21,6 +23,7 @@ export const Route = createFileRoute('/api/generate-content')({
           const title = body.title
           const slug = cleanAndDashifyString(title)
           const seo = body.seo
+          const credits = body.credits as Credits
           const content = body.content
 
           // Check if we have filesystem access (Node/Bun)
@@ -57,7 +60,7 @@ export const Route = createFileRoute('/api/generate-content')({
           const metaPath = path.join(dataDir, 'generated-meta.json')
           await fs.writeFile(
             metaPath,
-            JSON.stringify({ seo, title, slug }, null, 2)
+            JSON.stringify({ seo, title, slug, credits }, null, 2)
           )
           // Comment this below, since image directly used from meta.json
           

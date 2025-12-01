@@ -3,7 +3,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { useBlocks } from "@/store/useBlocks";
 import type { BlockType, DraggableItem } from "@/types";
 
-import { usePublishedAt, useSeoDesc, useSeoImage, useSeoTitle, useTitle } from "@/store/useTitle";
+import { Credits, useCredits, usePublishedAt, useSeoDesc, useSeoImage, useSeoTitle, useTitle } from "@/store/useTitle";
 import { useSectionClassName, useSections, useLoadingState } from "@/store/useSections";
 import { useEffect, useState } from "react";
 import { groupByToMap } from "@/lib/utils";
@@ -17,8 +17,9 @@ import { Textarea } from "../ui/textarea";
 import { ScrollArea } from "../ui/scroll-area";
 import SectionsNew from "./sections-new";
 import Preview from "./preview";
-import { Field, FieldContent, FieldLabel } from "../ui/field";
-import { DatePicker } from "../ui/date-picker";
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
+import FormAttributes from "./form-attributes";
 export type PageWrapperType = {
     initBlocks: DraggableItem[];
     initMetadata: {
@@ -29,7 +30,8 @@ export type PageWrapperType = {
             desc: string;
             image: string;
             publishedAt?: string;
-        }
+        },
+        credits: Credits
     }
 };
 export type SectionType = {
@@ -44,6 +46,8 @@ export default function PageWrapper({ initBlocks, initMetadata }: PageWrapperTyp
     const [seoTitle, setSeoTitle] = useSeoTitle();
     const [seoDesc, setSeoDesc] = useSeoDesc();
     const [seoImage, setSeoImage] = useSeoImage();
+    const [publishedAt] = usePublishedAt()
+    const [credits] = useCredits();
     const handleOnDropSection = (item: DraggableItem) => {
         console.log(item);
     };
@@ -51,17 +55,12 @@ export default function PageWrapper({ initBlocks, initMetadata }: PageWrapperTyp
     //     console.log(item);
     // };
     const [blocks, setBlocks] = useBlocks();
-    const [_, setSections] = useSections();
-    const [_sc, setSectionClass] = useSectionClassName();
+    const [, setSections] = useSections();
+    const [, setSectionClass] = useSectionClassName();
     const [loading, setIsLoading] = useLoadingState();
 
-    const [publishedAt, setPublishedAt] = usePublishedAt()
-    useEffect(() => {
-        setTimeout(() => {
-            if (publishedAt)
-                setPublishedAt(publishedAt)
-        }, 300)
-    }, [publishedAt])
+
+
 
     useEffect(() => {
         console.log('Mounted')
@@ -72,7 +71,7 @@ export default function PageWrapper({ initBlocks, initMetadata }: PageWrapperTyp
         setSeoDesc(initMetadata.seo.desc)
         setSeoTitle(initMetadata.seo.title)
         setSeoImage(initMetadata.seo.image);
-        setPublishedAt(initMetadata.seo.publishedAt ?? new Date().toISOString())
+
     }, [initMetadata])
     // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     useEffect(() => {
@@ -141,6 +140,7 @@ export default function PageWrapper({ initBlocks, initMetadata }: PageWrapperTyp
                     image: seoImage,
                     publishedAt: publishedAt,
                 },
+                credits,
                 content: normalizeBlocks(),
             }),
         });
@@ -182,8 +182,8 @@ export default function PageWrapper({ initBlocks, initMetadata }: PageWrapperTyp
                             </div>
                             <div className="flex px-4 items-center">
                                 <div className="flex-1">
-                                    <p className="text-sm font-medium ">SEO</p>
-                                    <p className="text-xs text-muted-foreground">Configure SEO Metadata</p>
+                                    <p className="text-sm font-medium ">Article Config</p>
+                                    <p className="text-xs text-muted-foreground">Configure Metadata, Attribute for this insight</p>
                                 </div>
                                 <Popover>
                                     <PopoverTrigger asChild>
@@ -191,8 +191,27 @@ export default function PageWrapper({ initBlocks, initMetadata }: PageWrapperTyp
                                             <Settings />
                                         </Button>
                                     </PopoverTrigger>
-                                    <PopoverContent className="w-80">
-                                        <FormMetadata metadata={initMetadata} />
+                                    <PopoverContent className="w-92">
+                                        <Tabs>
+                                            <TabsList >
+                                                <TabsTrigger value="metadata">
+                                                    Metadata
+                                                </TabsTrigger>
+                                                <TabsTrigger value="attributes">
+                                                    Attributes
+                                                </TabsTrigger>
+                                            </TabsList>
+                                            <TabsContent value="metadata">
+                                                <div className="mb-2 space-y-0">
+                                                    <p className="text-lg font-bold">Metadata Configuration</p>
+                                                    <p className="text-sm text-muted-foreground">Set title, description and cover for the head tag</p>
+                                                </div>
+                                                <FormMetadata metadata={initMetadata} />
+                                            </TabsContent>
+                                            <TabsContent value="attributes">
+                                                <FormAttributes metadata={initMetadata} />
+                                            </TabsContent>
+                                        </Tabs>
                                     </PopoverContent>
                                 </Popover>
                             </div>
@@ -202,21 +221,6 @@ export default function PageWrapper({ initBlocks, initMetadata }: PageWrapperTyp
                                         <p className="text-sm font-medium ">Sections Builder</p>
                                         <p className="text-xs text-muted-foreground">Drag & Drop component on left side</p>
                                     </div>
-                                    <Popover>
-                                        <PopoverTrigger asChild>
-                                            <Button variant="ghost" size="icon-sm" className="p-0">
-                                                <Settings />
-                                            </Button>
-                                        </PopoverTrigger>
-                                        <PopoverContent className="w-80">
-                                            <Field>
-                                                <FieldLabel>Published At</FieldLabel>
-                                                <FieldContent>
-                                                    <DatePicker defaultValue={publishedAt} onValueChange={setPublishedAt} />
-                                                </FieldContent>
-                                            </Field>
-                                        </PopoverContent>
-                                    </Popover>
                                 </div>
                                 <div className="space-y-4">
                                     <SectionsNew onDrop={handleOnDropSection} />
