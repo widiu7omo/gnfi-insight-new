@@ -53,14 +53,14 @@ export function CustomImageA1() {
             whileInView={{ scale: 1, opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="max-w-5xl text-center text-3xl pb-20 md:text-4xl lg:text-5xl xl:text-6xl font-bold !leading-snug text-[#39ff14] h-[15rem] -mb-[2rem] lg:h-[20rem] relative z-10">
-            Mengenal Warisan Budaya Tak Benda, Kekayaan Indonesia Lintas Generasi
+            Mengenal Warisan Budaya Takbenda, Kekayaan Indonesia Lintas Generasi
           </motion.h2>
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-anton text-[5rem] mt-20 leading-none tracking-wide text-[#39ff14]"
+            className="font-anton text-[5rem] mt-20 leading-none tracking-wide text-[#39ff14] leading-snug!"
           >
-            OPK
+            Objek Pemajuan <br /> Kebudayaan (OPK)
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -81,7 +81,7 @@ export function CustomImageA1() {
       </div>
 
       {/* Cards Grid */}
-      <div className="relative z-30 -mt-32 px-4 sm:px-6 lg:px-8">
+      <div className="relative z-30 -mt-22 px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={container}
           initial="hidden"
