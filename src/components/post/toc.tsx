@@ -107,17 +107,17 @@ export function Toc({ tocItems }: { tocItems: TocItem[] }) {
 												className={cn(
 													"group flex items-start gap-3 p-3 rounded-xl transition-all duration-200",
 													active
-														? "bg-red-50 text-red-700 font-semibold shadow-sm shadow-red-100"
+														? "bg-[#ff312a] text-white font-semibold shadow-sm shadow-red-100"
 														: "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
 												)}
 											>
 												<span className={cn(
 													"mt-2 ml-1.5 mr-1 w-1.5 h-1.5 rounded-full shrink-0 transition-all duration-300",
-													active ? "bg-red-600 scale-125" : "bg-gray-500 group-hover:bg-gray-400"
+													active ? "bg-white scale-125" : "bg-[#ff312a] group-hover:bg-gray-400"
 												)} />
 												<span className="text-sm leading-relaxed">{item.label}</span>
 												{active && (
-													<ChevronRight className="w-4 h-4 ml-auto mt-0.5 text-red-500" />
+													<ChevronRight className="min-w-4 min-h-4 w-4 h-4 ml-auto mt-0.5 text-white" />
 												)}
 											</a>
 										);
