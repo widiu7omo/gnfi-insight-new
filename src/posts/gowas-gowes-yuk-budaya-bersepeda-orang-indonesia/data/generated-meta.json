@@ -6,5 +6,11 @@
     "publishedAt": "06/23/2025"
   },
   "title": "Gowas-Gowes, Yuk! Budaya Bersepeda Orang Indonesia",
-  "slug": "gowas-gowes-yuk-budaya-bersepeda-orang-indonesia"
+  "slug": "gowas-gowes-yuk-budaya-bersepeda-orang-indonesia",
+  "credits": {
+    "editors": "Dimas Wahyu Indrajaya",
+    "writers": "Aslamatur Rizqiyah, Aulli Atmam, Firda Aulia Rachmasari, Rizky Kusumo",
+    "designers": "Arco Pradipta, Ario Priagung Nugroho",
+    "developers": "Danar Widi Utomo, Fika Nur Aini"
+  }
 }

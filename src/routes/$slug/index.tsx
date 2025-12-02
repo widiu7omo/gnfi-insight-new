@@ -8,6 +8,7 @@ import { groupByToMap } from '@/lib/utils';
 import { $getPostBySlug, $getTOCBySlug } from '@/server/post';
 import { createFileRoute } from '@tanstack/react-router'
 import { BlockType } from '@/types';
+import { Credits } from '@/store/useTitle';
 
 export type PostMeta = {
     seo?: {
@@ -16,6 +17,7 @@ export type PostMeta = {
         image?: string;
         publishedAt?: string;
     };
+    credits: Credits;
     title?: string;
     slug?: string;
 };
@@ -82,6 +84,7 @@ export const Route = createFileRoute('/$slug/')({
 
 function RouteComponent() {
     const { post, toc } = Route.useLoaderData();
+
     const { slug } = Route.useParams();
     const grouped = groupByToMap(post.postData ?? [], (item) => item.group);
     return <main className="bg-neutral-50 w-full relative">
@@ -110,6 +113,6 @@ function RouteComponent() {
                 );
             })}
         </article>
-        <Footer publishedAt={post.meta?.seo?.publishedAt ?? new Date().toISOString()} />
+        <Footer credits={post.meta?.credits} publishedAt={post.meta?.seo?.publishedAt ?? new Date().toISOString()} />
     </main>
 }

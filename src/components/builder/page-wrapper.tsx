@@ -243,6 +243,11 @@ export default function PageWrapper({ initBlocks, initMetadata }: PageWrapperTyp
                                         Preview
                                     </Link>
                                 </Button>
+                                <Button asChild variant="outline">
+                                    <a href={`https://insight.goodnewsfromindonesia.id/${data.post.slug}`} target="_blank">
+                                        Preview (Live)
+                                    </a>
+                                </Button>
                             </div>
                         </div>
                         <Preview grouped={groupedBlock} initMetadata={initMetadata} />

@@ -6,5 +6,11 @@
     "publishedAt": "09/15/2025"
   },
   "title": "Manis Bisnis Es Krim di Indonesia",
-  "slug": "manis-bisnis-es-krim-di-indonesia"
+  "slug": "manis-bisnis-es-krim-di-indonesia",
+  "credits": {
+    "editors": "Dimas Wahyu Indrajaya",
+    "writers": "Aulli Reza Atmam, Firdarainy Nuril Izzah, Aslamatur Rizqiyah, Rizky Kusumo",
+    "designers": "Arco Pradipta, Ario Priagung Nugroho",
+    "developers": "Danar Widi Utomo, Fika Nur Aini"
+  }
 }

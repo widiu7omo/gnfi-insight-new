@@ -6,5 +6,11 @@
     "publishedAt": "10/14/2024"
   },
   "title": "Gemilang Dendang Dangdut",
-  "slug": "gemilang-dendang-dangdut"
+  "slug": "gemilang-dendang-dangdut",
+  "credits": {
+    "editors": "Aulli Atmam",
+    "writers": "Aslamatur Rizqiyah, Dimas Wahyu Indrajaya, Firdarainy Nuril Izzah, Rizky Kusumo",
+    "designers": "Arco Pradipta, Ario Priagung Nugroho",
+    "developers": "Anang Yoga Harwinto, Danar Widi Utomo, Muhammad Naufal Rafianto"
+  }
 }

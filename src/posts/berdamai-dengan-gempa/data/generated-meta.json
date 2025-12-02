@@ -6,5 +6,11 @@
     "publishedAt": "07/10/2024"
   },
   "title": "Berdamai dengan Gempa",
-  "slug": "berdamai-dengan-gempa"
+  "slug": "berdamai-dengan-gempa",
+  "credits": {
+    "editors": "Aulli Atmam",
+    "writers": "Tim Redaksi GNFI",
+    "designers": "Tim Kreatif GNFI",
+    "developers": "Techino GNFI"
+  }
 }
