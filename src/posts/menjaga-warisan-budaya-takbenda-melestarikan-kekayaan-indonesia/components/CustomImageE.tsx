@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef, useState, useEffect } from "react";
 
 export function CustomImageE() {
@@ -12,7 +12,7 @@ export function CustomImageE() {
   const quoteInView = useInView(quoteRef, { once: true });
   const questionInView = useInView(questionRef, { once: true });
 
-  const [displayedText, setDisplayedText] = useState("");
+  const [, setDisplayedText] = useState("");
   const fullText = "Namun, sebatas jalur apakah sudah cukup memberi kepuasan bagi pesepeda di Indonesia?";
 
   useEffect(() => {
@@ -111,7 +111,7 @@ export function CustomImageE() {
                 <img src={'/assets/menjaga-warisan-budaya-takbenda-melestarikan-kekayaan-indonesia/5.7.png'} alt="Quote" className="absolute right-0 top-32 lg:top-auto bottom-auto lg:bottom-28 z-0" />
                 <div className="absolute inset-x-0 w-fit bottom-0 z-20 px-6 py-1.5 ml-4 mr-4 lg:mr-0 lg:ml-6 h-fit bg-[#450693] rounded-tr-[2rem] rounded-bl-[2rem]">
                   <p className="text-[#ffc402] font-medium text-xl">I Made Dharma Suteja</p>
-                  <p className="text-sm">Direktur Warisan Budaya, Kementerian Kebudayaan</p>
+                  <p className="text-sm">Direktur Warisan Budaya, Direktorat Jenderal Pelindungan Kebudayaan dan Tradisi, Kementerian Kebudayaan</p>
                 </div>
               </motion.div>
               <motion.div

@@ -47,7 +47,7 @@ const steps = [
   },
   {
     id: 5,
-    text: "Seleksi seleksi administrasi, penilaian substansi, dan verifikasi berjenjang oleh Tim Ahli Warisan Budaya Takbenda Indonesia",
+    text: "Seleksi administrasi, penilaian substansi, dan verifikasi berjenjang oleh Tim Ahli Warisan Budaya Takbenda Indonesia",
     bg: "bg-[#b6661e]",
   },
   {
@@ -61,8 +61,7 @@ const requirements = [
   "Berusia 50 tahun atau lebih,",
   "Memiliki maestro,",
   "Telah diwariskan paling sedikit dua generasi,",
-  "Memiliki nilai penting bagi masyarakat dalam aspek sosial, ekonomi,",
-  "dan/atau budaya,",
+  "Memiliki nilai penting bagi masyarakat dalam aspek sosial, ekonomi, dan/atau budaya,",
   "Berdampak pada pembangunan berkelanjutan,",
   "Masih lestari dan dipraktikkan di masyarakat, serta",
   "Tidak melanggar ketentuan peraturan perundang-undangan.",
