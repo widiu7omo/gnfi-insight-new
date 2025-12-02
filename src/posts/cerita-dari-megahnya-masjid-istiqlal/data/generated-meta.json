@@ -6,5 +6,11 @@
     "publishedAt": "05/28/2024"
   },
   "title": "Cerita dari Megahnya Masjid Istiqlal",
-  "slug": "cerita-dari-megahnya-masjid-istiqlal"
+  "slug": "cerita-dari-megahnya-masjid-istiqlal",
+  "credits": {
+    "editors": "Aulli Atmam",
+    "writers": "Tim Redaksi GNFI",
+    "designers": "Tim Kreatif GNFI",
+    "developers": "Techino GNFI"
+  }
 }

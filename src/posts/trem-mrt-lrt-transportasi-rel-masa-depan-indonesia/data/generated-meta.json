@@ -6,5 +6,11 @@
     "publishedAt": "12/11/2025"
   },
   "title": "Trem, MRT, & LRT: Transportasi Rel Masa Depan Indonesia",
-  "slug": "trem-mrt-lrt-transportasi-rel-masa-depan-indonesia"
+  "slug": "trem-mrt-lrt-transportasi-rel-masa-depan-indonesia",
+  "credits": {
+    "editors": "Aulli Reza Atmam",
+    "writers": "Aslamatur Rizqiyah, Afdal Hasan, Muhammad Fazer Mileneo, Firdarainy Nuril Izzah, Rizky Kusumo",
+    "designers": "Arco Pradipta, Ario Priagung Nugroho",
+    "developers": "Danar Widi Utomo, Fika Nur Aini"
+  }
 }

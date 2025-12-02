@@ -6,5 +6,11 @@
     "publishedAt": "07/15/2025"
   },
   "title": "PP Tunas, Upaya Melindungi Anak-anak Indonesia di Dunia Digital",
-  "slug": "pp-tunas-upaya-melindungi-anak-anak-indonesia-di-dunia-digital"
+  "slug": "pp-tunas-upaya-melindungi-anak-anak-indonesia-di-dunia-digital",
+    "credits": {
+    "editors": "Aulli Reza Atmam",
+    "writers": "Dimas Wahyu Indrajaya, Firdarainy Nuril Izzah, Irfan Jumadil Aslam, Muhammad Fazer Mileneo",
+    "designers": "Arco Pradipta, Ario Priagung Nugroho",
+    "developers": "Danar Widi Utomo, Fika Nur Aini"
+  }
 }

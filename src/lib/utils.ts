@@ -18,3 +18,6 @@ export const groupByToMap = <T, Q>(
 export function uniqueKey(): string {
   return nanoid();
 }
+export function csvToArray(value: string): string[] {
+  return value.split(',').map(item => item.trim())
+}

@@ -17,8 +17,10 @@ import {
 import { Link, Share2, Heart } from "lucide-react";
 import { toast } from "sonner";
 import { motion } from "motion/react";
+import { Credits } from "@/store/useTitle";
+import { csvToArray } from "@/lib/utils";
 
-export default function Footer({ publishedAt }: { publishedAt: string }) {
+export default function Footer({ publishedAt, credits }: { publishedAt: string, credits?: Credits }) {
     const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
     const title = "GNFI Insight - Bangun Wawasan Lewat Data dan Cerita";
 
@@ -65,7 +67,14 @@ export default function Footer({ publishedAt }: { publishedAt: string }) {
             props: { url: shareUrl, subject: title, body: "Check this out!" }
         }
     ];
-
+    function generateListCredits(values: string[]) {
+        if (values.length == 1) {
+            return <div>{values}</div>
+        }
+        return <ul className="list-disc text-left">
+            {values.map(item => <li key={item}>{item}</li>)}
+        </ul>
+    }
     return (
         <div className="w-full relative overflow-hidden bg-white">
 
@@ -162,23 +171,23 @@ export default function Footer({ publishedAt }: { publishedAt: string }) {
 
                 {/* Credits Grid */}
                 <div className="max-w-5xl mx-auto border-t border-gray-100 pt-12">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
-                        <div className="text-center md:text-left space-y-2">
-                            <p className="text-xs font-bold text-center text-red-600 uppercase tracking-widest">Editor</p>
-                            <p className="text-lg text-gray-800 text-center font-medium">Aulli Atmam</p>
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
+                        <div className="text-left md:text-left space-y-2">
+                            <p className="text-xs font-bold text-left text-red-600 uppercase tracking-widest">Editor</p>
+                            <div className="text-lg text-gray-800 text-left font-medium">{credits?.editors ? generateListCredits(csvToArray(credits.editors)) : 'Tim Redaksi GNFI'}</div>
                         </div>
-                        <div className="text-center md:text-left space-y-2">
-                            <p className="text-xs font-bold text-center text-red-600 uppercase tracking-widest">Penulis</p>
-                            <p className="text-lg text-gray-800 text-center font-medium">Tim Redaksi GNFI</p>
+                        <div className="text-left md:text-left space-y-2">
+                            <p className="text-xs font-bold text-red-600 uppercase tracking-widest">Penulis</p>
+                            <div className="text-lg text-gray-800 text-left font-medium">{credits?.writers ? generateListCredits(csvToArray(credits.writers)) : 'Tim Redaksi GNFI'}</div>
                         </div>
-                        <div className="text-center md:text-left space-y-2">
-                            <p className="text-xs font-bold text-center text-red-600 uppercase tracking-widest">Desain & Visual</p>
-                            <p className="text-lg text-gray-800 text-center font-medium">Tim Kreatif GNFI</p>
+                        <div className="text-left md:text-left space-y-2">
+                            <p className="text-xs font-bold text-red-600 uppercase tracking-widest">Desain & Visual</p>
+                            <div className="text-lg text-gray-800 text-left font-medium">{credits?.designers ? generateListCredits(csvToArray(credits?.designers)) : 'Tim Kreatif GNFI'}</div>
                         </div>
-                        <ul className="text-center md:text-left space-y-2">
-                            <p className="text-xs font-bold text-center text-red-600 uppercase tracking-widest">Web Developer</p>
-                            <p className="text-lg text-gray-800 text-center font-medium">Techino GNFI</p>
-                        </ul>
+                        <div className="text-left md:text-left space-y-2">
+                            <p className="text-xs font-bold text-red-600 uppercase tracking-widest">Web Developer</p>
+                            <div className="text-lg text-gray-800 text-left font-medium">{credits?.developers ? generateListCredits(csvToArray(credits?.developers)) : 'Techino GNFI'}</div>
+                        </div>
                     </div>
                 </div>
 

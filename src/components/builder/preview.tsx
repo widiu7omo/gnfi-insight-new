@@ -58,7 +58,6 @@ export default function Preview({ grouped, initMetadata }: PreviewProps) {
     const scaleFactor = zoom[0] / 100;
     const previewRef = useRef<HTMLElement>(null);
     const [activeSession] = useActiveSection();
-    const { data } = Route.useLoaderData()
     useEffect(() => {
         if (activeSession && previewRef.current) {
             const targetElement = previewRef.current.querySelector(`#${activeSession}`);
@@ -177,7 +176,7 @@ export default function Preview({ grouped, initMetadata }: PreviewProps) {
                                         </SectionGroup>
                                     );
                                 })}
-                                <Footer publishedAt={post.meta?.seo?.publishedAt ?? new Date().toISOString()} />
+                                <Footer credits={post.meta?.credits} publishedAt={post.meta?.seo?.publishedAt ?? new Date().toISOString()} />
                             </article>
                         </main>
                     </div>

@@ -15,4 +15,16 @@ export const useSeoImage = () => useAtom(seoImageAtom)
 
 const publishedAtAtom = atom<string>(new Date().toISOString())
 export const usePublishedAt = () => useAtom(publishedAtAtom)
-
+export type Credits = {
+            editors: string;
+            writers: string;
+            designers: string;
+            developers: string;
+        }
+const creditsAtom = atom<Credits>({
+    editors:'',
+    writers:'',
+    designers:'',
+    developers:''
+});
+export const useCredits = ()=>useAtom(creditsAtom);

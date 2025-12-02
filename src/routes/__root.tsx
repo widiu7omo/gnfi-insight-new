@@ -86,6 +86,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning className={cn("antialiased scroll-smooth", theme)}>
       <head>
+        {!import.meta.env.PROD &&
+          <script src="https://unpkg.com/react-scan/dist/auto.global.js" />
+        }
         <HeadContent />
       </head>
       <body>

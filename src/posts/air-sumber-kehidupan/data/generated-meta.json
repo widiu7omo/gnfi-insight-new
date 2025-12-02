@@ -6,5 +6,11 @@
     "publishedAt": "05/07/2024"
   },
   "title": "Air Sumber Kehidupan",
-  "slug": "air-sumber-kehidupan"
+  "slug": "air-sumber-kehidupan",
+  "credits": {
+    "editors": "Aulli Atmam",
+    "writers": "Tim Redaksi GNFI",
+    "designers": "Tim Kreatif GNFI",
+    "developers": "Techino GNFI"
+  }
 }
