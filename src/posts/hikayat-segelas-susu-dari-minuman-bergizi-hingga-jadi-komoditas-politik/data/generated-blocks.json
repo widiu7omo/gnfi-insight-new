@@ -1,0 +1,221 @@
+[
+  {
+    "index": 0,
+    "component": 1,
+    "componentProps": {
+      "title": "Hikayat Segelas Susu: Dari Minuman Bergizi hingga Jadi Komoditas Politik",
+      "coverUrl": "/assets/hikayat-segelas-susu-dari-minuman-bergizi-hingga-jadi-komoditas-politik/pexels-pixabay-236010.jpg",
+      "gradientColor": "bg-linear-to-b! from-40%! from-[#fffaf6]/0! to-[#fffaf6]!",
+      "swipeUpIcon": "chevrons-down"
+    },
+    "group": "section-1",
+    "groupClassName": "",
+    "order": 0,
+    "groupTitle": "Hikayat Segelas Susu"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Bagi Jonathan (23), minum susu seakan sudah jadi bagian dari rutinitas. Hampir setiap hari, ia selalu mengonsumsi susu, bahkan sampai satu liter.&nbsp;</p><p></p><p>Pria asal Sawangan, Depok, itu mengakui bahwa dirinya memang penggemar susu, khususnya susu sapi. Meski sempat beralih ke susu berbahan nabati karena faktor kesehatan, Jonathan terus mengonsumsi susu sapi, kebiasaan yang sudah dilakukannya sejak anak-anak&nbsp;&nbsp;<br></p><p>“Waktu <em>overweight </em>dulu sempat diganti dengan susu kedelai, tetapi sekarang balik lagi (ke susu sapi,” ujar Jonathan kepada GNFI.<br></p><p>Susu merupakan bahan pangan yang penting untuk gizi manusia. Susu dikenal sebagai bahan pangan yang sempurna karena mengandung hampir semua zat gizi yang diperlukan tubuh manusia.<br></p><p>Susu sudah lama diyakini sebagai salah satu minuman paling sehat dan bermanfaat. Bahkan, bisa dibilang susu adalah sumber makanan pertama yang dikonsumsi manusia, karena manusia meminum air susu ibunya ketika baru lahir.</p>",
+      "containerClassName": "bg-linear-to-b! from-[#fffaf6]! to-[#fff6e9]! ",
+      "className": "relative z-10",
+      "ornamentBottomLeft": "",
+      "classOrnamentBottomLeft": "",
+      "ornamentTopLeft": "",
+      "classOrnamentTopLeft": "",
+      "ornamentBottomRight": "",
+      "classOrnamentBottomRight": "",
+      "ornamentTopRight": "",
+      "classOrnamentTopRight": ""
+    },
+    "group": "section-1",
+    "groupClassName": "",
+    "order": 1,
+    "groupTitle": "Hikayat Segelas Susu"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-2",
+    "groupClassName": "",
+    "order": 2,
+    "componentCustomName": "SectionOneComponent",
+    "groupTitle": "Manfaat dan Nutrisi Susu"
+  },
+  {
+    "index": 0,
+    "component": 4,
+    "componentProps": {
+      "title": "Sejarah Susu: Minuman sejak Era Neolitik ",
+      "coverImage": "/assets/hikayat-segelas-susu-dari-minuman-bergizi-hingga-jadi-komoditas-politik/ai-sapi-monolitic-compressed.png",
+      "className": ""
+    },
+    "group": "section-3",
+    "groupClassName": "overflow-clip bg-black",
+    "order": 3,
+    "groupWithBackground": false,
+    "groupTitle": "Sejarah Susu: Minuman sejak Era Neolitik"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Manusia sudah lama memetik manfaat dari susu dengan menggunakannya sebagai bahan pokok pangan. Manusia mengambil susu dari hewan yang memiliki kelenjar susu dan diketahui telah menjinakkan sapi dan domba sejak 8.000 SM.<br></p><p>Untuk membahas lebih lanjut soal asal mula manusia mengonsumsi susu, GNFI berbincang dengan Arkeolog Universitas Indonesia, Ali Akbar. Ternyata, diperkirakan susu mulai masuk ke dataran Eropa pada awal abad 5000 SM melewati daerah Anatolia, lalu masuk ke Inggris pada periode Neolitik (10000-2200&nbsp; SM)<br></p><p>“Bukti arkeologi tertua ada riset terbaru di Inggris yang meneliti fosil sisa tulang manusia dan gigi. Di beberapa situs ditemukan di karang gigi. Dibawa ke laboratorium, ditemukan manusia telah mengonsumsi susu yang diolah sudah jadi yogurt atau keju sekitar 6 sampai 4 ribu SM,” ujar Ali yang juga aktif di kanal YouTube <em>Ali Akbar Berkabar</em>.<br></p><p>Ali menjelaskan, hingga sekarang cukup sulit menemukan jejak konsumsi susu sebelum 8000 SM. Hal ini karena memang tak ditemukan banyak bukti arkeologisnya. Namun yang jelas, jejak pengolahan susu sebagai bahan konsumsi baru bisa ditemukan saat masa di mana manusia sudah mengenal pertanian. Ketika itu masyarakat sudah banyak mengolah susu menjadi produk seperti keju atau yogurt.<br></p><p>Hal tersebut didasari oleh temuan bahwa pada zaman pertengahan, konsumsi susu dan keju sudah ada di daerah Timur Tengah lalu, menyebar ke Eropa melalui Turki. Kemudian pada abad ke 15 para pelaut mulai membawa sapi perah untuk dipelihara dan diternakkan di Eropa.<br></p><p>Lantas, bagaimana dengan di Indonesia?<br></p><p>“Susu sapi sendiri baru dikenal oleh bangsa Indonesia lewat penjajahan Hindia Belanda pada abad ke 18,” papar Ali.&nbsp;<br></p><p>Sejarah susu di Indonesia bisa dilacak sejak tahun 1906. Saat itu, Pemerintah Hindia Belanda mengimpor beberapa jenis sapi pedaging ke Sumba, Nusa Tenggara Timur.<br></p><p>Pemerintah Hindia Belanda kemudian menetapkan Sumba sebagai pusat pengembangbiakkan sapi daging dari jenis Ongole dari India. Sekitar tahun ini pula, sapi perah masuk ke Hindia Belanda.<br></p><p>“Namun, tahun masuknya sapi perah ini perlu dipertanyakan lagi. Alasannya sejak akhir abad ke-19, wilayah Bandung terkenal sebagai penghasil susu sapi berkualitas tinggi di Nusantara,” kata Ali mempertanyakan.</p>",
+      "containerClassName": "bg-linear-to-b from-[#150603] to-[#624029]",
+      "className": "text-white"
+    },
+    "group": "section-3",
+    "groupClassName": "overflow-clip bg-black",
+    "order": 4,
+    "groupWithBackground": false,
+    "groupTitle": "Sejarah Susu: Minuman sejak Era Neolitik"
+  },
+  {
+    "index": 2,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-3",
+    "groupClassName": "overflow-clip bg-black",
+    "order": 5,
+    "componentCustomName": "SectionTwoCustomImage",
+    "groupWithBackground": true,
+    "groupTitle": "Sejarah Susu: Minuman sejak Era Neolitik"
+  },
+  {
+    "index": 0,
+    "component": 4,
+    "componentProps": {
+      "title": "Aneka Kuliner Tradisional dan Produk Susu Indonesia",
+      "coverImage": "/assets/hikayat-segelas-susu-dari-minuman-bergizi-hingga-jadi-komoditas-politik/upscale-sapi-milk.png",
+      "className": "bg-top"
+    },
+    "group": "section-4",
+    "groupClassName": "bg-[#E7F0F9] overflow-clip",
+    "order": 6,
+    "groupTitle": "Aneka Kuliner Tradisional dan Produk Susu Indonesia"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Jika sebelumnya sudah disinggung bahwa masyarakat di belahan dunia lain telah mengolah susu sejak masa lampau, masyarakat Indonesia juga melakukan hal serupa. Buktinya, ada sejumlah kuliner tradisional Nusantara yang merupakan hasil olahan susu.&nbsp;<br></p><p>Kuliner olahan susu Nusantara punya wujud yang sedikit-banyak serupa dengan yang ada di negara lain, seperti yogurt. Misalnya saja, masyarakat Minangkabau mengenal dadiah, yakni minuman dari susu kerbau yang difermentasi dalam tabung bambu.&nbsp;<br></p><p>Di samping itu, ada pula olahan susu yang berwujud padat seperti keju. Salah satunya adalah dangke yang berasal dari Enrekang, Sulawesi Selatan. <br><br>Makanan satu ini Terbuat dari susu sapi atau kerbau yang dicampur dengan getah pepaya sebagai bahan penggumpal alami. Di Palembang juga ada gulo puan, makanan yang terbuat dari campuran susu dan gula. Satu makanan tradisional serupa keju lainnya adalah Dali ni Horbo. Makanan khas Tapanuli, Sumatera Utara ini terbuat dari susu kerbau yang dipanaskan hingga mengental dan mengeras. Mirip dengan keju segar dan kerap dimakan langsung atau dimasak dengan bumbu dan rempah lokal.<br></p><p>Olahan susu tradisional Nusantara menunjukkan betapa kayanya warisan kuliner Indonesia. Setiap daerah memiliki cara unik dalam mengolah susu dengan bahan-bahan alami dan metode tradisional yang diwariskan turun-temurun. Selain itu, masih ada lagi produk turunan susu khas lainnya seperti kerupuk susu, dodol susu, hingga tahu susu.<br></p><p>Seiring waktu, bukan cuma kuliner tradisional olahan susu yang eksis di Indonesia, namun industri pengolahan susu pun turut berkembang. Awalnya, industri susu di Indonesia sudah ada sejak era kolonial Belanda, tepatnya pada abad ke-19. Kawasan Lembang dipilih menjadi daerah pertama yang dipilih sebagai peternakan susu pertama di Indonesia karena iklimnya yang cocok.<br></p><p>Pascakemerdekaan, industri susu lokal mulai bermunculan. Beberapa jenama pun tentu sudah tidak asing lagi untuk dijumpai, mulai dari Ultra Milk, Greenfields, Indomilk hingga Susu Nasional.<br></p><p>Mungkin sebagian ada yang menganggap merek seperti Greenfields atau Ultra adalah produk luar negeri. Meskipun penjenamaannya terkesan premium layaknya produk luar negeri, nyatanya tidaklah demikian.<br></p><p>Kedua produk ini merupakan susu produksi dari peternak lokal yang memiliki pabrik pengolahan sendiri. Produk ini masing-masing berasal dari Bandung dan Malang.<br></p><p>Susu Ultra Milk diproduksi oleh PT Ultrajaya Milk Industry &amp; Trading Company Tbk (ULTJ) di Bandung dan sudah berdiri sejak tahun 1958. Produk susu ini pun selama bertahun-tahun unggul dalam segmen pasar produksi susu cair. Kemudian pada tahun 1969, produk Indomilk yang berada di bawah naungan PT Indolakto turut meramaikan industri susu di Indonesia.&nbsp;<br></p><p>Setelah Ultra Milk dan Indomilk, tahun 1997 giliran muncul merek Greenfields. Pada 2018, Greenfields membuka peternakan sendiri yang diklaim menjadi peternakan sapi terbesar se-Asia Tenggara dengan jumlah sapi lebih dari 10 ribu ekor.</p>",
+      "containerClassName": ""
+    },
+    "group": "section-4",
+    "groupClassName": "bg-[#E7F0F9] overflow-clip",
+    "order": 7,
+    "groupTitle": "Aneka Kuliner Tradisional dan Produk Susu Indonesia"
+  },
+  {
+    "index": 3,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-4",
+    "groupClassName": "bg-[#E7F0F9] overflow-clip",
+    "order": 8,
+    "componentCustomName": "SectionThreeCustomImage",
+    "groupTitle": "Aneka Kuliner Tradisional dan Produk Susu Indonesia"
+  },
+  {
+    "index": 2,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Di samping produk-produk tersebut, Kawan GNFI juga mungkin tidak asing dengan merek susu legendaris yang kerap dijajakan secara keliling menggunakan sepeda, yaitu Susu Murni Nasional. Produk susu ini diproduksi oleh CV Cita Nasional yang berlokasi di Kabupaten Semarang dan sudah ada sejak tahun 2000.</p>"
+    },
+    "group": "section-4",
+    "groupClassName": "bg-[#E7F0F9] overflow-clip",
+    "order": 9,
+    "groupTitle": "Aneka Kuliner Tradisional dan Produk Susu Indonesia"
+  },
+  {
+    "index": 0,
+    "component": 4,
+    "componentProps": {
+      "title": "Data Produksi dan Konsumsi Susu Indonesia ",
+      "coverImage": "/assets/hikayat-segelas-susu-dari-minuman-bergizi-hingga-jadi-komoditas-politik/pexels-mikael-blomkvist-6483626.jpg",
+      "className": "bg-position-[center_bottom_-4rem]"
+    },
+    "group": "section-5",
+    "groupClassName": "overflow-clip",
+    "order": 10,
+    "groupTitle": "Data Produksi dan Konsumsi Susu Indonesia"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Susu telah menjadi bagian dalam kekayaan kuliner tradisional Indonesia. Aneka produk susu yang dihasilkan industri modern juga tidak sulit ditemukan di pasaran. Namun ternyata, konsumsi susu di kalangan masyarakat Indonesia termasuk rendah.</p><p></p><p>Menurut data Badan Pusat Statistik (BPS), Konsumsi susu nasional perkapita 2021 baru mencapai 16,27 kilogram pertahunnya. Angka ini tergolong rendah berdasarkan standar dari Organisasi Pangan dan Pertanian (FAO).<br></p><p>FAO memberi batas rendah untuk konsumsi susu di bawah 30 kg per kapita per tahun. Sementara batas sedang untuk konsumsi susu mencapai 31-150 kg per kapita per tahun. Jika angkanya berada di atas itu, maka tingkat konsumsinya sudah termasuk tinggi.</p><p></p><p>Di sisi lain, produksi susu segar dalam negeri (SSDN) hanya menyentuh 968.980 ton. Angka ini sekilas terlihat besar. Padahal, itu hanya mencapai sekitar 20 persen dari kebutuhan nasional yang mencapai 4,4 juta ton. Untuk mencukupi kebutuhan, maka pemerintah menerapkan impor.</p><p></p><p>Meski begitu, produksi susu Indonesia sebetulnya cenderung meningkat. BPS melaporkan produksi susu segar di Indonesia tahun 2022 naik 2,38 persen dibandingkan tahun sebelumnya (year-on-year/yoy) sebanyak 946.388 ton. Tercatat, peningkatan produksi susu segar ini terjadi setidaknya dalam dua dekade terakhir.</p>"
+    },
+    "group": "section-5",
+    "groupClassName": "overflow-clip",
+    "order": 11,
+    "groupTitle": "Data Produksi dan Konsumsi Susu Indonesia"
+  },
+  {
+    "index": 2,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-5",
+    "groupClassName": "overflow-clip",
+    "order": 12,
+    "componentCustomName": "SectionFourCustomImage",
+    "groupTitle": "Data Produksi dan Konsumsi Susu Indonesia"
+  },
+  {
+    "index": 3,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Berdasarkan wilayahnya, data BPS juga menunjukkan bahwa jumlah produksi susu segar terbanyak berada di Jawa Timur. Dengan keberadaan peternakan sapi terbesar se-Asia Tenggara, wilayah tersebut mampu menghasilkan 445.213,00 ton susu pada 2022.<br></p><p>Di posisi kedua, daerah dengan produksi susu segar tertinggi adalah Jawa Barat yang mampu mencapai angka 264.834,10 ton. Kemudian di urutan ketiga hingga kelima, ada Jawa Tengah (92.176,20 ton), Sumatera Utara (8.953,30 ton), dan Daerah Istimewa Yogyakarta (3.607,50 ton).</p>"
+    },
+    "group": "section-5",
+    "groupClassName": "overflow-clip",
+    "order": 13,
+    "groupTitle": "Data Produksi dan Konsumsi Susu Indonesia"
+  },
+  {
+    "index": 0,
+    "component": 4,
+    "componentProps": {
+      "title": "Susu Gratis dari Prabowo-Gibran, Akankah Terwujud?",
+      "coverImage": "/assets/hikayat-segelas-susu-dari-minuman-bergizi-hingga-jadi-komoditas-politik/pexels-alex-green-5692269.webp"
+    },
+    "group": "section-6",
+    "groupClassName": "overflow-clip",
+    "order": 14,
+    "groupTitle": "Susu Gratis dari Prabowo-Gibran, Akankah Terwujud?"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Susu bukan cuma minuman, tetapi bisa juga jadi komoditas politik. Setidaknya itulah yang terjadi di Pemilihan Presiden 2024.<br></p><p>Sejak masa kampanye, pasangan calon Prabowo Subianto dan Gibran Rakabuming memperkenalkan program pemberian makanan dan susu gratis. Program tersebut menyasar 82,90 juta orang yang terdiri dari anak-anak usia dini, murid SD, SMP, SMA/SMK, santri, hingga ibu hamil.&nbsp;<br></p><p>Pemberian susu gratis yang disebut Gerakan Emas (emak-emak dan anak minum susu) ini dinilai sebagai salah satu strategi pemenuhan gizi masyarakat untuk meraih Indonesia Emas 2045. Prabowo-Gibran mengklaim bahwa program andalannya ini adalah bagian dari upaya peningkatan kesejahteraan anak-anak dan masyarakat luas. Akan tetapi, banyak hal yang dipertanyakan dari program tersebut. Apalagi, Prabowo-Gibran keluar sebagai pemenang pilpres sehingga terbuka kesempatan untuk merealisasikan program-programnya.<br></p><p>Misalnya saja, jumlah sapi perah di Indonesia yang hingga saat ini tidak mampu memenuhi kebutuhan susu nasional. Sebagaimana telah dipaparkan di atas, angka produksi susu Indonesia tidak mampu memenuhi kebutuhan yang ada. Ini dianggap sebagai lampu kuning bagi presiden dan wakil presiden terpilih bahwa program pemberian susu gratis perlu ditinjau kembali, bahkan bila perlu, tak dieksekusi.<br></p><p>Hal itu disampaikan Pakar Kebijakan Publik Universitas Airlangga (UNAIR) Gitadi Tegas Supramudyo. Saat berbincang dengan GNFI, ia bahkan menilai program pemberian susu gratis sebetulnya tidak perlu direalisasikan mengingat Indonesia bakal harus impor besar-besaran untuk memenuhi kebutuhan susu.<br></p><p>“Dalam kacamata analisis kebijakan, 80 persen susu itu akan dari impor. Jika memang produksi susu hanya mencapai 20 persen menurut saya tidak layak untuk diteruskan. Justru yang lebih penting malah bagaimana meningkatkan konsumsi susu dalam negeri sampai berapa persen dalam jangka berapa tahun. Itu <em>multiple effect</em>-nya lebih banyak,” kata Gitadi.</p>"
+    },
+    "group": "section-6",
+    "groupClassName": "overflow-clip",
+    "order": 15,
+    "groupTitle": "Susu Gratis dari Prabowo-Gibran, Akankah Terwujud?"
+  },
+  {
+    "index": 2,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-6",
+    "groupClassName": "overflow-clip",
+    "order": 16,
+    "componentCustomName": "SectionFiveCustomImage",
+    "groupTitle": "Susu Gratis dari Prabowo-Gibran, Akankah Terwujud?"
+  },
+  {
+    "index": 3,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Untuk itu, Gitadi menegaskan bahwa ide program susu gratis ini harus dilakukan kajian analisis secara komprehensif dan cerdas serta survei yang kuat. Terlebih, perihal bagaimana sistem pembuatan peternakan dan pemasok susu itu sendiri.&nbsp;<br></p><p>Gitadi juga mengungkapkan bahwa seharusnya pemerintah turut memberdayakan para peternak kecil atau koperasi di tingkat desa, bukan hanya perusahaan-perusahaan yang sudah mapan. Apalagi, saat ini banyak Gen Z dan Generasi Milenial yang turut berperan sebagai peternak sapi perah di berbagai wilayah Indonesia.<br></p><p>“Tugas negara mendampingi dan mengerjasamakan pabrik besar untuk menampung peternak sapi perah di tingkat desa. Itulah perlunya <em>grand design quality control</em> untuk mengatur kualitas susu tadi,” ucapnya.</p>"
+    },
+    "group": "section-6",
+    "groupClassName": "overflow-clip",
+    "order": 17,
+    "groupTitle": "Susu Gratis dari Prabowo-Gibran, Akankah Terwujud?"
+  }
+]

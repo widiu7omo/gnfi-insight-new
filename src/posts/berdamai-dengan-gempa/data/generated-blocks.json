@@ -1,0 +1,220 @@
+[
+  {
+    "index": 0,
+    "component": 1,
+    "componentProps": {
+      "title": "Berdamai dengan Gempa",
+      "coverUrl": "/assets/berdamai-dengan-gempa/pexels-jokassis-5461953.webp",
+      "gradientColor": "bg-linear-to-b! from-white/0! to-[#0A121D]!",
+      "swipeUpIcon": "chevrons-down"
+    },
+    "group": "section-1",
+    "groupClassName": "",
+    "order": 0,
+    "groupTitle": "Berdamai dengan Gempa"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Sabtu, 27 Mei 2024 adalah malam yang menegangkan bagi warga Garut, Jawa Barat, dan sekitarnya. Menjelang tengah malam saat banyak orang yang sudah terlelap, gempa mengguncang wilayah di Priangan itu.<br></p><p>Badan Nasional Penanggulangan Bencana (BNPB) mencatat bahwa gempa tersebut tepatnya terjadi pada pukul 23.29 WIB. Berkekuatan magnitudo 6,2, dampak gempa ini turut terasa di sembilan kabupaten dan kota dengan sejumlah korban luka-luka dan puluhan rumah rusak.</p><p></p><p>Apa yang terjadi di Garut hanyalah salah satu kejadian gempa yang ada di Indonesia. Jika Kawan GNFI memantau kanal media sosial milik Badan Meteorologi, Klimatologi, dan Geofisika (BMKG), akan tampak informasi mengenai gempa yang selalu ada setiap harinya. Ini menandakan bahwa Indonesia sangat sering dilanda gempa.</p><p></p><p>Faktanya, Indonesia memang negara yang rawan gempa. Oleh karena itu, masyarakatnya pun mau tak mau harus berdamai dengan gempa, dan tentunya mengenal gempa itu secara lebih dalam.</p>",
+      "containerClassName": "bg-linear-to-b! from-[#0A121D]! to-[#0A121D]! ",
+      "className": "text-white relative z-10",
+      "ornamentBottomLeft": "",
+      "classOrnamentBottomLeft": "",
+      "ornamentTopLeft": "",
+      "classOrnamentTopLeft": "",
+      "ornamentBottomRight": "",
+      "classOrnamentBottomRight": "",
+      "ornamentTopRight": "",
+      "classOrnamentTopRight": ""
+    },
+    "group": "section-1",
+    "groupClassName": "",
+    "order": 1,
+    "groupTitle": "Berdamai dengan Gempa"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-2",
+    "groupClassName": "",
+    "order": 2,
+    "componentCustomName": "SectionOneComponent",
+    "groupTitle": "Bagaimana Gempa Terjadi?"
+  },
+  {
+    "index": 0,
+    "component": 4,
+    "componentProps": {
+      "title": "Indonesia, Negara Rawan Gempa",
+      "coverImage": "/assets/berdamai-dengan-gempa/pexels-oidonnyboy-3762284.webp",
+      "className": ""
+    },
+    "group": "section-3",
+    "groupClassName": "overflow-clip bg-black",
+    "order": 3,
+    "groupWithBackground": false,
+    "groupTitle": "Indonesia, Negara Rawan Gempa"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Mengapa Indonesia begitu rawan akan gempa bumi? Jawabannya, karena secara geografis karena berada dalam rangkaian cincin api Pasifik alias Pacific ring of fire yang membentang sepanjang lempeng pasifik yang merupakan lempeng tektonik paling aktif di dunia.<br></p><p>Cincin Api Pasifik merupakan jalur rangkaian gunung api aktif yang ada di dunia. Asal-muasalnya adalah lempeng tektonik yang merupakan lempengan besar kerak bumi, menyatu seperti kepingan <em>puzzle</em>. Terkadang lempeng-lempeng yang bergerak ini bertabrakan, bergerak menjauh, atau saling bergeser satu sama lain.<br></p><p>Cincin Api Pasifik adalah rumah bagi lebih dari 450 gunung berapi aktif dan tidak aktif (75 persen dari total gunung berapi di bumi). Panjang bentangannya sekitar 40.000 kilometer mulai dari lempeng Pasifik, Juan de Fuca, Cocos, India-Australia, Nazca,&nbsp; Amerika Utara, dan Filipina. Karena itu pula Indonesia memiliki gunung berapi kurang lebih 240 buah yang 70 di antaranya masih aktif. Zona kegempaan dan gunung api aktif Sirkum Pasifik sangat terkenal karena setiap gempa kuat atau tsunami akan menimbulkan korban jiwa.</p><p></p><p>Mohd Robi Amri dkk. dalam <em>Risiko Bencana Indonesia</em> yang diterbitkan BNPB mencatat bahwa zona ini memberikan kontribusi sebesar 90 persen dari kejadian gempa di bumi dan hampir semuanya merupakan gempa besar di dunia. Setidaknya ada 10 gempa besar yang terjadi dari tahun 2004-2010 hingga mengakibatkan lebih dari 200.000 korban jiwa dan kerugian 39 juta dolar sampai 4,7 miliar dolar.</p><p></p><p>“Beberapa dampak gempa bumi beserta bahaya ikutannya (seperti tsunami, keretakan tanah, dan kelongsoran lereng) yang ditimbulkan oleh gempa bumi,” tulisnya.</p>",
+      "containerClassName": "bg-linear-to-b from-black to-[#04070B]",
+      "className": "text-white"
+    },
+    "group": "section-3",
+    "groupClassName": "overflow-clip bg-black",
+    "order": 4,
+    "groupWithBackground": false,
+    "groupTitle": "Indonesia, Negara Rawan Gempa"
+  },
+  {
+    "index": 2,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-3",
+    "groupClassName": "overflow-clip bg-black",
+    "order": 5,
+    "componentCustomName": "SectionTwoCustomImage",
+    "groupWithBackground": true,
+    "groupTitle": "Indonesia, Negara Rawan Gempa"
+  },
+  {
+    "index": 0,
+    "component": 4,
+    "componentProps": {
+      "title": "Sudah Tepatkah Cara Kita Memandang Gempa?",
+      "coverImage": "/assets/berdamai-dengan-gempa/pexels-pixabay-221125.webp",
+      "className": "bg-top"
+    },
+    "group": "section-4",
+    "groupClassName": "bg-[#E7F0F9] overflow-clip",
+    "order": 6,
+    "groupTitle": "Sudah Tepatkah Cara Kita Memandang Gempa?"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Menghadapi kenyataan bahwa Indonesia adalah negara yang rawan gempa, pola pikir dan cara pandang masyarakat terhadap bencana menjadi hal penting, utamanya karena itu sangat berkaitan dengan upaya penanggulangan dan pengurangan risiko.</p><p></p><p>Sayangnya, masyarakat masih banyak yang beranggapan bahwa bencana.&nbsp;<br></p><p>Hal ini terbukti dalam survei Litbang Kompas pada tahun 2011-2012 di 8 kota rawan. Diketahui bahwa 48,7 persen masyarakat menganggap bencana sebagai kehendak Tuhan yang tak terhindarkan. Lalu 42,9 persen masyarakat menyadari bahwa bencana memang merupakan mekanisme alam, tapi tidak bisa dihindari. Sementara itu, hanya 8,4 persen yang percaya bahwa mitigasi dapat mengurangi dampaknya.</p><p></p><p>Peneliti senior dari Pusat Penelitian Mitigasi Kebencanaan dan Perubahan Iklim (Puslit MKPI) Institut Teknologi Sepuluh Nopember (ITS), Amien Widodo, memberikan wawasan yang menarik mengenai fenomena ini.</p><p></p><p>“Jadi selama ini yang diajarkan, sebagian besar masyarakat menganggap bencana adalah takdir. Pasrah dengan doa. Bahkan, ada yang menganggap itu azab, kutukan, dan karma,”&nbsp; ujarnya dalam webinar “Belajar dari Gempa Bawean” yang diselenggarakan Tunas Hijau Indonesia (20/4/2024).</p><p></p><p>Merespons hal ini, Amien menilai bila pandangan masyarakat yang demikian kerap kali menyebabkan sikap pasif. Inilah yang kemudian menghambat upaya proaktif yang membuat kurangnya upaya dalam mitigasi bencana alam. Padahal menurut Amien, mitigasi yang pada dasarnya adalah upaya untuk mengurangi resiko bencana sebetulnya bisa dilakukan. Ia mengambil contoh Jepang sebagai negara yang telah maju dalam upaya mitigasi bencana. Kebetulan Jepang juga berada di Pacific ring of fire seperti halnya Indonesia.<br></p><p>“Padahal ini kan ada ancaman, kalau kita mendekat baru kena. Kalau jauh, tidak masalah, atau kita berlindung pun tidak masalah,” paparnya.</p>",
+      "containerClassName": ""
+    },
+    "group": "section-4",
+    "groupClassName": "bg-[#E7F0F9] overflow-clip",
+    "order": 7,
+    "groupTitle": "Sudah Tepatkah Cara Kita Memandang Gempa?"
+  },
+  {
+    "index": 3,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-4",
+    "groupClassName": "bg-[#E7F0F9] overflow-clip",
+    "order": 8,
+    "componentCustomName": "SectionThreeCustomImage",
+    "groupTitle": "Sudah Tepatkah Cara Kita Memandang Gempa?"
+  },
+  {
+    "index": 2,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Lebih lanjut, Amien menyoroti pentingnya mengubah sikap masyarakat agar tidak hanya menyalahkan alam atas dampak bencana, tetapi juga memikirkan mitigasi dan antisipasi untuk melindungi generasi mendatang.<br></p><p>Pola pikir ini jika tidak diubah akan memberikan pelajaran negatif bagi generasi selanjutnya. Bila secara turun temurun hal ini masih terus terjadi, masyarakat pun tidak akan memikirkan bagaimana antisipasinya, yang pada akhirnya dampaknya tidak terelakkan. Dengan mengubah pola pikir soal bencana dari takdir dan menyalahkan alam menjadi pengetahuan, kesiapsiagaan, dan partisipasi aktif dari semua pihak, tentu masyarakat bisa meminimalisir dampak negatif bencana secara berkelanjutan.</p>"
+    },
+    "group": "section-4",
+    "groupClassName": "bg-[#E7F0F9] overflow-clip",
+    "order": 9,
+    "groupTitle": "Sudah Tepatkah Cara Kita Memandang Gempa?"
+  },
+  {
+    "index": 0,
+    "component": 4,
+    "componentProps": {
+      "title": "Ini yang Perlu Dilakukan Saat Gempa Terjadi",
+      "coverImage": "/assets/berdamai-dengan-gempa/Layer_12.png"
+    },
+    "group": "section-5",
+    "groupClassName": "overflow-clip",
+    "order": 10,
+    "groupTitle": "Ini yang Perlu Dilakukan Saat Gempa Terjadi"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Mitigasi bencana bisa dilakukan dalam berbagai macam cara. Mengacu kepada UU Nomor 24 Tahun 2007 tentang Penanggulangan Bencana, langkah mitigasi dapat berwujud peningkatan kemampuan menghadapi ancaman bencana maupun pembangunan fisik.</p><p></p><p>Bagi masyarakat Indonesia yang sehari-harinya hidup di bawah bayang-bayang gempa, memahami apa yang harus dilakukan saat gempa terjadi sudah tentu jadi keharusan. Tujuan utamanya, sudah tentu menyelamatkan diri secepat mungkin.&nbsp;</p><p></p><p>Untuk mengetahui apa saja yang perlu dilakukan guna menyelamatkan diri saat terjadi gempa, utamanya yang berkekuatan besar dan berlangsung lama, GNFI berkesempatan berbincang dengan Anis Faisal Reza atau yang biasa dikenal sebagai Abah Lala, Ketua Komunitas Gugus Mitigasi Lebak Selatan (GMLS). Menurut Abah Lala, jika getaran gempa cukup besar, masyarakat harus mencari perlindungan di titik terdekat, misalnya di kolong meja kayu yang cukup kuat atau sekedar menutup kepala dengan tangan.</p><p></p><p>“Saat gempa itu adalah posisi kritis. Apalagi saat kita di tempat yang tinggi, kita tidak akan bisa menempuh perjalanan ke basement dalam waktu yang singkat. (Saat terjadi) Gempa besar dan berayun, lama berlari malah akan menambah resiko yang baru, bisa jatuh,” ujar Abah Lala.</p><p></p><p>Langkah tersebut menjadi sangat penting, apalagi saat Kawan GNFI tengah berada di lokasi yang tinggi seperti lantai atas gedung. Mencari perlindungan terdekat lebih baik baik ketimbang berusaha lari dan turun ke lantai dasar karena tindakan tersebut justru berbahaya.&nbsp;</p><p></p><p>Abah Lala menyebut ada tiga prinsip utama untuk menyelamatkan diri saat terjadi gempa, yakni <em>drop</em>, <em>cover</em>, dan <em>hold</em>. <em>Drop</em> berarti mengubah posisi dengan menunduk, berjongkok, atau sujud. Posisi ini dapat meminimalisir Kawan merasakan pusing dan limbung saat terjadi getaran. <em>Cover</em> artinya menutupi dan melindungi kepala dengan tangan, tas atau benda lain. Kemudian, langkah ketiga ialah <em>hold</em> yang artinya berpegangan erat agar tidak limbung.</p><p></p><p>Tiga prinsip dasar itu perlu dilakukan, namun tidak boleh secara sembarangan. Ada beberapa hal yang perlu dicermati agar <em>drop, cover</em>, dan <em>hold</em> bisa menghasilkan perlindungan secara maksimal&nbsp;</p><p></p><p>Benda-benda yang bisa jatuh menimpa badan, seperti jendela kaca, rak, lemari, maupun barang-barang yang tergantung, yakni lukisan, cermin, jam dinding, dan lampu gantung wajib dihindari. Segera lindungi kepala menggunakan kedua tangan atau benda di sekitar.</p><p></p><p>“Jika di dalam ruangan serba kaca, berlindung di bawah meja. Kalau tidak ada meja, cari hal lain yang bisa melindungi kepala kita dari kejatuhan material,” kata Abah Lala.</p>"
+    },
+    "group": "section-5",
+    "groupClassName": "overflow-clip",
+    "order": 11,
+    "groupTitle": "Ini yang Perlu Dilakukan Saat Gempa Terjadi"
+  },
+  {
+    "index": 2,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-5",
+    "groupClassName": "overflow-clip",
+    "order": 12,
+    "componentCustomName": "SectionFourCustomImage",
+    "groupTitle": "Ini yang Perlu Dilakukan Saat Gempa Terjadi"
+  },
+  {
+    "index": 3,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Posisi tubuh dan lokasi di mana Kawan berada juga patut diperhatikan. Apabila Kawan sedang dalam keadaan tidur atau berbaring, tutuplah kepala menggunakan bantal untuk melindungi kepala dari benda-benda yang jatuh. Jika Kawan berada di lantai satu bangunan, segeralah keluar dan menuju tempat terbuka apabila memungkinkan, tentu sambil tetap lindungi kepala dan leher mengunakan kedua tangan atau benda lainnya.</p><p></p><p>Keluar dari bangunan dengan segera bisa jadi sulit apabila seseorang sedang berada di lantai dua atau lebih tinggi. Jika menghadapi situasi ini, berlindunglah di bawah meja yang kokoh sambil memegang kaki meja agar tidak bergeser, lalu lekas merapat ke dinding bagian pojok dengan merunduk seraya melindungi kepala. Dinding dekat elevator juga cocok untuk jadi tempat berlindung karena bagian itu adalah konstruksi terkuat sebuah gedung. Setelah gempa reda, barulah evakuasi diri ke titik kumpul yang aman guna mengantisipasi gempa susulan.</p><p></p><p>“Selama gempa harus segera mepet ke dinding. Kalau di tengah khawatir tertimpa dari atas,” imbuh Abah Lala.</p><p></p><p>Saat terjadi gempa, biasanya pengelola gedung melarang penggunaan elevator. Namun jika Kawan sedang berada di dalamnya, yang perlu dilakukan adalah tekan tombol semua lantai, dan segeralah keluar saat pintu terbuka di lantai berapa pun. Jika pintu tak terbuka, tekan tombol darurat untuk memanggil bantuan.</p><p></p><p>Kemungkinan terburuk yang bisa saja terjadi adalah terjebak dalam ruangan atau tertimpa benda sehingga tidak dapat bergerak. Jika hal itu terjadi, jangan habiskan energi dengan terus-menerus berteriak. Lebih baik ketuk benda yang ada untuk memberi tanda agar segera mendapatkan pertolongan.</p>"
+    },
+    "group": "section-5",
+    "groupClassName": "overflow-clip",
+    "order": 13,
+    "groupTitle": "Ini yang Perlu Dilakukan Saat Gempa Terjadi"
+  },
+  {
+    "index": 0,
+    "component": 4,
+    "componentProps": {
+      "title": "Pentingnya Rumah Tahan Gempa",
+      "coverImage": "/assets/berdamai-dengan-gempa/pexels-bluerhinomedia-3665354.webp"
+    },
+    "group": "section-6",
+    "groupClassName": "overflow-clip",
+    "order": 14,
+    "groupTitle": "Pentingnya Rumah Tahan Gempa"
+  },
+  {
+    "index": 1,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Memahami apa yang perlu dilakukan saat gempa terjadi adalah perkara kemampuan seseorang dalam menghadapi ancaman bencana gempa. Lantas, bagaimana dengan pembangunan fisiknya?</p><p></p><p>Hal yang bisa dilakukan masyarakat dalam upaya mitigasi dalam hal pembangunan fisik di antaranya adalah memastikan bahwa rumahnya tahan gempa. Bukan tanpa alasan, kerusakan struktur bangunan, terutama perumahan memang menjadi ancaman serius bagi negara rawan gempa seperti Indonesia.</p><p></p><p>Saat terjadi gempa, seberapa bagus desain dan konstruksi bakal teruji. Jika ternyata tidak bagus, maka bangunan tersebut sudah tentu berpotensi mengalami kerusakan fatal.</p><p></p><p>“Ada ungkapan yang menyatakan bahwa bukan gempa bumi itu sendiri yang mematikan, melainkan kegagalan struktur bangunan dalam menahan beban seismik yang dihasilkan gempa,” ujar dosen Departemen Teknik Sipil Fakultas Teknik Universitas Indonesia (FTUI), Nuraziz Handika.</p>"
+    },
+    "group": "section-6",
+    "groupClassName": "overflow-clip",
+    "order": 15,
+    "groupTitle": "Pentingnya Rumah Tahan Gempa"
+  },
+  {
+    "index": 2,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-6",
+    "groupClassName": "overflow-clip",
+    "order": 16,
+    "componentCustomName": "SectionFiveCustomImage",
+    "groupTitle": "Pentingnya Rumah Tahan Gempa"
+  },
+  {
+    "index": 3,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>Nuraziz mengatakan, kualitas bahan bangunan, pendetailan pembesian, serta sambungan dinding, kolom, dan balok, menjadi biang utama penyebab keruntuhan bangunan, fasilitas umum, rumah tinggal, hingga bangunan sederhana lainnya. Ia menerangkan, ada banyak aspek yang perlu diperhatikan kontraktor untuk mendirikan bangunan tahan gempa sesuai standar. Mulai dari sambungan, pemilihan dan persiapan material sebelum digunakan, pendetailan pekerjaan penulangan, pengangkuran dinding ke kolom, hingga pendetailan penulangan balok kolom.</p><p></p><p>“Sebagai contoh, diperlukan panjang pengangkuran yang sesuai pada sambungan antara kolom dan balok sloof. Penulangan kolom pada bagian atas dan bawah atau fondasi kolom sebaiknya dilebihkan dari besar minimal 40 kali diameternya,” jelas Nuraziz.<br></p><p>Standar yang dimaksud Nuraziz ialah Standar Nasional Indonesia (SNI) yang dikeluarkan oleh Kementerian Pekerjaan Umum dan Perumahan Rakyat (PUPR) RI. Dia sempat memberikan contoh perhitungan besi pengangkuran kolom dan dinding bata.&nbsp;<br></p><p>Jika diameter penulangan 10 milimeter, maka panjang minimal pengangkuran 40 sentimeter ke arah kanan dan ke kiri dari sudut bangunan. Pengangkuran itu diaplikasikan setiap enam lapis bata. Lalu, besi angkur dicor pada lapis bata sebagai pengikat kolom dengan dinding agar sambungan atau angkur sesuai standar Kementerian Pekerjaan Umum dan Perumahan Rakyat Republik Indonesia.</p><p></p><p>Prinsip yang sama berlaku untuk sambungan pada sopi-sopi atau atap maupun sudut dinding. Kata Nuraziz, perlu pengangkuran yang tepat untuk kolom di tengah dinding yang terhubung pada segitiga pelana atap dan kolom yang bertemu sudut dinding.</p><p></p><p>Di samping itu, masih ada beberapa persyaratan pokok yang harus dipenuhi kontraktor untuk menciptakan rumah tahan gempa, di antaranya: kualitas bahan bangunan baik, keberadaan dimensi struktur sesuai, sambungan elemen struktur utama baik, dan mutu pekerjaan yang baik.</p><p></p><p>“Perlu diperhatikan bahwa pekerjaan ini tidak terlihat kasat mata dan baru akan teruji ketika gempa terjadi. Oleh karena itu, patuhilah proses dan standar dalam pembuatan bangunan untuk menjaga keselamatan kita bersama,” tutup Nuraziz.</p><p></p><p>Saat ini, pemerintah Indonesia juga memiliki rumah tahan gempa berstandar SNI, namanya Rumah Instan Sederhana Sehat (RISHA). Rumah ini telah dibangun sejak 2004 dan dikembangkan oleh Balai Penelitian dan Pengembangan Kementerian PUPR. Bangunan ini menahan gempa hingga 8 skala Richter. Interior dan eksteriornya terbuat dari anyaman bambu atau kayu lapis.</p><p><br>Rumah Pintar RISHA memiliki 5 komponen, yaitu pondasi, struktural RISHA, utilitas, nonstruktural, dan komponen atap. Rumah ini punya banyak keunggulan, antara lain: pembangunannya cepat, harganya terjangkau, serta <em>moveable</em> atau <em>knock down</em>, sehingga memudahkan penghuni bila ingin pindah, cukup dengan membongkar lalu memasangnya kembali.</p>"
+    },
+    "group": "section-6",
+    "groupClassName": "overflow-clip",
+    "order": 17,
+    "groupTitle": "Pentingnya Rumah Tahan Gempa"
+  }
+]

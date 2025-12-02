@@ -1,0 +1,105 @@
+[
+  {
+    "index": 1,
+    "component": 1,
+    "componentProps": {
+      "title": "Membangun IKN, Mewujudkan Wacana Lama Indonesia",
+      "coverUrl": "/assets/membangun-ikn-mewujudkan-wacana-lama-indonesia/upload-1763096942988.webp",
+      "gradientColor": "bg-linear-to-t from-[#bfc1cc] to-40%"
+    },
+    "group": "section-1",
+    "groupClassName": "",
+    "order": 0,
+    "groupTitle": "Membangun IKN, Mewujudkan Wacana Lama Indonesia"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-1",
+    "groupClassName": "",
+    "order": 1,
+    "componentCustomName": "SectionOne",
+    "groupTitle": "Membangun IKN, Mewujudkan Wacana Lama Indonesia"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-2",
+    "groupClassName": "",
+    "order": 2,
+    "componentCustomName": "SectionTwo",
+    "groupTitle": "Pindah Ibu Kota sejak Baru Merdeka"
+  },
+  {
+    "index": 1,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-2",
+    "groupClassName": "",
+    "order": 3,
+    "componentCustomName": "IllustrationJakarta",
+    "groupTitle": "Pindah Ibu Kota sejak Baru Merdeka"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-3",
+    "groupClassName": "",
+    "order": 4,
+    "componentCustomName": "SectionThree",
+    "groupTitle": "Pindah ke Palangkaraya, Ide Bung Karno atau Semaun?"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-4",
+    "groupClassName": "",
+    "order": 5,
+    "componentCustomName": "SectionFour",
+    "groupTitle": "Pindah ke Jonggol, Wacana Era Orde Baru"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-5",
+    "groupClassName": "",
+    "order": 6,
+    "componentCustomName": "SectionFive",
+    "groupTitle": "Tersandung Anggaran"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-6",
+    "groupClassName": "",
+    "order": 7,
+    "componentCustomName": "SectionSix",
+    "groupTitle": "Mewujudkan Wacana Lama"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-7",
+    "groupClassName": "",
+    "order": 8,
+    "componentCustomName": "SectionSeven",
+    "groupTitle": "Belajar dari Negara Lain"
+  },
+  {
+    "index": 0,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-8",
+    "groupClassName": "",
+    "order": 9,
+    "componentCustomName": "SectionEight",
+    "groupTitle": "Peluang dan Tantangan IKN"
+  }
+]
