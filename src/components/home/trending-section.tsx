@@ -42,7 +42,7 @@ export function TrendingSection({ posts }: TrendingSectionProps) {
               className="group"
             >
               <Link to="/$slug" params={{ slug: post.slug }} className="block h-full">
-                <div className="relative aspect-4/3 rounded-2xl overflow-hidden mb-4">
+                <div className="relative aspect-video rounded-2xl overflow-hidden mb-4">
                   <img
                     src={post.image}
                     alt={post.title}
