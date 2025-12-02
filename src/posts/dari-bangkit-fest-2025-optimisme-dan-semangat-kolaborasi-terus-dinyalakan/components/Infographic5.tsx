@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Calendar, User, Briefcase } from "lucide-react";
 
 const ASSETS_PATH =
   "/assets/dari-bangkit-fest-2025-optimisme-dan-semangat-kolaborasi-terus-dinyalakan";
@@ -78,86 +79,86 @@ const leaders = [
 
 export default function Infographic5() {
   return (
-    <div className="relative flex flex-col items-center overflow-hidden bg-white min-h-screen">
-      <div className="relative w-full max-w-4xl mx-auto px-4 py-12 md:py-20">
-        {/* Title */}
+    <div className="relative flex flex-col items-center overflow-hidden bg-slate-50 min-h-screen font-sora">
+      {/* Background Decoration */}
+      <div className="absolute top-0 inset-x-0 h-96 bg-linear-to-b from-blue-100/40 to-transparent pointer-events-none" />
+
+      <div className="relative w-full max-w-6xl mx-auto px-4 py-16 md:py-24 lg:mb-12">
+        {/* Header Section */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-center mb-8 md:mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="font-sora text-[#000E4F] font-bold text-2xl md:text-[44px] md:leading-tight leading-snug">
-            Deretan Kepala Daerah
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF6B35]/10 text-[#FF6B35] text-sm font-bold mb-6 border border-[#FF6B35]/20">
+            <User className="w-4 h-4" />
+            <span>INFOGRAFIS PILKADA</span>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-extrabold text-[#000E4F] leading-tight mb-4">
+            Deretan Kepala Daerah <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#FF6B35] to-[#FF9F43]">
+              Termuda
+            </span>{" "}
+            Periode 2025-2030
           </h2>
-          <h2 className="font-sora text-[#000E4F] font-bold text-2xl md:text-[44px] md:leading-tight leading-snug">
-            Termuda Periode 2025-2023
-          </h2>
+          <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+            Mengenal wajah-wajah pemimpin muda yang siap membawa energi baru dan inovasi untuk daerahnya.
+          </p>
         </motion.div>
 
-        {/* Table Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="grid grid-cols-[1.1fr_1.2fr_0.7fr_1fr] gap-2 md:gap-4 text-[#1E88E5] font-sora font-semibold text-xs md:text-sm mb-2 px-2"
-        >
-          <div className="pl-16 md:pl-17">Nama Lengkap</div>
-          <div className="text-center">Tanggal Lahir</div>
-          <div className="text-center">Usia Saat Dilantik</div>
-          <div className="text-right pr-2">Jabatan</div>
-        </motion.div>
-
-        {/* Table Rows */}
-        <div className="flex flex-col gap-1.5 md:gap-2">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
           {leaders.map((leader, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.5,
                 ease: "easeOut",
-                delay: index * 0.08,
+                delay: index * 0.1,
               }}
               viewport={{ once: true }}
-              className="grid grid-cols-[1.1fr_1.2fr_0.7fr_1fr] gap-2 md:gap-4 items-center bg-[#FF6B35] rounded-lg py-2 md:py-3 px-2"
+              className="group relative bg-white rounded-2xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden"
             >
-              {/* Name with Avatar */}
-              <div className="flex items-center gap-2 md:gap-3">
-                <div className="w-10 h-10 md:w-14 md:h-14 rounded-full overflow-hidden bg-white shrink-0 border-2 border-white">
-                  <img
-                    src={`${ASSETS_PATH}/5/${leader.image}`}
-                    alt={leader.name}
-                    className="w-full h-full object-cover"
-                  />
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Briefcase className="w-24 h-24 text-[#000E4F] -rotate-12 transform translate-x-8 -translate-y-8" />
+              </div>
+
+              <div className="flex items-start gap-5 relative z-10">
+                {/* Avatar Section */}
+                <div className="relative shrink-0">
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden shadow-md border-2 border-white group-hover:scale-105 transition-transform duration-500 bg-slate-100">
+                    <img
+                      src={`${ASSETS_PATH}/5/${leader.image}`}
+                      alt={leader.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#000E4F] text-white text-[10px] md:text-xs font-bold py-1 px-3 rounded-full shadow-lg whitespace-nowrap border-2 border-white">
+                    {leader.age}
+                  </div>
                 </div>
-                <span className="font-sora text-white font-semibold text-[10px] md:text-sm leading-tight">
-                  {leader.name}
-                </span>
-              </div>
 
-              {/* Birth Date */}
-              <div className="bg-[#1E88E5] rounded-md py-1.5 md:py-2 px-2 md:px-4 text-center">
-                <span className="font-sora text-white text-[10px] md:text-sm">
-                  {leader.birthDate}
-                </span>
-              </div>
+                {/* Content Section */}
+                <div className="flex-1 pt-1">
+                  <h3 className="text-lg md:text-xl font-bold text-[#000E4F] mb-1 leading-snug group-hover:text-[#1E88E5] transition-colors">
+                    {leader.name}
+                  </h3>
 
-              {/* Age */}
-              <div className="bg-[#000E4F] rounded-md py-1.5 md:py-2 px-2 md:px-4 text-center">
-                <span className="font-sora text-white font-semibold text-[10px] md:text-sm">
-                  {leader.age}
-                </span>
-              </div>
+                  <div className="flex items-center gap-2 text-[#FF6B35] font-semibold text-sm mb-3">
+                    <Briefcase className="w-4 h-4" />
+                    <span>{leader.position}</span>
+                  </div>
 
-              {/* Position */}
-              <div className="text-right pr-1 md:pr-2">
-                <span className="font-sora text-white font-semibold text-[10px] md:text-sm leading-tight">
-                  {leader.position}
-                </span>
+                  <div className="flex items-center gap-2 text-slate-500 text-xs md:text-sm bg-slate-50 w-fit px-3 py-1.5 rounded-lg">
+                    <Calendar className="w-3.5 h-3.5" />
+                    <span>Lahir: {leader.birthDate}</span>
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -167,23 +168,22 @@ export default function Infographic5() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          className="mt-8 text-left"
+          className="mt-12 text-center border-t border-slate-200 pt-8"
         >
-          <p className="font-sora text-gray-600 text-xs md:text-sm">
-            <span className="font-semibold">Sumber:</span> Info Pilkada via
-            Goodstats
+          <p className="font-sora text-slate-500 text-sm">
+            <span className="font-bold text-[#000E4F]">Sumber:</span> Info Pilkada via Goodstats
           </p>
         </motion.div>
       </div>
 
-      {/* Footer */}
-      <div className="absolute bottom-0 flex items-center justify-center w-full">
+      {/* Footer Image */}
+      <div className="w-full mt-auto hidden lg:block absolute bottom-12 z-20">
         <img
           src={`${ASSETS_PATH}/footer.png`}
           alt="GNFI Insight"
-          className="z-50 hidden sm:block bottom-0 object-cover h-40 overflow-clip w-full max-w-4xl mx-auto"
+          className="w-full max-w-4xl mx-auto object-contain h-auto invert"
         />
       </div>
     </div>

@@ -47,7 +47,7 @@ export default function Infographic4() {
         className="absolute top-0 right-0 w-[35%] md:w-[28%] z-0"
       />
 
-      <div className="relative w-full justify-center px-4 lg:px-0 z-10">
+      <div className="relative w-full justify-center z-10">
         <div className="relative mx-auto max-w-4xl pt-12 md:pt-20 lg:pt-24">
           {/* Title */}
           <motion.div
@@ -55,7 +55,7 @@ export default function Infographic4() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="text-center mb-8 md:mb-12"
+            className="text-center mb-8 md:mb-12 px-4 lg:px-0 "
           >
             <h2 className="font-sora text-white font-bold text-2xl md:text-[52px] md:leading-tight leading-snug">
               Indeks Optimisme 2025
@@ -66,22 +66,22 @@ export default function Infographic4() {
           </motion.div>
 
           {/* Row 1: 46-55 tahun & 56 tahun+ */}
-          <div className="grid grid-cols-2 gap-3 md:gap-4 mb-3 md:mb-4 px-2 lg:mt-48 mt-30">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-3 md:gap-4 mb-3 md:mb-4 lg:mt-48 mt-24 md:mt-24 px-6 lg:px-0 ">
             {/* 46-55 tahun - 6,21 (old man) */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
               viewport={{ once: true }}
-              className="relative bg-[#ff4d0d] h-48 rounded-tl-full "
+              className="relative bg-[#ff4d0d] h-32 md:h-48 rounded-tl-full "
             >
               <img
                 src={`${ASSETS_PATH}/4/old-men-people.png`}
                 alt="46-55 tahun"
-                className="w-[60%] h-full object-cover object-bottom absolute left-0 bottom-0 overflow-y-visible"
+                className="w-1/2 lg:w-[60%] h-full object-cover object-bottom absolute left-0 bottom-0 overflow-y-visible"
               />
               <div className="px-2 md:px-4 py-1.5 md:py-3 w-full h-full flex items-center relative bottom-0">
-                <div className="absolute right-6">
+                <div className="absolute right-6 top-6">
                   <p className="font-sora text-white text-lg md:text-3xl font-medium text-right">
                     46-55 tahun
                   </p>
@@ -99,7 +99,7 @@ export default function Infographic4() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative bg-[#ff4d0d] h-48 rounded-tl-full "
+              className="relative bg-[#ff4d0d] h-32 md:h-48 rounded-tl-full "
             >
               <img
                 src={`${ASSETS_PATH}/4/old-woman-people.png`}
@@ -107,7 +107,7 @@ export default function Infographic4() {
                 className="w-[60%] h-full object-cover object-bottom absolute left-0 bottom-0 overflow-y-visible"
               />
               <div className="px-2 md:px-4 py-1.5 md:py-3 w-full h-full flex items-center relative bottom-0">
-                <div className="absolute right-6">
+                <div className="absolute right-6 top-6">
                   <p className="font-sora text-white text-lg md:text-3xl font-medium text-right">
                     56 tahun +
                   </p>
@@ -121,30 +121,30 @@ export default function Infographic4() {
           </div>
 
           {/* Row 2: 36-45, 26-36, 17-25 tahun */}
-          <div className="flex flex-col lg:flex-row items-end gap-2 md:gap-3 mb-3 md:mb-4 px-2 lg:mt-12 mt-8">
+          <div className="flex flex-col lg:flex-row items-end gap-4 md:gap-3 mb-3 md:mb-4 lg:mt-12 mt-8 px-6 lg:px-0 ">
             {/* 36-45 tahun - 5,77 (woman) */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
               viewport={{ once: true }}
-              className="relative flex-1"
+              className="relative w-full lg:flex-1"
             >
-              <div className="relative rounded-xl">
+              <div className="relative rounded-xl overflow-hidden">
                 <img
                   src={`${ASSETS_PATH}/4/man.png`}
                   alt="36-45 tahun"
-                  className="w-full absolute h-full object-cover z-10 overflow-y-clip object-bottom"
+                  className="w-fit right-0 lg:right-auto lg:w-full absolute h-full bottom-0 object-cover z-10 lg:object-bottom"
                 />
                 <div className="absolute z-10 top-0 inset-0 bg-linear-to-t rounded-tl-full from-white to-80% bottom-0" />
-                <div className="bg-white top-0 inset-0 relative h-130 rounded-tl-full"></div>
+                <div className="bg-white top-0 inset-0 relative h-112 md:h-96 lg:h-130 rounded-tl-full"></div>
                 <div className="absolute z-20 bottom-4 left-0 right-0">
-                  <p className="font-sora text-[#ff4d0d] text-center font-medium text-lg md:text-3xl">
+                  <p className="font-sora text-[#ff4d0d] text-center font-medium text-2xl md:text-3xl">
                     36-45 tahun
                   </p>
                   <AnimatedNumber
                     value={5.77}
-                    className="font-sora text-[#ff4d0d] text-center font-extrabold text-5xl md:text-8xl block"
+                    className="font-sora text-[#ff4d0d] text-center font-extrabold text-7xl md:text-8xl block"
                   />
                 </div>
               </div>
@@ -156,23 +156,23 @@ export default function Infographic4() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
               viewport={{ once: true }}
-              className="relative flex-1"
+              className="relative w-full lg:flex-1"
             >
-              <div className="relative rounded-xl">
+              <div className="relative rounded-xl overflow-hidden">
                 <img
                   src={`${ASSETS_PATH}/4/woman.png`}
                   alt="26-36 tahun"
-                  className="w-full h-full object-cover z-10 absolute overflow-y-clip object-bottom"
+                  className="w-fit right-0 lg:right-auto lg:w-full absolute h-full bottom-0 object-cover z-10 object-bottom"
                 />
                 <div className="absolute z-10 top-0 inset-0 bg-linear-to-t rounded-tl-full from-white to-80% bottom-0" />
-                <div className="bg-white top-0 inset-0 h-130 relative rounded-tl-full"></div>
+                <div className="bg-white top-0 inset-0 relative h-[28rem] md:h-96 lg:h-130 rounded-tl-full"></div>
                 <div className="absolute z-20 bottom-4 left-0 right-0">
-                  <p className="font-sora text-[#ff4d0d] text-center font-medium text-lg md:text-3xl">
+                  <p className="font-sora text-[#ff4d0d] text-center font-medium text-2xl md:text-3xl">
                     26-36 tahun
                   </p>
                   <AnimatedNumber
                     value={5.63}
-                    className="font-sora text-[#ff4d0d] text-center font-extrabold text-5xl md:text-8xl block"
+                    className="font-sora text-[#ff4d0d] text-center font-extrabold text-7xl md:text-8xl block"
                   />
                 </div>
               </div>
@@ -184,23 +184,23 @@ export default function Infographic4() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
               viewport={{ once: true }}
-              className="relative flex-1"
+              className="relative w-full lg:flex-1"
             >
-              <div className="relative rounded-xl">
+              <div className="relative rounded-xl overflow-hidden">
                 <img
                   src={`${ASSETS_PATH}/4/teenagers.png`}
                   alt="17-25 tahun"
-                  className="w-full h-full object-cover absolute z-10 overflow-y-clip object-bottom"
+                  className="w-fit right-0 lg:right-auto lg:w-full absolute h-full bottom-0 object-cover z-10 object-bottom"
                 />
                 <div className="absolute z-10 top-0 inset-0 bg-linear-to-t rounded-tl-full from-white to-80% bottom-0" />
-                <div className="bg-white top-0 inset-0 h-130 relative rounded-tl-full"></div>
+                <div className="bg-white top-0 inset-0 relative h-[28rem] md:h-96 lg:h-130 rounded-tl-full"></div>
                 <div className="absolute z-20 bottom-4 left-0 right-0">
-                  <p className="font-sora text-[#ff4d0d] text-center font-medium text-lg md:text-3xl">
+                  <p className="font-sora text-[#ff4d0d] text-center font-medium text-2xl md:text-3xl">
                     17-25 tahun
                   </p>
                   <AnimatedNumber
                     value={5.45}
-                    className="font-sora text-[#ff4d0d] text-center font-extrabold text-5xl md:text-8xl block"
+                    className="font-sora text-[#ff4d0d] text-center font-extrabold text-7xl md:text-8xl block"
                   />
                 </div>
               </div>
@@ -213,7 +213,7 @@ export default function Infographic4() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
             viewport={{ once: true }}
-            className="px-2 relative pt-12"
+            className="lg:px-2 relative pt-12"
           >
             <img
               src={`${ASSETS_PATH}/4/group-of-peoples.png`}
