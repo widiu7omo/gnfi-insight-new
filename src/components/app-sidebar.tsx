@@ -94,15 +94,16 @@ function generateItems(posts: {
   title: string;
   description: string;
   image: string;
+  finished?: boolean;
 }[]): PostType[] {
   return posts.map(post => ({
     name: post.title,
     url: '/builder/' + post.slug,
-    emoji: '🔄'
+    emoji: post.finished ? '✅' : '🔄'
   }))
 }
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  const { posts } = useLoaderData({ from: '/builder' })
+  const { finishedPosts, unfinishedPosts } = useLoaderData({ from: '/builder' })
   return (
     <Sidebar className="border-r-0" {...props}>
       <SidebarHeader>
@@ -110,8 +111,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavMain items={data.navMain} />
       </SidebarHeader>
       <SidebarContent>
-        <NavWip items={generateItems(posts)} />
-        <NavFinished items={[]} />
+        <NavWip items={generateItems(unfinishedPosts)} />
+        <NavFinished items={generateItems(finishedPosts)} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarRail />

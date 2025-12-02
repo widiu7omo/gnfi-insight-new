@@ -17,7 +17,7 @@ import { useInfiniteQuery } from '@tanstack/react-query'
 export const Route = createFileRoute('/')({
   component: HomePage,
   loader: async () => {
-    const result = await $getAllPosts({ data: { offset: 0, limit: 10 } })
+    const result = await $getAllPosts({ data: { offset: 0, limit: 10, finished: true } })
     return { posts: result.posts, meta: result.meta }
   }
 })

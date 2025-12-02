@@ -98,31 +98,48 @@ export const $getPostBySlug = createServerFn()
         }
     })
 
+export const getAllPostsHandler = async ({ data }: { data: { offset?: number, limit?: number, finished?: boolean } }) => {
+    const offset = data.offset ?? 0;
+    const limit = data.limit ?? 10;
+    const finished = data.finished ?? true;
+
+    const allPosts = Array.from(metaBySlug.entries()).map(([slug, meta]) => ({
+        slug,
+        title: meta?.seo?.title || meta?.title || slug,
+        description: meta?.seo?.desc || '',
+        image: meta?.seo?.image || '',
+        finished: meta?.finished,
+        featured: meta?.featured,
+        publishedAt: meta?.seo?.publishedAt
+    }))
+        .filter(post => post.title && (finished ? post.finished : true))
+        .sort((a, b) => {
+            // Sort by featured first (true comes before false)
+            if (a.featured && !b.featured) return -1;
+            if (!a.featured && b.featured) return 1;
+
+            // Then sort by publishedAt
+            const dateA = new Date(a.publishedAt || 0).getTime();
+            const dateB = new Date(b.publishedAt || 0).getTime();
+            return dateB - dateA;
+        });
+
+    const totalPosts = allPosts.length;
+    const endIndex = offset + limit;
+    const posts = allPosts.slice(offset, endIndex);
+    const hasMore = endIndex < totalPosts;
+
+    return {
+        posts,
+        meta: {
+            offset,
+            limit,
+            totalPosts,
+            hasMore,
+        }
+    };
+};
+
 export const $getAllPosts = createServerFn()
-    .inputValidator((data: { offset?: number, limit?: number }) => data)
-    .handler(({ data }) => {
-        const offset = data.offset ?? 0;
-        const limit = data.limit ?? 10;
-
-        const allPosts = Array.from(metaBySlug.entries()).map(([slug, meta]) => ({
-            slug,
-            title: meta?.seo?.title || meta?.title || slug,
-            description: meta?.seo?.desc || '',
-            image: meta?.seo?.image || '',
-        })).filter(post => post.title);
-
-        const totalPosts = allPosts.length;
-        const endIndex = offset + limit;
-        const posts = allPosts.slice(offset, endIndex);
-        const hasMore = endIndex < totalPosts;
-
-        return {
-            posts,
-            meta: {
-                offset,
-                limit,
-                totalPosts,
-                hasMore,
-            }
-        };
-    })
+    .inputValidator((data: { offset?: number, limit?: number, finished?: boolean }) => data)
+    .handler(getAllPostsHandler)

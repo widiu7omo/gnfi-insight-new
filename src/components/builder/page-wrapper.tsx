@@ -20,6 +20,7 @@ import Preview from "./preview";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import FormAttributes from "./form-attributes";
+import FormMisc from "./form-misc";
 export type PageWrapperType = {
     initBlocks: DraggableItem[];
     initMetadata: {
@@ -200,6 +201,9 @@ export default function PageWrapper({ initBlocks, initMetadata }: PageWrapperTyp
                                                 <TabsTrigger value="attributes">
                                                     Attributes
                                                 </TabsTrigger>
+                                                <TabsTrigger value="misc">
+                                                    Misc
+                                                </TabsTrigger>
                                             </TabsList>
                                             <TabsContent value="metadata">
                                                 <div className="mb-2 space-y-0">
@@ -210,6 +214,9 @@ export default function PageWrapper({ initBlocks, initMetadata }: PageWrapperTyp
                                             </TabsContent>
                                             <TabsContent value="attributes">
                                                 <FormAttributes metadata={initMetadata} />
+                                            </TabsContent>
+                                            <TabsContent value="misc">
+                                                <FormMisc metadata={initMetadata} />
                                             </TabsContent>
                                         </Tabs>
                                     </PopoverContent>

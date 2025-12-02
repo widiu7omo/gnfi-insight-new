@@ -11,7 +11,9 @@ export const Route = createFileRoute('/api/generate-content')({
             title?: string
             content?: Record<string, unknown>
             seo?: Record<string, unknown>,
-            credits?:Record<string, unknown>
+            credits?: Record<string, unknown>,
+            finished?: boolean,
+            featured?: boolean
           }
           if (!body.title || !body.content) {
             return json(
@@ -25,6 +27,8 @@ export const Route = createFileRoute('/api/generate-content')({
           const seo = body.seo
           const credits = body.credits as Credits
           const content = body.content
+          const finished = body.finished
+          const featured = body.featured
 
           // Check if we have filesystem access (Node/Bun)
           const hasFilesystem = typeof process !== 'undefined' && process.cwd
@@ -60,7 +64,7 @@ export const Route = createFileRoute('/api/generate-content')({
           const metaPath = path.join(dataDir, 'generated-meta.json')
           await fs.writeFile(
             metaPath,
-            JSON.stringify({ seo, title, slug, credits }, null, 2)
+            JSON.stringify({ seo, title, slug, credits, finished, featured }, null, 2)
           )
           // Comment this below, since image directly used from meta.json
           

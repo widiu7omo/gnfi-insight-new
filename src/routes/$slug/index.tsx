@@ -20,6 +20,8 @@ export type PostMeta = {
     credits: Credits;
     title?: string;
     slug?: string;
+    finished?: boolean;
+    featured?: boolean;
 };
 export type PostData = BlockType[];
 
