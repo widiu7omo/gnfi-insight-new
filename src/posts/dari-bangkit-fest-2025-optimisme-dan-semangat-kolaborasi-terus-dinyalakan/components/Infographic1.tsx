@@ -15,8 +15,8 @@ const MAX = 6.7;
 export default function Infographic1() {
   return (
     <div className="relative flex flex-col items-center overflow-hidden bg-[#1156BA]">
-      <div className="absolute h-30 bg-linear-to-b from-[#f6f0fa] z-20 w-full inset-x-0 top-0"></div>
-      <div className="absolute h-30 bg-linear-to-t from-[#d9dcf2] z-40 w-full inset-x-0 bottom-0"></div>
+      <div className="absolute h-full bg-linear-to-b from-[#000e4f] z-20 w-full inset-x-0 top-0"></div>
+      <div className="absolute h-full bg-linear-to-t to-30% from-[#000e4f] z-40 w-full inset-x-0 bottom-0"></div>
       <div
         className="relative w-full justify-center lg:px-0 px-4"
       >
@@ -27,10 +27,10 @@ export default function Infographic1() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
             src="/assets/dari-bangkit-fest-2025-optimisme-dan-semangat-kolaborasi-terus-dinyalakan/1.1.png"
-            className="absolute z-0 bottom-0 -right-[10%] w-[85%]"
+            className="absolute z-20 bottom-0 -right-[10%] w-[85%]"
             alt="bendera"
           />
-          <div className="relative z-10">
+          <div className="relative z-40">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}

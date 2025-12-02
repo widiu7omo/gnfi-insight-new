@@ -17,7 +17,8 @@
     "component": 3,
     "componentProps": {
       "children": "<p>&quot;Orang kalau ditanya apakah kamu optimis atau pesimis, jawabannya adalah optimis. Walaupun dalam hati mereka <em>nggak</em> tahu ceritanya seperti apa,&quot; </p>\n<p>Itulah ucapan yang disampaikan oleh CEO Good News From Indonesia (GNFI), Wahyu Aji, saat membuka Bangkit Fest 2025 di Mangkuluhur ARTOTEL Suites, Jakarta, Senin (17/11/2025).</p>\n<p>Wahyu Aji menyebut hal demikian sebagai &quot;bias positif&quot;, yaitu ketika masyarakat cenderung menjawab optimis ketika ditanya tentang masa depan tanpa konteks yang jelas terperinci.</p>\n<p>Ia menyinggung soal bias positif ini sebagai respons atas Survei Indeks Optimisme Indonesia yang dilakukan GoodStats. Dari hasil survei terbaru yang dirilis pada Agustus 2025, terlihat adanya sebuah perubahan tren terkait optimisme masyarakat Indonesia.</p>\n<p>Tren yang dimaksud adalah mulai anjloknya lagi rasa optimisme. Pada 2009, sebuah survei terhadap 3700 anak muda di bawah 30 tahun mencatat 83.5% responden menyatakan pesimis terhadap masa depan Indonesia. Diduga kuat, penyebabnya yakni banyaknya berita-berita negatif seputar negeri ini yang meramaikan halaman media massa.</p>\n<p>GNFI kemudian lahir sebagai sebagai wadah untuk menyebarkan berita dan narasi positif. Seiring dengan semakin dikenalnya GNFI, tren pesimisme berbalik menjadi optimisme sejak 2018 hingga 2023. Memasuki 2025, optimisme yang sempat berkobar itu pun terlihat meredup kembali di tengah berbagai ketidakpastian yang dihadapi, mulai dari banyaknya pemutusan hubungan kerja (PHK), hingga gejolak politik dalam negeri.</p>\n<p>Survei Indeks Optimisme Indonesia pada 2025 ini menghadirkan metodologi yang diperbarui berupa penambahan konteks spesifik di berbagai bidang. Hasilnya, indeks optimisme yang tadinya selalu di atas 6 melorot ke angka 5.51.</p>\n<p>&quot;Entah karena pertanyaan kita ubah, kasih konteks, atau kondisi. Ternyata 2025 itu turun drastis,&quot; tambah Wahyu Aji.</p>",
-      "className": "text-lg leading-relaxed mb-6"
+      "className": "text-lg leading-relaxed text-white",
+      "containerClassName": "bg-[#000e4f]"
     },
     "group": "section-1",
     "order": 1
@@ -35,7 +36,8 @@
     "component": 3,
     "componentProps": {
       "children": "<p>Sebagai media yang mengusung misi mengembalikan optimisme dan membangun kepercayaan diri masyarakat Indonesia, GNFI tergerak untuk menyelenggarakan Bangkit Fest 2025. Tak sendirian, GNFI juga menggandeng konsultan marketing terintegrasi yang berfokus pada kolaborasi dan isu sosial, Gema Worldwide.</p>\n<p>Bangkit Fest 2025 hadir sebagai <em>melting pot</em> yang mempertemukan para pemimpin, ahli, perusahaan, anak muda, dan orang-orang progresif lainnya untuk saling terkoneksi, berdiskusi, dan menimbang optimisme bersama lewat kolaborasi. Di tengah segala ketidakpastian yang masih membelit, Bangkit Fest 2025 mengajak kita semua untuk melihat bahwa selalu ada harapan untuk membuat negeri ini jadi lebih baik lagi.      </p>\n<p>Perlu digarisbawahi, semangat optimisme yang dibawa Bangkit Fest 2025 bukan sebatas jargon, melainkan sesuatu yang realistis untuk digapai bersama. Sebab, Indonesia punya modal penting untuk membangun optimisme itu, salah satunya potensi besar di bidang kebudayaan. Apalagi, kebudayaan adalah dimensi yang memiliki skor tertinggi di Indeks Optimisme Indonesia 2025 dengan angka 6,75.</p>\n<p>Wakil Menteri Kebudayaan RI, Giring Ganesha, yang menjadi pembicara kunci di Bangkit Fest 2025 menyebut Indonesia sebagai negara adidaya di bidang kebudayaan. Pada era era digital di, mana demokratisasi akses telah terjadi, masyarakat punya kesempatan besar untuk membawa Indonesia mendunia lewat kebudayaan, misalnya musik.</p>\n<p>&quot;Semua orang punya kesempatan yang sama. Kalau dulu saya pernah ditolak label, tapi kalau sekarang mereka gak butuh lagi label,&quot; kata Giring.</p>\n<p>Giring menyebut beberapa contoh produk budaya Indonesia yang telah mengharumkan nama negeri ini di kancah dunia, di antaranya lagu &quot;Tabola Bale&quot; dan film <em>Abadi Nan Jaya</em>. Keduanya bisa populer hingga ke luar negeri berkat platform digital hingga terjadilah fenomena saat Indonesia disebut menjadi &quot;<em>trigger country of the world</em>&quot;.</p>\n<p>&quot;Sekarang adalah momentumnya bahwa kita harus semakin semangat dan nggak usah malu-malu lagi untuk memperkenalkan budaya kita,&quot; seru Giring.</p>\n<p>Tentu saja, kebudayaan bukan satu-satunya jalan. Bidang-bidang lain seperti pendidikan, ekonomi kreatif, dan politik pun tak kalah penting untuk dimaksimalkan potensinya demi Indonesia yang maju dengan masyarakatnya yang penuh optimisme.</p>",
-      "className": "text-lg leading-relaxed mb-6"
+      "className": "text-lg leading-relaxed text-white",
+      "containerClassName": "bg-[#000e4f]"
     },
     "group": "section-1",
     "order": 3
@@ -44,8 +46,8 @@
     "index": 0,
     "component": 4,
     "componentProps": {
-      "title": "Menyiapkan SDM Unggul Lewat Pendidikan: Beasiswa dan Kultur, Sama-sama Penting\\!",
-      "className": "text-black h-[20rem]"
+      "title": "Menyiapkan SDM Unggul Lewat Pendidikan: Beasiswa dan Kultur, Sama-sama Penting!",
+      "className": "text-black h-[20rem] bg-[#ffffff]"
     },
     "group": "section-2",
     "groupClassName": "py-16",
@@ -57,7 +59,8 @@
     "component": 3,
     "componentProps": {
       "children": "<p>Menyambut masa depan, Indonesia melakukan berbagai cara untuk membangun Sumber Daya Manusia (SDM)-nya. Salah satunya lewat pendidikan. Aneka inisiatif pun dijalankan, salah satunya dengan meluncurkan beasiswa Lembaga Pengelola Dana Pendidikan alias LPDP.</p>\n<p>Berdiri sejak 2013, LPDP secara rutin mengirim putra-putri Indonesia untuk kuliah di universitas-universitas terbaik di dalam dan luar negeri. Dari atas panggung Bangkit Fest 2025, Direktur Utama LPDP, Dwi Larso, menyampaikan bahwa LPDP kini juga terus berkembang. Sejak 2021 misalnya, LPDP mulai fokus kepada bidang-bidang yang menjadi prioritas. </p>",
-      "className": "text-lg leading-relaxed mb-6"
+      "className": "text-lg leading-relaxed",
+      "containerClassName": "bg-[#ffffff]"
     },
     "group": "section-2",
     "order": 5
@@ -85,7 +88,7 @@
     "component": 4,
     "componentProps": {
       "title": "Ekonomi Kreatif, Penggerak Kemajuan Bangsa",
-      "className": "text-black h-[20rem]"
+      "className": "text-white h-[20rem] bg-[#000e4f]"
     },
     "group": "section-3",
     "groupClassName": "py-16",
@@ -97,7 +100,8 @@
     "component": 3,
     "componentProps": {
       "children": "<p>Pada sesi diskusi panel pertama Bangkit Fest 2025, Dwi sempat sedikit menyinggung soal ekonomi kreatif yang diproyeksikan sebagai industri tempat akan berkiprahnya para alumni LPDP. Memangnya, seberapa penting ekonomi kreatif bagi Indonesia?</p>\n<p>Paparan Wakil Menteri Ekonomi Kreatif Republik Indonesia, Irene Umar, dalam sesi diskusi panel kedua yang mengusung tema &quot;<em>Creative Economy: Collaboration Where Everyone Wins</em>&quot; bisa menjawab hal itu. Ia mengungkap bahwa ekonomi kreatif memiliki potensi yang luar biasa.</p>\n<p>&quot;Kita melihat ekonomi kreatif ini adalah <em>the new oil, the new engine of growth for any economy</em>,&quot; ujar Irene.</p>\n<p>Ucapan Irene tentu bukan klaim kosong. Faktanya, ekonomi kreatif memang punya posisi penting dalam perekonomian Indonesia. Sumbangannya untuk Produk Domestik Bruto (PDB) nasional tak bisa diremehkan. Lapangan kerja juga banyak terbuka.</p>",
-      "className": "text-lg leading-relaxed mb-6"
+      "className": "text-lg leading-relaxed text-white",
+      "containerClassName": "bg-[#000e4f]"
     },
     "group": "section-3",
     "order": 9
@@ -115,7 +119,8 @@
     "component": 3,
     "componentProps": {
       "children": "<p>Tak heran apabila Indonesia menjadikan ekonomi kreatif sebagai andalan. Negeri ini memang dianugerahi insan-insan kreatif yang berlimpah. Di samping itu, perkembangan teknologi turut membuka peluang agar ekonomi kreatif Indonesia tambah berjaya.</p>\n<p>Teknologi bahkan menyimpan potensi ekonomi kreatif yang sangat mungkin dimaksimalkan. Irene menuturkan, <em>digital assets creation</em> saat sedang menjadi tren.</p>\n<p>&quot;Hal hal seperti inilah yg menurut saya adalah <em>untapped market, untapped opportunity</em> yang bisa kita ambil,&quot; paparnya.</p>\n<p>Irene menyebut Roblox dan Minecraft sebagai dua platform di mana <em>digital assets creation</em> bisa dilakukan. Sebagaimana diketahui, keduanya merupakan gim yang saat ini tengah naik daun dan amat populer di berbagai negara, tak terkecuali Indonesia.</p>\n<p>Selain <em>digital assets creation</em>, media sosial juga menjadi buah dari perkembangan teknologi yang turut mendorong berkembangnya ekonomi kreatif. Di mata CEO Mantappu Corp., Jehian Sijabat, inilah yang kemudian melahirkan kreator konten sebagai sebuah profesi baru yang muncul di bidang ekonomi kreatif.</p>\n<p>&quot;Di 10 sampai 20 tahun terakhir ini, ada satu pemain baru di kategori seniman, yaitu orang-orang yang bermain (berkreasi) di <em>social media</em>,&quot; kata Jehian.</p>\n<p>Pada hakikatnya, ekonomi kreatif adalah soal bagaimana seseorang mampu mengolah dan mewujudkan ide serta pemikirannya menjadi karya yang bernilai ekonomi. Nah, untuk memberi nilai ekonomi itulah pelaku ekonomi kreatif wajib berkolaborasi, dan semua pihak yang terlibat dalam kolaborasi tersebut sama-sama mendapatkan keuntungan.</p>\n<p>Staf Khusus Presiden RI Bidang Ekonomi Kreatif, Yovie Widianto, punya pengalaman soal kolaborasi ini. Kendati ia adalah seorang musisi dengan kemampuan bermusik yang mumpuni, ternyata ia tetap dibantu oleh musisi dan penyanyi lain dalam berkarya.</p>\n<p>Dari pengalaman Yovie, dapat dipahami bahwa kolaborasi menjadi hal yang jelas diperlukan. Dengan peran yang berbeda-beda, Mereka yang berkolaborasi dapat menghasilkan karya besar. </p>\n<p>&quot;Dari poin itu, salah satu yang kita penuhi adalah bagaimana kolaborasi jadi optimal dengan pekerjaannya masing-masing.&quot; kata Yovie.</p>\n<p>Kreator konten pun demikian. Jehian mengungkap bahwa kreator konten kerap kali aktif di media sosial karena berawal dari hobi. Namun saat karya mereka semakin dikenal, kreator itu akan perlu memutuskan apakah konten-kontennya akan dikomersialisasi . Saat mereka memilih jalan komersial, di sana harus ada rekanan yang perlu diajak berkolaborasi</p>\n<p>&quot;Ketika mereka memutuskan untuk komersil, di situlah ada <em>partner</em> yang siap meng-<em>handle</em> mereka.&quot; jelas Jehian.</p>",
-      "className": "text-lg leading-relaxed mb-6"
+      "className": "text-lg leading-relaxed text-white",
+      "containerClassName": "bg-[#000e4f]"
     },
     "group": "section-3",
     "order": 11
@@ -125,7 +130,7 @@
     "component": 4,
     "componentProps": {
       "title": "Beragam Cara Menumbuhkan Optimisme Anak Muda",
-      "className": "text-black h-[20rem]"
+      "className": "text-white h-[20rem] bg-[#000e4f]"
     },
     "group": "section-4",
     "groupClassName": "py-16",
@@ -137,7 +142,8 @@
     "component": 3,
     "componentProps": {
       "children": "<p>Jika dilihat lebih seksama, Indeks Optimisme 2025 menunjukkan sebuah hal menarik: Anak muda cenderung pesimis, sementara orang tua justru lebih optimis.</p>\n<p>Ya, di balik menurunnya indeks optimisme dari 7,77 yang tergolong kategori &quot;optimis&quot; pada 2023 menjadi 5,51 atau kategori &quot;netral&quot; di 2025, terlihat pula bahwa Gen Z adalah generasi yang paling pesimis. Kelompok usia 17-25 tahun hanya punya skor 5,45. Di sisi lain, responden yang usianya semakin tua semakin tinggi pula optimismenya. Kelompok  usia 46-55 tahun bahkan skornya mencapai 6,21. </p>\n<p>Ada yang mengatakan bahwa semakin tua seseorang, semakin lelah pula ia dalam menghadapi kenyataan. Ujungnya, ia akan jadi memandang hidup dengan lebih realistis tanpa ekspektasi tinggi. Oleh karena itu, Indeks Optimisme 2025 menjadi seperti anomali yang tak klop dengan pandangan umum.</p>\n<p>Dalam sesi diskusi panel ketiga bertajuk &quot;<em>Always Be Ready: How Optimism Shapes the Next Generation</em>&quot;, psikolog Alsi Mega Marsha Tengker alias Caca Tengker membeberkan penyebab pesimisnya Gen Z. Menurutnya, pesimisme itu muncul lantaran banyak anak muda yang belum pernah melewati masa krisis sebagaimana generasi sebelumnya.</p>\n<p>&quot;Sementara generasi setelahnya mereka lahir di tengah krisis dengan informasi beragam, jadi belum tersiapkan,&quot; ucap Caca.</p>\n<p>Selain pengalaman menghadapi krisis, minimnya kesempatan mengembangkan diri juga jadi akar pesimisme. <em>Marketing Director</em> Xiaomi Indonesia, Andi Renreng, menyampaikan pendapat tersebut sembari menyatakan keinginannya untuk memberi kesempatan berkembang yang lebih besar bagi Gen Z untuk berkembang.</p>\n<p>Bagi Andi, memberi kesempatan Gen Z untuk berkembang adalah solusi agar pesimisme tak lagi melanda. Saat Gen Z bisa berkembang, maka generasi yang akan datang akan merasakan hidup di lingkungan yang lebih kental dengan optimisme.</p>\n<p>&quot;Kalau saya memberikan dampak yang berarti untuk generasi sekarang, berarti pada saat <em>timing</em>-nya, anak saya akan merasakan hal yang pernah saya lakukan,&quot; jelas Andi.</p>\n<p>Andi menambahkan, semangat menanamkan optimisme itu dibawa oleh Xiaomi ke dalam strategi pemasaran untuk anak muda. Wujud nyatanya, rasa optimis itu selalu hadir saat program dibuat dan ekosistem dibangun. Dengan demikian, anak-anak muda bisa diajak terlibat dalam setiap kegiatan.</p>\n<p>Tak sekadar menunggu terbukanya ruang untuk berkembang, Gen Z juga bisa mengupayakan sendiri agar optimismenya tumbuh. Salah satu caranya sederhana, jangan terpukau dan ngotot mengejar kesempurnaan sesuai standar yang kerap muncul di media sosial.</p>\n<p>&quot;Karena di <em>social media</em>, semuanya sempurna. Kita rasanya jadi pesimis terus, karena kita nggak akan mencapai kesempurnaan itu. Sedangkan ketika kita mencoba untuk merayakan kemenangan-kemenangan kecil, itu akan selalu ada harapan,&quot; papar Caca.</p>",
-      "className": "text-lg leading-relaxed mb-6"
+      "className": "text-lg leading-relaxed text-white",
+      "containerClassName": "bg-[#000e4f]"
     },
     "group": "section-4",
     "order": 13
@@ -155,7 +161,8 @@
     "component": 3,
     "componentProps": {
       "children": "<p>Satu pembicara lainnya di sesi ini, <em>Head of External and Digital Communication</em> Unilever Indonesia, Adisty Nilasari, mengungkap satu cara lagi untuk menumbuhkan optimisme. Sederhana saja, hal yang membuat optimisme bisa lahir adalah adanya tujuan yang dimiliki seseorang.</p>\n<p> &quot;Saya sendiri percaya bahwa optimisme itu bisa lahir kalau kita punya <em>purpose</em> yang kuat. Kita tahu tujuan kita mau ke mana,&quot; kata Adisty.</p>\n<p>Meski sederhana, optimisme tidak bisa muncul begitu saja. Sebaliknya, menurut Adisty, optimis sejatinya merupakan <em>skill</em> yang oleh karenanya butuh dilatih. Sebab, tujuan adalah hal yang juga harus dimiliki setiap orang saat menghadapi situasi krisis.</p>\n<p>Dengan adanya tujuan yang ingin diraih dan optimisme bahwa tujuan tersebut bisa dicapai, maka peluang untuk mengatasi krisis pun akan terbuka. Prinsip itu pula yang senantiasa ditekankan Unilever kepada karyawannya. Setiap karyawan haruslah punya tujuan dalam melakukan pekerjaannya.  </p>\n<p>&quot;Jadi di dalam dilatih sebagai individu tidak hanya sebagai individu, tetapi bekerja sebagai manusia yang punya tujuan. Dan apakah itu sejalan dengan apa yang kita kerjakan. Dengan terus terusan diingatkan bahwa hidup itu ada tujuannya. Jadi optimis itu akan tetap tumbuh,&quot; ucap Adisty.</p>",
-      "className": "text-lg leading-relaxed mb-6"
+      "className": "text-lg leading-relaxed text-white",
+      "containerClassName": "bg-[#000e4f]"
     },
     "group": "section-4",
     "order": 15
@@ -165,7 +172,7 @@
     "component": 4,
     "componentProps": {
       "title": "Anak Muda Skeptis Terhadap Politik, Apa Penyebab & Cara Mengatasinya?",
-      "className": "text-black h-[20rem]"
+      "className": "text-white bg-[#000e4f] h-[20rem]"
     },
     "group": "section-5",
     "groupClassName": "py-16",
@@ -176,10 +183,32 @@
     "index": 1,
     "component": 3,
     "componentProps": {
-      "children": "<p>Dengan segala inisiatif yang dijalankan berbagai pihak serta optimisme dari anak muda yang muncul, tidak sulit untuk melihat masih adanya sepercik harapan untuk kehidupan yang lebih baik. Akan tetapi untuk urusan politik dan pemerintahan, ceritanya tidak sesederhana itu.</p>\n<p>Dalam Indeks Optimisme 2025, dimensi politik dan pemerintahan memiliki angka terendah, hanya sebesar 3,87 poin. Bahkan dibandingkan dengan dimensi-dimensi lainnya, hanya dimensi inilah yang masuk dalam kategori pesimis.</p>\n<p>Selain pesimis, masyarakat khususnya anak muda juga skeptis alias kurang percaya terhadap urusan politik dan pemerintahan di negeri ini. Fakta ini terungkap dalam sesi diskusi panel keempat Bangkit Fest 2025. Sesi bertajuk &quot;<em>From Skepticism to Hope: Youth, Politics, and the Future of Progress</em>&quot; ini diawali dengan sebuah pertanyaan: Mengapa anak muda skeptis terhadap politik?</p>\n<p>Wakil Gubernur Jawa Timur, Emil Dardak punya jawabannya. Dari pengalamannya berkecimpung sebagai kepala daerah dari Bupati Trenggalek hingga kini naik kelas ke kursi wakil gubernur, ia dengan tegas menyebut bahwa paparan berita buruk mengenai kinerja para kepala daerah adalah akar masalahnya. </p>\n<p>&quot;Mereka yang <em>perform</em>, yang tampil dengan karya-karyanya yang baik, itu (dianggap) adalah <em>outlier, majority</em> lebih mereka kaitkan dengan berita yang jelek,&quot; ujar Emil.</p>\n<p>Di samping itu, Emil menemukan bahwa anak muda terutama lulusan SMA di pedesaan merasa kesempatan untuk berkembang dan hidup lebih baik terbatas. Itulah yang menurut Emil turut memicu skeptisme, mirip seperti apa yang disampaikan Andi Renreng pada sesi sebelumnya soal penyebab pesimisme pada Gen Z.</p>\n<p> Bukan cuma Emil yang merasakan skeptisnya anak muda. Wakil Bupati Garut, Luthfianisa Putri Karlina, juga demikian. Menurutnya, ini menjadi tantangan tersendiri bagi kepala daerah dalam melaksanakan tugas. </p>\n<p>&quot;Hidup di zaman sekarang <em>nggak ngapa-ngapain</em> dibilang <em>nggak</em> becus. <em>Ngapa-ngapain</em> dibilang pencitraan,&quot; kata Putri.</p>\n<p>Sementara Emil memandang paparan berita buruk dan minimnya kesempatan berkembang sebagai penyebab skeptisme anak muda, Putri punya pendapat lain: Penyebabnya adalah citra pemerintah yang dianggap kaku.</p>\n<p>&quot;Ada <em>generation gap</em>. Mungkin kenapa sekarang skeptisnya anak muda terhadap pemerintahan, karena pemerintahan yang sebelum-sebelumnya dianggap ranahnya senior, sehingga ada sebuah kekakuan yang disajikan oleh pemerintah-pemerintah terdahulu,&quot; lanjut Putri.</p>\n<p>Di tengah kepungan rasa skeptis, anak muda sebenarnya punya pengaruh penting dalam politik dan pemerintahan, terutama di tingkat daerah. Buktinya, belakangan ini banyak figur berusia muda yang terpilih sebagai kepala daerah, yang mana menurut Putri itu merupakan bagian dari strategi partai politik untuk mendulang suara.</p>\n<p>&quot;Itu menjadi sebuah mediator bagi teman-teman yang lebih muda, yang bisa punya hak pilih awal atau pemilih pemula. &#39;Oh itu ada sebangsa saya di sana. Kalau ada sebangsa saya di sana yang mengerti bahasa saya, yang mengerti pola perilaku saya, mungkin saya akan tertolong&#39;,&quot; ujarnya menirukan.</p>\n<p>Jika Kawan melihat daftar nama kepala daerah yang mendapat mandat memimpin untuk periode 2025-2030, ada sejumlah nama yang usianya baru menginjak 20-an tahun. Bahkan saat pelantikan oleh Presiden Prabowo Subianto di Istana Kepresidenan, Jakarta, pada Kamis (20/2/2025) lalu, ada beberapa yang baru menginjak usia 25 tahun. Emil sendiri kini berusia 41 tahun sementara Putri 32 tahun.</p>\n<p>Sebagai kepala daerah yang masih tergolong muda, Emil dan Putri tentu tidak diam melihat fenomena skeptisme di tengah masyarakat yang mereka pimpin. Ada strategi yang dirasa mampu menjadi jembatan antara pemerintah dengan anak muda.</p>\n<p>Disampaikan Emil, masyarakat setiap generasi memiliki karakter yang berbeda-beda. Meski demikian, setiap generasi itu kini mengonsumsi konten-konten tertentu yang sama di media. Menurutnya, di sini kemudian informasi mengenai pemerintahan tak cuma bisa dicerna generasi tua, melainkan juga lebih diterima anak muda.</p>\n<p>&quot;Konten kita itu sama, otomatis ada konvergensi <em>style</em> sehingga pemerintah akan lebih bisa menjawab harapan anak-anak muda.&quot; bebernya.</p>\n<p>Melengkapi paparan Emil, Putri menekankan pentingnya pemerintah memahami masyarakat, serta masyarakat yang paham akan arti dari kebijakan pemerintah. Perempuan lulusan Universitas Gadjah Mada itu punya langkah jitu: Berkolaborasi dengan insan kreatif.</p>\n<p>&quot;Saya sendiri sekarang lebih banyak ngobrol sama dengan teman-teman kreatif, karena merekalah yang bisa menyelesaikan masalah tanpa terasa menyelesaikan masalah. Mereka yang bisa mencairkan <em>gap</em> antara <em>problem</em> masyarakat dengan <em>problem</em> daerah,&quot; pungkasnya.</p>",
-      "className": "text-lg leading-relaxed mb-6"
+      "children": "<p>Dengan segala inisiatif yang dijalankan berbagai pihak serta optimisme dari anak muda yang muncul, tidak sulit untuk melihat masih adanya sepercik harapan untuk kehidupan yang lebih baik. Akan tetapi untuk urusan politik dan pemerintahan, ceritanya tidak sesederhana itu.</p><p>Dalam Indeks Optimisme 2025, dimensi politik dan pemerintahan memiliki angka terendah, hanya sebesar 3,87 poin. Bahkan dibandingkan dengan dimensi-dimensi lainnya, hanya dimensi inilah yang masuk dalam kategori pesimis.</p><p>Selain pesimis, masyarakat khususnya anak muda juga skeptis alias kurang percaya terhadap urusan politik dan pemerintahan di negeri ini. Fakta ini terungkap dalam sesi diskusi panel keempat Bangkit Fest 2025. Sesi bertajuk \"<em>From Skepticism to Hope: Youth, Politics, and the Future of Progress</em>\" ini diawali dengan sebuah pertanyaan: Mengapa anak muda skeptis terhadap politik?</p><p>Wakil Gubernur Jawa Timur, Emil Dardak punya jawabannya. Dari pengalamannya berkecimpung sebagai kepala daerah dari Bupati Trenggalek hingga kini naik kelas ke kursi wakil gubernur, ia dengan tegas menyebut bahwa paparan berita buruk mengenai kinerja para kepala daerah adalah akar masalahnya.</p><p>\"Mereka yang <em>perform</em>, yang tampil dengan karya-karyanya yang baik, itu (dianggap) adalah <em>outlier, majority</em> lebih mereka kaitkan dengan berita yang jelek,\" ujar Emil.</p><p>Di samping itu, Emil menemukan bahwa anak muda terutama lulusan SMA di pedesaan merasa kesempatan untuk berkembang dan hidup lebih baik terbatas. Itulah yang menurut Emil turut memicu skeptisme, mirip seperti apa yang disampaikan Andi Renreng pada sesi sebelumnya soal penyebab pesimisme pada Gen Z.</p><p>Bukan cuma Emil yang merasakan skeptisnya anak muda. Wakil Bupati Garut, Luthfianisa Putri Karlina, juga demikian. Menurutnya, ini menjadi tantangan tersendiri bagi kepala daerah dalam melaksanakan tugas.</p><p>\"Hidup di zaman sekarang <em>nggak ngapa-ngapain</em> dibilang <em>nggak</em> becus. <em>Ngapa-ngapain</em> dibilang pencitraan,\" kata Putri.</p><p>Sementara Emil memandang paparan berita buruk dan minimnya kesempatan berkembang sebagai penyebab skeptisme anak muda, Putri punya pendapat lain: Penyebabnya adalah citra pemerintah yang dianggap kaku.</p><p>\"Ada <em>generation gap</em>. Mungkin kenapa sekarang skeptisnya anak muda terhadap pemerintahan, karena pemerintahan yang sebelum-sebelumnya dianggap ranahnya senior, sehingga ada sebuah kekakuan yang disajikan oleh pemerintah-pemerintah terdahulu,\" lanjut Putri.</p><p>Di tengah kepungan rasa skeptis, anak muda sebenarnya punya pengaruh penting dalam politik dan pemerintahan, terutama di tingkat daerah. Buktinya, belakangan ini banyak figur berusia muda yang terpilih sebagai kepala daerah, yang mana menurut Putri itu merupakan bagian dari strategi partai politik untuk mendulang suara.</p>",
+      "className": "text-lg leading-relaxed text-white",
+      "containerClassName": "bg-[#000e4f]"
     },
     "group": "section-5",
     "order": 17
+  },
+  {
+    "index": 3,
+    "component": 9,
+    "componentProps": {},
+    "group": "section-5",
+    "groupClassName": "",
+    "order": 18,
+    "componentCustomName": "Infographic5"
+  },
+  {
+    "index": 2,
+    "component": 3,
+    "componentProps": {
+      "children": "<p>\"Itu menjadi sebuah mediator bagi teman-teman yang lebih muda, yang bisa punya hak pilih awal atau pemilih pemula. 'Oh itu ada sebangsa saya di sana. Kalau ada sebangsa saya di sana yang mengerti bahasa saya, yang mengerti pola perilaku saya, mungkin saya akan tertolong',\" ujarnya menirukan.</p><p>Jika Kawan melihat daftar nama kepala daerah yang mendapat mandat memimpin untuk periode 2025-2030, ada sejumlah nama yang usianya baru menginjak 20-an tahun. Bahkan saat pelantikan oleh Presiden Prabowo Subianto di Istana Kepresidenan, Jakarta, pada Kamis (20/2/2025) lalu, ada beberapa yang baru menginjak usia 25 tahun. Emil sendiri kini berusia 41 tahun sementara Putri 32 tahun.</p><p>Sebagai kepala daerah yang masih tergolong muda, Emil dan Putri tentu tidak diam melihat fenomena skeptisme di tengah masyarakat yang mereka pimpin. Ada strategi yang dirasa mampu menjadi jembatan antara pemerintah dengan anak muda.</p><p>Disampaikan Emil, masyarakat setiap generasi memiliki karakter yang berbeda-beda. Meski demikian, setiap generasi itu kini mengonsumsi konten-konten tertentu yang sama di media. Menurutnya, di sini kemudian informasi mengenai pemerintahan tak cuma bisa dicerna generasi tua, melainkan juga lebih diterima anak muda.</p><p>\"Konten kita itu sama, otomatis ada konvergensi <em>style</em> sehingga pemerintah akan lebih bisa menjawab harapan anak-anak muda.\" bebernya.</p><p>Melengkapi paparan Emil, Putri menekankan pentingnya pemerintah memahami masyarakat, serta masyarakat yang paham akan arti dari kebijakan pemerintah. Perempuan lulusan Universitas Gadjah Mada itu punya langkah jitu: Berkolaborasi dengan insan kreatif.</p><p>\"Saya sendiri sekarang lebih banyak ngobrol sama dengan teman-teman kreatif, karena merekalah yang bisa menyelesaikan masalah tanpa terasa menyelesaikan masalah. Mereka yang bisa mencairkan <em>gap</em> antara <em>problem</em> masyarakat dengan <em>problem</em> daerah,\" pungkasnya.</p>",
+      "className": "text-white",
+      "containerClassName": "bg-[#000e4f]"
+    },
+    "group": "section-5",
+    "groupClassName": "",
+    "order": 19
   }
 ]

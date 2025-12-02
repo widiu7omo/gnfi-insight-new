@@ -1,54 +1,237 @@
-import React from 'react';
+import { motion, useInView } from "motion/react";
+import NumberFlow from "@number-flow/react";
+import { useRef, useState, useEffect } from "react";
+
+const ASSETS_PATH =
+  "/assets/dari-bangkit-fest-2025-optimisme-dan-semangat-kolaborasi-terus-dinyalakan";
+
+function AnimatedNumber({
+  value,
+  className,
+}: {
+  value: number;
+  className?: string;
+}) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true });
+  const [displayValue, setDisplayValue] = useState(0);
+
+  useEffect(() => {
+    if (isInView) {
+      setDisplayValue(value);
+    }
+  }, [isInView, value]);
+
+  return (
+    <span ref={ref} className={className}>
+      <NumberFlow
+        value={displayValue}
+        format={{ minimumFractionDigits: 2, maximumFractionDigits: 2 }}
+        locales="id-ID"
+      />
+    </span>
+  );
+}
 
 export default function Infographic4() {
   return (
-    <div className="my-12 p-8 bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-950/30 dark:to-teal-950/30 rounded-2xl border border-green-200 dark:border-green-800">
-      <h3 className="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white">Optimisme Berdasarkan Usia (2025)</h3>
-      <div className="max-w-2xl mx-auto space-y-4">
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-          <div className="flex items-center justify-between mb-2">
-            <div className="font-semibold text-gray-900 dark:text-white">17-25 tahun (Gen Z)</div>
-            <div className="text-2xl font-bold text-red-600 dark:text-red-400">5.45</div>
+    <div className="relative flex flex-col items-center overflow-hidden bg-[#000E4F]">
+      {/* Circle ornament top right */}
+      <motion.img
+        initial={{ opacity: 0, scale: 0.6 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        src={`${ASSETS_PATH}/4/circle-ornament-top-right.png`}
+        alt=""
+        className="absolute top-0 right-0 w-[35%] md:w-[28%] z-0"
+      />
+
+      <div className="relative w-full justify-center px-4 lg:px-0 z-10">
+        <div className="relative mx-auto max-w-4xl pt-12 md:pt-20 lg:pt-24">
+          {/* Title */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="text-center mb-8 md:mb-12"
+          >
+            <h2 className="font-sora text-white font-bold text-2xl md:text-[52px] md:leading-tight leading-snug">
+              Indeks Optimisme 2025
+            </h2>
+            <h2 className="font-sora text-white font-bold text-2xl md:text-[52px] md:leading-tight leading-snug">
+              Berdasarkan Usia
+            </h2>
+          </motion.div>
+
+          {/* Row 1: 46-55 tahun & 56 tahun+ */}
+          <div className="grid grid-cols-2 gap-3 md:gap-4 mb-3 md:mb-4 px-2 lg:mt-48 mt-30">
+            {/* 46-55 tahun - 6,21 (old man) */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+              viewport={{ once: true }}
+              className="relative bg-[#ff4d0d] h-48 rounded-tl-full "
+            >
+              <img
+                src={`${ASSETS_PATH}/4/old-men-people.png`}
+                alt="46-55 tahun"
+                className="w-[60%] h-full object-cover object-bottom absolute left-0 bottom-0 overflow-y-visible"
+              />
+              <div className="px-2 md:px-4 py-1.5 md:py-3 w-full h-full flex items-center relative bottom-0">
+                <div className="absolute right-6">
+                  <p className="font-sora text-white text-lg md:text-3xl font-medium text-right">
+                    46-55 tahun
+                  </p>
+                  <AnimatedNumber
+                    value={6.21}
+                    className="font-sora text-white font-extrabold text-5xl md:text-8xl text-right block"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 56 tahun+ - 5,94 (old woman) */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative bg-[#ff4d0d] h-48 rounded-tl-full "
+            >
+              <img
+                src={`${ASSETS_PATH}/4/old-woman-people.png`}
+                alt="56 tahun+"
+                className="w-[60%] h-full object-cover object-bottom absolute left-0 bottom-0 overflow-y-visible"
+              />
+              <div className="px-2 md:px-4 py-1.5 md:py-3 w-full h-full flex items-center relative bottom-0">
+                <div className="absolute right-6">
+                  <p className="font-sora text-white text-lg md:text-3xl font-medium text-right">
+                    56 tahun +
+                  </p>
+                  <AnimatedNumber
+                    value={5.94}
+                    className="font-sora text-white font-extrabold text-5xl md:text-8xl text-right block"
+                  />
+                </div>
+              </div>
+            </motion.div>
           </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-            <div className="bg-red-600 dark:bg-red-400 h-3 rounded-full" style={{width: '54.5%'}}></div>
+
+          {/* Row 2: 36-45, 26-36, 17-25 tahun */}
+          <div className="flex flex-col lg:flex-row items-end gap-2 md:gap-3 mb-3 md:mb-4 px-2 lg:mt-12 mt-8">
+            {/* 36-45 tahun - 5,77 (woman) */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true }}
+              className="relative flex-1"
+            >
+              <div className="relative rounded-xl">
+                <img
+                  src={`${ASSETS_PATH}/4/man.png`}
+                  alt="36-45 tahun"
+                  className="w-full absolute h-full object-cover z-10 overflow-y-clip object-bottom"
+                />
+                <div className="absolute z-10 top-0 inset-0 bg-linear-to-t rounded-tl-full from-white to-80% bottom-0" />
+                <div className="bg-white top-0 inset-0 relative h-130 rounded-tl-full"></div>
+                <div className="absolute z-20 bottom-4 left-0 right-0">
+                  <p className="font-sora text-[#ff4d0d] text-center font-medium text-lg md:text-3xl">
+                    36-45 tahun
+                  </p>
+                  <AnimatedNumber
+                    value={5.77}
+                    className="font-sora text-[#ff4d0d] text-center font-extrabold text-5xl md:text-8xl block"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 26-36 tahun - 5,63 (man) */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              viewport={{ once: true }}
+              className="relative flex-1"
+            >
+              <div className="relative rounded-xl">
+                <img
+                  src={`${ASSETS_PATH}/4/woman.png`}
+                  alt="26-36 tahun"
+                  className="w-full h-full object-cover z-10 absolute overflow-y-clip object-bottom"
+                />
+                <div className="absolute z-10 top-0 inset-0 bg-linear-to-t rounded-tl-full from-white to-80% bottom-0" />
+                <div className="bg-white top-0 inset-0 h-130 relative rounded-tl-full"></div>
+                <div className="absolute z-20 bottom-4 left-0 right-0">
+                  <p className="font-sora text-[#ff4d0d] text-center font-medium text-lg md:text-3xl">
+                    26-36 tahun
+                  </p>
+                  <AnimatedNumber
+                    value={5.63}
+                    className="font-sora text-[#ff4d0d] text-center font-extrabold text-5xl md:text-8xl block"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 17-25 tahun - 5,45 (teenagers) */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+              viewport={{ once: true }}
+              className="relative flex-1"
+            >
+              <div className="relative rounded-xl">
+                <img
+                  src={`${ASSETS_PATH}/4/teenagers.png`}
+                  alt="17-25 tahun"
+                  className="w-full h-full object-cover absolute z-10 overflow-y-clip object-bottom"
+                />
+                <div className="absolute z-10 top-0 inset-0 bg-linear-to-t rounded-tl-full from-white to-80% bottom-0" />
+                <div className="bg-white top-0 inset-0 h-130 relative rounded-tl-full"></div>
+                <div className="absolute z-20 bottom-4 left-0 right-0">
+                  <p className="font-sora text-[#ff4d0d] text-center font-medium text-lg md:text-3xl">
+                    17-25 tahun
+                  </p>
+                  <AnimatedNumber
+                    value={5.45}
+                    className="font-sora text-[#ff4d0d] text-center font-extrabold text-5xl md:text-8xl block"
+                  />
+                </div>
+              </div>
+            </motion.div>
           </div>
-          <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">Paling pesimis</div>
-        </div>
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-          <div className="flex items-center justify-between mb-2">
-            <div className="font-semibold text-gray-900 dark:text-white">26-35 tahun (Milenial)</div>
-            <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">5.68</div>
-          </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-            <div className="bg-yellow-600 dark:bg-yellow-400 h-3 rounded-full" style={{width: '56.8%'}}></div>
-          </div>
-        </div>
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-          <div className="flex items-center justify-between mb-2">
-            <div className="font-semibold text-gray-900 dark:text-white">36-45 tahun (Gen X)</div>
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">5.89</div>
-          </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-            <div className="bg-blue-600 dark:bg-blue-400 h-3 rounded-full" style={{width: '58.9%'}}></div>
-          </div>
-        </div>
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-          <div className="flex items-center justify-between mb-2">
-            <div className="font-semibold text-gray-900 dark:text-white">46-55 tahun</div>
-            <div className="text-2xl font-bold text-green-600 dark:text-green-400">6.21</div>
-          </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-            <div className="bg-green-600 dark:bg-green-400 h-3 rounded-full" style={{width: '62.1%'}}></div>
-          </div>
-          <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">Paling optimis</div>
+
+          {/* Row 3: Group of young people */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+            viewport={{ once: true }}
+            className="px-2 relative pt-12"
+          >
+            <img
+              src={`${ASSETS_PATH}/4/group-of-peoples.png`}
+              alt="Group of people"
+              className="w-full h-auto object-cover"
+            />
+          </motion.div>
         </div>
       </div>
-      <div className="mt-8 text-center">
-        <div className="inline-block bg-white dark:bg-gray-800 px-6 py-3 rounded-full shadow-lg">
-          <span className="text-sm text-gray-600 dark:text-gray-400">Rata-rata keseluruhan: </span>
-          <span className="font-bold text-gray-900 dark:text-white">5.51</span>
-        </div>
+      <img src={`${ASSETS_PATH}/4/4.8.png`} alt="Background Bottom" className="absolute inset-x-0 w-full bottom-0 object-cover h-[70%]" />
+
+      {/* Footer */}
+      <div className="absolute bottom-0 flex items-center justify-center">
+        <img
+          src={`${ASSETS_PATH}/footer.png`}
+          alt="GNFI Insight"
+          className="z-50 hidden sm:block bottom-0 object-cover h-40 overflow-clip w-full max-w-4xl mx-auto"
+        />
       </div>
     </div>
   );
