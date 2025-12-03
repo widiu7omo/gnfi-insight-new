@@ -26,7 +26,7 @@ export const Route = createFileRoute("/builder")({
   },
   loader: async () => {
     const unfinished = await $getAllPosts({ data: { offset: 0, limit: 100, finished: false } });
-    const finished = await $getAllPosts({ data: { offset: 0, limit: 100, finished: true } });
+    const finished = await $getAllPosts({ data: { offset: 0, limit: 100 } });
     return { unfinishedPosts: unfinished.posts, unfinishedMeta: unfinished.meta, finishedPosts: finished.posts, finishedMeta: finished.meta };
   },
 });

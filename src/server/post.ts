@@ -112,7 +112,8 @@ export const getAllPostsHandler = async ({ data }: { data: { offset?: number, li
         featured: meta?.featured,
         publishedAt: meta?.seo?.publishedAt
     }))
-        .filter(post => post.title && (finished ? post.finished : true))
+        .filter(post => post.title)
+        .filter(post => post.finished === finished)
         .sort((a, b) => {
             // Sort by featured first (true comes before false)
             if (a.featured && !b.featured) return -1;
