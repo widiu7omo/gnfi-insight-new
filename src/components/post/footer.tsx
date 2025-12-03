@@ -185,7 +185,7 @@ export default function Footer({ publishedAt, credits }: { publishedAt: string, 
                             <div className="text-lg text-gray-800 text-left font-medium">{credits?.designers ? generateListCredits(csvToArray(credits?.designers)) : 'Tim Kreatif GNFI'}</div>
                         </div>
                         <div className="text-left md:text-left space-y-2">
-                            <p className="text-xs font-bold text-red-600 uppercase tracking-widest">Web Developer</p>
+                            <p className="text-xs font-bold text-red-600 uppercase tracking-widest">Layout & Animasi</p>
                             <div className="text-lg text-gray-800 text-left font-medium">{credits?.developers ? generateListCredits(csvToArray(credits?.developers)) : 'Techino GNFI'}</div>
                         </div>
                     </div>

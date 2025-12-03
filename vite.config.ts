@@ -11,6 +11,8 @@ const config = defineConfig({
     nitroV2Plugin({
       compatibilityDate: '2025-11-03',
       preset: "bun",
+      compressPublicAssets: true,
+      plugins: ['./src/server/plugins/compression.ts'],
       serverAssets: [
         {
           baseName: 'posts',
@@ -79,7 +81,7 @@ const config = defineConfig({
       output: {
         manualChunks: (id) => {
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
+            if (id.includes('react')) {
               return 'vendor';
             }
             // if (id.includes('@radix-ui') || id.includes('lucide-react') || id.includes('sonner') || id.includes('vaul')) {
@@ -88,9 +90,9 @@ const config = defineConfig({
             if (id.includes('@tiptap')) {
               return 'editor';
             }
-            if (id.includes('motion')) {
-              return 'motion';
-            }
+            // if (id.includes('motion')) {
+            //   return 'motion';
+            // }
             // if (id.includes('@tanstack')) {
             //   return 'tanstack';
             // }

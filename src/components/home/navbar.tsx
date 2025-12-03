@@ -1,14 +1,34 @@
 import { useState, useEffect } from 'react'
-import { Link } from '@tanstack/react-router'
+import { Link, useNavigate } from '@tanstack/react-router'
+import { useQuery } from '@tanstack/react-query'
+import { $getAllPosts } from '@/server/post'
 import { motion, AnimatePresence } from 'motion/react'
-import { Menu, X, Moon, Sun } from 'lucide-react'
+import { Menu, X, Moon, Sun, Search, FileText, Home, TrendingUp, Zap, Laptop } from 'lucide-react'
 import { useTheme } from '@/context/theme-provider'
 import { cn } from '@/lib/utils'
+import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from '../ui/command'
+import { useDebounce } from '@/hooks/use-debounce'
+import { Skeleton } from '../ui/skeleton'
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const { theme, setTheme } = useTheme()
+    const [open, setOpen] = useState(false)
+    const [searchQuery, setSearchQuery] = useState("")
+    const debouncedSearchQuery = useDebounce(searchQuery, 300)
+    const navigate = useNavigate()
+
+    const { data: postsData, isLoading } = useQuery({
+        queryKey: ['search-posts', debouncedSearchQuery],
+        queryFn: () => $getAllPosts({ data: { limit: 10, query: debouncedSearchQuery } }),
+        enabled: true
+    })
+
+    const runCommand = (command: () => void) => {
+        setOpen(false)
+        command()
+    }
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,7 +37,16 @@ export function Navbar() {
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
-
+    useEffect(() => {
+        const down = (e: KeyboardEvent) => {
+            if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+                e.preventDefault()
+                setOpen((open) => !open)
+            }
+        }
+        document.addEventListener("keydown", down)
+        return () => document.removeEventListener("keydown", down)
+    }, [])
     const navLinks = [
         { name: 'Home', href: '/' },
         { name: 'Trending', href: '#trending' }, // Assuming we might add IDs later or just link to sections
@@ -131,6 +160,107 @@ export function Navbar() {
                                 ease: [0.25, 0.1, 0.25, 1]
                             }}
                         >
+                            {/* Search Command */}
+                            <motion.button
+                                onClick={() => setOpen(true)}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                transition={{ duration: 0.2 }}
+                                className={cn(
+                                    "p-2 rounded-full transition-all duration-300",
+                                    isScrolled
+                                        ? "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-300"
+                                        : "bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm"
+                                )}
+                                aria-label="Toggle theme"
+                            >
+                                <div className='flex items-center'>
+                                    <Search className="w-5 h-5 mr-2" />
+                                    <kbd className="rounded-full pointer-events-none inline-flex h-5 items-center gap-1 border bg-white/20 px-1.5 font-mono text-[10px] font-medium opacity-100 select-none">
+                                        <span className="text-sm mt-px">⌘</span>K
+                                    </kbd>
+                                </div>
+                            </motion.button>
+                            <CommandDialog open={open} onOpenChange={setOpen} shouldFilter={false}>
+                                <CommandInput
+                                    placeholder="Cari Artikel Insight disini..."
+                                    value={searchQuery}
+                                    onValueChange={setSearchQuery}
+                                />
+                                <CommandList>
+                                    <CommandEmpty>Hasil pencarian tidak ditemukan.</CommandEmpty>
+                                    {!searchQuery && (
+                                        <>
+                                            <CommandGroup heading="Navigasi Cepat">
+                                                <CommandItem onSelect={() => runCommand(() => navigate({ to: '/' }))}>
+                                                    <Home className="mr-2 h-4 w-4" />
+                                                    <span>Home</span>
+                                                </CommandItem>
+                                                <CommandItem onSelect={() => runCommand(() => {
+                                                    navigate({ to: '/' })
+                                                    setTimeout(() => {
+                                                        const element = document.getElementById('trending')
+                                                        if (element) element.scrollIntoView({ behavior: 'smooth' })
+                                                    }, 100)
+                                                })}>
+                                                    <TrendingUp className="mr-2 h-4 w-4" />
+                                                    <span>Trending</span>
+                                                </CommandItem>
+                                                <CommandItem onSelect={() => runCommand(() => {
+                                                    navigate({ to: '/' })
+                                                    setTimeout(() => {
+                                                        const element = document.getElementById('latest')
+                                                        if (element) element.scrollIntoView({ behavior: 'smooth' })
+                                                    }, 100)
+                                                })}>
+                                                    <Zap className="mr-2 h-4 w-4" />
+                                                    <span>Latest</span>
+                                                </CommandItem>
+                                            </CommandGroup>
+                                            <CommandSeparator />
+                                        </>
+                                    )}
+                                    <CommandGroup heading={searchQuery ? "Hasil Pencarian" : "Artikel Terbaru"}>
+                                        {isLoading ? (
+                                            Array.from({ length: 5 }).map((_, i) => (
+                                                <CommandItem key={i} disabled>
+                                                    <Skeleton className="h-4 w-4 mr-2 rounded-full" />
+                                                    <Skeleton className="h-4 w-full" />
+                                                </CommandItem>
+                                            ))
+                                        ) : (
+                                            postsData?.posts.map((post) => (
+                                                <CommandItem
+                                                    key={post.slug}
+                                                    onSelect={() => runCommand(() => navigate({ to: '/$slug', params: { slug: post.slug } }))}
+                                                >
+                                                    <FileText className="mr-2 h-4 w-4" />
+                                                    <span>{post.title}</span>
+                                                </CommandItem>
+                                            ))
+                                        )}
+                                    </CommandGroup>
+                                    {!searchQuery && (
+                                        <>
+                                            <CommandSeparator />
+                                            <CommandGroup heading="Tema">
+                                                <CommandItem onSelect={() => runCommand(() => setTheme('light'))}>
+                                                    <Sun className="mr-2 h-4 w-4" />
+                                                    <span>Light Mode</span>
+                                                </CommandItem>
+                                                <CommandItem onSelect={() => runCommand(() => setTheme('dark'))}>
+                                                    <Moon className="mr-2 h-4 w-4" />
+                                                    <span>Dark Mode</span>
+                                                </CommandItem>
+                                                <CommandItem onSelect={() => runCommand(() => setTheme('system'))}>
+                                                    <Laptop className="mr-2 h-4 w-4" />
+                                                    <span>System</span>
+                                                </CommandItem>
+                                            </CommandGroup>
+                                        </>
+                                    )}
+                                </CommandList>
+                            </CommandDialog>
                             {/* Theme Toggle */}
                             <motion.button
                                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

@@ -98,12 +98,13 @@ export const $getPostBySlug = createServerFn()
         }
     })
 
-export const getAllPostsHandler = async ({ data }: { data: { offset?: number, limit?: number, finished?: boolean } }) => {
+export const getAllPostsHandler = async ({ data }: { data: { offset?: number, limit?: number, finished?: boolean, query?: string } }) => {
     const offset = data.offset ?? 0;
     const limit = data.limit ?? 10;
     const finished = data.finished ?? true;
+    const query = data.query?.toLowerCase().trim();
 
-    const allPosts = Array.from(metaBySlug.entries()).map(([slug, meta]) => ({
+    let allPosts = Array.from(metaBySlug.entries()).map(([slug, meta]) => ({
         slug,
         title: meta?.seo?.title || meta?.title || slug,
         description: meta?.seo?.desc || '',
@@ -113,8 +114,16 @@ export const getAllPostsHandler = async ({ data }: { data: { offset?: number, li
         publishedAt: meta?.seo?.publishedAt
     }))
         .filter(post => post.title)
-        .filter(post => post.finished === finished)
-        .sort((a, b) => {
+        .filter(post => post.finished === finished);
+
+    if (query) {
+        allPosts = allPosts.filter(post =>
+            post.title.toLowerCase().includes(query) ||
+            post.description.toLowerCase().includes(query)
+        );
+    }
+
+    allPosts = allPosts.sort((a, b) => {
             // Sort by featured first (true comes before false)
             if (a.featured && !b.featured) return -1;
             if (!a.featured && b.featured) return 1;
@@ -142,5 +151,5 @@ export const getAllPostsHandler = async ({ data }: { data: { offset?: number, li
 };
 
 export const $getAllPosts = createServerFn()
-    .inputValidator((data: { offset?: number, limit?: number, finished?: boolean }) => data)
+    .inputValidator((data: { offset?: number, limit?: number, finished?: boolean, query?: string }) => data)
     .handler(getAllPostsHandler)

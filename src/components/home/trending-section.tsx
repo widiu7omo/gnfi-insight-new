@@ -24,7 +24,7 @@ export function TrendingSection({ posts }: TrendingSectionProps) {
             <div className="p-2 bg-red-100 dark:bg-red-900/30 rounded-lg">
               <TrendingUp className="w-6 h-6 text-red-600 dark:text-red-400" />
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Trending Now</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Artikel Terpopuler</h2>
           </div>
           <div className="hidden sm:flex gap-2">
             {/* Navigation buttons could go here */}
@@ -55,13 +55,13 @@ export function TrendingSection({ posts }: TrendingSectionProps) {
 
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-xs font-medium text-blue-600 dark:text-blue-400 uppercase tracking-wider">
-                    Popular
+                    Populer
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {post.title}
                   </h3>
                   <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 font-medium pt-2">
-                    Read Article <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                    Baca Artikel <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                   </div>
                 </div>
               </Link>

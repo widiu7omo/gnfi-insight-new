@@ -87,9 +87,9 @@ function HomePage() {
           <div className="w-20 h-20 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-6">
             <Newspaper className="w-10 h-10 text-gray-400 dark:text-gray-500" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">No stories found</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Belum ada artikel insight</h2>
           <p className="text-gray-500 dark:text-gray-400 max-w-md">
-            We couldn't find any articles at the moment. Please check back later.
+            Belum ada artikel insight yang dapat ditampilkan. Silahkan cek kembali nanti.
           </p>
         </div>
       ) : (
@@ -105,10 +105,10 @@ function HomePage() {
               <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                  Latest Insights
+                    Insight Terbaru
                 </h2>
                   <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
-                    Explore our collection of in-depth articles, analyses, and stories from around the globe.
+                    Jelajahi koleksi artikel insight mendalam, analisis, dan cerita dari seluruh dunia.
                   </p>
                 </div>
               </div>
@@ -147,7 +147,7 @@ function HomePage() {
                       <div className="flex flex-col flex-1 p-6">
                         <div className="flex items-center gap-2 text-xs font-medium text-gray-500 dark:text-gray-400 mb-3">
                           <span className="px-2 py-1 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">
-                            Article
+                            Artikel
                           </span>
                           <span>•</span>
                           <div className="flex items-center gap-1">
@@ -167,7 +167,7 @@ function HomePage() {
                         )}
 
                         <div className="flex items-center text-blue-600 dark:text-blue-400 font-semibold text-sm mt-auto group/link">
-                          Read More
+                          Baca Selengkapnya
                           <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover/link:translate-x-1" />
                         </div>
                       </div>
@@ -186,7 +186,7 @@ function HomePage() {
               {/* End of posts message */}
               {!hasNextPage && !isFetchingNextPage && posts.length > 0 && (
                 <div className="text-center py-16">
-                  <p className="text-gray-500 dark:text-gray-500">You've reached the end of the list.</p>
+                  <p className="text-gray-500 dark:text-gray-500">Anda telah mencapai akhir daftar.</p>
                 </div>
               )}
             </section>

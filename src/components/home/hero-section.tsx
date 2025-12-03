@@ -42,7 +42,7 @@ export function HeroSection({ post }: HeroSectionProps) {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-600/90 text-white text-xs font-bold tracking-wider uppercase mb-6 backdrop-blur-sm">
-              Featured Story
+              Cerita Pilihan
             </span>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
@@ -61,13 +61,13 @@ export function HeroSection({ post }: HeroSectionProps) {
                 params={{ slug: post.slug }}
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 rounded-full font-bold text-lg transition-all hover:bg-blue-50 hover:pr-10"
               >
-                Read Article
+                Baca Artikel
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Link>
 
               <div className="flex items-center gap-2 text-white/80 bg-white/10 px-4 py-2 rounded-full backdrop-blur-md">
                 <Clock className="w-5 h-5" />
-                <span className="text-sm font-medium">5 min read</span>
+                <span className="text-sm font-medium">5 min baca</span>
               </div>
             </div>
           </motion.div>
@@ -81,8 +81,8 @@ export function HeroSection({ post }: HeroSectionProps) {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        <span className="text-xs uppercase tracking-widest">Scroll</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-white/50 to-transparent" />
+        <span className="text-xs uppercase tracking-widest">Gulir ke atas</span>
+        <div className="w-px h-12 bg-linear-to-b from-white/50 to-transparent" />
       </motion.div>
     </section>
   )
