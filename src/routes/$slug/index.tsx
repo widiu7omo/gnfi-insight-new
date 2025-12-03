@@ -66,7 +66,7 @@ export const Route = createFileRoute('/$slug/')({
             ],
             links: [
                 { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon', sizes: '16x16' },
-                { rel: 'canonical', href: `${import.meta.env.VITE_BASE_URL}/${props.loaderData?.post.slug}` },
+                { rel: 'canonical', href: `${import.meta.env.VITE_BASE_URL}/${props.loaderData?.post.slug}/` },
             ],
         }
     },
