@@ -5,13 +5,13 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "build": "vite build",
+    "build:cf":"vite build --config vite.config.cf.ts",
     "serve": "vite preview",
     "ui": "bunx --bun shadcn@latest",
     "test": "vitest run",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "deploy:cf:pages": "npx wrangler pages deploy --branch main",
-    "deploy:cf:workers": "npx wrangler deploy",
+    "deploy:cf:workers": "WRANGLER_LOG=debug npx wrangler deploy",
     "serve:bun": "bun run .output/server/index.mjs"
   },
   "dependencies": {

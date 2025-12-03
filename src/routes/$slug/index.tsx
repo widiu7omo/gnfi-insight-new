@@ -56,17 +56,17 @@ export const Route = createFileRoute('/$slug/')({
                 ...generateOgMetaData({
                     title: props.loaderData?.metadata.title,
                     description: props.loaderData?.metadata.desc,
-                    imgSrc: props.loaderData?.metadata.image
+                    imgSrc: import.meta.env.VITE_BASE_URL + props.loaderData?.metadata.image
                 }),
                 ...generateTwitterMetadata({
                     title: props.loaderData?.metadata.title,
                     description: props.loaderData?.metadata.desc,
-                    imgSrc: props.loaderData?.metadata.image
+                    imgSrc: import.meta.env.VITE_BASE_URL + props.loaderData?.metadata.image
                 })
             ],
             links: [
                 { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon', sizes: '16x16' },
-                { rel: 'canonical', href: `${props.loaderData?.baseUrl}/${props.loaderData?.post.slug}` },
+                { rel: 'canonical', href: `${import.meta.env.VITE_BASE_URL}/${props.loaderData?.post.slug}` },
             ],
         }
     },

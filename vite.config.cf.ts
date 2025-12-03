@@ -4,13 +4,17 @@ import viteReact from '@vitejs/plugin-react'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
 import { nitroV2Plugin } from '@tanstack/nitro-v2-vite-plugin'
-import { analyzer } from 'vite-bundle-analyzer'
+// import { analyzer } from 'vite-bundle-analyzer'
 const config = defineConfig({
   plugins: [
     // Enable this if you want run on cloudflare module
     nitroV2Plugin({
       compatibilityDate: '2025-11-03',
-      preset: "bun",
+      preset: "cloudflare_module",
+      cloudflare: {
+        deployConfig: true,
+        nodeCompat: true,
+      },
       compressPublicAssets: true,
       plugins: ['./src/server/plugins/compression.ts'],
       serverAssets: [
@@ -18,7 +22,10 @@ const config = defineConfig({
           baseName: 'posts',
           dir: './src/posts'
         }
-      ]
+      ],
+      $env: {
+        VITE_BASE_URL: import.meta.env.VITE_BASE_URL
+      }
     }),
     // this is the plugin that enables path aliases
     viteTsConfigPaths({
@@ -37,13 +44,13 @@ const config = defineConfig({
       //   autoStaticPathsDiscovery: true,
 
       //   // How many prerender jobs to run at once
-      //   concurrency: 14,
+      //   concurrency: 50,
 
       //   // Whether to extract links from the HTML and prerender them also
       //   crawlLinks: true,
 
       //   // Filter function takes the page object and returns whether it should prerender
-      //   filter: ({ path }) => !path.startsWith('/do-not-render-me'),
+      //   filter: ({ path }) => !path.startsWith('/builder'),
 
       //   // Number of times to retry a failed prerender job
       //   retryCount: 2,
@@ -62,9 +69,9 @@ const config = defineConfig({
       //     console.log(`Rendered ${page.path}!`)
       //   },
       // },
-      // // Optional configuration for specific pages
-      // // Note: When autoStaticPathsDiscovery is enabled (default), discovered static
-      // // routes will be merged with the pages specified below
+      // Optional configuration for specific pages
+      // Note: When autoStaticPathsDiscovery is enabled (default), discovered static
+      // routes will be merged with the pages specified below
       // pages: [
       //   {
       //     path: '/example',
@@ -74,10 +81,10 @@ const config = defineConfig({
     }),
     tailwindcss(),
     viteReact(),
-    analyzer({
-      analyzerMode: 'static',
-      openAnalyzer: true
-    })
+    // analyzer({
+    //   analyzerMode: 'static',
+    //   openAnalyzer: true
+    // })
   ],
   build: {
     chunkSizeWarningLimit: 1500,
