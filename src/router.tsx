@@ -22,6 +22,7 @@ export const getRouter = () => {
     defaultPreloadStaleTime: 0,
     defaultNotFoundComponent: () => <NotFound />,
     defaultPendingComponent: () => <Pending />,
+    trailingSlash: 'always',
   })
   router.history?.subscribe((location) => {
     if (import.meta.env.PROD) {
