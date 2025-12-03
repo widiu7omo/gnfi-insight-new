@@ -4,7 +4,8 @@ import viteReact from '@vitejs/plugin-react'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
 import { nitroV2Plugin } from '@tanstack/nitro-v2-vite-plugin'
-
+import { analyzer } from 'vite-bundle-analyzer'
+import fs from 'node:fs'
 const config = defineConfig({
   plugins: [
     // Enable this if you want run on cloudflare module
@@ -74,28 +75,28 @@ const config = defineConfig({
     }),
     tailwindcss(),
     viteReact(),
+    analyzer({
+      analyzerMode: 'server',
+      openAnalyzer: false
+    })
   ],
   build: {
     chunkSizeWarningLimit: 1500,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
+          fs.appendFileSync('chunks-log.txt', `${id}\n`);
+
           if (id.includes('node_modules')) {
-            if (id.includes('react')) {
+            if (id.includes('react') || id.includes('react-dom') || id.includes('scheduler') || id.includes('motion') || id.includes('@tanstack')) {
               return 'vendor';
             }
-            // if (id.includes('@radix-ui') || id.includes('lucide-react') || id.includes('sonner') || id.includes('vaul')) {
-            //   return 'ui';
-            // }
-            if (id.includes('@tiptap')) {
+            if (id.includes('lucide')) {
+              return 'ui';
+            }
+            if (id.includes('@tiptap') || id.includes('prosemirror')) {
               return 'editor';
             }
-            // if (id.includes('motion')) {
-            //   return 'motion';
-            // }
-            // if (id.includes('@tanstack')) {
-            //   return 'tanstack';
-            // }
           }
         },
       },

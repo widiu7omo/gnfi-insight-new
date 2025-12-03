@@ -16,7 +16,7 @@ export function SectionHeader(props: SectionHeaderType) {
 	return (
 		<div
 			className={cn(
-				"flex h-[600px] items-center justify-center bg-cover bg-center",
+				"flex h-[600px] items-center justify-center bg-cover bg-center px-4 md:px-0",
 				className,
 			)}
 			style={{

@@ -1,16 +1,13 @@
 [
   {
     "index": 0,
-    "component": 1,
-    "componentProps": {
-      "title": "Dari Bangkit Fest 2025, Optimisme dan Semangat Kolaborasi Terus Dinyalakan",
-      "coverUrl": "/assets/dari-bangkit-fest-2025-optimisme-dan-semangat-kolaborasi-terus-dinyalakan/cover.jpg",
-      "className": "bg-gradient-to-b from-blue-900 to-blue-700"
-    },
+    "component": 9,
+    "componentProps": {},
     "group": "section-1",
     "groupClassName": "",
-    "groupTitle": "Introduction",
-    "order": 0
+    "order": 0,
+    "componentCustomName": "CustomHero",
+    "groupTitle": "Dari Bangkit Fest 2025"
   },
   {
     "index": 1,
@@ -21,7 +18,8 @@
       "containerClassName": "bg-[#000e4f]"
     },
     "group": "section-1",
-    "order": 1
+    "order": 1,
+    "groupTitle": "Dari Bangkit Fest 2025"
   },
   {
     "index": 2,
@@ -29,7 +27,8 @@
     "componentCustomName": "Infographic1",
     "componentProps": {},
     "group": "section-1",
-    "order": 2
+    "order": 2,
+    "groupTitle": "Dari Bangkit Fest 2025"
   },
   {
     "index": 3,
@@ -40,7 +39,8 @@
       "containerClassName": "bg-[#000e4f]"
     },
     "group": "section-1",
-    "order": 3
+    "order": 3,
+    "groupTitle": "Dari Bangkit Fest 2025"
   },
   {
     "index": 0,
