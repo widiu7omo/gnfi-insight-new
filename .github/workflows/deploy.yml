@@ -68,10 +68,12 @@ jobs:
             rm -f ${{ env.ARCHIVE_NAME }}
             
             echo "♻️ Reloading PM2..."
-            pm2 reload all --update-env
+            # Change this if you have different server
+            ~/.bun/bin/pm2 reload all --update-env --interpreter ~/.bun/bin/bun
             
             echo "✅ Deployment complete!"
-            pm2 status
+            # Change this if you have different server
+            ~/.bun/bin/pm2 status --interpreter ~/.bun/bin/bun
 
       - name: 📢 Discord Notification
         if: always()
