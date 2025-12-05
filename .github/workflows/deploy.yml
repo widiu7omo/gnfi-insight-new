@@ -28,10 +28,10 @@ jobs:
       - name: 🔨 Build application
         run: bun run build
 
-      - name: 🗜️ Compress .output (zstd - best compression)
+      - name: 🗜️ Compress build output (zstd - best compression)
         run: |
           sudo apt-get install -y zstd
-          tar --zstd -cf ${{ env.ARCHIVE_NAME }} .output
+          tar --zstd -cf ${{ env.ARCHIVE_NAME }} .output config
           ls -lh ${{ env.ARCHIVE_NAME }}
 
       - name: 📤 Transfer to VPS
