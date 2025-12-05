@@ -21,7 +21,7 @@ const CardCat = ({ cat }: { cat: Cat }) => {
 					className="absolute z-0 w-[500px] h-[300px] bg-cover"
 				/>
 			</div>
-			<Paragraph className="text-white flex-grow">{cat.desc as string}</Paragraph>
+			<Paragraph className="text-white grow">{cat.desc as string}</Paragraph>
 		</div>
 	);
 };

@@ -1,13 +1,8 @@
-import type { ReactNode } from "react";
+import { CarouselItemType } from "@/components/post/carousel";
 
-export type Cat = {
-	title: string | ReactNode;
-	desc: ReactNode;
-	image: string;
-};
-export const indoCats: Cat[] = [
+export const indoCats: CarouselItemType[] = [
 	{
-		title: "Kucing Busok",
+		name: "Kucing Busok",
 		desc: (
 			<>
 				<p>
@@ -27,9 +22,10 @@ export const indoCats: Cat[] = [
 			</>
 		),
 		image: "/assets/kucing-sahabat-manusia/busok.png",
+		slug: "kucing-busok"
 	},
 	{
-		title: "Kucing Cangkok",
+		name: "Kucing Cangkok",
 		desc: (
 			<>
 				<p>
@@ -49,14 +45,11 @@ export const indoCats: Cat[] = [
 			</>
 		),
 		image: `/assets/kucing-sahabat-manusia/cangkok.png`,
+		slug: "kucing-cangkok"
 	},
 	{
-		title: (
-			<p className="font-bold">
-				Kucing Kepala <br /> Datar
-			</p>
-		),
-		desc: (
+		name: "Kucing Kepala Datar",
+		desc: 
 			<>
 				<p>
 					Sesuai dengan namanya, kucing kepala datar punya kepala yang tampak
@@ -74,16 +67,12 @@ export const indoCats: Cat[] = [
 					ini juga jago melompat dan memanjat pohon dengan cakar di keempat
 					kakinya.
 				</p>
-			</>
-		),
+			</>,
 		image: `/assets/kucing-sahabat-manusia/kepdatar.png`,
+		slug: "kucing-kepala-datar"
 	},
 	{
-		title: (
-			<p className="font-bold">
-				Kucing Merah <br /> <span>Bornean bay cat</span>
-			</p>
-		),
+		name: "Kucing Merah (Bornean Bay Cat)",
 		desc: (
 			<>
 				<p>
@@ -102,9 +91,10 @@ export const indoCats: Cat[] = [
 			</>
 		),
 		image: `/assets/kucing-sahabat-manusia/merah.png`,
+		slug: "kucing-merah-bornean-bay-cat"
 	},
 	{
-		title: <p className="font-bold">Kucing Emas Asia</p>,
+		name: "Kucing Emas Asia",
 		desc: (
 			<>
 				<p>
@@ -123,10 +113,11 @@ export const indoCats: Cat[] = [
 				</p>
 			</>
 		),
-		image: `assets/kucing-sahabat-manusia/emas-asia.png`,
+		image: `/assets/kucing-sahabat-manusia/emas-asia.png`,
+		slug: "kucing-emas-asia"
 	},
 	{
-		title: <p className="font-bold">Kucing Kampung</p>,
+		name: "Kucing Kampung",
 		desc: (
 			<>
 				<p>
@@ -145,5 +136,6 @@ export const indoCats: Cat[] = [
 			</>
 		),
 		image: `/assets/kucing-sahabat-manusia/kampung.png`,
+		slug: "kucing-kampung"
 	},
 ];

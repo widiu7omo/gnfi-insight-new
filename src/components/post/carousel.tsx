@@ -16,15 +16,17 @@ export type CarouselItemType = {
 type CarouselType = {
     items: CarouselItemType[];
     indicator: ReactNode;
+    includeName?: boolean;
     childClassName?: string;
+    withBackground?: boolean;
 };
-export function Carousel({ items, childClassName, indicator }: CarouselType) {
+export function Carousel({ items, childClassName, indicator, includeName = false, withBackground = false }: CarouselType) {
     const constraintsRef = useRef<HTMLDivElement | null>(null);
     const [active, setActive] = useActiveSlide();
     const slickRef = useRef<Slider | null>(null);
     const slides = items
         .map((item) => {
-            return <CarouselItem item={item} key={item.slug} className={childClassName} />;
+            return <CarouselItem withBackground={withBackground} includeName={includeName} item={item} key={item.slug} className={childClassName} />;
         })
         .map((item) => (
             <SlideItem key={`number-card-${item.key}`}>{item}</SlideItem>
