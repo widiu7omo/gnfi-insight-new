@@ -149,3 +149,45 @@ Logs:        /var/www/gnfi-insight/logs/
 Nginx Logs:  /var/log/nginx/insight.*.log
 PM2 Config:  /var/www/gnfi-insight/config/ecosystem.config.cjs
 ```
+
+---
+
+## 9. CI/CD with GitHub Actions
+
+Auto-deploy to VPS on every push to `main` branch.
+
+### Setup GitHub Secrets
+
+Go to **Repository → Settings → Secrets and variables → Actions** and add:
+
+| Secret Name | Value |
+|-------------|-------|
+| `VPS_HOST` | Your VPS IP or hostname |
+| `VPS_USER` | SSH username (e.g., `root`) |
+| `VPS_SSH_KEY` | Private SSH key (see below) |
+| `VPS_PORT` | SSH port (default: `22`) |
+
+### Generate SSH Key (if needed)
+
+```bash
+# Generate key pair
+ssh-keygen -t ed25519 -C "github-actions-deploy" -f ~/.ssh/github_deploy
+
+# Add public key to VPS
+ssh-copy-id -i ~/.ssh/github_deploy.pub user@your-vps
+
+# Copy private key content for GitHub Secret
+cat ~/.ssh/github_deploy
+```
+
+### How It Works
+
+1. Push to `main` → Triggers GitHub Actions
+2. Workflow SSHs into VPS
+3. Runs: `git pull` → `bun install` → `bun run build` → `pm2 reload all`
+4. Zero-downtime deployment complete!
+
+### Manual Trigger
+
+You can also trigger deployment manually from **GitHub → Actions → Deploy to VPS → Run workflow**.
+
