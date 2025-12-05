@@ -53,6 +53,9 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           script_stop: true
           script: |
+            # Set PATH for non-interactive shell (SSH doesn't source .bashrc)
+            export PATH="$HOME/n/bin:$HOME/.bun/bin:/usr/local/bin:/usr/bin:$PATH"
+            
             cd ${{ env.DEPLOY_PATH }}
             
             echo "📦 Extracting build to temp directory..."
@@ -66,17 +69,12 @@ jobs:
             echo "🧹 Cleanup..."
             rm -rf .output-old
             rm -f ${{ env.ARCHIVE_NAME }}
-            
-            echo "♻️ Reloading bashrc..."
-            source ~/.bashrc
 
             echo "♻️ Reloading PM2..."
-            # Change this if you have different server
-            ~/.bun/bin/pm2 reload all --update-env --interpreter ~/.bun/bin/bun
+            pm2 reload all --update-env
             
             echo "✅ Deployment complete!"
-            # Change this if you have different server
-            ~/.bun/bin/pm2 status --interpreter ~/.bun/bin/bun
+            pm2 status
 
       - name: 📢 Discord Notification
         if: always()
