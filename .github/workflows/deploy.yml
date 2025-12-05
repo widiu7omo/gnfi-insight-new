@@ -53,8 +53,10 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           script_stop: true
           script: |
-            # Set PATH for non-interactive shell (SSH doesn't source .bashrc)
-            export PATH="$HOME/n/bin:$HOME/.bun/bin:/usr/local/bin:/usr/bin:$PATH"
+            # Load nvm and bun for non-interactive shell
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            export PATH="$HOME/.bun/bin:$PATH"
             
             cd ${{ env.DEPLOY_PATH }}
             
