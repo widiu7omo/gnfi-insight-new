@@ -68,6 +68,7 @@ jobs:
             rm -f ${{ env.ARCHIVE_NAME }}
             
             echo "♻️ Reloading PM2..."
+            source ~/.bashrc
             # Change this if you have different server
             ~/.bun/bin/pm2 reload all --update-env --interpreter ~/.bun/bin/bun
             
