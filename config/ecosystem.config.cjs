@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'gnfi-insight-1',
-      script: './.output/server/index.mjs',
+      script: '../.output/server/index.mjs',
       interpreter: 'bun',  // Use Bun instead of Node.js
       exec_mode: 'fork',   // Bun doesn't support cluster mode, use fork
       max_memory_restart: '600M',
@@ -24,14 +24,14 @@ module.exports = {
       
       // Logging
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      error_file: './logs/error-1.log',
-      out_file: './logs/output-1.log',
+      error_file: '../logs/error-1.log',
+      out_file: '../logs/output-1.log',
       time: true,
       log_type: 'json',
     },
     {
       name: 'gnfi-insight-2',
-      script: './.output/server/index.mjs',
+      script: '../.output/server/index.mjs',
       interpreter: 'bun',
       exec_mode: 'fork',
       max_memory_restart: '600M',
@@ -50,8 +50,8 @@ module.exports = {
       },
       
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      error_file: './logs/error-2.log',
-      out_file: './logs/output-2.log',
+      error_file: '../logs/error-2.log',
+      out_file: '../logs/output-2.log',
       time: true,
       log_type: 'json',
     },
