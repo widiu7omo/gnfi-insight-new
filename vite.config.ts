@@ -11,7 +11,10 @@ const config = defineConfig({
     nitroV2Plugin({
       compatibilityDate: '2025-11-03',
       preset: "bun",
-      compressPublicAssets: true,
+      compressPublicAssets: {
+        gzip: true,
+        brotli: false
+      },
       plugins: ['./src/server/plugins/compression.ts'],
       serverAssets: [
         {
